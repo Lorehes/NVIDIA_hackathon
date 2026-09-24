@@ -3,8 +3,10 @@
 원칙: 모델이 쓴 설명은 신호 목록에 없는 사실을 새로 주장하면 버리고 템플릿 설명으로 바꾼다.
 URL 원문과 페이지 문구는 모델에 보내지 않는다(프롬프트 주입 방어).
 
-제목·경고·행동 권고·확인하지 못한 것은 코드의 고정 문구(템플릿)만 쓴다. 모델은 이미 확인된 근거를
-쉽게 풀어 쓰는 `detail`·`confirmed_facts`·`suspicion_evidence`에만 관여하고, 그 문장에는 행동 지시를 담지 못한다.
+제목·경고·행동 권고·확인하지 못한 것은 코드의 고정 문구(템플릿)만 쓴다. 모델은 `detail`·`confirmed_facts`·
+`suspicion_evidence`에만 관여하는데, 그 문장은 **코드가 만든 검증된 문장에 나온 어절과 그 어절의 인접한 쌍**으로만
+이뤄져야 통과한다(금지어 목록으로는 한국어 표현의 변형을 다 막을 수 없기 때문이다). 새 단어나 새 어절 결합으로
+행동 지시·안심 문구를 만들어 낼 수 없다. 금지 표현 검사는 이중 방어로 남긴다.
 """
 from __future__ import annotations
 
@@ -34,8 +36,8 @@ _REASSURE_WORD_RE = re.compile(r"안전|정상|믿을|믿어|신뢰|오해|(?:�
 
 
 def build_payload(outcome: Outcome, actual: str | None, entity_name: str | None,
-                  official_domain: str | None, unverified: list[str]) -> dict:
-    """모델에 넘길 구조화 입력. 자유 문구는 없다."""
+                  official_domain: str | None, unverified: list[str], vetted: list[str] | None = None) -> dict:
+    """모델에 넘길 구조화 입력. 자유 문구는 없고, `vetted_sentences`는 코드가 만든 검증된 문장이다."""
     signals = []
     for s in outcome.signals:
         data = {k: v for k, v in s["data"].items()
@@ -49,7 +51,48 @@ def build_payload(outcome: Outcome, actual: str | None, entity_name: str | None,
         "purpose": outcome.purpose,
         "signals": signals,
         "unverified": unverified,
+        "vetted_sentences": vetted or [],
     }
+
+
+def vetted_sentences(template: dict) -> list[str]:
+    """코드가 만든 설명(템플릿)의 모든 문장. 모델은 이 문장의 표현만 재사용할 수 있다."""
+    out: list[str] = []
+    for k in _STR_FIELDS:
+        v = template.get(k)
+        if isinstance(v, str) and v:
+            out.append(v)
+    for k in _LIST_FIELDS:
+        v = template.get(k)
+        if isinstance(v, list):
+            out.extend(x for x in v if isinstance(x, str) and x)
+    return out
+
+
+_EDGE_PUNCT = ".,!?…~\"'“”‘’()[]{}<>:;"
+
+
+def _tokens(text: str) -> list[str]:
+    return [t for t in (w.strip(_EDGE_PUNCT) for w in _clean(text).split()) if t]
+
+
+def _closure(template: dict) -> tuple[set[str], set[tuple[str, str]]]:
+    vocab: set[str] = set()
+    pairs: set[tuple[str, str]] = set()
+    for sentence in vetted_sentences(template):
+        toks = _tokens(sentence)
+        vocab.update(toks)
+        pairs.update(zip(toks, toks[1:]))
+    return vocab, pairs
+
+
+def _within_closure(text: str, vocab: set[str], pairs: set[tuple[str, str]]) -> bool:
+    toks = _tokens(text)
+    if not toks:
+        return True
+    if len(toks) == 1:
+        return toks[0] in vocab
+    return all(p in pairs for p in zip(toks, toks[1:]))
 
 
 def _flatten(exp: dict) -> list[str]:
@@ -68,7 +111,8 @@ def _flatten(exp: dict) -> list[str]:
 def _clean(text: str) -> str:
     """NFKC로 전각·호환 문자를 정규화하고 보이지 않는 서식·제어 문자(제로폭 공백 등)를 지운다."""
     text = unicodedata.normalize("NFKC", text)
-    return "".join(ch for ch in text if unicodedata.category(ch) not in ("Cf", "Cc", "Co", "Cs"))
+    # 서식·제어·사설·결합 문자(제로폭 공백, 결합 문자 U+034F 등)는 단어를 눈에 안 띄게 쪼개는 데 쓰이므로 지운다
+    return "".join(ch for ch in text if unicodedata.category(ch) not in ("Cf", "Cc", "Co", "Cs", "Mn", "Me"))
 
 
 def _clean_output(output: dict) -> dict:
@@ -141,6 +185,11 @@ def validate(output: dict | None, payload: dict, kb: KB, template: dict) -> dict
 
     # 5) 모델이 채울 수 있는 자리에는 행동 지시·권유가 없어야 한다
     if _DIRECTIVE_RE.search(free_compact) or _ACTION_RE.search(free_compact):
+        return None
+
+    # 5-2) 모델 문장은 코드가 만든 검증된 문장의 어절과 인접 어절 쌍으로만 이뤄져야 한다(핵심 방어선)
+    vocab, pairs = _closure(template)
+    if not all(_within_closure(t, vocab, pairs) for t in free):
         return None
 
     # 6) 의심 근거는 판정에 실제로 쓰인 위험 신호 수를 넘지 못한다(없는 위험을 지어내지 못하게)

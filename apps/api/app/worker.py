@@ -19,10 +19,11 @@ from .db import DB
 from .kb import KB
 from .models import InvestigationResult, Trace
 from .sandbox import RunResult
-from .urls import input_kind, is_private_or_ip_host, parse_url
+from .urls import input_kind, is_private_or_ip_host, parse_url, trimmed_urls
 from .verdict import Evidence, decide
 
-from checklib import similarity as sim_lib  # noqa: E402  (urls.py가 sys.path를 등록한다)
+from checklib import similarity as sim_lib  # noqa: E402
+from checklib.parse_url import normalize_url  # noqa: E402  (urls.py가 sys.path를 등록한다)
 from . import ko
 
 log = logging.getLogger("worker")
@@ -135,14 +136,15 @@ class Investigator:
         if parse_host.get("ok"):
             host_sim = {**sim_lib.compare(parse_host, self.kb.official_records())}
         if not run.incomplete:
-            mismatch = files_mismatch(files, parse_host)
+            mismatch = files_mismatch(files, parse_host, url)
             if mismatch:
                 log.error("job %s: sandbox result rejected (%s)", job_id, mismatch)
                 run.incomplete = "result_mismatch"
         ev = Evidence(parse=parse_host if parse_host.get("ok") else files.get("parse_url"),
                       similarity=host_sim or files.get("similarity"),
                       fetch=files.get("fetch_chain"), page=files.get("page"), claim=files.get("claim"),
-                      candidates=cands, incomplete=run.incomplete, internal_resolution=internal)
+                      candidates=cands, incomplete=run.incomplete, internal_resolution=internal,
+                      url_trimmed=url in trimmed_urls(text))
         if run.incomplete:  # 멈춘 경우에도 발견한 것을 보여 주려고 호스트 측 문자열 분석을 쓴다(판정은 unknown)
             ev.parse, ev.similarity = parse_host, host_sim
             if run.incomplete == "result_mismatch":  # 대조에 실패한 파일의 내용은 화면에도 쓰지 않는다
@@ -179,18 +181,19 @@ class Investigator:
             log.error("ALERT: job %s policy %s may remain in the sandbox", job_id, run.policy_name)
 
 
-def files_mismatch(files: dict, parse_host: dict) -> str | None:
+def files_mismatch(files: dict, parse_host: dict, url: str | None = None) -> str | None:
     """샌드박스가 돌려준 결과가 이 작업의 대상 주소와 맞는지 확인한다. 어긋나면 이유(코드), 맞으면 None.
 
     에이전트가 결과 파일을 바꾸거나 다른 작업의 파일이 섞여도 호스트가 계산한 값과 다르면 판정에 쓰지 않는다.
     이동 경로는 단계마다 주소에서 호스트·등록 도메인을 다시 계산해 대조하고, 공식 여부 판정에 쓰이는
-    `final_registrable_domain`도 경로에서 다시 계산한 값과 같아야 한다.
+    `final_registrable_domain`도 경로에서 다시 계산한 값과 같아야 한다. 첫 접속 주소는 요청한 주소 전체
+    (스킴·포트·경로·질의)와 같아야 하므로 같은 호스트의 다른 주소에 대한 결과를 끼워 넣을 수 없다.
     """
     if not parse_host.get("ok"):
         return None
     parse = files.get("parse_url")
     if parse and parse.get("ok"):
-        for key in ("host_ascii", "registrable_domain"):
+        for key in ("host_ascii", "registrable_domain", "scheme", "path", "port"):
             if parse.get(key) != parse_host.get(key):
                 return f"parse_url.{key}"
     fetch = files.get("fetch_chain")
@@ -207,6 +210,8 @@ def files_mismatch(files: dict, parse_host: dict) -> str | None:
                 return "fetch_chain.hop_host"
             if i == 0 and p["host_ascii"] != parse_host.get("host_ascii"):
                 return "fetch_chain.first_host"
+            if i == 0 and url is not None and hop.get("url") != normalize_url(url)[0][:500]:
+                return "fetch_chain.first_url"
             if not hop.get("blocked") and hop.get("error") is None:
                 last_ok = (hop, p)
         if fetch.get("final_registrable_domain") != (last_ok[1]["registrable_domain"] if last_ok else None):
@@ -246,7 +251,7 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
     explanation, explain_check = template, "skipped"
     if not incomplete and not run.residual_policy:  # 정책이 남았을 수 있으면 그 샌드박스에서 에이전트를 더 돌리지 않는다
         payload = explain_mod.build_payload(outcome, actual, name, entity.official_domains[0] if entity else None,
-                                            template["unverified"])
+                                            template["unverified"], explain_mod.vetted_sentences(template))
         try:
             out = sandbox.explain(job_id, payload)
         except Exception:  # noqa: BLE001

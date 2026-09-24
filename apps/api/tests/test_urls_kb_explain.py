@@ -79,9 +79,14 @@ def _payload(verdict="suspected_impersonation"):
 
 
 TEMPLATE = {"headline": "고정 제목", "warning": "링크를 누르지 마세요.", "unverified": ["문자를 보낸 전화번호가 진짜인지"],
+            "detail": "한빛택배 진짜 주소가 아니고, 진짜처럼 보이려고 주소에 속임수를 썼어요.",
+            "confirmed_facts": ["진짜 사이트 이름은 account-check.test예요."],
+            "suspicion_evidence": ["주소 앞에 hanbit.example을 붙여서 진짜처럼 보이게 했어요."],
             "recommended_action": "공식 앱으로 직접 확인하세요.", "action_bullets": ["문자는 지워도 괜찮아요."]}
+# 모델 문장은 위 템플릿 문장의 어절·인접 어절 쌍으로만 이뤄져야 통과한다(검토 R2-02)
 GOOD = {
-    "headline": "한빛택배를 흉내 낸 가짜 사이트 같아요.", "warning": "링크를 누르지 마세요.", "detail": None,
+    "headline": "한빛택배를 흉내 낸 가짜 사이트 같아요.", "warning": "링크를 누르지 마세요.",
+    "detail": "진짜처럼 보이려고 주소에 속임수를 썼어요.",
     "confirmed_facts": ["진짜 사이트 이름은 account-check.test예요."],
     "suspicion_evidence": ["주소 앞에 hanbit.example을 붙여서 진짜처럼 보이게 했어요."],
     "unverified": ["내가 마음대로 바꾼 문장"],
@@ -145,11 +150,12 @@ def test_safe_verdict_cannot_say_fake():
 
 def test_unknown_must_say_not_safe():
     p = _payload("unknown")
+    tpl = {**TEMPLATE, "detail": "안전하다는 뜻이 아니에요. 곧 알려드릴게요.", "confirmed_facts": [], "suspicion_evidence": []}
     ok = {**GOOD, "headline": "지금은 확인하지 못했어요.", "warning": None,
           "detail": "안전하다는 뜻이 아니에요.", "confirmed_facts": [], "suspicion_evidence": []}
-    assert ex.validate(ok, p, kb, TEMPLATE)
+    assert ex.validate(ok, p, kb, tpl)
     no = {**ok, "detail": "곧 알려드릴게요."}
-    assert ex.validate(no, p, kb, TEMPLATE) is None
+    assert ex.validate(no, p, kb, tpl) is None
 
 
 def test_malformed_output_is_rejected():

@@ -7,11 +7,13 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 import shutil
 import subprocess
 import sys
+import threading
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -21,6 +23,8 @@ from typing import Callable
 from .config import settings
 from .urls import safe_host_for_policy
 
+log = logging.getLogger("sandbox")
+_JOB_ID_RE = re.compile(r"j_[0-9a-f]{32}")
 FILE_NAMES = ["claim", "parse_url", "similarity", "fetch_chain", "page", "run_meta"]
 
 
@@ -128,8 +132,10 @@ class OpenShellSandbox:
         self.workdir = Path(workdir or settings.work_dir)
         # 정책이 남았는지 확인하지 못하면 True. 정리를 확인하기 전까지 새 조사를 받지 않는다(검토 2.5).
         self.quarantined = False
-        # 샌드박스 안의 작업 폴더 삭제에 실패한 작업 ID. 다음 조사 전에 다시 지운다(검토 R1-11).
-        self._pending_purge: set[str] = set()
+        # 샌드박스 안의 작업 폴더 삭제에 실패한 작업 ID. 파일에도 남겨 재시작 뒤에도 다시 지운다(검토 R1-11, R2-08).
+        self._purge_lock = threading.Lock()
+        self._pending_file = self.workdir / ".pending_purge.json"
+        self._pending_purge: set[str] = self._load_pending()
 
     def _list_policies(self) -> list[str] | None:
         """현재 적용된 조사용 정책 이름. 조회하지 못하면 None(상태를 모른다는 뜻)."""
@@ -167,6 +173,7 @@ class OpenShellSandbox:
     def prepare(self) -> list[str]:
         removed, clean = self._sweep()
         self.quarantined = not clean
+        self._reconcile_remote()
         return removed
 
     def health(self) -> dict:
@@ -179,6 +186,8 @@ class OpenShellSandbox:
                 out[key] = {"ok": False, "text": str(e)[:200]}
         out["sandbox"]["quarantined"] = self.quarantined
         out["sandbox"]["pending_purge"] = len(self._pending_purge)
+        if self._pending_purge:
+            out["sandbox"]["ok"] = False
         if self.quarantined:
             out["sandbox"]["ok"] = False
         return out
@@ -199,7 +208,10 @@ class OpenShellSandbox:
     def _investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
                      on_stage: Callable[[str], None], touched: list[bool]) -> RunResult:
         res = RunResult(policy_name=f"job-{job_id}")
-        self._retry_pending_purges()
+        self.retry_pending()
+        if self._pending_purge:  # 이전 조사 자료(문자 원문)가 샌드박스에 남아 있다: 지운 것을 확인하기 전에는 재사용하지 않는다
+            res.incomplete = "sandbox_unsafe"
+            return res
         if self.quarantined:  # 이전 조사의 정책이 남았을 수 있다: 정리를 확인한 뒤에만 다시 연다
             _, clean = self._sweep()
             self.quarantined = not clean
@@ -265,14 +277,17 @@ class OpenShellSandbox:
             res.incomplete = res.incomplete or "sandbox_error"
         finally:
             # 6. 정책은 항상 제거하고, 실제로 없어졌는지 다시 조회해 확인한다.
-            #    확인하지 못하면 샌드박스를 격리해 다음 조사를 막는다.
+            #    정리를 확인하기 전까지는 격리해 두고(정리 중 예외가 나도 격리가 남는다), 확인되면 푼다.
             if add_attempted:
+                self.quarantined = True
                 if opened:
-                    on_stage("policy_close")
+                    try:
+                        on_stage("policy_close")
+                    except Exception:  # noqa: BLE001 - 진행 표시가 실패해도 정책 제거는 반드시 한다
+                        log.exception("on_stage failed during policy_close")
                 ok = self._close_policy(f"job-{job_id}")
                 res.residual_policy = not ok
-                if not ok:
-                    self.quarantined = True
+                self.quarantined = not ok
                 if opened:
                     res.events.append({"at": _iso(_now()), "kind": "close", "host": target_host})
 
@@ -286,24 +301,56 @@ class OpenShellSandbox:
         _finish_agent_marks(res)
         return res
 
+    # ── 샌드박스 안 작업 폴더 삭제 ───────────────────────────────────────
+    def _load_pending(self) -> set[str]:
+        try:
+            data = json.loads(self._pending_file.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return set()
+        return {j for j in data if isinstance(j, str) and _JOB_ID_RE.fullmatch(j)} if isinstance(data, list) else set()
+
+    def _save_pending(self) -> None:  # _purge_lock을 잡고 부른다
+        try:
+            self._pending_file.parent.mkdir(parents=True, exist_ok=True)
+            self._pending_file.write_text(json.dumps(sorted(self._pending_purge)), encoding="utf-8")
+        except OSError:
+            log.error("could not persist pending purge list")
+
     def _purge_remote(self, job_id: str) -> bool:
-        """샌드박스 안의 작업 폴더(입력 문자·페이지 원본)를 지운다. 실패하면 기록해 두고 다음에 다시 지운다."""
-        if not re.fullmatch(r"j_[0-9a-f]{32}", job_id):  # 경로에 넣기 전에 형식을 확인한다
+        """샌드박스 안의 작업 폴더(입력 문자·페이지 원본)를 지운다. 실패하면 기록해 두고 다시 지운다."""
+        if not _JOB_ID_RE.fullmatch(job_id):  # 경로에 넣기 전에 형식을 확인한다
             return False
         try:
             r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "rm", "-rf", f"/sandbox/work/{job_id}"], 30)
             ok = r.returncode == 0
         except Exception:  # noqa: BLE001
             ok = False
-        if ok:
-            self._pending_purge.discard(job_id)
-        else:
-            self._pending_purge.add(job_id)
+        with self._purge_lock:
+            before = set(self._pending_purge)
+            (self._pending_purge.discard if ok else self._pending_purge.add)(job_id)
+            if self._pending_purge != before:
+                self._save_pending()
         return ok
 
-    def _retry_pending_purges(self) -> None:
-        for job_id in list(self._pending_purge):
+    def retry_pending(self) -> None:
+        """지우지 못한 작업 폴더를 다시 지운다. 조사 시작 전과 주기 작업(요청이 없을 때)에서 부른다."""
+        with self._purge_lock:
+            todo = list(self._pending_purge)
+        for job_id in todo:
             self._purge_remote(job_id)
+
+    def _reconcile_remote(self) -> None:
+        """시작할 때 샌드박스에 남은 작업 폴더를 찾아 지운다(이전 실행이 비정상 종료한 경우)."""
+        try:
+            r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "ls", "-1", "/sandbox/work"], 30)
+        except Exception:  # noqa: BLE001
+            return
+        if r.returncode != 0:
+            return
+        for name in r.stdout.split():
+            if _JOB_ID_RE.fullmatch(name):
+                self._purge_remote(name)
+        self.retry_pending()
 
     def explain(self, job_id: str, payload: dict) -> dict | None:
         if self.quarantined:  # 정책이 남았을 수 있는 샌드박스에서는 에이전트를 더 실행하지 않는다(템플릿 설명 사용)

@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import json
+import zlib
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
@@ -39,25 +40,63 @@ class Response:
 
 
 # ── 실제 네트워크 ────────────────────────────────────────────────
+def _decoder(encoding: str):
+    enc = (encoding or "").strip().lower()
+    if enc in ("", "identity"):
+        return None
+    if enc in ("gzip", "x-gzip"):
+        return zlib.decompressobj(16 + zlib.MAX_WBITS)
+    if enc == "deflate":
+        return zlib.decompressobj()
+    raise FetchError(f"UnsupportedContentEncoding: {enc[:30]}")  # br·zstd 등은 풀지 않는다(분석 불가)
+
+
+def _read_bounded(chunks, encoding: str = "") -> tuple[bytes, bool]:
+    """원본 조각을 읽어 (본문, 잘렸는가)를 돌려준다. 입력·출력 모두 MAX_BODY를 넘지 않게 자른다."""
+    dec = _decoder(encoding)
+    out = bytearray()
+    raw_total = 0
+    for chunk in chunks:
+        raw_total += len(chunk)
+        if raw_total > MAX_BODY:  # 압축된 상태의 입력도 한도를 둔다
+            return bytes(out), True
+        if dec is None:
+            room = MAX_BODY - len(out)
+            out += chunk[:room]
+            if len(chunk) > room or len(out) >= MAX_BODY:
+                return bytes(out), True
+            continue
+        data = chunk
+        while data:
+            room = MAX_BODY - len(out)
+            if room <= 0:
+                return bytes(out), True
+            try:
+                out += dec.decompress(data, room)
+            except zlib.error as e:
+                raise FetchError(f"DecodeError: {e}"[:200]) from e
+            data = dec.unconsumed_tail  # 출력 한도 때문에 남은 입력
+            if len(out) >= MAX_BODY and (data or not dec.eof):
+                return bytes(out), True
+    return bytes(out), False
+
+
 class HttpxFetcher:
     def __init__(self, timeout: float = TIMEOUT):
         import httpx  # 지연 import: 테스트·픽스처 모드에서는 필요 없음
 
         self._httpx = httpx
         self._client = httpx.Client(follow_redirects=False, timeout=timeout,
-                                    headers={"User-Agent": MOBILE_UA, "Accept": "text/html,*/*;q=0.8"})
+                                    headers={"User-Agent": MOBILE_UA, "Accept": "text/html,*/*;q=0.8",
+                                             "Accept-Encoding": "gzip, deflate"})
 
     def get(self, url: str) -> Response:
         httpx = self._httpx
         try:
             with self._client.stream("GET", url) as r:
-                body = b""
-                truncated = False
-                for chunk in r.iter_bytes():
-                    body += chunk
-                    if len(body) >= MAX_BODY:
-                        body, truncated = body[:MAX_BODY], True
-                        break
+                # iter_bytes()는 압축을 푼 뒤의 조각을 돌려줘 한도를 넘는 메모리가 먼저 잡힐 수 있다(압축 폭탄).
+                # 원본 바이트를 직접 풀면서 출력 크기를 MAX_BODY로 막는다.
+                body, truncated = _read_bounded(r.iter_raw(), r.headers.get("content-encoding", ""))
                 return Response(r.status_code, r.headers.get("location"), body,
                                 r.headers.get("content-type", ""), truncated)
         except httpx.ProxyError as e:

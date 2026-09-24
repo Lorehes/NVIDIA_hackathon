@@ -47,6 +47,7 @@ class Evidence:
     candidates: list[tuple[Entity, str]] = field(default_factory=list)  # (엔티티, 출처)
     incomplete: str | None = None  # 에이전트 실패·시간 초과 등 조사 중단 이유(코드)
     internal_resolution: bool = False  # 공용 이름인데 내부망 주소로 해석됨(호스트가 확인, 접속하지 않음)
+    url_trimmed: bool = False  # 문자 속 주소를 한글 앞에서 잘라 조사했다(사용자가 뜻한 주소와 다를 수 있음)
 
 
 @dataclass
@@ -77,7 +78,7 @@ def _ok(d: dict | None) -> bool:
     return bool(d) and d.get("ok") is True
 
 
-def verification_gaps(ev: Evidence) -> list[str]:
+def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
     """`safe`에 필요한 증거 중 빠진 것. 비어 있어야만 안전이라고 말할 수 있다.
 
     공식·협력 도메인이라는 사실은 "주소가 맞다"까지만 보증한다. 페이지를 실제로 열어 분석했고
@@ -88,6 +89,8 @@ def verification_gaps(ev: Evidence) -> list[str]:
         gaps.append("parse")
     elif ev.parse.get("ambiguous"):
         gaps.append("ambiguous_url")  # 백슬래시 등으로 브라우저와 해석이 갈릴 수 있었던 주소
+    if ev.url_trimmed:
+        gaps.append("url_trimmed")  # 한글 앞에서 잘라 조사한 주소: 사용자가 뜻한 주소를 조사했는지 알 수 없다
     if not _ok(ev.similarity):
         gaps.append("similarity")
     fetch = ev.fetch if _ok(ev.fetch) else None
@@ -111,8 +114,14 @@ def verification_gaps(ev: Evidence) -> list[str]:
         gaps.append("page_truncated")  # 본문이 잘려 뒤쪽 입력란·이동 코드를 보지 못했다
     if not _ok(ev.page):
         gaps.append("page")
-    elif ev.page.get("js_redirect_hint"):
-        gaps.append("client_redirect")  # 메타 새로고침·스크립트 이동을 감지했지만 도착지는 조사하지 않았다
+    else:
+        if ev.page.get("js_redirect_hint"):
+            gaps.append("client_redirect")  # 메타 새로고침·스크립트 이동을 감지했지만 도착지는 조사하지 않았다
+        trusted = {(fetch.get("final_registrable_domain") or "")}
+        if entity:
+            trusted |= set(entity.official_domains) | set(entity.partner_domains)
+        if any(d not in trusted for d in ev.page.get("external_active_domains") or []):
+            gaps.append("external_active_content")  # 실행하지 않은 다른 도메인의 코드·문서를 끌어온다
     return gaps
 
 
@@ -271,7 +280,7 @@ def decide(ev: Evidence, kb: KB) -> Outcome:
     if strong and identified:  # 규칙 2
         return Outcome("suspected_impersonation", entity, source, signals, purpose)
     # 규칙 3. 확인 못 한 부분이 하나라도 있으면 안전이라고 말하지 않는다(거짓 safe 금지).
-    gaps = verification_gaps(ev)
+    gaps = verification_gaps(ev, entity)
     matched = bool({"official_match", "partner_match"} & types)
     if (matched and not gaps and not strong
             and not {"cross_domain_form", "redirect_other_domain", "fetch_failed",

@@ -5,11 +5,12 @@ HTML은 파싱만 한다(실행하지 않음). 페이지 문구는 공격자가 
 """
 from __future__ import annotations
 
+import codecs
 import re
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlsplit
 
-from .parse_url import registrable_of, to_ascii_host
+from .parse_url import backslash_to_slash, registrable_of, to_ascii_host
 
 FIELD_TYPES = [
     "password", "card_number", "card_cvc", "card_expiry", "bank_account", "resident_id",
@@ -31,7 +32,13 @@ _KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
 ]
 
 _TRUST_RE = re.compile(r"(공식|안전|인증|보증|정식|official|verified|secure|authentic)", re.I)
-_JS_REDIRECT_RE = re.compile(r"(location\.(href|replace|assign)|window\.location|top\.location)", re.I)
+# 스크립트·이벤트 핸들러 속 이동 시도와 그것을 숨기는 난독화 흔적. JavaScript는 실행하지 않으므로 도착지를 알 수 없다.
+_JS_REDIRECT_RE = re.compile(
+    r"(?:\b(?:window|self|top|parent|document|globalThis)\s*\.\s*location\b"
+    r"|\blocation\s*(?:\.\s*(?:href|replace|assign|reload)\b|=(?!=))"
+    r"|\bwindow\s*\.\s*open\s*\(|\bnavigate\s*\(|\bhistory\s*\.\s*(?:push|replace)State\s*\("
+    r"|\beval\s*\(|\batob\s*\(|\bnew\s+Function\s*\(|\bunescape\s*\(|\bdocument\s*\.\s*write(?:ln)?\s*\("
+    r"|\bset(?:Timeout|Interval)\s*\(\s*[\"'`]|javascript\s*:)", re.I)
 _SKIP_INPUT_TYPES = {"hidden", "submit", "button", "image", "reset", "checkbox", "radio", "file"}
 
 
@@ -80,10 +87,24 @@ class _PageParser(HTMLParser):
         self._in_style = False
         self.script_text: list[str] = []
         self.text_nodes: list[str] = []
+        self.base_href: str | None = None  # 첫 <base href>만 효력이 있다
+        self.active_srcs: list[str] = []  # 다른 곳의 코드를 끌어오는 script·iframe·frame·embed·object 주소
+        self.handler_text: list[str] = []  # onload="…" 같은 이벤트 핸들러 속성값
 
     # 태그 처리
     def handle_starttag(self, tag: str, attrs_list) -> None:
         a = {k: (v or "") for k, v in attrs_list}
+        for k, v in a.items():
+            if k.lower().startswith("on") and v:
+                self.handler_text.append(v)
+        if tag == "base" and self.base_href is None and a.get("href"):
+            self.base_href = a["href"]
+        if tag in ("script", "iframe", "frame", "embed", "object"):
+            src = a.get("src") or (a.get("data") if tag == "object" else "")
+            if src:
+                self.active_srcs.append(src)
+        if a.get("formaction") and self._form is not None:
+            self._form.setdefault("formactions", []).append(a["formaction"])
         if tag == "title":
             self._in_title = True
         elif tag == "meta":
@@ -152,22 +173,66 @@ def _trim(s: str, n: int) -> str:
     return s[:n]
 
 
-def _decode(html_bytes: bytes) -> str:
-    for enc in ("utf-8", "euc-kr", "latin-1"):
+_BOMS = [(codecs.BOM_UTF32_LE, "utf-32"), (codecs.BOM_UTF32_BE, "utf-32"), (codecs.BOM_UTF8, "utf-8-sig"),
+         (codecs.BOM_UTF16_LE, "utf-16"), (codecs.BOM_UTF16_BE, "utf-16")]
+_CT_CHARSET = re.compile(r"charset\s*=\s*[\"']?([\w.:-]+)", re.I)
+_META_CHARSET = re.compile(rb"<meta[^>]+charset\s*=\s*[\"']?([\w.:-]+)", re.I)
+
+
+def _declared_charset(html_bytes: bytes, content_type: str) -> str | None:
+    names = []
+    m = _CT_CHARSET.search(content_type or "")
+    if m:
+        names.append(m.group(1))
+    m2 = _META_CHARSET.search(html_bytes[:2048])
+    if m2:
+        names.append(m2.group(1).decode("ascii", "ignore"))
+    for name in names:
         try:
-            return html_bytes.decode(enc)
-        except UnicodeDecodeError:
+            return codecs.lookup(name).name
+        except LookupError:
             continue
-    return html_bytes.decode("utf-8", errors="replace")
+    return None
 
 
-def inspect_page(html_bytes: bytes, page_url: str) -> dict:
+def _decode(html_bytes: bytes, content_type: str = "") -> str | None:
+    """브라우저와 같은 순서(BOM → HTTP 헤더 → meta 선언 → 추정)로 해석한다. 마크업으로 읽히지 않으면 None."""
+    text = None
+    for bom, enc in _BOMS:
+        if html_bytes.startswith(bom):
+            text = html_bytes.decode(enc, errors="replace")
+            break
+    if text is None:
+        declared = _declared_charset(html_bytes, content_type)
+        for enc in ([declared] if declared else []) + ["utf-8", "euc-kr"]:
+            try:
+                text = html_bytes.decode(enc)
+                break
+            except (UnicodeDecodeError, LookupError):
+                continue
+    if text is None:
+        text = html_bytes.decode("utf-8", errors="replace")
+    # 태그가 하나도 안 보이거나 NUL이 섞여 있으면 해석에 실패한 것이다(분석 결과를 믿지 않는다)
+    return text if "<" in text and "\x00" not in text else None
+
+
+def _resolve(base: str, ref: str) -> str:
+    """브라우저처럼 상대 주소를 푼다(탭·줄바꿈 제거, 경로의 백슬래시를 슬래시로)."""
+    ref = re.sub(r"[\t\r\n]", "", ref or "").strip()
+    return urljoin(base, backslash_to_slash(ref))
+
+
+def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> dict:
+    text = _decode(html_bytes, content_type)
+    if text is None:
+        return {"ok": False, "error": "undecodable html"}
     p = _PageParser()
-    p.feed(_decode(html_bytes))
+    p.feed(text)
     p.close()
 
     page_host = to_ascii_host(urlsplit(page_url).hostname or "")
     page_reg = registrable_of(page_host) if page_host else ""
+    base_url = _resolve(page_url, p.base_href) if p.base_href else page_url  # 상대 주소는 <base>를 기준으로 풀린다
 
     # 브랜드 후보: title 조각, og:site_name, 로고 alt
     brands: list[str] = []
@@ -190,15 +255,24 @@ def inspect_page(html_bytes: bytes, page_url: str) -> dict:
 
     # 폼
     forms_out: list[dict] = []
-    all_groups = [(f["action"], f["inputs"]) for f in p.forms]
+    all_groups = [([f["action"], *f.get("formactions", [])], f["inputs"]) for f in p.forms]
     if p.loose_inputs:
-        all_groups.append(("", p.loose_inputs))
-    for action, inputs in all_groups:
+        all_groups.append(([""], p.loose_inputs))
+    for actions, inputs in all_groups:
         if not inputs:
             continue
-        target = urljoin(page_url, action) if action else page_url
-        a_host = to_ascii_host(urlsplit(target).hostname or page_host)
-        a_reg = registrable_of(a_host) if a_host else page_reg
+        # 전송 대상 후보(form의 action과 버튼의 formaction) 중 하나라도 다른 도메인이면 교차 도메인으로 본다
+        dests: list[tuple[str, str, bool]] = []  # (호스트, 등록 도메인, 교차 도메인 여부)
+        for action in actions:
+            target = _resolve(base_url, action) if action else base_url
+            sp = urlsplit(target)
+            if sp.scheme.lower() not in ("http", "https"):  # javascript:·data: 등은 목적지를 알 수 없다
+                dests.append(("", "(script)", True))
+                continue
+            a_host = to_ascii_host(sp.hostname or page_host)
+            a_reg = registrable_of(a_host) if a_host else page_reg
+            dests.append((a_host, a_reg, bool(a_reg and page_reg and a_reg != page_reg)))
+        a_host, a_reg, _ = next((d for d in dests if d[2]), dests[0])
         ftypes: list[str] = []
         for it in inputs:
             label = it.get("_label") or p.label_for.get(it.get("id", ""), "")
@@ -208,7 +282,7 @@ def inspect_page(html_bytes: bytes, page_url: str) -> dict:
         forms_out.append({
             "action_host": a_host,
             "action_registrable_domain": a_reg,
-            "cross_domain": bool(a_reg and page_reg and a_reg != page_reg),
+            "cross_domain": any(d[2] for d in dests),
             "field_types": ftypes,
         })
 
@@ -220,7 +294,18 @@ def inspect_page(html_bytes: bytes, page_url: str) -> dict:
     apk_links = apk_links[:5]
 
     meta_refresh = any((m.get("http-equiv") or "").lower() == "refresh" for m in p.metas)
-    js_hint = meta_refresh or any(_JS_REDIRECT_RE.search(t) for t in p.script_text)
+    js_hint = (meta_refresh or any(_JS_REDIRECT_RE.search(t) for t in p.script_text + p.handler_text)
+               or any(h.strip().lower().startswith("javascript:") for h in p.links))
+
+    # 다른 도메인의 코드·문서를 끌어오는 요소. 실행하지 않으므로 무엇을 하는지 알 수 없다(판정에서 안전 불가 사유).
+    ext: list[str] = []
+    for src in p.active_srcs:
+        sp = urlsplit(_resolve(base_url, src))
+        dom = registrable_of(to_ascii_host(sp.hostname)) if sp.hostname else ""
+        if sp.scheme.lower() not in ("http", "https", ""):
+            dom = "(script)"
+        if dom and dom != page_reg and dom not in ext:
+            ext.append(dom)
 
     # "공식·안전·인증" 류 주장 문구: 길이 제한, 최대 3개. 검증 대상 주장일 뿐이다.
     claims: list[str] = []
@@ -240,4 +325,5 @@ def inspect_page(html_bytes: bytes, page_url: str) -> dict:
         "apk_links": apk_links,
         "trust_claims": claims,
         "js_redirect_hint": bool(js_hint),
+        "external_active_domains": ext[:10],
     }

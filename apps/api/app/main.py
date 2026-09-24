@@ -140,6 +140,9 @@ def _purge_loop(stop: threading.Event) -> None:
             n = state.db.purge_expired(settings.retention_hours * 3600)
             if n:
                 log.info("purged %d expired jobs", n)
+            retry = getattr(state.sandbox, "retry_pending", None)
+            if retry:  # 샌드박스 안에 남은 작업 폴더도 요청이 없어도 다시 지운다
+                retry()
         except Exception:  # noqa: BLE001 - 한 번 실패해도 다음 주기에 다시 시도한다
             log.exception("retention purge failed")
 
