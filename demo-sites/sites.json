@@ -1,0 +1,10 @@
+{
+  "hanbit.example/track/12345": {"status": 200, "file": "pages/e1-official-track.html"},
+  "hanblt.example/login": {"status": 200, "file": "pages/e2-lookalike-login.html"},
+  "hanbit.example.account-check.test/login": {"status": 302, "location": "https://collect-pay.test/card", "file": "pages/e3-disguise-card.html"},
+  "hanbit-parcel.test/address": {"status": 200, "file": "pages/e4-clone-card.html"},
+  "pay-partner.example/checkout": {"status": 200, "file": "pages/e5-partner-checkout.html"},
+  "hanbit-notice.test/verify": {"status": 200, "file": "pages/s1-injection.html"},
+  "member-check.test/login": {"status": 200, "file": "pages/caution-member-login.html"},
+  "slow-site.test/x": {"timeout": true}
+}

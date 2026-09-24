@@ -1,0 +1,10 @@
+# 데모용 정적 테스트 페이지(가상 브랜드, 팀 소유 도메인 전용). demo-sites/pages/*.html 을 제공한다.
+# 도메인(D2)을 확보한 뒤 server_name을 실제 값으로 바꾼다. 샌드박스는 공용 DNS 주소만 접근할 수 있다(사설 대역은 SSRF 보호로 차단).
+server {
+    listen 80;
+    server_name hanbit.example.account-check.test account-check.test;
+    root /var/www/demo-sites/pages;
+    location = /login { return 302 https://collect-pay.test/card; add_header Content-Type text/html; }
+    location / { try_files /e3-disguise-card.html =404; }
+}
+# 나머지 사례(hanblt.example, hanbit-parcel.test, pay-partner.example …)도 같은 방식으로 server 블록을 추가한다.

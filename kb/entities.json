@@ -1,0 +1,43 @@
+{
+  "_comment": "검증된 공식 도메인 KB. 실제 기관은 각 기관 공식 사이트에서 직접 확인한 값만 sources와 함께 추가할 것(kb/README.md 참고). 확인하지 못한 기관은 넣지 않는다.",
+  "entities": [
+    {
+      "id": "hanbit",
+      "name": "한빛택배",
+      "aliases": ["한빛", "HANBIT", "hanbit", "한빛 택배", "한빛택배"],
+      "category": "delivery",
+      "official_domains": ["hanbit.example"],
+      "partner_domains": ["pay-partner.example"],
+      "policies": ["문자로 카드번호를 요구하지 않음"],
+      "policy_rules": [
+        {
+          "id": "no_card_by_sms",
+          "text": "한빛택배는 문자로 카드 번호를 묻지 않아요",
+          "forbids": ["card_number", "card_cvc", "card_expiry"]
+        }
+      ],
+      "official_app": "한빛택배 앱",
+      "sources": [{"url": "https://hanbit.example/notice/payment", "checked": "2026-09-24"}],
+      "fictional": true
+    },
+    {
+      "id": "haneul",
+      "name": "하늘은행",
+      "aliases": ["하늘", "HANEUL", "haneul", "하늘 은행"],
+      "category": "bank",
+      "official_domains": ["haneul.example"],
+      "partner_domains": [],
+      "policies": ["문자로 계좌 비밀번호와 인증번호를 요구하지 않음"],
+      "policy_rules": [
+        {
+          "id": "no_secret_by_sms",
+          "text": "하늘은행은 문자로 비밀번호와 인증번호를 묻지 않아요",
+          "forbids": ["password", "otp", "bank_account", "resident_id"]
+        }
+      ],
+      "official_app": "하늘은행 앱",
+      "sources": [{"url": "https://haneul.example/security", "checked": "2026-09-24"}],
+      "fictional": true
+    }
+  ]
+}

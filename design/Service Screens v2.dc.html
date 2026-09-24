@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#ecebe8;font-family:'Pretendard',system-ui,sans-serif;color:#1c1b1a;-webkit-font-smoothing:antialiased;word-break:keep-all}a{color:#1c1b1a}a:hover{color:oklch(0.52 0.19 27)}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{flex:none;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style></helmet>
+<section class="dv-turn" id="t5">
+<div class="dv-thd"><a class="dv-tid" href="#t5">5</a><span class="dv-tname">사용자 흐름도 — 각 칸의 번호를 누르면 해당 화면으로 이동</span></div>
+<div class="dv-opts">
+<div class="dv-opt" id="5a">
+<div class="dv-olabel"><a class="dv-oid" href="#5a">5a</a>전체 흐름 (데스크톱 · 모바일 공통)</div>
+<div class="dv-card" style="width:2000px;height:1120px;background:#fafaf9;position:relative">
+<svg width="2000" height="1120" style="position:absolute;left:0;top:0" fill="none" stroke="#57534e" stroke-width="2">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57534e" stroke="none"></path></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="oklch(0.5 0.19 27)" stroke="none"></path></marker></defs>
+<path d="M160,360 V466" marker-end="url(#ah)"></path>
+<path d="M140,584 V716" marker-end="url(#ah)"></path>
+<path d="M180,720 V588" marker-end="url(#ah)"></path>
+<path d="M280,525 H336" marker-end="url(#ah)"></path>
+<path d="M460,480 V364" marker-end="url(#ah)"></path>
+<path d="M340,305 H310 V495 H284" stroke-dasharray="6 5" marker-end="url(#ah)"></path>
+<path d="M460,570 V696" marker-end="url(#ah)"></path>
+<path d="M580,525 H636" marker-end="url(#ah)"></path>
+<path d="M580,755 H610 V545 H636" marker-end="url(#ah)"></path>
+<path d="M760,480 V364" marker-end="url(#ah)"></path>
+<path d="M880,305 H910 V470 H936" marker-end="url(#ah)"></path>
+<path d="M880,525 H936" marker-end="url(#ah)"></path>
+<path d="M1200,530 H1230 V190 H1256" marker-end="url(#ah)"></path>
+<path d="M1230,350 H1256" marker-end="url(#ah)"></path>
+<path d="M1230,510 H1256" marker-end="url(#ah)"></path>
+<path d="M1230,530 V670 H1256" marker-end="url(#ah)"></path>
+<path d="M1230,670 V830 H1256" marker-end="url(#ah)"></path>
+<path d="M1410,890 V960 H1070 V644" stroke-dasharray="6 5" marker-end="url(#ah)"></path>
+<path d="M1560,190 H1600 V830 H1560"></path>
+<path d="M1560,350 H1600 M1560,510 H1600 M1560,670 H1600"></path>
+<path d="M1600,510 H1636" marker-end="url(#ah)"></path>
+</svg>
+<div style="position:absolute;left:40px;top:36px;width:1920px;display:grid;grid-template-columns:300px 300px 300px 320px 380px 320px;font-size:13px;font-weight:700;color:#8a8580;letter-spacing:0.5px"><span>시작</span><span>입력 확인</span><span>순서</span><span>조사 (안전 공간)</span><span>결과 (정해진 규칙으로 판정)</span><span>조사 기록</span></div>
+
+<div style="position:absolute;left:40px;top:300px;width:240px;height:60px;box-sizing:border-box;border-radius:999px;background:#1c1b1a;color:#fff;display:grid;place-items:center;font-size:17px;font-weight:700">이상한 문자를 받음</div>
+<div style="position:absolute;left:40px;top:470px;width:240px;height:110px;box-sizing:border-box;border:2px solid #1c1b1a;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:18px;font-weight:700">홈</span><a class="dv-oid" href="#3b">3b</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">문자 붙여넣기 → <b>확인하기</b></span></div>
+<div style="position:absolute;left:40px;top:720px;width:240px;height:110px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:18px;font-weight:700">이용 방법</span><a class="dv-oid" href="#4a">4a</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">3단계 안내 · 결과 읽는 법 · 피해 시 연락처</span></div>
+<span style="position:absolute;left:190px;top:636px;font-size:12px;color:#57534e;background:#fafaf9;padding:2px 4px">상단 메뉴 / 확인하러 가기</span>
+
+<div style="position:absolute;left:340px;top:480px;width:240px;height:90px;box-sizing:border-box;border:2px dashed #8a8580;border-radius:14px;background:#f2f1ef;padding:12px 14px;display:flex;align-items:center;gap:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#8a8580;color:#fff;font-weight:800;display:grid;place-items:center">?</span><span style="font-size:17px;font-weight:700;line-height:1.3">문자에 링크가 있나요?</span></div>
+<div style="position:absolute;left:340px;top:250px;width:240px;height:110px;box-sizing:border-box;border:1.5px solid oklch(0.5 0.19 27);border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:17px;font-weight:700">링크 없음 안내</span><a class="dv-oid" href="#3k">3k</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">링크 있는 문자를 넣어 달라고 안내</span></div>
+<div style="position:absolute;left:340px;top:700px;width:240px;height:110px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:17px;font-weight:700">링크 여러 개 안내</span><a class="dv-oid" href="#3k">3k</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">첫 번째 링크부터 확인해요</span></div>
+<span style="position:absolute;left:470px;top:415px;font-size:13px;font-weight:700;color:oklch(0.47 0.18 27);background:#fafaf9;padding:2px 4px">없음</span>
+<span style="position:absolute;left:470px;top:625px;font-size:13px;font-weight:700;color:#44403c;background:#fafaf9;padding:2px 4px">여러 개</span>
+<span style="position:absolute;left:592px;top:500px;font-size:13px;font-weight:700;color:#44403c">1개</span>
+<span style="position:absolute;left:210px;top:398px;font-size:12px;color:#57534e;background:#fafaf9;padding:2px 4px">다시 붙여넣기</span>
+
+<div style="position:absolute;left:640px;top:480px;width:240px;height:90px;box-sizing:border-box;border:2px dashed #8a8580;border-radius:14px;background:#f2f1ef;padding:12px 14px;display:flex;align-items:center;gap:10px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#8a8580;color:#fff;font-weight:800;display:grid;place-items:center">?</span><span style="font-size:17px;font-weight:700;line-height:1.3">앞에 확인 중인 사람이 있나요?</span></div>
+<div style="position:absolute;left:640px;top:250px;width:240px;height:110px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:17px;font-weight:700">순서 기다리는 중</span><a class="dv-oid" href="#3k">3k</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">한 번에 한 건씩 · 약 1분 대기</span></div>
+<span style="position:absolute;left:770px;top:415px;font-size:13px;font-weight:700;color:#44403c;background:#fafaf9;padding:2px 4px">있음</span>
+<span style="position:absolute;left:892px;top:500px;font-size:13px;font-weight:700;color:#44403c">없음</span>
+
+<div style="position:absolute;left:940px;top:420px;width:260px;height:220px;box-sizing:border-box;border:2px solid #1c1b1a;border-radius:14px;background:#fff;padding:14px 16px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:18px;font-weight:700">확인하는 중</span><a class="dv-oid" href="#3c">3c</a></div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:#2e2c2a"><span>1 누가 보낸 척하는지</span><span>2 주소 살펴보기</span><span>3 안전 공간에서 열어보기</span><span>4 페이지 속 내용</span><span>5 결과 정리</span></div>
+<span style="font-size:12px;color:#57534e;margin-top:auto">2초마다 진행 상황 새로고침 · 최대 90초</span></div>
+<div style="position:absolute;left:940px;top:680px;width:260px;box-sizing:border-box;border-radius:12px;background:#1c1b1a;color:#e2e0dc;padding:12px 14px;font-size:13px;line-height:1.55">링크는 <b style="color:#fff">안전 공간</b>에서만 열고, 조사할 한 곳만 문을 열었다가 닫아요.</div>
+
+<div style="position:absolute;left:1260px;top:130px;width:300px;height:120px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="padding:4px 12px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:14px;font-weight:700">안전해요</span><a class="dv-oid" href="#4b">4b</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">진짜 주소와 같고 위험한 점 없음</span></div>
+<div style="position:absolute;left:1260px;top:290px;width:300px;height:120px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="padding:4px 12px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:14px;font-weight:700">안전해요 · 협력 회사</span><a class="dv-oid" href="#4c">4c</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">주소는 다르지만 공식 협력 회사</span></div>
+<div style="position:absolute;left:1260px;top:450px;width:300px;height:120px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="padding:4px 12px;border-radius:999px;background:oklch(0.72 0.15 75);color:#1c1b1a;font-size:14px;font-weight:700">조심하세요</span><a class="dv-oid" href="#4d">4d</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">회사는 모르지만 위험한 점 있음</span></div>
+<div style="position:absolute;left:1260px;top:610px;width:300px;height:120px;box-sizing:border-box;border:2px solid oklch(0.5 0.19 27);border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="padding:4px 12px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:14px;font-weight:700">가짜로 의심돼요</span><a class="dv-oid" href="#3d">3d</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">많이 위험한 점 + 흉내 낸 회사 확인됨</span></div>
+<div style="position:absolute;left:1260px;top:770px;width:300px;height:120px;box-sizing:border-box;border:1px solid #d6d3d1;border-radius:14px;background:#fff;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="padding:4px 12px;border-radius:999px;background:#44403c;color:#fff;font-size:14px;font-weight:700">알 수 없어요</span><a class="dv-oid" href="#4e">4e</a></div><span style="font-size:14px;line-height:1.45;color:#44403c">조사 멈춤 · 자료 없음 (안전 아님)</span></div>
+<span style="position:absolute;left:1180px;top:948px;font-size:12px;color:#57534e;background:#fafaf9;padding:2px 6px">다시 확인하기</span>
+<span style="position:absolute;left:1566px;top:480px;font-size:12px;color:#57534e;background:#fafaf9;padding:2px 2px;width:30px;line-height:1.3">조사<br>보기</span>
+
+<div style="position:absolute;left:1640px;top:130px;width:320px;height:760px;box-sizing:border-box;border:2px solid #1c1b1a;border-radius:16px;background:#fff;padding:18px;display:flex;flex-direction:column;gap:12px">
+<span style="font-size:18px;font-weight:700">어떻게 조사했나요?</span>
+<span style="font-size:13px;color:#57534e;line-height:1.5">결과 화면의 "어떻게 조사했는지 보기"로 들어와 탭으로 오가요.</span>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+<div style="border:1px solid #e2e0dc;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:16px">① 주소 살펴보기</b><a class="dv-oid" href="#3e">3e</a></div><span style="font-size:13px;color:#44403c">주소 조각 · 속임수 5가지 · 닮은 정도</span></div>
+<div style="border:1px solid #e2e0dc;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:16px">② 넘어간 길</b><a class="dv-oid" href="#3f">3f</a></div><span style="font-size:13px;color:#44403c">열어본 곳 · 막은 곳</span></div>
+<div style="border:1px solid #e2e0dc;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:16px">③ 페이지 속 내용</b><a class="dv-oid" href="#3g">3g</a></div><span style="font-size:13px;color:#44403c">적으라는 것 · 보내지는 곳 · 페이지의 말</span></div>
+<div style="border:1px solid #e2e0dc;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:16px">④ AI 조사원이 한 일</b><a class="dv-oid" href="#3h">3h</a></div><span style="font-size:13px;color:#44403c">순서별 기록 · 시키지 않은 일 0번</span></div>
+<div style="border:1px solid #e2e0dc;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px"><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:16px">⑤ 안전 공간 기록</b><a class="dv-oid" href="#3i">3i</a></div><span style="font-size:13px;color:#44403c">문 열기·막기·닫기 시각</span></div>
+</div>
+<span style="margin-top:auto;font-size:12px;color:#57534e;padding-top:10px;border-top:1px dashed #d6d3d1">각 탭 맨 아래 "개발자용 기록"은 접혀 있음</span>
+</div>
+
+<div style="position:absolute;left:40px;top:1010px;width:1920px;display:flex;gap:28px;flex-wrap:wrap;font-size:14px;color:#44403c;padding-top:18px;border-top:1px solid #e2e0dc">
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;border-top:2px solid #57534e"></span>다음 화면</span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:28px;border-top:2px dashed #57534e"></span>되돌아가기</span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:18px;height:14px;border:2px dashed #8a8580;border-radius:4px;background:#f2f1ef"></span>갈림길 (자동 판단)</span>
+<span>· 모든 결과·기록 화면 → <b>다른 문자 확인하기</b> → 홈 <a class="dv-oid" href="#3b">3b</a></span>
+<span>· 모바일은 ☰ 메뉴 <a class="dv-oid" href="#4f">4f</a> M1에서 확인하기 · 이용 방법 · 이미 눌렀다면</span>
+</div>
+</div>
+</div>
+</div>
+<p class="dv-next">Try next: "모바일 전용 흐름도" · "화면 썸네일을 흐름도 칸에 넣기" · "오류·예외만 따로 흐름도"</p>
+</section>
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">이용 방법 화면 · 결과 4종 전체 페이지 · 모바일 상세 (<a class="dv-oid" href="#3b">3b</a> 시연 모드 토글 삭제됨)</span></div>
+<div class="dv-opts">
+
+<!-- 4a 이용 방법 -->
+<div class="dv-opt" id="4a">
+<div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>이용 방법 (상단 메뉴 "이용 방법"을 누르면)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><div style="display:flex;align-items:center;gap:24px;font-size:16px"><span style="color:#44403c">확인하기</span><span style="font-weight:700;padding-bottom:4px;border-bottom:2px solid #1c1b1a">이용 방법</span></div></div>
+<div style="max-width:1100px;margin:0 auto;padding:56px 0 72px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px"><h1 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px">이렇게 이용하세요</h1><p style="margin:0;font-size:19px;line-height:1.6;color:#44403c">이상한 문자를 받았을 때, 링크를 누르지 않고도 진짜인지 가짜인지 알 수 있어요.</p></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:18px;overflow:hidden;display:flex;flex-direction:column"><div style="height:220px;background:repeating-linear-gradient(135deg,#f2f1ef 0 10px,#ebe9e6 10px 20px);display:grid;place-items:center;font:13px 'JetBrains Mono',monospace;color:#6b6763">휴대폰 화면: 문자를 길게 눌러 "복사"</div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:18px;font-weight:700;display:grid;place-items:center">1</span><span style="font-size:21px;font-weight:700">문자를 복사해요</span><span style="font-size:17px;line-height:1.6;color:#44403c">받은 문자를 손가락으로 <b style="color:#1c1b1a">길게 누르면</b> "복사"가 나와요. 링크는 누르지 마세요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:18px;overflow:hidden;display:flex;flex-direction:column"><div style="height:220px;background:repeating-linear-gradient(135deg,#f2f1ef 0 10px,#ebe9e6 10px 20px);display:grid;place-items:center;font:13px 'JetBrains Mono',monospace;color:#6b6763">이 사이트 입력 칸에 "붙여넣기"</div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:18px;font-weight:700;display:grid;place-items:center">2</span><span style="font-size:21px;font-weight:700">여기에 붙여 넣어요</span><span style="font-size:17px;line-height:1.6;color:#44403c">첫 화면의 큰 칸을 길게 눌러 <b style="color:#1c1b1a">붙여넣기</b>를 눌러요. 문자 전체도, 링크만도 괜찮아요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:18px;overflow:hidden;display:flex;flex-direction:column"><div style="height:220px;background:repeating-linear-gradient(135deg,#f2f1ef 0 10px,#ebe9e6 10px 20px);display:grid;place-items:center;font:13px 'JetBrains Mono',monospace;color:#6b6763">결과 화면: 색깔 표시 + 이유</div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:18px;font-weight:700;display:grid;place-items:center">3</span><span style="font-size:21px;font-weight:700">1분쯤 기다려요</span><span style="font-size:17px;line-height:1.6;color:#44403c"><b style="color:#1c1b1a">확인하기</b>를 누르면 저희가 대신 열어보고, 결과와 이유를 알려드려요.</span></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:18px">
+<span style="font-size:26px;font-weight:700">결과는 이렇게 읽어요</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:16px;font-weight:700">안전해요</span><span style="font-size:16px;line-height:1.6;color:#2e2c2a">문자가 말한 회사의 <b>진짜 사이트</b>예요.</span><span style="font-size:15px;line-height:1.55;color:#57534e;padding-top:10px;border-top:1px solid #f0efec">그래도 카드 번호·비밀번호를 물으면 한 번 더 생각하세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.72 0.15 75);color:#1c1b1a;font-size:16px;font-weight:700">조심하세요</span><span style="font-size:16px;line-height:1.6;color:#2e2c2a">가짜라고 딱 잘라 말할 수는 없지만 <b>위험한 점</b>이 있어요.</span><span style="font-size:15px;line-height:1.55;color:#57534e;padding-top:10px;border-top:1px solid #f0efec">회사 대표번호로 직접 물어보세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:16px;font-weight:700">가짜로 의심돼요</span><span style="font-size:16px;line-height:1.6;color:#2e2c2a">진짜 회사를 <b>흉내 낸 가짜</b>일 가능성이 높아요.</span><span style="font-size:15px;line-height:1.55;color:#57534e;padding-top:10px;border-top:1px solid #f0efec">링크를 누르지 말고, 문자를 지우세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:#44403c;color:#fff;font-size:16px;font-weight:700">알 수 없어요</span><span style="font-size:16px;line-height:1.6;color:#2e2c2a">확인할 자료가 없거나 조사가 멈췄어요. <b>안전하다는 뜻이 아니에요.</b></span><span style="font-size:15px;line-height:1.55;color:#57534e;padding-top:10px;border-top:1px solid #f0efec">잠시 뒤 다시 확인해 보세요.</span></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:22px;font-weight:700">이 서비스가 알 수 없는 것</span>
+<span style="font-size:16px;line-height:1.6;color:#44403c">모르는 것은 결과 화면의 <b style="color:#1c1b1a">"확인하지 못한 것"</b>에 따로 적어 드려요.</span>
+<div style="display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.5">
+<div style="display:flex;gap:12px"><span style="flex:none;color:#8a8580">✕</span><span>문자를 보낸 <b>전화번호</b>가 진짜 회사 번호인지</span></div>
+<div style="display:flex;gap:12px"><span style="flex:none;color:#8a8580">✕</span><span><b>링크가 없는</b> 문자 (전화하라는 문자 등)</span></div>
+<div style="display:flex;gap:12px"><span style="flex:none;color:#8a8580">✕</span><span>이메일, 카카오톡으로 온 메시지</span></div>
+<div style="display:flex;gap:12px"><span style="flex:none;color:#8a8580">✕</span><span>페이지가 열린 뒤 스스로 바뀌는 내용</span></div>
+</div>
+</div>
+<div style="background:#1c1b1a;color:#fff;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:22px;font-weight:700">이미 링크를 눌렀거나 정보를 적었다면</span>
+<div style="display:flex;flex-direction:column;gap:2px;font-size:17px">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>카드 번호를 적었어요</span><b>카드 회사에 바로 전화</b></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>계좌·돈을 보냈어요</span><b>은행에 지급정지 요청</b></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)"><span>사기 피해를 신고하고 싶어요</span><b style="font-size:22px">112</b></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0"><span>모르는 앱이 깔렸어요 · 상담</span><b style="font-size:22px">118</b></div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<span style="font-size:26px;font-weight:700">자주 묻는 질문</span>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:18px;overflow:hidden">
+<div style="padding:22px 28px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid #f0efec"><div style="display:flex;justify-content:space-between;font-size:18px;font-weight:700"><span>링크를 붙여 넣기만 해도 위험하지 않나요?</span><span>–</span></div><span style="font-size:17px;line-height:1.6;color:#44403c">괜찮아요. 붙여 넣은 링크는 내 휴대폰에서 열리지 않아요. 바깥과 떨어진 안전 공간에서만 열어봐요.</span></div>
+<div style="padding:22px 28px;display:flex;justify-content:space-between;font-size:18px;font-weight:700;border-bottom:1px solid #f0efec"><span>"안전해요"가 나오면 무조건 믿어도 되나요?</span><span>+</span></div>
+<div style="padding:22px 28px;display:flex;justify-content:space-between;font-size:18px;font-weight:700;border-bottom:1px solid #f0efec"><span>왜 1분이나 걸리나요?</span><span>+</span></div>
+<div style="padding:22px 28px;display:flex;justify-content:space-between;font-size:18px;font-weight:700;border-bottom:1px solid #f0efec"><span>AI가 틀리면 어떡하나요?</span><span>+</span></div>
+<div style="padding:22px 28px;display:flex;justify-content:space-between;font-size:18px;font-weight:700"><span>어떤 회사까지 확인할 수 있나요?</span><span>+</span></div>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:28px 32px;border-radius:18px;background:#fff;border:2px solid #1c1b1a"><span style="font-size:22px;font-weight:700">받은 문자, 지금 확인해 볼까요?</span><span style="padding:14px 32px;border-radius:12px;background:#1c1b1a;color:#fff;font-size:19px;font-weight:700">확인하러 가기</span></div>
+</div>
+</div>
+</div>
+
+<!-- 4b 결과 안전 -->
+<div class="dv-opt" id="4b">
+<div class="dv-olabel"><a class="dv-oid" href="#4b">4b</a>결과 — 안전해요 (진짜 택배 사이트)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:oklch(0.965 0.03 155);border-bottom:1px solid oklch(0.88 0.05 155)"><div style="max-width:1100px;margin:0 auto;padding:44px 0 40px;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:18px;font-weight:700"><span style="width:20px;height:20px;border-radius:50%;background:#fff;color:oklch(0.5 0.13 155);font-size:13px;font-weight:800;display:grid;place-items:center">✓</span>안전해요</span>
+<h2 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.25">한빛택배의 진짜 사이트예요.</h2>
+<span style="font-size:19px;line-height:1.6;color:#44403c">주소의 주인이 한빛택배 진짜 주소와 같고, 이상한 것을 적으라고 하지 않아요.</span>
+</div></div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:20px;font-weight:700">이 링크의 진짜 주인은 누구일까요?</span>
+<div style="display:flex;align-items:flex-start;font:22px 'JetBrains Mono',monospace">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;background:oklch(0.5 0.13 155);color:#fff;font-weight:600;border-radius:8px">hanbit.example</span><span style="font:700 15px/1.4 'Pretendard';color:oklch(0.4 0.12 155);padding:0 10px">진짜 사이트 이름</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;color:#8a8580">/track/12345</span><span style="font:15px/1.4 'Pretendard';color:#57534e;padding:0 10px">사이트 안의 위치</span></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;font-size:17px">
+<div style="padding:16px 18px;border-radius:12px;background:#f5f4f2;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">한빛택배 진짜 주소</span><b style="font-family:'JetBrains Mono',monospace">hanbit.example</b></div>
+<div style="padding:16px 18px;border-radius:12px;background:oklch(0.965 0.03 155);display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">이 링크의 진짜 주인</span><b style="font-family:'JetBrains Mono',monospace;color:oklch(0.4 0.12 155)">hanbit.example ✓ 같아요</b></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden">
+<div style="padding:20px 28px;font-size:20px;font-weight:700;border-bottom:1px solid #e2e0dc">문자가 한 말 vs 실제로 확인한 것</div>
+<div style="display:grid;grid-template-columns:130px minmax(0,1fr) minmax(0,1fr) 110px;font-size:17px">
+<div style="padding:18px 28px;color:#57534e">주소</div><div style="padding:18px 16px">한빛택배 사이트예요</div><div style="padding:18px 16px">한빛택배 사이트가 맞아요</div><div style="padding:18px 16px;color:oklch(0.4 0.12 155);font-weight:700">같아요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적는 칸</div><div style="padding:18px 16px;border-top:1px solid #f0efec">배송 조회</div><div style="padding:18px 16px;border-top:1px solid #f0efec">적는 칸 없음 (조회만)</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.4 0.12 155);font-weight:700">맞아요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">넘어간 곳</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">—</div><div style="padding:18px 16px;border-top:1px solid #f0efec">다른 곳으로 넘어가지 않았어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.4 0.12 155);font-weight:700">괜찮아요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">보낸 번호</div><div style="padding:18px 16px;border-top:1px solid #f0efec">한빛택배가 보냈어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">확인할 방법이 없어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e;font-weight:700">모름</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">확실한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55"><span>· 진짜 사이트 이름은 hanbit.example이에요.</span><span>· 한빛택배 진짜 주소 목록에 있는 주소예요.</span><span>· 카드 번호나 비밀번호를 묻지 않아요.</span></div></div>
+<div style="background:#fff;border:1.5px dashed #c9c5c0;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:#44403c">확인하지 못한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#44403c"><span>· 문자를 보낸 전화번호가 진짜인지</span><span>· 페이지가 나중에 스스로 바뀌는 내용</span></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:16px"><span style="font-size:15px;font-weight:600;color:#c9c5c0">이렇게 하세요</span><span style="font-size:22px;font-weight:700;line-height:1.4">링크를 열어도 괜찮아요.</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#e2e0dc"><span>· 그래도 카드 번호나 비밀번호를 적으라고 하면 멈추고 다시 확인하세요.</span><span>· 불안하면 한빛택배 앱에서 직접 확인해도 돼요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:17px;font-weight:700">위험한 점 한눈에 보기</span><div style="padding:16px;border-radius:12px;background:oklch(0.965 0.03 155);font-size:16px;font-weight:600;color:oklch(0.4 0.12 155)">위험한 점을 찾지 못했어요</div><span style="font-size:14px;line-height:1.55;color:#57534e;padding-top:12px;border-top:1px solid #f0efec">진짜·가짜 결정은 정해진 규칙으로 하고, 설명 글만 AI가 썼어요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 4c 결과 안전 협력 -->
+<div class="dv-opt" id="4c">
+<div class="dv-olabel"><a class="dv-oid" href="#4c">4c</a>결과 — 안전해요 · 협력 회사 (택배사가 쓰는 결제 사이트)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:oklch(0.965 0.03 155);border-bottom:1px solid oklch(0.88 0.05 155)"><div style="max-width:1100px;margin:0 auto;padding:44px 0 40px;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:18px;font-weight:700"><span style="width:20px;height:20px;border-radius:50%;background:#fff;color:oklch(0.5 0.13 155);font-size:13px;font-weight:800;display:grid;place-items:center">✓</span>안전해요 · 협력 회사</span>
+<h2 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.25">한빛택배가 함께 쓰는 결제 사이트예요.</h2>
+<span style="font-size:19px;line-height:1.6;color:#44403c">주소는 한빛택배와 다르지만, 한빛택배가 공식으로 쓰는 결제 회사예요. 주소가 다르다는 것만으로 가짜는 아니에요.</span>
+</div></div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:20px;font-weight:700">이 링크의 진짜 주인은 누구일까요?</span>
+<div style="display:flex;align-items:flex-start;font:22px 'JetBrains Mono',monospace">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;background:oklch(0.5 0.13 155);color:#fff;font-weight:600;border-radius:8px">pay-partner.example</span><span style="font:700 15px/1.4 'Pretendard';color:oklch(0.4 0.12 155);padding:0 10px">진짜 사이트 이름</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;color:#8a8580">/checkout</span><span style="font:15px/1.4 'Pretendard';color:#57534e;padding:0 10px">사이트 안의 위치</span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;font-size:16px">
+<div style="padding:16px 18px;border-radius:12px;background:#f5f4f2;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">한빛택배 진짜 주소</span><b style="font-family:'JetBrains Mono',monospace">hanbit.example</b></div>
+<div style="padding:16px 18px;border-radius:12px;background:#f5f4f2;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">한빛택배 협력 회사</span><b style="font-family:'JetBrains Mono',monospace">pay-partner.example</b></div>
+<div style="padding:16px 18px;border-radius:12px;background:oklch(0.965 0.03 155);display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">이 링크</span><b style="color:oklch(0.4 0.12 155)">협력 회사 목록에 있어요 ✓</b></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden">
+<div style="padding:20px 28px;font-size:20px;font-weight:700;border-bottom:1px solid #e2e0dc">문자가 한 말 vs 실제로 확인한 것</div>
+<div style="display:grid;grid-template-columns:130px minmax(0,1fr) minmax(0,1fr) 110px;font-size:17px">
+<div style="padding:18px 28px;color:#57534e">주소</div><div style="padding:18px 16px">한빛택배 결제 페이지예요</div><div style="padding:18px 16px">한빛택배의 공식 결제 회사예요</div><div style="padding:18px 16px;color:oklch(0.4 0.12 155);font-weight:700">맞아요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적는 칸</div><div style="padding:18px 16px;border-top:1px solid #f0efec">착불 요금 결제</div><div style="padding:18px 16px;border-top:1px solid #f0efec">카드 번호, 유효기간, 이름</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.4 0.12 155);font-weight:700">결제에 필요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적은 내용</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">—</div><div style="padding:18px 16px;border-top:1px solid #f0efec">같은 결제 회사로 보내져요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.4 0.12 155);font-weight:700">괜찮아요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">보낸 번호</div><div style="padding:18px 16px;border-top:1px solid #f0efec">한빛택배가 보냈어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">확인할 방법이 없어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e;font-weight:700">모름</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">확실한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55"><span>· 진짜 사이트 이름은 pay-partner.example이에요.</span><span>· 한빛택배 공식 홈페이지에 협력 회사로 적혀 있어요.</span><span>· 결제에 필요한 것만 적으라고 해요.</span></div></div>
+<div style="background:#fff;border:1.5px dashed #c9c5c0;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:#44403c">확인하지 못한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#44403c"><span>· 문자를 보낸 전화번호가 진짜인지</span><span>· 결제 금액이 맞는지</span></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:16px"><span style="font-size:15px;font-weight:600;color:#c9c5c0">이렇게 하세요</span><span style="font-size:22px;font-weight:700;line-height:1.4">결제하기 전에 금액과 회사 이름을 한 번 더 보세요.</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#e2e0dc"><span>· 받을 택배가 없다면 결제하지 마세요.</span><span>· 한빛택배 앱에서 결제해도 돼요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:17px;font-weight:700">알아두세요</span><span style="font-size:16px;line-height:1.6;color:#2e2c2a">회사들은 결제나 본인 확인을 <b>다른 전문 회사</b>에 맡기기도 해요. 저희는 회사가 직접 밝힌 협력 회사 목록과 비교해요.</span><span style="font-size:14px;line-height:1.55;color:#57534e;padding-top:12px;border-top:1px solid #f0efec">진짜·가짜 결정은 정해진 규칙으로 하고, 설명 글만 AI가 썼어요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 4d 결과 조심 -->
+<div class="dv-opt" id="4d">
+<div class="dv-olabel"><a class="dv-oid" href="#4d">4d</a>결과 — 조심하세요 (목록에 없는 회사)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:oklch(0.965 0.045 80);border-bottom:1px solid oklch(0.88 0.07 80)"><div style="max-width:1100px;margin:0 auto;padding:44px 0 40px;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:oklch(0.72 0.15 75);color:#1c1b1a;font-size:18px;font-weight:700"><span style="width:20px;height:20px;border-radius:50%;background:#1c1b1a;color:oklch(0.8 0.14 80);font-size:14px;font-weight:800;display:grid;place-items:center">!</span>조심하세요</span>
+<h2 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.25">어느 회사인지 알 수 없지만, 위험한 점이 있어요.</h2>
+<span style="font-size:19px;line-height:1.6;color:#44403c">"별빛마켓"의 진짜 주소는 저희 목록에 없어요. 그런데 비밀번호를 적게 하고, 그 내용을 다른 사이트로 보내요.</span>
+</div></div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:20px;font-weight:700">이 링크의 진짜 주인은 누구일까요?</span>
+<div style="display:flex;align-items:flex-start;font:22px 'JetBrains Mono',monospace">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;background:oklch(0.72 0.15 75);color:#1c1b1a;font-weight:600;border-radius:8px">member-check.test</span><span style="font:700 15px/1.4 'Pretendard';color:oklch(0.42 0.1 65);padding:0 10px">진짜 사이트 이름</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;color:#8a8580">/login</span></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;font-size:17px">
+<div style="padding:16px 18px;border-radius:12px;background:#f5f4f2;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">별빛마켓 진짜 주소</span><b style="color:#57534e">목록에 없어서 비교할 수 없어요</b></div>
+<div style="padding:16px 18px;border-radius:12px;background:oklch(0.965 0.045 80);display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">이 링크의 진짜 주인</span><b style="font-family:'JetBrains Mono',monospace">member-check.test</b></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden">
+<div style="padding:20px 28px;font-size:20px;font-weight:700;border-bottom:1px solid #e2e0dc">문자가 한 말 vs 실제로 확인한 것</div>
+<div style="display:grid;grid-template-columns:130px minmax(0,1fr) minmax(0,1fr) 110px;font-size:17px">
+<div style="padding:18px 28px;color:#57534e">주소</div><div style="padding:18px 16px">별빛마켓 회원 확인이에요</div><div style="padding:18px 16px;color:#57534e">진짜 주소를 몰라 비교 못 함</div><div style="padding:18px 16px;color:#57534e;font-weight:700">모름</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적는 칸</div><div style="padding:18px 16px;border-top:1px solid #f0efec">회원 정보 확인</div><div style="padding:18px 16px;border-top:1px solid #f0efec">아이디, 비밀번호, 인증번호</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.42 0.1 65);font-weight:700">조심</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적은 내용</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">—</div><div style="padding:18px 16px;border-top:1px solid #f0efec">다른 사이트(data-send.test)로 보내져요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.42 0.1 65);font-weight:700">조심</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">보낸 번호</div><div style="padding:18px 16px;border-top:1px solid #f0efec">별빛마켓이 보냈어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">확인할 방법이 없어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e;font-weight:700">모름</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">확실한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55"><span>· 진짜 사이트 이름은 member-check.test예요.</span><span>· 비밀번호와 인증번호를 적는 칸이 있어요.</span></div></div>
+<div style="background:#fff;border:1.5px solid oklch(0.85 0.08 80);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:oklch(0.42 0.1 65)">조심해야 하는 이유</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55"><span>· 적은 비밀번호가 이 페이지와 다른 사이트로 가요.</span><span>· 휴대폰 인증번호는 남에게 알려주면 안 돼요.</span></div></div>
+<div style="background:#fff;border:1.5px dashed #c9c5c0;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:#44403c">확인하지 못한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#44403c"><span>· 별빛마켓의 진짜 주소</span><span>· 문자를 보낸 전화번호가 진짜인지</span></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:16px"><span style="font-size:15px;font-weight:600;color:#c9c5c0">이렇게 하세요</span><span style="font-size:22px;font-weight:700;line-height:1.4">링크 대신, 별빛마켓 앱이나 대표 전화번호로 직접 물어보세요.</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#e2e0dc"><span>· 문자 속 전화번호로 전화하지 마세요.</span><span>· 비밀번호, 인증번호는 적지 마세요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px"><span style="font-size:17px;font-weight:700">위험한 점 한눈에 보기</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>비밀번호 적는 칸</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-weight:700;font-size:14px">조금 위험</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>다른 사이트로 보냄</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-weight:700;font-size:14px">조금 위험</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>목록에 없는 회사</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:#f0efec;color:#44403c;font-weight:700;font-size:14px">참고</span></div>
+</div><span style="font-size:14px;line-height:1.55;color:#57534e;padding-top:12px;border-top:1px solid #f0efec">회사를 알 수 없어서 "가짜"라고 단정하지 않았어요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 4e 결과 알 수 없음 -->
+<div class="dv-opt" id="4e">
+<div class="dv-olabel"><a class="dv-oid" href="#4e">4e</a>결과 — 알 수 없어요 (조사가 중간에 멈춤)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#f2f1ef;border-bottom:1px solid #e2e0dc"><div style="max-width:1100px;margin:0 auto;padding:44px 0 40px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:#44403c;color:#fff;font-size:18px;font-weight:700"><span style="width:20px;height:20px;border-radius:50%;background:#fff;color:#44403c;font-size:14px;font-weight:800;display:grid;place-items:center">?</span>알 수 없어요</span>
+<h2 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.25">지금은 확인을 끝내지 못했어요.</h2>
+<span style="font-size:19px;line-height:1.6;color:#44403c">AI가 너무 바빠서 조사가 멈췄어요. <b style="color:#1c1b1a">안전하다는 뜻이 아니니</b> 아직 링크를 누르지 마세요.</span>
+</div>
+<div style="display:flex;gap:10px;flex:none"><span style="padding:16px 28px;border-radius:12px;background:#1c1b1a;color:#fff;font-size:19px;font-weight:700">다시 확인하기</span></div>
+</div></div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:20px;font-weight:700;margin-bottom:12px">어디까지 확인했나요?</span>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><span style="width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:18px;font-weight:700">누가 보낸 척하는지 확인</span><span style="font-size:15px;color:#44403c">한빛택배 · 택배 안내</span></div><span style="font-size:15px;color:#57534e">끝</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><span style="width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:18px;font-weight:700">주소 살펴보기</span><span style="font-size:15px;color:#44403c">진짜 사이트 이름: <b style="font-family:'JetBrains Mono',monospace">hanblt.example</b></span></div><span style="font-size:15px;color:#57534e">끝</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><span style="width:30px;height:30px;border-radius:50%;background:#44403c;color:#fff;font-weight:800;display:grid;place-items:center">!</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:18px;font-weight:700">안전 공간에서 열어보기</span><span style="font-size:15px;color:#44403c">1분 안에 답이 오지 않아 멈췄어요</span></div><span style="font-size:15px;font-weight:700">멈춤</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:16px 0;border-top:1px solid #f0efec;align-items:center;color:#8a8580"><span style="width:30px;height:30px;border-radius:50%;border:2px solid #d6d3d1;box-sizing:border-box"></span><span style="font-size:18px;font-weight:700">페이지 속 내용 살펴보기</span><span style="font-size:15px">못 함</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:20px;font-weight:700">멈추기 전에 발견한 것</span><span style="padding:4px 12px;border-radius:999px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-size:15px;font-weight:700">참고만 하세요</span></div>
+<div style="display:flex;align-items:center;gap:16px;font:20px 'JetBrains Mono',monospace;flex-wrap:wrap"><span style="padding:10px 12px;border-radius:8px;background:#f5f4f2">hanbit.example <span style="font:14px 'Pretendard';color:#57534e">진짜</span></span><span style="font:600 16px 'Pretendard'">vs</span><span style="padding:10px 12px;border-radius:8px;background:oklch(0.965 0.045 80)">hanb<b style="text-decoration:underline">l</b>t.example <span style="font:14px 'Pretendard';color:#57534e">이 링크</span></span></div>
+<span style="font-size:17px;line-height:1.6;color:#2e2c2a">진짜 주소와 <b>한 글자(i → l)</b>만 달라요. 가짜 사이트가 자주 쓰는 방법이에요. 페이지 안을 보지 못해서 최종 결과는 내리지 않았어요.</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:16px"><span style="font-size:15px;font-weight:600;color:#c9c5c0">이렇게 하세요</span><span style="font-size:22px;font-weight:700;line-height:1.4">1~2분 뒤에 다시 확인해 보세요.</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#e2e0dc"><span>· 그 전까지 링크를 누르지 마세요.</span><span>· 급하다면 한빛택배 앱에서 직접 확인하세요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;font-weight:700">"알 수 없어요"가 나오는 경우</span><div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55;color:#2e2c2a"><span>· 조사가 중간에 멈췄을 때</span><span>· 사이트가 열리지 않을 때</span><span>· 비교할 진짜 주소가 없고, 위험한 점도 없을 때</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700"><span>주소 살펴보기 결과만 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 4f 모바일 상세 -->
+<div class="dv-opt" id="4f">
+<div class="dv-olabel"><a class="dv-oid" href="#4f">4f</a>모바일 상세 — 이용 방법 · 확인 중 · 결과 전체 · 조사 기록 탭 · 결과 종류</div>
+<div style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;width:2140px">
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M1 메뉴 열림</span>
+<div class="dv-card" style="width:390px;background:#fff">
+<div style="height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #e2e0dc"><div style="display:flex;align-items:center;gap:8px"><div style="width:24px;height:24px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:17px;font-weight:700">문자 링크 확인</span></div><span style="font-size:22px">✕</span></div>
+<div style="padding:12px 20px 28px;display:flex;flex-direction:column;min-height:560px">
+<div style="padding:20px 0;border-bottom:1px solid #f0efec;font-size:22px;font-weight:700">확인하기</div>
+<div style="padding:20px 0;border-bottom:1px solid #f0efec;font-size:22px;font-weight:700">이용 방법</div>
+<div style="padding:20px 0;border-bottom:1px solid #f0efec;font-size:22px;font-weight:700">이미 눌렀다면</div>
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:10px"><span style="font-size:15px;color:#57534e">급할 땐 바로 전화하세요</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><span style="padding:16px;border-radius:14px;background:#1c1b1a;color:#fff;text-align:center;font-size:17px;font-weight:700">사기 신고 112</span><span style="padding:16px;border-radius:14px;border:1.5px solid #1c1b1a;text-align:center;font-size:17px;font-weight:700">상담 118</span></div></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M2 이용 방법</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff"><span style="font-size:16px;color:#44403c">← 뒤로</span><span style="font-size:17px;font-weight:700">이용 방법</span><span style="width:40px"></span></div>
+<div style="padding:24px 20px;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:26px;font-weight:700;letter-spacing:-0.5px">이렇게 이용하세요</span>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="height:150px;background:repeating-linear-gradient(135deg,#f2f1ef 0 10px,#ebe9e6 10px 20px);display:grid;place-items:center;font:12px 'JetBrains Mono',monospace;color:#6b6763">문자 길게 눌러 복사</div><div style="padding:16px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">1</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">문자를 복사해요</span><span style="font-size:15px;line-height:1.55;color:#44403c">링크는 누르지 말고, 문자를 길게 눌러요.</span></div></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:16px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">2</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">여기에 붙여 넣어요</span><span style="font-size:15px;line-height:1.55;color:#44403c">큰 칸을 길게 눌러 "붙여넣기"</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:16px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">3</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">1분쯤 기다려요</span><span style="font-size:15px;line-height:1.55;color:#44403c">결과와 이유를 알려드려요.</span></div></div>
+<span style="font-size:20px;font-weight:700;padding-top:6px">결과는 이렇게 읽어요</span>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+<div style="display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border-radius:12px;border:1px solid #e2e0dc"><span style="flex:none;padding:4px 10px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-weight:700;font-size:13px">안전해요</span>진짜 회사 사이트예요</div>
+<div style="display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border-radius:12px;border:1px solid #e2e0dc"><span style="flex:none;padding:4px 10px;border-radius:999px;background:oklch(0.72 0.15 75);font-weight:700;font-size:13px">조심하세요</span>위험한 점이 있어요</div>
+<div style="display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border-radius:12px;border:1px solid #e2e0dc"><span style="flex:none;padding:4px 10px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-weight:700;font-size:13px">가짜 의심</span>흉내 낸 가짜 같아요</div>
+<div style="display:flex;gap:10px;align-items:center;padding:12px;background:#fff;border-radius:12px;border:1px solid #e2e0dc"><span style="flex:none;padding:4px 10px;border-radius:999px;background:#44403c;color:#fff;font-weight:700;font-size:13px">알 수 없어요</span>안전하다는 뜻 아님</div>
+</div>
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;font-weight:700">이미 정보를 적었다면</span><div style="display:flex;justify-content:space-between;font-size:15px"><span>카드 번호</span><b>카드 회사에 전화</b></div><div style="display:flex;justify-content:space-between;font-size:15px"><span>돈을 보냄</span><b>은행 지급정지</b></div><div style="display:flex;justify-content:space-between;font-size:15px"><span>신고</span><b>112</b></div></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M3 확인하는 중</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:8px"><div style="width:24px;height:24px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:17px;font-weight:700">문자 링크 확인</span></div><span style="font-size:22px">☰</span></div>
+<div style="padding:24px 20px;display:flex;flex-direction:column;gap:18px;min-height:720px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:26px;font-weight:700">확인하고 있어요</span><span style="font-size:16px;color:#44403c">1분 안에 끝나요. 화면을 닫지 마세요.</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:#57534e">지난 시간</span><b>14초</b></div><div style="height:10px;border-radius:5px;background:#e7e5e2;overflow:hidden"><div style="width:23%;height:100%;background:#1c1b1a"></div></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:4px 18px">
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:14px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">누가 보낸 척하는지</span><span style="font-size:15px;color:#44403c">한빛택배 · 택배 안내</span></div></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:14px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">주소 살펴보기</span><span style="font-size:15px;color:#44403c">진짜 이름: account-check.test</span></div></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec"><span style="flex:none;width:28px;height:28px;border-radius:50%;border:3px solid #1c1b1a;border-right-color:transparent;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">안전 공간에서 열어보기</span><span style="font-size:15px;color:oklch(0.47 0.18 27);font-weight:600">다른 곳으로 가려 해서 막았어요</span></div></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec;color:#8a8580"><span style="flex:none;width:28px;height:28px;border-radius:50%;border:2px solid #d6d3d1;box-sizing:border-box"></span><span style="font-size:17px;font-weight:700">페이지 속 내용</span></div>
+<div style="display:flex;gap:14px;padding:16px 0;color:#8a8580"><span style="flex:none;width:28px;height:28px;border-radius:50%;border:2px solid #d6d3d1;box-sizing:border-box"></span><span style="font-size:17px;font-weight:700">결과 정리</span></div>
+</div>
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:10px;height:10px;border-radius:50%;background:oklch(0.75 0.14 155);margin-top:6px"></span><span style="font-size:15px;line-height:1.55;color:#e2e0dc">링크는 내 휴대폰이 아닌 <b style="color:#fff">안전 공간</b>에서 열고 있어요.</span></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M4 결과 전체 (스크롤)</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 다른 문자 확인</div>
+<div style="background:oklch(0.965 0.025 27);padding:24px 20px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid oklch(0.9 0.05 27)"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:16px;font-weight:700">가짜로 의심돼요</span><span style="font-size:25px;font-weight:700;letter-spacing:-0.5px;line-height:1.35">한빛택배를 흉내 낸 가짜 사이트 같아요.</span><span style="font-size:17px;font-weight:700;color:oklch(0.45 0.18 27)">링크를 누르지 마세요.</span></div>
+<div style="padding:18px 20px 28px;display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;color:#c9c5c0;font-weight:600">이렇게 하세요</span><span style="font-size:18px;font-weight:700;line-height:1.4">한빛택배 공식 앱에서 배송 상태를 확인하세요.</span><span style="font-size:15px;line-height:1.5;color:#e2e0dc">이미 카드 번호를 적었다면 카드 회사에 바로 전화하세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="font-size:16px;font-weight:700">이 링크의 진짜 주인</span><div style="font:16px/1.6 'JetBrains Mono',monospace;word-break:break-all"><span style="color:#8a8580">hanbit.example.</span><span style="background:oklch(0.5 0.19 27);color:#fff;padding:2px 5px;border-radius:5px;font-weight:600">account-check.test</span></div><div style="display:flex;flex-direction:column;gap:4px;font-size:14px;color:#44403c"><span>회색: 앞에 붙인 글자 (누구나 붙일 수 있음)</span><span style="color:oklch(0.45 0.18 27);font-weight:600">빨강: 진짜 주인</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;overflow:hidden"><div style="padding:14px 16px;font-size:16px;font-weight:700;border-bottom:1px solid #f0efec">문자가 한 말 vs 실제</div>
+<div style="padding:14px 16px;border-bottom:1px solid #f0efec;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between"><span style="font-size:14px;color:#57534e">주소</span><b style="font-size:14px;color:oklch(0.47 0.18 27)">달라요</b></div><span style="font-size:15px">"한빛택배" → 실제는 다른 사람의 사이트</span></div>
+<div style="padding:14px 16px;border-bottom:1px solid #f0efec;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between"><span style="font-size:14px;color:#57534e">적는 칸</span><b style="font-size:14px;color:oklch(0.47 0.18 27)">달라요</b></div><span style="font-size:15px">"주소 수정" → 실제는 카드 번호 요구</span></div>
+<div style="padding:14px 16px;border-bottom:1px solid #f0efec;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between"><span style="font-size:14px;color:#57534e">회사 약속</span><b style="font-size:14px;color:oklch(0.47 0.18 27)">약속과 달라요</b></div><span style="font-size:15px">문자로 카드 번호를 묻지 않는 회사예요</span></div>
+<div style="padding:14px 16px;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between"><span style="font-size:14px;color:#57534e">보낸 번호</span><b style="font-size:14px;color:#57534e">모름</b></div><span style="font-size:15px;color:#44403c">확인할 방법이 없어요</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55"><span style="font-size:17px;font-weight:700">확실한 것</span><span>· 카드 번호, 카드 뒷면 숫자를 적는 칸이 있어요.</span><span>· 다른 사이트로 넘어가려 해서 막았어요.</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55;padding-top:14px;border-top:1px solid #e2e0dc"><span style="font-size:17px;font-weight:700;color:#44403c">확인하지 못한 것</span><span style="color:#44403c">· 문자를 보낸 전화번호가 진짜인지</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="font-size:16px;font-weight:700">위험한 점 한눈에</span><div style="display:flex;flex-wrap:wrap;gap:6px;font-size:14px;font-weight:700"><span style="padding:4px 10px;border-radius:6px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.18 27)">진짜 주소 앞에 붙임</span><span style="padding:4px 10px;border-radius:6px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.18 27)">카드 정보 요구</span><span style="padding:4px 10px;border-radius:6px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65)">개인 정보 칸</span><span style="padding:4px 10px;border-radius:6px;background:#f0efec;color:#44403c">다른 곳으로 넘김</span></div></div>
+<div style="display:flex;justify-content:space-between;padding:18px;border-radius:14px;background:#fff;border:1px solid #e2e0dc;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+<span style="padding:16px;border-radius:14px;border:1.5px solid #1c1b1a;text-align:center;font-size:17px;font-weight:700">다른 문자 확인하기</span>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M5 조사 기록 ① 주소</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 결과로</div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc;padding:18px 0 0;display:flex;flex-direction:column;gap:12px"><span style="font-size:22px;font-weight:700;padding:0 20px">어떻게 조사했나요?</span><div style="display:flex;gap:2px;font-size:15px;overflow:hidden;white-space:nowrap;padding-left:8px"><span style="padding:10px 12px;border-bottom:3px solid #1c1b1a;font-weight:700">① 주소</span><span style="padding:10px 12px;color:#57534e">② 넘어간 길</span><span style="padding:10px 12px;color:#57534e">③ 페이지</span><span style="padding:10px 12px;color:#57534e">④ AI</span><span style="padding:10px 12px;color:#57534e">⑤ 안전</span></div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">주소를 조각내서 봤어요</span>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:10px;background:#f5f4f2"><span style="font:15px 'JetBrains Mono',monospace">hanbit.example.</span><span style="font-size:14px;color:#44403c">앞에 붙인 글자 · 누구나 붙일 수 있어요</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:10px;background:oklch(0.5 0.19 27);color:#fff"><span style="font:600 15px 'JetBrains Mono',monospace">account-check.test</span><span style="font-size:14px">진짜 사이트 이름 · 진짜 주인</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:10px;border:1px solid #e2e0dc"><span style="font:15px 'JetBrains Mono',monospace;color:#57534e">/login</span><span style="font-size:14px;color:#44403c">사이트 안의 위치</span></div>
+</div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:6px 18px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid #f0efec"><span style="font-size:15px;font-weight:600">진짜 주소를 앞에 끼워 넣었나요?</span><span style="flex:none;padding:4px 12px;border-radius:8px;background:oklch(0.5 0.19 27);color:#fff;font-weight:700;font-size:14px">예</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid #f0efec"><span style="font-size:15px;font-weight:600">한두 글자만 다른가요?</span><span style="flex:none;padding:4px 12px;border-radius:8px;background:#f0efec;font-weight:700;font-size:14px">아니오</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid #f0efec"><span style="font-size:15px;font-weight:600">헷갈리는 글자를 섞었나요?</span><span style="flex:none;padding:4px 12px;border-radius:8px;background:#f0efec;font-weight:700;font-size:14px">아니오</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid #f0efec"><span style="font-size:15px;font-weight:600">숫자로만 된 주소인가요?</span><span style="flex:none;padding:4px 12px;border-radius:8px;background:#f0efec;font-weight:700;font-size:14px">아니오</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0"><span style="font-size:15px;font-weight:600">주소 중간에 @가 있나요?</span><span style="flex:none;padding:4px 12px;border-radius:8px;background:#f0efec;font-weight:700;font-size:14px">아니오</span></div>
+</div>
+<div style="padding:16px;border-radius:14px;background:#f2f1ef;font-size:15px;line-height:1.6;color:#44403c">"한빛택배 옆집"이라고 문패를 단 <b style="color:#1c1b1a">다른 사람의 집</b>과 같아요.</div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M6 조사 기록 ③ 페이지</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 결과로</div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc;padding:18px 0 0;display:flex;flex-direction:column;gap:12px"><span style="font-size:22px;font-weight:700;padding:0 20px">어떻게 조사했나요?</span><div style="display:flex;gap:2px;font-size:15px;overflow:hidden;white-space:nowrap;padding-left:8px"><span style="padding:10px 12px;color:#57534e">① 주소</span><span style="padding:10px 12px;color:#57534e">② 넘어간 길</span><span style="padding:10px 12px;border-bottom:3px solid #1c1b1a;font-weight:700">③ 페이지</span><span style="padding:10px 12px;color:#57534e">④ AI</span><span style="padding:10px 12px;color:#57534e">⑤ 안전</span></div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#57534e">페이지가 스스로 밝힌 이름</span><span style="font-size:18px;font-weight:700">한빛택배 | 배송지 확인</span><span style="font-size:14px;color:#44403c">하지만 주소 주인은 한빛택배가 아니에요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px"><span style="font-size:18px;font-weight:700">무엇을 적으라고 하나요?</span>
+<div style="display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:10px;background:#f5f4f2"><span style="font-size:14px;font-weight:700;color:#57534e">택배 주소 고칠 때 필요한 것</span><span style="font-size:16px">이름 · 전화번호 · 받을 주소</span></div>
+<div style="display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:10px;border:2px solid oklch(0.85 0.07 27);background:oklch(0.985 0.01 27)"><span style="font-size:14px;font-weight:700;color:oklch(0.45 0.18 27)">이 페이지가 적으라고 한 것</span>
+<div style="display:flex;justify-content:space-between;font-size:16px"><span>카드 번호</span><b style="font-size:13px;padding:2px 8px;border-radius:5px;background:oklch(0.5 0.19 27);color:#fff">필요 없음</b></div>
+<div style="display:flex;justify-content:space-between;font-size:16px"><span>카드 뒷면 숫자 3자리</span><b style="font-size:13px;padding:2px 8px;border-radius:5px;background:oklch(0.5 0.19 27);color:#fff">필요 없음</b></div>
+<div style="display:flex;justify-content:space-between;font-size:16px"><span>카드 유효기간</span><b style="font-size:13px;padding:2px 8px;border-radius:5px;background:oklch(0.5 0.19 27);color:#fff">필요 없음</b></div>
+<div style="display:flex;justify-content:space-between;font-size:16px"><span>이름</span><b style="font-size:13px;padding:2px 8px;border-radius:5px;background:#f0efec">괜찮음</b></div>
+</div></div>
+<div style="background:#fff;border:1.5px solid oklch(0.85 0.07 27);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:700">적은 내용은 어디로?</span><span style="font:600 15px 'JetBrains Mono',monospace;color:oklch(0.45 0.18 27)">collect-pay.test</span><span style="font-size:14px;color:#44403c">이 페이지와 다른 사이트로 가요</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;color:#57534e">앱 설치 유도</span><b style="font-size:17px">없음</b></div><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;color:#57534e">몰래 넘기기</span><b style="font-size:17px">흔적 없음</b></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:16px;font-weight:700">페이지에 적힌 말</span><span style="font-size:12px;padding:2px 8px;border-radius:999px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-weight:700">믿지 않음</span></div><span style="font-size:15px;line-height:1.55;padding:12px;border-radius:10px;background:#fafaf9">"본 페이지는 한빛택배 공식 인증 페이지입니다."</span></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M7 조사 기록 ④ AI 조사원</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 결과로</div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc;padding:18px 0 0;display:flex;flex-direction:column;gap:12px"><span style="font-size:22px;font-weight:700;padding:0 20px">어떻게 조사했나요?</span><div style="display:flex;gap:2px;font-size:15px;overflow:hidden;white-space:nowrap;padding-left:8px"><span style="padding:10px 12px;color:#57534e">② 넘어간 길</span><span style="padding:10px 12px;color:#57534e">③ 페이지</span><span style="padding:10px 12px;border-bottom:3px solid #1c1b1a;font-weight:700">④ AI 조사원</span><span style="padding:10px 12px;color:#57534e">⑤ 안전 공간</span></div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:700">AI는 진짜·가짜를 정하지 않아요</span><span style="font-size:14px;line-height:1.55;color:#e2e0dc">결정은 정해진 규칙이 하고, AI는 조사와 설명만 해요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:12px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">1</span><span style="flex:1;width:2px;background:#e2e0dc;min-height:16px"></span></div><div style="padding:4px 0 18px;display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:700">문자를 읽었어요</span><span style="font-size:13px;color:#57534e">0초</span></div>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">2</span><span style="flex:1;width:2px;background:#e2e0dc;min-height:16px"></span></div><div style="padding:4px 0 18px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;font-weight:700">누가 보낸 척하는지 골랐어요</span><div style="display:flex;gap:6px;flex-wrap:wrap;font-size:14px"><span style="padding:3px 10px;border-radius:6px;background:#f0efec">한빛택배</span><span style="padding:3px 10px;border-radius:6px;background:#f0efec">택배 안내</span></div><span style="font-size:13px;color:#57534e">3초</span></div>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">3</span><span style="flex:1;width:2px;background:#e2e0dc;min-height:16px"></span></div><div style="padding:4px 0 18px;display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:700">확인 도구 4개를 돌렸어요</span><span style="font-size:14px;color:#44403c">주소 · 닮은꼴 · 열어보기 · 적는 칸</span><span style="font-size:13px;color:#57534e">5초</span></div>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">4</span></div><div style="padding:4px 0 0;display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:700">쉬운 말로 설명했어요</span><span style="font-size:14px;color:#44403c">설명 검사 <b style="color:oklch(0.4 0.12 155)">통과</b></span><span style="font-size:13px;color:#57534e">31초</span></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">시키지 않은 일</span><b style="font-size:22px;color:oklch(0.4 0.12 155)">0번</b></div><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">걸린 시간</span><b style="font-size:22px">41초</b></div></div>
+<div style="display:flex;justify-content:space-between;padding:14px 16px;border:1px dashed #c9c5c0;border-radius:12px;font-size:14px;color:#57534e"><span>개발자용 기록 보기</span><span>▾</span></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M8 조사 기록 ⑤ 안전 공간</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 결과로</div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc;padding:18px 0 0;display:flex;flex-direction:column;gap:12px"><span style="font-size:22px;font-weight:700;padding:0 20px">어떻게 조사했나요?</span><div style="display:flex;gap:2px;font-size:15px;overflow:hidden;white-space:nowrap;padding-left:8px"><span style="padding:10px 12px;color:#57534e">③ 페이지</span><span style="padding:10px 12px;color:#57534e">④ AI 조사원</span><span style="padding:10px 12px;border-bottom:3px solid #1c1b1a;font-weight:700">⑤ 안전 공간</span></div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;align-items:stretch"><span style="font-size:17px;font-weight:700;margin-bottom:4px">링크는 안전 공간에서만 열었어요</span>
+<div style="padding:12px;border-radius:10px;background:#f5f4f2;display:flex;justify-content:space-between;font-size:15px"><b>내 휴대폰</b><span style="color:#57534e">열지 않음</span></div>
+<span style="text-align:center;color:#8a8580">↓</span>
+<div style="padding:12px;border-radius:10px;border:2.5px solid #1c1b1a;display:flex;justify-content:space-between;font-size:15px"><b>안전 공간</b><span style="color:#57534e">AI 조사원</span></div>
+<span style="text-align:center;color:#8a8580">↓</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div style="padding:10px;border-radius:10px;border:2px solid oklch(0.6 0.12 155);display:flex;flex-direction:column;gap:2px"><b style="font-size:13px;color:oklch(0.4 0.12 155)">문 열어줌</b><span style="font:12px 'JetBrains Mono',monospace;word-break:break-all">…account-check.test</span></div><div style="padding:10px;border-radius:10px;border:2px solid oklch(0.5 0.19 27);background:oklch(0.985 0.01 27);display:flex;flex-direction:column;gap:2px"><b style="font-size:13px;color:oklch(0.45 0.18 27)">막음</b><span style="font:12px 'JetBrains Mono',monospace">collect-pay.test</span></div></div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:grid;grid-template-columns:72px 14px minmax(0,1fr);column-gap:12px">
+<span style="font-size:14px;font-weight:600">14:31:52</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:oklch(0.55 0.12 155);margin-top:4px"></span><span style="flex:1;width:2px;background:#e2e0dc;min-height:16px"></span></div><span style="font-size:15px;font-weight:700;padding-bottom:16px">문 열기 (한 곳만)</span>
+<span style="font-size:14px;font-weight:600">14:31:58</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:oklch(0.5 0.19 27);margin-top:4px"></span><span style="flex:1;width:2px;background:#e2e0dc;min-height:16px"></span></div><span style="font-size:15px;font-weight:700;padding-bottom:16px">다른 곳 막음</span>
+<span style="font-size:14px;font-weight:600">14:32:18</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:#1c1b1a;margin-top:4px"></span></div><span style="font-size:15px;font-weight:700">문 닫기 · 남은 문 없음</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px;line-height:1.6"><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><b style="color:oklch(0.4 0.12 155)">허락한 것</b><span>✓ 한 곳 들어가기</span><span>✓ 보기만 하기</span></div><div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px"><b style="color:oklch(0.45 0.18 27)">막은 것</b><span>✕ 다른 사이트</span><span>✕ 정보 보내기</span><span>✕ 앱 설치</span></div></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M9 결과 · 안전해요</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 다른 문자 확인</div>
+<div style="background:oklch(0.965 0.03 155);padding:24px 20px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:16px;font-weight:700">안전해요</span><span style="font-size:25px;font-weight:700;line-height:1.35">한빛택배의 진짜 사이트예요.</span></div>
+<div style="padding:18px 20px 24px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px"><span style="font-size:15px;font-weight:700">이 링크의 진짜 주인</span><span style="font:600 16px 'JetBrains Mono',monospace;color:#fff;background:oklch(0.5 0.13 155);align-self:flex-start;padding:4px 8px;border-radius:6px">hanbit.example</span><span style="font-size:15px;color:oklch(0.4 0.12 155);font-weight:600">한빛택배 진짜 주소와 같아요 ✓</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55"><span style="font-weight:700">확실한 것</span><span>· 카드 번호나 비밀번호를 묻지 않아요.</span><span>· 다른 곳으로 넘어가지 않았어요.</span><span style="color:#44403c;padding-top:8px">확인 못 함 · 보낸 전화번호</span></div>
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#c9c5c0;font-weight:600">이렇게 하세요</span><span style="font-size:17px;font-weight:700;line-height:1.4">링크를 열어도 괜찮아요.</span><span style="font-size:14px;color:#e2e0dc">카드 번호·비밀번호를 물으면 멈추세요.</span></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M10 결과 · 조심하세요</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 다른 문자 확인</div>
+<div style="background:oklch(0.965 0.045 80);padding:24px 20px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.72 0.15 75);font-size:16px;font-weight:700">조심하세요</span><span style="font-size:25px;font-weight:700;line-height:1.35">어느 회사인지 알 수 없지만, 위험한 점이 있어요.</span></div>
+<div style="padding:18px 20px 24px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px"><span style="font-size:15px;font-weight:700">이 링크의 진짜 주인</span><span style="font:600 16px 'JetBrains Mono',monospace;background:oklch(0.72 0.15 75);align-self:flex-start;padding:4px 8px;border-radius:6px">member-check.test</span><span style="font-size:15px;color:#44403c">별빛마켓 진짜 주소는 목록에 없어요</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.55"><span style="font-weight:700;color:oklch(0.42 0.1 65)">조심해야 하는 이유</span><span>· 비밀번호, 인증번호를 적게 해요.</span><span>· 적은 내용이 다른 사이트로 가요.</span></div>
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:14px;color:#c9c5c0;font-weight:600">이렇게 하세요</span><span style="font-size:17px;font-weight:700;line-height:1.4">회사 앱이나 대표번호로 직접 물어보세요.</span></div>
+</div>
+</div></div>
+
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 12px system-ui;color:rgba(0,0,0,.55)">M11 결과 · 알 수 없어요</span>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 다른 문자 확인</div>
+<div style="background:#f2f1ef;padding:24px 20px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:#44403c;color:#fff;font-size:16px;font-weight:700">알 수 없어요</span><span style="font-size:25px;font-weight:700;line-height:1.35">지금은 확인을 끝내지 못했어요.</span><span style="font-size:16px;font-weight:700">안전하다는 뜻이 아니에요.</span></div>
+<div style="padding:18px 20px 24px;display:flex;flex-direction:column;gap:14px">
+<span style="padding:18px;border-radius:14px;background:#1c1b1a;color:#fff;text-align:center;font-size:18px;font-weight:700">다시 확인하기</span>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="font-size:16px;font-weight:700">어디까지 확인했나요?</span><span>✓ 누가 보낸 척하는지</span><span>✓ 주소 살펴보기</span><span style="font-weight:700">! 안전 공간에서 열어보기 — 멈춤</span><span style="color:#8a8580">· 페이지 속 내용 — 못 함</span></div>
+<div style="background:oklch(0.965 0.045 80);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:700">멈추기 전에 발견한 것</span><span style="font-size:15px;line-height:1.55">진짜 주소 hanbit.example과 <b>한 글자</b>만 다른 hanblt.example이에요.</span></div>
+</div>
+</div></div>
+
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "이용 방법에 짧은 영상 자리 넣기" · "글씨 크게 보기 버튼" · "결과를 가족에게 보내기"</p>
+</section>
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">쉬운 말 버전 + 상세 기록 5개 탭 전체 (이전: <a class="dv-oid" href="Service%20Screens.dc.html">Service Screens</a>)</span></div>
+<div class="dv-opts">
+
+<!-- 3a 쉬운 말 사전 -->
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>팀 참고용 — 화면에서 바꾼 말</div>
+<div class="dv-card" style="width:1280px;padding:32px;background:#fff;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:22px;font-weight:700">쉬운 말 사전</span><span style="font-size:15px;color:#57534e">기준: 초등학교 5~6학년이 읽고 이해할 수 있는 말 · 본문 17px 이상</span></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#e2e0dc;border:1px solid #e2e0dc;border-radius:12px;overflow:hidden;font-size:15px">
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">샌드박스</span><b>안전 공간</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">사칭</span><b>흉내 낸 가짜</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">등록 도메인</span><b>진짜 사이트 이름</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">서브도메인</span><b>앞에 붙인 글자</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">리다이렉트</span><b>다른 곳으로 넘어감</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">입력 폼·입력란</span><b>적는 칸</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">에이전트</span><b>AI 조사원</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">정책·egress</span><b>문 열기 기록</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">혼동 문자</span><b>헷갈리는 글자</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">신호 강·중·참고</span><b>많이·조금 위험·참고</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">CVC</span><b>카드 뒷면 숫자 3자리</b></div>
+<div style="background:#fff;padding:12px 16px;display:flex;justify-content:space-between;gap:8px"><span style="color:#6b6763;text-decoration:line-through">판단 불가</span><b>알 수 없어요</b></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+<div style="padding:14px 16px;border-radius:12px;background:oklch(0.96 0.03 155);display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">safe</span><b style="font-size:18px;color:oklch(0.4 0.12 155)">안전해요</b></div>
+<div style="padding:14px 16px;border-radius:12px;background:oklch(0.96 0.045 80);display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">caution</span><b style="font-size:18px;color:oklch(0.45 0.11 65)">조심하세요</b></div>
+<div style="padding:14px 16px;border-radius:12px;background:oklch(0.96 0.03 27);display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">suspected_impersonation</span><b style="font-size:18px;color:oklch(0.47 0.18 27)">가짜로 의심돼요</b></div>
+<div style="padding:14px 16px;border-radius:12px;background:#f2f1ef;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#57534e">unknown</span><b style="font-size:18px;color:#44403c">알 수 없어요</b></div>
+</div>
+<span style="font-size:14px;color:#57534e">원칙: 기술 이름(파일명·도구명·영문 코드)은 일반 화면에서 숨기고, 상세 탭 맨 아래 "개발자용 기록"에만 둡니다.</span>
+</div>
+</div>
+
+<!-- 3b 홈 -->
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>홈 — 문자 붙여넣기</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div>
+<div style="display:flex;align-items:center;gap:24px;font-size:16px;color:#44403c"><span>이용 방법</span></div>
+</div>
+<div style="max-width:800px;margin:0 auto;padding:64px 0;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<h1 style="margin:0;font-size:42px;line-height:1.25;font-weight:700;letter-spacing:-1px">이상한 문자를 받으셨나요?<br>링크를 누르기 전에 여기서 확인하세요.</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#44403c">받은 문자를 붙여 넣으면, 저희가 대신 안전한 곳에서 열어보고 진짜인지 가짜인지 이유와 함께 알려드려요.</p>
+</div>
+<div style="background:#fff;border:2px solid #1c1b1a;border-radius:16px">
+<div style="padding:22px 24px 14px;font-size:19px;line-height:1.65;min-height:110px">[한빛택배] 주소 불일치로 배송 보류. 수정: <span style="font-family:'JetBrains Mono',monospace;font-size:17px;background:oklch(0.95 0.03 250);padding:1px 4px;border-radius:4px">https://hanbit.example.account-check.test/login</span></div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px 14px 24px;border-top:1px solid #efedea">
+<span style="display:flex;align-items:center;gap:8px;font-size:16px;color:oklch(0.42 0.12 250);font-weight:600"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.55 0.14 250)"></span>링크 1개를 찾았어요</span>
+<div style="display:flex;gap:10px"><span style="padding:14px 20px;border-radius:12px;font-size:17px;color:#44403c;border:1px solid #d6d3d1">지우기</span><span style="padding:14px 32px;border-radius:12px;background:#1c1b1a;color:#fff;font-size:19px;font-weight:700">확인하기</span></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">1</span><span style="font-size:16px;line-height:1.5">받은 문자를 <b>손가락으로 길게 눌러</b> 복사해요</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">2</span><span style="font-size:16px;line-height:1.5">위 칸에 <b>붙여 넣어요</b> (링크만 넣어도 돼요)</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;gap:12px"><span style="flex:none;width:30px;height:30px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">3</span><span style="font-size:16px;line-height:1.5"><b>확인하기</b>를 누르고 1분쯤 기다려요</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-size:17px;font-weight:700">예시로 먼저 해보기</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px;font-size:16px">
+<span style="padding:12px 18px;border-radius:999px;background:#fff;border:1px solid #d6d3d1">진짜 택배 사이트</span>
+<span style="padding:12px 18px;border-radius:999px;background:#fff;border:1px solid #d6d3d1">한 글자 바꾼 가짜 주소</span>
+<span style="padding:12px 18px;border-radius:999px;background:#fff;border:2px solid #1c1b1a;font-weight:600">진짜 주소를 앞에 붙인 가짜</span>
+<span style="padding:12px 18px;border-radius:999px;background:#fff;border:1px solid #d6d3d1">화면을 베낀 가짜</span>
+<span style="padding:12px 18px;border-radius:999px;background:#fff;border:1px solid #d6d3d1">택배사가 쓰는 결제 사이트</span>
+</div>
+<span style="font-size:14px;color:#57534e">예시는 모두 가짜로 만든 회사 이름과 연습용 주소예요.</span>
+</div>
+<div style="padding:18px 22px;border-radius:14px;background:#f2f1ef;font-size:16px;line-height:1.6;color:#44403c"><b style="color:#1c1b1a">걱정 마세요.</b> 여기에 붙여 넣은 링크는 내 휴대폰에서 열리지 않아요. 바깥과 떨어진 <b style="color:#1c1b1a">안전 공간</b>에서만 열어봅니다.</div>
+</div>
+</div>
+</div>
+
+<!-- 3c 진행 -->
+<div class="dv-opt" id="3c">
+<div class="dv-olabel"><a class="dv-oid" href="#3c">3c</a>확인하는 중</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="font-size:16px;color:#44403c">이용 방법</span></div>
+<div style="max-width:1100px;margin:0 auto;padding:52px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">확인하고 있어요</h2><span style="font-size:18px;color:#44403c">보통 1분 안에 끝나요. 이 화면을 닫지 말고 기다려 주세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:8px 28px">
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:20px 0;border-bottom:1px solid #f0efec;align-items:start"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:16px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">누가 보낸 척하는지 확인</span><span style="font-size:16px;color:#44403c"><b>한빛택배</b>가 보낸 척하는 <b>택배 안내</b> 문자예요</span></div><span style="font-size:15px;color:#57534e">끝</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:20px 0;border-bottom:1px solid #f0efec;align-items:start"><span style="width:32px;height:32px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:16px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">주소 살펴보기</span><span style="font-size:16px;color:#44403c">진짜 사이트 이름은 <b style="font-family:'JetBrains Mono',monospace;font-size:15px">account-check.test</b>예요</span></div><span style="font-size:15px;color:#57534e">끝</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:20px 0;border-bottom:1px solid #f0efec;align-items:start;background:#fafaf9;margin:0 -28px;padding-left:28px;padding-right:28px"><span style="width:32px;height:32px;border-radius:50%;border:3px solid #1c1b1a;border-right-color:transparent;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">안전 공간에서 열어보기</span><span style="font-size:16px;color:#44403c">다른 사이트로 넘어가려고 해서 <b style="color:oklch(0.47 0.18 27)">막았어요</b></span></div><span style="font-size:15px;font-weight:700">하는 중</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:20px 0;border-bottom:1px solid #f0efec;align-items:start;color:#8a8580"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #d6d3d1;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">페이지 속 내용 살펴보기</span><span style="font-size:16px">무엇을 적으라고 하는지 봐요</span></div><span style="font-size:15px">기다리는 중</span></div>
+<div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:16px;padding:20px 0;align-items:start;color:#8a8580"><span style="width:32px;height:32px;border-radius:50%;border:2px solid #d6d3d1;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">결과 정리</span><span style="font-size:16px">쉽게 설명을 써요</span></div><span style="font-size:15px">기다리는 중</span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;padding-top:92px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:17px;font-weight:700">지난 시간</span><span style="font-size:28px;font-weight:700">14초</span></div>
+<div style="height:10px;border-radius:5px;background:#f0efec;overflow:hidden"><div style="width:23%;height:100%;background:#1c1b1a"></div></div>
+<span style="font-size:15px;color:#57534e">보통 40초~1분 걸려요</span>
+</div>
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:50%;background:oklch(0.75 0.14 155)"></span><span style="font-size:18px;font-weight:700">안전 공간에서 여는 중</span></div>
+<span style="font-size:16px;line-height:1.6;color:#e2e0dc">이 링크 <b style="color:#fff">한 곳만</b> 문을 열어 두었어요. 확인이 끝나면 문을 바로 닫아요.</span>
+<div style="display:flex;justify-content:space-between;font-size:16px;padding:12px 14px;background:rgba(255,255,255,.08);border-radius:10px"><span>막은 곳</span><b style="color:oklch(0.8 0.12 27)">1곳</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 3d 결과 -->
+<div class="dv-opt" id="3d">
+<div class="dv-olabel"><a class="dv-oid" href="#3d">3d</a>결과 — 가짜로 의심돼요</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:oklch(0.965 0.025 27);border-bottom:1px solid oklch(0.9 0.05 27)">
+<div style="max-width:1100px;margin:0 auto;padding:44px 0 40px;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:18px;font-weight:700"><span style="width:20px;height:20px;border-radius:50%;background:#fff;color:oklch(0.5 0.19 27);font-size:14px;font-weight:800;display:grid;place-items:center">!</span>가짜로 의심돼요</span>
+<h2 style="margin:0;font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.25">한빛택배를 흉내 낸 가짜 사이트 같아요.<br>링크를 누르지 마세요.</h2>
+<span style="font-size:19px;line-height:1.6;color:#44403c">한빛택배의 진짜 주소가 아니고, 택배 일에는 필요 없는 카드 번호를 적으라고 해요.</span>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px">
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:20px;font-weight:700">이 링크의 진짜 주인은 누구일까요?</span>
+<div style="display:flex;align-items:flex-start;font:22px 'JetBrains Mono',monospace;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;background:#f0efec;border-radius:8px 0 0 8px;color:#57534e">hanbit.example.</span><span style="font:15px/1.4 'Pretendard';color:#44403c;padding:0 10px;max-width:220px">앞에 붙인 글자<br>누구나 아무렇게나 붙일 수 있어요</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;background:oklch(0.5 0.19 27);color:#fff;font-weight:600;border-radius:0 8px 8px 0">account-check.test</span><span style="font:700 15px/1.4 'Pretendard';color:oklch(0.45 0.18 27);padding:0 10px;max-width:220px">진짜 사이트 이름<br>이 부분이 진짜 주인이에요</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="padding:12px 10px;color:#8a8580">/login</span></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;font-size:17px">
+<div style="padding:16px 18px;border-radius:12px;background:#f5f4f2;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">한빛택배 진짜 주소</span><b style="font-family:'JetBrains Mono',monospace">hanbit.example</b></div>
+<div style="padding:16px 18px;border-radius:12px;background:oklch(0.965 0.025 27);display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;color:#57534e">이 링크의 진짜 주인</span><b style="font-family:'JetBrains Mono',monospace;color:oklch(0.45 0.18 27)">account-check.test ✗ 달라요</b></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden">
+<div style="padding:20px 28px;font-size:20px;font-weight:700;border-bottom:1px solid #e2e0dc">문자가 한 말 vs 실제로 확인한 것</div>
+<div style="display:grid;grid-template-columns:130px minmax(0,1fr) minmax(0,1fr) 110px;font-size:17px">
+<div style="padding:14px 28px;background:#fafaf9;color:#57534e;font-size:15px"></div><div style="padding:14px 16px;background:#fafaf9;color:#57534e;font-size:15px;font-weight:600">문자가 한 말</div><div style="padding:14px 16px;background:#fafaf9;color:#57534e;font-size:15px;font-weight:600">실제로 확인한 것</div><div style="padding:14px 16px;background:#fafaf9"></div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">주소</div><div style="padding:18px 16px;border-top:1px solid #f0efec">한빛택배 사이트예요</div><div style="padding:18px 16px;border-top:1px solid #f0efec">다른 사람의 사이트예요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.47 0.18 27);font-weight:700">달라요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">적는 칸</div><div style="padding:18px 16px;border-top:1px solid #f0efec">배송 주소를 고쳐 주세요</div><div style="padding:18px 16px;border-top:1px solid #f0efec">카드 번호를 적으라고 해요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.47 0.18 27);font-weight:700">달라요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">회사 약속</div><div style="padding:18px 16px;border-top:1px solid #f0efec">한빛택배는 문자로 카드 번호를 묻지 않아요</div><div style="padding:18px 16px;border-top:1px solid #f0efec">카드 번호를 물어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:oklch(0.47 0.18 27);font-weight:700">약속과 달라요</div>
+<div style="padding:18px 28px;border-top:1px solid #f0efec;color:#57534e">보낸 번호</div><div style="padding:18px 16px;border-top:1px solid #f0efec">한빛택배가 보냈어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e">확인할 방법이 없어요</div><div style="padding:18px 16px;border-top:1px solid #f0efec;color:#57534e;font-weight:700">모름</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">확실한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#2e2c2a"><span>· 진짜 사이트 이름은 account-check.test예요.</span><span>· 카드 번호, 카드 뒷면 숫자를 적는 칸이 있어요.</span><span>· 다른 사이트로 넘어가려 해서 막았어요.</span></div></div>
+<div style="background:#fff;border:1.5px solid oklch(0.85 0.07 27);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:oklch(0.45 0.18 27)">가짜라고 보는 이유</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#2e2c2a"><span>· 주소 앞에 한빛택배 주소를 붙여서 진짜처럼 보이게 했어요.</span><span>· 택배 주소를 고치는 데 카드 번호는 필요 없어요.</span></div></div>
+<div style="background:#fff;border:1.5px dashed #c9c5c0;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:#44403c">확인하지 못한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#44403c"><span>· 문자를 보낸 전화번호가 진짜인지</span><span>· 페이지가 나중에 스스로 바뀌는 내용</span></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:15px;font-weight:600;color:#c9c5c0">이렇게 하세요</span>
+<span style="font-size:22px;font-weight:700;line-height:1.4">한빛택배 공식 앱을 직접 열어서 배송 상태를 확인하세요.</span>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#e2e0dc"><span>· 문자 속 링크는 누르지 마세요.</span><span>· 이미 카드 번호를 적었다면 <b style="color:#fff">카드 회사에 바로 전화</b>하세요.</span><span>· 문자는 지워도 괜찮아요.</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:17px;font-weight:700">위험한 점 한눈에 보기</span>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>진짜 주소를 앞에 붙임</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.18 27);font-weight:700;font-size:14px">많이 위험</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>필요 없는 카드 정보 요구</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.18 27);font-weight:700;font-size:14px">많이 위험</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>개인 정보 적는 칸</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-weight:700;font-size:14px">조금 위험</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>다른 곳으로 넘어가려 함</span><span style="flex:none;padding:3px 10px;border-radius:6px;background:#f0efec;color:#44403c;font-weight:700;font-size:14px">참고</span></div>
+</div>
+<span style="font-size:14px;line-height:1.55;color:#57534e;padding-top:12px;border-top:1px solid #f0efec">진짜·가짜 결정은 정해진 규칙으로 하고, 설명 글만 AI가 썼어요.</span>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 3e 상세: 주소 살펴보기 -->
+<div class="dv-opt" id="3e">
+<div class="dv-olabel"><a class="dv-oid" href="#3e">3e</a>조사 기록 ① 주소 살펴보기</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc">
+<div style="max-width:1100px;margin:0 auto;padding:28px 0 0;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:16px;color:#44403c">← 결과로 돌아가기</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">어떻게 조사했나요?</h2><span style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:oklch(0.965 0.025 27);color:oklch(0.45 0.18 27);font-size:16px;font-weight:700"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.5 0.19 27)"></span>가짜로 의심돼요</span></div>
+<div style="display:flex;gap:4px;font-size:17px">
+<span style="padding:14px 20px;border-bottom:3px solid #1c1b1a;font-weight:700">① 주소 살펴보기</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">② 넘어간 길</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">③ 페이지 속 내용</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">④ AI 조사원이 한 일</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">⑤ 안전 공간 기록</span>
+</div>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:22px;font-weight:700">주소를 조각내서 봤어요</span><span style="font-size:17px;color:#44403c">인터넷 주소는 <b>오른쪽 끝에 가까운 이름</b>이 진짜 주인이에요. 앞에 붙은 글자는 누구나 마음대로 바꿀 수 있어요.</span></div>
+<div style="display:grid;grid-template-columns:auto auto auto auto;justify-content:start;font:24px 'JetBrains Mono',monospace;row-gap:12px">
+<span style="padding:14px 8px;color:#8a8580">https://</span>
+<span style="padding:14px 10px;background:#f0efec;border-radius:8px 0 0 8px;color:#44403c">hanbit.example.</span>
+<span style="padding:14px 10px;background:oklch(0.5 0.19 27);color:#fff;font-weight:600;border-radius:0 8px 8px 0">account-check.test</span>
+<span style="padding:14px 8px;color:#8a8580">/login</span>
+<span style="font:15px/1.45 'Pretendard';color:#57534e;padding:0 8px">시작 표시</span>
+<span style="font:15px/1.45 'Pretendard';color:#44403c;padding:0 10px"><b>앞에 붙인 글자</b><br>진짜처럼 보이려고 넣었어요</span>
+<span style="font:15px/1.45 'Pretendard';color:oklch(0.45 0.18 27);padding:0 10px"><b>진짜 사이트 이름</b><br>이 사이트의 진짜 주인</span>
+<span style="font:15px/1.45 'Pretendard';color:#57534e;padding:0 8px">사이트 안의 위치</span>
+</div>
+<div style="padding:18px 22px;border-radius:12px;background:#fafaf9;font-size:17px;line-height:1.6">쉽게 말해, <b>"한빛택배 옆집"</b>이라고 문패를 단 <b>다른 사람의 집</b>과 같아요. 문패에 한빛택배라고 써 있어도 집주인은 account-check.test예요.</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:20px;font-weight:700;margin-bottom:10px">이런 속임수가 있는지 확인했어요</span>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:600">진짜 주소를 앞에 끼워 넣었나요?</span><span style="font-size:15px;color:#57534e">hanbit.example을 앞에 붙였어요</span></div><span style="justify-self:end;padding:6px 14px;border-radius:8px;background:oklch(0.5 0.19 27);color:#fff;font-weight:700;font-size:16px">예</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:600">진짜 주소와 한두 글자만 다른가요?</span><span style="font-size:15px;color:#57534e">예: hanbit → hanblt</span></div><span style="justify-self:end;padding:6px 14px;border-radius:8px;background:#f0efec;color:#44403c;font-weight:700;font-size:16px">아니오</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:600">헷갈리는 글자를 섞었나요?</span><span style="font-size:15px;color:#57534e">예: 영어 o 대신 숫자 0, 모양이 같은 외국 글자</span></div><span style="justify-self:end;padding:6px 14px;border-radius:8px;background:#f0efec;color:#44403c;font-weight:700;font-size:16px">아니오</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:600">이름 없이 숫자로만 된 주소인가요?</span><span style="font-size:15px;color:#57534e">예: 123.45.67.89</span></div><span style="justify-self:end;padding:6px 14px;border-radius:8px;background:#f0efec;color:#44403c;font-weight:700;font-size:16px">아니오</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:14px;padding:16px 0;border-top:1px solid #f0efec;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:600">주소 중간에 @ 표시가 있나요?</span><span style="font-size:15px;color:#57534e">@ 앞의 글자는 무시되고 뒤쪽으로 가요</span></div><span style="justify-self:end;padding:6px 14px;border-radius:8px;background:#f0efec;color:#44403c;font-weight:700;font-size:16px">아니오</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:20px;font-weight:700">진짜 주소와 얼마나 닮았나요?</span>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;font-size:16px"><span><b>한빛택배</b> <span style="font-family:'JetBrains Mono',monospace;color:#57534e;font-size:15px">hanbit.example</span></span><b>조금 닮음</b></div><div style="height:12px;border-radius:6px;background:#f0efec;overflow:hidden"><div style="width:32%;height:100%;background:#8a8580"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;font-size:16px"><span><b>하늘은행</b> <span style="font-family:'JetBrains Mono',monospace;color:#57534e;font-size:15px">haneul.example</span></span><span style="color:#57534e">거의 안 닮음</span></div><div style="height:12px;border-radius:6px;background:#f0efec;overflow:hidden"><div style="width:21%;height:100%;background:#c9c5c0"></div></div></div>
+<span style="font-size:15px;line-height:1.55;color:#57534e">철자를 비슷하게 만든 가짜는 아니지만, 앞에 진짜 주소를 붙이는 방법을 썼어요.</span>
+</div>
+<div style="background:#f2f1ef;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:17px;font-weight:700">비교에 쓴 진짜 주소는 어디서 왔나요?</span><span style="font-size:16px;line-height:1.6;color:#44403c">각 회사 공식 홈페이지에서 직접 확인한 주소만 모아 두었어요. 목록에 없는 회사는 "알 수 없어요"로 알려드려요.</span></div>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border:1px dashed #c9c5c0;border-radius:12px;font-size:15px;color:#57534e"><span>개발자용 기록 보기 (원본 데이터)</span><span>▾</span></div>
+</div>
+</div>
+</div>
+
+<!-- 3f 상세: 넘어간 길 -->
+<div class="dv-opt" id="3f">
+<div class="dv-olabel"><a class="dv-oid" href="#3f">3f</a>조사 기록 ② 넘어간 길</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc">
+<div style="max-width:1100px;margin:0 auto;padding:28px 0 0;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:16px;color:#44403c">← 결과로 돌아가기</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">어떻게 조사했나요?</h2><span style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:oklch(0.965 0.025 27);color:oklch(0.45 0.18 27);font-size:16px;font-weight:700"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.5 0.19 27)"></span>가짜로 의심돼요</span></div>
+<div style="display:flex;gap:4px;font-size:17px">
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">① 주소 살펴보기</span>
+<span style="padding:14px 20px;border-bottom:3px solid #1c1b1a;font-weight:700">② 넘어간 길</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">③ 페이지 속 내용</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">④ AI 조사원이 한 일</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">⑤ 안전 공간 기록</span>
+</div>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:flex;flex-direction:column;gap:22px">
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;color:#57534e">다른 곳으로 넘어간 횟수</span><span style="font-size:32px;font-weight:700">1번</span></div>
+<div style="background:#fff;border:1.5px solid oklch(0.85 0.07 27);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;color:#57534e">들어가지 않고 막은 곳</span><span style="font-size:32px;font-weight:700;color:oklch(0.45 0.18 27)">1곳</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:6px"><span style="font-size:16px;color:#57534e">마지막으로 본 곳</span><span style="font-size:18px;font-weight:700;font-family:'JetBrains Mono',monospace;word-break:break-all">account-check.test</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:22px;font-weight:700">링크를 열었을 때 어디로 갔나요?</span>
+<span style="font-size:17px;color:#44403c;margin-bottom:18px">가짜 사이트는 여러 번 다른 곳으로 넘겨서 진짜 주인을 숨기기도 해요.</span>
+<div style="display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:20px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:44px;height:44px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:18px;font-weight:700;display:grid;place-items:center">1</span><span style="flex:1;width:3px;background:#d6d3d1;min-height:40px"></span></div>
+<div style="padding-bottom:28px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:19px;font-weight:700">문자 속 링크를 열었어요</span><span style="padding:4px 12px;border-radius:999px;background:oklch(0.95 0.035 155);color:oklch(0.4 0.12 155);font-size:15px;font-weight:700">열어봄</span></div><span style="font:17px 'JetBrains Mono',monospace;color:#2e2c2a;word-break:break-all">hanbit.example.account-check.test/login</span><span style="font-size:16px;color:#44403c;padding:12px 16px;background:#fafaf9;border-radius:10px">이 사이트가 "다른 곳으로 가세요"라고 우리를 넘기려 했어요.</span></div>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:44px;height:44px;border-radius:50%;background:oklch(0.5 0.19 27);color:#fff;font-size:20px;font-weight:800;display:grid;place-items:center">✕</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:19px;font-weight:700">넘어가려던 곳</span><span style="padding:4px 12px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:15px;font-weight:700">막음</span></div><span style="font:17px 'JetBrains Mono',monospace;color:#2e2c2a">collect-pay.test/card</span><span style="font-size:16px;line-height:1.6;color:#44403c;padding:12px 16px;background:oklch(0.975 0.015 27);border-radius:10px">처음 링크와 <b>다른 주인의 사이트</b>예요. 허락하지 않은 곳이라 안전 공간이 들어가지 않았어요. 이름에 "pay(결제)"가 들어간 것도 눈여겨보세요.</span></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px">
+<div style="background:#f2f1ef;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:17px;font-weight:700">자물쇠 표시(https)가 있으면 안전한가요?</span><span style="font-size:16px;line-height:1.6;color:#44403c">아니에요. 자물쇠는 "주고받는 내용이 암호로 바뀐다"는 뜻일 뿐, <b>진짜 회사</b>라는 뜻이 아니에요. 가짜 사이트도 자물쇠를 달 수 있어요.</span></div>
+<div style="background:#f2f1ef;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px"><span style="font-size:17px;font-weight:700">왜 끝까지 따라가지 않았나요?</span><span style="font-size:16px;line-height:1.6;color:#44403c">모르는 곳에 들어가는 건 조사하는 쪽도 위험해요. 그래서 허락한 주소 한 곳만 열고, 나머지는 막고 기록만 남겨요.</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border:1px dashed #c9c5c0;border-radius:12px;font-size:15px;color:#57534e"><span>개발자용 기록 보기 (응답 코드 302 · 차단 403)</span><span>▾</span></div>
+</div>
+</div>
+</div>
+
+<!-- 3g 상세: 페이지 속 내용 -->
+<div class="dv-opt" id="3g">
+<div class="dv-olabel"><a class="dv-oid" href="#3g">3g</a>조사 기록 ③ 페이지 속 내용</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc">
+<div style="max-width:1100px;margin:0 auto;padding:28px 0 0;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:16px;color:#44403c">← 결과로 돌아가기</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">어떻게 조사했나요?</h2><span style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:oklch(0.965 0.025 27);color:oklch(0.45 0.18 27);font-size:16px;font-weight:700"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.5 0.19 27)"></span>가짜로 의심돼요</span></div>
+<div style="display:flex;gap:4px;font-size:17px">
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">① 주소 살펴보기</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">② 넘어간 길</span>
+<span style="padding:14px 20px;border-bottom:3px solid #1c1b1a;font-weight:700">③ 페이지 속 내용</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">④ AI 조사원이 한 일</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">⑤ 안전 공간 기록</span>
+</div>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;color:#57534e">페이지 제목</span><span style="font-size:20px;font-weight:700">한빛택배 | 배송지 확인</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;color:#57534e">페이지가 스스로 밝힌 회사 이름</span><div style="display:flex;gap:8px"><span style="padding:6px 14px;border-radius:8px;background:#f0efec;font-size:17px;font-weight:600">한빛택배</span><span style="padding:6px 14px;border-radius:8px;background:#f0efec;font-size:17px;font-weight:600">HANBIT</span></div></div>
+<span style="grid-column:1 / -1;font-size:16px;color:#44403c;padding:14px 18px;background:#fafaf9;border-radius:10px">페이지는 자기가 한빛택배라고 말하지만, 앞에서 본 것처럼 주소의 주인은 한빛택배가 아니에요.</span>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:22px;font-weight:700">무엇을 적으라고 하나요?</span><span style="font-size:17px;color:#44403c">문자는 "배송 주소를 고쳐 달라"고 했어요. 그런데 페이지는 다른 것을 적으라고 해요.</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:16px;align-items:stretch">
+<div style="border:1px solid #e2e0dc;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px"><span style="font-size:16px;font-weight:700;color:#57534e">택배 주소 고칠 때 보통 필요한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:18px"><span>이름</span><span>전화번호</span><span>받을 주소</span></div></div>
+<div style="display:grid;place-items:center;font-size:28px;color:oklch(0.5 0.19 27);font-weight:700">≠</div>
+<div style="border:2px solid oklch(0.85 0.07 27);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px;background:oklch(0.985 0.01 27)"><span style="font-size:16px;font-weight:700;color:oklch(0.45 0.18 27)">이 페이지가 적으라고 한 것</span><div style="display:flex;flex-direction:column;gap:10px;font-size:18px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span>카드 번호</span><span style="padding:3px 10px;border-radius:6px;background:oklch(0.5 0.19 27);color:#fff;font-size:14px;font-weight:700">필요 없음</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span>카드 뒷면 숫자 3자리</span><span style="padding:3px 10px;border-radius:6px;background:oklch(0.5 0.19 27);color:#fff;font-size:14px;font-weight:700">필요 없음</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span>카드 유효기간</span><span style="padding:3px 10px;border-radius:6px;background:oklch(0.5 0.19 27);color:#fff;font-size:14px;font-weight:700">필요 없음</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span>이름</span><span style="padding:3px 10px;border-radius:6px;background:#f0efec;color:#44403c;font-size:14px;font-weight:700">괜찮음</span></div>
+</div></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1.5px solid oklch(0.85 0.07 27);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;font-weight:700">적은 내용은 어디로 가나요?</span><span style="font:17px 'JetBrains Mono',monospace;font-weight:600;color:oklch(0.45 0.18 27)">collect-pay.test</span><span style="font-size:16px;line-height:1.55;color:#44403c">이 페이지와 <b>다른 사이트</b>로 보내져요. 적는 순간 모르는 사람에게 가요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;font-weight:700">앱을 깔라고 하나요?</span><span style="font-size:22px;font-weight:700">아니오</span><span style="font-size:16px;line-height:1.55;color:#44403c">문자나 페이지가 모르는 앱을 깔라고 하면 절대 깔지 마세요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;font-weight:700">몰래 다른 곳으로 보내나요?</span><span style="font-size:22px;font-weight:700">흔적 없음</span><span style="font-size:16px;line-height:1.55;color:#44403c">페이지 안에 자동으로 넘기는 장치는 찾지 못했어요.</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:20px;font-weight:700">페이지에 적힌 말</span><span style="padding:4px 12px;border-radius:999px;background:oklch(0.95 0.05 80);color:oklch(0.42 0.1 65);font-size:15px;font-weight:700">믿지 않고 기록만 했어요</span></div>
+<div style="font-size:19px;line-height:1.6;padding:18px 22px;border-radius:12px;background:#fafaf9;border:1px solid #efedea">"본 페이지는 한빛택배 <b>공식 인증</b> 페이지입니다."</div>
+<span style="font-size:16px;line-height:1.6;color:#44403c">가짜 사이트는 "안전합니다", "공식입니다" 같은 말을 자주 써요. 이런 말은 진짜·가짜를 정할 때 쓰지 않아요.</span>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border:1px dashed #c9c5c0;border-radius:12px;font-size:15px;color:#57534e"><span>개발자용 기록 보기 (입력란 종류 · 전송 대상)</span><span>▾</span></div>
+</div>
+</div>
+</div>
+
+<!-- 3h 상세: AI 조사원이 한 일 -->
+<div class="dv-opt" id="3h">
+<div class="dv-olabel"><a class="dv-oid" href="#3h">3h</a>조사 기록 ④ AI 조사원이 한 일</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc">
+<div style="max-width:1100px;margin:0 auto;padding:28px 0 0;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:16px;color:#44403c">← 결과로 돌아가기</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">어떻게 조사했나요?</h2><span style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:oklch(0.965 0.025 27);color:oklch(0.45 0.18 27);font-size:16px;font-weight:700"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.5 0.19 27)"></span>가짜로 의심돼요</span></div>
+<div style="display:flex;gap:4px;font-size:17px">
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">① 주소 살펴보기</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">② 넘어간 길</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">③ 페이지 속 내용</span>
+<span style="padding:14px 20px;border-bottom:3px solid #1c1b1a;font-weight:700">④ AI 조사원이 한 일</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">⑤ 안전 공간 기록</span>
+</div>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:22px;font-weight:700">AI 조사원이 한 일을 순서대로 보여드려요</span>
+<span style="font-size:17px;color:#44403c;margin-bottom:20px">모두 안전 공간 안에서 일어났어요.</span>
+<div style="display:grid;grid-template-columns:70px 44px minmax(0,1fr);column-gap:14px">
+<span style="font-size:15px;color:#57534e;padding-top:10px">0초</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:40px;height:40px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">1</span><span style="flex:1;width:3px;background:#e2e0dc;min-height:24px"></span></div><div style="padding:6px 0 26px;display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">문자를 읽었어요</span><span style="font-size:16px;color:#44403c">붙여 넣은 문자와, 비교할 회사 후보 목록을 받았어요.</span></div>
+<span style="font-size:15px;color:#57534e;padding-top:10px">3초</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:40px;height:40px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">2</span><span style="flex:1;width:3px;background:#e2e0dc;min-height:24px"></span></div><div style="padding:6px 0 26px;display:flex;flex-direction:column;gap:8px"><span style="font-size:18px;font-weight:700">누가 보낸 척하는지 골랐어요</span><div style="display:flex;gap:8px;flex-wrap:wrap"><span style="padding:5px 12px;border-radius:8px;background:#f0efec;font-size:16px">회사: <b>한빛택배</b></span><span style="padding:5px 12px;border-radius:8px;background:#f0efec;font-size:16px">목적: <b>택배 안내</b></span></div><span style="font-size:15px;color:#57534e">이유: 문자 맨 앞에 [한빛택배]라고 적혀 있고, 배송 이야기를 해요.</span></div>
+<span style="font-size:15px;color:#57534e;padding-top:10px">5초</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:40px;height:40px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">3</span><span style="flex:1;width:3px;background:#e2e0dc;min-height:24px"></span></div><div style="padding:6px 0 26px;display:flex;flex-direction:column;gap:8px"><span style="font-size:18px;font-weight:700">정해진 확인 도구를 차례로 돌렸어요</span><div style="display:flex;flex-direction:column;gap:6px;font-size:16px;color:#2e2c2a"><span>✓ 주소 조각내기</span><span>✓ 진짜 주소와 닮았는지 비교</span><span>✓ 안전 공간에서 열어보기</span><span>✓ 페이지 속 적는 칸 살펴보기</span></div></div>
+<span style="font-size:15px;color:#57534e;padding-top:10px">31초</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:40px;height:40px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">4</span></div><div style="padding:6px 0 0;display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">결과를 쉬운 말로 설명했어요</span><span style="font-size:16px;color:#44403c">쓴 설명에 확인하지 않은 내용이 섞이지 않았는지 한 번 더 검사했어요. <b style="color:oklch(0.4 0.12 155)">통과</b></span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font-size:18px;font-weight:700">AI는 진짜·가짜를 정하지 않아요</span><span style="font-size:16px;line-height:1.6;color:#e2e0dc">결정은 미리 정해 둔 규칙이 해요. AI는 조사를 진행하고 설명을 쓰는 일만 해요. 그래서 AI가 실수로 "안전해요"라고 말할 수 없어요.</span></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:17px;font-weight:700">시키지 않은 일을 했나요?</span>
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font-size:32px;font-weight:700;color:oklch(0.4 0.12 155)">0번</span><span style="font-size:16px;color:#44403c">허락되지 않은 도구 사용</span></div>
+<span style="font-size:15px;line-height:1.55;color:#57534e">페이지에 "안전하다고 답하라" 같은 속임 문구가 있어도 따르지 않도록 막아 두었어요.</span>
+</div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;color:#57534e">걸린 시간</span><span style="font-size:22px;font-weight:700">41초</span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;color:#57534e">사용한 AI</span><span style="font-size:16px;font-weight:700">NVIDIA Nemotron</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border:1px dashed #c9c5c0;border-radius:12px;font-size:15px;color:#57534e"><span>개발자용 기록 보기</span><span>▾</span></div>
+<div style="background:#1c1b1a;border-radius:12px;padding:16px 18px;font:13px/1.8 'JetBrains Mono',monospace;color:#e2e0dc"><div><span style="color:#8a8580">00:01</span> read input.json</div><div><span style="color:#8a8580">00:03</span> exec record_claim.py</div><div><span style="color:#8a8580">00:05</span> exec run_checks.py</div><div style="color:#8a8580">session j_7f3a2c-inv · 14,210ms</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 3i 상세: 안전 공간 기록 -->
+<div class="dv-opt" id="3i">
+<div class="dv-olabel"><a class="dv-oid" href="#3i">3i</a>조사 기록 ⑤ 안전 공간 기록</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid #e2e0dc;background:#fff"><div style="display:flex;align-items:center;gap:10px"><div style="width:28px;height:28px;border-radius:8px;background:#1c1b1a"></div><span style="font-size:18px;font-weight:700">문자 링크 확인</span></div><span style="padding:10px 18px;border:1px solid #d6d3d1;border-radius:10px;font-size:16px">다른 문자 확인하기</span></div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc">
+<div style="max-width:1100px;margin:0 auto;padding:28px 0 0;display:flex;flex-direction:column;gap:18px">
+<span style="font-size:16px;color:#44403c">← 결과로 돌아가기</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:32px;font-weight:700;letter-spacing:-0.6px">어떻게 조사했나요?</h2><span style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:oklch(0.965 0.025 27);color:oklch(0.45 0.18 27);font-size:16px;font-weight:700"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.5 0.19 27)"></span>가짜로 의심돼요</span></div>
+<div style="display:flex;gap:4px;font-size:17px">
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">① 주소 살펴보기</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">② 넘어간 길</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">③ 페이지 속 내용</span>
+<span style="padding:14px 20px;border-bottom:3px solid transparent;color:#57534e">④ AI 조사원이 한 일</span>
+<span style="padding:14px 20px;border-bottom:3px solid #1c1b1a;font-weight:700">⑤ 안전 공간 기록</span>
+</div>
+</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:36px 0 64px;display:flex;flex-direction:column;gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:22px;font-weight:700">링크는 내 휴대폰이 아닌 안전 공간에서만 열었어요</span><span style="font-size:17px;color:#44403c">안전 공간은 바깥과 떨어진 컴퓨터예요. 평소엔 문이 모두 잠겨 있고, 조사할 때만 한 곳의 문을 잠깐 열어요.</span></div>
+<div style="display:grid;grid-template-columns:auto 40px auto 40px minmax(0,1fr) 40px auto;align-items:center;gap:0">
+<div style="border:1px solid #e2e0dc;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;background:#fafaf9"><span style="font-size:17px;font-weight:700">내 휴대폰</span><span style="font-size:14px;color:#57534e">링크를 열지 않음</span></div>
+<span style="text-align:center;font-size:20px;color:#8a8580">→</span>
+<div style="border:1px solid #e2e0dc;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;background:#fafaf9"><span style="font-size:17px;font-weight:700">우리 서버</span><span style="font-size:14px;color:#57534e">주소 글자만 읽음</span></div>
+<span style="text-align:center;font-size:20px;color:#8a8580">→</span>
+<div style="border:3px solid #1c1b1a;border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700">안전 공간</span><span style="font-size:14px;color:#57534e">AI 조사원 + 확인 도구</span></div>
+<span style="text-align:center;font-size:20px;color:#8a8580">→</span>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="border:2px solid oklch(0.6 0.12 155);border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:700;color:oklch(0.4 0.12 155)">문 열어줌</span><span style="font:14px 'JetBrains Mono',monospace">hanbit.example.account-check.test</span></div>
+<div style="border:2px solid oklch(0.5 0.19 27);border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:2px;background:oklch(0.985 0.01 27)"><span style="font-size:14px;font-weight:700;color:oklch(0.45 0.18 27)">문 닫혀 있음 · 막음</span><span style="font:14px 'JetBrains Mono',monospace">collect-pay.test</span></div>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:6px">
+<span style="font-size:20px;font-weight:700;margin-bottom:14px">문 열기 기록</span>
+<div style="display:grid;grid-template-columns:90px 16px minmax(0,1fr);column-gap:14px">
+<span style="font-size:16px;font-weight:600;padding-top:1px">14:31:52</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:14px;height:14px;border-radius:50%;background:oklch(0.55 0.12 155);margin-top:4px"></span><span style="flex:1;width:2px;background:#e2e0dc;min-height:20px"></span></div><div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">문을 열었어요</span><span style="font-size:15px;color:#44403c">조사할 링크 한 곳만</span></div>
+<span style="font-size:16px;font-weight:600;padding-top:1px">14:31:58</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:14px;height:14px;border-radius:50%;background:oklch(0.5 0.19 27);margin-top:4px"></span><span style="flex:1;width:2px;background:#e2e0dc;min-height:20px"></span></div><div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">다른 곳 들어가기를 막았어요</span><span style="font-size:15px;color:#44403c;font-family:'JetBrains Mono',monospace">collect-pay.test</span></div>
+<span style="font-size:16px;font-weight:600;padding-top:1px">14:32:18</span><div style="display:flex;flex-direction:column;align-items:center"><span style="width:14px;height:14px;border-radius:50%;background:#1c1b1a;margin-top:4px"></span></div><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:17px;font-weight:700">문을 다시 닫았어요</span><span style="font-size:15px;color:#44403c">열어 둔 시간 26초 · 남은 열린 문 <b>없음</b></span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:oklch(0.4 0.12 155)">허락한 것</span><div style="display:flex;flex-direction:column;gap:8px;font-size:16px;color:#2e2c2a"><span>✓ 조사할 링크 한 곳 들어가기</span><span>✓ 페이지를 <b>보기만</b> 하기</span><span>✓ 정해진 확인 도구만 쓰기</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700;color:oklch(0.45 0.18 27)">허락하지 않은 것</span><div style="display:flex;flex-direction:column;gap:8px;font-size:16px;color:#2e2c2a"><span>✕ 다른 사이트 들어가기</span><span>✕ 정보를 적어서 보내기</span><span>✕ 프로그램·앱 설치하기</span><span>✕ 페이지 속 프로그램 실행하기</span></div></div>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border:1px dashed #c9c5c0;border-radius:12px;font-size:15px;color:#57534e"><span>개발자용 기록 보기 (정책 이름 job-j_7f3a2c · GET · 443/80 · python3)</span><span>▾</span></div>
+</div>
+</div>
+</div>
+
+<!-- 3j 판정별 -->
+<div class="dv-opt" id="3j">
+<div class="dv-olabel"><a class="dv-oid" href="#3j">3j</a>결과 종류별 윗부분 — 안전해요 · 조심하세요 · 알 수 없어요</div>
+<div class="dv-card" style="width:1280px;padding:32px;background:#fafaf9;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="background:oklch(0.965 0.03 155);padding:28px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:16px;font-weight:700">안전해요</span><span style="font-size:26px;font-weight:700;letter-spacing:-0.5px;line-height:1.3">한빛택배의 진짜 사이트예요.</span></div><div style="padding:22px 28px;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.55;color:#2e2c2a"><span>· 주소 주인이 한빛택배 진짜 주소와 같아요.</span><span>· 다른 곳으로 넘어가지 않았어요.</span><span style="color:#57534e">그래도 문자를 보낸 번호가 진짜인지는 확인하지 못했어요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="background:oklch(0.965 0.03 155);padding:28px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.13 155);color:#fff;font-size:16px;font-weight:700">안전해요 · 협력 회사</span><span style="font-size:26px;font-weight:700;letter-spacing:-0.5px;line-height:1.3">한빛택배가 함께 쓰는 결제 사이트예요.</span></div><div style="padding:22px 28px;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.55;color:#2e2c2a"><span>· 주소는 한빛택배와 다르지만, 한빛택배가 공식으로 쓰는 결제 회사예요.</span><span>· 결제에 필요한 것만 적으라고 해요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="background:oklch(0.965 0.045 80);padding:28px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.72 0.15 75);color:#1c1b1a;font-size:16px;font-weight:700">조심하세요</span><span style="font-size:26px;font-weight:700;letter-spacing:-0.5px;line-height:1.3">어느 회사인지 알 수 없지만, 위험한 점이 있어요.</span></div><div style="padding:22px 28px;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.55;color:#2e2c2a"><span>· 비밀번호를 적는 칸이 있고, 적은 내용을 다른 사이트로 보내요.</span><span>· 이 회사의 진짜 주소는 저희 목록에 없어요.</span><span style="font-weight:600">회사 대표 전화번호로 직접 물어보세요.</span></div></div>
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="background:#f2f1ef;padding:28px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:#44403c;color:#fff;font-size:16px;font-weight:700">알 수 없어요</span><span style="font-size:26px;font-weight:700;letter-spacing:-0.5px;line-height:1.3">지금은 확인을 끝내지 못했어요.</span></div><div style="padding:22px 28px;display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:1.55;color:#2e2c2a"><span>AI가 너무 바빠서 조사가 멈췄어요. <b>안전하다는 뜻이 아니니</b> 링크를 누르지 마세요.</span><div style="display:flex;gap:10px"><span style="padding:12px 20px;border-radius:12px;background:#1c1b1a;color:#fff;font-size:17px;font-weight:700">다시 확인하기</span><span style="padding:12px 20px;border-radius:12px;border:1px solid #d6d3d1;font-size:17px">주소만 먼저 보기</span></div></div></div>
+</div>
+</div>
+
+<!-- 3k 예외 -->
+<div class="dv-opt" id="3k">
+<div class="dv-olabel"><a class="dv-oid" href="#3k">3k</a>예외 상황 — 링크 없음 · 링크 여러 개 · 기다리는 중 · 시연 모드</div>
+<div class="dv-card" style="width:1280px;padding:32px;background:#fafaf9;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:600;color:#57534e">링크가 없는 문자</span><div style="background:#fff;border:2px solid oklch(0.5 0.19 27);border-radius:16px"><div style="padding:18px 20px;font-size:18px;line-height:1.6">[하늘은행] 고객님 계좌가 일시 정지되었습니다. 고객센터로 연락 바랍니다.</div><div style="padding:14px 20px;border-top:1px solid #f0efec;font-size:16px;color:oklch(0.45 0.18 27);font-weight:600;line-height:1.5">이 문자에는 링크가 없어요. 링크가 있는 문자를 넣어 주세요.<br><span style="color:#44403c;font-weight:400">전화하라는 문자라면, 문자 속 번호 말고 은행 대표번호로 전화하세요.</span></div></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:600;color:#57534e">링크가 여러 개</span><div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px"><span style="font-size:18px;font-weight:700">링크를 3개 찾았어요. 첫 번째 링크부터 확인할게요.</span><div style="display:flex;flex-direction:column;gap:8px;font:15px 'JetBrains Mono',monospace"><span style="padding:10px 14px;border-radius:10px;background:#f0efec;font-weight:600">① hanbit.example.account-check.test/login</span><span style="padding:10px 14px;color:#57534e">② short-link.test/a8f</span><span style="padding:10px 14px;color:#57534e">③ hanbit.example/cs</span></div></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:600;color:#57534e">순서 기다리는 중</span><div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;padding:24px;display:flex;align-items:center;gap:18px"><span style="flex:none;width:56px;height:56px;border-radius:50%;background:#f0efec;display:grid;place-items:center;font-size:24px;font-weight:700">2</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:19px;font-weight:700">앞 사람의 확인이 끝나면 바로 시작해요</span><span style="font-size:16px;color:#44403c">안전을 위해 한 번에 한 건씩 확인해요. 1분쯤 기다려 주세요.</span></div></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:600;color:#57534e">시연 모드 (발표용)</span><div style="background:#fff;border:1px solid #e2e0dc;border-radius:16px;overflow:hidden"><div style="padding:14px 20px;background:oklch(0.35 0.08 280);color:#fff;font-size:16px;font-weight:600;display:flex;justify-content:space-between"><span>시연 모드 · 미리 저장해 둔 결과를 보여주고 있어요</span><span style="text-decoration:underline">끄기</span></div><div style="padding:18px 20px;font-size:16px;color:#44403c;line-height:1.55">지금 보이는 결과는 실시간 조사가 아니라 예시 5개의 저장된 결과예요.</div></div></div>
+</div>
+</div>
+
+<!-- 3l 모바일 -->
+<div class="dv-opt" id="3l">
+<div class="dv-olabel"><a class="dv-oid" href="#3l">3l</a>모바일 — 홈 · 결과 · 조사 기록</div>
+<div style="display:flex;gap:32px;align-items:flex-start">
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;gap:8px"><div style="width:24px;height:24px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:17px;font-weight:700">문자 링크 확인</span></div>
+<div style="padding:28px 20px;display:flex;flex-direction:column;gap:20px;min-height:700px">
+<h1 style="margin:0;font-size:28px;line-height:1.35;font-weight:700;letter-spacing:-0.6px">이상한 문자,<br>누르기 전에 확인하세요</h1>
+<div style="background:#fff;border:2px solid #1c1b1a;border-radius:16px"><div style="padding:16px;font-size:17px;line-height:1.6;min-height:130px">[한빛택배] 주소 불일치로 배송 보류. 수정: <span style="font-family:'JetBrains Mono',monospace;font-size:14px;word-break:break-all;background:oklch(0.95 0.03 250)">https://hanbit.example.account-check.test/login</span></div><div style="padding:12px 16px;border-top:1px solid #efedea;font-size:15px;color:oklch(0.42 0.12 250);font-weight:600">링크 1개를 찾았어요</div></div>
+<span style="padding:18px;border-radius:14px;background:#1c1b1a;color:#fff;font-size:19px;font-weight:700;text-align:center">확인하기</span>
+<div style="padding:16px;border-radius:14px;background:#f2f1ef;font-size:15px;line-height:1.6;color:#44403c">문자를 <b style="color:#1c1b1a">길게 눌러 복사</b>한 뒤 위 칸에 붙여 넣으세요. 링크는 내 휴대폰에서 열리지 않아요.</div>
+</div>
+</div>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 다른 문자 확인</div>
+<div style="background:oklch(0.965 0.025 27);padding:24px 20px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid oklch(0.9 0.05 27)"><span style="align-self:flex-start;padding:7px 14px;border-radius:999px;background:oklch(0.5 0.19 27);color:#fff;font-size:16px;font-weight:700">가짜로 의심돼요</span><span style="font-size:25px;font-weight:700;letter-spacing:-0.5px;line-height:1.35">한빛택배를 흉내 낸 가짜 사이트 같아요.</span><span style="font-size:17px;font-weight:700;color:oklch(0.45 0.18 27)">링크를 누르지 마세요.</span></div>
+<div style="padding:18px 20px;display:flex;flex-direction:column;gap:16px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px"><span style="font-size:15px;font-weight:700;color:#44403c">이 링크의 진짜 주인</span><div style="font:16px/1.6 'JetBrains Mono',monospace;word-break:break-all"><span style="color:#8a8580">hanbit.example.</span><span style="background:oklch(0.5 0.19 27);color:#fff;padding:2px 5px;border-radius:5px;font-weight:600">account-check.test</span></div><span style="font-size:15px;color:#44403c">한빛택배 진짜 주소(hanbit.example)와 달라요</span></div>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.55"><span style="font-weight:700;color:oklch(0.45 0.18 27)">가짜라고 보는 이유</span><span>· 앞에 한빛택배 주소를 붙여 진짜처럼 보이게 했어요.</span><span>· 택배 일에 필요 없는 카드 번호를 적으라고 해요.</span></div>
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;color:#c9c5c0;font-weight:600">이렇게 하세요</span><span style="font-size:18px;font-weight:700;line-height:1.4">한빛택배 공식 앱에서 배송 상태를 확인하세요.</span></div>
+<div style="display:flex;justify-content:space-between;padding:18px;border-radius:14px;background:#fff;border:1px solid #e2e0dc;font-size:17px;font-weight:700"><span>어떻게 조사했는지 보기</span><span style="color:#8a8580">→</span></div>
+</div>
+</div>
+<div class="dv-card" style="width:390px;background:#fafaf9">
+<div style="height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid #e2e0dc;background:#fff;font-size:16px;color:#44403c">← 결과로</div>
+<div style="background:#fff;border-bottom:1px solid #e2e0dc;padding:18px 20px 0;display:flex;flex-direction:column;gap:12px"><span style="font-size:22px;font-weight:700">어떻게 조사했나요?</span><div style="display:flex;gap:2px;font-size:15px;overflow:hidden;white-space:nowrap"><span style="padding:10px 12px;border-bottom:3px solid transparent;color:#57534e">① 주소</span><span style="padding:10px 12px;border-bottom:3px solid #1c1b1a;font-weight:700">② 넘어간 길</span><span style="padding:10px 12px;border-bottom:3px solid transparent;color:#57534e">③ 페이지</span><span style="padding:10px 12px;border-bottom:3px solid transparent;color:#57534e">④ AI</span></div></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e2e0dc;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:12px"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#1c1b1a;color:#fff;font-weight:700;display:grid;place-items:center">1</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:700">문자 속 링크를 열었어요</span><span style="font:14px 'JetBrains Mono',monospace;color:#44403c;word-break:break-all">hanbit.example.account-check.test</span></div></div>
+<div style="margin-left:16px;width:2px;height:18px;background:#d6d3d1"></div>
+<div style="display:flex;gap:12px"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:oklch(0.5 0.19 27);color:#fff;font-weight:800;display:grid;place-items:center">✕</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:17px;font-weight:700">넘어가려던 곳을 막았어요</span><span style="font:14px 'JetBrains Mono',monospace;color:#44403c">collect-pay.test</span></div></div>
+</div>
+<div style="padding:16px;border-radius:14px;background:#f2f1ef;font-size:15px;line-height:1.6;color:#44403c">가짜 사이트는 여러 번 다른 곳으로 넘겨서 진짜 주인을 숨기기도 해요.</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "글씨 더 크게 보기 버튼 추가" · "결과를 가족에게 보내기 기능" · "탭 대신 한 페이지에 순서대로 펼치기"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

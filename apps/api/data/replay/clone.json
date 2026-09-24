@@ -1,0 +1,538 @@
+{
+  "case_id": "clone",
+  "result": {
+    "job_id": "j_5555ee",
+    "mode": "live",
+    "input_kind": "message",
+    "verdict": "suspected_impersonation",
+    "verdict_label": "가짜로 의심돼요",
+    "claimed_entity": {
+      "id": "hanbit",
+      "name": "한빛택배",
+      "source": "exact"
+    },
+    "stated_purpose": "delivery",
+    "stated_purpose_label": "택배 안내",
+    "url": "https://hanbit-parcel.test/address",
+    "actual_registrable_domain": "hanbit-parcel.test",
+    "url_parts": {
+      "url": "https://hanbit-parcel.test/address",
+      "scheme": "https",
+      "subdomain_part": "",
+      "registrable_domain": "hanbit-parcel.test",
+      "path": "/address",
+      "official_domain": "hanbit.example",
+      "matches_official": false,
+      "matches_partner": false,
+      "partner_domain": null
+    },
+    "signals": [
+      {
+        "type": "brand_in_domain",
+        "strength": "strong",
+        "data": {
+          "brand": "hanbit",
+          "official_domain": "hanbit.example",
+          "entity_id": "hanbit"
+        }
+      },
+      {
+        "type": "domain_not_official",
+        "strength": "mid",
+        "data": {
+          "official_domain": "hanbit.example",
+          "entity_id": "hanbit"
+        }
+      },
+      {
+        "type": "credential_form",
+        "strength": "mid",
+        "data": {
+          "fields": [
+            "card_number",
+            "card_cvc"
+          ]
+        }
+      },
+      {
+        "type": "purpose_mismatch",
+        "strength": "strong",
+        "data": {
+          "fields": [
+            "card_number",
+            "card_cvc"
+          ],
+          "purpose": "delivery",
+          "policy": "한빛택배는 문자로 카드 번호를 묻지 않아요"
+        }
+      }
+    ],
+    "explanation": {
+      "headline": "한빛택배를 흉내 낸 가짜 사이트 같아요.",
+      "warning": "링크를 누르지 마세요.",
+      "detail": "한빛택배의 진짜 주소가 아니고, 택배 일에는 필요 없는 카드 번호, 카드 뒷면 숫자를 적으라고 해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 hanbit-parcel.test이에요.",
+        "카드 번호, 카드 뒷면 숫자를 적는 칸이 있어요."
+      ],
+      "suspicion_evidence": [
+        "주소 안에 한빛택배 이름을 끼워 넣어서 진짜처럼 보이게 했어요.",
+        "택배 일에 카드 번호, 카드 뒷면 숫자는 필요 없어요.",
+        "한빛택배는 문자로 카드 번호를 묻지 않아요."
+      ],
+      "unverified": [
+        "문자를 보낸 전화번호가 진짜인지",
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "한빛택배 공식 앱을 직접 열어서 배송 상태를 확인하세요.",
+      "action_bullets": [
+        "문자 속 링크는 누르지 마세요.",
+        "이미 카드 번호를 적었다면 카드 회사에 바로 전화하세요.",
+        "문자는 지워도 괜찮아요."
+      ],
+      "source": "template"
+    },
+    "comparison": [
+      {
+        "key": "address",
+        "label": "주소",
+        "said": "한빛택배 사이트예요",
+        "found": "다른 사람의 사이트예요",
+        "status": "bad",
+        "status_label": "달라요"
+      },
+      {
+        "key": "fields",
+        "label": "적는 칸",
+        "said": "택배 안내",
+        "found": "카드 번호, 카드 뒷면 숫자를 적으라고 해요",
+        "status": "bad",
+        "status_label": "달라요"
+      },
+      {
+        "key": "promise",
+        "label": "회사 약속",
+        "said": "한빛택배는 문자로 카드 번호를 묻지 않아요",
+        "found": "카드 번호, 카드 뒷면 숫자를 물어요",
+        "status": "bad",
+        "status_label": "약속과 달라요"
+      },
+      {
+        "key": "sender",
+        "label": "보낸 번호",
+        "said": "한빛택배가 보냈어요",
+        "found": "확인할 방법이 없어요",
+        "status": "unknown",
+        "status_label": "모름"
+      }
+    ],
+    "risks": [
+      {
+        "label": "주소에 회사 이름을 끼워 넣음",
+        "level": "high",
+        "level_label": "많이 위험"
+      },
+      {
+        "label": "필요 없는 카드 정보 요구",
+        "level": "high",
+        "level_label": "많이 위험"
+      },
+      {
+        "label": "개인 정보 적는 칸",
+        "level": "mid",
+        "level_label": "조금 위험"
+      }
+    ],
+    "risks_note": null,
+    "redirect_chain": [
+      {
+        "url": "https://hanbit-parcel.test/address",
+        "host": "hanbit-parcel.test",
+        "registrable_domain": "hanbit-parcel.test",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-23T20:35:39.040+00:00"
+      }
+    ],
+    "partial_findings": [],
+    "incomplete_reason": null,
+    "more_urls": [],
+    "agent": {
+      "tool_calls": [
+        "read",
+        "exec",
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": 431,
+      "model_reported": "local-rule-agent (모델 미사용)",
+      "kind": "local-sim"
+    }
+  },
+  "trace": {
+    "job_id": "j_5555ee",
+    "verdict": "suspected_impersonation",
+    "verdict_label": "가짜로 의심돼요",
+    "address": {
+      "url": "https://hanbit-parcel.test/address",
+      "scheme": "https",
+      "host_unicode": "hanbit-parcel.test",
+      "host_ascii": "hanbit-parcel.test",
+      "subdomain_part": "",
+      "registrable_domain": "hanbit-parcel.test",
+      "path": "/address",
+      "tricks": [
+        {
+          "key": "subdomain_disguise",
+          "question": "진짜 주소를 앞에 끼워 넣었나요?",
+          "hint": "예: 진짜 주소를 앞부분에 붙임",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "lookalike",
+          "question": "진짜 주소와 한두 글자만 다른가요?",
+          "hint": "예: hanbit → hanblt",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "confusable",
+          "question": "헷갈리는 글자를 섞었나요?",
+          "hint": "예: 영어 o 대신 숫자 0, 모양이 같은 외국 글자",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "ip_host",
+          "question": "이름 없이 숫자로만 된 주소인가요?",
+          "hint": "예: 123.45.67.89",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "userinfo",
+          "question": "주소 중간에 @ 표시가 있나요?",
+          "hint": "@ 앞의 글자는 무시되고 뒤쪽으로 가요",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        }
+      ],
+      "similarity": [
+        {
+          "entity_id": "hanbit",
+          "name": "한빛택배",
+          "domain": "hanbit.example",
+          "similarity": 0.46,
+          "label": "거의 안 닮음",
+          "note": null
+        },
+        {
+          "entity_id": "haneul",
+          "name": "하늘은행",
+          "domain": "haneul.example",
+          "similarity": 0.31,
+          "label": "거의 안 닮음",
+          "note": null
+        }
+      ],
+      "summary_sentence": "주소에서 눈에 띄는 속임수는 찾지 못했어요.",
+      "kb_note": "각 회사 공식 홈페이지에서 직접 확인한 주소만 모아 두었어요. 목록에 없는 회사는 \"알 수 없어요\"로 알려드려요.",
+      "dev": {
+        "parse_url.json": {
+          "ok": true,
+          "scheme": "https",
+          "host_unicode": "hanbit-parcel.test",
+          "host_ascii": "hanbit-parcel.test",
+          "registrable_domain": "hanbit-parcel.test",
+          "registrable_domain_unicode": "hanbit-parcel.test",
+          "domain_label": "hanbit-parcel",
+          "domain_label_unicode": "hanbit-parcel",
+          "suffix": "test",
+          "subdomain_labels": [],
+          "path": "/address",
+          "query_keys": [],
+          "is_ip_host": false,
+          "has_userinfo": false,
+          "userinfo": "",
+          "port": null,
+          "elapsed_ms": 218
+        },
+        "similarity.json": {
+          "ok": true,
+          "closest_official": {
+            "entity_id": "hanbit",
+            "domain": "hanbit.example",
+            "similarity": 0.4615,
+            "edit_distance": 7,
+            "pattern": "none"
+          },
+          "subdomain_contains_official": [],
+          "brand_in_domain": [
+            {
+              "entity_id": "hanbit",
+              "domain": "hanbit.example",
+              "brand": "hanbit"
+            }
+          ],
+          "mixed_script": false,
+          "confusable_chars": [],
+          "typosquat_pattern": "none",
+          "elapsed_ms": 0
+        },
+        "public_suffix": "test"
+      }
+    },
+    "redirects": {
+      "chain": [
+        {
+          "url": "https://hanbit-parcel.test/address",
+          "host": "hanbit-parcel.test",
+          "registrable_domain": "hanbit-parcel.test",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-23T20:35:39.040+00:00"
+        }
+      ],
+      "redirect_count": 0,
+      "blocked_count": 0,
+      "last_seen_domain": "hanbit-parcel.test",
+      "blocked_hosts": [],
+      "dev": {
+        "fetch_chain.json": {
+          "ok": true,
+          "final_url": "https://hanbit-parcel.test/address",
+          "final_registrable_domain": "hanbit-parcel.test",
+          "redirect_count": 0,
+          "blocked_count": 0,
+          "tls": {
+            "https": true,
+            "verified": true
+          },
+          "html_saved": true,
+          "first_error": null,
+          "elapsed_ms": 0
+        },
+        "statuses": [
+          200
+        ]
+      }
+    },
+    "page": {
+      "available": true,
+      "title": "한빛택배 | 배송지 수정",
+      "brand_candidates": [
+        "한빛택배",
+        "배송지 수정",
+        "한빛택배 로고"
+      ],
+      "brand_sentence": "페이지는 자기가 한빛택배라고 말하지만, 앞에서 본 것처럼 주소의 주인은 한빛택배가 아니에요.",
+      "stated_purpose_label": "택배 안내",
+      "expected_fields_label": "이름 · 전화번호 · 받을 주소",
+      "field_rows": [
+        {
+          "type": "card_number",
+          "label": "카드 번호",
+          "verdict": "not_needed",
+          "verdict_label": "필요 없음"
+        },
+        {
+          "type": "card_cvc",
+          "label": "카드 뒷면 숫자 3자리",
+          "verdict": "not_needed",
+          "verdict_label": "필요 없음"
+        },
+        {
+          "type": "name",
+          "label": "이름",
+          "verdict": "ok",
+          "verdict_label": "괜찮음"
+        },
+        {
+          "type": "address",
+          "label": "받을 주소",
+          "verdict": "ok",
+          "verdict_label": "괜찮음"
+        }
+      ],
+      "sends_to": null,
+      "sends_cross_domain": false,
+      "sends_sentence": "적은 내용은 이 페이지 안에서만 처리돼요.",
+      "apk_links": [],
+      "js_redirect_hint": false,
+      "trust_claims": [
+        "한빛택배 고객센터 · 정식 인증된 안내 페이지입니다."
+      ],
+      "dev": {
+        "page.json": {
+          "ok": true,
+          "title": "한빛택배 | 배송지 수정",
+          "brand_candidates": [
+            "한빛택배",
+            "배송지 수정",
+            "한빛택배 로고"
+          ],
+          "forms": [
+            {
+              "action_host": "hanbit-parcel.test",
+              "action_registrable_domain": "hanbit-parcel.test",
+              "cross_domain": false,
+              "field_types": [
+                "name",
+                "address",
+                "card_number",
+                "card_cvc"
+              ]
+            }
+          ],
+          "apk_links": [],
+          "trust_claims": [
+            "한빛택배 고객센터 · 정식 인증된 안내 페이지입니다."
+          ],
+          "js_redirect_hint": false,
+          "elapsed_ms": 0
+        },
+        "field_types": [
+          "card_number",
+          "card_cvc",
+          "name",
+          "address"
+        ]
+      }
+    },
+    "agent": {
+      "steps": [
+        {
+          "t_sec": 0,
+          "title": "문자를 읽었어요",
+          "detail": "붙여 넣은 문자와, 비교할 회사 후보 목록을 받았어요.",
+          "lines": []
+        },
+        {
+          "t_sec": 0,
+          "title": "누가 보낸 척하는지 골랐어요",
+          "detail": "회사: 한빛택배 · 목적: 택배 안내\n이유: 문자 맨 앞 이름과 내용으로 골랐어요",
+          "lines": []
+        },
+        {
+          "t_sec": 0,
+          "title": "정해진 확인 도구를 차례로 돌렸어요",
+          "detail": null,
+          "lines": [
+            "✓ 주소 조각내기",
+            "✓ 진짜 주소와 닮았는지 비교",
+            "✓ 안전 공간에서 열어보기",
+            "✓ 페이지 속 적는 칸 살펴보기"
+          ]
+        }
+      ],
+      "unexpected_count": 0,
+      "unexpected_tools": [],
+      "duration_ms": 431,
+      "duration_sec": 0,
+      "model_reported": "local-rule-agent (모델 미사용)",
+      "explain_check": "skipped",
+      "dev_log": [
+        "00:01  read",
+        "00:02  exec",
+        "00:03  exec",
+        "claim recorded: entity=hanbit purpose=delivery",
+        "checks done: parse=True sim=True fetch=True blocked=0 page=True",
+        "session j_5555ee-inv · 431ms"
+      ],
+      "dev": {
+        "tool_calls": [
+          "read",
+          "exec",
+          "exec"
+        ],
+        "raw_meta": null,
+        "kind": "local-sim"
+      }
+    },
+    "sandbox": {
+      "opened_host": "hanbit-parcel.test",
+      "blocked_hosts": [],
+      "events": [
+        {
+          "at": "05:35:38",
+          "kind": "open",
+          "title": "문을 열었어요",
+          "detail": "조사할 링크 한 곳만"
+        },
+        {
+          "at": "05:35:39",
+          "kind": "close",
+          "title": "문을 다시 닫았어요",
+          "detail": "열어 둔 시간 0초 · 남은 열린 문 없음"
+        }
+      ],
+      "open_seconds": 0,
+      "remaining_open": 0,
+      "allowed": [
+        "조사할 링크 한 곳 들어가기",
+        "페이지를 보기만 하기",
+        "정해진 확인 도구만 쓰기"
+      ],
+      "denied": [
+        "다른 사이트 들어가기",
+        "정보를 적어서 보내기",
+        "프로그램·앱 설치하기",
+        "페이지 속 프로그램 실행하기"
+      ],
+      "dev": {
+        "policy": "job-j_5555ee",
+        "methods": [
+          "GET"
+        ],
+        "ports": [
+          443,
+          80
+        ],
+        "binaries": [
+          "/usr/bin/python3",
+          "/usr/bin/python3.13"
+        ]
+      }
+    }
+  },
+  "steps": [
+    {
+      "key": "claim",
+      "title": "누가 보낸 척하는지",
+      "status": "done",
+      "detail": "한빛택배가 보낸 척하는 문자예요"
+    },
+    {
+      "key": "address",
+      "title": "주소 살펴보기",
+      "status": "done",
+      "detail": "진짜 사이트 이름은 hanbit-parcel.test예요"
+    },
+    {
+      "key": "sandbox",
+      "title": "안전 공간에서 열어보기",
+      "status": "done",
+      "detail": "링크 한 곳을 열어봤어요"
+    },
+    {
+      "key": "page",
+      "title": "페이지 속 내용",
+      "status": "done",
+      "detail": "적는 칸 4개를 찾았어요"
+    },
+    {
+      "key": "summary",
+      "title": "결과 정리",
+      "status": "done",
+      "detail": null
+    }
+  ]
+}

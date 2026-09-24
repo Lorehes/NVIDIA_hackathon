@@ -1,0 +1,25 @@
+# 조사 1건용 egress 프리셋 템플릿 (상세 명세 6-1)
+# 작업마다 <job_id>, <target_host>를 치환해 `job-<job_id>`로 적용하고, 조사가 끝나면 반드시 제거한다.
+# 대상 호스트 하나, 443/80, GET, python3 실행 파일로만 한정한다.
+preset:
+  name: job-<job_id>
+  description: "Investigation egress for one target host"
+network_policies:
+  job-<job_id>:
+    name: job-<job_id>
+    endpoints:
+      - host: <target_host>
+        port: 443
+        protocol: rest
+        enforcement: enforce
+        rules:
+          - allow: { method: GET, path: "/**" }
+      - host: <target_host>
+        port: 80
+        protocol: rest
+        enforcement: enforce
+        rules:
+          - allow: { method: GET, path: "/**" }
+    binaries:
+      - { path: /usr/bin/python3 }
+      - { path: /usr/bin/python3.13 }

@@ -1,0 +1,13 @@
+[Unit]
+Description=Impersonation detector web (Next.js :3100)
+After=impersonation-api.service
+
+[Service]
+WorkingDirectory=%h/hackathon/apps/web
+Environment=API_BASE_URL=http://127.0.0.1:8000
+Environment=PORT=3100
+ExecStart=/usr/bin/env npm run start -- -p 3100
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

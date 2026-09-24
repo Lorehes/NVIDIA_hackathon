@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#ecebe8;font-family:'Pretendard',system-ui,sans-serif;color:#1c1b1a;-webkit-font-smoothing:antialiased}a{color:#1c1b1a}a:hover{color:oklch(0.52 0.19 27)}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style></helmet>
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">실서비스 화면 — 데스크톱 1280 · 모바일 390 (예시: E3 위장 주소 사례)</span></div>
+<div class="dv-opts">
+
+<!-- 2a 입력 -->
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>입력 (홈)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #e7e5e2;background:#fff">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:26px;height:26px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:16px;font-weight:700;letter-spacing:-0.2px">사칭 탐지 에이전트</span><span style="font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;background:#f0efec;color:#6b6865">BETA</span></div>
+<div style="display:flex;align-items:center;gap:22px;font-size:14px;color:#57534e">
+<span style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.62 0.14 155)"></span>샌드박스 정상 · 대기 0건</span>
+<span style="display:flex;align-items:center;gap:8px">재생 모드<span style="width:34px;height:20px;border-radius:10px;background:#d6d3d1;position:relative;display:inline-block"><span style="position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)"></span></span></span>
+<span>작동 방식</span>
+</div>
+</div>
+<div style="max-width:760px;margin:0 auto;padding:72px 0 64px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<h1 style="margin:0;font-size:38px;line-height:1.2;font-weight:700;letter-spacing:-0.8px;text-wrap:pretty">받은 문자의 링크, 열기 전에 확인하세요</h1>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#57534e;text-wrap:pretty">문자 본문이나 링크를 붙여 넣으면 격리된 샌드박스가 대신 방문하고, 누구를 사칭하는지 근거와 함께 알려드립니다.</p>
+</div>
+<div style="background:#fff;border:1.5px solid #1c1b1a;border-radius:14px;box-shadow:0 0 0 4px rgba(28,27,26,.06)">
+<div style="padding:18px 20px 12px;font-size:16px;line-height:1.65;min-height:92px">[한빛택배] 주소 불일치로 배송 보류. 수정: <span style="font-family:'JetBrains Mono',monospace;font-size:14.5px;background:oklch(0.95 0.03 250);padding:1px 3px;border-radius:3px">https://hanbit.example.account-check.test/login</span></div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 20px;border-top:1px solid #efedea">
+<div style="display:flex;align-items:center;gap:14px;font-size:13px;color:#78716c"><span style="display:flex;align-items:center;gap:6px;color:oklch(0.45 0.12 250);font-weight:500"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.55 0.14 250)"></span>링크 1개 감지됨</span><span>74 / 2,000자</span></div>
+<div style="display:flex;gap:8px"><span style="padding:9px 14px;border-radius:9px;font-size:14px;color:#57534e;border:1px solid #e7e5e2">지우기</span><span style="padding:9px 20px;border-radius:9px;background:#1c1b1a;color:#fff;font-size:15px;font-weight:600">조사 시작</span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px;font-weight:600">예시 사례로 해보기</span><span style="font-size:13px;color:#a8a29e">모두 가상 브랜드 · 테스트 도메인</span></div>
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">사례 1</span><span style="font-size:14px;font-weight:600">공식 사이트</span><span style="font:11px/1.4 'JetBrains Mono',monospace;color:#78716c;word-break:break-all">hanbit.example/track</span></div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">사례 2</span><span style="font-size:14px;font-weight:600">유사 도메인</span><span style="font:11px/1.4 'JetBrains Mono',monospace;color:#78716c;word-break:break-all">hanblt.example/login</span></div>
+<div style="background:#fff;border:1.5px solid #1c1b1a;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">사례 3 · 선택됨</span><span style="font-size:14px;font-weight:600">위장 주소</span><span style="font:11px/1.4 'JetBrains Mono',monospace;color:#78716c;word-break:break-all">hanbit.example.account-check.test</span></div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">사례 4</span><span style="font-size:14px;font-weight:600">복제 화면</span><span style="font:11px/1.4 'JetBrains Mono',monospace;color:#78716c;word-break:break-all">delivery-fix.test</span></div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">사례 5</span><span style="font-size:14px;font-weight:600">파트너 인증</span><span style="font:11px/1.4 'JetBrains Mono',monospace;color:#78716c;word-break:break-all">pay-partner.example</span></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding-top:20px;border-top:1px solid #e7e5e2">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:600">링크를 직접 열지 않아요</span><span style="font-size:13px;line-height:1.55;color:#78716c">조사할 때만 대상 주소 하나를 열고, 끝나면 바로 닫습니다.</span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:600">공식 도메인과 대조해요</span><span style="font-size:13px;line-height:1.55;color:#78716c">문자가 주장하는 기관의 검증된 공식 주소와 비교합니다.</span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:600">모르는 건 모른다고 해요</span><span style="font-size:13px;line-height:1.55;color:#78716c">발신번호처럼 확인할 수 없는 부분은 따로 표시합니다.</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2b 진행 -->
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>조사 진행 (2초 폴링)</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #e7e5e2;background:#fff">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:26px;height:26px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:16px;font-weight:700">사칭 탐지 에이전트</span><span style="font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;background:#f0efec;color:#6b6865">BETA</span></div>
+<div style="display:flex;align-items:center;gap:22px;font-size:14px;color:#57534e"><span style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.72 0.15 75)"></span>조사 중 · 대기 0건</span><span>작동 방식</span></div>
+</div>
+<div style="max-width:1080px;margin:0 auto;padding:48px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#78716c;font-family:'JetBrains Mono',monospace">j_7f3a2c</span><h2 style="margin:0;font-size:28px;font-weight:700;letter-spacing:-0.5px">조사하고 있어요</h2><span style="font-size:15px;color:#57534e">보통 40~60초 걸립니다. 이 화면을 닫지 마세요.</span></div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:8px 24px">
+<div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec;align-items:start"><span style="width:24px;height:24px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:13px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600">주장 파악</span><span style="font-size:14px;color:#78716c">문자가 <b style="color:#1c1b1a;font-weight:600">한빛택배</b>를 자처하고, 목적은 <b style="color:#1c1b1a;font-weight:600">배송 안내</b>로 보여요</span></div><span style="font:13px 'JetBrains Mono',monospace;color:#a8a29e">3.1s</span></div>
+<div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec;align-items:start"><span style="width:24px;height:24px;border-radius:50%;background:#1c1b1a;color:#fff;font-size:13px;display:grid;place-items:center">✓</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600">주소 분석</span><span style="font-size:14px;color:#78716c">실제 등록 도메인: <span style="font-family:'JetBrains Mono',monospace;color:#1c1b1a">account-check.test</span></span></div><span style="font:13px 'JetBrains Mono',monospace;color:#a8a29e">1.8s</span></div>
+<div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec;align-items:start"><span style="width:24px;height:24px;border-radius:50%;border:2.5px solid #1c1b1a;border-right-color:transparent;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:16px;font-weight:600">샌드박스 방문</span><div style="display:flex;flex-direction:column;gap:5px;font:13px 'JetBrains Mono',monospace"><div style="display:flex;gap:10px"><span style="color:#a8a29e">1</span><span>hanbit.example.account-check.test</span><span style="color:#78716c">302</span></div><div style="display:flex;gap:10px;color:oklch(0.52 0.19 27)"><span style="color:#a8a29e">2</span><span>collect-pay.test</span><span>차단됨 · 허용되지 않은 주소</span></div></div></div><span style="font:13px 'JetBrains Mono',monospace;color:#1c1b1a">진행 중</span></div>
+<div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid #f0efec;align-items:start;color:#a8a29e"><span style="width:24px;height:24px;border-radius:50%;border:1.5px solid #d6d3d1;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600">페이지 분석</span><span style="font-size:14px">입력란, 전송 대상, 설치 유도 여부</span></div><span></span></div>
+<div style="display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:14px;padding:16px 0;align-items:start;color:#a8a29e"><span style="width:24px;height:24px;border-radius:50%;border:1.5px solid #d6d3d1;box-sizing:border-box"></span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:600">종합</span><span style="font-size:14px">판정과 설명 작성</span></div><span></span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;padding-top:78px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px;font-weight:600">경과 시간</span><span style="font:600 22px 'JetBrains Mono',monospace">00:14</span></div>
+<div style="height:6px;border-radius:3px;background:#f0efec;overflow:hidden"><div style="width:23%;height:100%;background:#1c1b1a"></div></div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#a8a29e"><span>0초</span><span>목표 60초</span><span>최대 90초</span></div>
+</div>
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.72 0.15 155)"></span><span style="font-size:14px;font-weight:600">샌드박스 격리 중</span></div>
+<span style="font-size:13px;line-height:1.55;color:#c7c3be">이번 조사에서만 아래 주소를 열었어요. 조사가 끝나면 자동으로 닫힙니다.</span>
+<div style="display:flex;flex-direction:column;gap:6px;font:12px/1.5 'JetBrains Mono',monospace;background:rgba(255,255,255,.06);border-radius:8px;padding:10px 12px">
+<div style="display:flex;justify-content:space-between"><span style="color:#a8a29e">허용 주소</span><span>hanbit.example.account-check.test</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#a8a29e">포트</span><span>443, 80</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#a8a29e">방식</span><span>GET only</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#a8a29e">실행 파일</span><span>python3</span></div>
+<div style="display:flex;justify-content:space-between;color:oklch(0.75 0.13 27)"><span>차단</span><span>1건</span></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">입력한 내용</span><span style="font-size:14px;line-height:1.55;color:#57534e">[한빛택배] 주소 불일치로 배송 보류. 수정: https://hanbit.example.account-check.test/login</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2c 결과 -->
+<div class="dv-opt" id="2c">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>결과 — 사칭 의심</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #e7e5e2;background:#fff">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:26px;height:26px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:16px;font-weight:700">사칭 탐지 에이전트</span><span style="font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;background:#f0efec;color:#6b6865">BETA</span></div>
+<div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#57534e"><span style="padding:8px 14px;border:1px solid #e7e5e2;border-radius:9px;background:#fff">새 조사</span></div>
+</div>
+<div style="background:oklch(0.97 0.02 27);border-bottom:1px solid oklch(0.9 0.05 27)">
+<div style="max-width:1080px;margin:0 auto;padding:40px 0 36px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<span style="align-self:flex-start;display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:oklch(0.52 0.19 27);color:#fff;font-size:14px;font-weight:700"><span style="width:16px;height:16px;border-radius:50%;background:#fff;color:oklch(0.52 0.19 27);font-size:12px;font-weight:800;display:grid;place-items:center">!</span>사칭 의심</span>
+<h2 style="margin:0;font-size:36px;font-weight:700;letter-spacing:-0.8px">한빛택배 사칭이 의심됩니다.</h2>
+<span style="font-size:16px;color:#57534e">이 링크를 열지 마세요. 공식 한빛택배 주소가 아니고, 배송 안내와 맞지 않는 카드 정보를 요구합니다.</span>
+</div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:13px;color:#78716c;white-space:nowrap"><span>조사 완료 · 41초</span><span style="font-family:'JetBrains Mono',monospace">j_7f3a2c · 2026-09-24 14:32</span></div>
+</div>
+</div>
+<div style="max-width:1080px;margin:0 auto;padding:32px 0 64px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:14px;font-weight:600;color:#57534e">이 링크가 실제로 가는 곳</span>
+<div style="display:flex;align-items:stretch;font:18px 'JetBrains Mono',monospace;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="padding:10px 4px 10px 0;color:#a8a29e">https://</span><span></span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="padding:10px 8px;background:#f0efec;border-radius:6px 0 0 6px;color:#78716c">hanbit.example.</span><span style="font:12px 'Pretendard';color:#78716c;padding-left:8px">서브도메인 — 누구나 붙일 수 있음</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="padding:10px 8px;background:oklch(0.52 0.19 27);color:#fff;font-weight:600;border-radius:0 6px 6px 0">account-check.test</span><span style="font:600 12px 'Pretendard';color:oklch(0.52 0.19 27);padding-left:8px">실제 주인 (등록 도메인)</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="padding:10px 8px;color:#a8a29e">/login</span><span></span></div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;font-size:14px;padding:12px 14px;background:#fafaf9;border-radius:9px"><span style="color:#78716c">한빛택배 공식 도메인</span><span style="font-family:'JetBrains Mono',monospace">hanbit.example</span><span style="margin-left:auto;font-weight:600;color:oklch(0.52 0.19 27)">일치하지 않음</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden">
+<div style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1fr) 90px;font-size:14px">
+<div style="padding:14px 20px;background:#fafaf9;border-bottom:1px solid #e7e5e2;color:#78716c;font-weight:600"></div>
+<div style="padding:14px 16px;background:#fafaf9;border-bottom:1px solid #e7e5e2;font-weight:600">문자가 주장하는 것</div>
+<div style="padding:14px 16px;background:#fafaf9;border-bottom:1px solid #e7e5e2;font-weight:600">샌드박스에서 확인한 것</div>
+<div style="padding:14px 16px;background:#fafaf9;border-bottom:1px solid #e7e5e2;font-weight:600;color:#78716c">결과</div>
+<div style="padding:14px 20px;border-bottom:1px solid #f0efec;color:#78716c">주소</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec">hanbit.example <span style="color:#a8a29e">(공식)</span></div><div style="padding:14px 16px;border-bottom:1px solid #f0efec;font-family:'JetBrains Mono',monospace;font-size:13px">account-check.test</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec;color:oklch(0.52 0.19 27);font-weight:600">불일치</div>
+<div style="padding:14px 20px;border-bottom:1px solid #f0efec;color:#78716c">요구 정보</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec">배송지 수정 → 이름·주소·연락처</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec">카드번호, CVC, 이름</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec;color:oklch(0.52 0.19 27);font-weight:600">불일치</div>
+<div style="padding:14px 20px;border-bottom:1px solid #f0efec;color:#78716c">기관 정책</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec">문자로 카드번호를 요구하지 않음</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec">카드번호 입력란 있음</div><div style="padding:14px 16px;border-bottom:1px solid #f0efec;color:oklch(0.52 0.19 27);font-weight:600">위반</div>
+<div style="padding:14px 20px;color:#78716c">발신자</div><div style="padding:14px 16px">한빛택배</div><div style="padding:14px 16px;color:#a8a29e">확인할 수 없음</div><div style="padding:14px 16px;color:#a8a29e;font-weight:600">미확인</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px"><span style="font-size:15px;font-weight:700">확인된 사실</span><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.55;color:#44403c"><span>실제 접속 도메인은 account-check.test입니다.</span><span>페이지에 카드번호·CVC 입력란이 있습니다.</span><span>collect-pay.test로 이동하려다 차단됐습니다.</span></div></div>
+<div style="background:#fff;border:1px solid oklch(0.88 0.06 27);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px"><span style="font-size:15px;font-weight:700;color:oklch(0.45 0.17 27)">사칭 의심 근거</span><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.55;color:#44403c"><span>앞부분의 hanbit.example은 공식 사이트임을 증명하지 않습니다.</span><span>배송지 수정 안내와 달리 카드 정보를 요구합니다.</span></div></div>
+<div style="background:#fff;border:1px dashed #d6d3d1;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px"><span style="font-size:15px;font-weight:700;color:#78716c">확인하지 못한 부분</span><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.55;color:#78716c"><span>문자 발신번호의 진위</span><span>JavaScript로 바뀌는 화면 내용</span></div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#1c1b1a;color:#fff;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:13px;font-weight:600;color:#a8a29e">이렇게 하세요</span>
+<span style="font-size:19px;font-weight:700;line-height:1.4">공식 앱에서 배송 상태를 확인하세요.</span>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5;color:#d6d3d1"><span>· 문자 속 링크는 누르지 마세요</span><span>· 이미 카드 정보를 입력했다면 카드사에 바로 연락하세요</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+<span style="font-size:14px;font-weight:600">판정에 쓰인 신호</span>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'JetBrains Mono',monospace">subdomain_disguise</span><span style="padding:2px 8px;border-radius:5px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.17 27);font-weight:600">강</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'JetBrains Mono',monospace">purpose_mismatch</span><span style="padding:2px 8px;border-radius:5px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.17 27);font-weight:600">강</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'JetBrains Mono',monospace">credential_form</span><span style="padding:2px 8px;border-radius:5px;background:oklch(0.95 0.05 75);color:oklch(0.45 0.1 70);font-weight:600">중</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'JetBrains Mono',monospace">redirect_blocked</span><span style="padding:2px 8px;border-radius:5px;background:#f0efec;color:#78716c;font-weight:600">참고</span></div>
+</div>
+<span style="font-size:12px;line-height:1.5;color:#a8a29e;padding-top:8px;border-top:1px solid #f0efec">판정은 규칙 엔진이 정하고, 설명 문장은 AI가 작성했습니다.</span>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600"><span>상세 조사 기록 보기</span><span style="color:#a8a29e">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2d 상세 -->
+<div class="dv-opt" id="2d">
+<div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>상세 조사 기록</div>
+<div class="dv-card" style="width:1280px;background:#fafaf9">
+<div style="height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #e7e5e2;background:#fff">
+<div style="display:flex;align-items:center;gap:10px"><div style="width:26px;height:26px;border-radius:7px;background:#1c1b1a"></div><span style="font-size:16px;font-weight:700">사칭 탐지 에이전트</span></div>
+<span style="padding:8px 14px;border:1px solid #e7e5e2;border-radius:9px;background:#fff;font-size:14px;color:#57534e">새 조사</span>
+</div>
+<div style="max-width:1080px;margin:0 auto;padding:32px 0 64px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px">
+<div style="display:flex;flex-direction:column;gap:4px;font-size:14px;color:#78716c">
+<span style="font-size:13px;margin-bottom:12px">← 결과로 돌아가기</span>
+<span style="padding:8px 12px;border-radius:8px;background:#fff;border:1px solid #e7e5e2;color:#1c1b1a;font-weight:600">주소 분석</span>
+<span style="padding:8px 12px">이동 경로</span><span style="padding:8px 12px">페이지 분석</span><span style="padding:8px 12px">에이전트 실행 기록</span><span style="padding:8px 12px">샌드박스 정책</span>
+<div style="margin-top:16px;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:8px;background:oklch(0.97 0.02 27);color:oklch(0.45 0.17 27);font-weight:600;font-size:13px"><span style="width:8px;height:8px;border-radius:50%;background:oklch(0.52 0.19 27)"></span>사칭 의심</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.4px">상세 조사 기록</h2>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:16px;font-weight:700">주소 분석</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#e7e5e2;border:1px solid #e7e5e2;border-radius:10px;overflow:hidden;font-size:13px">
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">스킴</span><span style="font-family:'JetBrains Mono',monospace">https</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">서브도메인 라벨</span><span style="font-family:'JetBrains Mono',monospace">hanbit · example</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">등록 도메인</span><span style="font-family:'JetBrains Mono',monospace;font-weight:600;color:oklch(0.52 0.19 27)">account-check.test</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">경로</span><span style="font-family:'JetBrains Mono',monospace">/login</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">IP 주소 호스트</span><span>아니오</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">user@host 형태</span><span>아니오</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">혼동 문자</span><span>없음</span></div>
+<div style="background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">혼합 문자 체계</span><span>없음</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:13px;font-weight:600;color:#57534e">공식 도메인 유사도</span>
+<div style="display:grid;grid-template-columns:160px minmax(0,1fr) 60px 80px;gap:12px;align-items:center;font-size:13px"><span style="font-family:'JetBrains Mono',monospace">hanbit.example</span><div style="height:8px;background:#f0efec;border-radius:4px;overflow:hidden"><div style="width:32%;height:100%;background:#a8a29e"></div></div><span style="font-family:'JetBrains Mono',monospace">0.32</span><span style="color:#78716c">한빛택배</span></div>
+<div style="display:grid;grid-template-columns:160px minmax(0,1fr) 60px 80px;gap:12px;align-items:center;font-size:13px"><span style="font-family:'JetBrains Mono',monospace">haneul.example</span><div style="height:8px;background:#f0efec;border-radius:4px;overflow:hidden"><div style="width:21%;height:100%;background:#d6d3d1"></div></div><span style="font-family:'JetBrains Mono',monospace">0.21</span><span style="color:#78716c">하늘은행</span></div>
+<span style="font-size:13px;color:#57534e;padding:10px 12px;background:#fafaf9;border-radius:8px">서브도메인 라벨에 공식 도메인 <span style="font-family:'JetBrains Mono',monospace">hanbit.example</span>이 들어 있음 → <b>subdomain_disguise</b></span>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:16px;font-weight:700">이동 경로</span><span style="font-size:13px;color:#78716c">최대 5회 · 요청당 10초</span></div>
+<div style="border:1px solid #e7e5e2;border-radius:10px;overflow:hidden;font-size:13px">
+<div style="display:grid;grid-template-columns:40px minmax(0,2fr) minmax(0,1.2fr) 70px 150px;background:#fafaf9;color:#78716c;font-weight:600;padding:10px 14px;gap:10px"><span>#</span><span>URL</span><span>등록 도메인</span><span>상태</span><span>샌드박스</span></div>
+<div style="display:grid;grid-template-columns:40px minmax(0,2fr) minmax(0,1.2fr) 70px 150px;padding:12px 14px;gap:10px;border-top:1px solid #f0efec;font-family:'JetBrains Mono',monospace"><span style="color:#a8a29e">1</span><span style="word-break:break-all">https://hanbit.example.account-check.test/login</span><span>account-check.test</span><span>302</span><span style="font-family:'Pretendard';color:oklch(0.48 0.13 155);font-weight:600">허용</span></div>
+<div style="display:grid;grid-template-columns:40px minmax(0,2fr) minmax(0,1.2fr) 70px 150px;padding:12px 14px;gap:10px;border-top:1px solid #f0efec;font-family:'JetBrains Mono',monospace;background:oklch(0.98 0.015 27)"><span style="color:#a8a29e">2</span><span style="word-break:break-all">https://collect-pay.test/card</span><span>collect-pay.test</span><span>—</span><span style="font-family:'Pretendard';color:oklch(0.52 0.19 27);font-weight:600">차단 (403 ProxyError)</span></div>
+</div>
+<span style="font-size:13px;color:#78716c">최종 도착: <span style="font-family:'JetBrains Mono',monospace;color:#1c1b1a">hanbit.example.account-check.test/login</span> · TLS 유효 · HTML 38KB 저장(모델에 전달하지 않음)</span>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:16px;font-weight:700">페이지 분석</span>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;font-size:13px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">페이지 제목</span><span>한빛택배 | 배송지 확인</span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="color:#a8a29e">페이지가 내세운 브랜드</span><div style="display:flex;gap:6px"><span style="padding:2px 8px;border-radius:5px;background:#f0efec">한빛택배</span><span style="padding:2px 8px;border-radius:5px;background:#f0efec">HANBIT</span></div></div>
+</div>
+<div style="border:1px solid #e7e5e2;border-radius:10px;overflow:hidden;font-size:13px">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);background:#fafaf9;color:#78716c;font-weight:600;padding:10px 14px;gap:10px"><span>폼 전송 대상</span><span>다른 도메인</span><span>입력란</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);padding:12px 14px;gap:10px;border-top:1px solid #f0efec;align-items:center"><span style="font-family:'JetBrains Mono',monospace">collect-pay.test</span><span style="color:oklch(0.52 0.19 27);font-weight:600">예</span><div style="display:flex;gap:6px;flex-wrap:wrap"><span style="padding:2px 8px;border-radius:5px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.17 27)">card_number</span><span style="padding:2px 8px;border-radius:5px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.17 27)">card_cvc</span><span style="padding:2px 8px;border-radius:5px;background:oklch(0.94 0.04 27);color:oklch(0.45 0.17 27)">card_expiry</span><span style="padding:2px 8px;border-radius:5px;background:#f0efec">name</span></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:center;gap:8px"><span style="font-size:13px;font-weight:600;color:#57534e">페이지 속 주장</span><span style="font-size:11px;padding:2px 6px;border-radius:4px;background:oklch(0.95 0.05 75);color:oklch(0.45 0.1 70);font-weight:600">검증 대상 · 판정에 쓰지 않음</span></div>
+<div style="font-size:13px;line-height:1.55;color:#57534e;padding:10px 12px;background:#fafaf9;border-radius:8px;font-style:italic">"본 페이지는 한빛택배 공식 인증 페이지입니다."</div>
+</div>
+<div style="display:flex;gap:24px;font-size:13px;color:#78716c"><span>앱 설치(.apk) 링크: <b style="color:#1c1b1a">없음</b></span><span>자바스크립트 이동 흔적: <b style="color:#1c1b1a">없음</b></span></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-size:16px;font-weight:700">에이전트 실행 기록</span>
+<div style="display:flex;flex-direction:column;gap:8px;font:12.5px/1.5 'JetBrains Mono',monospace">
+<div style="display:flex;gap:10px"><span style="color:#a8a29e;width:44px">00:01</span><span style="color:oklch(0.45 0.12 250)">read</span><span>input.json</span></div>
+<div style="display:flex;gap:10px"><span style="color:#a8a29e;width:44px">00:03</span><span style="color:oklch(0.45 0.12 250)">exec</span><span>record_claim.py → hanbit / delivery</span></div>
+<div style="display:flex;gap:10px"><span style="color:#a8a29e;width:44px">00:05</span><span style="color:oklch(0.45 0.12 250)">exec</span><span>run_checks.py (4단계)</span></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:12px;padding-top:12px;border-top:1px solid #f0efec">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="color:#a8a29e">허용 외 도구</span><span style="font-size:15px;font-weight:600">0</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="color:#a8a29e">조사 시간</span><span style="font-size:15px;font-weight:600">14.2초</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="color:#a8a29e">모델</span><span style="font-size:13px;font-weight:600">Nemotron 3 Super</span></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:16px;font-weight:700">샌드박스 정책</span><span style="font-size:12px;padding:3px 8px;border-radius:5px;background:oklch(0.95 0.04 155);color:oklch(0.42 0.1 155);font-weight:600">조사 후 제거됨</span></div>
+<div style="font:12px/1.6 'JetBrains Mono',monospace;background:#1c1b1a;color:#e7e5e2;border-radius:8px;padding:12px 14px">
+<div><span style="color:#a8a29e">name:</span> job-j_7f3a2c</div>
+<div><span style="color:#a8a29e">host:</span> hanbit.example.account-check.test</div>
+<div><span style="color:#a8a29e">ports:</span> 443, 80</div>
+<div><span style="color:#a8a29e">allow:</span> GET /**</div>
+<div><span style="color:#a8a29e">binaries:</span> python3</div>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#78716c"><span>적용 14:31:52</span><span>제거 14:32:18</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2e 판정 상태 -->
+<div class="dv-opt" id="2e">
+<div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a>판정별 결과 헤더 — 안전 · 안전(파트너) · 주의 · 판단 불가</div>
+<div class="dv-card" style="width:1280px;padding:32px;background:#fafaf9;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden">
+<div style="background:oklch(0.97 0.025 155);padding:24px;display:flex;flex-direction:column;gap:10px"><span style="align-self:flex-start;padding:5px 12px;border-radius:999px;background:oklch(0.52 0.13 155);color:#fff;font-size:13px;font-weight:700">안전</span><span style="font-size:24px;font-weight:700;letter-spacing:-0.4px">한빛택배 공식 사이트입니다.</span></div>
+<div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.55;color:#44403c"><span>· 실제 접속 도메인 hanbit.example은 한빛택배 공식 도메인과 일치합니다.</span><span>· 다른 주소로 이동하지 않았습니다.</span><span style="color:#78716c">확인 못 함 · 문자 발신번호의 진위</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden">
+<div style="background:oklch(0.97 0.025 155);padding:24px;display:flex;flex-direction:column;gap:10px"><span style="align-self:flex-start;padding:5px 12px;border-radius:999px;background:oklch(0.52 0.13 155);color:#fff;font-size:13px;font-weight:700">안전 · 공식 파트너</span><span style="font-size:24px;font-weight:700;letter-spacing:-0.4px">한빛택배가 쓰는 결제 대행 서비스입니다.</span></div>
+<div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.55;color:#44403c"><span>· pay-partner.example은 한빛택배 공식 도메인과 다르지만, 등록된 결제 파트너입니다.</span><span>· 결제 목적에 맞는 입력란만 요구합니다.</span><span style="color:#78716c">확인 못 함 · 문자 발신번호의 진위</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden">
+<div style="background:oklch(0.97 0.035 80);padding:24px;display:flex;flex-direction:column;gap:10px"><span style="align-self:flex-start;padding:5px 12px;border-radius:999px;background:oklch(0.7 0.15 75);color:#1c1b1a;font-size:13px;font-weight:700">주의</span><span style="font-size:24px;font-weight:700;letter-spacing:-0.4px">어느 기관인지 특정하지 못했지만 주의가 필요합니다.</span></div>
+<div style="padding:20px 24px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.55;color:#44403c"><span>· 비밀번호 입력란이 있고, 입력값을 다른 도메인으로 보냅니다.</span><span>· 문자가 주장하는 기관이 확인된 목록에 없습니다.</span><span style="color:#78716c">권장 · 기관 공식 앱이나 대표번호로 직접 확인하세요.</span></div>
+</div>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden">
+<div style="background:#f5f4f2;padding:24px;display:flex;flex-direction:column;gap:10px"><span style="align-self:flex-start;padding:5px 12px;border-radius:999px;background:#57534e;color:#fff;font-size:13px;font-weight:700">판단 불가</span><span style="font-size:24px;font-weight:700;letter-spacing:-0.4px">지금은 확인을 끝내지 못했습니다.</span></div>
+<div style="padding:20px 24px;display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55;color:#44403c"><span>AI 응답이 지연돼 조사가 중단됐습니다. 안전하다는 뜻이 아니니 링크를 열지 마세요.</span><div style="display:flex;gap:8px"><span style="padding:8px 14px;border-radius:9px;background:#1c1b1a;color:#fff;font-size:14px;font-weight:600">다시 조사</span><span style="padding:8px 14px;border-radius:9px;border:1px solid #e7e5e2;font-size:14px">주소 분석 결과만 보기</span></div></div>
+</div>
+</div>
+</div>
+
+<!-- 2f 예외 상태 -->
+<div class="dv-opt" id="2f">
+<div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a>예외 상태 — 링크 없음 · 링크 여러 개 · 대기열 · 재생 모드</div>
+<div class="dv-card" style="width:1280px;padding:32px;background:#fafaf9;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:12px;font-weight:600;color:#a8a29e">링크가 없는 본문 (400 no_url_found)</span>
+<div style="background:#fff;border:1.5px solid oklch(0.52 0.19 27);border-radius:14px"><div style="padding:16px 18px;font-size:15px;line-height:1.6;min-height:56px">[하늘은행] 고객님 계좌가 일시 정지되었습니다. 고객센터로 연락 바랍니다.</div><div style="padding:10px 18px;border-top:1px solid #f0efec;font-size:13px;color:oklch(0.48 0.19 27);font-weight:500">문자에서 링크를 찾지 못했어요. 링크가 포함된 문자나 주소를 넣어 주세요.</div></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:12px;font-weight:600;color:#a8a29e">링크가 여러 개</span>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;font-size:14px"><span style="font-weight:600">링크 3개를 찾았어요. 첫 번째 링크를 조사합니다.</span><div style="display:flex;flex-direction:column;gap:6px;font:13px 'JetBrains Mono',monospace"><span style="padding:6px 10px;border-radius:6px;background:#f0efec">① hanbit.example.account-check.test/login</span><span style="padding:6px 10px;color:#78716c">② bit.ly-short.test/a8f</span><span style="padding:6px 10px;color:#78716c">③ hanbit.example/cs</span></div></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:12px;font-weight:600;color:#a8a29e">대기 중 (순차 처리)</span>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;padding:20px;display:flex;align-items:center;gap:16px"><span style="width:44px;height:44px;border-radius:50%;background:#f0efec;display:grid;place-items:center;font-size:18px;font-weight:700">2</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:600">앞에 1건이 조사 중이에요</span><span style="font-size:13px;color:#78716c">안전한 격리를 위해 한 번에 한 건씩 조사합니다. 예상 대기 약 1분.</span></div></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:12px;font-weight:600;color:#a8a29e">재생 모드 (데모)</span>
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:14px;overflow:hidden"><div style="padding:10px 18px;background:oklch(0.35 0.08 280);color:#fff;font-size:13px;font-weight:600;display:flex;justify-content:space-between"><span>재생 모드 · 미리 저장한 조사 결과를 보여주고 있어요</span><span style="text-decoration:underline">끄기</span></div><div style="padding:16px 18px;font-size:14px;color:#57534e">실시간 조사 대신 사례 1~5의 저장된 결과를 단계별로 재생합니다.</div></div></div>
+</div>
+</div>
+
+<!-- 2g 모바일 -->
+<div class="dv-opt" id="2g">
+<div class="dv-olabel"><a class="dv-oid" href="#2g">2g</a>모바일 — 입력 · 결과</div>
+<div style="display:flex;gap:32px">
+<div class="dv-card" style="width:390px;background:#fafaf9;display:flex;flex-direction:column">
+<div style="height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid #e7e5e2;background:#fff"><div style="display:flex;align-items:center;gap:8px"><div style="width:22px;height:22px;border-radius:6px;background:#1c1b1a"></div><span style="font-size:15px;font-weight:700">사칭 탐지 에이전트</span></div><span style="font-size:13px;color:#78716c">안내</span></div>
+<div style="padding:28px 18px;display:flex;flex-direction:column;gap:18px;min-height:680px">
+<h1 style="margin:0;font-size:26px;line-height:1.3;font-weight:700;letter-spacing:-0.5px">받은 문자의 링크,<br>열기 전에 확인하세요</h1>
+<div style="background:#fff;border:1.5px solid #1c1b1a;border-radius:14px"><div style="padding:14px;font-size:15px;line-height:1.6;min-height:120px">[한빛택배] 주소 불일치로 배송 보류. 수정: <span style="font-family:'JetBrains Mono',monospace;font-size:13px;word-break:break-all;background:oklch(0.95 0.03 250)">https://hanbit.example.account-check.test/login</span></div><div style="padding:10px 14px;border-top:1px solid #efedea;font-size:12px;color:oklch(0.45 0.12 250);font-weight:500">링크 1개 감지됨</div></div>
+<span style="padding:15px;border-radius:12px;background:#1c1b1a;color:#fff;font-size:16px;font-weight:600;text-align:center">조사 시작</span>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">예시 사례</span><div style="display:flex;gap:8px;flex-wrap:wrap;font-size:13px"><span style="padding:7px 12px;border-radius:999px;background:#fff;border:1px solid #e7e5e2">공식 사이트</span><span style="padding:7px 12px;border-radius:999px;background:#fff;border:1px solid #e7e5e2">유사 도메인</span><span style="padding:7px 12px;border-radius:999px;background:#fff;border:1.5px solid #1c1b1a">위장 주소</span><span style="padding:7px 12px;border-radius:999px;background:#fff;border:1px solid #e7e5e2">복제 화면</span><span style="padding:7px 12px;border-radius:999px;background:#fff;border:1px solid #e7e5e2">파트너 인증</span></div></div>
+</div>
+</div>
+<div class="dv-card" style="width:390px;background:#fafaf9;display:flex;flex-direction:column">
+<div style="height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid #e7e5e2;background:#fff"><span style="font-size:14px;color:#57534e">← 새 조사</span><span style="font-size:12px;color:#a8a29e">41초</span></div>
+<div style="background:oklch(0.97 0.02 27);padding:22px 18px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid oklch(0.9 0.05 27)"><span style="align-self:flex-start;padding:5px 11px;border-radius:999px;background:oklch(0.52 0.19 27);color:#fff;font-size:13px;font-weight:700">사칭 의심</span><span style="font-size:23px;font-weight:700;letter-spacing:-0.4px;line-height:1.3">한빛택배 사칭이 의심됩니다.</span></div>
+<div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fff;border:1px solid #e7e5e2;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px"><span style="font-size:12px;font-weight:600;color:#78716c">실제로 가는 곳</span><div style="font:14px/1.5 'JetBrains Mono',monospace;word-break:break-all"><span style="color:#a8a29e">hanbit.example.</span><span style="background:oklch(0.52 0.19 27);color:#fff;padding:1px 4px;border-radius:4px;font-weight:600">account-check.test</span></div><span style="font-size:12px;color:#78716c">공식 도메인 hanbit.example과 다름</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5"><span style="font-weight:700;color:oklch(0.45 0.17 27)">사칭 의심 근거</span><span style="color:#44403c">· 앞부분의 hanbit.example은 공식 사이트임을 증명하지 않습니다.</span><span style="color:#44403c">· 배송지 수정 안내와 달리 카드번호를 요구합니다.</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.5;padding-top:12px;border-top:1px solid #e7e5e2"><span style="font-weight:700;color:#78716c">확인하지 못한 부분</span><span style="color:#78716c">· 문자 발신번호의 진위</span></div>
+<div style="background:#1c1b1a;color:#fff;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;color:#a8a29e;font-weight:600">이렇게 하세요</span><span style="font-size:16px;font-weight:700">공식 앱에서 배송 상태를 확인하세요.</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px;border-radius:12px;background:#fff;border:1px solid #e7e5e2;font-size:14px;font-weight:600"><span>상세 조사 기록</span><span style="color:#a8a29e">→</span></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "상세 화면을 탭 방식으로" · "결과 화면에 '결과 공유' 추가" · "서비스 이름 정해서 로고 넣어줘"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

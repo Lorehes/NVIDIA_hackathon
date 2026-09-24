@@ -1,0 +1,483 @@
+{
+  "case_id": "partner",
+  "result": {
+    "job_id": "j_ff4d6a",
+    "mode": "live",
+    "input_kind": "message",
+    "verdict": "safe",
+    "verdict_label": "안전해요 · 협력 회사",
+    "claimed_entity": {
+      "id": "hanbit",
+      "name": "한빛택배",
+      "source": "exact"
+    },
+    "stated_purpose": "payment",
+    "stated_purpose_label": "결제 안내",
+    "url": "https://pay-partner.example/checkout",
+    "actual_registrable_domain": "pay-partner.example",
+    "url_parts": {
+      "url": "https://pay-partner.example/checkout",
+      "scheme": "https",
+      "subdomain_part": "",
+      "registrable_domain": "pay-partner.example",
+      "path": "/checkout",
+      "official_domain": "hanbit.example",
+      "matches_official": false,
+      "matches_partner": true,
+      "partner_domain": "pay-partner.example"
+    },
+    "signals": [
+      {
+        "type": "partner_match",
+        "strength": "positive",
+        "data": {
+          "domain": "pay-partner.example",
+          "entity_id": "hanbit"
+        }
+      },
+      {
+        "type": "credential_form",
+        "strength": "mid",
+        "data": {
+          "fields": [
+            "card_number",
+            "card_expiry"
+          ]
+        }
+      }
+    ],
+    "explanation": {
+      "headline": "한빛택배가 함께 쓰는 결제 사이트예요.",
+      "warning": null,
+      "detail": "주소는 한빛택배와 다르지만, 한빛택배가 공식으로 쓰는 결제 회사예요. 주소가 다르다는 것만으로 가짜는 아니에요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 pay-partner.example이에요.",
+        "한빛택배가 밝힌 협력 회사 목록에 있는 주소예요.",
+        "결제에 필요한 것만 적으라고 해요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "문자를 보낸 전화번호가 진짜인지",
+        "결제 금액이 맞는지"
+      ],
+      "recommended_action": "결제하기 전에 금액과 회사 이름을 한 번 더 보세요.",
+      "action_bullets": [
+        "받을 택배가 없다면 결제하지 마세요.",
+        "한빛택배 앱에서 결제해도 돼요."
+      ],
+      "source": "template"
+    },
+    "comparison": [
+      {
+        "key": "address",
+        "label": "주소",
+        "said": "한빛택배 결제 페이지예요",
+        "found": "한빛택배의 공식 결제 회사예요",
+        "status": "ok",
+        "status_label": "맞아요"
+      },
+      {
+        "key": "fields",
+        "label": "적는 칸",
+        "said": "결제 안내",
+        "found": "카드 번호, 카드 유효기간, 이름",
+        "status": "ok",
+        "status_label": "결제에 필요"
+      },
+      {
+        "key": "destination",
+        "label": "적은 내용",
+        "said": "—",
+        "found": "같은 결제 회사로 보내져요",
+        "status": "ok",
+        "status_label": "괜찮아요"
+      },
+      {
+        "key": "sender",
+        "label": "보낸 번호",
+        "said": "한빛택배가 보냈어요",
+        "found": "확인할 방법이 없어요",
+        "status": "unknown",
+        "status_label": "모름"
+      }
+    ],
+    "risks": [
+      {
+        "label": "카드 정보 적는 칸",
+        "level": "mid",
+        "level_label": "조금 위험"
+      }
+    ],
+    "risks_note": null,
+    "redirect_chain": [
+      {
+        "url": "https://pay-partner.example/checkout",
+        "host": "pay-partner.example",
+        "registrable_domain": "pay-partner.example",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-23T20:35:39.523+00:00"
+      }
+    ],
+    "partial_findings": [],
+    "incomplete_reason": null,
+    "more_urls": [],
+    "agent": {
+      "tool_calls": [
+        "read",
+        "exec",
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": 412,
+      "model_reported": "local-rule-agent (모델 미사용)",
+      "kind": "local-sim"
+    }
+  },
+  "trace": {
+    "job_id": "j_ff4d6a",
+    "verdict": "safe",
+    "verdict_label": "안전해요 · 협력 회사",
+    "address": {
+      "url": "https://pay-partner.example/checkout",
+      "scheme": "https",
+      "host_unicode": "pay-partner.example",
+      "host_ascii": "pay-partner.example",
+      "subdomain_part": "",
+      "registrable_domain": "pay-partner.example",
+      "path": "/checkout",
+      "tricks": [
+        {
+          "key": "subdomain_disguise",
+          "question": "진짜 주소를 앞에 끼워 넣었나요?",
+          "hint": "예: 진짜 주소를 앞부분에 붙임",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "lookalike",
+          "question": "진짜 주소와 한두 글자만 다른가요?",
+          "hint": "예: hanbit → hanblt",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "confusable",
+          "question": "헷갈리는 글자를 섞었나요?",
+          "hint": "예: 영어 o 대신 숫자 0, 모양이 같은 외국 글자",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "ip_host",
+          "question": "이름 없이 숫자로만 된 주소인가요?",
+          "hint": "예: 123.45.67.89",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "userinfo",
+          "question": "주소 중간에 @ 표시가 있나요?",
+          "hint": "@ 앞의 글자는 무시되고 뒤쪽으로 가요",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        }
+      ],
+      "similarity": [
+        {
+          "entity_id": "hanbit",
+          "name": "한빛택배",
+          "domain": "hanbit.example",
+          "similarity": 0.53,
+          "label": "거의 안 닮음",
+          "note": null
+        },
+        {
+          "entity_id": "haneul",
+          "name": "하늘은행",
+          "domain": "haneul.example",
+          "similarity": 0.53,
+          "label": "거의 안 닮음",
+          "note": null
+        }
+      ],
+      "summary_sentence": "주소의 주인이 진짜 주소 목록에 있는 곳과 같아요.",
+      "kb_note": "각 회사 공식 홈페이지에서 직접 확인한 주소만 모아 두었어요. 목록에 없는 회사는 \"알 수 없어요\"로 알려드려요.",
+      "dev": {
+        "parse_url.json": {
+          "ok": true,
+          "scheme": "https",
+          "host_unicode": "pay-partner.example",
+          "host_ascii": "pay-partner.example",
+          "registrable_domain": "pay-partner.example",
+          "registrable_domain_unicode": "pay-partner.example",
+          "domain_label": "pay-partner",
+          "domain_label_unicode": "pay-partner",
+          "suffix": "example",
+          "subdomain_labels": [],
+          "path": "/checkout",
+          "query_keys": [],
+          "is_ip_host": false,
+          "has_userinfo": false,
+          "userinfo": "",
+          "port": null,
+          "elapsed_ms": 221
+        },
+        "similarity.json": {
+          "ok": true,
+          "closest_official": {
+            "entity_id": "hanbit",
+            "domain": "hanbit.example",
+            "similarity": 0.5263,
+            "edit_distance": 9,
+            "pattern": "none"
+          },
+          "subdomain_contains_official": [],
+          "brand_in_domain": [],
+          "mixed_script": false,
+          "confusable_chars": [],
+          "typosquat_pattern": "none",
+          "elapsed_ms": 1
+        },
+        "public_suffix": "example"
+      }
+    },
+    "redirects": {
+      "chain": [
+        {
+          "url": "https://pay-partner.example/checkout",
+          "host": "pay-partner.example",
+          "registrable_domain": "pay-partner.example",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-23T20:35:39.523+00:00"
+        }
+      ],
+      "redirect_count": 0,
+      "blocked_count": 0,
+      "last_seen_domain": "pay-partner.example",
+      "blocked_hosts": [],
+      "dev": {
+        "fetch_chain.json": {
+          "ok": true,
+          "final_url": "https://pay-partner.example/checkout",
+          "final_registrable_domain": "pay-partner.example",
+          "redirect_count": 0,
+          "blocked_count": 0,
+          "tls": {
+            "https": true,
+            "verified": true
+          },
+          "html_saved": true,
+          "first_error": null,
+          "elapsed_ms": 0
+        },
+        "statuses": [
+          200
+        ]
+      }
+    },
+    "page": {
+      "available": true,
+      "title": "착불 요금 결제 | 페이파트너",
+      "brand_candidates": [
+        "착불 요금 결제",
+        "페이파트너"
+      ],
+      "brand_sentence": null,
+      "stated_purpose_label": "결제 안내",
+      "expected_fields_label": "카드 번호 · 카드 유효기간 · 이름",
+      "field_rows": [
+        {
+          "type": "card_number",
+          "label": "카드 번호",
+          "verdict": "needed",
+          "verdict_label": "필요함"
+        },
+        {
+          "type": "card_expiry",
+          "label": "카드 유효기간",
+          "verdict": "needed",
+          "verdict_label": "필요함"
+        },
+        {
+          "type": "name",
+          "label": "이름",
+          "verdict": "ok",
+          "verdict_label": "괜찮음"
+        }
+      ],
+      "sends_to": null,
+      "sends_cross_domain": false,
+      "sends_sentence": "적은 내용은 이 페이지 안에서만 처리돼요.",
+      "apk_links": [],
+      "js_redirect_hint": false,
+      "trust_claims": [],
+      "dev": {
+        "page.json": {
+          "ok": true,
+          "title": "착불 요금 결제 | 페이파트너",
+          "brand_candidates": [
+            "착불 요금 결제",
+            "페이파트너"
+          ],
+          "forms": [
+            {
+              "action_host": "pay-partner.example",
+              "action_registrable_domain": "pay-partner.example",
+              "cross_domain": false,
+              "field_types": [
+                "card_number",
+                "card_expiry",
+                "name"
+              ]
+            }
+          ],
+          "apk_links": [],
+          "trust_claims": [],
+          "js_redirect_hint": false,
+          "elapsed_ms": 0
+        },
+        "field_types": [
+          "card_number",
+          "card_expiry",
+          "name"
+        ]
+      }
+    },
+    "agent": {
+      "steps": [
+        {
+          "t_sec": 0,
+          "title": "문자를 읽었어요",
+          "detail": "붙여 넣은 문자와, 비교할 회사 후보 목록을 받았어요.",
+          "lines": []
+        },
+        {
+          "t_sec": 0,
+          "title": "누가 보낸 척하는지 골랐어요",
+          "detail": "회사: 한빛택배 · 목적: 결제 안내\n이유: 문자 맨 앞 이름과 내용으로 골랐어요",
+          "lines": []
+        },
+        {
+          "t_sec": 0,
+          "title": "정해진 확인 도구를 차례로 돌렸어요",
+          "detail": null,
+          "lines": [
+            "✓ 주소 조각내기",
+            "✓ 진짜 주소와 닮았는지 비교",
+            "✓ 안전 공간에서 열어보기",
+            "✓ 페이지 속 적는 칸 살펴보기"
+          ]
+        }
+      ],
+      "unexpected_count": 0,
+      "unexpected_tools": [],
+      "duration_ms": 412,
+      "duration_sec": 0,
+      "model_reported": "local-rule-agent (모델 미사용)",
+      "explain_check": "skipped",
+      "dev_log": [
+        "00:01  read",
+        "00:02  exec",
+        "00:03  exec",
+        "claim recorded: entity=hanbit purpose=payment",
+        "checks done: parse=True sim=True fetch=True blocked=0 page=True",
+        "session j_ff4d6a-inv · 412ms"
+      ],
+      "dev": {
+        "tool_calls": [
+          "read",
+          "exec",
+          "exec"
+        ],
+        "raw_meta": null,
+        "kind": "local-sim"
+      }
+    },
+    "sandbox": {
+      "opened_host": "pay-partner.example",
+      "blocked_hosts": [],
+      "events": [
+        {
+          "at": "05:35:39",
+          "kind": "open",
+          "title": "문을 열었어요",
+          "detail": "조사할 링크 한 곳만"
+        },
+        {
+          "at": "05:35:39",
+          "kind": "close",
+          "title": "문을 다시 닫았어요",
+          "detail": "열어 둔 시간 0초 · 남은 열린 문 없음"
+        }
+      ],
+      "open_seconds": 0,
+      "remaining_open": 0,
+      "allowed": [
+        "조사할 링크 한 곳 들어가기",
+        "페이지를 보기만 하기",
+        "정해진 확인 도구만 쓰기"
+      ],
+      "denied": [
+        "다른 사이트 들어가기",
+        "정보를 적어서 보내기",
+        "프로그램·앱 설치하기",
+        "페이지 속 프로그램 실행하기"
+      ],
+      "dev": {
+        "policy": "job-j_ff4d6a",
+        "methods": [
+          "GET"
+        ],
+        "ports": [
+          443,
+          80
+        ],
+        "binaries": [
+          "/usr/bin/python3",
+          "/usr/bin/python3.13"
+        ]
+      }
+    }
+  },
+  "steps": [
+    {
+      "key": "claim",
+      "title": "누가 보낸 척하는지",
+      "status": "done",
+      "detail": "한빛택배가 보낸 척하는 문자예요"
+    },
+    {
+      "key": "address",
+      "title": "주소 살펴보기",
+      "status": "done",
+      "detail": "진짜 사이트 이름은 pay-partner.example예요"
+    },
+    {
+      "key": "sandbox",
+      "title": "안전 공간에서 열어보기",
+      "status": "done",
+      "detail": "링크 한 곳을 열어봤어요"
+    },
+    {
+      "key": "page",
+      "title": "페이지 속 내용",
+      "status": "done",
+      "detail": "적는 칸 3개를 찾았어요"
+    },
+    {
+      "key": "summary",
+      "title": "결과 정리",
+      "status": "done",
+      "detail": null
+    }
+  ]
+}

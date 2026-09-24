@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#f0eee9;font-family:'Gaegu',system-ui,sans-serif;color:#2a2a2a}a{color:#2a2a2a}a:hover{color:#c0392b}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style></helmet>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">사칭 탐지 에이전트 — 입력 → 진행 → 결과 → 상세, 5가지 구조 (예시: E3 위장 주소 사례)</span></div>
+<div class="dv-opts">
+
+<!-- 1a -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>단계형 — 화면 4장을 순서대로 넘김 (명세 8절 그대로)</div>
+<div class="dv-card" style="width:1000px;padding:24px;background:#fbfaf6;display:grid;grid-template-columns:1fr 1fr;gap:22px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:18px;font-weight:700">① 입력</div>
+<div style="border:2px solid #2a2a2a;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:12px;min-height:300px">
+<div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px dashed #999;padding-bottom:8px"><span style="font-size:20px;font-weight:700">□ 서비스명(가칭)</span><span style="font-size:15px;display:flex;align-items:center;gap:6px">재생 모드 <span style="width:30px;height:16px;border:1.5px solid #2a2a2a;border-radius:10px;display:inline-block"></span></span></div>
+<div style="font-size:22px;font-weight:700">의심 문자나 링크를 붙여 넣으세요</div>
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;padding:10px;min-height:70px;font:13px/1.5 'IBM Plex Mono',monospace;color:#555">[한빛택배] 주소 불일치로 배송 보류. 수정: https://hanbit.example.account-check.test/login</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-size:15px"><span style="padding:2px 8px;border:1.5px solid #888;border-radius:12px">예시 1 공식 사이트</span><span style="padding:2px 8px;border:1.5px solid #888;border-radius:12px">2 유사 도메인</span><span style="padding:2px 8px;border:1.5px solid #2a2a2a;border-radius:12px;background:#fff3a3">3 위장 주소</span><span style="padding:2px 8px;border:1.5px solid #888;border-radius:12px">4 복제 화면</span><span style="padding:2px 8px;border:1.5px solid #888;border-radius:12px">5 파트너 인증</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:15px;color:#666">링크는 열리지 않아요 · 격리된 샌드박스에서 대신 확인</span><span style="padding:6px 22px;background:#2a2a2a;color:#fff;border-radius:6px;font-size:18px;font-weight:700">조사하기 →</span></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:18px;font-weight:700">② 진행 (2초 폴링)</div>
+<div style="border:2px solid #2a2a2a;border-radius:15px 225px 15px 255px/255px 15px 225px 15px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:300px">
+<div style="display:flex;justify-content:space-between;font-size:18px"><b>조사 중…</b><span style="font-family:'IBM Plex Mono',monospace;font-size:14px">00:34 / 목표 60초</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:19px">
+<div style="display:flex;gap:10px;align-items:center"><span style="width:20px;height:20px;border:2px solid #2a2a2a;border-radius:50%;background:#2a2a2a;color:#fff;font-size:13px;display:grid;place-items:center">✓</span>주장 파악 <span style="color:#666;font-size:15px">— 한빛택배 · 배송</span></div>
+<div style="display:flex;gap:10px;align-items:center"><span style="width:20px;height:20px;border:2px solid #2a2a2a;border-radius:50%;background:#2a2a2a;color:#fff;font-size:13px;display:grid;place-items:center">✓</span>주소 분석</div>
+<div style="display:flex;gap:10px;align-items:center;background:#fff3a3;margin:0 -6px;padding:2px 6px"><span style="width:20px;height:20px;border:2px dashed #2a2a2a;border-radius:50%"></span><b>샌드박스 방문</b> <span style="color:#666;font-size:15px">진행 중</span></div>
+<div style="display:flex;gap:10px;align-items:center;color:#999"><span style="width:20px;height:20px;border:2px solid #bbb;border-radius:50%"></span>페이지 분석</div>
+<div style="display:flex;gap:10px;align-items:center;color:#999"><span style="width:20px;height:20px;border:2px solid #bbb;border-radius:50%"></span>종합</div>
+</div>
+<div style="margin-top:auto;border:1.5px dashed #888;border-radius:6px;padding:8px;font-size:15px">🔒 이번 조사에서만 허용: <span style="font-family:'IBM Plex Mono',monospace;font-size:12px">hanbit.example.account-check.test · GET · 443/80</span></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:18px;font-weight:700">③ 결과</div>
+<div style="border:2px solid #2a2a2a;border-radius:225px 15px 255px 15px/15px 255px 15px 225px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;gap:10px;align-items:center"><span style="padding:3px 12px;border:2.5px solid oklch(0.58 0.18 25);color:oklch(0.58 0.18 25);font-weight:700;font-size:20px;transform:rotate(-2deg);border-radius:4px">사칭 의심</span><span style="font-size:22px;font-weight:700">한빛택배 사칭이 의심됩니다.</span></div>
+<div style="font-size:16px;line-height:1.35"><b>확인된 사실</b><br>· 실제 접속 도메인은 <u>account-check.test</u>입니다.<br>· 카드번호 입력란이 있습니다.</div>
+<div style="font-size:16px;line-height:1.35"><b>사칭 의심 근거</b><br>· 앞부분의 hanbit.example은 공식 사이트임을 증명하지 않습니다.<br>· 배송지 수정 안내와 달리 카드 정보를 요구합니다.</div>
+<div style="font-size:16px;line-height:1.35;color:#666"><b>확인 못 한 부분</b><br>· 문자 발신번호의 진위</div>
+<div style="border:2px solid #2a2a2a;border-radius:6px;padding:8px;font-size:17px;background:#f4f2ec">👉 공식 앱에서 배송 상태를 확인하세요.</div>
+<div style="text-align:right;font-size:17px;text-decoration:underline">상세 보기 ▸</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:18px;font-weight:700">④ 상세</div>
+<div style="border:2px solid #2a2a2a;border-radius:15px 255px 15px 225px/225px 15px 255px 15px;background:#fff;padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="font-size:16px"><b>주소 분해</b></div>
+<div style="display:flex;font:13px 'IBM Plex Mono',monospace;border:1.5px solid #2a2a2a;border-radius:4px;overflow:hidden"><span style="padding:5px 6px;color:#666">https://</span><span style="padding:5px 6px;background:#eceae3">hanbit.example.</span><span style="padding:5px 6px;background:oklch(0.9 0.08 25);font-weight:600">account-check.test</span><span style="padding:5px 6px;color:#666">/login</span></div>
+<div style="display:flex;font-size:13px;color:#666;gap:40px;padding-left:70px"><span>서브도메인(위장)</span><span>실제 등록 도메인</span></div>
+<div style="font-size:16px"><b>이동 경로</b></div>
+<div style="font:12px/1.6 'IBM Plex Mono',monospace;border-top:1.5px solid #2a2a2a"><div style="display:flex;justify-content:space-between;border-bottom:1px dashed #aaa">1 hanbit.example.account-check.test<span>302</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px dashed #aaa;color:oklch(0.58 0.18 25)">2 collect-pay.test<span>⛔ 차단 403</span></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:15px"><div><b>폼 입력란</b><br>card_number · card_cvc · name</div><div><b>도구 실행</b><br>read → exec → exec</div></div>
+<div style="font-size:14px;color:#666">정책 job-j_7f3a2c: 적용 → 제거 완료 ✓</div>
+</div>
+</div>
+</div>
+<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:14px;flex-wrap:wrap;max-width:1000px"><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(-1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:300px">장점: 명세와 1:1, 구현 가장 쉬움</div><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:320px">단점: 진행→결과 전환 때 맥락(입력 원문)이 사라짐</div></div></sc-if>
+</div>
+
+<!-- 1b -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>한 장 리포트 — 한 페이지에서 결과가 아래로 채워지고, 주소 분해가 주인공</div>
+<div class="dv-card" style="width:600px;padding:24px;background:#fbfaf6">
+<div style="border:2px solid #2a2a2a;border-radius:255px 15px 225px 15px/15px 225px 15px 255px;background:#fff;padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px;font-weight:700">□ 서비스명</span><span style="font-size:15px;text-decoration:underline">새 조사</span></div>
+<div style="display:flex;gap:8px;align-items:center;border:1.5px solid #2a2a2a;border-radius:6px;padding:8px 10px"><span style="flex:1;font:12px 'IBM Plex Mono',monospace;color:#555;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">[한빛택배] 주소 불일치로 배송 보류. 수정: https://hanbit.example…</span><span style="padding:3px 12px;background:#2a2a2a;color:#fff;border-radius:5px;font-size:15px">조사</span></div>
+<div style="display:flex;align-items:center;gap:4px;font-size:14px"><span style="flex:1;border-top:3px solid #2a2a2a;padding-top:3px">주장 파악</span><span style="flex:1;border-top:3px solid #2a2a2a;padding-top:3px">주소 분석</span><span style="flex:1;border-top:3px solid #2a2a2a;padding-top:3px">샌드박스</span><span style="flex:1;border-top:3px solid #2a2a2a;padding-top:3px">페이지</span><span style="flex:1;border-top:3px solid #2a2a2a;padding-top:3px">종합 ✓</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#666">41s</span></div>
+<div style="border-top:1.5px dashed #999"></div>
+<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start"><span style="padding:3px 14px;border:3px solid oklch(0.58 0.18 25);color:oklch(0.58 0.18 25);font-weight:700;font-size:24px;transform:rotate(-2deg);border-radius:4px">사칭 의심</span><span style="font-size:28px;font-weight:700;line-height:1.1">한빛택배 사칭이 의심됩니다.</span></div>
+<div style="background:#f4f2ec;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:15px;color:#666">이 주소가 실제로 가는 곳</div>
+<div style="font:15px 'IBM Plex Mono',monospace;word-break:break-all"><span style="color:#999;text-decoration:line-through">hanbit.example.</span><span style="font-weight:600;font-size:20px;background:oklch(0.9 0.08 25);padding:0 3px">account-check.test</span><span style="color:#999">/login</span></div>
+<div style="display:flex;gap:18px;font-size:14px"><span>↑ 공식처럼 보이는 앞부분 = 장식</span><span>↑ 진짜 주인</span></div>
+<div style="font-size:15px">공식 도메인: <span style="font-family:'IBM Plex Mono',monospace;font-size:13px">hanbit.example</span> — 일치하지 않음 ✗</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:15px;line-height:1.3">
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;padding:8px"><b>확인된 사실</b><br>· 실제 도메인 account-check.test<br>· 카드번호 입력란 있음</div>
+<div style="border:2px solid oklch(0.58 0.18 25);border-radius:6px;padding:8px"><b>의심 근거</b><br>· 서브도메인 위장<br>· 배송 안내인데 카드 요구</div>
+<div style="border:1.5px dashed #888;border-radius:6px;padding:8px;color:#666"><b>확인 못 함</b><br>· 발신번호 진위</div>
+</div>
+<div style="border:2px solid #2a2a2a;border-radius:6px;padding:10px;font-size:18px;font-weight:700">👉 공식 앱에서 배송 상태를 확인하세요.</div>
+<div style="display:flex;flex-direction:column;font-size:17px;border-top:1.5px solid #2a2a2a">
+<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #aaa">▸ 이동 경로 <span style="color:oklch(0.58 0.18 25);font-size:15px">차단 1건</span></div>
+<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #aaa">▸ 페이지가 요구하는 정보 <span style="font-size:15px;color:#666">3개</span></div>
+<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #aaa">▸ 에이전트 실행 기록 <span style="font-size:15px;color:#666">도구 3회</span></div>
+<div style="display:flex;justify-content:space-between;padding:6px 0">▸ 적용됐던 샌드박스 정책 <span style="font-size:15px;color:#666">제거됨 ✓</span></div>
+</div>
+</div>
+</div>
+<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:14px;flex-wrap:wrap;max-width:600px"><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:280px">"상세"는 아코디언 — 필요한 사람만 펼침</div><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(-1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:280px">주소 분해를 결과 한가운데 두면 E2·E3 설명이 한눈에</div></div></sc-if>
+</div>
+
+<!-- 1c -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>대화형 모바일 — 에이전트가 단계마다 말로 보고 (문자 받은 폰에서 바로)</div>
+<div class="dv-card" style="width:400px;padding:20px;background:#fbfaf6">
+<div style="border:2.5px solid #2a2a2a;border-radius:34px;background:#fff;padding:14px 14px 16px;display:flex;flex-direction:column;gap:10px;min-height:720px">
+<div style="width:90px;height:8px;background:#2a2a2a;border-radius:6px;align-self:center"></div>
+<div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px dashed #999;padding-bottom:6px"><span style="font-size:19px;font-weight:700">□ 서비스명</span><span style="font-size:14px">재생 ○</span></div>
+<div style="align-self:flex-end;max-width:80%;background:#2a2a2a;color:#fff;border-radius:14px 14px 2px 14px;padding:8px 10px;font:12px/1.45 'IBM Plex Mono',monospace">[한빛택배] 주소 불일치로 배송 보류. 수정: https://hanbit.example.account-check.test/login</div>
+<div style="max-width:85%;border:1.5px solid #2a2a2a;border-radius:14px 14px 14px 2px;padding:8px 10px;font-size:16px;line-height:1.3">✓ <b>한빛택배</b>를 자처하는 <b>배송</b> 안내예요.</div>
+<div style="max-width:85%;border:1.5px solid #2a2a2a;border-radius:14px 14px 14px 2px;padding:8px 10px;font-size:16px;line-height:1.3">✓ 주소의 진짜 주인은 <span style="background:oklch(0.9 0.08 25);font-family:'IBM Plex Mono',monospace;font-size:13px">account-check.test</span>예요. 공식 도메인이 아니에요.</div>
+<div style="max-width:85%;border:1.5px solid #2a2a2a;border-radius:14px 14px 14px 2px;padding:8px 10px;font-size:16px;line-height:1.3">✓ 격리된 곳에서 열어봤어요. 다른 사이트로 넘어가려는 걸 <b style="color:oklch(0.58 0.18 25)">막았어요</b>.</div>
+<div style="max-width:85%;border:1.5px dashed #888;border-radius:14px 14px 14px 2px;padding:8px 10px;font-size:16px;color:#888">··· 페이지를 살펴보는 중</div>
+<div style="border:2.5px solid oklch(0.58 0.18 25);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;margin-top:4px">
+<span style="align-self:flex-start;padding:1px 10px;border:2px solid oklch(0.58 0.18 25);color:oklch(0.58 0.18 25);font-weight:700;font-size:17px;transform:rotate(-2deg);border-radius:4px">사칭 의심</span>
+<div style="font-size:20px;font-weight:700;line-height:1.15">한빛택배 사칭이 의심됩니다.</div>
+<div style="font-size:15px;line-height:1.3">· 배송지 수정인데 카드번호를 요구해요<br>· 확인 못 함: 발신번호 진위</div>
+<div style="background:#2a2a2a;color:#fff;border-radius:8px;padding:8px;text-align:center;font-size:16px">공식 앱에서 배송 확인하기</div>
+<div style="text-align:center;font-size:15px;text-decoration:underline">근거 자세히 보기</div>
+</div>
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;gap:5px;overflow:hidden;font-size:13px;white-space:nowrap"><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">예시: 공식 사이트</span><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">유사 도메인</span><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">복제 화면</span></div>
+<div style="display:flex;gap:6px"><span style="flex:1;border:1.5px solid #2a2a2a;border-radius:18px;padding:6px 12px;font-size:15px;color:#999">문자나 링크 붙여넣기</span><span style="width:34px;height:34px;border-radius:50%;background:#2a2a2a;color:#fff;display:grid;place-items:center">↑</span></div>
+</div>
+</div>
+</div>
+<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:14px;flex-wrap:wrap;max-width:400px"><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(-1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:360px">60초 대기가 덜 지루함 — 단계 결과가 바로바로 보임. 단, 말풍선 문구는 코드가 정한 신호에서만 생성해야 함(F8)</div></div></sc-if>
+</div>
+
+<!-- 1d -->
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>관제 화면 — 왼쪽 판정, 오른쪽 샌드박스 실시간 (심사 데모용)</div>
+<div class="dv-card" style="width:1000px;padding:24px;background:#fbfaf6">
+<div style="border:2px solid #2a2a2a;border-radius:15px 225px 15px 255px/255px 15px 225px 15px;background:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:460px;overflow:hidden">
+<div style="padding:18px;display:flex;flex-direction:column;gap:12px;border-right:2px solid #2a2a2a">
+<div style="display:flex;justify-content:space-between"><span style="font-size:20px;font-weight:700">□ 서비스명</span><span style="font-size:14px;padding:1px 8px;border:1.5px solid #2a2a2a;border-radius:10px;background:#fff3a3">재생 모드 ON</span></div>
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;padding:8px;min-height:54px;font:12px/1.5 'IBM Plex Mono',monospace;color:#555">[한빛택배] 주소 불일치로 배송 보류. 수정: https://hanbit.example.account-check.test/login</div>
+<div style="display:flex;gap:6px;font-size:14px;flex-wrap:wrap"><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">E1</span><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">E2</span><span style="padding:1px 7px;border:1.5px solid #2a2a2a;border-radius:10px;background:#fff3a3">E3</span><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">E4</span><span style="padding:1px 7px;border:1.5px solid #888;border-radius:10px">E5</span><span style="margin-left:auto;padding:2px 14px;background:#2a2a2a;color:#fff;border-radius:5px;font-size:16px">조사</span></div>
+<div style="border-top:1.5px dashed #999"></div>
+<span style="align-self:flex-start;padding:2px 12px;border:2.5px solid oklch(0.58 0.18 25);color:oklch(0.58 0.18 25);font-weight:700;font-size:20px;transform:rotate(-2deg);border-radius:4px">사칭 의심</span>
+<div style="font-size:22px;font-weight:700">한빛택배 사칭이 의심됩니다.</div>
+<div style="font-size:16px;line-height:1.35">· 실제 도메인 account-check.test<br>· 서브도메인 위장 <span style="color:#888">(강)</span><br>· 배송 목적인데 카드 입력란 <span style="color:#888">(강)</span><br>· 다른 도메인으로 이동 차단됨 <span style="color:#888">(참고)</span></div>
+<div style="font-size:15px;color:#666">확인 못 함: 발신번호 진위</div>
+<div style="border:2px solid #2a2a2a;border-radius:6px;padding:8px;font-size:17px">👉 공식 앱에서 배송 상태를 확인하세요.</div>
+</div>
+<div style="padding:18px;background:#f4f2ec;display:flex;flex-direction:column;gap:12px">
+<div style="font-size:18px;font-weight:700">샌드박스 안에서 일어난 일</div>
+<div style="display:flex;align-items:center;gap:6px;font-size:15px">
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;padding:6px 8px;background:#fff">내 브라우저</div><span>→</span>
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;padding:6px 8px;background:#fff">서버<br><span style="font-size:12px;color:#666">접속 안 함</span></div><span>→</span>
+<div style="border:2.5px dashed #2a2a2a;border-radius:8px;padding:8px;background:#fff;display:flex;flex-direction:column;gap:4px">🔒 샌드박스<span style="font-size:12px;color:#666">에이전트 · 검사 스크립트</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+<div style="display:flex;align-items:center;gap:4px"><span>→</span><span style="border:1.5px solid #2a2a2a;border-radius:4px;padding:2px 5px;background:#fff">대상 host ✓</span></div>
+<div style="display:flex;align-items:center;gap:4px;color:oklch(0.58 0.18 25)"><span>⇢</span><span style="border:1.5px solid oklch(0.58 0.18 25);border-radius:4px;padding:2px 5px;background:#fff">collect-pay.test ⛔ 403</span></div>
+</div>
+</div>
+<div style="border:1.5px solid #2a2a2a;border-radius:6px;background:#fff;padding:10px;font:12px/1.7 'IBM Plex Mono',monospace;flex:1">
+<div>00:00 정책 적용 job-j_7f3a2c (GET·443/80·python3)</div>
+<div>00:03 record_claim → hanbit / delivery</div>
+<div>00:05 parse_url → account-check.test</div>
+<div>00:09 fetch 1 hanbit.example.account-check.test 302</div>
+<div style="color:oklch(0.58 0.18 25)">00:10 fetch 2 collect-pay.test BLOCKED 403</div>
+<div>00:12 inspect_page → card_number, card_cvc</div>
+<div>00:31 정책 제거 ✓</div>
+<div style="color:#999">00:41 설명 생성 · 검증 통과</div>
+</div>
+<div style="display:flex;gap:10px;font-size:14px"><span style="border:1.5px solid #2a2a2a;border-radius:10px;padding:1px 8px">도구: read · exec · exec</span><span style="border:1.5px solid #2a2a2a;border-radius:10px;padding:1px 8px">허용 외 도구 0</span><span style="border:1.5px solid #2a2a2a;border-radius:10px;padding:1px 8px">41초</span></div>
+</div>
+</div>
+</div>
+<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:14px;flex-wrap:wrap;max-width:1000px"><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:320px">"격리 실행이 눈에 보이는 화면"(PRD 2절)에 가장 직접적</div><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(-1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:320px">일반 사용자에겐 과함 → 오른쪽 패널 접기 토글 필요</div></div></sc-if>
+</div>
+
+<!-- 1e -->
+<div class="dv-opt" id="1e">
+<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>주장 vs 실제 대조표 — 차별점("주장하는 기관과 대조")을 결과 구조 자체로</div>
+<div class="dv-card" style="width:760px;padding:24px;background:#fbfaf6">
+<div style="border:2px solid #2a2a2a;border-radius:225px 15px 255px 15px/15px 255px 15px 225px;background:#fff;padding:20px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span style="padding:2px 12px;border:2.5px solid oklch(0.58 0.18 25);color:oklch(0.58 0.18 25);font-weight:700;font-size:20px;transform:rotate(-2deg);border-radius:4px">사칭 의심</span><span style="font-size:24px;font-weight:700">한빛택배 사칭이 의심됩니다.</span><span style="margin-left:auto;font-size:15px;text-decoration:underline">새 조사</span></div>
+<div style="display:grid;grid-template-columns:110px minmax(0,1fr) 40px minmax(0,1fr);font-size:16px;border-top:2px solid #2a2a2a">
+<div style="padding:8px 0;border-bottom:1.5px solid #2a2a2a;color:#666"></div>
+<div style="padding:8px;border-bottom:1.5px solid #2a2a2a;font-weight:700;font-size:18px">문자가 주장하는 것</div>
+<div style="border-bottom:1.5px solid #2a2a2a"></div>
+<div style="padding:8px;border-bottom:1.5px solid #2a2a2a;font-weight:700;font-size:18px">샌드박스에서 확인한 것</div>
+
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;color:#666">보낸 곳</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa">한빛택배</div>
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;text-align:center;color:#999">?</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa;color:#888">발신번호는 확인 못 함</div>
+
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;color:#666">주소</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa;font:13px 'IBM Plex Mono',monospace">hanbit.example <span style="font-family:'Gaegu';font-size:14px;color:#666">(공식)</span></div>
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;text-align:center;color:oklch(0.58 0.18 25);font-weight:700;font-size:20px">≠</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa;font:13px 'IBM Plex Mono',monospace;background:oklch(0.95 0.04 25)">account-check.test</div>
+
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;color:#666">목적</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa">배송지 수정</div>
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;text-align:center;color:oklch(0.58 0.18 25);font-weight:700;font-size:20px">≠</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa;background:oklch(0.95 0.04 25)">카드번호 · CVC 입력 요구</div>
+
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;color:#666">이동</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa;color:#888">—</div>
+<div style="padding:8px 0;border-bottom:1px dashed #aaa;text-align:center;color:#999">!</div>
+<div style="padding:8px;border-bottom:1px dashed #aaa">collect-pay.test로 이동 시도 → 차단</div>
+
+<div style="padding:8px 0;color:#666">기관 정책</div>
+<div style="padding:8px">"문자로 카드번호를 요구하지 않음"</div>
+<div style="padding:8px 0;text-align:center;color:oklch(0.58 0.18 25);font-weight:700;font-size:20px">≠</div>
+<div style="padding:8px;background:oklch(0.95 0.04 25)">카드번호 요구함</div>
+</div>
+<div style="display:flex;gap:12px;align-items:stretch;flex-wrap:wrap">
+<div style="flex:1;min-width:240px;border:2px solid #2a2a2a;border-radius:6px;padding:10px;font-size:18px;font-weight:700">👉 공식 앱에서 배송 상태를 확인하세요.</div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:2px;font-size:15px;text-decoration:underline"><span>이동 경로·기록 보기 ▸</span><span>입력 원문 보기 ▸</span></div>
+</div>
+</div>
+</div>
+<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:14px;flex-wrap:wrap;max-width:760px"><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(-1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:320px">E5(파트너 인증)는 "≈ 공식 파트너" 표시로 오탐 없이 설명 가능</div><div style="background:#fff3a3;padding:8px 12px;font-size:16px;transform:rotate(1deg);box-shadow:2px 2px 0 rgba(0,0,0,.08);max-width:320px">KB에 없는 기관이면 왼쪽 열이 비어 → "판단 불가" 설명과 자연스럽게 연결</div></div></sc-if>
+</div>
+
+</div>
+<p class="dv-next">Try next: "<a class="dv-oid" href="#1b">1b</a> 구조에 <a class="dv-oid" href="#1e">1e</a> 대조표 넣어줘" · "<a class="dv-oid" href="#1d">1d</a>로 5개 사례 판정(안전·주의·판단 불가) 화면 전부" · "<a class="dv-oid" href="#1c">1c</a> 모바일로 상세 화면까지"</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showNotes: this.props.showNotes ?? true };
+  }
+}
+</script>
+</body>
+</html>
