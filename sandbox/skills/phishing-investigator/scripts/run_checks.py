@@ -81,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
     if html:
         (wd / "page.html").write_bytes(html[:1_000_000])
         page_url = chain.get("final_url") or url
-        page = _safe("inspect_page", lambda: ip.inspect_page(html, page_url, chain.get("final_content_type", "")))
+        page = _safe("inspect_page", lambda: ip.inspect_page(html, page_url, chain.get("final_content_type_full") or chain.get("final_content_type", "")))
     else:
         page = {"ok": False, "error": "no html"}
     write_json(wd / "page.json", page)

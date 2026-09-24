@@ -11,6 +11,8 @@ from .kb import Entity
 from .verdict import CARD, CREDENTIAL_TYPES, PURPOSE_FORBIDDEN, VERDICT_LABELS, Outcome, order_fields
 
 _NAME_OK = re.compile(r"^[0-9A-Za-z가-힣 ·&.\-]{1,20}$")
+# 이름 안에 문장이 끝나는 자리(`… 합니다. 다음`)나 끝 부호가 있으면 이름이 홀로 문장이 될 수 있다
+_SENTENCE_BREAK = re.compile(r"[.!?…:;](?:\s|$)")
 
 LEVEL_LABEL = {"high": "많이 위험", "mid": "조금 위험", "info": "참고"}
 STRENGTH_TO_LEVEL = {"strong": "high", "mid": "mid", "info": "info"}
@@ -21,7 +23,9 @@ def sanitize_name(name: str | None) -> str | None:
     if not name:
         return None
     name = " ".join(name.split())
-    return name if _NAME_OK.match(name) else None
+    if not _NAME_OK.match(name) or _SENTENCE_BREAK.search(name):
+        return None
+    return name
 
 
 def verdict_label(outcome: Outcome) -> str:

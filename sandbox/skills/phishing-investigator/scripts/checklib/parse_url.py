@@ -142,6 +142,31 @@ _SCHEME_RE = re.compile(r"^([A-Za-z][A-Za-z0-9+.\-]*):")
 _STRIP_EDGE = "".join(chr(c) for c in range(0x21))  # 앞뒤의 C0 제어 문자와 공백
 
 
+_URL_PARTS = re.compile(r"^(https?)://([^/?#]*)([^?#]*)(\?[^#]*)?(#.*)?$", re.I | re.S)
+
+
+def _join(base: str, ref: str) -> str:
+    """http(s) 기준 주소에 상대 참조를 붙인다. 파이썬 `urljoin`과 달리 빈 경로 세그먼트(`a//b`)를 그대로 두고,
+    `?`만 있는 참조는 질의를 빈 값으로 바꾼다(WHATWG). 점 세그먼트는 호출하는 쪽의 정규화가 접는다."""
+    m = _URL_PARTS.match(base)
+    if not m:
+        return urljoin(base, ref)
+    scheme, auth, path, query, _frag = m.groups()
+    path = path or "/"
+    head = f"{scheme.lower()}://{auth}"
+    if ref == "":
+        return head + path + (query or "")
+    if ref.startswith("#"):
+        return head + path + (query or "") + ref
+    if ref.startswith("?"):
+        return head + path + ref
+    cut = min([i for i in (ref.find("?"), ref.find("#")) if i >= 0], default=len(ref))
+    rpath, tail = ref[:cut], ref[cut:]
+    if rpath.startswith("/"):
+        return head + rpath + tail
+    return head + path[: path.rfind("/") + 1] + rpath + tail
+
+
 def resolve_reference(base: str, ref: str) -> str:
     """브라우저(WHATWG)가 http(s) 문서에서 상대 주소를 푸는 방식으로 `ref`를 `base` 기준 절대 주소로 만든다.
 
@@ -158,12 +183,12 @@ def resolve_reference(base: str, ref: str) -> str:
             return ref
         rest = backslash_to_slash(ref[m.end():])
         if scheme == base_scheme and not rest.startswith("//"):
-            return urljoin(base, rest)  # `https:/x`·`https:x` 는 기준 문서에 대한 상대 경로다
+            return collapse_dot_segments(_join(base, rest))  # `https:/x`·`https:x` 는 기준 문서에 대한 상대 경로다
         return f"{scheme}://" + rest.lstrip("/")
     ref = backslash_to_slash(ref)
     if ref.startswith("//"):
         return f"{base_scheme}://" + ref.lstrip("/")
-    return urljoin(base, ref)
+    return collapse_dot_segments(_join(base, ref))
 
 
 def parse_url(url: str) -> dict:

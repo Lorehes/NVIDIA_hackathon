@@ -91,9 +91,11 @@ def _dynamic_values(payload: dict) -> list[str]:
 
 
 def _mask(text: str, values: list[str]) -> str:
+    """동적 값을 자리표시자로 바꾼다. 값이 끝 부호로 끝나면(`…합니다.`) 그 부호는 문장 경계이므로 남긴다."""
     text = _clean(text)
     for v in values:
-        text = re.sub(re.escape(v), _MASK, text, flags=re.I)
+        tail = v[len(v.rstrip(_TERMINAL)):]
+        text = re.sub(re.escape(v), lambda _m, t=tail: _MASK + t, text, flags=re.I)
     return text
 
 

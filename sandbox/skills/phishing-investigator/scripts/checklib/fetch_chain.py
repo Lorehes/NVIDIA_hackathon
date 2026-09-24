@@ -18,6 +18,7 @@ from .util import now_iso
 
 MAX_BODY = 1_000_000
 MAX_HOPS = 5
+MAX_CONTENT_TYPE = 4096  # 문자셋 선언이 뒤에 붙을 수 있으므로 표시용 100자와 별개로 충분히 보존한다
 TIMEOUT = 10.0
 MOBILE_UA = (
     "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -108,6 +109,8 @@ class HttpxFetcher:
             with self._client.stream("GET", url) as r:
                 # iter_bytes()는 압축을 푼 뒤의 조각을 돌려줘 한도를 넘는 메모리가 먼저 잡힐 수 있다(압축 폭탄).
                 # 원본 바이트를 직접 풀면서 출력 크기를 MAX_BODY로 막는다.
+                if len(r.headers.get("content-type", "")) > MAX_CONTENT_TYPE:  # 잘라서 charset을 놓치느니 실패로 처리한다
+                    raise FetchError("ContentTypeTooLong")
                 body, truncated = _read_bounded(r.iter_raw(), r.headers.get("content-encoding", ""))
                 return Response(r.status_code, r.headers.get("location"), body,
                                 r.headers.get("content-type", ""), truncated, r.headers.get("refresh"))
@@ -228,7 +231,8 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
         "tls": {"https": url.startswith("https://"), "verified": tls_verified},
         "html_saved": bool(html),
         "html_from_redirect": bool(html) and not got_final,
-        "final_content_type": final_type[:100],
+        "final_content_type": final_type[:100],  # 표시용
+        "final_content_type_full": final_type[:MAX_CONTENT_TYPE],  # 페이지 해석(문자셋)에 쓴다
         "body_truncated": truncated,
         "first_error": first_error,
     }

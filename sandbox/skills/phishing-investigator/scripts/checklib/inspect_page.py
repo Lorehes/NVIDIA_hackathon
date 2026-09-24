@@ -46,7 +46,10 @@ _JS_REDIRECT_RE = re.compile(
     r"|\b(?:window|self|top|parent|globalThis)\s*\.\s*open\s*\(|(?<![\w.$])open\s*\("
     r"|\bnavigate\s*\(|\bhistory\s*\.\s*(?:push|replace)State\s*\("
     r"|\beval\s*\(|\batob\s*\(|\bFunction\s*\(|\bunescape\s*\(|\bdocument\s*\.\s*write(?:ln)?\s*\("
-    r"|\bimport\b|\bimportScripts\b|\bexport\s*[*{]|\bWorker\s*\(|\.\s*click\s*\(|\bdispatchEvent\s*\("
+    r"|\bimport\b|\bimportScripts\b|\bexport\s*[*{]|\bWorker\s*\(|\.\s*click\b|\bdispatchEvent\s*\("
+    r"|\bcreateElement\s*\(\s*[\"'`]\s*(?:script|a|iframe|frame|form|object|embed|base|meta|link)\b"
+    r"|\.\s*(?:innerHTML|outerHTML)\s*=(?!=)|\binsertAdjacentHTML\b|\bcreateContextualFragment\b|\bDOMParser\b"
+    r"|\.\s*(?:src|href|data)\s*=(?!=)|\bsetAttribute\s*\(\s*[\"'`]\s*(?:src|href|action|formaction|data)\b"
     r"|\bfromCharCode\b|\bset(?:Timeout|Interval)\s*\(\s*[\"'`]|javascript\s*:"
     r"|\.\s*(?:action|formAction)\s*=(?!=)"
     r"|[\"'`]\s*\+\s*[\"'`]|\.\s*concat\s*\(\s*[\"'`]|\.\s*join\s*\(\s*[\"'`]{2}\s*\)|\$\{\s*[\"'`]"
@@ -57,7 +60,14 @@ _MAX_DEPTH = 3
 _MAX_DESTINATIONS = 20  # 폼 하나에서 따로 판단할 등록 도메인 수 상한(넘으면 overflow로 표시해 안전 판정에서 뺀다)
 _MAX_TITLE = 500  # 제목·브랜드 후보를 만들 때 보는 길이 상한
 _MAX_ACTIONS = 5000  # 폼 하나에서 훑는 전송 대상(action·formaction) 수 상한
-_RAW_TEXT = {"textarea", "title", "xmp", "iframe", "noembed", "noframes", "noscript", "template", "plaintext"}
+# 안의 태그를 브라우저가 요소로 읽지 않는 요소(RCDATA·RAWTEXT). 파서가 끝 태그까지를 글자로 읽게 한다.
+_CDATA_TAGS = {"textarea", "title", "xmp", "iframe", "noembed", "noframes", "noscript", "plaintext"}
+# 안의 태그가 문서에 효력을 주지 않는 요소(template의 내용은 비활성, select 안의 form은 무시된다)
+_RAW_TEXT = {"template", "select"}
+_VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr",
+         "param", "keygen"}
+_MAX_LABEL = 200  # 라벨·속성 문구를 분류할 때 보는 길이 상한
+_ACTIVE_ATTRS = ("src", "data", "href", "xlink:href", "codebase")  # 요소에 따라 실제로 쓰이는 속성이 다르므로 모두 본다
 
 
 def classify_field(attrs: dict, label_text: str = "") -> str:
@@ -76,8 +86,9 @@ def classify_field(attrs: dict, label_text: str = "") -> str:
     if typ == "tel":
         return "phone"
     hay = " ".join(
-        [attrs.get("name") or "", attrs.get("id") or "", attrs.get("placeholder") or "",
-         attrs.get("aria-label") or "", label_text or ""]
+        [(attrs.get("name") or "")[:_MAX_LABEL], (attrs.get("id") or "")[:_MAX_LABEL],
+         (attrs.get("placeholder") or "")[:_MAX_LABEL], (attrs.get("aria-label") or "")[:_MAX_LABEL],
+         (label_text or "")[:_MAX_LABEL]]
     ).lower()
     for ftype, words in _KEYWORDS:
         if any(w in hay for w in words):
@@ -152,20 +163,22 @@ class _PageParser(HTMLParser):
         for k, v in a.items():
             if k.lower().startswith("on") and v:
                 self.handler_text.append(v)
-        if tag == "base" and self.base_href is None and a.get("href"):
+        if tag == "base" and self.base_href is None and a.get("href") and self._raw is None:
             self.base_href = a["href"]
         if tag in ("script", "iframe", "frame", "embed", "object"):
-            src = a.get("src") or (a.get("data") if tag == "object" else "")
-            if tag == "script":  # SVG 안의 script는 href·xlink:href로 코드를 가져온다
-                src = src or a.get("href") or a.get("xlink:href") or ""
-            if src:
-                self.active_srcs.append(src)
+            # 어느 속성이 실제로 쓰이는지는 요소·네임스페이스(SVG script의 href 등)에 달렸으므로, 있는 것을 모두 본다.
+            # 한 속성에 무해한 값을 넣어 다른 속성의 외부 주소를 가리지 못하게 한다.
+            for attr in _ACTIVE_ATTRS:
+                if a.get(attr):
+                    self.active_srcs.append(a[attr])
         if a.get("srcdoc"):
             self.srcdocs.append(a["srcdoc"])
         if "formaction" in a or "form" in a or tag in ("input", "textarea", "select", "button"):
             self.controls.append({"parent": self._form, "form": a.get("form") if "form" in a else None,
                                   "formaction": a.get("formaction") if "formaction" in a else None,
                                   "item": None})
+        if tag in _CDATA_TAGS:
+            self._enter_text_mode(tag)
         if tag in _RAW_TEXT:
             if self._raw is None:
                 self._raw, self._raw_depth = tag, 1
@@ -205,6 +218,22 @@ class _PageParser(HTMLParser):
         elif tag == "style":
             self._in_style = True
 
+    def _enter_text_mode(self, tag: str) -> None:
+        """이 요소의 내용을 끝 태그까지 글자로 읽게 한다(브라우저와 같다). 자기 닫음 표기(`<textarea/>`)에도 같다."""
+        if self.cdata_elem is None:
+            try:
+                self.set_cdata_mode(tag)
+            except TypeError:  # 파이썬 버전에 따라 시그니처가 다르다
+                self.set_cdata_mode(tag, escapable=False)  # type: ignore[call-arg]
+
+    def handle_startendtag(self, tag: str, attrs_list) -> None:
+        """HTML은 void가 아닌 요소의 `/>`를 무시한다(`<form />`은 여는 태그다). 파이썬 기본 동작은 곧바로 닫는다."""
+        self.handle_starttag(tag, attrs_list)
+        if tag in _VOID:
+            self.handle_endtag(tag)
+        elif tag in ("script", "style"):
+            self._enter_text_mode(tag)
+
     def handle_endtag(self, tag: str) -> None:
         if self._raw is not None and tag == self._raw and tag != "plaintext":
             self._raw_depth -= 1
@@ -215,7 +244,7 @@ class _PageParser(HTMLParser):
         elif tag == "form" and self._raw is None:
             self._form = None
         elif tag == "label":
-            text = " ".join("".join(self._label_buf).split())
+            text = " ".join("".join(self._label_buf).split())[:_MAX_LABEL]
             if self._label_for:
                 self.label_for[self._label_for] = text
             for it in self._pending_wrapped_inputs:
@@ -235,8 +264,8 @@ class _PageParser(HTMLParser):
             return
         if self._in_style:
             return
-        if self._in_label:
-            self._label_buf.append(data)
+        if self._in_label and sum(map(len, self._label_buf)) < _MAX_LABEL * 2:
+            self._label_buf.append(data[:_MAX_LABEL * 2])
         s = " ".join(data.split())
         if s:
             self.text_nodes.append(s)
@@ -301,35 +330,162 @@ _ENCODINGS: dict[str, str] = {
 # 브라우저에서 본문이 사라지는 "replacement" 인코딩. 마크업으로 읽을 수 없다.
 _REPLACEMENT = {"csiso2022kr", "hz-gb-2312", "iso-2022-cn", "iso-2022-cn-ext", "iso-2022-kr", "replacement"}
 _BOMS = [(codecs.BOM_UTF8, "utf-8"), (codecs.BOM_UTF16_LE, "utf-16-le"), (codecs.BOM_UTF16_BE, "utf-16-be")]
-_META_TAG = re.compile(rb"<meta\b([^>]*)>", re.I)
-_META_ATTR = re.compile(rb"([^\s=/>\"']+)\s*(?:=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s\"'>]+)))?")
-_CHARSET_PARAM = re.compile(rb"charset\s*=\s*[\"']?([^\s;\"']+)", re.I)
+_WS = b" \t\n\x0c\r"
+_CHARSET_PARAM = re.compile(rb"charset", re.I)
+
+
+def _mime_params(content_type: str) -> dict[str, str]:
+    """Content-Type의 매개변수(WHATWG MIME 파싱): 따옴표 문자열과 이스케이프를 인정하고 같은 이름은 첫 값만 쓴다.
+    홑따옴표는 따옴표가 아니다."""
+    s = content_type or ""
+    n = len(s)
+    i = s.find(";")
+    params: dict[str, str] = {}
+    if i < 0:
+        return params
+    i += 1
+    while i < n:
+        while i < n and s[i] in " \t;":
+            i += 1
+        j = i
+        while j < n and s[j] not in ";=":
+            j += 1
+        name = s[i:j].strip(" \t").lower()
+        i = j
+        if i >= n or s[i] == ";":
+            continue
+        i += 1  # '='
+        if i < n and s[i] == '"':
+            i += 1
+            val: list[str] = []
+            while i < n and s[i] != '"':
+                if s[i] == "\\" and i + 1 < n:
+                    i += 1
+                val.append(s[i])
+                i += 1
+            i += 1
+            while i < n and s[i] != ";":  # 닫는 따옴표 뒤의 나머지는 버린다
+                i += 1
+            value = "".join(val)
+        else:
+            j = i
+            while j < n and s[j] != ";":
+                j += 1
+            value = s[i:j].strip(" \t")
+            i = j
+            if not value:
+                continue
+        if name and name not in params:
+            params[name] = value
+    return params
 
 
 def _content_type_charset(content_type: str) -> str | None:
-    """Content-Type의 매개변수 중 이름이 정확히 `charset`인 것(`xcharset=`은 매개변수가 아니다)."""
-    for param in (content_type or "").split(";")[1:]:
-        key, sep, val = param.partition("=")
-        if sep and key.strip().lower() == "charset":
-            return val.strip().strip("\"'") or None
+    return _mime_params(content_type).get("charset") or None
+
+
+def _read_attrs(chunk: bytes, i: int) -> tuple[dict[bytes, bytes], int]:
+    """HTML 인코딩 사전 검사의 속성 읽기. (첫 값 우선의 속성들, `>` 다음 위치)."""
+    n = len(chunk)
+    attrs: dict[bytes, bytes] = {}
+    while i < n:
+        while i < n and chunk[i] in b" \t\n\x0c\r/":
+            i += 1
+        if i >= n:
+            break
+        if chunk[i:i + 1] == b">":
+            return attrs, i + 1
+        j = i
+        while j < n and chunk[j] not in b" \t\n\x0c\r=/>":
+            j += 1
+        name = chunk[i:j].lower()
+        i = j
+        while i < n and chunk[i] in _WS:
+            i += 1
+        val = b""
+        if i < n and chunk[i:i + 1] == b"=":
+            i += 1
+            while i < n and chunk[i] in _WS:
+                i += 1
+            if i < n and chunk[i:i + 1] in (b'"', b"'"):
+                q = chunk[i:i + 1]
+                k = chunk.find(q, i + 1)
+                if k < 0:
+                    return attrs, n
+                val, i = chunk[i + 1:k], k + 1
+            else:
+                k = i
+                while k < n and chunk[k] not in b" \t\n\x0c\r>":
+                    k += 1
+                val, i = chunk[i:k], k
+        if name and name not in attrs:
+            attrs[name] = val
+    return attrs, n
+
+
+def _known_label(label: str) -> bool:
+    key = label.strip().lower()
+    return key in _ENCODINGS or key in _REPLACEMENT
+
+
+def _pragma_charset(content: bytes) -> str | None:
+    """`text/html; charset=euc-kr` 형태의 content에서 charset 값을 뽑는다(HTML 명세의 알고리즘)."""
+    for m in _CHARSET_PARAM.finditer(content):
+        i = m.end()
+        while i < len(content) and content[i] in _WS:
+            i += 1
+        if content[i:i + 1] != b"=":
+            continue
+        i += 1
+        while i < len(content) and content[i] in _WS:
+            i += 1
+        if content[i:i + 1] in (b'"', b"'"):
+            q = content[i:i + 1]
+            k = content.find(q, i + 1)
+            return content[i + 1:k].decode("ascii", "ignore") if k >= 0 else None
+        k = i
+        while k < len(content) and content[k] not in b" \t\n\x0c\r;":
+            k += 1
+        return content[i:k].decode("ascii", "ignore")
+    return None
+
+
+def _prescan(chunk: bytes) -> str | None:
+    """HTML 인코딩 사전 검사: 앞 1024바이트에서 주석을 건너뛰고 <meta>의 선언을 찾는다.
+    모르는 이름이면 그 선언은 무시하고 다음 선언을 계속 찾는다."""
+    n = len(chunk)
+    i = 0
+    while i < n:
+        if chunk.startswith(b"<!--", i):
+            j = chunk.find(b"-->", i + 2)
+            if j < 0:
+                return None
+            i = j + 3
+        elif chunk[i:i + 5].lower() == b"<meta" and chunk[i + 5:i + 6] and chunk[i + 5:i + 6] in b" \t\n\x0c\r/":
+            attrs, i = _read_attrs(chunk, i + 5)
+            cands = []
+            if attrs.get(b"charset"):
+                cands.append(attrs[b"charset"].decode("ascii", "ignore"))
+            if attrs.get(b"http-equiv", b"").lower() == b"content-type" and b"content" in attrs:
+                cands.append(_pragma_charset(attrs[b"content"]) or "")
+            for c in cands:
+                if c and _known_label(c):
+                    return c
+        elif re.match(rb"</?[A-Za-z]", chunk[i:i + 3]):
+            j = i + 1
+            while j < n and chunk[j] not in b" \t\n\x0c\r>":
+                j += 1
+            _, i = _read_attrs(chunk, j)
+        elif chunk[i:i + 2] in (b"<!", b"</", b"<?"):
+            j = chunk.find(b">", i)
+            i = n if j < 0 else j + 1
+        else:
+            i += 1
     return None
 
 
 def _meta_charset(chunk: bytes) -> str | None:
-    """앞 1024바이트의 <meta>에서 `charset` 속성, 또는 http-equiv=content-type의 content 안 charset 매개변수."""
-    for m in _META_TAG.finditer(chunk):
-        attrs: dict[bytes, bytes] = {}
-        for am in _META_ATTR.finditer(m.group(1)):
-            name = am.group(1).lower()
-            if name not in attrs:  # 중복 속성은 첫 값
-                attrs[name] = am.group(2) or am.group(3) or am.group(4) or b""
-        if b"charset" in attrs and attrs[b"charset"]:
-            return attrs[b"charset"].decode("ascii", "ignore")
-        if attrs.get(b"http-equiv", b"").lower() == b"content-type":
-            cm = _CHARSET_PARAM.search(attrs.get(b"content", b""))
-            if cm:
-                return cm.group(1).decode("ascii", "ignore")
-    return None
+    return _prescan(chunk)
 
 
 def _declared_charsets(html_bytes: bytes, content_type: str) -> list[tuple[str, str]]:
@@ -338,10 +494,50 @@ def _declared_charsets(html_bytes: bytes, content_type: str) -> list[tuple[str, 
     h = _content_type_charset(content_type)
     if h:
         out.append(("header", h))
-    m = _meta_charset(html_bytes[:1024])
+    m = _prescan(html_bytes[:1024])
     if m:
         out.append(("meta", m))
     return out
+
+
+def _decode_iso2022jp(data: bytes) -> str:
+    """WHATWG ISO-2022-JP 디코더의 상태(ASCII·Roman·Katakana·JIS X 0208)를 따른다. 파이썬 코덱은 Katakana 상태(ESC ( I)를
+    몰라서 마크업이 보이는 위치가 달라진다. 마크업 판단에 필요한 만큼만 구현한다: ASCII·Roman 상태의 바이트만 글자가 된다."""
+    out: list[str] = []
+    state = "ascii"
+    i, n = 0, len(data)
+    while i < n:
+        b = data[i]
+        if b == 0x1B:
+            if data[i + 1:i + 3] == b"(B":
+                state, i = "ascii", i + 3
+            elif data[i + 1:i + 3] == b"(J":
+                state, i = "roman", i + 3
+            elif data[i + 1:i + 3] == b"(I":
+                state, i = "katakana", i + 3
+            elif data[i + 1:i + 3] in (b"$@", b"$B"):
+                state, i = "jis0208", i + 3
+            else:
+                out.append("\ufffd")
+                i += 1
+            continue
+        if b >= 0x80 or b in (0x0E, 0x0F):
+            out.append("\ufffd")
+            i += 1
+        elif state in ("ascii", "roman"):
+            out.append(chr(b))
+            i += 1
+        elif state == "katakana":
+            out.append(chr(0xFF61 + b - 0x21) if 0x21 <= b <= 0x5F else "\ufffd")
+            i += 1
+        else:  # jis0208: 두 바이트가 한 글자다
+            if 0x21 <= b <= 0x7E and i + 1 < n and 0x21 <= data[i + 1] <= 0x7E:
+                out.append(bytes([b | 0x80, data[i + 1] | 0x80]).decode("euc_jp", errors="replace"))
+                i += 2
+            else:
+                out.append("\ufffd")
+                i += 1
+    return "".join(out)
 
 
 def _decode(html_bytes: bytes, content_type: str = "") -> str | None:
@@ -364,7 +560,7 @@ def _decode(html_bytes: bytes, content_type: str = "") -> str | None:
                 continue
             if source == "meta" and codec.startswith("utf-16"):
                 codec = "utf-8"  # meta로 선언한 UTF-16은 UTF-8로 취급한다
-            text = html_bytes.decode(codec, errors="replace")
+            text = _decode_iso2022jp(html_bytes) if codec == "iso2022_jp" else html_bytes.decode(codec, errors="replace")
             break
     if text is None:
         try:
@@ -373,6 +569,11 @@ def _decode(html_bytes: bytes, content_type: str = "") -> str | None:
             text = html_bytes.decode("cp949", errors="replace")
     # 태그가 하나도 안 보이거나 NUL이 섞여 있으면 해석에 실패한 것이다(분석 결과를 믿지 않는다)
     return text if "<" in text and "\x00" not in text else None
+
+
+def _norm_href(h: str) -> str:
+    """브라우저는 주소의 탭·줄바꿈을 지우고 앞뒤 공백·제어 문자를 뗀다(`java&#9;script:`도 javascript:다)."""
+    return re.sub(r"[\t\r\n]", "", h).strip("".join(chr(c) for c in range(0x21)))
 
 
 def _resolve(base: str, ref: str) -> str:
@@ -501,7 +702,7 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
     meta_refresh = any((m.get("http-equiv") or "").lower() == "refresh" for d, _ in docs for m in d.metas)
     js_hint = (meta_refresh
                or _js_redirect_hint([t for d, _ in docs for t in d.script_text + d.handler_text])
-               or any(h.strip().lower().startswith("javascript:") for d, _ in docs for h in d.links))
+               or any(_norm_href(h).lower().startswith("javascript:") for d, _ in docs for h in d.links))
 
     # 다른 도메인의 코드·문서를 끌어오는 요소. 실행하지 않으므로 무엇을 하는지 알 수 없다(판정에서 안전 불가 사유).
     ext: list[str] = []

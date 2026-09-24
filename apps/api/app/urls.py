@@ -53,10 +53,12 @@ def _cut_by_delimiter(text: str, m: "re.Match[str]") -> bool:
     if m.end() >= len(text):
         return False
     nxt = text[m.end()]
-    if nxt.isspace():
+    if nxt in " \n\r":  # 문자에서 주소를 끝내는 보통의 구분자
         return False
+    # 탭·줄 바꿈이 아닌 다른 공백(NBSP, 전각 공백 등)은 브라우저가 주소 안에 남기거나(퍼센트 인코딩) 지우므로
+    # 정규식이 거기서 끊은 것은 잘림이다. 아래 짝 검사로 넘긴다.
     opener = text[m.start() - 1] if m.start() > 0 else ""
-    return _CLOSERS.get(opener) != nxt
+    return nxt.isspace() or _CLOSERS.get(opener) != nxt
 
 
 def trimmed_urls(text: str) -> set[str]:
