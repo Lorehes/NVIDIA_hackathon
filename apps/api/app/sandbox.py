@@ -122,8 +122,64 @@ def render_preset(job_id: str, host: str) -> str:
     return text.replace("<job_id>", job_id).replace("<target_host>", host)
 
 
+# ══ 호스트 작업 폴더 ═══════════════════════════════════════════════════
+class _LocalDirs:
+    """호스트의 `<workdir>/<job_id>` 폴더(문자 원문·내려받은 페이지)를 남기지 않기 위한 공통 처리.
+
+    지우지 못한 폴더는 그대로 남아 있으므로 폴더 목록을 훑어서 다시 지운다(비정상 종료로 남은 폴더도 같은 방법으로
+    찾는다). 진행 중인 작업의 폴더는 건드리지 않도록 작업 ID를 `_active`에 둔다."""
+
+    workdir: Path
+
+    def _init_local(self) -> None:
+        self._local_lock = threading.Lock()
+        self._active: set[str] = set()
+
+    def _begin_local(self, job_id: str) -> None:
+        with self._local_lock:
+            self._active.add(job_id)
+
+    def _end_local(self, job_id: str) -> bool:
+        """작업이 끝났다. 폴더를 지우고 정말 없어졌는지 돌려준다(못 지웠으면 다음 정리 때 다시 지운다)."""
+        with self._local_lock:
+            self._active.discard(job_id)
+            return _rmtree_strict(self.workdir / job_id, job_id)
+
+    def _leftover_dirs(self) -> list[Path]:
+        try:
+            return [c for c in self.workdir.iterdir() if c.is_dir() and _JOB_ID_RE.fullmatch(c.name)]
+        except OSError:
+            return []
+
+    def reconcile_local(self) -> int:
+        """진행 중이 아닌 작업 폴더를 모두 지운다. 지우지 못한 폴더 수를 돌려준다."""
+        failed = 0
+        for child in self._leftover_dirs():
+            with self._local_lock:
+                if child.name in self._active:
+                    continue
+                if not _rmtree_strict(child, child.name):
+                    failed += 1
+        return failed
+
+    def pending_local(self) -> int:
+        with self._local_lock:
+            return sum(1 for c in self._leftover_dirs() if c.name not in self._active)
+
+
+def _rmtree_strict(path: Path, job_id: str) -> bool:
+    """폴더를 지우고 정말 사라졌는지 확인한다. 실패하면 로그를 남기고 False."""
+    try:
+        shutil.rmtree(path)
+    except FileNotFoundError:
+        return True
+    except OSError as e:
+        log.error("could not remove work dir of %s: %s", job_id, type(e).__name__)
+    return not path.exists()
+
+
 # ══ OpenShell ════════════════════════════════════════════════════════
-class OpenShellSandbox:
+class OpenShellSandbox(_LocalDirs):
     kind = "openshell"
 
     def __init__(self, runner: Runner = default_runner, name: str | None = None, workdir: Path | None = None):
@@ -136,6 +192,9 @@ class OpenShellSandbox:
         self._purge_lock = threading.Lock()
         self._pending_file = self.workdir / ".pending_purge.json"
         self._pending_purge: set[str] = self._load_pending()
+        # 시작할 때 샌드박스 안의 작업 폴더 목록을 확인했는가. 확인하지 못하면 남은 자료가 있는지 모르므로 재사용하지 않는다(R3-14).
+        self._remote_reconciled = False
+        self._init_local()
 
     def _list_policies(self) -> list[str] | None:
         """현재 적용된 조사용 정책 이름. 조회하지 못하면 None(상태를 모른다는 뜻)."""
@@ -173,7 +232,8 @@ class OpenShellSandbox:
     def prepare(self) -> list[str]:
         removed, clean = self._sweep()
         self.quarantined = not clean
-        self._reconcile_remote()
+        self._remote_reconciled = False
+        self.retry_pending()
         return removed
 
     def health(self) -> dict:
@@ -186,7 +246,9 @@ class OpenShellSandbox:
                 out[key] = {"ok": False, "text": str(e)[:200]}
         out["sandbox"]["quarantined"] = self.quarantined
         out["sandbox"]["pending_purge"] = len(self._pending_purge)
-        if self._pending_purge:
+        out["sandbox"]["pending_local"] = self.pending_local()
+        out["sandbox"]["remote_reconciled"] = self._remote_reconciled
+        if self._pending_purge or not self._remote_reconciled or out["sandbox"]["pending_local"]:
             out["sandbox"]["ok"] = False
         if self.quarantined:
             out["sandbox"]["ok"] = False
@@ -198,10 +260,11 @@ class OpenShellSandbox:
     def investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
                     on_stage: Callable[[str], None] = lambda s: None) -> RunResult:
         touched: list[bool] = []  # 샌드박스로 업로드를 시도했는가(시도했다면 부분 업로드도 지운다)
+        self._begin_local(job_id)
         try:
             return self._investigate(job_id, input_payload, target_host, fetch_allowed, on_stage, touched)
         finally:  # 어떤 경로로 끝나도 호스트와 샌드박스의 작업 폴더(문자 원문 포함)를 남기지 않는다
-            shutil.rmtree(self.workdir / job_id, ignore_errors=True)
+            self._end_local(job_id)  # 못 지운 폴더는 남아 있으므로 다음 정리(reconcile_local)가 다시 지운다
             if touched:
                 self._purge_remote(job_id)
 
@@ -209,7 +272,8 @@ class OpenShellSandbox:
                      on_stage: Callable[[str], None], touched: list[bool]) -> RunResult:
         res = RunResult(policy_name=f"job-{job_id}")
         self.retry_pending()
-        if self._pending_purge:  # 이전 조사 자료(문자 원문)가 샌드박스에 남아 있다: 지운 것을 확인하기 전에는 재사용하지 않는다
+        if self._pending_purge or not self._remote_reconciled:
+            # 이전 조사 자료(문자 원문)가 샌드박스에 남아 있거나 남았는지 확인하지 못했다: 확인하기 전에는 재사용하지 않는다
             res.incomplete = "sandbox_unsafe"
             return res
         if self.quarantined:  # 이전 조사의 정책이 남았을 수 있다: 정리를 확인한 뒤에만 다시 연다
@@ -333,24 +397,32 @@ class OpenShellSandbox:
         return ok
 
     def retry_pending(self) -> None:
-        """지우지 못한 작업 폴더를 다시 지운다. 조사 시작 전과 주기 작업(요청이 없을 때)에서 부른다."""
+        """정리하지 못한 것을 다시 정리한다. 조사 시작 전과 주기 작업(요청이 없을 때)에서 부른다.
+
+        샌드박스 안의 작업 폴더 목록을 아직 확인하지 못했다면 그것부터 다시 시도한다."""
+        if not self._remote_reconciled:
+            self._remote_reconciled = self._reconcile_remote()
         with self._purge_lock:
             todo = list(self._pending_purge)
         for job_id in todo:
             self._purge_remote(job_id)
+        self.reconcile_local()
 
-    def _reconcile_remote(self) -> None:
-        """시작할 때 샌드박스에 남은 작업 폴더를 찾아 지운다(이전 실행이 비정상 종료한 경우)."""
+    def _reconcile_remote(self) -> bool:
+        """샌드박스에 남은 작업 폴더를 찾아 지운다(이전 실행이 비정상 종료한 경우). 목록을 확인했을 때만 True.
+
+        폴더가 아예 없는 것은 정상(빈 목록)이고, 명령이 실패해 목록을 못 얻은 것은 확인하지 못한 것이다."""
         try:
-            r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "ls", "-1", "/sandbox/work"], 30)
+            r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "sh", "-c",
+                          "if [ -d /sandbox/work ]; then ls -1 /sandbox/work; fi"], 30)
         except Exception:  # noqa: BLE001
-            return
+            return False
         if r.returncode != 0:
-            return
+            return False
         for name in r.stdout.split():
             if _JOB_ID_RE.fullmatch(name):
                 self._purge_remote(name)
-        self.retry_pending()
+        return True
 
     def explain(self, job_id: str, payload: dict) -> dict | None:
         if self.quarantined:  # 정책이 남았을 수 있는 샌드박스에서는 에이전트를 더 실행하지 않는다(템플릿 설명 사용)
@@ -452,7 +524,7 @@ def _forced_incomplete() -> dict[str, str]:
     return out
 
 
-class LocalSandbox:
+class LocalSandbox(_LocalDirs):
     """개발용 흉내. 실제 격리는 없으므로 네트워크에 접속하지 않고 픽스처만 읽는다."""
 
     kind = "local-sim"
@@ -462,9 +534,14 @@ class LocalSandbox:
         self.fixtures = Path(fixtures_dir or settings.fixtures_dir)
         self.workdir = Path(workdir or settings.work_dir)
         self.force = {**_forced_incomplete(), **(force_incomplete or {})}
+        self._init_local()
 
     def prepare(self) -> list[str]:
+        self.reconcile_local()  # 이전 실행이 비정상 종료해 남긴 작업 폴더
         return []
+
+    def retry_pending(self) -> None:
+        self.reconcile_local()
 
     def health(self) -> dict:
         return {"sandbox": {"ok": True, "text": "local-sim (개발용 흉내, 격리 없음)"},
@@ -477,6 +554,14 @@ class LocalSandbox:
 
     def investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
                     on_stage: Callable[[str], None] = lambda s: None) -> RunResult:
+        self._begin_local(job_id)
+        try:
+            return self._investigate(job_id, input_payload, target_host, fetch_allowed, on_stage)
+        finally:  # 예외로 끝나도 문자 원문이 든 폴더를 남기지 않는다
+            self._end_local(job_id)
+
+    def _investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
+                     on_stage: Callable[[str], None]) -> RunResult:
         res = RunResult(policy_name=f"job-{job_id}")
         root = self.workdir
         jd = root / job_id
@@ -531,7 +616,6 @@ class LocalSandbox:
         res.files = _read_files(jd)
         _add_blocked_events(res)
         _finish_agent_marks(res)
-        shutil.rmtree(jd, ignore_errors=True)
         return res
 
     def explain(self, job_id: str, payload: dict) -> dict | None:

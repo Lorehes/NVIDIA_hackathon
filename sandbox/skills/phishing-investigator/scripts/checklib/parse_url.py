@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import ipaddress
 import re
-from urllib.parse import parse_qsl, urlsplit
+from urllib.parse import parse_qsl, urljoin, urlsplit
 
 # tldextract가 없을 때 쓰는 다단계 공개 접미사(자주 쓰는 것만)
 _FALLBACK_MULTI_SUFFIXES = {
@@ -101,6 +101,34 @@ def normalize_url(url: str) -> tuple[str, bool]:
     if _HTTP_SCHEME.match(fixed) or "://" not in fixed:
         fixed = backslash_to_slash(fixed)
     return fixed, fixed != s
+
+
+_SCHEME_RE = re.compile(r"^([A-Za-z][A-Za-z0-9+.\-]*):")
+_STRIP_EDGE = "".join(chr(c) for c in range(0x21))  # 앞뒤의 C0 제어 문자와 공백
+
+
+def resolve_reference(base: str, ref: str) -> str:
+    """브라우저(WHATWG)가 http(s) 문서에서 상대 주소를 푸는 방식으로 `ref`를 `base` 기준 절대 주소로 만든다.
+
+    파이썬 `urljoin`은 `////evil.test`를 경로로, `http:evil.test`를 호스트 없는 주소로 읽지만 브라우저는 둘 다
+    다른 호스트로 이동한다. 슬래시·백슬래시는 몇 개가 이어져도 권한(authority) 시작으로 읽고, 스킴이 붙은 주소는
+    기준과 스킴이 같을 때만 상대 경로가 될 수 있다. http(s)가 아닌 스킴(javascript:·data: 등)은 그대로 돌려준다.
+    """
+    ref = _DROP_CHARS.sub("", (ref or "").strip(_STRIP_EDGE))
+    base_scheme = (urlsplit(base).scheme or "https").lower()
+    m = _SCHEME_RE.match(ref)
+    if m:
+        scheme = m.group(1).lower()
+        if scheme not in ("http", "https"):
+            return ref
+        rest = backslash_to_slash(ref[m.end():])
+        if scheme == base_scheme and not rest.startswith("//"):
+            return urljoin(base, rest)  # `https:/x`·`https:x` 는 기준 문서에 대한 상대 경로다
+        return f"{scheme}://" + rest.lstrip("/")
+    ref = backslash_to_slash(ref)
+    if ref.startswith("//"):
+        return f"{base_scheme}://" + ref.lstrip("/")
+    return urljoin(base, ref)
 
 
 def parse_url(url: str) -> dict:

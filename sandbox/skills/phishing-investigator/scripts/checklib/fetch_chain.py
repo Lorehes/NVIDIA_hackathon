@@ -7,12 +7,13 @@
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import zlib
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urlsplit
 
-from .parse_url import backslash_to_slash, normalize_url, parse_url
+from .parse_url import normalize_url, parse_url, resolve_reference
 from .util import now_iso
 
 MAX_BODY = 1_000_000
@@ -34,9 +35,10 @@ class FetchError(Exception):
 
 class Response:
     def __init__(self, status: int, location: str | None = None, body: bytes = b"",
-                 content_type: str = "text/html", truncated: bool = False):
+                 content_type: str = "text/html", truncated: bool = False, refresh: str | None = None):
         self.status, self.location, self.body, self.content_type = status, location, body, content_type
         self.truncated = truncated  # 본문이 한도(MAX_BODY)에서 잘렸는가
+        self.refresh = refresh  # HTTP `Refresh` 헤더(브라우저가 지연 이동에 쓴다)
 
 
 # ── 실제 네트워크 ────────────────────────────────────────────────
@@ -52,7 +54,11 @@ def _decoder(encoding: str):
 
 
 def _read_bounded(chunks, encoding: str = "") -> tuple[bytes, bool]:
-    """원본 조각을 읽어 (본문, 잘렸는가)를 돌려준다. 입력·출력 모두 MAX_BODY를 넘지 않게 자른다."""
+    """원본 조각을 읽어 (본문, 잘렸는가)를 돌려준다. 입력·출력 모두 MAX_BODY를 넘지 않게 자른다.
+
+    압축은 스트림 하나가 끝난 뒤에 데이터가 더 붙어 있으면(이어 붙인 gzip 멤버 등) 오류로 처리한다. 브라우저마다
+    뒤 멤버를 푸는지 달라서, 검사기가 본 앞부분과 브라우저가 보는 본문이 다를 수 있기 때문이다.
+    스트림이 끝나지 않고 입력이 끊기면 본문이 다 오지 않은 것이므로 잘린 것으로 표시한다."""
     dec = _decoder(encoding)
     out = bytearray()
     raw_total = 0
@@ -66,6 +72,8 @@ def _read_bounded(chunks, encoding: str = "") -> tuple[bytes, bool]:
             if len(chunk) > room or len(out) >= MAX_BODY:
                 return bytes(out), True
             continue
+        if dec.eof and chunk:
+            raise FetchError("DecodeError: trailing data after compressed stream")
         data = chunk
         while data:
             room = MAX_BODY - len(out)
@@ -75,9 +83,13 @@ def _read_bounded(chunks, encoding: str = "") -> tuple[bytes, bool]:
                 out += dec.decompress(data, room)
             except zlib.error as e:
                 raise FetchError(f"DecodeError: {e}"[:200]) from e
+            if dec.eof and dec.unused_data:
+                raise FetchError("DecodeError: trailing data after compressed stream")
             data = dec.unconsumed_tail  # 출력 한도 때문에 남은 입력
             if len(out) >= MAX_BODY and (data or not dec.eof):
                 return bytes(out), True
+    if dec is not None and not dec.eof:
+        return bytes(out), True  # 압축 스트림이 끝나기 전에 끊겼다
     return bytes(out), False
 
 
@@ -98,7 +110,7 @@ class HttpxFetcher:
                 # 원본 바이트를 직접 풀면서 출력 크기를 MAX_BODY로 막는다.
                 body, truncated = _read_bounded(r.iter_raw(), r.headers.get("content-encoding", ""))
                 return Response(r.status_code, r.headers.get("location"), body,
-                                r.headers.get("content-type", ""), truncated)
+                                r.headers.get("content-type", ""), truncated, r.headers.get("refresh"))
         except httpx.ProxyError as e:
             raise Blocked(str(e)) from e
         except httpx.HTTPError as e:
@@ -134,13 +146,20 @@ class FixtureFetcher:
             body = (self.dir / rec["file"]).read_bytes()[:MAX_BODY]
         if rec.get("timeout"):
             raise FetchError("ReadTimeout")
-        return Response(int(rec.get("status", 200)), rec.get("location"), body, "text/html")
+        return Response(int(rec.get("status", 200)), rec.get("location"), body, "text/html",
+                        refresh=rec.get("refresh"))
 
     def close(self) -> None:
         pass
 
 
 # ── 추적 본체 ────────────────────────────────────────────────────
+def _refresh_navigates(value: str | None) -> bool:
+    """`Refresh` 헤더가 숫자(제자리 새로고침)가 아닌 내용을 담고 있으면 다른 주소로 이동시킬 수 있다고 본다."""
+    v = (value or "").strip()
+    return bool(v) and not v.replace(".", "", 1).isdigit()
+
+
 def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, bytes]:
     chain: list[dict] = []
     html = b""
@@ -156,6 +175,7 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
         p = parse_url(current)
         entry = {
             "url": current[:500],
+            "url_sha256": hashlib.sha256(current.encode("utf-8", "surrogatepass")).hexdigest(),  # 표시용으로 자르기 전의 전체 주소
             "host": p.get("host_ascii", ""),
             "registrable_domain": p.get("registrable_domain", ""),
             "status": None, "blocked": False, "error": None, "at": now_iso(),
@@ -176,6 +196,7 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
             break
 
         entry["status"] = resp.status
+        entry["refresh"] = _refresh_navigates(resp.refresh)  # `Refresh` 헤더가 다른 주소로의 지연 이동일 수 있는가
         if current.startswith("https://") and tls_verified is None:
             tls_verified = True
         if 300 <= resp.status < 400 and resp.location:
@@ -184,7 +205,7 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
                 redirect_html, redirect_truncated = resp.body, resp.truncated
             else:
                 redirect_html, redirect_truncated = b"", False
-            current, _ = normalize_url(urljoin(current, backslash_to_slash(resp.location)))
+            current, _ = normalize_url(resolve_reference(current, resp.location))
             continue
         got_final = True
         final_type = resp.content_type or ""

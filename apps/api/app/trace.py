@@ -139,12 +139,12 @@ def page_trace(page: dict | None, outcome: Outcome, entity: Entity | None, actua
 
     cross = next((f for f in page.get("forms", []) if f.get("cross_domain")), None)
     xsig = _sig(outcome, "cross_domain_form")
-    sends_to = cross["action_host"] if cross else None
+    sends_to = xsig["data"].get("action_host") if xsig else (cross["action_host"] if cross else None)
     if xsig:
         sends_sentence = f"{sends_to} 이 페이지와 다른 사이트로 보내져요. 적는 순간 모르는 사람에게 가요."
     elif cross:
         sends_sentence = "다른 주소로 보내지지만 공식 협력 회사예요."
-    elif page.get("forms"):
+    elif any(f.get("field_types") for f in page.get("forms", [])):
         sends_sentence = "적은 내용은 이 페이지 안에서만 처리돼요."
     else:
         sends_sentence = None

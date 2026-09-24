@@ -191,7 +191,7 @@ def build_comparison(outcome: Outcome, page: dict | None, fetch: dict | None, pa
                          status=st, status_label=lab))
 
     # 회사 약속 / 적은 내용 / 넘어간 곳
-    forms = page.get("forms", []) if page_ok else []
+    forms = [f for f in (page.get("forms", []) if page_ok else []) if f.get("field_types") or f.get("cross_domain")]
     if mism and mism["data"].get("policy"):
         rows.append(dict(key="promise", label="회사 약속", said=mism["data"]["policy"],
                          found=f"{_particle(mism['data']['fields'], '을', '를')} 물어요",

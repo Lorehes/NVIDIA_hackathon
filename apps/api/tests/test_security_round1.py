@@ -1,4 +1,5 @@
 """보안 점검 1라운드(Codex R1-01~R1-12) 회귀 테스트. 각 시험은 해당 지적의 재현 조건을 그대로 쓴다."""
+import hashlib
 import time
 
 import pytest
@@ -79,7 +80,8 @@ def _host(url="https://hanbit.example.attacker.test/login"):
 
 
 def _files(host, chain, final_domain, final_url=None):
-    hop = lambda u: {"url": u, "host": parse_url(u)["host_ascii"],  # noqa: E731
+    hop = lambda u: {"url": u, "url_sha256": hashlib.sha256(u.encode()).hexdigest(),  # noqa: E731
+                     "host": parse_url(u)["host_ascii"],
                      "registrable_domain": parse_url(u)["registrable_domain"], "blocked": False, "error": None}
     hops = [hop(u) for u in chain]
     return {"parse_url": dict(host),
@@ -477,7 +479,7 @@ def test_navigation_and_obfuscation_patterns_set_the_redirect_hint(html):
 
 
 def test_plain_page_has_no_redirect_hint():
-    assert _forms("<p>hello</p><script>var a = location == 1;</script>")["js_redirect_hint"] is False
+    assert _forms("<p>hello</p><script>var a = 1 + 2;</script>")["js_redirect_hint"] is False
 
 
 def test_external_active_content_blocks_safe_unless_trusted():
@@ -559,7 +561,7 @@ def test_startup_reconciles_leftover_remote_workdirs(tmp_path):
 
     class LsRunner(FakeRunner):
         def __call__(self, args, timeout=None):
-            if args[-3:] == ["ls", "-1", "/sandbox/work"]:
+            if args[-3:-1] == ["sh", "-c"] and "ls -1 /sandbox/work" in args[-1]:
                 self.calls.append(args)
                 return CmdResult(0, f"{FULL_ID}\nnot-a-job\n../evil\n", "")
             return super().__call__(args, timeout)

@@ -4,6 +4,7 @@
 """
 from __future__ import annotations
 
+import hashlib
 import logging
 import queue
 import threading
@@ -210,8 +211,11 @@ def files_mismatch(files: dict, parse_host: dict, url: str | None = None) -> str
                 return "fetch_chain.hop_host"
             if i == 0 and p["host_ascii"] != parse_host.get("host_ascii"):
                 return "fetch_chain.first_host"
-            if i == 0 and url is not None and hop.get("url") != normalize_url(url)[0][:500]:
-                return "fetch_chain.first_url"
+            if i == 0 and url is not None:
+                # 표시용으로 500자에서 자른 주소가 아니라 전체 주소의 해시로 묶는다(긴 주소의 뒷부분만 다른 주소를 막는다)
+                want = hashlib.sha256(normalize_url(url)[0].encode("utf-8", "surrogatepass")).hexdigest()
+                if hop.get("url_sha256") != want or hop.get("url") != normalize_url(url)[0][:500]:
+                    return "fetch_chain.first_url"
             if not hop.get("blocked") and hop.get("error") is None:
                 last_ok = (hop, p)
         if fetch.get("final_registrable_domain") != (last_ok[1]["registrable_domain"] if last_ok else None):

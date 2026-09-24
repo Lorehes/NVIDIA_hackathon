@@ -72,24 +72,51 @@ def vetted_sentences(template: dict) -> list[str]:
 _EDGE_PUNCT = ".,!?…~\"'“”‘’()[]{}<>:;"
 
 
+_MASK = "◇"  # 동적 값(회사 이름·도메인 등)을 대신하는 자리표시자
+_DYNAMIC_KEYS = ("action_host", "action_domain", "official_domain", "domain", "label", "brand", "domains", "hosts")
+
+
+def _dynamic_values(payload: dict) -> list[str]:
+    """템플릿에 끼워 넣어지는 값 중 문자·페이지·에이전트에서 온 것. 이 값의 글자는 모델 문장의 근거 어휘가 될 수 없다."""
+    vals = [payload.get("entity"), payload.get("actual_domain"), payload.get("official_domain")]
+    for s in payload.get("signals", []):
+        for k in _DYNAMIC_KEYS:
+            v = (s.get("data") or {}).get(k)
+            vals.extend(v if isinstance(v, list) else [v])
+    out = {_clean(v).strip() for v in vals if isinstance(v, str)}
+    return sorted((v for v in out if len(v) >= 2), key=len, reverse=True)
+
+
+def _mask(text: str, values: list[str]) -> str:
+    text = _clean(text)
+    for v in values:
+        text = re.sub(re.escape(v), _MASK, text, flags=re.I)
+    return text
+
+
 def _tokens(text: str) -> list[str]:
-    return [t for t in (w.strip(_EDGE_PUNCT) for w in _clean(text).split()) if t]
+    return [t for t in (w.strip(_EDGE_PUNCT) for w in text.split()) if t]
 
 
-def _closure(template: dict) -> tuple[set[str], set[tuple[str, str]]]:
+def _closure(template: dict, values: list[str]) -> tuple[set[str], set[tuple[str, str]]]:
+    """코드가 만든 문장에서 쓸 수 있는 어절과 인접 어절 쌍. 동적 값은 자리표시자로 바꾼 뒤에 센다.
+
+    회사 이름이 `비밀번호 입력을 권장합니다`라도 그 글자가 허용 어휘가 되지 않는다."""
     vocab: set[str] = set()
     pairs: set[tuple[str, str]] = set()
     for sentence in vetted_sentences(template):
-        toks = _tokens(sentence)
+        toks = _tokens(_mask(sentence, values))
         vocab.update(toks)
         pairs.update(zip(toks, toks[1:]))
     return vocab, pairs
 
 
-def _within_closure(text: str, vocab: set[str], pairs: set[tuple[str, str]]) -> bool:
-    toks = _tokens(text)
+def _within_closure(text: str, vocab: set[str], pairs: set[tuple[str, str]], values: list[str]) -> bool:
+    toks = _tokens(_mask(text, values))
     if not toks:
         return True
+    if all(set(t) <= {_MASK} for t in toks):  # 자리표시자뿐인 문장: 동적 값만 그대로 문장 노릇을 하게 둘 수 없다
+        return False
     if len(toks) == 1:
         return toks[0] in vocab
     return all(p in pairs for p in zip(toks, toks[1:]))
@@ -188,8 +215,11 @@ def validate(output: dict | None, payload: dict, kb: KB, template: dict) -> dict
         return None
 
     # 5-2) 모델 문장은 코드가 만든 검증된 문장의 어절과 인접 어절 쌍으로만 이뤄져야 한다(핵심 방어선)
-    vocab, pairs = _closure(template)
-    if not all(_within_closure(t, vocab, pairs) for t in free):
+    if any(_MASK in t for t in free):  # 자리표시자를 직접 써서 검사를 속이지 못하게 한다
+        return None
+    values = _dynamic_values(payload)
+    vocab, pairs = _closure(template, values)
+    if not all(_within_closure(t, vocab, pairs, values) for t in free):
         return None
 
     # 6) 의심 근거는 판정에 실제로 쓰인 위험 신호 수를 넘지 못한다(없는 위험을 지어내지 못하게)

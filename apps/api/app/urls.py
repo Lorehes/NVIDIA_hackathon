@@ -23,8 +23,10 @@ _HANGUL = re.compile(r"[가-힣ㄱ-ㆎ]")
 
 
 def _clean_flagged(url: str) -> tuple[str, bool]:
-    """(정리한 주소, 한글 때문에 뒷부분을 잘라 냈는가). 경로·쿼리에 붙은 한글 조사("…/login으로")는 잘라내지만
-    실제 한글 경로일 수도 있으므로 잘랐다는 사실을 돌려줘 안전 판정에서 뺄 수 있게 한다. 호스트의 한글(IDN)은 유지한다."""
+    """(정리한 주소, 원문에서 무언가를 잘라 냈는가). 경로·쿼리에 붙은 한글 조사("…/login으로")나 문장 끝 부호
+    ("…/login!", "…?a=b;")는 잘라내지만 실제로 주소의 일부일 수도 있다. 서버는 `/login`과 `/login!`을 다르게 다룰 수
+    있으므로, 잘라 낸 경우에는 사용자가 뜻한 주소를 조사했는지 알 수 없다고 표시해 안전 판정에서 뺀다.
+    호스트의 한글(IDN)은 유지한다."""
     trimmed = False
     m = re.match(r"^(https?://[^/?#]*)(.*)$", url, re.I | re.S)
     if m:
@@ -34,7 +36,7 @@ def _clean_flagged(url: str) -> tuple[str, bool]:
             rest, trimmed = rest[: h.start()], True
         url = host_part + rest
     while url and url[-1] in _TRAIL:
-        url = url[:-1]
+        url, trimmed = url[:-1], True
     return url, trimmed
 
 
@@ -43,12 +45,20 @@ def _clean(url: str) -> str:
 
 
 def trimmed_urls(text: str) -> set[str]:
-    """본문에서 한글을 만나 뒷부분을 잘라 낸 주소들(정리한 형태). 이 주소는 사용자가 뜻한 주소와 다를 수 있다."""
+    """본문에서 뒷부분을 잘라 낸 주소들(정리한 형태, `extract_urls`가 돌려주는 것과 같은 모양). 이 주소는 사용자가
+    뜻한 주소와 다를 수 있다."""
+    text = (text or "").strip()
     out: set[str] = set()
-    for m in _URL_RE.finditer((text or "").strip()):
+    found = False
+    for m in _URL_RE.finditer(text):
+        found = True
         u, trimmed = _clean_flagged(m.group(0))
         if trimmed and u:
             out.add(u)
+    if not found and " " not in text and _BARE_RE.match(text):
+        u, trimmed = _clean_flagged(text)
+        if trimmed and u:
+            out.add("https://" + u)
     return out
 
 

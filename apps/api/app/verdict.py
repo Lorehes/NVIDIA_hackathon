@@ -106,6 +106,8 @@ def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
         status = chain[-1].get("status")
         if not (isinstance(status, int) and 200 <= status < 300):
             gaps.append("http_status")  # 404·5xx뿐 아니라 이동 횟수 한도에서 끊긴 3xx도 여기에 든다
+    if any(h.get("refresh") for h in chain):
+        gaps.append("client_redirect")  # HTTP Refresh 헤더가 다른 주소로 보낼 수 있었다(도착지는 조사하지 않았다)
     if chain and not all(str(h.get("url", "")).lower().startswith("https://") for h in chain):
         gaps.append("not_https")
     elif (fetch.get("tls") or {}).get("verified") is not True:
@@ -115,7 +117,7 @@ def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
     if not _ok(ev.page):
         gaps.append("page")
     else:
-        if ev.page.get("js_redirect_hint"):
+        if ev.page.get("js_redirect_hint") and "client_redirect" not in gaps:
             gaps.append("client_redirect")  # 메타 새로고침·스크립트 이동을 감지했지만 도착지는 조사하지 않았다
         trusted = {(fetch.get("final_registrable_domain") or "")}
         if entity:
@@ -229,11 +231,17 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
         for f in forms:
             if not f.get("cross_domain"):
                 continue
-            a_dom = f.get("action_registrable_domain") or ""
-            if entity and (a_dom in entity.partner_domains or a_dom in entity.official_domains):
+            # 전송 대상이 여럿이면(form의 action과 버튼의 formaction) 하나하나 따져야 한다. 협력·공식 도메인 한 곳이
+            # 있다고 나머지 대상까지 면제되면 안 된다. 대상 목록이 없는 옛 결과는 대표 도메인 하나로 판단한다.
+            dests = f.get("destinations") or [{"host": f.get("action_host"), "cross_domain": True,
+                                               "registrable_domain": f.get("action_registrable_domain") or ""}]
+            bad = next((d for d in dests if d.get("cross_domain") and not (
+                entity and (d.get("registrable_domain") in entity.partner_domains
+                            or d.get("registrable_domain") in entity.official_domains))), None)
+            if bad is None:
                 continue
-            signals.append(sig("cross_domain_form", "mid", action_host=f.get("action_host"),
-                               action_domain=a_dom))
+            signals.append(sig("cross_domain_form", "mid", action_host=bad.get("host"),
+                               action_domain=bad.get("registrable_domain") or ""))
             break
         purpose = (ev.claim or {}).get("purpose") if _ok(ev.claim) else None
         if not (is_official or is_partner):
