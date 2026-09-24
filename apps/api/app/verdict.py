@@ -235,6 +235,11 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
             # 있다고 나머지 대상까지 면제되면 안 된다. 대상 목록이 없는 옛 결과는 대표 도메인 하나로 판단한다.
             dests = f.get("destinations") or [{"host": f.get("action_host"), "cross_domain": True,
                                                "registrable_domain": f.get("action_registrable_domain") or ""}]
+            if f.get("destinations_overflow"):  # 전송 대상이 너무 많아 다 판단하지 못했다: 면제 없이 위험으로 본다
+                bad = {"host": f.get("action_host"), "registrable_domain": f.get("action_registrable_domain") or ""}
+                signals.append(sig("cross_domain_form", "mid", action_host=bad["host"],
+                                   action_domain=bad["registrable_domain"]))
+                break
             bad = next((d for d in dests if d.get("cross_domain") and not (
                 entity and (d.get("registrable_domain") in entity.partner_domains
                             or d.get("registrable_domain") in entity.official_domains))), None)

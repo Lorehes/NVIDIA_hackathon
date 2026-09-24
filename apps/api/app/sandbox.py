@@ -162,6 +162,10 @@ class _LocalDirs:
                     failed += 1
         return failed
 
+    def _is_active(self, job_id: str) -> bool:
+        with self._local_lock:
+            return job_id in self._active
+
     def pending_local(self) -> int:
         with self._local_lock:
             return sum(1 for c in self._leftover_dirs() if c.name not in self._active)
@@ -405,7 +409,8 @@ class OpenShellSandbox(_LocalDirs):
         with self._purge_lock:
             todo = list(self._pending_purge)
         for job_id in todo:
-            self._purge_remote(job_id)
+            if not self._is_active(job_id):
+                self._purge_remote(job_id)
         self.reconcile_local()
 
     def _reconcile_remote(self) -> bool:
@@ -420,7 +425,8 @@ class OpenShellSandbox(_LocalDirs):
         if r.returncode != 0:
             return False
         for name in r.stdout.split():
-            if _JOB_ID_RE.fullmatch(name):
+            # 목록을 받은 뒤 시작한 작업의 폴더는 목록에 없고, 목록을 받을 때 이미 있던 폴더가 지금 진행 중이면 건드리지 않는다
+            if _JOB_ID_RE.fullmatch(name) and not self._is_active(name):
                 self._purge_remote(name)
         return True
 

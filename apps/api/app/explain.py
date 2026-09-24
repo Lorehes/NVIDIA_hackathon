@@ -69,7 +69,10 @@ def vetted_sentences(template: dict) -> list[str]:
     return out
 
 
-_EDGE_PUNCT = ".,!?…~\"'“”‘’()[]{}<>:;"
+# 어절 가장자리에서 떼어 내도 되는 부호. 문장을 끝맺는 부호(. ! ? … : ;)는 어절에 남겨 둔다: 그래야 "◇." 처럼
+# 값이 홀로 문장이 되거나 문장 경계를 넘어 다른 문장의 조각과 이어 붙는 것이 인접 쌍 검사에 걸린다.
+_EDGE_PUNCT = ",~\"'“”‘’()[]{}<>"
+_TERMINAL = ".!?…:;"
 
 
 _MASK = "◇"  # 동적 값(회사 이름·도메인 등)을 대신하는 자리표시자
@@ -111,15 +114,46 @@ def _closure(template: dict, values: list[str]) -> tuple[set[str], set[tuple[str
     return vocab, pairs
 
 
+def _is_placeholder_only(tok: str) -> bool:
+    return set(tok.strip(_TERMINAL)) <= {_MASK}
+
+
+def _known(tok: str, vocab: set[str]) -> bool:
+    """마지막 어절은 끝 부호를 붙이거나 떼도 같은 어절로 본다(문장을 짧게 끊는 것은 새 내용을 만들지 않는다)."""
+    bare = tok.rstrip(_TERMINAL)
+    return tok in vocab or bare in vocab or any(bare + t in vocab for t in _TERMINAL)
+
+
 def _within_closure(text: str, vocab: set[str], pairs: set[tuple[str, str]], values: list[str]) -> bool:
     toks = _tokens(_mask(text, values))
     if not toks:
         return True
-    if all(set(t) <= {_MASK} for t in toks):  # 자리표시자뿐인 문장: 동적 값만 그대로 문장 노릇을 하게 둘 수 없다
+    # 문장 단위로 나눠 본다: 값(회사 이름 등)만으로 이뤄진 문장은 그대로 문장 노릇을 하게 둘 수 없다
+    sentence: list[str] = []
+    for t in toks:
+        sentence.append(t)
+        if t[-1] in _TERMINAL:
+            if all(_is_placeholder_only(x) for x in sentence):
+                return False
+            sentence = []
+    if sentence and all(_is_placeholder_only(x) for x in sentence):
         return False
     if len(toks) == 1:
-        return toks[0] in vocab
-    return all(p in pairs for p in zip(toks, toks[1:]))
+        return _known(toks[0], vocab)
+    for i, (a, b) in enumerate(zip(toks, toks[1:])):
+        last = i == len(toks) - 2
+        if (a, b) in pairs:
+            continue
+        if last and _known_pair(a, b, pairs):
+            continue
+        return False
+    return True
+
+
+def _known_pair(a: str, b: str, pairs: set[tuple[str, str]]) -> bool:
+    """마지막 쌍만 끝 부호 차이를 봐 준다."""
+    bare = b.rstrip(_TERMINAL)
+    return any((a, bare + t) in pairs for t in ("",) + tuple(_TERMINAL))
 
 
 def _flatten(exp: dict) -> list[str]:

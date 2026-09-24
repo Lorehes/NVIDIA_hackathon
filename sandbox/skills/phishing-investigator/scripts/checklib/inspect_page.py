@@ -46,13 +46,18 @@ _JS_REDIRECT_RE = re.compile(
     r"|\b(?:window|self|top|parent|globalThis)\s*\.\s*open\s*\(|(?<![\w.$])open\s*\("
     r"|\bnavigate\s*\(|\bhistory\s*\.\s*(?:push|replace)State\s*\("
     r"|\beval\s*\(|\batob\s*\(|\bFunction\s*\(|\bunescape\s*\(|\bdocument\s*\.\s*write(?:ln)?\s*\("
-    r"|\bimport\s*\(|\bfromCharCode\b|\bset(?:Timeout|Interval)\s*\(\s*[\"'`]|javascript\s*:"
+    r"|\bimport\b|\bimportScripts\b|\bexport\s*[*{]|\bWorker\s*\(|\.\s*click\s*\(|\bdispatchEvent\s*\("
+    r"|\bfromCharCode\b|\bset(?:Timeout|Interval)\s*\(\s*[\"'`]|javascript\s*:"
     r"|\.\s*(?:action|formAction)\s*=(?!=)"
     r"|[\"'`]\s*\+\s*[\"'`]|\.\s*concat\s*\(\s*[\"'`]|\.\s*join\s*\(\s*[\"'`]{2}\s*\)|\$\{\s*[\"'`]"
     r"|" + _ASCII_ESC + r"|\\u\{)", re.I)
 _SKIP_INPUT_TYPES = {"hidden", "submit", "button", "image", "reset", "checkbox", "radio", "file"}
 _MAX_DOCS = 8  # iframe srcdoc를 따라 들어갈 문서 수 상한
 _MAX_DEPTH = 3
+_MAX_DESTINATIONS = 20  # 폼 하나에서 따로 판단할 등록 도메인 수 상한(넘으면 overflow로 표시해 안전 판정에서 뺀다)
+_MAX_TITLE = 500  # 제목·브랜드 후보를 만들 때 보는 길이 상한
+_MAX_ACTIONS = 5000  # 폼 하나에서 훑는 전송 대상(action·formaction) 수 상한
+_RAW_TEXT = {"textarea", "title", "xmp", "iframe", "noembed", "noframes", "noscript", "template", "plaintext"}
 
 
 def classify_field(attrs: dict, label_text: str = "") -> str:
@@ -135,6 +140,9 @@ class _PageParser(HTMLParser):
         self.active_srcs: list[str] = []  # 다른 곳의 코드를 끌어오는 script·iframe·frame·embed·object 주소
         self.handler_text: list[str] = []  # onload="…" 같은 이벤트 핸들러 속성값
         self.srcdocs: list[str] = []  # iframe srcdoc(그 안의 문서도 같은 검사를 받는다)
+        # <textarea>·<title>·<template> 등 안의 태그는 브라우저가 요소로 읽지 않는다(파이썬 파서는 읽는다).
+        self._raw: str | None = None
+        self._raw_depth = 0
 
     # 태그 처리
     def handle_starttag(self, tag: str, attrs_list) -> None:
@@ -158,6 +166,11 @@ class _PageParser(HTMLParser):
             self.controls.append({"parent": self._form, "form": a.get("form") if "form" in a else None,
                                   "formaction": a.get("formaction") if "formaction" in a else None,
                                   "item": None})
+        if tag in _RAW_TEXT:
+            if self._raw is None:
+                self._raw, self._raw_depth = tag, 1
+            elif tag == "template" and self._raw == "template":
+                self._raw_depth += 1
         if tag == "title":
             self._in_title = True
         elif tag == "meta":
@@ -167,7 +180,10 @@ class _PageParser(HTMLParser):
         elif tag == "a" and a.get("href"):
             self.links.append(a["href"])
         elif tag == "form":
-            if self._form is None:  # 브라우저는 열린 form 안의 form 시작 태그를 무시한다(안쪽 action은 효력이 없다)
+            if self._raw is not None:  # 글자로 읽히는 문맥의 form: 목적지는 살펴보되 진짜 form의 시작·끝을 흔들지 못한다
+                self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""), "method":
+                                   (a.get("method") or "get").lower()})
+            elif self._form is None:  # 브라우저는 열린 form 안의 form 시작 태그를 무시한다(안쪽 action은 효력이 없다)
                 self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""), "method":
                                    (a.get("method") or "get").lower()})
                 self._form = len(self.forms) - 1
@@ -190,9 +206,13 @@ class _PageParser(HTMLParser):
             self._in_style = True
 
     def handle_endtag(self, tag: str) -> None:
+        if self._raw is not None and tag == self._raw and tag != "plaintext":
+            self._raw_depth -= 1
+            if self._raw_depth <= 0:
+                self._raw = None
         if tag == "title":
             self._in_title = False
-        elif tag == "form":
+        elif tag == "form" and self._raw is None:
             self._form = None
         elif tag == "label":
             text = " ".join("".join(self._label_buf).split())
@@ -208,8 +228,8 @@ class _PageParser(HTMLParser):
             self._in_style = False
 
     def handle_data(self, data: str) -> None:
-        if self._in_title:
-            self.title += data
+        if self._in_title and len(self.title) < _MAX_TITLE:
+            self.title += data[:_MAX_TITLE]
         if self._in_script:
             self.script_text.append(data)
             return
@@ -270,6 +290,7 @@ _ENCODINGS: dict[str, str] = {
     **_labels("cp1251", "cp1251", "windows-1251", "x-cp1251"),
     **_labels("cp932", "csshiftjis", "ms932", "ms_kanji", "shift-jis", "shift_jis", "sjis", "windows-31j", "x-sjis"),
     **_labels("euc_jp", "cseucpkdfmtjapanese", "euc-jp", "x-euc-jp"),
+    **_labels("iso2022_jp", "csiso2022jp", "iso-2022-jp"),
     **_labels("gbk", "chinese", "csgb2312", "csiso58gb231280", "gb2312", "gb_2312", "gb_2312-80", "gbk",
               "iso-ir-58", "x-gbk"),
     **_labels("gb18030", "gb18030"),
@@ -280,19 +301,46 @@ _ENCODINGS: dict[str, str] = {
 # 브라우저에서 본문이 사라지는 "replacement" 인코딩. 마크업으로 읽을 수 없다.
 _REPLACEMENT = {"csiso2022kr", "hz-gb-2312", "iso-2022-cn", "iso-2022-cn-ext", "iso-2022-kr", "replacement"}
 _BOMS = [(codecs.BOM_UTF8, "utf-8"), (codecs.BOM_UTF16_LE, "utf-16-le"), (codecs.BOM_UTF16_BE, "utf-16-be")]
-_CT_CHARSET = re.compile(r"charset\s*=\s*[\"']?([\w.:-]+)", re.I)
-_META_CHARSET = re.compile(rb"<meta[^>]+charset\s*=\s*[\"']?([\w.:-]+)", re.I)
+_META_TAG = re.compile(rb"<meta\b([^>]*)>", re.I)
+_META_ATTR = re.compile(rb"([^\s=/>\"']+)\s*(?:=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s\"'>]+)))?")
+_CHARSET_PARAM = re.compile(rb"charset\s*=\s*[\"']?([^\s;\"']+)", re.I)
+
+
+def _content_type_charset(content_type: str) -> str | None:
+    """Content-Type의 매개변수 중 이름이 정확히 `charset`인 것(`xcharset=`은 매개변수가 아니다)."""
+    for param in (content_type or "").split(";")[1:]:
+        key, sep, val = param.partition("=")
+        if sep and key.strip().lower() == "charset":
+            return val.strip().strip("\"'") or None
+    return None
+
+
+def _meta_charset(chunk: bytes) -> str | None:
+    """앞 1024바이트의 <meta>에서 `charset` 속성, 또는 http-equiv=content-type의 content 안 charset 매개변수."""
+    for m in _META_TAG.finditer(chunk):
+        attrs: dict[bytes, bytes] = {}
+        for am in _META_ATTR.finditer(m.group(1)):
+            name = am.group(1).lower()
+            if name not in attrs:  # 중복 속성은 첫 값
+                attrs[name] = am.group(2) or am.group(3) or am.group(4) or b""
+        if b"charset" in attrs and attrs[b"charset"]:
+            return attrs[b"charset"].decode("ascii", "ignore")
+        if attrs.get(b"http-equiv", b"").lower() == b"content-type":
+            cm = _CHARSET_PARAM.search(attrs.get(b"content", b""))
+            if cm:
+                return cm.group(1).decode("ascii", "ignore")
+    return None
 
 
 def _declared_charsets(html_bytes: bytes, content_type: str) -> list[tuple[str, str]]:
     """(출처, 이름)들. HTTP 헤더가 meta보다 먼저다. meta는 앞 1024바이트만 본다(브라우저의 사전 검사와 같다)."""
     out: list[tuple[str, str]] = []
-    m = _CT_CHARSET.search(content_type or "")
+    h = _content_type_charset(content_type)
+    if h:
+        out.append(("header", h))
+    m = _meta_charset(html_bytes[:1024])
     if m:
-        out.append(("header", m.group(1)))
-    m2 = _META_CHARSET.search(html_bytes[:1024])
-    if m2:
-        out.append(("meta", m2.group(1).decode("ascii", "ignore")))
+        out.append(("meta", m))
     return out
 
 
@@ -392,10 +440,10 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
 
     def add_brand(s: str) -> None:
         s = _trim(s, 40)
-        if s and s not in brands:
+        if s and len(brands) < 6 and s not in brands:
             brands.append(s)
 
-    for part in re.split(r"[|\-–—·:]", p.title):
+    for part in re.split(r"[|\-–—·:]", p.title[:_MAX_TITLE], maxsplit=12):
         add_brand(part)
     for m in p.metas:
         if (m.get("property") or m.get("name") or "").lower() in ("og:site_name", "application-name"):
@@ -410,12 +458,19 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
     forms_out: list[dict] = []
     for doc, doc_base in docs:
         for actions, inputs in doc.form_groups():
-            dests: list[tuple[str, str, bool]] = []
-            for action in actions:
+            by_domain: dict[tuple[str, bool], tuple[str, str, bool]] = {}
+            overflow_dest = len(actions) > _MAX_ACTIONS
+            for action in actions[:_MAX_ACTIONS]:
                 for d in _destination(doc_base, action, page_url, page_host, page_reg):
-                    if d not in dests:
-                        dests.append(d)
-            if not inputs and not any(d[2] for d in dests):
+                    key = (d[1], d[2])
+                    if key in by_domain:
+                        continue
+                    if len(by_domain) >= _MAX_DESTINATIONS:
+                        overflow_dest = True
+                    else:
+                        by_domain[key] = d
+            dests = list(by_domain.values())
+            if not inputs and not any(d[2] for d in dests) and not overflow_dest:
                 continue  # 입력란도 없고 다른 곳으로 보내지도 않는 폼은 알릴 것이 없다
             first = next((d for d in dests if d[2]), dests[0])
             ftypes: list[str] = []
@@ -427,18 +482,21 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
             forms_out.append({
                 "action_host": first[0],
                 "action_registrable_domain": first[1],
-                "cross_domain": any(d[2] for d in dests),
+                "cross_domain": any(d[2] for d in dests) or overflow_dest,
+                "destinations_overflow": overflow_dest,  # 다 판단하지 못했다: 안전 판정에서 뺀다
                 # 전송 대상 전체. 한 곳이 믿을 수 있는 협력 도메인이어도 나머지 대상까지 따로 판단해야 한다.
-                "destinations": [{"host": h, "registrable_domain": r, "cross_domain": x} for h, r, x in dests[:8]],
+                "destinations": [{"host": h, "registrable_domain": r, "cross_domain": x} for h, r, x in dests],
                 "field_types": ftypes,
             })
 
-    apk_links = []
-    for href in p.links:
-        low = href.lower().split("?")[0].split("#")[0]
-        if low.endswith(".apk"):
-            apk_links.append(_trim(_resolve(page_url, href), 200))
-    apk_links = apk_links[:5]
+    apk_links: list[str] = []
+    for doc, doc_base in docs:
+        for href in doc.links:
+            if len(apk_links) >= 5:
+                break
+            target = _resolve(doc_base, href)
+            if urlsplit(target).path.lower().endswith(".apk"):
+                apk_links.append(_trim(target, 200))
 
     meta_refresh = any((m.get("http-equiv") or "").lower() == "refresh" for d, _ in docs for m in d.metas)
     js_hint = (meta_refresh
@@ -447,6 +505,8 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
 
     # 다른 도메인의 코드·문서를 끌어오는 요소. 실행하지 않으므로 무엇을 하는지 알 수 없다(판정에서 안전 불가 사유).
     ext: list[str] = []
+    ext_seen: set[str] = set()
+    ext_overflow = False
     for doc, doc_base in docs:
         for src in doc.active_srcs:
             try:
@@ -460,9 +520,13 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                 dom = "(script)"
             else:
                 dom = registrable_of(to_ascii_host(host)) if host else ""
-            if dom and dom != page_reg and dom not in ext:
-                ext.append(dom)
-    if overflow:  # 중첩 문서가 너무 많거나 깊어 다 보지 못했다
+            if dom and dom != page_reg and dom not in ext_seen:
+                ext_seen.add(dom)
+                if len(ext) < 10:
+                    ext.append(dom)
+                else:
+                    ext_overflow = True
+    if overflow or ext_overflow:  # 중첩 문서가 너무 많거나 깊어, 또는 도메인이 너무 많아 다 보지 못했다
         ext.append("(nested)")
 
     # "공식·안전·인증" 류 주장 문구: 길이 제한, 최대 3개. 검증 대상 주장일 뿐이다.
@@ -483,5 +547,5 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
         "apk_links": apk_links,
         "trust_claims": claims,
         "js_redirect_hint": bool(js_hint),
-        "external_active_domains": ext[:10],
+        "external_active_domains": ext[:11],
     }

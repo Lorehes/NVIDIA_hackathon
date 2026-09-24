@@ -45,11 +45,20 @@ class DB:
         self._conn.row_factory = sqlite3.Row
         self._lock = threading.Lock()
         with self._lock:
+            # 지운 행·갱신으로 버려진 옛 값이 빈 페이지에 그대로 남지 않게 지울 때 덮어쓴다(보관 기간 삭제의 실효성).
+            self._conn.execute("PRAGMA secure_delete = ON")
             self._conn.executescript(SCHEMA)
             cols = {r["name"] for r in self._conn.execute("PRAGMA table_info(jobs)")}
             if "owner" not in cols:  # 소유자 검사 도입 전에 만든 DB: 소유자 없는 기존 작업은 아무도 열람할 수 없다
                 self._conn.execute("ALTER TABLE jobs ADD COLUMN owner TEXT")
             self._conn.commit()
+
+    def scrub(self) -> None:
+        """이미 빈 페이지에 남아 있는 옛 기록을 파일에서 없앤다(VACUUM이 DB를 다시 써서 빈 페이지를 버린다).
+        secure_delete를 켜기 전에 지워진 행의 잔재를 정리하려고 시작할 때 부른다."""
+        with self._lock:
+            self._conn.commit()
+            self._conn.execute("VACUUM")
 
     def create(self, job: dict[str, Any]) -> None:
         row = {**job, "created_at": time.time()}

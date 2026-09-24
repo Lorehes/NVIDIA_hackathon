@@ -90,6 +90,40 @@ def backslash_to_slash(s: str) -> str:
     return s[:cut].replace("\\", "/") + s[cut:]
 
 
+_AUTHORITY_PATH = re.compile(r"^(https?://[^/?#]*)([^?#]*)(.*)$", re.I | re.S)
+_DOT = {".", "%2e"}
+_DOTDOT = {"..", ".%2e", "%2e.", "%2e%2e"}
+
+
+def collapse_dot_segments(url: str) -> str:
+    """경로의 `.`·`..`을 브라우저(WHATWG)처럼 접는다. `%2e`·`%2E`도 점으로 읽는다.
+
+    HTTP 클라이언트는 `/a/%2e%2e/x`를 그대로 요청하지만 브라우저는 `/x`를 요청한다. 검사기가 다른 경로를
+    조사하지 않게 접속하기 전에 같은 모양으로 맞춘다."""
+    m = _AUTHORITY_PATH.match(url)
+    if not m:
+        return url
+    head, path, rest = m.groups()
+    if not path.startswith("/"):
+        return url
+    out: list[str] = []
+    segs = path.split("/")[1:]
+    for i, seg in enumerate(segs):
+        low = seg.lower()
+        last = i == len(segs) - 1
+        if low in _DOTDOT:
+            if out:
+                out.pop()
+            if last:
+                out.append("")
+        elif low in _DOT:
+            if last:
+                out.append("")
+        else:
+            out.append(seg)
+    return head + "/" + "/".join(out) + rest
+
+
 def normalize_url(url: str) -> tuple[str, bool]:
     """브라우저가 실제로 여는 주소로 맞춘다. (정규화한 주소, 원본과 해석이 달라질 수 있었는가)
 
@@ -100,6 +134,7 @@ def normalize_url(url: str) -> tuple[str, bool]:
     fixed = _DROP_CHARS.sub("", s)
     if _HTTP_SCHEME.match(fixed) or "://" not in fixed:
         fixed = backslash_to_slash(fixed)
+    fixed = collapse_dot_segments(fixed)
     return fixed, fixed != s
 
 

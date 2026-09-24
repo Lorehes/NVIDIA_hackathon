@@ -44,6 +44,21 @@ def _clean(url: str) -> str:
     return _clean_flagged(url)[0]
 
 
+_CLOSERS = {"<": ">", '"': '"', "'": "'", "`": "`"}
+
+
+def _cut_by_delimiter(text: str, m: "re.Match[str]") -> bool:
+    """추출 정규식이 주소를 따옴표·꺾쇠·백틱에서 끊었는가. 그 문자는 URL 경로에도 쓸 수 있으므로(`/login'x`)
+    앞에서 연 것과 짝이 맞는 닫는 부호(`<url>`, `"url"`)가 아니면 주소가 더 이어졌을 수 있다."""
+    if m.end() >= len(text):
+        return False
+    nxt = text[m.end()]
+    if nxt.isspace():
+        return False
+    opener = text[m.start() - 1] if m.start() > 0 else ""
+    return _CLOSERS.get(opener) != nxt
+
+
 def trimmed_urls(text: str) -> set[str]:
     """본문에서 뒷부분을 잘라 낸 주소들(정리한 형태, `extract_urls`가 돌려주는 것과 같은 모양). 이 주소는 사용자가
     뜻한 주소와 다를 수 있다."""
@@ -53,7 +68,7 @@ def trimmed_urls(text: str) -> set[str]:
     for m in _URL_RE.finditer(text):
         found = True
         u, trimmed = _clean_flagged(m.group(0))
-        if trimmed and u:
+        if (trimmed or _cut_by_delimiter(text, m)) and u:
             out.add(u)
     if not found and " " not in text and _BARE_RE.match(text):
         u, trimmed = _clean_flagged(text)

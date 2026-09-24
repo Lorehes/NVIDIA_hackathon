@@ -114,6 +114,7 @@ async def lifespan(app: FastAPI):
     state.limiter = RateLimiter(settings.rate_limit_per_min)
     state.replay_slots = Slots(settings.replay_max)
     state.db.purge_expired(settings.retention_hours * 3600)
+    state.db.scrub()
     stale = state.db.fail_stale()
     if stale:
         log.warning("marked %d stale jobs as failed", stale)
