@@ -10,10 +10,12 @@ from fastapi.testclient import TestClient
 from app.demo_cases import ALL_CASES, DEMO_CASES
 from app.main import app
 
+from .conftest import SESSION_A, SESSION_B
+
 
 @pytest.fixture()
 def client(tmp_env):
-    with TestClient(app) as c:
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
         yield c
 
 
@@ -95,7 +97,7 @@ def test_s2_redirect_blocked_shown_and_no_residual_policy(client):
 
 def test_incomplete_agent_gives_unknown_never_safe(tmp_env, monkeypatch):
     monkeypatch.setenv("SIM_FORCE_INCOMPLETE", "hanbit.example=agent_timeout")  # 샌드박스 생성 전에 설정
-    with TestClient(app) as c:
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
         v = run_job(c, DEMO_CASES[0]["input"])
     r = v["result"]
     assert r["verdict"] == "unknown" and r["incomplete_reason"]
@@ -174,9 +176,167 @@ def test_replay_roundtrip(client, tmp_env):
 
 
 def test_result_survives_restart(tmp_env):
-    with TestClient(app) as c:
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
         v = run_job(c, DEMO_CASES[0]["input"])
         jid = v["job_id"]
-    with TestClient(app) as c2:
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c2:
         again = c2.get(f"/api/investigations/{jid}").json()
         assert again["status"] == "done" and again["result"]["verdict"] == "safe"
+
+
+# ── 접근권한·요청 제한(검토 2.2, 2.7) ───────────────────────────────────────
+def test_job_id_is_full_uuid_length(client):
+    r = client.post("/api/investigations", json={"input": DEMO_CASES[0]["input"]})
+    jid = r.json()["job_id"]
+    assert len(jid) == 2 + 32 and jid.startswith("j_")
+
+
+def test_other_session_cannot_read_result_or_trace(client):
+    v = run_job(client, DEMO_CASES[2]["input"])
+    jid = v["job_id"]
+    for path in (f"/api/investigations/{jid}", f"/api/investigations/{jid}/trace"):
+        assert client.get(path).status_code == 200
+        other = client.get(path, headers={"X-Session-Id": SESSION_B})
+        assert other.status_code == 404 and other.json()["error"]["code"] == "not_found"  # 존재 여부도 숨긴다
+
+
+def test_missing_or_malformed_session_is_401(client):
+    jid = run_job(client, DEMO_CASES[0]["input"])["job_id"]
+    for h in ({}, {"X-Session-Id": "short"}, {"X-Session-Id": "bad chars!!!!!!!!!!!!!!!!"}):
+        r = client.get(f"/api/investigations/{jid}", headers={"X-Session-Id": ""} if not h else h)
+        assert r.status_code == 401 and r.json()["error"]["code"] == "session_required"
+    r = client.post("/api/investigations", json={"input": "https://a.test/x"}, headers={"X-Session-Id": ""})
+    assert r.status_code == 401
+
+
+def test_replay_job_is_also_owned(client, tmp_env):
+    from app import replay
+
+    live = run_job(client, DEMO_CASES[2]["input"])
+    trace = client.get(f"/api/investigations/{live['job_id']}/trace").json()
+    replay.save_replay("disguise", live["result"], trace, live["steps"])
+    rid = run_job(client, DEMO_CASES[2]["input"], mode="replay")["job_id"]
+    assert client.get(f"/api/investigations/{rid}", headers={"X-Session-Id": SESSION_B}).status_code == 404
+
+
+def test_rate_limit_per_session_returns_429(client, monkeypatch, tmp_env):
+    monkeypatch.setattr(app_settings(), "rate_limit_per_min", 2)
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:  # 제한값은 서버 시작 때 읽는다
+        codes = [c.post("/api/investigations", json={"input": "https://a.test/x"}).status_code for _ in range(4)]
+        again = c.post("/api/investigations", json={"input": "https://a.test/x"},
+                       headers={"X-Session-Id": SESSION_B}).status_code
+    assert codes[:2] == [202, 202] and codes[2:] == [429, 429]
+    assert again == 202  # 다른 세션은 영향받지 않는다
+
+
+def test_rate_limit_per_client_ip_even_if_session_rotates(tmp_env, monkeypatch):
+    monkeypatch.setattr(app_settings(), "rate_limit_per_min", 2)
+    with TestClient(app) as c:
+        codes = []
+        for i in range(4):
+            h = {"X-Session-Id": f"rotating-session-{i:016d}", "X-Client-Ip": "203.0.113.9"}
+            codes.append(c.post("/api/investigations", json={"input": "https://a.test/x"}, headers=h).status_code)
+    assert codes == [202, 202, 429, 429]
+
+
+def test_invalid_requests_do_not_consume_rate_limit(tmp_env, monkeypatch):
+    monkeypatch.setattr(app_settings(), "rate_limit_per_min", 1)
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
+        assert c.post("/api/investigations", json={"input": "링크 없는 문자"}).status_code == 400
+        assert c.post("/api/investigations", json={"input": "https://a.test/x"}).status_code == 202
+
+
+def test_oversized_body_is_rejected_before_parsing(client, monkeypatch):
+    monkeypatch.setattr(app_settings(), "max_body_bytes", 1000)
+    big = '{"input": "' + "가" * 2000 + '"}'
+    r = client.post("/api/investigations", content=big.encode(), headers={"Content-Type": "application/json"})
+    assert r.status_code == 413 and r.json()["error"]["code"] == "body_too_large"
+
+    def chunks():  # Content-Length 없이 조각으로 보내도 읽는 도중에 멈춘다
+        for _ in range(50):
+            yield b"x" * 100
+
+    r = client.post("/api/investigations", content=chunks(), headers={"Content-Type": "application/json"})
+    assert r.status_code == 413
+
+
+def test_replay_threads_are_capped(tmp_env, monkeypatch):
+    from app import main, replay
+
+    monkeypatch.setattr(app_settings(), "replay_max", 1)
+    monkeypatch.setattr(main.replay_mod, "has_replay", lambda _id: True)
+    started = []
+    monkeypatch.setattr(main.replay_mod, "run_replay", lambda *a: started.append(a) or __import__("time").sleep(0.5))
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
+        body = {"input": DEMO_CASES[0]["input"], "mode": "replay", "case_id": "official"}
+        first = c.post("/api/investigations", json=body)
+        second = c.post("/api/investigations", json=body)
+    assert first.status_code == 202 and second.status_code == 429 and len(started) <= 1
+
+
+def test_queue_capacity_check_and_submit_are_atomic(tmp_env, monkeypatch):
+    """동시에 몰려도 대기열 한도(queue_max)를 넘겨 등록하지 않는다."""
+    import threading
+
+    monkeypatch.setattr(app_settings(), "queue_max", 3)
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
+        from app import main
+
+        main.state.queue.q.put("")  # 워커가 빈 항목을 처리하는 동안 등록된 작업이 queued로 남도록 막는다
+        gate = threading.Event()
+        orig = main.state.queue.submit
+        main.state.queue.submit = lambda jid: (gate.wait(2), None)[1]  # 워커가 가져가지 못하게 대기 상태 유지
+        out: list[int] = []
+
+        def post():
+            out.append(c.post("/api/investigations", json={"input": "https://a.test/x"}).status_code)
+
+        ts = [threading.Thread(target=post) for _ in range(8)]
+        [t.start() for t in ts]
+        [t.join() for t in ts]
+        gate.set()
+        main.state.queue.submit = orig
+    assert out.count(202) == 3 and out.count(429) == 5
+
+
+def app_settings():
+    from app.config import settings
+
+    return settings
+
+
+# ── 조사 결과 무결성(검토 2.3) ────────────────────────────────────────────────
+def test_tampered_sandbox_files_are_rejected_not_trusted(tmp_env, monkeypatch):
+    """에이전트가 결과 파일을 바꿔 가짜 주소를 공식 주소로 보이게 해도 판정에 쓰지 않는다."""
+    from app import sandbox as sb_mod
+
+    orig = sb_mod.LocalSandbox.investigate
+
+    def tampered(self, *a, **kw):
+        res = orig(self, *a, **kw)
+        res.files["parse_url"]["registrable_domain"] = "hanbit.example"
+        res.files["fetch_chain"]["final_registrable_domain"] = "hanbit.example"
+        return res
+
+    monkeypatch.setattr(sb_mod.LocalSandbox, "investigate", tampered)
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
+        v = run_job(c, DEMO_CASES[1]["input"])  # 원래는 가짜 의심(lookalike)
+    r = v["result"]
+    assert r["verdict"] == "unknown" and "맞지 않아" in r["incomplete_reason"]
+
+
+def test_internal_resolution_blocks_fetch_and_is_flagged(tmp_env):
+    """공용 이름이 내부망으로 해석되면 조사용 정책을 열지 않고 위험 신호로 남긴다(검토 2.4)."""
+    seen = {}
+    with TestClient(app, headers={"X-Session-Id": SESSION_A}) as c:
+        from app import main
+
+        inv = main.state.queue.inv
+        orig = inv.sandbox.investigate
+        inv.sandbox.investigate = lambda jid, payload, host, allowed, on_stage: (
+            seen.update(allowed=allowed), orig(jid, payload, host, allowed, on_stage))[1]
+        inv.resolver = lambda host: True
+        v = run_job(c, "https://intranet-lookalike.test/login")
+    assert seen["allowed"] is False
+    assert "internal_address" in {s["type"] for s in v["result"]["signals"]}
+    assert v["result"]["verdict"] in ("caution", "suspected_impersonation")

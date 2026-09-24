@@ -26,7 +26,7 @@ def fetch(final, chain=None):
     chain = chain or [{"url": f"https://{final}/", "host": final, "registrable_domain": final, "status": 200,
                        "blocked": False, "error": None}]
     return {"ok": True, "chain": chain, "final_registrable_domain": final, "blocked_count":
-            sum(1 for c in chain if c["blocked"])}
+            sum(1 for c in chain if c["blocked"]), "tls": {"https": True, "verified": True}}
 
 
 def page(fields=(), cross=None, apk=()):
@@ -199,3 +199,66 @@ def test_forged_claim_entity_outside_kb_is_ignored():
     o = decide(parse=parse("plain.test"), similarity=similarity(), fetch=fetch("plain.test"), page=page(),
                claim=claim("nonexistent", "other"), candidates=[])
     assert o.entity is None
+
+
+# ── 거짓 safe 차단(검토 2.1): 공식 도메인이어도 확인하지 못했으면 unknown ────────────
+def _official(**over):
+    kw = dict(parse=parse("hanbit.example"), similarity=similarity(), fetch=fetch("hanbit.example"),
+              page=page(), claim=claim())
+    kw.update(over)
+    return decide(**kw)
+
+
+def _hop(url="https://hanbit.example/", status=200, **kw):
+    return {"url": url, "host": "hanbit.example", "registrable_domain": "hanbit.example", "status": status,
+            "blocked": False, "error": None, **kw}
+
+
+def test_official_with_full_evidence_is_safe_baseline():
+    o = _official()
+    assert o.verdict == "safe" and o.verification_gaps == []
+
+
+def test_official_without_fetch_or_page_results_is_unknown():
+    o = _official(fetch=None, page=None, similarity=None)
+    assert o.verdict == "unknown" and o.unknown_reason == "unverified"
+    assert {"fetch", "page", "similarity"} <= set(o.verification_gaps)
+
+
+def test_official_without_html_is_unknown():
+    o = _official(page={"ok": False, "error": "no html"})
+    assert o.verdict == "unknown" and o.unknown_reason == "unverified" and "page" in o.verification_gaps
+
+
+def test_official_http_404_is_unknown():
+    o = _official(fetch=fetch("hanbit.example", [_hop(status=404)]), page={"ok": False, "error": "no html"})
+    assert o.verdict == "unknown" and "http_status" in o.verification_gaps
+
+
+def test_official_over_plain_http_is_unknown():
+    f = fetch("hanbit.example", [_hop(url="http://hanbit.example/")])
+    f["tls"] = {"https": False, "verified": None}
+    o = _official(fetch=f)
+    assert o.verdict == "unknown" and "not_https" in o.verification_gaps
+
+
+def test_official_with_unverified_certificate_is_unknown():
+    f = fetch("hanbit.example")
+    f["tls"] = {"https": True, "verified": False}
+    assert _official(fetch=f).verification_gaps == ["tls_unverified"]
+
+
+def test_official_redirect_chain_cut_off_is_unknown():
+    o = _official(fetch=fetch("hanbit.example", [_hop(status=302)]))  # 마지막이 3xx: 끝까지 따라가지 못함
+    assert o.verdict == "unknown" and "http_status" in o.verification_gaps
+
+
+def test_official_fetch_skipped_is_unknown():
+    o = _official(fetch={"ok": True, "skipped": True, "chain": [], "final_registrable_domain": None}, page=None)
+    assert o.verdict == "unknown" and "fetch" in o.verification_gaps
+
+
+def test_official_downgrade_to_http_in_later_hop_is_unknown():
+    chain = [_hop(status=301), _hop(url="http://hanbit.example/x", status=200)]
+    o = _official(fetch=fetch("hanbit.example", chain))
+    assert o.verdict == "unknown" and "not_https" in o.verification_gaps

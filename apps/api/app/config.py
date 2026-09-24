@@ -46,6 +46,18 @@ class Settings:
     explain_timeout_s: int = int(os.environ.get("EXPLAIN_TIMEOUT_S", "30"))
     queue_max: int = int(os.environ.get("QUEUE_MAX", "5"))
 
+    # 보관 기간(시간): 끝난 조사는 이 시간이 지나면 문자 원문·결과와 함께 삭제한다
+    retention_hours: float = float(os.environ.get("RETENTION_HOURS", "24"))
+    purge_interval_s: float = float(os.environ.get("PURGE_INTERVAL_S", "600"))  # 요청이 없어도 이 간격으로 만료 기록을 지운다
+    health_cache_s: float = float(os.environ.get("HEALTH_CACHE_S", "15"))  # /api/health가 외부 명령을 돌리는 최소 간격
+
+    # 요청 제한: 세션·클라이언트별 분당 조사 요청 수, 재생 모드 동시 실행 수, 요청 본문 최대 바이트
+    rate_limit_per_min: int = int(os.environ.get("RATE_LIMIT_PER_MIN", "6"))
+    rate_limit_untrusted_per_min: int = int(os.environ.get("RATE_LIMIT_UNTRUSTED_PER_MIN", "20"))  # 클라이언트 IP를 모를 때 전체 합계
+    rate_limit_global_per_min: int = int(os.environ.get("RATE_LIMIT_GLOBAL_PER_MIN", "60"))  # 모든 클라이언트 합계
+    replay_max: int = int(os.environ.get("REPLAY_MAX", "3"))
+    max_body_bytes: int = int(os.environ.get("MAX_BODY_BYTES", str(32 * 1024)))
+
     # 사용 도구 허용 목록 (이 밖의 도구는 unexpected_tools로 기록)
     allowed_tools = {"read", "exec"}
 

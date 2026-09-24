@@ -84,6 +84,8 @@ INCOMPLETE_REASONS = {
     "agent_error": "AI 조사원이 답하지 못해 멈췄어요",
     "sandbox_error": "안전 공간을 준비하지 못해 멈췄어요",
     "policy_error": "안전 공간의 문을 열지 못해 멈췄어요",
+    "result_mismatch": "조사 결과가 요청과 맞지 않아 멈췄어요",
+    "sandbox_unsafe": "안전 공간이 정리됐는지 확인하지 못해 멈췄어요",
 }
 
 

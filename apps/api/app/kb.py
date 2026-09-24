@@ -125,9 +125,19 @@ class KB:
         if self._vecs is None:  # KB 벡터는 프로세스당 1회만 계산
             vecs = embed([self._entity_sentence(e) for e in self.entities], "passage")
             self._vecs = {e.id: v for e, v in zip(self.entities, vecs)}
-        q = embed([text[:1000]], "query")[0]
+        q = embed([redact_for_external(text)[:1000]], "query")[0]
         scored = sorted(((_cos_dense(q, self._vecs[e.id]), e) for e in self.entities), key=lambda x: -x[0])
         return [e for _, e in scored]
+
+
+_URL_IN_TEXT = re.compile(r"(?:https?://|www\.)\S+", re.I)
+_LONG_DIGITS = re.compile(r"\d(?:[\s.-]?\d){3,}")  # 전화번호·인증번호·계좌·카드 번호처럼 4자리 이상 이어진 숫자
+
+
+def redact_for_external(text: str) -> str:
+    """외부 임베딩 API로 보내기 전에 개인 식별·인증 정보를 지운다. 기관 이름 같은 단어는 그대로 둔다."""
+    text = _URL_IN_TEXT.sub("[링크]", text or "")
+    return _LONG_DIGITS.sub("[숫자]", text)
 
 
 def _norm(s: str) -> str:

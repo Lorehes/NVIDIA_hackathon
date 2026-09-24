@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
-from .parse_url import parse_url
+from .parse_url import backslash_to_slash, normalize_url, parse_url
 from .util import now_iso
 
 MAX_BODY = 1_000_000
@@ -33,8 +33,9 @@ class FetchError(Exception):
 
 class Response:
     def __init__(self, status: int, location: str | None = None, body: bytes = b"",
-                 content_type: str = "text/html"):
+                 content_type: str = "text/html", truncated: bool = False):
         self.status, self.location, self.body, self.content_type = status, location, body, content_type
+        self.truncated = truncated  # 본문이 한도(MAX_BODY)에서 잘렸는가
 
 
 # ── 실제 네트워크 ────────────────────────────────────────────────
@@ -51,13 +52,14 @@ class HttpxFetcher:
         try:
             with self._client.stream("GET", url) as r:
                 body = b""
+                truncated = False
                 for chunk in r.iter_bytes():
                     body += chunk
                     if len(body) >= MAX_BODY:
-                        body = body[:MAX_BODY]
+                        body, truncated = body[:MAX_BODY], True
                         break
                 return Response(r.status_code, r.headers.get("location"), body,
-                                r.headers.get("content-type", ""))
+                                r.headers.get("content-type", ""), truncated)
         except httpx.ProxyError as e:
             raise Blocked(str(e)) from e
         except httpx.HTTPError as e:
@@ -103,7 +105,11 @@ class FixtureFetcher:
 def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, bytes]:
     chain: list[dict] = []
     html = b""
-    current = url
+    truncated = False
+    final_type = ""
+    redirect_html, redirect_truncated = b"", False  # 가장 최근 이동 응답의 본문(최종 응답을 못 얻었을 때만 쓴다)
+    got_final = False
+    current, _ = normalize_url(url)  # 브라우저가 여는 주소와 같은 곳에 접속한다
     first_error = None
     tls_verified: bool | None = None
 
@@ -133,12 +139,22 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
         entry["status"] = resp.status
         if current.startswith("https://") and tls_verified is None:
             tls_verified = True
-        if resp.body and ("html" in resp.content_type.lower() or not resp.content_type):
-            html = resp.body  # 3xx 응답이 본문을 실어 보내는 경우도 저장한다(마지막 성공 응답 우선)
         if 300 <= resp.status < 400 and resp.location:
-            current = urljoin(current, resp.location)
+            # 이동 응답의 본문은 최종 페이지가 아니다. 최종 응답을 얻으면 버리고, 차단·오류로 끊겼을 때만 보여 주는 용도로 쓴다.
+            if resp.body and ("html" in (resp.content_type or "").lower() or not resp.content_type):
+                redirect_html, redirect_truncated = resp.body, resp.truncated
+            else:
+                redirect_html, redirect_truncated = b"", False
+            current, _ = normalize_url(urljoin(current, backslash_to_slash(resp.location)))
             continue
+        got_final = True
+        final_type = resp.content_type or ""
+        if resp.body and ("html" in final_type.lower() or not final_type):
+            html, truncated = resp.body, resp.truncated
         break
+
+    if not got_final:  # 차단·오류·이동 횟수 한도로 끝났다: 마지막 이동 응답의 본문이 있는 그대로가 유일한 페이지 자료다
+        html, truncated = redirect_html, redirect_truncated
 
     reached = [c for c in chain if not c["blocked"] and c["error"] is None]
     last_ok = reached[-1] if reached else None
@@ -151,6 +167,9 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
         "blocked_count": sum(1 for c in chain if c["blocked"]),
         "tls": {"https": url.startswith("https://"), "verified": tls_verified},
         "html_saved": bool(html),
+        "html_from_redirect": bool(html) and not got_final,
+        "final_content_type": final_type[:100],
+        "body_truncated": truncated,
         "first_error": first_error,
     }
     return result, html

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import ipaddress
 import re
+import socket
 import sys
 
 from .config import settings
@@ -66,6 +67,29 @@ def is_private_or_ip_host(host_ascii: str) -> bool:
     if "." not in h or h == "localhost":
         return True
     return h.endswith((".local", ".internal", ".localhost", ".lan", ".home", ".corp", ".intranet"))
+
+
+def _is_internal_ip(ip: str) -> bool:
+    try:
+        a = ipaddress.ip_address(ip.split("%")[0])
+    except ValueError:
+        return True  # 해석할 수 없는 주소는 안전하다고 보지 않는다
+    if getattr(a, "ipv4_mapped", None):
+        a = a.ipv4_mapped
+    return not a.is_global or a.is_multicast
+
+
+def resolves_to_internal(host_ascii: str, resolver=socket.getaddrinfo) -> bool:
+    """이름이 사설·루프백·링크로컬 등 공용이 아닌 주소로 해석되는가. 해석하지 못하면 False(어차피 접속도 실패한다).
+
+    조사 정책을 열기 직전의 사전 점검이다. 접속 시점의 DNS 재바인딩까지 막지는 못하므로 실제 접속을 맡는
+    프록시 계층의 검사(검토 2.4)를 대체하지 않는다.
+    """
+    try:
+        infos = resolver(host_ascii, None, type=socket.SOCK_STREAM)
+    except (OSError, UnicodeError):
+        return False
+    return any(_is_internal_ip(i[4][0]) for i in infos)
 
 
 _HOST_OK = re.compile(r"^[a-z0-9]([a-z0-9.-]{0,251}[a-z0-9])?$")

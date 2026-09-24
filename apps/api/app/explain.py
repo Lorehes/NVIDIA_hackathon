@@ -2,11 +2,15 @@
 
 원칙: 모델이 쓴 설명은 신호 목록에 없는 사실을 새로 주장하면 버리고 템플릿 설명으로 바꾼다.
 URL 원문과 페이지 문구는 모델에 보내지 않는다(프롬프트 주입 방어).
+
+제목·경고·행동 권고·확인하지 못한 것은 코드의 고정 문구(템플릿)만 쓴다. 모델은 이미 확인된 근거를
+쉽게 풀어 쓰는 `detail`·`confirmed_facts`·`suspicion_evidence`에만 관여하고, 그 문장에는 행동 지시를 담지 못한다.
 """
 from __future__ import annotations
 
 import json
 import re
+import unicodedata
 
 from .kb import KB
 from .verdict import Outcome
@@ -17,6 +21,16 @@ _ALLOWED_NUMBERS = {"1", "2", "112", "118"}
 _LIST_FIELDS = ["confirmed_facts", "suspicion_evidence", "unverified", "action_bullets"]
 _STR_FIELDS = ["headline", "warning", "detail", "recommended_action"]
 MAX_SENTENCE = 80
+# 행동 지시는 코드가 정한다. 모델 문장에 지시형·권유형 표현이 있거나 안심시키는 말이 있으면 통째로 버린다.
+# 아래 정규식은 공백을 모두 지운 문장에 적용한다(띄어쓰기로 나눠 쓰는 우회를 막기 위해).
+_DIRECTIVE_RE = re.compile(r"세요|십시오|주세요|시오|라고하|하자|면돼|면됩니다|바랍니다|해주|하시|드립니다")
+_ACTION_RE = re.compile(r"링크를(?:열|누르|눌|클릭)|(?:사이트|페이지)(?:에|로)?(?:접속|들어가|방문)|앱을?(?:설치|다운)")
+_FALSE_REASSURE_RE = re.compile(r"문제없|괜찮|걱정(?:안|하지|마)|열어도|눌러도|입력해도|접속해도")
+# 판정이 안전이 아닐 때 모델 문장에 나오면 안 되는 안심 표현. 부정문("안전하지 않아요")은 먼저 걷어낸다.
+_NEGATION_RE = re.compile(r"안전하지않|안전하다는뜻이아니|안전하다고(?:볼|말할|할)수없|믿을수없|정상이아니|문제가없다고(?:볼|말할)수없")
+_STRICT_REASSURE_RE = re.compile(r"안전해요|안전합니다|안전한사이트|진짜사이트예요|진짜사이트입니다|믿어도")
+_SAFE_WORDS_OK_RE =re.compile(r"안전(?:한)?(?:공간|곳|환경)")
+_REASSURE_WORD_RE = re.compile(r"안전|정상|믿을|믿어|신뢰|오해|(?:진짜|공식)(?:사이트|페이지)(?:예요|에요|이에요|입니다|다)")
 
 
 def build_payload(outcome: Outcome, actual: str | None, entity_name: str | None,
@@ -51,10 +65,28 @@ def _flatten(exp: dict) -> list[str]:
     return out
 
 
+def _clean(text: str) -> str:
+    """NFKC로 전각·호환 문자를 정규화하고 보이지 않는 서식·제어 문자(제로폭 공백 등)를 지운다."""
+    text = unicodedata.normalize("NFKC", text)
+    return "".join(ch for ch in text if unicodedata.category(ch) not in ("Cf", "Cc", "Co", "Cs"))
+
+
+def _clean_output(output: dict) -> dict:
+    out = dict(output)
+    for k in _STR_FIELDS:
+        if isinstance(out.get(k), str):
+            out[k] = _clean(out[k])
+    for k in _LIST_FIELDS:
+        if isinstance(out.get(k), list):
+            out[k] = [_clean(x) if isinstance(x, str) else x for x in out[k]]
+    return out
+
+
 def validate(output: dict | None, payload: dict, kb: KB, template: dict) -> dict | None:
     """통과하면 정리된 explanation(dict, source='agent'), 실패하면 None."""
     if not isinstance(output, dict):
         return None
+    output = _clean_output(output)
     if not isinstance(output.get("headline"), str) or not isinstance(output.get("recommended_action"), str):
         return None
     for k in _LIST_FIELDS:
@@ -88,27 +120,43 @@ def validate(output: dict | None, payload: dict, kb: KB, template: dict) -> dict
         if e.name != entity and e.name in joined:
             return None
 
-    # 4) 판정과 어긋나는 문구 금지
+    # 결과에 실제로 쓰이는 모델 문장(설명·사실·의심 근거). 제목·경고·행동 권고는 코드가 정하므로 아래 검사에서 제외한다.
+    free = ([output["detail"]] if isinstance(output.get("detail"), str) else []) \
+        + list(output.get("confirmed_facts", [])) + list(output.get("suspicion_evidence", []))
+    free_compact = re.sub(r"\s+", "", "|".join(free))  # 문장 경계를 넘어 붙어서 일치하는 것을 막으려고 | 로 잇는다
+    compact = re.sub(r"\s+", "", joined)
+
+    # 4) 판정과 어긋나는 문구 금지. 부정문("안전하지 않아요")을 걷어낸 뒤에도 안심 표현이 남으면 버린다.
     v = payload["verdict"]
-    reassure = re.search(r"안전해요|안전합니다|진짜 사이트예요|믿어도", joined)
-    negated = "안전하다는 뜻이 아니" in joined or "안전하지 않" in joined
-    if v == "safe" and re.search(r"가짜로 의심|사칭이 의심|흉내 낸 가짜|링크를 누르지 마세요", joined):
+    if v == "safe" and re.search(r"가짜로의심|사칭이의심|흉내낸가짜|링크를누르지마세요", compact):
         return None
-    if v in ("suspected_impersonation", "caution", "unknown") and reassure and not negated:
-        return None
-    if v == "unknown" and not negated:
+    if v != "safe":
+        if _STRICT_REASSURE_RE.search(_NEGATION_RE.sub("", compact)):  # 어느 필드에 쓰든 명시적 안심 문구는 거부한다
+            return None
+        rest = _SAFE_WORDS_OK_RE.sub("", _NEGATION_RE.sub("", free_compact))
+        if _REASSURE_WORD_RE.search(rest) or _FALSE_REASSURE_RE.search(rest):
+            return None
+    if v == "unknown" and not _NEGATION_RE.search(compact):
         return None
 
-    cleaned = {
-        "headline": output["headline"].strip(),
-        "warning": (output.get("warning") or None),
+    # 5) 모델이 채울 수 있는 자리에는 행동 지시·권유가 없어야 한다
+    if _DIRECTIVE_RE.search(free_compact) or _ACTION_RE.search(free_compact):
+        return None
+
+    # 6) 의심 근거는 판정에 실제로 쓰인 위험 신호 수를 넘지 못한다(없는 위험을 지어내지 못하게)
+    risky = sum(1 for s in payload.get("signals", []) if s.get("strength") in ("strong", "mid"))
+    if len(output.get("suspicion_evidence", [])) > risky:
+        return None
+
+    # 제목·경고·행동 권고·확인하지 못한 것은 코드가 정한다(모델 출력은 쓰지 않는다)
+    return {
+        "headline": template["headline"],
+        "warning": template.get("warning"),
         "detail": (output.get("detail") or None),
         "confirmed_facts": list(output.get("confirmed_facts", [])),
         "suspicion_evidence": list(output.get("suspicion_evidence", [])),
-        # 확인하지 못한 것은 코드가 정한다(빠뜨리거나 바꾸지 못하게)
         "unverified": template["unverified"],
-        "recommended_action": output["recommended_action"].strip(),
-        "action_bullets": list(output.get("action_bullets", [])),
+        "recommended_action": template["recommended_action"],
+        "action_bullets": list(template.get("action_bullets", [])),
         "source": "agent",
     }
-    return cleaned

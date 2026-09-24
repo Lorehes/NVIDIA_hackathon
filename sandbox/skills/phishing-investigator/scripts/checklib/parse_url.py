@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import ipaddress
+import re
 from urllib.parse import parse_qsl, urlsplit
 
 # tldextract가 없을 때 쓰는 다단계 공개 접미사(자주 쓰는 것만)
@@ -79,8 +80,31 @@ def _is_ip(host: str) -> bool:
         return False
 
 
+_DROP_CHARS = re.compile(r"[\t\r\n]")
+_HTTP_SCHEME = re.compile(r"^https?:", re.I)
+
+
+def backslash_to_slash(s: str) -> str:
+    """브라우저(WHATWG)는 http(s) 주소에서 경로 앞부분의 `\\`를 `/`로 읽는다. 질의·조각 앞까지만 바꾼다."""
+    cut = min([i for i in (s.find("?"), s.find("#")) if i >= 0], default=len(s))
+    return s[:cut].replace("\\", "/") + s[cut:]
+
+
+def normalize_url(url: str) -> tuple[str, bool]:
+    """브라우저가 실제로 여는 주소로 맞춘다. (정규화한 주소, 원본과 해석이 달라질 수 있었는가)
+
+    탭·줄바꿈은 브라우저가 지우고 `\\`는 `/`로 읽는다. 파서마다 이 부분을 다르게 해석하면
+    `https://evil.test\\@official.example/`의 목적지를 서로 다르게 보므로 조사 전에 한 가지로 맞춘다.
+    """
+    s = (url or "").strip()
+    fixed = _DROP_CHARS.sub("", s)
+    if _HTTP_SCHEME.match(fixed) or "://" not in fixed:
+        fixed = backslash_to_slash(fixed)
+    return fixed, fixed != s
+
+
 def parse_url(url: str) -> dict:
-    raw = (url or "").strip()
+    raw, ambiguous = normalize_url(url)
     if "://" not in raw:
         raw = "https://" + raw
     try:
@@ -122,4 +146,5 @@ def parse_url(url: str) -> dict:
         "has_userinfo": has_userinfo,
         "userinfo": userinfo[:60],
         "port": port,
+        "ambiguous": ambiguous,  # 백슬래시·제어 문자로 해석이 갈릴 수 있던 주소(안전 판정 불가)
     }

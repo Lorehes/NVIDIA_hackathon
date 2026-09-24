@@ -39,7 +39,7 @@ STEP_ORDER = ["claim", "address", "sandbox", "page", "summary"]
 
 
 def new_job_id() -> str:
-    return "j_" + uuid.uuid4().hex[:6]
+    return "j_" + uuid.uuid4().hex  # 128비트. 소유자 검사와 별개로 추측이 불가능해야 한다
 
 
 def make_steps(**states: tuple[str, str | None]) -> list[dict]:
@@ -52,8 +52,9 @@ def make_steps(**states: tuple[str, str | None]) -> list[dict]:
 
 
 class Investigator:
-    def __init__(self, db: DB, sandbox, kb: KB):
-        self.db, self.sandbox, self.kb = db, sandbox, kb
+    def __init__(self, db: DB, sandbox, kb: KB, resolver=None):
+        """resolver: 호스트 이름이 내부망 주소로 해석되는지 알려 주는 함수. 실제로 접속하는 운영 모드에서만 넘긴다."""
+        self.db, self.sandbox, self.kb, self.resolver = db, sandbox, kb, resolver
 
     # 진행 상태 갱신 도우미
     def _set(self, job_id: str, stage: str | None = None, steps: list[dict] | None = None, **kw: Any) -> None:
@@ -96,6 +97,10 @@ class Investigator:
         self._set(job_id, "kb_lookup", steps=make_steps(claim=("done", claim_detail), address=("done", addr_detail)))
 
         fetch_allowed = bool(parse_host.get("ok")) and not is_private_or_ip_host(parse_host["host_ascii"])
+        internal = False
+        if fetch_allowed and self.resolver:  # 정책을 열기 전에 DNS 결과가 내부망인지 확인
+            internal = self.resolver(parse_host["host_ascii"])
+            fetch_allowed = not internal
         payload = {
             "job_id": job_id, "url": url, "message_text": text if message_given else None,
             "kb_candidates": [e.as_candidate() for e, _ in cands],
@@ -124,16 +129,24 @@ class Investigator:
                                             ("다른 사이트로 넘어가려고 해서 막았어요" if blocked_count else "링크 한 곳을 열어봤어요")),
                                    page=("waiting", None)))
 
-        # 8. 판정 (샌드박스가 남긴 원본 파일만 입력으로 쓴다)
+        # 8. 판정. 주소 분석은 호스트가 다시 계산하고, 샌드박스 파일은 요청과 맞는지 대조한 뒤에만 쓴다(검토 2.3).
         t2 = time.time()
-        ev = Evidence(parse=files.get("parse_url"), similarity=files.get("similarity"),
-                      fetch=files.get("fetch_chain"), page=files.get("page"), claim=files.get("claim"),
-                      candidates=cands, incomplete=run.incomplete)
         host_sim = None
         if parse_host.get("ok"):
             host_sim = {**sim_lib.compare(parse_host, self.kb.official_records())}
+        if not run.incomplete:
+            mismatch = files_mismatch(files, parse_host)
+            if mismatch:
+                log.error("job %s: sandbox result rejected (%s)", job_id, mismatch)
+                run.incomplete = "result_mismatch"
+        ev = Evidence(parse=parse_host if parse_host.get("ok") else files.get("parse_url"),
+                      similarity=host_sim or files.get("similarity"),
+                      fetch=files.get("fetch_chain"), page=files.get("page"), claim=files.get("claim"),
+                      candidates=cands, incomplete=run.incomplete, internal_resolution=internal)
         if run.incomplete:  # 멈춘 경우에도 발견한 것을 보여 주려고 호스트 측 문자열 분석을 쓴다(판정은 unknown)
             ev.parse, ev.similarity = parse_host, host_sim
+            if run.incomplete == "result_mismatch":  # 대조에 실패한 파일의 내용은 화면에도 쓰지 않는다
+                ev.fetch = ev.page = None
         outcome = decide(ev, self.kb)
         timings["verdict"] = int((time.time() - t2) * 1000)
 
@@ -166,6 +179,43 @@ class Investigator:
             log.error("ALERT: job %s policy %s may remain in the sandbox", job_id, run.policy_name)
 
 
+def files_mismatch(files: dict, parse_host: dict) -> str | None:
+    """샌드박스가 돌려준 결과가 이 작업의 대상 주소와 맞는지 확인한다. 어긋나면 이유(코드), 맞으면 None.
+
+    에이전트가 결과 파일을 바꾸거나 다른 작업의 파일이 섞여도 호스트가 계산한 값과 다르면 판정에 쓰지 않는다.
+    이동 경로는 단계마다 주소에서 호스트·등록 도메인을 다시 계산해 대조하고, 공식 여부 판정에 쓰이는
+    `final_registrable_domain`도 경로에서 다시 계산한 값과 같아야 한다.
+    """
+    if not parse_host.get("ok"):
+        return None
+    parse = files.get("parse_url")
+    if parse and parse.get("ok"):
+        for key in ("host_ascii", "registrable_domain"):
+            if parse.get(key) != parse_host.get(key):
+                return f"parse_url.{key}"
+    fetch = files.get("fetch_chain")
+    if fetch and fetch.get("ok") and not fetch.get("skipped"):
+        chain = fetch.get("chain")
+        if not isinstance(chain, list) or not all(isinstance(h, dict) for h in chain):
+            return "fetch_chain.shape"
+        last_ok = None
+        for i, hop in enumerate(chain):
+            p = parse_url(str(hop.get("url", "")))
+            if not p.get("ok"):
+                return "fetch_chain.hop_url"
+            if hop.get("host") != p["host_ascii"] or hop.get("registrable_domain") != p["registrable_domain"]:
+                return "fetch_chain.hop_host"
+            if i == 0 and p["host_ascii"] != parse_host.get("host_ascii"):
+                return "fetch_chain.first_host"
+            if not hop.get("blocked") and hop.get("error") is None:
+                last_ok = (hop, p)
+        if fetch.get("final_registrable_domain") != (last_ok[1]["registrable_domain"] if last_ok else None):
+            return "fetch_chain.final_domain"
+        if fetch.get("final_url") != (last_ok[0].get("url") if last_ok else None):
+            return "fetch_chain.final_url"
+    return None
+
+
 def pres_incomplete(code: str | None) -> str:
     return ko.INCOMPLETE_REASONS.get(code or "", "조사가 중간에 멈췄어요")
 
@@ -194,7 +244,7 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
     incomplete_text = pres_incomplete(incomplete) if incomplete else None
     template = pres.build_explanation(outcome, page, actual, claim_name, message_given, incomplete_text)
     explanation, explain_check = template, "skipped"
-    if not incomplete:
+    if not incomplete and not run.residual_policy:  # 정책이 남았을 수 있으면 그 샌드박스에서 에이전트를 더 돌리지 않는다
         payload = explain_mod.build_payload(outcome, actual, name, entity.official_domains[0] if entity else None,
                                             template["unverified"])
         try:

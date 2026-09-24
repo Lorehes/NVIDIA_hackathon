@@ -110,6 +110,8 @@ def build_risks(outcome: Outcome, page: dict | None) -> tuple[list[dict], str | 
             add("다른 사이트로 보냄", "mid")
         elif t == "ip_or_userinfo_host":
             add("숫자·@가 섞인 이상한 주소", "mid")
+        elif t == "internal_address":
+            add("내부 주소로 연결되는 이상한 주소", "mid")
         elif t == "domain_not_official" and not strong_addr:
             add("진짜 주소가 아님", "mid")
         elif t == "redirect_other_domain":
@@ -261,6 +263,8 @@ def _evidence_sentences(outcome: Outcome, entity_name: str | None) -> list[str]:
             out.append("다른 사이트로 넘어가려 했어요.")
         elif t == "ip_or_userinfo_host":
             out.append("이름 없는 숫자 주소이거나 @ 표시가 섞인 주소예요.")
+        elif t == "internal_address":
+            out.append("이 주소는 인터넷이 아니라 내부 네트워크로 연결돼서 열어 보지 않았어요.")
         elif t == "domain_not_official" and not addr_trick:
             out.append(f"이 주소는 {N} 진짜 주소 목록에 없어요.")
     return out
@@ -332,10 +336,10 @@ def build_explanation(outcome: Outcome, page: dict | None, actual: str | None, c
                         recommended_action="결제하기 전에 금액과 회사 이름을 한 번 더 보세요.",
                         action_bullets=["받을 택배가 없다면 결제하지 마세요.", f"{app}에서 결제해도 돼요."],
                         source="template")
-        head = f"{ko.possessive(N)} 진짜 사이트예요."
-        detail = (f"주소의 주인이 {N} 진짜 주소와 같고, 이상한 것을 적으라고 하지 않아요."
+        head = f"주소가 {ko.possessive(N)} 공식 주소와 일치해요."
+        detail = (f"주소의 주인이 {N} 진짜 주소와 같고, 열어 본 페이지에서 이상한 것을 적으라고 하지 않아요."
                   if not (set(fields) & CREDENTIAL_TYPES)
-                  else f"주소의 주인이 {N} 진짜 주소와 같아요. 문자 내용과 맞지 않는 것을 적으라고 하지 않아요.")
+                  else f"주소의 주인이 {N} 진짜 주소와 같아요. 열어 본 페이지에서 문자 내용과 맞지 않는 것을 적으라고 하지 않아요.")
         facts = [f"진짜 사이트 이름은 {actual}이에요.", f"{N} 진짜 주소 목록에 있는 주소예요."]
         facts.append("카드 번호나 비밀번호를 묻지 않아요." if not (set(fields) & CREDENTIAL_TYPES)
                      else "적으라고 하는 정보가 문자 내용과 맞아요.")
@@ -371,6 +375,9 @@ def build_explanation(outcome: Outcome, page: dict | None, actual: str | None, c
     if reason == "incomplete":
         head = "지금은 확인을 끝내지 못했어요."
         detail = ((incomplete_reason or "조사가 중간에 멈췄어요") + ". 안전하다는 뜻이 아니니 아직 링크를 누르지 마세요.")
+    elif reason == "unverified":
+        head = "주소는 맞지만 페이지를 끝까지 확인하지 못했어요."
+        detail = "공식 주소와 일치하지만, 페이지 안을 제대로 보지 못했어요. 안전하다는 뜻은 아니에요."
     elif reason == "fetch_failed":
         head = "사이트가 열리지 않아서 확인하지 못했어요."
         detail = "페이지 안을 보지 못했어요. 안전하다는 뜻이 아니니 링크를 누르지 마세요."
@@ -379,7 +386,7 @@ def build_explanation(outcome: Outcome, page: dict | None, actual: str | None, c
         detail = "비교할 진짜 주소가 없고, 눈에 띄는 위험한 점도 찾지 못했어요. 안전하다는 뜻은 아니에요."
     return dict(headline=head, warning=None, detail=detail, confirmed_facts=facts, suspicion_evidence=[],
                 unverified=unverified if reason != "incomplete" else (["페이지 속 내용"] + unverified[:1]),
-                recommended_action=("1~2분 뒤에 다시 확인해 보세요." if reason in ("incomplete", "fetch_failed")
+                recommended_action=("1~2분 뒤에 다시 확인해 보세요." if reason in ("incomplete", "fetch_failed", "unverified")
                                     else "회사 앱이나 대표 전화번호로 직접 확인해 보세요."),
                 action_bullets=["그 전까지 링크를 누르지 마세요.",
                                 f"급하다면 {app}에서 직접 확인하세요." if N else "급하다면 회사 대표번호로 직접 확인하세요."],

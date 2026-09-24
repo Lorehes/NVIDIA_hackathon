@@ -46,6 +46,7 @@ class Evidence:
     claim: dict | None = None
     candidates: list[tuple[Entity, str]] = field(default_factory=list)  # (엔티티, 출처)
     incomplete: str | None = None  # 에이전트 실패·시간 초과 등 조사 중단 이유(코드)
+    internal_resolution: bool = False  # 공용 이름인데 내부망 주소로 해석됨(호스트가 확인, 접속하지 않음)
 
 
 @dataclass
@@ -55,7 +56,8 @@ class Outcome:
     entity_source: str  # exact|alias|embedding|agent|address|none
     signals: list[dict]
     purpose: str | None
-    unknown_reason: str | None = None  # incomplete | no_data | fetch_failed | no_kb
+    unknown_reason: str | None = None  # incomplete | no_data | fetch_failed | unverified | no_kb
+    verification_gaps: list[str] = field(default_factory=list)  # 안전 판정에 모자란 증거(코드)
 
 
 _FIELD_ORDER = ["password", "card_number", "card_cvc", "card_expiry", "bank_account", "resident_id", "otp",
@@ -73,6 +75,45 @@ def sig(type_: str, strength: str, **data) -> dict:
 
 def _ok(d: dict | None) -> bool:
     return bool(d) and d.get("ok") is True
+
+
+def verification_gaps(ev: Evidence) -> list[str]:
+    """`safe`에 필요한 증거 중 빠진 것. 비어 있어야만 안전이라고 말할 수 있다.
+
+    공식·협력 도메인이라는 사실은 "주소가 맞다"까지만 보증한다. 페이지를 실제로 열어 분석했고
+    이동 경로를 끝까지 따라갔으며 암호화 접속이었어야 한다.
+    """
+    gaps: list[str] = []
+    if not _ok(ev.parse):
+        gaps.append("parse")
+    elif ev.parse.get("ambiguous"):
+        gaps.append("ambiguous_url")  # 백슬래시 등으로 브라우저와 해석이 갈릴 수 있었던 주소
+    if not _ok(ev.similarity):
+        gaps.append("similarity")
+    fetch = ev.fetch if _ok(ev.fetch) else None
+    if not fetch or fetch.get("skipped"):
+        gaps.append("fetch")
+        return gaps + (["page"] if not _ok(ev.page) else [])
+    chain = fetch.get("chain") or []
+    if not chain:
+        gaps.append("fetch")
+    elif any(h.get("blocked") or h.get("error") for h in chain):
+        gaps.append("redirect_incomplete")
+    else:
+        status = chain[-1].get("status")
+        if not (isinstance(status, int) and 200 <= status < 300):
+            gaps.append("http_status")  # 404·5xx뿐 아니라 이동 횟수 한도에서 끊긴 3xx도 여기에 든다
+    if chain and not all(str(h.get("url", "")).lower().startswith("https://") for h in chain):
+        gaps.append("not_https")
+    elif (fetch.get("tls") or {}).get("verified") is not True:
+        gaps.append("tls_unverified")
+    if fetch.get("body_truncated"):
+        gaps.append("page_truncated")  # 본문이 잘려 뒤쪽 입력란·이동 코드를 보지 못했다
+    if not _ok(ev.page):
+        gaps.append("page")
+    elif ev.page.get("js_redirect_hint"):
+        gaps.append("client_redirect")  # 메타 새로고침·스크립트 이동을 감지했지만 도착지는 조사하지 않았다
+    return gaps
 
 
 def resolve_entity(ev: Evidence, kb: KB) -> tuple[Entity | None, str]:
@@ -142,6 +183,8 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
     if parse.get("is_ip_host") or parse.get("has_userinfo"):
         signals.append(sig("ip_or_userinfo_host", "mid", is_ip=bool(parse.get("is_ip_host")),
                            has_userinfo=bool(parse.get("has_userinfo"))))
+    if ev.internal_resolution:
+        signals.append(sig("internal_address", "mid"))
     if entity and not is_official and not is_partner:
         signals.append(sig("domain_not_official", "mid", official_domain=entity.official_domains[0],
                            entity_id=entity.id))
@@ -227,12 +270,17 @@ def decide(ev: Evidence, kb: KB) -> Outcome:
 
     if strong and identified:  # 규칙 2
         return Outcome("suspected_impersonation", entity, source, signals, purpose)
-    # 규칙 3. 페이지를 실제로 보지 못했으면(fetch_failed) 안전이라고 말하지 않는다.
-    if ({"official_match", "partner_match"} & types and not strong
-            and not {"cross_domain_form", "redirect_other_domain", "fetch_failed"} & types):
+    # 규칙 3. 확인 못 한 부분이 하나라도 있으면 안전이라고 말하지 않는다(거짓 safe 금지).
+    gaps = verification_gaps(ev)
+    matched = bool({"official_match", "partner_match"} & types)
+    if (matched and not gaps and not strong
+            and not {"cross_domain_form", "redirect_other_domain", "fetch_failed",
+                     "ip_or_userinfo_host", "internal_address"} & types):
         return Outcome("safe", entity, source, signals, purpose)
     if mid or strong:  # 규칙 4
-        return Outcome("caution", entity, source, signals, purpose)
+        return Outcome("caution", entity, source, signals, purpose, verification_gaps=gaps)
     if "fetch_failed" in types:  # 규칙 5
-        return Outcome("unknown", entity, source, signals, purpose, "fetch_failed")
-    return Outcome("unknown", entity, source, signals, purpose, "no_kb")  # 규칙 6
+        return Outcome("unknown", entity, source, signals, purpose, "fetch_failed", gaps)
+    if matched:  # 규칙 5-2: 주소는 맞지만 페이지·경로·암호화 접속을 확인하지 못함
+        return Outcome("unknown", entity, source, signals, purpose, "unverified", gaps)
+    return Outcome("unknown", entity, source, signals, purpose, "no_kb", gaps)  # 규칙 6
