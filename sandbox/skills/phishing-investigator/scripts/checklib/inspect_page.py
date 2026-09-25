@@ -3,14 +3,17 @@
 HTML은 파싱만 한다(실행하지 않음). 페이지 문구는 공격자가 만든 데이터이므로
 길이를 제한한 구조화 필드로만 내보내고, 그 문구의 지시를 해석하지 않는다.
 
-브라우저가 읽는 방식과 갈리면 검사기가 못 본 것을 브라우저가 실행할 수 있다. 그래서 문자셋은 WHATWG 이름만,
-중복 속성은 첫 값만, 상대 주소는 브라우저식으로(resolve_reference), 폼 소유는 `form` 속성까지 따른다.
+브라우저가 읽는 방식과 갈리면 검사기가 못 본 것을 브라우저가 실행할 수 있다. 그래서 마크업은 HTML5 명세를 따르는
+html5lib(토크나이저·트리 빌더)로 읽고, 문자셋은 WHATWG 이름만, 상대 주소는 브라우저식으로(resolve_reference),
+폼 소유는 `form` 속성까지 따른다. html5lib가 없거나 시간·크기 한도를 넘으면 분석하지 못한 것으로 처리한다(안전 판정 불가).
 """
 from __future__ import annotations
 
 import codecs
 import re
-from html.parser import HTMLParser
+import threading
+import time
+import warnings
 from urllib.parse import urlsplit
 
 from .parse_url import registrable_of, resolve_reference, to_ascii_host
@@ -59,13 +62,10 @@ _MAX_DOCS = 8  # iframe srcdoc를 따라 들어갈 문서 수 상한
 _MAX_DEPTH = 3
 _MAX_DESTINATIONS = 20  # 폼 하나에서 따로 판단할 등록 도메인 수 상한(넘으면 overflow로 표시해 안전 판정에서 뺀다)
 _MAX_TITLE = 500  # 제목·브랜드 후보를 만들 때 보는 길이 상한
+_MAX_TAGS = 150_000  # 태그 시작 부호(<) 수 상한: 넘으면 트리 빌더 비용이 커지므로 분석하지 않는다
+_PARSE_BUDGET_S = 8.0  # 문서 하나(srcdoc 포함) 분석에 쓸 수 있는 시간
+_MAX_ITEMS = 50_000  # 문서에서 모으는 목록(링크·주소·핸들러 등)의 개수 상한
 _MAX_ACTIONS = 5000  # 폼 하나에서 훑는 전송 대상(action·formaction) 수 상한
-# 안의 태그를 브라우저가 요소로 읽지 않는 요소(RCDATA·RAWTEXT). 파서가 끝 태그까지를 글자로 읽게 한다.
-_CDATA_TAGS = {"textarea", "title", "xmp", "iframe", "noembed", "noframes", "noscript", "plaintext"}
-# 안의 태그가 문서에 효력을 주지 않는 요소(template의 내용은 비활성, select 안의 form은 무시된다)
-_RAW_TEXT = {"template", "select"}
-_VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr",
-         "param", "keygen"}
 _MAX_LABEL = 200  # 라벨·속성 문구를 분류할 때 보는 길이 상한
 _ACTIVE_ATTRS = ("src", "data", "href", "xlink:href", "codebase")  # 요소에 따라 실제로 쓰이는 속성이 다르므로 모두 본다
 
@@ -127,148 +127,136 @@ def _js_redirect_hint(texts: list[str]) -> bool:
     return False
 
 
-class _PageParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
+def _local(name) -> str:
+    """etree의 `{네임스페이스}이름`에서 이름만(SVG·MathML 요소와 xlink 속성도 같은 이름으로 본다)."""
+    return name.rsplit("}", 1)[-1].lower() if isinstance(name, str) else ""
+
+
+class _Doc:
+    """html5lib 트리에서 검사에 필요한 것만 뽑아 둔다. 요소·속성 해석은 전부 HTML5 명세를 따른 트리가 정한다."""
+
+    def __init__(self, root) -> None:
         self.title = ""
-        self._in_title = False
         self.metas: list[dict] = []
         self.imgs: list[dict] = []
         self.links: list[str] = []
         self.forms: list[dict] = []
-        self._form: int | None = None  # 지금 열려 있는 form의 번호
         self.controls: list[dict] = []  # 입력란·버튼(폼 밖에 있어도 `form` 속성으로 폼에 속할 수 있다)
         self.label_for: dict[str, str] = {}
-        self._label_for: str | None = None
-        self._label_buf: list[str] = []
-        self._in_label = False
-        self._pending_wrapped_inputs: list[dict] = []
-        self._in_script = False
-        self._in_style = False
         self.script_text: list[str] = []
         self.text_nodes: list[str] = []
-        self.base_href: str | None = None  # 첫 <base href>만 효력이 있다
+        self.base_href: str | None = None  # 문서 트리 순서의 첫 <base href>(template 안은 제외)
         self.active_srcs: list[str] = []  # 다른 곳의 코드를 끌어오는 script·iframe·frame·embed·object 주소
         self.handler_text: list[str] = []  # onload="…" 같은 이벤트 핸들러 속성값
         self.srcdocs: list[str] = []  # iframe srcdoc(그 안의 문서도 같은 검사를 받는다)
-        # <textarea>·<title>·<template> 등 안의 태그는 브라우저가 요소로 읽지 않는다(파이썬 파서는 읽는다).
-        self._raw: str | None = None
-        self._raw_depth = 0
+        # html5lib가 명세대로 읽지 못하는 구조(template의 폼 포인터·비활성 내용). 있으면 안전 판정에서 뺀다.
+        self.unmodeled: list[str] = []
+        self._walk(root)
 
-    # 태그 처리
-    def handle_starttag(self, tag: str, attrs_list) -> None:
-        a: dict[str, str] = {}
-        for k, v in attrs_list:
-            a.setdefault(k, v or "")  # 브라우저는 중복 속성 중 첫 번째만 쓴다
-        for k, v in a.items():
-            if k.lower().startswith("on") and v:
-                self.handler_text.append(v)
-        if tag == "base" and self.base_href is None and a.get("href") and self._raw is None:
-            self.base_href = a["href"]
-        if tag in ("script", "iframe", "frame", "embed", "object"):
-            # 어느 속성이 실제로 쓰이는지는 요소·네임스페이스(SVG script의 href 등)에 달렸으므로, 있는 것을 모두 본다.
-            # 한 속성에 무해한 값을 넣어 다른 속성의 외부 주소를 가리지 못하게 한다.
-            for attr in _ACTIVE_ATTRS:
-                if a.get(attr):
-                    self.active_srcs.append(a[attr])
-        if a.get("srcdoc"):
-            self.srcdocs.append(a["srcdoc"])
-        if "formaction" in a or "form" in a or tag in ("input", "textarea", "select", "button"):
-            self.controls.append({"parent": self._form, "form": a.get("form") if "form" in a else None,
-                                  "formaction": a.get("formaction") if "formaction" in a else None,
-                                  "item": None})
-        if tag in _CDATA_TAGS:
-            self._enter_text_mode(tag)
-        if tag in _RAW_TEXT:
-            if self._raw is None:
-                self._raw, self._raw_depth = tag, 1
-            elif tag == "template" and self._raw == "template":
-                self._raw_depth += 1
-        if tag == "title":
-            self._in_title = True
-        elif tag == "meta":
-            self.metas.append(a)
-        elif tag == "img":
-            self.imgs.append(a)
-        elif tag == "a" and a.get("href"):
-            self.links.append(a["href"])
-        elif tag == "form":
-            if self._raw is not None:  # 글자로 읽히는 문맥의 form: 목적지는 살펴보되 진짜 form의 시작·끝을 흔들지 못한다
-                self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""), "method":
-                                   (a.get("method") or "get").lower()})
-            elif self._form is None:  # 브라우저는 열린 form 안의 form 시작 태그를 무시한다(안쪽 action은 효력이 없다)
-                self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""), "method":
-                                   (a.get("method") or "get").lower()})
-                self._form = len(self.forms) - 1
-        elif tag == "label":
-            self._in_label = True
-            self._label_for = a.get("for") or None
-            self._label_buf = []
-            self._pending_wrapped_inputs = []
-        elif tag in ("input", "textarea", "select"):
-            if tag == "input" and (a.get("type") or "text").lower() in _SKIP_INPUT_TYPES:
-                return
-            item = dict(a)
-            item["_tag"] = tag
-            self.controls[-1]["item"] = item
-            if self._in_label:
-                self._pending_wrapped_inputs.append(item)
-        elif tag == "script":
-            self._in_script = True
-        elif tag == "style":
-            self._in_style = True
-
-    def _enter_text_mode(self, tag: str) -> None:
-        """이 요소의 내용을 끝 태그까지 글자로 읽게 한다(브라우저와 같다). 자기 닫음 표기(`<textarea/>`)에도 같다."""
-        if self.cdata_elem is None:
-            try:
-                self.set_cdata_mode(tag)
-            except TypeError:  # 파이썬 버전에 따라 시그니처가 다르다
-                self.set_cdata_mode(tag, escapable=False)  # type: ignore[call-arg]
-
-    def handle_startendtag(self, tag: str, attrs_list) -> None:
-        """HTML은 void가 아닌 요소의 `/>`를 무시한다(`<form />`은 여는 태그다). 파이썬 기본 동작은 곧바로 닫는다."""
-        self.handle_starttag(tag, attrs_list)
-        if tag in _VOID:
-            self.handle_endtag(tag)
-        elif tag in ("script", "style"):
-            self._enter_text_mode(tag)
-
-    def handle_endtag(self, tag: str) -> None:
-        if self._raw is not None and tag == self._raw and tag != "plaintext":
-            self._raw_depth -= 1
-            if self._raw_depth <= 0:
-                self._raw = None
-        if tag == "title":
-            self._in_title = False
-        elif tag == "form" and self._raw is None:
-            self._form = None
-        elif tag == "label":
-            text = " ".join("".join(self._label_buf).split())[:_MAX_LABEL]
-            if self._label_for:
-                self.label_for[self._label_for] = text
-            for it in self._pending_wrapped_inputs:
-                it["_label"] = text
-            self._in_label = False
-            self._label_for = None
-        elif tag == "script":
-            self._in_script = False
-        elif tag == "style":
-            self._in_style = False
-
-    def handle_data(self, data: str) -> None:
-        if self._in_title and len(self.title) < _MAX_TITLE:
-            self.title += data[:_MAX_TITLE]
-        if self._in_script:
-            self.script_text.append(data)
-            return
-        if self._in_style:
-            return
-        if self._in_label and sum(map(len, self._label_buf)) < _MAX_LABEL * 2:
-            self._label_buf.append(data[:_MAX_LABEL * 2])
-        s = " ".join(data.split())
-        if s:
-            self.text_nodes.append(s)
+    def _walk(self, root) -> None:
+        forms: list[int] = []  # 열려 있는 form의 번호 스택
+        template_depth = 0
+        skip_text = 0  # script·style 안의 글자는 본문 글이 아니다
+        label: dict | None = None
+        got_title = False
+        todo: list[tuple[str, object]] = [("enter", root)]
+        while todo:
+            kind, el = todo.pop()
+            if kind == "text":
+                txt = el
+                if not txt:
+                    continue
+                if label is not None and sum(map(len, label["buf"])) < _MAX_LABEL * 2:
+                    label["buf"].append(txt[:_MAX_LABEL * 2])
+                if not skip_text and len(self.text_nodes) < _MAX_ITEMS:
+                    t = " ".join(txt.split())
+                    if t:
+                        self.text_nodes.append(t[:400])
+                continue
+            if kind == "exit":
+                name = _local(el.tag)
+                if name == "form" and forms:
+                    forms.pop()
+                elif name == "template":
+                    template_depth -= 1
+                elif name in ("script", "style"):
+                    skip_text -= 1
+                elif name == "label" and label is not None and label["el"] is el:
+                    text = " ".join("".join(label["buf"]).split())[:_MAX_LABEL]
+                    if label["for"]:
+                        self.label_for[label["for"]] = text
+                    for it in label["inputs"]:
+                        it["_label"] = text
+                    label = None
+                continue
+            # enter
+            if not isinstance(el.tag, str):  # 주석·처리 명령
+                for child in reversed(list(el)):
+                    todo.append(("text", child.tail))
+                    todo.append(("enter", child))
+                continue
+            name = _local(el.tag)
+            a: dict[str, str] = {}
+            for k, v in el.attrib.items():
+                a.setdefault(_local(k), v or "")
+            for k, v in a.items():
+                if k.startswith("on") and v and len(self.handler_text) < _MAX_ITEMS:
+                    self.handler_text.append(v)
+            if a.get("srcdoc") and len(self.srcdocs) < _MAX_ITEMS:
+                self.srcdocs.append(a["srcdoc"])
+            if name == "template":
+                template_depth += 1
+                if "template" not in self.unmodeled:
+                    self.unmodeled.append("template")
+            elif name == "base":
+                if self.base_href is None and a.get("href") and template_depth == 0:
+                    self.base_href = a["href"]
+            elif name in ("script", "iframe", "frame", "embed", "object"):
+                # 어느 속성이 실제로 쓰이는지는 요소·네임스페이스(SVG script의 href 등)에 달렸으므로, 있는 것을 모두 본다.
+                # 한 속성에 무해한 값을 넣어 다른 속성의 외부 주소를 가리지 못하게 한다.
+                for attr in _ACTIVE_ATTRS:
+                    if a.get(attr) and len(self.active_srcs) < _MAX_ITEMS:
+                        self.active_srcs.append(a[attr])
+            if name == "script":
+                skip_text += 1
+                if len(self.script_text) < _MAX_ITEMS:
+                    self.script_text.append("".join(el.itertext()))
+            elif name == "style":
+                skip_text += 1
+            elif name == "title" and not got_title and el.tag == "title":
+                got_title = True
+                self.title = "".join(el.itertext())[:_MAX_TITLE]
+            elif name == "meta":
+                self.metas.append(a) if len(self.metas) < _MAX_ITEMS else None
+            elif name == "img":
+                self.imgs.append(a) if len(self.imgs) < _MAX_ITEMS else None
+            elif name in ("a", "area") and a.get("href") and len(self.links) < _MAX_ITEMS:
+                self.links.append(a["href"])
+            elif name == "form":
+                self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""),
+                                   "method": (a.get("method") or "get").lower()})
+                forms.append(len(self.forms) - 1)
+            elif name == "label" and label is None:
+                label = {"el": el, "for": a.get("for") or None, "buf": [], "inputs": []}
+            if name in ("input", "textarea", "select", "button") or "formaction" in a or "form" in a:
+                item = None
+                if name in ("input", "textarea", "select") and not (
+                        name == "input" and (a.get("type") or "text").lower() in _SKIP_INPUT_TYPES):
+                    item = {**a, "_tag": name}
+                    if label is not None:
+                        label["inputs"].append(item)
+                if len(self.controls) < _MAX_ITEMS:
+                    self.controls.append({"parent": forms[-1] if forms else None,
+                                          "form": a.get("form") if "form" in a else None,
+                                          "formaction": a.get("formaction") if "formaction" in a else None,
+                                          "item": item})
+            # 자식들을 문서 순서대로 처리하도록 거꾸로 넣는다(글자→자식→꼬리 글자 순)
+            todo.append(("exit", el))
+            for child in reversed(list(el)):
+                todo.append(("text", child.tail))
+                todo.append(("enter", child))
+            if name not in ("script", "style", "title"):  # 그 글자는 위에서 따로 다뤘다
+                todo.append(("text", el.text))
 
     def form_groups(self) -> list[tuple[list[str], list[dict]]]:
         """(전송 대상 후보들, 입력란들). 컨트롤은 `form` 속성이 있으면 그 id의 폼에, 없으면 감싼 폼에 속한다.
@@ -295,6 +283,39 @@ class _PageParser(HTMLParser):
         if loose:
             groups.append(([""], loose))
         return groups
+
+
+class _ParseFailed(Exception):
+    """트리를 만들지 못했다(라이브러리 없음, 너무 복잡함, 시간 초과)."""
+
+
+def _build_tree(text: str, timeout: float):
+    """HTML5 명세를 따른 트리. 적대적 입력에서 비용이 커질 수 있어 태그 수와 시간을 제한한다."""
+    try:
+        import html5lib  # 지연 import: 없으면 분석 실패로 처리한다(안전 판정 불가)
+    except ImportError as e:
+        raise _ParseFailed("html5lib missing") from e
+    if text.count("<") > _MAX_TAGS:
+        raise _ParseFailed("too many tags")
+    box: dict = {}
+
+    def run() -> None:
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                # scripting=True: 일반 브라우저처럼 <noscript> 안은 글자로 읽는다
+                box["tree"] = html5lib.parse(text, treebuilder="etree", namespaceHTMLElements=False, scripting=True)
+        except BaseException as e:  # noqa: BLE001 - 어떤 실패도 분석 실패로
+            box["err"] = e
+
+    th = threading.Thread(target=run, name="html5lib-parse", daemon=True)
+    th.start()
+    th.join(max(timeout, 0.1))
+    if th.is_alive():
+        raise _ParseFailed("parse timeout")  # 스레드는 데몬이라 검사 스크립트가 끝나면 함께 끝난다
+    if "err" in box:
+        raise _ParseFailed(f"parse error: {type(box['err']).__name__}")
+    return box["tree"]
 
 
 def _trim(s: str, n: int) -> str:
@@ -580,22 +601,28 @@ def _resolve(base: str, ref: str) -> str:
     return resolve_reference(base, ref)
 
 
-def _parse_all(text: str, page_url: str) -> tuple[list[tuple[_PageParser, str]], bool]:
-    """(문서 파서와 그 문서의 기준 주소) 목록, 상한을 넘겨 다 보지 못했는가. iframe srcdoc 안의 문서까지 따라 들어간다."""
-    docs: list[tuple[_PageParser, str]] = []
+def _parse_all(text: str, page_url: str) -> tuple[list[tuple[_Doc, str]], bool]:
+    """(문서와 그 문서의 기준 주소) 목록, 상한을 넘겨 다 보지 못했는가. iframe srcdoc 안의 문서까지 따라 들어간다.
+    첫 문서를 만들지 못하면 `_ParseFailed`."""
+    docs: list[tuple[_Doc, str]] = []
     todo: list[tuple[str, str, int]] = [(text, page_url, 0)]
     overflow = False
+    deadline = time.time() + _PARSE_BUDGET_S
     while todo:
         t, parent_base, depth = todo.pop(0)
         if len(docs) >= _MAX_DOCS:
             overflow = True
             continue
-        p = _PageParser()
-        p.feed(t)
-        p.close()
-        base = _resolve(parent_base, p.base_href) if p.base_href else parent_base
-        docs.append((p, base))
-        for sd in p.srcdocs:
+        try:
+            doc = _Doc(_build_tree(t, deadline - time.time()))
+        except _ParseFailed:
+            if not docs:
+                raise
+            overflow = True  # 중첩 문서를 만들지 못했다: 다 보지 못한 것으로 표시한다
+            continue
+        base = _resolve(parent_base, doc.base_href) if doc.base_href else parent_base
+        docs.append((doc, base))
+        for sd in doc.srcdocs:
             if depth + 1 >= _MAX_DEPTH:
                 overflow = True
             else:
@@ -630,7 +657,10 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
     text = _decode(html_bytes, content_type)
     if text is None:
         return {"ok": False, "error": "undecodable html"}
-    docs, overflow = _parse_all(text, page_url)
+    try:
+        docs, overflow = _parse_all(text, page_url)
+    except _ParseFailed as e:
+        return {"ok": False, "error": str(e)}
     p, base_url = docs[0]
 
     page_host = to_ascii_host(urlsplit(page_url).hostname or "")
@@ -729,6 +759,8 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                     ext_overflow = True
     if overflow or ext_overflow:  # 중첩 문서가 너무 많거나 깊어, 또는 도메인이 너무 많아 다 보지 못했다
         ext.append("(nested)")
+    if any(d.unmodeled for d, _ in docs):  # 파서가 명세대로 읽지 못한 구조가 있어 폼·스크립트를 다 봤다고 할 수 없다
+        ext.append("(unmodeled)")
 
     # "공식·안전·인증" 류 주장 문구: 길이 제한, 최대 3개. 검증 대상 주장일 뿐이다.
     claims: list[str] = []

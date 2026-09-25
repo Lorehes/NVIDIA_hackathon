@@ -103,6 +103,10 @@ def test_destination_overflow_prevents_safe():
 def test_fake_form_in_text_context_does_not_hide_the_real_form(opener, closer):
     r = _forms(f'<{opener}><form></{closer}><form action="https://evil.test"><input type=password>'
                '<button>Go</button></form>')
+    if opener == "template":  # html5lib는 template를 명세대로 읽지 못하므로 안전 판정에서 뺀다
+        assert "(unmodeled)" in r["external_active_domains"]
+        assert decide(**_safe_ev(page={**page(), "external_active_domains": r["external_active_domains"]})).verdict != "safe"
+        return
     assert any(f["cross_domain"] and "password" in f["field_types"] for f in r["forms"])
     assert decide(**_safe_ev(page={**page(), "forms": r["forms"]})).verdict != "safe"
 
