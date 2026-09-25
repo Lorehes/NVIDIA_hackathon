@@ -2,6 +2,7 @@
 import copy
 
 
+from app import presentation as pres
 from app import verdict as V
 from app.kb import KB
 
@@ -141,6 +142,42 @@ def test_official_but_redirects_to_unknown_domain_is_not_safe():
     o = decide(parse=parse("hanbit.example"), similarity=similarity(), fetch=fetch("hanbit.example", chain),
                page=page(), claim=claim())
     assert o.verdict == "caution" and {"redirect_other_domain", "redirect_blocked"} <= types(o)
+
+
+def test_official_domain_with_policy_forbidden_card_is_caution_not_safe_or_suspected():
+    """도메인은 진짜 hanbit.example이지만, 회사가 명시적으로 금지한 카드 정보를(policy_rules) 배송
+    목적(delivery, 카드도 목적상 금지)에 요구한다. 주소가 맞다는 사실과 별개 축이라 caution까지만 간다
+    (safe도 suspected_impersonation도 아님) — docs 3절 "공식 주소 여부와 위험 행동을 별도로 표시"."""
+    o = decide(parse=parse("hanbit.example"), similarity=similarity(), fetch=fetch("hanbit.example"),
+               page=page(["card_number", "card_cvc"]), claim=claim(purpose="delivery"))
+    assert o.verdict == "caution"
+    pm = next(s for s in o.signals if s["type"] == "purpose_mismatch")
+    assert pm["strength"] == "mid" and pm["data"]["fields"] == ["card_number", "card_cvc"] and pm["data"]["policy"]
+    assert "official_match" in types(o)  # 주소 일치 신호는 그대로 남는다(별도 축)
+
+
+def test_official_domain_with_purpose_only_mismatch_stays_safe():
+    """목적 분류(delivery)상으로는 비밀번호가 안 맞아 보여도, 회사가 그것을 명시적으로 금지한 정책이
+    없으면(hanbit은 카드만 금지) 흔들지 않는다 — 모델의 목적 분류 오류로 정상 페이지가 caution이
+    되는 것을 막기 위한 의도적 설계(docs/decisions.md)."""
+    o = decide(parse=parse("hanbit.example"), similarity=similarity(), fetch=fetch("hanbit.example"),
+               page=page(["password"]), claim=claim(purpose="delivery"))
+    assert o.verdict == "safe" and "purpose_mismatch" not in types(o)
+
+
+def test_explanation_separates_verified_address_from_risky_request():
+    """caution 문구는 "진짜 주소가 아니라서"가 아니라, 주소는 맞는데 요구가 이상하다고 따로 말해야
+    한다(별도 축). 주소 신호(official_match)와 비교표의 "주소" 행은 그대로 "같아요"를 유지한다."""
+    o = decide(parse=parse("hanbit.example"), similarity=similarity(), fetch=fetch("hanbit.example"),
+               page=page(["card_number", "card_cvc"]), claim=claim(purpose="delivery"))
+    assert o.verdict == "caution"
+    tpl = pres.build_explanation(o, page(["card_number", "card_cvc"]), "hanbit.example", None, True)
+    assert "진짜 주소가 아니" not in tpl["headline"]
+    assert "진짜" in tpl["headline"] and ("이상" in tpl["headline"] or "카드" in "".join(tpl["suspicion_evidence"]))
+    rows = pres.build_comparison(o, page(["card_number", "card_cvc"]), fetch("hanbit.example"),
+                                 parse("hanbit.example"), None, True)
+    addr = next(r for r in rows if r["key"] == "address")
+    assert addr["status"] == "ok" and addr["status_label"] == "같아요"
 
 
 def test_official_but_unreachable_is_unknown_not_safe():

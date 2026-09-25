@@ -63,7 +63,8 @@ class Settings:
 
     # 임베딩(NeMo Retriever). 키가 없으면 문자 n-gram 검색으로 대체
     nvidia_api_key: str | None = os.environ.get("NVIDIA_API_KEY") or None
-    embed_model: str = os.environ.get("EMBED_MODEL", "nvidia/llama-3.2-nv-embedqa-1b-v2")
+    # nvidia/llama-3.2-nv-embedqa-1b-v2는 2026-05-18 단종(410 Gone, 실제 키로 확인). nemotron-3-embed-1b로 교체.
+    embed_model: str = os.environ.get("EMBED_MODEL", "nvidia/nemotron-3-embed-1b")
     embed_url: str = os.environ.get("EMBED_URL", "https://integrate.api.nvidia.com/v1/embeddings")
 
     # 재생 모드 진행 속도 배율(1.0 = 실제 시연 속도 약 12초)

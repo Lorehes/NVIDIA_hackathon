@@ -353,25 +353,38 @@ def build_explanation(outcome: Outcome, page: dict | None, actual: str | None, c
                                     f"불안하면 {app}에서 직접 확인해도 돼요."], source="template")
 
     if v == "caution":
-        if entity:
+        # 주소가 공식·협력 회사와 같은데도 caution이면(purpose_mismatch가 mid로 낮춰진 경우) 원인이
+        # "가짜 주소"가 아니라 "위험한 요구"다. 주소 일치와 페이지의 위험한 행동은 별도 축이므로 문구를 나눈다.
+        verified_domain = bool({"official_match", "partner_match"} & types)
+        if entity and verified_domain:
+            head = f"주소는 {ko.possessive(N)} 진짜 주소인데, 요구하는 것이 이상해요."
+            detail = f"주소의 주인은 {N} 진짜 주소와 같지만, 열어 본 페이지가 문자 내용과 맞지 않는 것을 적으라고 해요."
+        elif entity:
             head = f"{ko.possessive(N)} 진짜 주소가 아니라서 조심해야 해요."
             detail = f"이 주소는 {N} 진짜 주소 목록에 없어요."
         else:
             head = "어느 회사인지 알 수 없지만, 위험한 점이 있어요."
             detail = f"\"{N}\"의 진짜 주소는 저희 목록에 없어요." if N else "문자가 말한 회사의 진짜 주소는 저희 목록에 없어요."
         sens = [t for t in fields if t in CREDENTIAL_TYPES]
-        if sens and "cross_domain_form" in types:
+        if verified_domain:
+            pass  # 위 detail과 evidence 카드("조심해야 하는 이유")가 이미 어떤 정보를 왜 요구하면 안 되는지 말한다
+        elif sens and "cross_domain_form" in types:
             detail += f" 그런데 {_particle(sens[:1], '을', '를')} 적게 하고, 그 내용을 다른 사이트로 보내요."
         elif sens:
             detail += f" 그런데 {_particle(sens[:1], '을', '를')} 적는 칸이 있어요."
         unv = ([f"{N}의 진짜 주소"] if (not entity and N) else []) \
             + (["문자를 보낸 전화번호가 진짜인지"] if message_given else [])
-        bullets = ["문자 속 전화번호로 전화하지 마세요."]
+        if verified_domain:
+            bullets = [f"이 페이지에는 아직 정보를 적지 마세요.", f"{app}이나 대표번호로 먼저 확인하세요."]
+            action = f"{app}이나 대표번호로 먼저 확인한 뒤에 적으세요."
+        else:
+            bullets = ["문자 속 전화번호로 전화하지 마세요."]
+            action = f"링크 대신, {app}이나 대표 전화번호로 직접 물어보세요."
         if set(fields) & {"password", "otp"}:
             bullets.append("비밀번호, 인증번호는 적지 마세요.")
         return dict(headline=head, warning=None, detail=detail,
                     confirmed_facts=facts, suspicion_evidence=evidence, unverified=unv,
-                    recommended_action=f"링크 대신, {app}이나 대표 전화번호로 직접 물어보세요.",
+                    recommended_action=action,
                     action_bullets=bullets, source="template")
 
     # unknown

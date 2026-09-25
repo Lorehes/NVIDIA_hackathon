@@ -18,7 +18,7 @@
 | 신호 `brand_in_domain`(강) | 등록 도메인 이름에 공식 브랜드 이름이 토큰으로 포함(`hanbit-parcel.test`) | 명세의 유사도(≥0.80)로는 "화면 복제" 사례(E4)의 주소를 잡지 못함 |
 | 신호 `domain_not_official`(중) | 사칭 대상이 KB에 있는데 주소가 공식·파트너 목록에 없음 | 기관을 특정했는데도 공식 주소가 아닌 주소가 `unknown`이 되는 빈틈을 막음 |
 | 규칙 3 보강 | `safe`는 페이지를 실제로 열어본 경우에만. `fetch_failed`·`redirect_other_domain`이 있으면 `safe`가 아님 | 열지 못한 사이트를 "안전"이라고 안내하지 않기 위해(N6) |
-| 공식·파트너 도메인 | 목적 불일치(`purpose_mismatch`)와 위장·유사 신호를 판정에 쓰지 않음 | 모델의 목적 분류 오류가 정상 사이트(E1, E5)를 흔들지 못하게 |
+| 공식·파트너 도메인 | 위장·유사 신호는 판정에 쓰지 않음. 목적 불일치(`purpose_mismatch`)는 2026-09-25부터 완전히 빼지 않고, 회사가 KB에 명시적으로 금지한다고 밝힌 항목(`policy_rules`)이면서 목적으로도 기대되지 않는 항목일 때만 `mid`(→ `caution`, `safe` 아님)로 별도 축에 알린다 | 모델의 목적 분류 오류가 정상 사이트(E1, E5)를 흔들지 못하게 하면서도, 보안 검토 3절 "공식 주소 여부와 위험 행동을 별도로 표시"를 반영 |
 | `incomplete`(조사 중단) | 에이전트 실패·시간 초과·정책 오류는 다른 신호와 무관하게 `unknown`. 단 멈추기 전 발견한 것(`partial_findings`)은 보여 줌 | 디자인 4e·PRD N6. 명세 규칙 1의 확장 |
 | 3xx 응답 본문 저장 | 리다이렉트 응답이 본문(HTML)을 실어 보내면 저장·분석 | 디자인 3f·3g 사례(넘어가려던 곳은 막고 페이지는 분석)를 하나의 흐름으로 재현 |
 | `record_claim.py --name` | KB에 없는 기관의 이름(20자)을 선택적으로 기록 | 결과 화면 "별빛마켓의 진짜 주소는 목록에 없어요"에 필요. 화면에 나가기 전 코드가 문자 종류를 제한 |
@@ -38,7 +38,12 @@
 
 - OpenShell/NemoClaw 실제 명령 형식은 스파이크 결과 보고서의 표기를 따랐고, 이 PC에는 없어 **실제 호출로는 검증하지 못했다**. 명령 순서·정책 수명주기는 가짜 실행기로 테스트했다(`tests/test_sandbox_openshell.py`).
   `openclaw agent --json`의 `toolSummary`/`executionTrace`/모델 이름 필드 위치는 [추정]이라 `sandbox.extract_tools`/`_agent_meta`가 관대하게 읽는다. 첫 실행 뒤 실제 형식에 맞춰 조정할 것.
-- 임베딩 API(NeMo Retriever)는 키가 없어 검증하지 못했다(키가 없으면 문자 n-gram 검색으로 대체된다). 모델 ID는 [추정].
+- ~~임베딩 API(NeMo Retriever)는 키가 없어 검증하지 못했다~~ **[2026-09-25 검증 완료]** 실제 키로 확인해 보니 기존
+  기본값 `nvidia/llama-3.2-nv-embedqa-1b-v2`는 2026-05-18에 단종되어 410 Gone을 반환한다(`{"detail":"...has reached
+  its end of life..."}`). `https://integrate.api.nvidia.com/v1/models` 목록에서 이 계정 키로 실제 호출 가능한
+  임베딩 모델을 확인해 `nvidia/nemotron-3-embed-1b`(2048차원)로 교체했다. 한빛택배·하늘은행 KB 문장으로 배송/계좌
+  두 문맥 질의를 넣어 올바른 순위가 나오는 것까지 확인(`app/kb.py`의 `_rank_embedding`). 기본값을 코드
+  (`app/config.py`)와 `.env.example`에 반영. 키가 없거나 API가 다시 실패하면 여전히 문자 n-gram으로 자동 대체된다.
 - 실제 기관 KB는 비어 있다(가상 브랜드 2개). `kb/README.md`의 절차로 공식 사이트에서 확인한 값만 추가할 것.
 - V1(실제 모델), V2(`web_fetch` 차단), V3(동시 호출), V4(조사 1건 소요 시간)는 VM에서 확인해야 한다.
 

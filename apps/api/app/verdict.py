@@ -5,7 +5,10 @@
 명세 대비 조정(사유는 docs/decisions.md):
 - `brand_in_domain`(강): 등록 도메인 이름 안에 공식 브랜드 이름이 들어 있음(hanbit-parcel.test).
 - `domain_not_official`(중): 사칭 대상이 KB에 있는데 주소가 공식·파트너 목록에 없음.
-- 공식·파트너 도메인 위에서는 목적 불일치를 판정에 쓰지 않는다(목적 분류 오류로 정상 사이트를 흔들지 않기 위해).
+- 공식·파트너 도메인의 목적 불일치(`purpose_mismatch`)는 주소가 맞다는 사실과 별개 축이다(보안 검토 3절 제품
+  개선). 다만 목적 분류 오류로 정상 페이지가 흔들리지 않도록, 회사가 KB에 명시적으로 금지한다고 밝힌 항목
+  (`policy_rules`)이면서 목적으로도 기대되지 않는 항목일 때만 `mid`로 쓴다(`strong`이 아니라 `caution`까지만).
+  `safe`는 여전히 막는다.
 - 조사가 중간에 멈추면(`incomplete`) 발견한 것과 관계없이 `unknown`(N6).
 """
 from __future__ import annotations
@@ -249,19 +252,32 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
                                action_domain=bad.get("registrable_domain") or ""))
             break
         purpose = (ev.claim or {}).get("purpose") if _ok(ev.claim) else None
-        if not (is_official or is_partner):
-            bad = order_fields(field_types & PURPOSE_FORBIDDEN.get(purpose or "other", set()))
-            policy_text = None
-            if entity:
-                for rule in entity.policy_rules:
-                    hit = order_fields(field_types & set(rule.get("forbids", [])))
-                    if hit:
-                        policy_text = rule.get("text")
-                        bad = order_fields(set(bad) | set(hit))
-                        break
-            if bad:
-                signals.append(sig("purpose_mismatch", "strong", fields=bad, purpose=purpose,
-                                   policy=policy_text))
+        forbidden = field_types & PURPOSE_FORBIDDEN.get(purpose or "other", set())
+        policy_text = None
+        policy_hit: set[str] = set()
+        if entity:
+            for rule in entity.policy_rules:
+                hit = field_types & set(rule.get("forbids", []))
+                if hit:
+                    policy_text = rule.get("text")
+                    policy_hit = hit
+                    break
+        if is_official or is_partner:
+            # 공식·협력 도메인은 주소가 맞다는 사실과 별개의 축이다: 목적 분류 오류(모델이 "배송"을
+            # "로그인"으로 잘못 읽는 등)만으로 정상 페이지가 흔들리면 안 되므로, 회사가 KB에 명시적으로
+            # 금지한다고 밝힌 항목(policy_rules, 출처 확인됨)이면서 목적으로도 기대되지 않는 항목일 때만
+            # 쓴다. 결제 페이지의 카드 정보처럼 목적에 맞는 요청은 정책 문구만으로 흔들지 않는다.
+            bad = order_fields(forbidden & policy_hit)
+            if not bad:
+                policy_text = None
+        else:
+            bad = order_fields(forbidden | policy_hit)
+        if bad:
+            # 공식·협력 도메인에서는 사칭 판정(strong)이 아니라 조심(mid)으로 낮춰
+            # "주소는 맞지만 요구가 이상하다"를 따로 보여준다(docs 3절 제품 개선).
+            strength = "mid" if (is_official or is_partner) else "strong"
+            signals.append(sig("purpose_mismatch", strength, fields=bad, purpose=purpose,
+                               policy=policy_text))
         if page.get("apk_links"):
             signals.append(sig("apk_download", "strong", links=page["apk_links"][:3]))
 
@@ -297,7 +313,7 @@ def decide(ev: Evidence, kb: KB) -> Outcome:
     matched = bool({"official_match", "partner_match"} & types)
     if (matched and not gaps and not strong
             and not {"cross_domain_form", "redirect_other_domain", "fetch_failed",
-                     "ip_or_userinfo_host", "internal_address"} & types):
+                     "ip_or_userinfo_host", "internal_address", "purpose_mismatch"} & types):
         return Outcome("safe", entity, source, signals, purpose)
     if mid or strong:  # 규칙 4
         return Outcome("caution", entity, source, signals, purpose, verification_gaps=gaps)
