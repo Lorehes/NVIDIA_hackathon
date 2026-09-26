@@ -1,0 +1,279 @@
+{
+  "job_id": "j_eb0ca19009c949c5856cb31ed126da84",
+  "status": "done",
+  "elapsed_ms": 12732,
+  "error": null,
+  "verdict": "unknown",
+  "identity": {
+    "host": "www.hc.go.kr",
+    "site_family": "hc.go.kr",
+    "status": "verified",
+    "name": "장단보건진료소",
+    "source": "https://www.hc.go.kr/06237/06249/06260.web",
+    "checked": "2026-09-25",
+    "canonical_from": null,
+    "expires_at": null,
+    "inspection_supported": true,
+    "inspection_limit_reason": null,
+    "reason": "reviewed_official_source_correction",
+    "matched_entities": [
+      {
+        "id": "site_10aff44e9b9309774d2f",
+        "name": "장단보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_190b1cabf6dbb6f91d2f",
+        "name": "양지보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_1ca5c6e8b3defe292ffa",
+        "name": "대기보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_46527415b559ba9478ea",
+        "name": "병목보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_58d7dfb99e8979857e90",
+        "name": "이책보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_6d534ee6ebc2f35179c8",
+        "name": "대동보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_7cc9532d8f7957ca820e",
+        "name": "동리보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_8db86e30ca0ee4430402",
+        "name": "하남보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_90f796a568fae0e45ed2",
+        "name": "숭산보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_bc4d5f7fbe7da6dc4015",
+        "name": "장인보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_ceb0b730eb71e28f228f",
+        "name": "평지보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_d621e4e437b43815aef4",
+        "name": "소례보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_eceff9aac83d8349ecac",
+        "name": "와리보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      },
+      {
+        "id": "site_ef36bd60c625e9bcf5f2",
+        "name": "낙진보건진료소",
+        "source": "https://www.hc.go.kr/06237/06249/06260.web",
+        "checked": "2026-09-25"
+      }
+    ],
+    "matched_entities_total": 14,
+    "related_addresses": [
+      "www.hc.go.kr"
+    ],
+    "observed_redirects": [],
+    "behavior": "incomplete"
+  },
+  "explanation": {
+    "headline": "장단보건진료소 공식 주소로 확인됐어요.",
+    "warning": null,
+    "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+    "confirmed_facts": [
+      "진짜 사이트 이름은 hc.go.kr이에요.",
+      "공식 출처에서 장단보건진료소 서비스의 주소를 확인했어요."
+    ],
+    "suspicion_evidence": [],
+    "unverified": [
+      "페이지가 나중에 스스로 바뀌는 내용"
+    ],
+    "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+    "action_bullets": [
+      "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+    ],
+    "source": "template"
+  },
+  "redirect_chain": [
+    {
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "host": "www.hc.go.kr",
+      "registrable_domain": "hc.go.kr",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-26T01:03:46.325+00:00"
+    }
+  ],
+  "connection": {
+    "verified": true,
+    "certificates": [
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "www.hc.go.kr"
+        ],
+        "sha256": "d54e26df3dcbc46bfd2dd9b1f364db8bccd7587442606f091e31ec21140fcfd9",
+        "protocol": "TLSv1.3"
+      }
+    ],
+    "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+  },
+  "incomplete_reason": null,
+  "agent": {
+    "tool_calls": [
+      "exec"
+    ],
+    "unexpected_tools": [],
+    "duration_ms": null,
+    "model_reported": null,
+    "kind": "openshell"
+  },
+  "catalog_sha256": "36980060141a40af64380bdd06fb79455b06d65920423a5799d4dc76e777e139",
+  "comparison": [
+    {
+      "key": "address",
+      "label": "주소",
+      "said": "장단보건진료소 사이트예요",
+      "found": "장단보건진료소 사이트가 맞아요",
+      "status": "ok",
+      "status_label": "같아요"
+    },
+    {
+      "key": "fields",
+      "label": "적는 칸",
+      "said": "안내 문자",
+      "found": "적는 칸 없음 (조회만)",
+      "status": "ok",
+      "status_label": "맞아요"
+    },
+    {
+      "key": "redirect",
+      "label": "넘어간 곳",
+      "said": "—",
+      "found": "다른 곳으로 넘어가지 않았어요",
+      "status": "ok",
+      "status_label": "괜찮아요"
+    }
+  ],
+  "signals": [
+    {
+      "type": "official_match",
+      "strength": "positive",
+      "data": {
+        "domain": "hc.go.kr",
+        "entity_id": "site_10aff44e9b9309774d2f"
+      }
+    }
+  ],
+  "page_trace": {
+    "available": true,
+    "title": null,
+    "brand_candidates": [],
+    "brand_sentence": null,
+    "stated_purpose_label": "안내 문자",
+    "expected_fields_label": null,
+    "field_rows": [],
+    "sends_to": null,
+    "sends_cross_domain": false,
+    "sends_sentence": null,
+    "apk_links": [],
+    "js_redirect_hint": true,
+    "trust_claims": []
+  },
+  "files_sha256": {
+    "apps/api/app/verdict.py": "7685831c8cd600c14514349c2aec91f84e7e1981b1db4ec9940d62428fb7e608",
+    "apps/api/app/presentation.py": "2dd40ab08b15175758823394384198d42ea3fa0ed79d07d4c16c5072a122ac1e",
+    "apps/api/app/trace.py": "91d659230704c0821cd94f671f0744cb08c7a72b0473f506d3a35cfc715d50b0",
+    "apps/api/tests/test_form_transport.py": "10c55924b28ba23d9784026407753c131e22481fcb6827d6a64994096d7c6027",
+    "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": "8f4e167c68778b1b972ec67fe101159d34c3114a1a06240607c42ebe66b2a491"
+  },
+  "health": {
+    "ok": true,
+    "sandbox_mode": "openshell",
+    "queue_length": 0,
+    "running": false,
+    "sandbox": {
+      "ok": true,
+      "text": "\u001b[1mNAME        \u001b[0m  \u001b[1mCREATED            \u001b[0m  \u001b[1mPHASE\u001b[0m\nmy-assistant  2026-09-23 16:57:12  \u001b[32mReady\u001b[39m\n",
+      "quarantined": false,
+      "pending_purge": 0,
+      "pending_local": 0,
+      "remote_reconciled": true
+    },
+    "inference": {
+      "ok": true,
+      "text": "\u001b[1m\u001b[36mInference:\u001b[39m\u001b[0m\n\n  \u001b[2mWorkspace:\u001b[0m default\n  \u001b[2mProvider:\u001b[0m nvidia-prod\n  \u001b[2mModel:\u001b[0m nvidia/nemotron-3-super-120b-a12b\n  \u001b[2mVersion:\u001b[0m 2\n  \u001b[2mTimeout:\u001b[0m 60s (default)\n\n\u001b[1m\u001b[36mSystem inference:\u001b[39m\u001b[0m\n\n  \u001b[2mNot configured\u001b[0m\n"
+    }
+  },
+  "policy_check": "no residual investigation presets (effective policy verified)",
+  "validation": {
+    "local_full": {
+      "passed": 723,
+      "seconds": 43.03
+    },
+    "vm_full": {
+      "passed": 723,
+      "seconds": 69
+    },
+    "related": {
+      "passed": 101,
+      "seconds": 13.02
+    },
+    "sandbox_uploaded": true,
+    "api_restarted": true,
+    "actual_forms_observed": false,
+    "browser_ui_checked": false,
+    "actual_submission_performed": false
+  }
+}

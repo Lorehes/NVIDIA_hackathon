@@ -1,0 +1,226 @@
+{
+  "checked": "2026-09-26T04:57:57.793631+00:00",
+  "before_sha256": {
+    "kb/site_catalog.json": "fcc4fdb468a50d83b65677f6009c0ea3462a1a4426218da6b9590914e08443c9",
+    "kb/sources/coverage.json": "599ab7ee3bf43f403d6f7e871370be4b66e37d3f93e0559b87ad00c98a57e574",
+    "kb/sources/verified_corrections.json": "65aa55a0d64feb91bb7a93d7683a36f814d778eb4659eb631e509855bcf04c07",
+    "kb/sources/kindergartens.json": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5",
+    "kb/sources/schools.json": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782"
+  },
+  "added": {
+    "source_dataset": "kindergartens",
+    "source_id": "e88e9384cbacbd0df806",
+    "name": "학다리중앙초등학교병설유치원",
+    "original_url": "https:hja.es.jne.kr",
+    "url": "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=265&srchClasYear=2025",
+    "scope": "url",
+    "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+    "checked": "2026-09-26",
+    "reason": "official_institution_page_confirmed",
+    "evidence": [
+      {
+        "kind": "official_directory_cross_reference",
+        "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+        "source_id": "8672014",
+        "name": "학다리중앙초등학교",
+        "url": "http://hja.es.jne.kr",
+        "region_or_education_office": "전남광주통합특별시(전남)",
+        "kindergarten_education_office": "함평교육지원청"
+      },
+      {
+        "kind": "official_site_navigation",
+        "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+        "label": "유치원",
+        "target": "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=265&srchClasYear=2025",
+        "http_status": 200,
+        "body_sha256": "dc602b83675b89033add2098f6ad5f3978f0422879f2ff89d46ea3e375110ade"
+      },
+      {
+        "kind": "official_institution_page",
+        "source": "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=265&srchClasYear=2025",
+        "http_status": 200,
+        "body_sha256": "12931a11f7ebd4d6949297c3442aade684cc70a9e11900c485efcef27e79a6e4",
+        "confirmed_school": "학다리중앙초등학교",
+        "confirmed_class": "열매",
+        "observed_public_plan_date": "2026-09-16",
+        "note": "공식 메뉴가 연결한 원래 srchClasYear=2025 질의를 보존; 현재 운영 상태 전수 확인 아님"
+      }
+    ]
+  },
+  "reviewed_not_added": [
+    {
+      "name": "광주동산초등학교병설유치원",
+      "reason": "학교 명부 주소 직접접근 RemoteProtocolError 및 웹 열기 실패; 추정복구 안함"
+    },
+    {
+      "name": "운천초등학교병설유치원(광주)",
+      "reason": "학교 명부 주소 직접접근 RemoteProtocolError 및 웹 열기 실패; 동명기관과 구분 유지"
+    },
+    {
+      "name": "장성초등학교병설유치원(태백)",
+      "reason": "공식 학교 홈페이지 유치원 소개 링크가 접근권한 없음; 임의 목적지 추정 안함",
+      "source": "https://jangseong.gwe.es.kr/main.do",
+      "body_sha256": "a5a58663c8b243b7c56b73ffae8e53f6b41d786ca6eea93becfa35f17f5973e2"
+    }
+  ],
+  "limits": [
+    "공식 연결은 해당 학급/년도 질의까지의 정확 URL에만 적용",
+    "다른 학급/년도/학교/공유호스트 루트에 신원 전파하지 않음",
+    "학생 이름·사진·연락처는 증거 자료에 저장하지 않음"
+  ],
+  "after_sha256": {
+    "kb/site_catalog.json": "3cb3379444c6372d7b6345d191a6f0ff466a31827620f7fdc4a79ff853e80abb",
+    "kb/sources/coverage.json": "82bcfc5e89c21b41bf38287f8c89fe47b42933507c2683ff370d815d371a5bf7",
+    "kb/sources/verified_corrections.json": "2833ef05241dc69a1d810a797f39abd3a5f6eff54c8ccece4e0ccdaef41d80b5",
+    "kb/sources/kindergartens.json": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5",
+    "kb/sources/schools.json": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782"
+  },
+  "catalog_records": 22165,
+  "catalog_hosts": 16289,
+  "excluded": 2388,
+  "validation": {
+    "existing_records_unchanged": 22164,
+    "new_exact_url_verified": 1,
+    "boundary_negatives": [
+      "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=266&srchClasYear=2025",
+      "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=265&srchClasYear=2026",
+      "https://help.jne.kr/",
+      "https://help.jne.kr/other-school/",
+      "https://help.jne.kr/hja_es/cv/clashmpg/selectCvHmpgInfo.do?clasHmpgId=265&srchClasYear=2025&other=1"
+    ],
+    "local_tests": "28 passed in1.40s",
+    "vm_tests": "28 passed in1.78s"
+  },
+  "source_navigation": {
+    "school_directory_url": "http://hja.es.jne.kr",
+    "observed_root_url": "https://hja.jge.es.kr",
+    "root_body_sha256": "5f843d4e399c7f4381c74b83f088fb5c481665aba4198b57406bb9d9b790984f",
+    "literal_navigation": "/hja_es/intro.do",
+    "javascript_executed": false
+  },
+  "vm_backup": "/tmp/hakdari-deploy-20260926T045920Z",
+  "live_before_related_address_fix": {
+    "job_id": "j_d92f2115978542d7b63872bf7e5d5262",
+    "status": "done",
+    "elapsed_ms": 27250,
+    "timings": {
+      "parse": 131,
+      "policy_open": 6161,
+      "agent_investigate": 10304,
+      "sandbox_total": 26843,
+      "verdict": 2,
+      "explain": 1,
+      "total": 27245
+    },
+    "identity": {
+      "host": "help.jne.kr",
+      "site_family": "jne.kr",
+      "status": "verified",
+      "name": "학다리중앙초등학교병설유치원",
+      "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_730063affed987eee07d",
+          "name": "학다리중앙초등학교병설유치원",
+          "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "ahseo.es.jne.kr",
+        "amtae.es.jne.kr",
+        "amtae.ms.jne.kr",
+        "anjwa.es.jne.kr",
+        "ansim.es.jne.kr",
+        "aphae.es.jne.kr",
+        "aphae.ms.jne.kr",
+        "aphaedong.es.jne.kr",
+        "asan.es.jne.kr",
+        "baegun.es.jne.kr",
+        "baekryeon.kg.jne.kr",
+        "bannam.es.jne.kr",
+        "bannam.ms.jne.kr",
+        "beaksu.es.jne.kr",
+        "beobseong.es.jne.kr",
+        "beobseongpo.es.jne.kr",
+        "beolgyo-girl.ms.jne.kr",
+        "beolgyo.es.jne.kr",
+        "beolgyo.hs.jne.kr",
+        "beolgyo.ms.jne.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "live_after_related_address_fix": {
+    "job_id": "j_c6fa645df878440c8f8ac04b098662d7",
+    "status": "done",
+    "elapsed_ms": 29176,
+    "timings": {
+      "parse": 1,
+      "policy_open": 9210,
+      "agent_investigate": 10308,
+      "sandbox_total": 28898,
+      "verdict": 2,
+      "explain": 2,
+      "total": 29171
+    },
+    "identity": {
+      "host": "help.jne.kr",
+      "site_family": "jne.kr",
+      "status": "verified",
+      "name": "학다리중앙초등학교병설유치원",
+      "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_730063affed987eee07d",
+          "name": "학다리중앙초등학교병설유치원",
+          "source": "https://hja.jge.es.kr/hja_es/main.do?sysId=hja_es",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "help.jne.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "related_address_fix": {
+    "scope": "API identity metadata only; official identity matching and egress grants unchanged",
+    "reason": "PSL family grouped unrelated schools",
+    "rule": "fresh exact official matches plus explicit unexpired publisher_home_redirect with fresh same-source origin",
+    "local_tests": "58 passed in0.64s; refined gate assertions6 passed in0.10s",
+    "vm_tests": "58 passed in1.11s; refined gate assertions6 passed in0.14s",
+    "backup": "/tmp/related-deploy-20260926T050249Z",
+    "final_sha256": {
+      "apps/api/app/site_catalog.py": "16ac79977a5c9a13fbace08fe22bfb3744051414e6566a87fd226b2c8ab17d4e",
+      "apps/api/tests/test_related_address_boundaries.py": "11906522b0d74e3c864066571f88e7b253977bb2c5e2c35514ab81594cdb230a"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  }
+}

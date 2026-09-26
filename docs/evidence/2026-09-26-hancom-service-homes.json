@@ -1,0 +1,324 @@
+{
+  "date": "2026-09-26",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "before_sha256": {
+    "scripts/catalog/collect_services.py": "322f34d8cef5ab2a2cd814a5694b117623e822a039cf4db4ba3f8ab9223ade93",
+    "kb/sources/service_publishers.json": "6a0a981d0243cf14f55d900db8170d5547812871f8ff9ee5ae8179bc917772d1",
+    "kb/sources/official_services.json": "d8e4773e4ff0c3d6c6953182d6e35da1683d83dc84eefca94c98b1810a6af417",
+    "kb/site_catalog.json": "f4076c0cec5b10bd770ac48e7756bedb03352b342ac74a5f1a9bf595139a6ba0",
+    "kb/sources/coverage.json": "11245f06adc9b3bc7575d052459547abe91fb28c139cab791dc62069fac3bd8c"
+  },
+  "after_sha256": {
+    "scripts/catalog/collect_services.py": "278e7e06d0dd4e3dd99ebf2f7b18ea69a6af65430199dec1b91aeb844c702bc2",
+    "apps/api/tests/test_json_service_directory.py": "bdeacc805e8c0bc775a57fedf33df1300cf2bba8aca1a9f1799529780c03753b",
+    "kb/sources/service_publishers.json": "7f0ed529f10043b816ac330da70172c4a8146fb29c90dfe02f76115bcca3230c",
+    "kb/sources/official_services.json": "1ad3d9c2c813c5b63f271f1a349a98ad410ab3de88e003b039756e7c89f8b76e",
+    "kb/site_catalog.json": "cf8f1699794d6d123aa93330650f02e740c8a1438c843386ca3d5c97c66f5cd3",
+    "kb/sources/coverage.json": "3b6d91e6814afd3f84e4373a5eace72dc1c77e05065ff2d331332efb67dfee59"
+  },
+  "extraction": [
+    {
+      "publisher": {
+        "name": "한글과컴퓨터",
+        "url": "https://www.hancom.com/service/docs",
+        "format": "json_directory",
+        "script_id": "__NEXT_DATA__",
+        "state_path": [
+          "props",
+          "pageProps",
+          "_nextI18Next",
+          "initialI18nStore",
+          "ko",
+          "service-contents",
+          "HancomDocs"
+        ],
+        "groups": [
+          "serviceTopBanner"
+        ],
+        "group_shape": "object",
+        "title_key": "text1",
+        "url_key": "link1",
+        "schemes": [
+          "https"
+        ],
+        "scope": "url",
+        "minimum_records": 1,
+        "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/docs-080a10948416fdde.js",
+        "reviewed_script_sha256": "d960104f06a8ebb0c66b09333db9576e72f74afb9e5e238b9f4b8637f019effc"
+      },
+      "rows": [
+        {
+          "name": "한글과컴퓨터 한컴독스",
+          "service_name": "한컴독스",
+          "publisher": "한글과컴퓨터",
+          "url": "https://www.hancomdocs.com",
+          "source": "https://www.hancom.com/service/docs",
+          "kind": "official_service_directory",
+          "scope": "url",
+          "evidence_type": "publisher_service_link",
+          "source_sha256": "44e102453053697d4e18f5076a5bdac43c6a5c68e9d26afb255fc3e0af1323ab"
+        }
+      ],
+      "html_sha256": "44e102453053697d4e18f5076a5bdac43c6a5c68e9d26afb255fc3e0af1323ab"
+    },
+    {
+      "publisher": {
+        "name": "한글과컴퓨터",
+        "url": "https://www.hancom.com/service/taja",
+        "format": "json_directory",
+        "script_id": "__NEXT_DATA__",
+        "state_path": [
+          "props",
+          "pageProps",
+          "_nextI18Next",
+          "initialI18nStore",
+          "ko",
+          "service-contents",
+          "HancomTaja"
+        ],
+        "groups": [
+          "serviceTopBanner"
+        ],
+        "group_shape": "object",
+        "title_key": "text1",
+        "url_key": "link1",
+        "schemes": [
+          "https"
+        ],
+        "scope": "url",
+        "minimum_records": 1,
+        "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/taja-539c09bd3281a8fb.js",
+        "reviewed_script_sha256": "91d5cc7099431d3bab815bf0ca241e3492fe92f3d97568200657e0fbbbc2a308"
+      },
+      "rows": [
+        {
+          "name": "한글과컴퓨터 한컴타자",
+          "service_name": "한컴타자",
+          "publisher": "한글과컴퓨터",
+          "url": "https://www.hancomtaja.com",
+          "source": "https://www.hancom.com/service/taja",
+          "kind": "official_service_directory",
+          "scope": "url",
+          "evidence_type": "publisher_service_link",
+          "source_sha256": "58a4f6ad8a808bd57d38876c8b38eb9d3b5a5326e4848d3e20c5f3362f6285f4"
+        }
+      ],
+      "html_sha256": "58a4f6ad8a808bd57d38876c8b38eb9d3b5a5326e4848d3e20c5f3362f6285f4"
+    },
+    {
+      "publisher": {
+        "name": "한글과컴퓨터",
+        "url": "https://www.hancom.com/service/sign",
+        "format": "json_directory",
+        "script_id": "__NEXT_DATA__",
+        "state_path": [
+          "props",
+          "pageProps",
+          "_nextI18Next",
+          "initialI18nStore",
+          "ko",
+          "service-contents",
+          "HancomSign"
+        ],
+        "groups": [
+          "serviceTopBanner"
+        ],
+        "group_shape": "object",
+        "title_key": "text1",
+        "url_key": "link1",
+        "schemes": [
+          "https"
+        ],
+        "scope": "url",
+        "minimum_records": 1,
+        "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/sign-227003586865e278.js",
+        "reviewed_script_sha256": "353fa52fc6cd97ec8beeb052c530d74d0863ea9df820030bfd559d1536adc046"
+      },
+      "rows": [
+        {
+          "name": "한글과컴퓨터 한컴싸인",
+          "service_name": "한컴싸인",
+          "publisher": "한글과컴퓨터",
+          "url": "https://www.hancomsign.com",
+          "source": "https://www.hancom.com/service/sign",
+          "kind": "official_service_directory",
+          "scope": "url",
+          "evidence_type": "publisher_service_link",
+          "source_sha256": "09d5e09538471640c5f21a74b2df49175d4bf0e84848480322d60a84dcbdea3e"
+        }
+      ],
+      "html_sha256": "09d5e09538471640c5f21a74b2df49175d4bf0e84848480322d60a84dcbdea3e"
+    },
+    {
+      "publisher": {
+        "name": "한글과컴퓨터",
+        "url": "https://www.hancom.com/service/hform",
+        "format": "json_directory",
+        "script_id": "__NEXT_DATA__",
+        "state_path": [
+          "props",
+          "pageProps",
+          "_nextI18Next",
+          "initialI18nStore",
+          "ko",
+          "service-contents",
+          "HancomForms"
+        ],
+        "groups": [
+          "serviceTopBanner"
+        ],
+        "group_shape": "object",
+        "title_key": "text1",
+        "url_key": "link1",
+        "schemes": [
+          "https"
+        ],
+        "scope": "url",
+        "minimum_records": 1,
+        "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/hform-b772d2f92564dfec.js",
+        "reviewed_script_sha256": "b7dcf55590e93850e2ae7f1a42a83c83c5b95d5c86c449c5b6a7d33fa6442c31"
+      },
+      "rows": [
+        {
+          "name": "한글과컴퓨터 한컴폼즈",
+          "service_name": "한컴폼즈",
+          "publisher": "한글과컴퓨터",
+          "url": "https://hform.hancom.com",
+          "source": "https://www.hancom.com/service/hform",
+          "kind": "official_service_directory",
+          "scope": "url",
+          "evidence_type": "publisher_service_link",
+          "source_sha256": "655b7889f26d3552aac611d0a2a9969e44d1ede872ac7c65984872ad238e4ecc"
+        }
+      ],
+      "html_sha256": "655b7889f26d3552aac611d0a2a9969e44d1ede872ac7c65984872ad238e4ecc"
+    },
+    {
+      "publisher": {
+        "name": "한글과컴퓨터",
+        "url": "https://www.hancom.com/service/developer",
+        "format": "json_directory",
+        "script_id": "__NEXT_DATA__",
+        "state_path": [
+          "props",
+          "pageProps",
+          "_nextI18Next",
+          "initialI18nStore",
+          "ko",
+          "service-contents",
+          "HancomDeveloper"
+        ],
+        "groups": [
+          "serviceTopBanner"
+        ],
+        "group_shape": "object",
+        "title_key": "text1",
+        "url_key": "link1",
+        "schemes": [
+          "https"
+        ],
+        "scope": "url",
+        "minimum_records": 1,
+        "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/developer-a0c06a1930941195.js",
+        "reviewed_script_sha256": "fd22e351bcea76ebeb8e9767f34bf300b8b557590239b0757871de887c622053"
+      },
+      "rows": [
+        {
+          "name": "한글과컴퓨터 한컴디벨로퍼",
+          "service_name": "한컴디벨로퍼",
+          "publisher": "한글과컴퓨터",
+          "url": "https://developer.hancom.com",
+          "source": "https://www.hancom.com/service/developer",
+          "kind": "official_service_directory",
+          "scope": "url",
+          "evidence_type": "publisher_service_link",
+          "source_sha256": "7faff18392b0791e28ec3a860bfbf80688ae704277d578b595eda6047a13e7ea"
+        }
+      ],
+      "html_sha256": "7faff18392b0791e28ec3a860bfbf80688ae704277d578b595eda6047a13e7ea"
+    }
+  ],
+  "direct_http_checks": [
+    {
+      "url": "https://www.hancomdocs.com",
+      "status": 200,
+      "location": null,
+      "title": [
+        "Hancom Docs - Hancom Inc. ㅣ A Subscription-Type Hancom Office"
+      ],
+      "body_sha256": "83945545d9447d00e1a5ea045be5b6261cbe28b17fa1bd3e2cc477bb543c40ac"
+    },
+    {
+      "url": "https://www.hancomtaja.com",
+      "status": 200,
+      "location": null,
+      "title": [
+        "Hancom Taja – Hancom Typing Practice"
+      ],
+      "body_sha256": "dda7a98ef5043b0ee7763ee6c6bcf895c966f25486220476af96e36a9dbc2a16"
+    },
+    {
+      "url": "https://www.hancomsign.com",
+      "status": 200,
+      "location": null,
+      "title": [
+        "한컴싸인 — 전자서명 서비스 | 한컴 | 한컴싸인"
+      ],
+      "body_sha256": "f250d375f7186db5ca69f671c71dad138df02a442847c9fd22dbddcf5e6ca213"
+    },
+    {
+      "url": "https://hform.hancom.com",
+      "status": 200,
+      "location": null,
+      "title": [
+        "한컴폼즈 - 한컴 | 무료 설문조사"
+      ],
+      "body_sha256": "95068e0cfc714b9bf20d8c7d363cb97582d7bface68f8817c6568baf1c1d40fa"
+    },
+    {
+      "url": "https://developer.hancom.com",
+      "status": 200,
+      "location": null,
+      "title": [
+        "한컴디벨로퍼"
+      ],
+      "body_sha256": "52dad3d5a846b40ad2bff607656e0d57c1b076e88d707e8b26b408d69e78069c"
+    }
+  ],
+  "validation": {
+    "local_tests_passed": 45,
+    "seconds": 0.5,
+    "new_tests": 6,
+    "unchanged_existing_records": 22158,
+    "existing_service_rows_and_dates_preserved": 225,
+    "exact_identity_checks": 5,
+    "boundary_rejections": 15,
+    "records": 22163,
+    "hosts": 16288,
+    "official_links": 230,
+    "excluded": 2390,
+    "corrections": 190,
+    "inactive_corrections": 0
+  },
+  "vm": {
+    "last_verified_records": 22120,
+    "last_verified_hosts": 16282,
+    "last_verified_official_links": 212,
+    "pending_added_records": 43,
+    "deployed": false,
+    "new_tests": false,
+    "new_live_investigation": false
+  },
+  "limitations": [
+    "Only exact service start URLs approved, not user document/form paths",
+    "Public page scripts read as text, not executed",
+    "Reviewed script hashes are evidence metadata, not automatic script-hash refresh gates in json_directory mode",
+    "No form submission, browser behavior or original server TLS examination",
+    "No repeated SSH/SSO attempts while authentication conditions remain unchanged"
+  ],
+  "flowline": {
+    "kb_version": 41,
+    "security_version": 34,
+    "status": "in_progress"
+  }
+}

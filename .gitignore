@@ -48,3 +48,8 @@ desktop.ini
 
 # claude code local settings
 .claude/settings.local.json
+infra/runtime/
+
+# Downloaded public directory HTML caches
+kb/sources/cache/
+apps/api/data/site_relations.sqlite*

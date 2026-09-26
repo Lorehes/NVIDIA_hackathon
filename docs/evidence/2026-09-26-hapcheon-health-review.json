@@ -1,0 +1,1288 @@
+{
+  "reviewed_at": "2026-09-25T18:57:53.955812+00:00",
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "5b230ff46a3121d6a0f0f85a607131b13de5f852e98a1076d50de7d78c5d9354",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "봉산면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "봉산면보건지소",
+          "source_label": "봉산",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "9e6554989331fbff7736c9118927425738d42aacc5b2c419b1a01155a7c0db3d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "묘산면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "묘산면보건지소",
+          "source_label": "묘산",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "94adf8ab01704062a9cc0c0c4317964cafdcffa4391d7c94cda66ad53faf7ac6",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "가야면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "가야면보건지소",
+          "source_label": "가야",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "68f84c9c37e8219849868c1f0be87fcfa6d5f22c962f955cb75f9c63d3205500",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "북부보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "북부보건지소",
+          "source_label": "북부",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "9676f2687bed2408c5cc057e791861747391b52fa1a37f37b4a2cb86de0649b6",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "쌍백면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "쌍백면보건지소",
+          "source_label": "쌍백",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "ce6f1569f60f2f41528061d14ba3cfbacae0d6b6100d65e2fd277166de909da9",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "삼가면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "삼가면보건지소",
+          "source_label": "삼가",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "66eb982cd1ec33d78288dcd871f53778a5fb23e706bdc42a73bdbe71f46d84ca",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "가회면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "가회면보건지소",
+          "source_label": "가회",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a355517a925426de583576206839013edce615625793a1f7e13c7f92dece45f4",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대병면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "대병면보건지소",
+          "source_label": "대병",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "56f94a15246c25a4a41a8ab85cdcb41f871126a6c1c027843e0f96fa9c6d96cd",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "초계면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "초계면보건지소",
+          "source_label": "초계",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "3fd62807dbeb382ed3bb058e50ea415abeea479d0e540a8da412f86e3ca24965",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "쌍책면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "쌍책면보건지소",
+          "source_label": "쌍책",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4a69124739478d447a3515135e203f66de80f5644c5fb5587bc7c9f6e13ebaa2",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "덕곡면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "덕곡면보건지소",
+          "source_label": "덕곡",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "ec56ce7ba78f45fbb075b5124fb7f730559782441ae290aaad228b7fe3c3d98f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "청덕면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "청덕면보건지소",
+          "source_label": "청덕",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "145db8f2aba481662e4dc83eb2348c044b4d8b82a75f0ecdb7d88c0313699cfc",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "적중면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "적중면보건지소",
+          "source_label": "적중",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "622a98fbe962d7f7a0dc0e964cff17c25c568aecf58bcdec4bb07a4cd5dd9313",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "율곡면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "율곡면보건지소",
+          "source_label": "율곡",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1038c57a27c234d01dcfb5fca395f14afc5127d26d2669c1b8ae5e3c3f2f1c11",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대양면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "대양면보건지소",
+          "source_label": "대양",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "3dc3adb3a18767ae416c3f7b0984dcd8ee6d3f3d98e79a400ce03f7e89dc869e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "용주면보건지소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06259.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건지소",
+          "target": "https://www.hc.go.kr/06237/06249/06259.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06259.web",
+          "http_status": 200,
+          "body_sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a",
+          "confirmed_institution": "용주면보건지소",
+          "source_label": "용주",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "reviewed_branch_table_context_and_municipal_names",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "b23ba94974429e00a2ab858d3e3c26d4d05acc45ede350967da02b6684479ba2",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "장인보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "장인보건진료소",
+          "source_label": "장인보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "f7546c6950e2e87bcc11833ebd22e699ec29783805da7e9483f95eabb493cb96",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "양지보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "양지보건진료소",
+          "source_label": "양지보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "db6671b1744a9c08957d58094433578afd505a87763afe2539223d659ab294de",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "숭산보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "숭산보건진료소",
+          "source_label": "숭산보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "88b641a5b9fee012411c12eb791ebaf52bf84d6a6180cd3d5342e88cc971b70e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "와리보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "와리보건진료소",
+          "source_label": "와리보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2a6599d6627b310851f2ea92d0529b67f1c11d51ed7c81fe44e7eecc10161dc3",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "하남보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "하남보건진료소",
+          "source_label": "하남보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "b0d4221c8521ddd8167685272d514e2def02bbdce4955aa4a73f3ba6ee01502f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "이책보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "이책보건진료소",
+          "source_label": "이책보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "60cf239325b07e7bc4bc9e96fc1eec0d8f7e64e23eb86c9eabcb95f82a80fc98",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대동보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "대동보건진료소",
+          "source_label": "대동보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "479f73c630cc8819d110242e033681a2f7ed69110c30f4cbec06bfe9c99dedfb",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "소례보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "소례보건진료소",
+          "source_label": "소례보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "654939480bdc8eea2962f5e8661cd9fbf9bb03514150b5700ec704eb6a58c853",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "낙진보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "낙진보건진료소",
+          "source_label": "낙진보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "65446226251b9fcb041cf6e5211bddcf0fce3d06ea0ab492939a049c81027f78",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "평지보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "평지보건진료소",
+          "source_label": "평지보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "68385573bb6b9ff18236198eb5b0c11ecd9c1183d971b53e898de2b82d68acdd",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "동리보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "동리보건진료소",
+          "source_label": "동리보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4e6cbad079e63c601570723ca9706ffb09a2a3937d5c356a8dbc5b2f2503e851",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대기보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "대기보건진료소",
+          "source_label": "대기보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1e62c2884a882861f693ad050221eee57fc3169283035b372547d31cb73d567d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "장단보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "장단보건진료소",
+          "source_label": "장단보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "de23cfb16e7dc7f9bac73b6f62cda618f79a054c7effc779aa8a061b1627117a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "병목보건진료소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/health.web",
+          "label": "보건진료소",
+          "target": "https://www.hc.go.kr/06237/06249/06260.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "http_status": 200,
+          "body_sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b",
+          "confirmed_institution": "병목보건진료소",
+          "source_label": "병목보건진료소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "6c214fa9a65a01f37fba341146a2d32d6847d6d5ffb80b38bd0b8d39b807b04c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "합천군보건소",
+      "original_url": "",
+      "url": "https://www.hc.go.kr/health.web",
+      "scope": "url",
+      "source": "https://www.hc.go.kr/health.web",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.hc.go.kr/main.web",
+          "label": "보건소",
+          "target": "https://www.hc.go.kr/health.web"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hc.go.kr/health.web",
+          "http_status": 200,
+          "body_sha256": "81aa41981c16096cfc3e2b0b54c3f578971484b7af0df7c15da1f0b16b699b64",
+          "confirmed_institution": "합천군보건소",
+          "source_label": "보건소",
+          "confirmed_jurisdiction": "합천군",
+          "name_mapping_reason": "official_municipality_navigation_and_home_banner",
+          "content_scope": "기관별 명부 안내 또는 보건소 홈페이지; 진료 일정/현 운영 여부 보증 아님"
+        }
+      ]
+    }
+  ],
+  "source_index": {
+    "url": "https://www.hc.go.kr/health.web",
+    "status": 200,
+    "sha256": "81aa41981c16096cfc3e2b0b54c3f578971484b7af0df7c15da1f0b16b699b64",
+    "links": [
+      {
+        "label": "지소/진료소 소개",
+        "href": "/06237/06249.web"
+      },
+      {
+        "label": "보건지소",
+        "href": "/06237/06249/06259.web"
+      },
+      {
+        "label": "보건진료소",
+        "href": "/06237/06249/06260.web"
+      },
+      {
+        "label": "관내의료기관현황",
+        "href": "/06241/06313.web"
+      },
+      {
+        "label": "약국 등 현황",
+        "href": "/06241/06314.web"
+      },
+      {
+        "label": "의료기기업소 현황",
+        "href": "/06241/09815.web"
+      },
+      {
+        "label": "안경업소 현황",
+        "href": "/06241/09816.web"
+      },
+      {
+        "label": "기억채움농장 소개",
+        "href": "/10455.web"
+      },
+      {
+        "label": "관내 의료기관 현황",
+        "href": "/06313.web"
+      },
+      {
+        "label": "HEALTH CENTER BRANCH 보건지소/진료소",
+        "href": "/06259.web"
+      }
+    ]
+  },
+  "source_pages": [
+    {
+      "url": "https://www.hc.go.kr/06237/06249/06259.web",
+      "status": 200,
+      "sha256": "f5b7c6374307c5da42ea3afa5638369ff53acd3eb668044279f841b388a24c8a"
+    },
+    {
+      "url": "https://www.hc.go.kr/06237/06249/06260.web",
+      "status": 200,
+      "sha256": "1e4199658c8f742428011c75050440376128287e0d70f1606d27c21e924cba8b"
+    }
+  ],
+  "raw_public_health_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "canonical_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "limitations": [
+    "31 institutions on three exact URLs, not 31 independent websites; Baeksan is deferred due to duplicate raw names and absent region identifiers.",
+    "Branch names use reviewed table context, not a general name/URL repair rule.",
+    "Official branch page modified 2026-05-28 and clinic page 2025-01-20; current clinical service availability is not verified.",
+    "Search cache dates differ from live source fetch; recorded evidence uses live HTTP200 pages."
+  ],
+  "validation": {
+    "local_related_tests": 59,
+    "local_seconds": 0.89,
+    "vm_related_tests": 59,
+    "vm_seconds": 1.74
+  },
+  "catalog": {
+    "records": 22070,
+    "hosts": 16281,
+    "excluded": 2465,
+    "missing_homepage": 2438,
+    "other_excluded": 27,
+    "public_health_missing": 80,
+    "corrections": 115,
+    "inactive_corrections": 0,
+    "official_connections": 212,
+    "popular_selected": 1000,
+    "inspection_limited": 22,
+    "sha256": "36980060141a40af64380bdd06fb79455b06d65920423a5799d4dc76e777e139",
+    "changed_prior_records": [
+      {
+        "id": "site_9ce8156f3ccdbfa86dc8",
+        "name": "합천군 대표 누리집",
+        "old_scope": "host",
+        "new_scope": "url"
+      }
+    ]
+  },
+  "deferred": [
+    {
+      "name": "백산보건진료소",
+      "reason": "two source rows with identical name and no region identifier; one existing Jeongeup URL and one empty URL",
+      "source_address_not_inferred": true
+    }
+  ],
+  "live": {
+    "job_id": "j_301e5a22097440b99d7a22de22168d97",
+    "status": "done",
+    "elapsed_ms": 15804,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "www.hc.go.kr",
+      "site_family": "hc.go.kr",
+      "status": "verified",
+      "name": "장단보건진료소",
+      "source": "https://www.hc.go.kr/06237/06249/06260.web",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_10aff44e9b9309774d2f",
+          "name": "장단보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_190b1cabf6dbb6f91d2f",
+          "name": "양지보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_1ca5c6e8b3defe292ffa",
+          "name": "대기보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_46527415b559ba9478ea",
+          "name": "병목보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_58d7dfb99e8979857e90",
+          "name": "이책보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_6d534ee6ebc2f35179c8",
+          "name": "대동보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_7cc9532d8f7957ca820e",
+          "name": "동리보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_8db86e30ca0ee4430402",
+          "name": "하남보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_90f796a568fae0e45ed2",
+          "name": "숭산보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_bc4d5f7fbe7da6dc4015",
+          "name": "장인보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_ceb0b730eb71e28f228f",
+          "name": "평지보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_d621e4e437b43815aef4",
+          "name": "소례보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_eceff9aac83d8349ecac",
+          "name": "와리보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        },
+        {
+          "id": "site_ef36bd60c625e9bcf5f2",
+          "name": "낙진보건진료소",
+          "source": "https://www.hc.go.kr/06237/06249/06260.web",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 14,
+      "related_addresses": [
+        "www.hc.go.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "장단보건진료소 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 hc.go.kr이에요.",
+        "공식 출처에서 장단보건진료소 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.hc.go.kr/06237/06249/06260.web",
+        "host": "www.hc.go.kr",
+        "registrable_domain": "hc.go.kr",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T19:00:47.199+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "www.hc.go.kr"
+          ],
+          "sha256": "d54e26df3dcbc46bfd2dd9b1f364db8bccd7587442606f091e31ec21140fcfd9",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "36980060141a40af64380bdd06fb79455b06d65920423a5799d4dc76e777e139"
+  },
+  "final_health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0,
+    "residual_effective_policies": 0
+  }
+}

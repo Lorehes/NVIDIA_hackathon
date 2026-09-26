@@ -10,8 +10,8 @@ from .urls import parse_url  # noqa: F401  (검사 라이브러리 경로를 sys
 from .verdict import CARD, PURPOSE_FORBIDDEN, Outcome
 from checklib.similarity import norm_similarity  # noqa: E402
 
-KB_NOTE = ("각 회사 공식 홈페이지에서 직접 확인한 주소만 모아 두었어요. "
-           "목록에 없는 회사는 \"알 수 없어요\"로 알려드려요.")
+KB_NOTE = ("공식 사이트·공공 명부의 출처와 주소를 대조해요. 인기 순위는 공식 인증 자료가 아니에요. "
+           "처음 보는 주소도 조사하지만, 운영 기관을 확인할 근거가 부족하면 미확인으로 남겨요.")
 
 
 def sim_label(score: float) -> str:
@@ -108,12 +108,15 @@ def redirect_trace(fetch: dict | None) -> dict | None:
         last_seen_domain=fetch.get("final_registrable_domain"),
         blocked_hosts=blocked,
         dev={"fetch_chain.json": {k: v for k, v in fetch.items() if k != "chain"},
-             "statuses": [h.get("status") for h in chain]},
+             "statuses": [h.get("status") for h in chain],
+             "connection_failures": [{k: h.get(k) for k in ('host', 'block_reason', 'error')}
+                                     for h in chain if h.get('blocked') or h.get('error')]},
     )
 
 
 # ── 3. 페이지 ────────────────────────────────────────────────────
-def page_trace(page: dict | None, outcome: Outcome, entity: Entity | None, actual: str | None) -> dict:
+def page_trace(page: dict | None, outcome: Outcome, entity: Entity | None, actual: str | None,
+               message_given: bool = True) -> dict:
     if not page or not page.get("ok"):
         return dict(available=False, dev={"page.json": page or {}})
     purpose = outcome.purpose or "other"
@@ -121,7 +124,9 @@ def page_trace(page: dict | None, outcome: Outcome, entity: Entity | None, actua
     forbidden = PURPOSE_FORBIDDEN.get(purpose, set())
     rows = []
     for t in fields:
-        if t in forbidden:
+        if t == 'file':
+            rows.append(dict(type=t, label=ko.FIELD_LABELS[t], verdict='unknown', verdict_label='첨부 내용 미검사'))
+        elif t in forbidden:
             rows.append(dict(type=t, label=ko.FIELD_LABELS.get(t, t), verdict="not_needed", verdict_label="필요 없음"))
         elif purpose == "payment" and t in CARD:
             rows.append(dict(type=t, label=ko.FIELD_LABELS.get(t, t), verdict="needed", verdict_label="필요함"))
@@ -140,20 +145,34 @@ def page_trace(page: dict | None, outcome: Outcome, entity: Entity | None, actua
     cross = next((f for f in page.get("forms", []) if f.get("cross_domain")), None)
     xsig = _sig(outcome, "cross_domain_form")
     sends_to = xsig["data"].get("action_host") if xsig else (cross["action_host"] if cross else None)
-    if xsig:
-        sends_sentence = f"{sends_to} 이 페이지와 다른 사이트로 보내져요. 적는 순간 모르는 사람에게 가요."
+    same_origin_unverified = bool(xsig and xsig['data'].get('same_origin_unverified'))
+    if _sig(outcome, 'insecure_form_action'):
+        sends_sentence = '입력 내용을 HTTP 주소로 보내도록 표시되어 있어요. 실제 전송은 실행하지 않았어요.'
+    elif xsig and xsig['data'].get('search_form'):
+        sends_sentence = f'검색 입력란이 다른 주소({sends_to})로 전송되도록 표시되어 있어요. 운영 관계와 실제 전송은 확인하지 못했어요.'
+    elif xsig:
+        sends_sentence = ("같은 도메인의 다른 경로로 보내요. 해당 기관의 공식 처리 주소인지는 미확인이에요."
+                          if same_origin_unverified else
+                          f"다른 주소({sends_to})로 보내도록 되어 있어요. 전송 대상의 공식 여부를 확인하세요.")
+    elif _sig(outcome, 'reviewed_search_destination'):
+        sends_sentence = '공식 출처에서 이 검색 연결의 운영 관계를 확인했어요. 실제 전송과 서버의 처리 과정은 검사하지 않았어요.'
+    elif _sig(outcome, 'same_site_search'):
+        sends_sentence = "검색 처리 주소의 공식 여부와 실행 후 동작은 아직 확인하지 못했어요."
     elif cross:
-        sends_sentence = "다른 주소로 보내지지만 공식 협력 회사예요."
+        sends_sentence = "페이지에 표시된 다른 전송 주소를 확인했어요. 실제 전송과 서버의 처리 과정은 검사하지 않았어요."
     elif any(f.get("field_types") for f in page.get("forms", [])):
-        sends_sentence = "적은 내용은 이 페이지 안에서만 처리돼요."
+        sends_sentence = "페이지에 표시된 전송 주소를 확인했어요. 실제 전송과 서버의 처리 과정은 검사하지 않았어요."
     else:
         sends_sentence = None
 
     return dict(
         available=True, title=page.get("title") or None, brand_candidates=page.get("brand_candidates", []),
-        brand_sentence=brand_sentence, stated_purpose_label=ko.PURPOSE_LABELS.get(purpose),
+        brand_sentence=brand_sentence,
+        stated_purpose_label=ko.PURPOSE_LABELS.get(purpose) if message_given else None,
         expected_fields_label=" · ".join(ko.FIELD_LABELS[t] for t in ko.PURPOSE_EXPECTED.get(purpose, [])) or None,
-        field_rows=rows, sends_to=sends_to, sends_cross_domain=bool(xsig), sends_sentence=sends_sentence,
+        field_rows=rows, sends_to=sends_to,
+        sends_cross_domain=(bool(xsig) and not same_origin_unverified) or bool(cross and _sig(outcome, 'reviewed_search_destination')),
+        sends_sentence=sends_sentence,
         apk_links=page.get("apk_links", []), js_redirect_hint=bool(page.get("js_redirect_hint")),
         trust_claims=page.get("trust_claims", []),
         dev={"page.json": page, "field_types": fields},
@@ -173,7 +192,12 @@ def agent_trace(run: dict, claim: dict | None, entity: Entity | None, explain_ch
         return max(0, s) if s is not None else 0
 
     steps = [dict(t_sec=0, title="문자를 읽었어요", detail="붙여 넣은 문자와, 비교할 회사 후보 목록을 받았어요.", lines=[])]
-    if ok_claim:
+    if agent.get('execution_mode') == 'address_checks':
+        steps = [dict(t_sec=0, title='주소로 직접 확인했어요', detail='주소만 입력되어 기관이나 목적을 AI로 추측하지 않았어요.', lines=[])]
+    if agent.get('kind') == 'not_run':
+        steps = [dict(t_sec=0, title='주소 자료만 확인했어요',
+                      detail='지원하지 않는 포트여서 사이트 접속과 AI 조사를 실행하지 않았어요.', lines=[])]
+    if ok_claim and agent.get('execution_mode') != 'address_checks':
         who = entity.name if entity else (claim.get("name") or "알 수 없음")
         steps.append(dict(t_sec=t(claim.get("at")), title="누가 보낸 척하는지 골랐어요",
                           detail=f"회사: {who} · 목적: {ko.PURPOSE_LABELS.get(claim.get('purpose'), '안내 문자')}"
@@ -204,7 +228,8 @@ def agent_trace(run: dict, claim: dict | None, entity: Entity | None, explain_ch
         steps=steps, unexpected_count=len(unexpected), unexpected_tools=unexpected, duration_ms=dur_ms,
         duration_sec=int(round(total_ms / 1000)) if total_ms else (int(round(dur_ms / 1000)) if dur_ms else None),
         model_reported=agent.get("model_reported"), explain_check=explain_check, dev_log=dev_log,
-        dev={"tool_calls": agent.get("tool_calls", []), "raw_meta": agent.get("raw_meta"), "kind": agent.get("kind")},
+        dev={"tool_calls": agent.get("tool_calls", []), "raw_meta": agent.get("raw_meta"), "kind": agent.get("kind"),
+             'execution_mode': agent.get('execution_mode'), 'navigation_decisions': agent.get('navigation', [])},
     )
 
 
@@ -216,8 +241,9 @@ def sandbox_trace(run: dict, policy_name: str | None, residual: bool) -> dict:
     blocked_hosts: list[str] = []
     for e in events_in:
         if e["kind"] == "open":
-            opened_host, open_at = e.get("host"), e["at"]
-            events.append(dict(at=_hhmmss(e["at"]), kind="open", title="문을 열었어요", detail="조사할 링크 한 곳만"))
+            if open_at is None:
+                opened_host, open_at = e.get("host"), e["at"]
+            events.append(dict(at=_hhmmss(e["at"]), kind="open", title="문을 열었어요", detail="허용한 사이트 주소: " + ", ".join(e.get("hosts") or [opened_host or "?"])))
         elif e["kind"] == "blocked":
             blocked_hosts.append(e.get("host") or "?")
             events.append(dict(at=_hhmmss(e["at"]), kind="blocked", title="다른 곳 들어가기를 막았어요",

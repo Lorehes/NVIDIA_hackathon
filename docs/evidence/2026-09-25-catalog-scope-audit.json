@@ -1,0 +1,42 @@
+{
+  "validation": "deployed_catalog_lookup_not_remote_destination_fetch",
+  "catalog_sha256": "99bb98b2cf475ecd8170a37b6d76040f570e5b3b403788025d8ae22be13a4232",
+  "indexed_records": 21794,
+  "indexed_hosts": 16135,
+  "scopes_narrowed": 775,
+  "source_bom_rows_recovered": 2,
+  "excluded": 2603,
+  "tests": {
+    "local_targeted": 24,
+    "vm_full": 508,
+    "vm_seconds": 67.04
+  },
+  "api_health_http": 200,
+  "addresses": [
+    {
+      "url": "https://bit.ly/3IuoU6C",
+      "status": "verified",
+      "scope": "url"
+    },
+    {
+      "url": "https://bit.ly/unlisted-tenant",
+      "status": "unverified",
+      "scope": null
+    },
+    {
+      "url": "https://goehs.kr/daor-e/main.do",
+      "status": "verified",
+      "scope": "url"
+    },
+    {
+      "url": "https://goehs.kr/other-school/main.do",
+      "status": "unverified",
+      "scope": null
+    },
+    {
+      "url": "https://papago.naver.com/",
+      "status": "verified",
+      "scope": "host"
+    }
+  ]
+}

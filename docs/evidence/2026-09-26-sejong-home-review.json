@@ -1,0 +1,123 @@
+{
+  "reviewed_at": "2026-09-26T03:38:00.839723+00:00",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "previous_local_corrections_sha256": "738a31884a02be9076693df8783845954b4df2436a9e47a94289f5f5d8d6e27a",
+  "previous_local_catalog_sha256": "68d06463f3f3cde0bc5b608b0986c973251ed0ff65865b3f6102a7e308885f0c",
+  "raw_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "0d36d20d895f793ae7472a6e5c04b4d0ff4a6085247e7e4f7f033b9f805fea47",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "세종특별자치시 보건소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/index.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/index.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "label": "세종특별자치시 보건소",
+          "observed_target_path": "/health/index.do;jsessionid=[redacted]",
+          "candidate_url": "https://www.sejong.go.kr/health/index.do",
+          "note": "Session-free candidate independently requested and verified; not a generic session-stripping identity rule."
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/index.do",
+          "http_status": 200,
+          "body_sha256": "03664f59f357228c28a65e3792044b059360370930a19f2ab22200fa7d1260a6",
+          "confirmed_institution": "세종특별자치시 보건소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "기관 대표 홈페이지와 서비스 메뉴 확인; 개별 민원/진료 동작 미검사"
+        }
+      ]
+    }
+  ],
+  "home_response": {
+    "requested_url": "https://www.sejong.go.kr/health/index.do",
+    "url": "https://www.sejong.go.kr/health/index.do",
+    "status": 200,
+    "sha256": "03664f59f357228c28a65e3792044b059360370930a19f2ab22200fa7d1260a6",
+    "title": [
+      "세종특별자치시 보건소"
+    ],
+    "headings": [
+      "세종특별자치시 세종특별자치시 보건소",
+      "빠른서비스",
+      "주요사업",
+      "공지사항",
+      "고혈압당뇨교실",
+      "팝업존",
+      "오시는 길",
+      "우리동네 약국",
+      "우리동네 병원",
+      "진료 및 검사안내"
+    ],
+    "self_links": [
+      {
+        "label": "세종특별자치시 보건소",
+        "has_session_parameter": true
+      }
+    ]
+  },
+  "previous_error_page": "https://www.sejong.go.kr/health/sub01_05.do remains separate; was not refetched or approved",
+  "vm_baseline_evidence": "2026-09-26-yeongcheon-health-review.json previous_* fields",
+  "validation": {
+    "local_records": 22145,
+    "local_hosts": 16282,
+    "excluded": 2390,
+    "excluded_reasons": {
+      "missing_homepage": 2363,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "invalid_or_ambiguous_url": 2,
+      "userinfo_or_email": 4,
+      "invalid_hostname": 2,
+      "unsupported_or_malformed_scheme": 1
+    },
+    "public_health_missing": [
+      "반송보건진료소",
+      "북면보건지소",
+      "수항보건진료소",
+      "반송보건진료소",
+      "백산보건진료소"
+    ],
+    "unchanged_existing_records": 22144,
+    "exact_home_identity": 1,
+    "url_boundary_checks": 5,
+    "existing_sejong_groups_preserved": [
+      9,
+      7,
+      1
+    ],
+    "catalog_sha256": "27530d792f2e68aadc77cb30c7d8473c62d12734a074f90b81b3cf34c2696e75",
+    "corrections_sha256": "69c608dc1787ef05803c1b2d40eb3f128086f18f86cc6915126262752c5a1274",
+    "tests": {
+      "scope": "existing source corrections and shared identity tests",
+      "passed": 28,
+      "seconds": 0.89,
+      "environment": "local"
+    }
+  },
+  "vm_validation": {
+    "deployed": false,
+    "tests_run": false,
+    "live_job_run": false,
+    "reason": "Unchanged Brev publickey authentication failure; no repeated SSH or SSO attempt.",
+    "last_verified_catalog_records": 22120,
+    "last_verified_catalog_hosts": 16282,
+    "pending_catalog_additions": 25
+  },
+  "flowline": {
+    "task_id": "eb28f625-437a-45f6-afb4-f0f573312797",
+    "version": 38,
+    "status": "in_progress"
+  }
+}

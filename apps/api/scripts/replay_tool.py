@@ -27,6 +27,8 @@ def build() -> None:
     tmp = Path(tempfile.mkdtemp())
     db = DB(tmp / "replay-build.sqlite")
     for case in ALL_CASES:
+        if case.get("live_capture_only"):
+            continue  # 실제 VM 캡처를 로컬 흉내 결과로 덮어쓰지 않는다
         inv = Investigator(db, LocalSandbox(workdir=tmp / "work", force_incomplete=case.get("force_incomplete")),
                            get_kb())
         jid = new_job_id()

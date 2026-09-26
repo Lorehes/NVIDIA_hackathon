@@ -15,6 +15,7 @@ from urllib.parse import urlsplit
 
 from .parse_url import normalize_url, parse_url, resolve_reference
 from .util import now_iso
+from .navigation import navigation_hosts, public_destination
 
 MAX_BODY = 1_000_000
 MAX_HOPS = 5
@@ -36,10 +37,12 @@ class FetchError(Exception):
 
 class Response:
     def __init__(self, status: int, location: str | None = None, body: bytes = b"",
-                 content_type: str = "text/html", truncated: bool = False, refresh: str | None = None):
+                 content_type: str = "text/html", truncated: bool = False, refresh: str | None = None,
+                 tls_details: dict | None = None):
         self.status, self.location, self.body, self.content_type = status, location, body, content_type
         self.truncated = truncated  # 본문이 한도(MAX_BODY)에서 잘렸는가
         self.refresh = refresh  # HTTP `Refresh` 헤더(브라우저가 지연 이동에 쓴다)
+        self.tls_details = tls_details
 
 
 # ── 실제 네트워크 ────────────────────────────────────────────────
@@ -95,9 +98,12 @@ def _read_bounded(chunks, encoding: str = "") -> tuple[bytes, bool]:
 
 
 class HttpxFetcher:
-    def __init__(self, timeout: float = TIMEOUT):
+    def __init__(self, timeout: float = TIMEOUT, allowed_hosts: list[str] | None = None,
+                 validate_dns: bool = False):
         import httpx  # 지연 import: 테스트·픽스처 모드에서는 필요 없음
 
+        self.allowed_hosts = set(allowed_hosts) if allowed_hosts is not None else None
+        self.validate_dns = validate_dns
         self._httpx = httpx
         self._client = httpx.Client(follow_redirects=False, timeout=timeout,
                                     headers={"User-Agent": MOBILE_UA, "Accept": "text/html,*/*;q=0.8",
@@ -105,15 +111,25 @@ class HttpxFetcher:
 
     def get(self, url: str) -> Response:
         httpx = self._httpx
+        if self.allowed_hosts is not None:
+            sp = urlsplit(url)
+            if sp.scheme not in ("http", "https") or sp.hostname not in self.allowed_hosts or sp.port not in (None, 80, 443):
+                raise Blocked("navigation outside allowed site addresses")
+        if self.validate_dns:
+            try:
+                public_destination(url)
+            except ValueError as exc:
+                raise Blocked(str(exc)) from exc
         try:
             with self._client.stream("GET", url) as r:
+                tls_details = _connection_certificate(r)
                 # iter_bytes()는 압축을 푼 뒤의 조각을 돌려줘 한도를 넘는 메모리가 먼저 잡힐 수 있다(압축 폭탄).
                 # 원본 바이트를 직접 풀면서 출력 크기를 MAX_BODY로 막는다.
                 if len(r.headers.get("content-type", "")) > MAX_CONTENT_TYPE:  # 잘라서 charset을 놓치느니 실패로 처리한다
                     raise FetchError("ContentTypeTooLong")
                 body, truncated = _read_bounded(r.iter_raw(), r.headers.get("content-encoding", ""))
                 return Response(r.status_code, r.headers.get("location"), body,
-                                r.headers.get("content-type", ""), truncated, r.headers.get("refresh"))
+                                r.headers.get("content-type", ""), truncated, r.headers.get("refresh"), tls_details)
         except httpx.ProxyError as e:
             raise Blocked(str(e)) from e
         except httpx.HTTPError as e:
@@ -123,6 +139,25 @@ class HttpxFetcher:
         self._client.close()
 
 
+def _connection_certificate(response) -> dict | None:
+    """Peer metadata, NOT proof of origin identity: an inspecting proxy may issue it."""
+    try:
+        stream = response.extensions.get('network_stream')
+        obj = stream.get_extra_info('ssl_object') if stream else None
+        if obj is None:
+            return None
+        cert = obj.getpeercert()
+        return {'scope': 'connection_peer', 'origin_identity_verified': False,
+                'issuer': [[list(v) for v in group] for group in cert.get('issuer', ())],
+                'not_before': cert.get('notBefore'), 'not_after': cert.get('notAfter'),
+                'dns_names': [value for kind, value in cert.get('subjectAltName', ()) if kind == 'DNS'][:100],
+                # httpcore can expose CPython's _SSLSocket: its DER flag is positional-only.
+                'sha256': hashlib.sha256(obj.getpeercert(True)).hexdigest(),
+                'protocol': obj.version()}
+    except (AttributeError, ValueError, TypeError, OSError):
+        return None
+
+
 # ── 픽스처(로컬 재현) ─────────────────────────────────────────────
 class FixtureFetcher:
     """fixtures_dir/sites.json: { "host/path": {"status":200,"file":"x.html","location":"https://.."} }
@@ -130,15 +165,16 @@ class FixtureFetcher:
     허용 호스트는 조사 대상 호스트 하나뿐이다(샌드박스 정책과 동일). 나머지는 Blocked.
     """
 
-    def __init__(self, fixtures_dir: str | Path, allowed_host: str):
+    def __init__(self, fixtures_dir: str | Path, allowed_host: str, allowed_hosts: list[str] | None = None):
         self.dir = Path(fixtures_dir)
         self.allowed_host = allowed_host.lower()
+        self.allowed_hosts = set(allowed_hosts if allowed_hosts is not None else navigation_hosts(self.allowed_host))
         self.sites = json.loads((self.dir / "sites.json").read_text(encoding="utf-8"))
 
     def get(self, url: str) -> Response:
         sp = urlsplit(url)
         host = (sp.hostname or "").lower()
-        if host != self.allowed_host:
+        if host not in self.allowed_hosts:
             raise Blocked("403 Forbidden (policy)")
         key = host + (sp.path or "/")
         rec = self.sites.get(key) or self.sites.get(key.rstrip("/")) or self.sites.get(host + "/*")
@@ -186,9 +222,10 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
         chain.append(entry)
         try:
             resp = fetcher.get(current)
-        except Blocked:
+        except Blocked as e:
             entry["blocked"] = True
             entry["status"] = 403
+            entry["block_reason"] = str(e)
             break
         except FetchError as e:
             entry["error"] = str(e)
@@ -199,6 +236,8 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
             break
 
         entry["status"] = resp.status
+        if resp.tls_details is not None:
+            entry['certificate'] = resp.tls_details
         entry["refresh"] = _refresh_navigates(resp.refresh)  # `Refresh` 헤더가 다른 주소로의 지연 이동일 수 있는가
         if current.startswith("https://") and tls_verified is None:
             tls_verified = True
@@ -209,6 +248,7 @@ def fetch_chain(url: str, fetcher, max_hops: int = MAX_HOPS) -> tuple[dict, byte
             else:
                 redirect_html, redirect_truncated = b"", False
             current, _ = normalize_url(resolve_reference(current, resp.location))
+            entry['redirect_url'] = current  # host validates this edge before extending a job policy
             continue
         got_final = True
         final_type = resp.content_type or ""

@@ -1,0 +1,559 @@
+{
+  "checked": "2026-09-26T04:37:18.733236+00:00",
+  "ssh_recovery": {
+    "method": "existing Brev host key with gateway hostname override",
+    "host": "global.prd.ga.run.brev.nvidia.com",
+    "alias": "nemoclaw-d3f195-host",
+    "port": 29223,
+    "changed_server_auth": false,
+    "reference": "https://github.com/NVIDIA/NemoClaw/issues/8924"
+  },
+  "deployment": {
+    "backup": "/tmp/catalog-deploy-20260926T043237Z",
+    "before_sha256": {
+      "kb/sources/verified_corrections.json": "18b6dce08f3797c883120bc788dfae870de589999b1790f442767670e221e8fb",
+      "kb/sources/official_services.json": "96e6678ab9dfb18c46407bfe9007c14edfe58d49da17fb620aa07615293056b3",
+      "kb/sources/service_publishers.json": "00fd19a581461ae1642adf5f331ae7891dca06770150c89527614a031cdc2ee3",
+      "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": "3c5048f5b8d9c445d9b6d17e82f20bd0e61bd5d95e0a1737fa5b2c042408af63",
+      "apps/api/tests/test_same_origin_search.py": "8b186f1258ed23ff95cec669d14bd95fa958cc8270828d31bda3cf423883033c",
+      "scripts/catalog/collect_education.py": "d619b5b95949033fa694f0a0d93c9d3559847011ce5ef76710e50815a6354cd2",
+      "scripts/catalog/collect_services.py": "322f34d8cef5ab2a2cd814a5694b117623e822a039cf4db4ba3f8ab9223ade93",
+      "apps/api/tests/test_json_service_directory.py": "00456ef4274d16afa18aec12eb4d2ee2bd8650036e64b5a0139184efd814a9f7",
+      "apps/api/tests/test_source_fingerprints.py": "901625c620afe514e7f9d15ada01e9b11bfae1537cc531203b208454dd53fede",
+      "apps/api/tests/test_standard_refresh.py": null,
+      "kb/site_catalog.json": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+      "kb/sources/coverage.json": "ba44b1de2cc2369479e36f5d97127c00ae42fb002a262ee1fd39c0569a1a1d8b"
+    },
+    "after_sha256": {
+      "kb/sources/verified_corrections.json": "65aa55a0d64feb91bb7a93d7683a36f814d778eb4659eb631e509855bcf04c07",
+      "kb/sources/official_services.json": "1ad3d9c2c813c5b63f271f1a349a98ad410ab3de88e003b039756e7c89f8b76e",
+      "kb/sources/service_publishers.json": "7f0ed529f10043b816ac330da70172c4a8146fb29c90dfe02f76115bcca3230c",
+      "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": "431c7f2381d18621a88f9e24dc170c7e31969911e60c3b82547e8a31c1116186",
+      "apps/api/tests/test_same_origin_search.py": "c1cee65ef4f70be54b2ea6500d9ac5fb8784247fe9280dbcea8fb63d09cfb5d2",
+      "scripts/catalog/collect_education.py": "eee143dbd6f9b3da854101100076d2394c5ff1a1d2758487baf1395fff2473f5",
+      "scripts/catalog/collect_services.py": "278e7e06d0dd4e3dd99ebf2f7b18ea69a6af65430199dec1b91aeb844c702bc2",
+      "apps/api/tests/test_json_service_directory.py": "bdeacc805e8c0bc775a57fedf33df1300cf2bba8aca1a9f1799529780c03753b",
+      "apps/api/tests/test_source_fingerprints.py": "6e5469a9fad58df004ad76a600afc5cb84435071d3c22f54595cc90b23c89c39",
+      "apps/api/tests/test_standard_refresh.py": "c079feec0c3da1893bab69f122c558cbfce727596be16d2b46263a138f2a8e63",
+      "kb/site_catalog.json": "fcc4fdb468a50d83b65677f6009c0ea3462a1a4426218da6b9590914e08443c9",
+      "kb/sources/coverage.json": "599ab7ee3bf43f403d6f7e871370be4b66e37d3f93e0559b87ad00c98a57e574"
+    },
+    "sandbox": "my-assistant"
+  },
+  "local_tests": "792 passed in 42.77s; one existing Starlette warning",
+  "vm_tests": "792 passed in 69.64s; one existing Starlette warning",
+  "records_added": 44,
+  "catalog_records": 22164,
+  "catalog_hosts": 16288,
+  "excluded": 2389,
+  "live": [
+    {
+      "label": "dalseong",
+      "input": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "job_id": "j_49a6acb62e3549acb888361f6b0bbdd4",
+      "elapsed_ms": 19372,
+      "timings": {
+        "parse": 150,
+        "policy_open": 9143,
+        "agent_investigate": 1245,
+        "sandbox_total": 18764,
+        "verdict": 4,
+        "explain": 2,
+        "total": 19368
+      },
+      "result": {
+        "verdict": "unknown",
+        "identity": {
+          "host": "www.dalseong.daegu.kr",
+          "site_family": "dalseong.daegu.kr",
+          "status": "verified",
+          "name": "고봉보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26",
+          "canonical_from": null,
+          "expires_at": null,
+          "inspection_supported": true,
+          "inspection_limit_reason": null,
+          "reason": "reviewed_official_source_correction",
+          "matched_entities": [
+            {
+              "id": "site_16a407d352aa61a3f266",
+              "name": "고봉보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_3a69a9f11fbd4993741b",
+              "name": "봉촌보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_5af34eff7dc02fda8a50",
+              "name": "대암보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_641e5eabdf42c7f3b97b",
+              "name": "화원읍보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_64beed651d2279f53cb8",
+              "name": "다사읍보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_82ab1f9df3ac87e1b17b",
+              "name": "논공읍보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_86073c1ca759dc3f4b17",
+              "name": "구지면보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_98eb6b7cce43579bea6b",
+              "name": "징리보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_afbeea9d43b81c56716b",
+              "name": "옥포읍보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_c3c883cf4cec41a4c4ef",
+              "name": "하빈면보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_d274b6c2d78a32283f27",
+              "name": "무등보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_d6a1a118f87e8657f312",
+              "name": "가창면보건지소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_de59976235389722e51d",
+              "name": "한정보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            },
+            {
+              "id": "site_fa79c875b1a7bc27c569",
+              "name": "음리보건진료소",
+              "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+              "checked": "2026-09-26"
+            }
+          ],
+          "matched_entities_total": 14,
+          "related_addresses": [
+            "dalseong.daegu.kr",
+            "www.dalseong.daegu.kr"
+          ],
+          "observed_redirects": [],
+          "behavior": "incomplete"
+        },
+        "explanation": {
+          "headline": "고봉보건진료소 공식 주소로 확인됐어요.",
+          "warning": null,
+          "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+          "confirmed_facts": [
+            "진짜 사이트 이름은 dalseong.daegu.kr이에요.",
+            "공식 출처에서 고봉보건진료소 서비스의 주소를 확인했어요."
+          ],
+          "suspicion_evidence": [],
+          "unverified": [
+            "페이지가 나중에 스스로 바뀌는 내용"
+          ],
+          "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+          "action_bullets": [
+            "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+          ],
+          "source": "template"
+        },
+        "redirect_chain": [
+          {
+            "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+            "host": "www.dalseong.daegu.kr",
+            "registrable_domain": "dalseong.daegu.kr",
+            "status": 200,
+            "blocked": false,
+            "error": null,
+            "at": "2026-09-26T04:34:52.586+00:00"
+          }
+        ],
+        "connection": {
+          "verified": true,
+          "certificates": [
+            {
+              "scope": "connection_peer",
+              "origin_identity_verified": false,
+              "issuer": [
+                [
+                  [
+                    "commonName",
+                    "OpenShell Sandbox CA"
+                  ]
+                ],
+                [
+                  [
+                    "organizationName",
+                    "OpenShell"
+                  ]
+                ]
+              ],
+              "not_before": "Jan  1 00:00:00 1975 GMT",
+              "not_after": "Jan  1 00:00:00 4096 GMT",
+              "dns_names": [
+                "www.dalseong.daegu.kr"
+              ],
+              "sha256": "7fcebdc1d57c1a4187ef24ad27bf80db00b3c20592ac4566e2ba227d06008502",
+              "protocol": "TLSv1.3"
+            }
+          ],
+          "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+        },
+        "incomplete_reason": null
+      },
+      "page_summary": {
+        "unexecuted_code": true,
+        "insecure_submission": null,
+        "forms": [
+          {
+            "action_host": "www.dalseong.daegu.kr",
+            "action_registrable_domain": "dalseong.daegu.kr",
+            "cross_domain": false,
+            "destinations_overflow": false,
+            "destinations": [
+              {
+                "host": "www.dalseong.daegu.kr",
+                "registrable_domain": "dalseong.daegu.kr",
+                "cross_domain": false
+              }
+            ],
+            "action_urls": [
+              "https://www.dalseong.daegu.kr/search_page/search_page.jsp"
+            ],
+            "insecure_submission": false,
+            "field_types": [
+              "other"
+            ],
+            "same_origin_search": true,
+            "search_only": false
+          },
+          {
+            "action_host": "www.dalseong.daegu.kr",
+            "action_registrable_domain": "dalseong.daegu.kr",
+            "cross_domain": false,
+            "destinations_overflow": false,
+            "destinations": [
+              {
+                "host": "www.dalseong.daegu.kr",
+                "registrable_domain": "dalseong.daegu.kr",
+                "cross_domain": false
+              }
+            ],
+            "action_urls": [
+              "https://www.dalseong.daegu.kr/search_page/search_page.jsp"
+            ],
+            "insecure_submission": false,
+            "field_types": [
+              "other"
+            ],
+            "same_origin_search": true,
+            "search_only": false
+          },
+          {
+            "action_host": "www.dalseong.daegu.kr",
+            "action_registrable_domain": "dalseong.daegu.kr",
+            "cross_domain": false,
+            "destinations_overflow": false,
+            "destinations": [
+              {
+                "host": "www.dalseong.daegu.kr",
+                "registrable_domain": "dalseong.daegu.kr",
+                "cross_domain": false
+              }
+            ],
+            "action_urls": [
+              "https://www.dalseong.daegu.kr/index.do"
+            ],
+            "insecure_submission": false,
+            "field_types": [
+              "other"
+            ],
+            "same_origin_search": true,
+            "search_only": false
+          }
+        ]
+      }
+    },
+    {
+      "label": "hancom_docs",
+      "input": "https://www.hancomdocs.com",
+      "job_id": "j_eb2f839f125f4fef8132c19ac885d899",
+      "elapsed_ms": 19433,
+      "timings": {
+        "parse": 0,
+        "policy_open": 9162,
+        "agent_investigate": 841,
+        "sandbox_total": 19386,
+        "verdict": 3,
+        "explain": 2,
+        "total": 19428
+      },
+      "result": {
+        "verdict": "unknown",
+        "identity": {
+          "host": "www.hancomdocs.com",
+          "site_family": "hancomdocs.com",
+          "status": "verified",
+          "name": "한글과컴퓨터 한컴독스",
+          "source": "https://www.hancom.com/service/docs",
+          "checked": "2026-09-26",
+          "canonical_from": null,
+          "expires_at": null,
+          "inspection_supported": true,
+          "inspection_limit_reason": null,
+          "reason": "publisher_service_link",
+          "matched_entities": [
+            {
+              "id": "site_edf3c8e6f0c77eba756e",
+              "name": "한글과컴퓨터 한컴독스",
+              "source": "https://www.hancom.com/service/docs",
+              "checked": "2026-09-26"
+            }
+          ],
+          "matched_entities_total": 1,
+          "related_addresses": [
+            "www.hancomdocs.com"
+          ],
+          "observed_redirects": [],
+          "behavior": "incomplete"
+        },
+        "explanation": {
+          "headline": "한글과컴퓨터 한컴독스 공식 주소로 확인됐어요.",
+          "warning": null,
+          "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+          "confirmed_facts": [
+            "진짜 사이트 이름은 hancomdocs.com이에요.",
+            "공식 출처에서 한글과컴퓨터 한컴독스 서비스의 주소를 확인했어요."
+          ],
+          "suspicion_evidence": [],
+          "unverified": [
+            "페이지가 나중에 스스로 바뀌는 내용"
+          ],
+          "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+          "action_bullets": [
+            "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+          ],
+          "source": "template"
+        },
+        "redirect_chain": [
+          {
+            "url": "https://www.hancomdocs.com",
+            "host": "www.hancomdocs.com",
+            "registrable_domain": "hancomdocs.com",
+            "status": 200,
+            "blocked": false,
+            "error": null,
+            "at": "2026-09-26T04:35:12.085+00:00"
+          }
+        ],
+        "connection": {
+          "verified": true,
+          "certificates": [
+            {
+              "scope": "connection_peer",
+              "origin_identity_verified": false,
+              "issuer": [
+                [
+                  [
+                    "commonName",
+                    "OpenShell Sandbox CA"
+                  ]
+                ],
+                [
+                  [
+                    "organizationName",
+                    "OpenShell"
+                  ]
+                ]
+              ],
+              "not_before": "Jan  1 00:00:00 1975 GMT",
+              "not_after": "Jan  1 00:00:00 4096 GMT",
+              "dns_names": [
+                "www.hancomdocs.com"
+              ],
+              "sha256": "6326202c4c567519275375e6a8d1a459daa28d3575e7313d67f94d756d93ceb6",
+              "protocol": "TLSv1.3"
+            }
+          ],
+          "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+        },
+        "incomplete_reason": null
+      },
+      "page_summary": {
+        "unexecuted_code": true,
+        "insecure_submission": null,
+        "forms": []
+      }
+    },
+    {
+      "label": "suwon_engineering",
+      "input": "https://www.suwon.ac.kr/index.html?menuno=787",
+      "job_id": "j_e01bf2df04ec458eb6da53d6bf3ed271",
+      "elapsed_ms": 19453,
+      "timings": {
+        "parse": 0,
+        "policy_open": 9164,
+        "agent_investigate": 1284,
+        "sandbox_total": 18828,
+        "verdict": 3,
+        "explain": 1,
+        "total": 19448
+      },
+      "result": {
+        "verdict": "unknown",
+        "identity": {
+          "host": "www.suwon.ac.kr",
+          "site_family": "suwon.ac.kr",
+          "status": "verified",
+          "name": "수원대학교 공학대학원",
+          "source": "https://www.suwon.ac.kr/index.html?menuno=787",
+          "checked": "2026-09-26",
+          "canonical_from": null,
+          "expires_at": null,
+          "inspection_supported": true,
+          "inspection_limit_reason": null,
+          "reason": "reviewed_official_source_correction",
+          "matched_entities": [
+            {
+              "id": "site_cfe69e4bb4c4d058b64e",
+              "name": "수원대학교 공학대학원",
+              "source": "https://www.suwon.ac.kr/index.html?menuno=787",
+              "checked": "2026-09-26"
+            }
+          ],
+          "matched_entities_total": 1,
+          "related_addresses": [
+            "www.suwon.ac.kr"
+          ],
+          "observed_redirects": [],
+          "behavior": "incomplete"
+        },
+        "explanation": {
+          "headline": "수원대학교 공학대학원 공식 주소로 확인됐어요.",
+          "warning": null,
+          "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+          "confirmed_facts": [
+            "진짜 사이트 이름은 suwon.ac.kr이에요.",
+            "공식 출처에서 수원대학교 공학대학원 서비스의 주소를 확인했어요."
+          ],
+          "suspicion_evidence": [],
+          "unverified": [
+            "페이지가 나중에 스스로 바뀌는 내용"
+          ],
+          "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+          "action_bullets": [
+            "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+          ],
+          "source": "template"
+        },
+        "redirect_chain": [
+          {
+            "url": "https://www.suwon.ac.kr/index.html?menuno=787",
+            "host": "www.suwon.ac.kr",
+            "registrable_domain": "suwon.ac.kr",
+            "status": 200,
+            "blocked": false,
+            "error": null,
+            "at": "2026-09-26T04:35:32.697+00:00"
+          }
+        ],
+        "connection": {
+          "verified": true,
+          "certificates": [
+            {
+              "scope": "connection_peer",
+              "origin_identity_verified": false,
+              "issuer": [
+                [
+                  [
+                    "commonName",
+                    "OpenShell Sandbox CA"
+                  ]
+                ],
+                [
+                  [
+                    "organizationName",
+                    "OpenShell"
+                  ]
+                ]
+              ],
+              "not_before": "Jan  1 00:00:00 1975 GMT",
+              "not_after": "Jan  1 00:00:00 4096 GMT",
+              "dns_names": [
+                "www.suwon.ac.kr"
+              ],
+              "sha256": "b08e376ee3f07a0f3ba72387a7477f4760c7fd04e29829a86cc9c7d266508583",
+              "protocol": "TLSv1.3"
+            }
+          ],
+          "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+        },
+        "incomplete_reason": null
+      },
+      "page_summary": {
+        "unexecuted_code": true,
+        "insecure_submission": null,
+        "forms": [
+          {
+            "action_host": "www.suwon.ac.kr",
+            "action_registrable_domain": "suwon.ac.kr",
+            "cross_domain": false,
+            "destinations_overflow": false,
+            "destinations": [
+              {
+                "host": "www.suwon.ac.kr",
+                "registrable_domain": "suwon.ac.kr",
+                "cross_domain": false
+              }
+            ],
+            "action_urls": [
+              "https://www.suwon.ac.kr/index.html?menuno=2250"
+            ],
+            "insecure_submission": false,
+            "field_types": [
+              "other"
+            ],
+            "same_origin_search": true,
+            "search_only": false
+          }
+        ]
+      }
+    }
+  ],
+  "effective_policy": "no residual investigation presets (effective policy verified)",
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  }
+}

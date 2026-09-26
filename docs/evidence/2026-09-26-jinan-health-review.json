@@ -1,0 +1,832 @@
+{
+  "reviewed_at": "2026-09-25T18:06:52.676106+00:00",
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "7c7b3e0eae98802533eba5e5c8d0f5817e2795a6948242d7846f5c0ce3b66718",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "용담보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "용담보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 용담면 대송로 17",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "3c636a4b07b1a18257009038d9032a6cab40f3bf472b507cf84f669896bfd2e9",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "안천보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "안천보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 안천면 진무로 2998",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2bbb0312969e9f3050444374318b8917a4a713036bc9d3e169c77e1927dfab1b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "동향보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "동향보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 동향면 진성로 1609",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "36000fdeb82bc37df0950a06b73cdeec8af89f807e736f7a02363612a3ff91db",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "상전보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "상전보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 상전면 주평로 41",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a18db26d3d7478be74e7ec6071da53994d612fb48192b72db64ea30961015c86",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "백운보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "백운보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 백운면 임진로 1346",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a8ea1272082d41670129ede683c61617a3f11630bd4ae74740fd0a6e1004b395",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "성수보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "성수보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 성수면 관진로 783",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "fe85487e3f5e73dc3f5a808b6ee59645672d87cb5cd3ef923797dc1d30b6760c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "마령보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "마령보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 마령면 솔안2길 8",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "667a606de386bf173d083ab08cfc4b1c452c3834e79aecc15bd3c1bbc6e2b7e8",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "부귀보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "부귀보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 부귀면 부귀로 305-6",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "420df97a6af492cb326dd2046e99d4155d3a1ad572bef3a30ff28e753593f31b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "정천보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "정천보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 정천면 봉학로 66",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "54465ec72c954a6dbb13f00a66b82a30c02251d02941168f9201f18c3d3b9a87",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "주천보건지소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+          "http_status": 200,
+          "body_sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44",
+          "confirmed_institution": "주천보건지소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 주천면 동상주천로 2253",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "7b86fe01fda35b5a8020e6c32dc84d682d5777191f64cbe5f7a38a9842a928e7",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "능금보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "능금보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 동향면 능금로 203",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2c7530d9ef46c36b50d6cb75bdfc9e698623d43459ca8a9cc27eb39e8df93fb2",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "학선보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "학선보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 동향면 계향로 380",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "e7bbaae12811676e73687436a31b7d4bb965a4ef578dc8570f7347d6818092a0",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "월포보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "월포보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 상전면 금지1길 18-31",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4582fc300f7e62b852d49d4ca74fd91b58602fe8f444e586251c932f71d36f5e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "평장보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "평장보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 백운면 평노길 55-5",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "81305e0d406c3ad9872d25995d964034f6a50e57e2c0b9641712ddd51b87a3c0",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "좌산보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "좌산보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 성수면 성백로 76",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "b24a3e4a8bcab098c64a4e577396e675352b439ba5b0f1522fb31e8831b1bbfc",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "좌포보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "좌포보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 성수면 원좌길 46",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4464fe8d6b6d126cc4d6f37a2fcbd9b6eec96d46cb2d81aa7387a246ef12ce6e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "덕천보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "덕천보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 마령면 덕천로 54",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "3255c3b2b8ee254aee90c930b2c7b02525772e27b1de9e9fed23ab3b66bbf17a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "세동보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "세동보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 부귀면 모래재로 917",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "d2347ece005d0e7ed397b8017d9bde2dc648f3694ff65462c9c47eddc2151cc2",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "무릉보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "무릉보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 주천면 어자길 44",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2e502512fce11f1ceecb5c35c985616e6bd86379b03ffa8457adbb85152c9b82",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대불보건진료소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+          "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+          "http_status": 200,
+          "body_sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3",
+          "confirmed_institution": "대불보건진료소",
+          "confirmed_jurisdiction": "전북특별자치도 진안군",
+          "institution_address": "진안군 주천면 벌뜸길 9",
+          "content_scope": "보건소가 제공하는 여러 기관의 공유 공식 안내 목록; 독립 홈페이지 또는 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "bce5157eb3ca8dd78f134c187e485a7f103461ce9705fffb009e84ed2275474b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "진안군보건소",
+      "original_url": "",
+      "url": "https://www.jinan.go.kr/health/index.jinan",
+      "scope": "url",
+      "source": "https://www.jinan.go.kr/health/index.jinan",
+      "checked": "2026-09-25",
+      "reason": "official_institution_homepage_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "label": "보건소",
+          "target": "https://www.jinan.go.kr/health/index.jinan"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jinan.go.kr/health/index.jinan",
+          "http_status": 200,
+          "body_sha256": "c8c12bcb0f221dc2ff470f19bec3253ba9efc0f164488fdc43241a72012e50ef",
+          "confirmed_institution": "진안군 보건소",
+          "content_scope": "군청이 직접 연결한 보건소 홈페이지; 공통 찾아오시는 길의 주소를 기관 소재지로 사용하지 않음"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "name": "반송보건진료소",
+      "reason": "ambiguous_source_name",
+      "source_rows": [
+        {
+          "name": "반송보건진료소",
+          "url": "",
+          "kind": "public_health",
+          "source_updated": "2026-06-24",
+          "source": "https://www.data.go.kr/data/15107750/standard.do"
+        },
+        {
+          "name": "반송보건진료소",
+          "url": "",
+          "kind": "public_health",
+          "source_updated": "2025-11-18",
+          "source": "https://www.data.go.kr/data/15107750/standard.do"
+        }
+      ],
+      "official_address": "진안군 백운면 두원길 10",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth"
+    },
+    {
+      "name": "수향보건진료소",
+      "reason": "name_not_in_snapshot",
+      "source_rows": [],
+      "official_address": "진안군 부귀면 황금로 244",
+      "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth"
+    }
+  ],
+  "original_mismatched_name": "수항보건진료소",
+  "raw_public_health_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "canonical_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "source_pages": {
+    "branches": {
+      "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005001000",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+      "status": 200,
+      "sha256": "9988c594e26fbdac8395c868100d3df6d061306b4e8ab579816d46fea46a6c44"
+    },
+    "clinics": {
+      "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601005002000",
+      "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005002000&contentsSid=785&cpath=%2Fhealth",
+      "status": 200,
+      "sha256": "c019b3b83974a26a8f018a57076aa67236b0923de9b2c9bfa35be5e769c4d8b3"
+    },
+    "main": {
+      "requested_url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601007000000",
+      "url": "https://www.jinan.go.kr/health/index.jinan?menuCd=DOM_000000601007000000",
+      "status": 200,
+      "sha256": "6df3b3695ebeb5b523d33df53f8f7e8f9bc745399155ca0f4539883a2a49117f"
+    }
+  },
+  "homepage": {
+    "url": "https://www.jinan.go.kr/health/index.jinan",
+    "status": 200,
+    "sha256": "c8c12bcb0f221dc2ff470f19bec3253ba9efc0f164488fdc43241a72012e50ef"
+  },
+  "limitations": [
+    "21 institution records across 3 exact URLs, not 21 independent websites",
+    "Unrelated query/path/host not verified",
+    "Name mismatch and ambiguous same-name raw rows remain excluded",
+    "Common directions page is not used as the health center homepage or physical address evidence"
+  ],
+  "counts": {
+    "records": 21978,
+    "hosts": 16252,
+    "excluded": 2522,
+    "missing_homepage": 2495,
+    "public_health_missing": 137,
+    "corrections": 58,
+    "inactive_corrections": 0
+  },
+  "catalog_sha256": "d267a62594387de36912a6314268af812e7e970e2b761d9a1012c6df69523497",
+  "existing_records_unchanged": true,
+  "new_record_ids": [
+    "site_0cd28ae0b888aa082c29",
+    "site_b3da2c19627c59787304",
+    "site_f211fd5b828c4d1be7c0",
+    "site_71b52f4fed7fb9c058b1",
+    "site_87152322cca83cd11558",
+    "site_b7c3ecfe58d4a6635b26",
+    "site_6dff3b9bb5bf39967523",
+    "site_b17dcf7386ae9a6ec066",
+    "site_b3b399ca2bec808a7b13",
+    "site_6561170aad0ac3ae970a",
+    "site_2aec191b1d58482d8c0d",
+    "site_81823270d76bbb831237",
+    "site_9a9370d5bb2c77fbf9d1",
+    "site_9c5eb1e93f94e33d52f7",
+    "site_f8c12af2364196e6121b",
+    "site_33341dbfb7632ad945b6",
+    "site_a74228ccc904a6235c3a",
+    "site_0ece40836220b8c325cf",
+    "site_2316e4849d743d9612c5",
+    "site_acbc6f0a5b8ef827b4ff",
+    "site_4439e394fa20ab93282c"
+  ],
+  "local_checks": {
+    "passed": 58,
+    "seconds": 0.84
+  },
+  "vm_checks": {
+    "passed": 58,
+    "seconds": 1.57
+  },
+  "runtime_changes": false,
+  "bulk_source_redownloaded": false,
+  "vm_validation": {
+    "live": {
+      "job_id": "j_91240627c6b7411f889e6f5040cb0272",
+      "status": "done",
+      "elapsed_ms": 15459,
+      "error": null,
+      "verdict": "caution",
+      "identity": {
+        "host": "www.jinan.go.kr",
+        "site_family": "jinan.go.kr",
+        "status": "verified",
+        "name": "백운보건지소",
+        "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": true,
+        "inspection_limit_reason": null,
+        "reason": "reviewed_official_source_correction",
+        "matched_entities": [
+          {
+            "id": "site_0ece40836220b8c325cf",
+            "name": "백운보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_2316e4849d743d9612c5",
+            "name": "마령보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_2aec191b1d58482d8c0d",
+            "name": "주천보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_33341dbfb7632ad945b6",
+            "name": "상전보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_81823270d76bbb831237",
+            "name": "정천보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_9a9370d5bb2c77fbf9d1",
+            "name": "용담보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_9c5eb1e93f94e33d52f7",
+            "name": "안천보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_a74228ccc904a6235c3a",
+            "name": "부귀보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_acbc6f0a5b8ef827b4ff",
+            "name": "동향보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_f8c12af2364196e6121b",
+            "name": "성수보건지소",
+            "source": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+            "checked": "2026-09-25"
+          }
+        ],
+        "matched_entities_total": 10,
+        "related_addresses": [
+          "jinan.go.kr",
+          "www.jinan.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "risk_found"
+      },
+      "explanation": {
+        "headline": "페이지 주소는 공식이지만, 입력 정보의 처리 경로는 미확인이에요.",
+        "warning": null,
+        "detail": "백운보건지소 공식 안내 주소와 일치해요. 입력 내용을 보내는 경로까지 해당 기관의 공식 주소로 확인한 것은 아니에요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 jinan.go.kr이에요.",
+          "공식 출처에서 백운보건지소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [
+          "입력 내용을 같은 도메인의 다른 경로로 보내지만, 해당 기관의 공식 처리 주소인지는 확인하지 못했어요."
+        ],
+        "unverified": [],
+        "recommended_action": "백운보건지소 공식 홈페이지 또는 대표번호로 먼저 확인한 뒤에 적으세요.",
+        "action_bullets": [
+          "이 페이지에는 아직 정보를 적지 마세요.",
+          "백운보건지소 공식 홈페이지 또는 대표번호로 먼저 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://www.jinan.go.kr/health/board/list.jinan?boardId=BBS_0000009&menuCd=DOM_000000601005001000&contentsSid=785&cpath=%2Fhealth",
+          "host": "www.jinan.go.kr",
+          "registrable_domain": "jinan.go.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T18:08:55.654+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.jinan.go.kr"
+            ],
+            "sha256": "a97492757b75b5db796028acc9bc3557501da69babad8932584e02a22fd89a00",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "d267a62594387de36912a6314268af812e7e970e2b761d9a1012c6df69523497"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "policy_cleanup": "no residual investigation presets (effective policy verified)"
+}

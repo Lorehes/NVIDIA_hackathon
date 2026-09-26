@@ -1,0 +1,253 @@
+{
+  "publisher": "토스",
+  "source": "https://toss.im/company",
+  "group": "토스 계열사",
+  "records": [
+    {
+      "name": "토스뱅크",
+      "service_name": "토스뱅크",
+      "publisher": "토스",
+      "url": "https://www.tossbank.com/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스증권",
+      "service_name": "토스증권",
+      "publisher": "토스",
+      "url": "https://corp.tossinvest.com/ko",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스페이먼츠",
+      "service_name": "토스페이먼츠",
+      "publisher": "토스",
+      "url": "https://www.tosspayments.com/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스플레이스",
+      "service_name": "토스플레이스",
+      "publisher": "토스",
+      "url": "https://tossplace.com/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스모바일",
+      "service_name": "토스모바일",
+      "publisher": "토스",
+      "url": "https://tossmobile.co.kr/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스인컴",
+      "service_name": "토스인컴",
+      "publisher": "토스",
+      "url": "https://tossincome.com/?utm_source=tosshomepage_footer",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스인슈어런스",
+      "service_name": "토스인슈어런스",
+      "publisher": "토스",
+      "url": "https://tossinsu.com/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "토스씨엑스",
+      "service_name": "토스씨엑스",
+      "publisher": "토스",
+      "url": "https://tosscx.com/",
+      "source": "https://toss.im/company",
+      "scope": "url",
+      "kind": "official_affiliate_directory",
+      "evidence_type": "publisher_affiliate_link",
+      "source_sha256": "a612114b2ecf1c29db3f9d6898e9a166e1bcda63a431f337ebf4efa337af76b2",
+      "checked": "2026-09-25"
+    }
+  ],
+  "source_http_status": 200,
+  "count": 8,
+  "service_rows": 124,
+  "affiliate_rows": 8,
+  "prior_records_sha256": "0ad69f9a580266c59a57e855359f04b31e9a078548203446a0246940fd2f6389",
+  "prior_records_local_sha256": "0ad69f9a580266c59a57e855359f04b31e9a078548203446a0246940fd2f6389",
+  "prior_records_vm_matched_before_deployment": true,
+  "catalog": {
+    "indexed_records": 21889,
+    "indexed_hosts": 16206,
+    "popular_selected": 1000,
+    "excluded_by_reason": {
+      "invalid_hostname": 2,
+      "invalid_or_ambiguous_url": 2,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "missing_homepage": 2539,
+      "unsupported_or_malformed_scheme": 1,
+      "userinfo_or_email": 4
+    }
+  },
+  "excluded_count": 2566,
+  "catalog_sha256": "efe4656a774ca44b596c39ffa7169757b182b2c4cb6e040f4108aff45c33fde0",
+  "tests": {
+    "local": "54 passed in 0.44s",
+    "vm": "54 passed in 0.77s"
+  },
+  "scope": "exact source-listed URL, separate affiliate relationship; no all-subdomain or sibling-company identity grant; no observed service redirect inference for affiliate records",
+  "deferred": [
+    {
+      "source": "https://www.nexon.com/Home/Game",
+      "reason": "Static HTTP200 response did not contain game directory links. No game identities extracted from unrelated footer/login links; rendered list or official data endpoint review remains."
+    }
+  ],
+  "not_registered": [
+    "일반 블로그/채용/약관/광고 링크",
+    "토스증권의 투자 웹앱 전체: 등록은 출처가 연결하는 corp.tossinvest.com/ko 기업소개 정확주소",
+    "토스인컴 질의 없는 루트: 출처의 utm_source 질의를 그대로 보존"
+  ],
+  "live_validation": {
+    "job_id": "j_9d36c2fe6c054ee4897cc1ea14f3e86a",
+    "status": "done",
+    "elapsed_ms": 14105,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "www.tossbank.com",
+      "site_family": "tossbank.com",
+      "status": "verified",
+      "name": "토스뱅크",
+      "source": "https://toss.im/company",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "publisher_affiliate_link",
+      "matched_entities": [
+        {
+          "id": "site_a6cc19aa14fabc7b261f",
+          "name": "토스뱅크",
+          "source": "https://toss.im/company",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.tossbank.com"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "토스뱅크 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 tossbank.com이에요.",
+        "공식 출처에서 토스뱅크 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.tossbank.com/",
+        "host": "www.tossbank.com",
+        "registrable_domain": "tossbank.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T17:10:23.252+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "www.tossbank.com"
+          ],
+          "sha256": "c15b7632842d91471920ec305d332e4e68a3f2b81a94fa2cfa4e0d00a33784c2",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "efe4656a774ca44b596c39ffa7169757b182b2c4cb6e040f4108aff45c33fde0",
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "effective_residual_policies": 0
+}

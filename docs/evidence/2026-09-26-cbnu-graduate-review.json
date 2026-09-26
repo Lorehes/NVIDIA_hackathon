@@ -1,0 +1,255 @@
+{
+  "checked": "2026-09-26",
+  "before_sha256": {
+    "kb/site_catalog.json": "5f44a924d5b902760d249e7ef94312f8f860565f4686d999bd80adf2ea2da093",
+    "kb/sources/coverage.json": "21c3a1f137f58044c36fbfeb3f194aade0de2d26d4419cd94640bd99df17ba41",
+    "kb/sources/verified_corrections.json": "df87d1495192e1f7102976c240482324a8b81a80c9c2649af735d3f8413aa36e",
+    "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+  },
+  "added": [
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "473ddacc746528e46756380ee72b5c5d82e6a7a207f9afd25074dbea969e31dc",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "충북대학교 법학전문대학원",
+      "original_url": "",
+      "url": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+      "scope": "url",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+          "http_status": 200,
+          "body_sha256": "96db46846be130955b3fad887320b477c1126a599f8e5f8a07f22a408cc06744",
+          "title": "충북대학교 - 법학전문대학원Law School",
+          "content_selector": "#contents"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "b7ed9555bc29f94fc47547babf0ae689daaf6d8980eaa1851ace6e522abb7d3d",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "충북대학교 교육대학원",
+      "original_url": "",
+      "url": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+      "scope": "url",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+          "http_status": 200,
+          "body_sha256": "f39bd4637e0af4b1e215d4869659dfb123325fff77fbce48242c40f469d1f096",
+          "title": "충북대학교 - 교육대학원Graduate School of Education",
+          "content_selector": "#contents"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "7e64eafe45afb27656c741f7e899050dd0277d1899a191b0b557d0c37ce9939e",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "충북대학교 법무대학원",
+      "original_url": "",
+      "url": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "scope": "url",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "http_status": 200,
+          "body_sha256": "243539f98be3f2e49b989ab31377633914d612f3d8a17a3dbb9069d1b65d944b",
+          "title": "충북대학교 - 법무대학원Graduate School of Legal Affairs",
+          "content_selector": "#contents"
+        }
+      ]
+    }
+  ],
+  "institution_status_reviews": [
+    {
+      "name": "충북대학교 의생명과학경영융합대학원",
+      "original_row": {
+        "name": "충북대학교 의생명과학경영융합대학원",
+        "url": "",
+        "kind": "university",
+        "source_updated": "2026-03-18",
+        "source": "https://www.data.go.kr/data/15107736/standard.do"
+      },
+      "source_row_sha256": "d5b937d1f937edcc98b66b36631ed5bbc4230fbc5fbd19c623ed55634152c807",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "status": "abolished_but_retained_for_enrolled_students",
+      "source": "https://graduate.chungbuk.ac.kr/upload_file/bbs/00000004/2026/1777523280-1300-0.pdf",
+      "source_sha256": "d9ccd7d74ba9a3bcbf47c61b7868f12e581f823d9ec4c3c5e4c5c6a86c808586",
+      "pdf_page_1based": 74,
+      "printed_page": 66,
+      "table_and_footnote_visually_verified": true,
+      "evidence_summary": "2026~2027 요람은 꺾쇠로 표시된 두 대학원을 폐지 후 재적생이 있는 동안 존속하는 대상으로 명시한다.",
+      "action": "원자료·제외행 보존; 현재 일반 모집기관으로 신규 등록하지 않음; 존속 종료 시점 추정 안함"
+    },
+    {
+      "name": "충북대학교 수의방역대학원",
+      "original_row": {
+        "name": "충북대학교 수의방역대학원",
+        "url": "",
+        "kind": "university",
+        "source_updated": "2026-03-18",
+        "source": "https://www.data.go.kr/data/15107736/standard.do"
+      },
+      "source_row_sha256": "5c6da46f060e9d4087c41299b4265d90d4a2e6b28c9b89152454005b14566c53",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "status": "abolished_but_retained_for_enrolled_students",
+      "source": "https://graduate.chungbuk.ac.kr/upload_file/bbs/00000004/2026/1777523280-1300-0.pdf",
+      "source_sha256": "d9ccd7d74ba9a3bcbf47c61b7868f12e581f823d9ec4c3c5e4c5c6a86c808586",
+      "pdf_page_1based": 74,
+      "printed_page": 66,
+      "table_and_footnote_visually_verified": true,
+      "evidence_summary": "2026~2027 요람은 꺾쇠로 표시된 두 대학원을 폐지 후 재적생이 있는 동안 존속하는 대상으로 명시한다.",
+      "action": "원자료·제외행 보존; 현재 일반 모집기관으로 신규 등록하지 않음; 존속 종료 시점 추정 안함"
+    }
+  ],
+  "retained_page_observation": {
+    "url": "https://www.chungbuk.ac.kr/www/contents.do?key=417",
+    "status": 200,
+    "title": "충북대학교 - 수의방역대학원Graduate School of Veterinary Biosecurity and Protection",
+    "sha256": "ba2cec00f4cf6d1bd903de0679eafff8d1b4d083f7f3d9fc94cd2a3ead417dca",
+    "content_id": "contents"
+  },
+  "limits": [
+    "안내페이지 존재와 현재 기관 모집/운영 상태를 구분",
+    "폐지 후 존속 종료 시점 및 현재 재적생 수를 확인하지 않음",
+    "정확 URL만 승인; 같은 호스트 다른 key/경로는 승인하지 않음"
+  ],
+  "validation": {
+    "old_records_unchanged": 22196,
+    "existing_scope_narrowed": [
+      {
+        "before": {
+          "id": "site_d1500fc1f7a12ee4b42b",
+          "name": "충북대학교",
+          "host": "www.chungbuk.ac.kr",
+          "family": "chungbuk.ac.kr",
+          "url": "https://www.chungbuk.ac.kr",
+          "scope": "host",
+          "kind": "university",
+          "verified": true,
+          "checked": "2026-09-25",
+          "source": "https://www.data.go.kr/data/15107736/standard.do",
+          "source_updated": "2026-03-18"
+        },
+        "after": {
+          "id": "site_d1500fc1f7a12ee4b42b",
+          "name": "충북대학교",
+          "host": "www.chungbuk.ac.kr",
+          "family": "chungbuk.ac.kr",
+          "url": "https://www.chungbuk.ac.kr",
+          "scope": "url",
+          "kind": "university",
+          "verified": true,
+          "checked": "2026-09-25",
+          "source": "https://www.data.go.kr/data/15107736/standard.do",
+          "source_updated": "2026-03-18"
+        }
+      }
+    ],
+    "new_exact_identities": 3,
+    "unverified_boundaries": [
+      "https://www.chungbuk.ac.kr/www/contents.do",
+      "https://www.chungbuk.ac.kr/www/contents.do?key=417",
+      "https://www.chungbuk.ac.kr/www/contents.do?key=410&other=1",
+      "https://other.chungbuk.ac.kr/www/contents.do?key=410"
+    ],
+    "university_root_verified": true,
+    "local_tests": "28 passed in1.06s",
+    "vm_tests": "28 passed in2.01s"
+  },
+  "after_sha256": {
+    "kb/site_catalog.json": "f58ac5953a17645e2cd16dab13f1303707a7b6e7d5923ce7a701b8a4c189f34e",
+    "kb/sources/coverage.json": "bcbf0acce5e7edf429773dace6e34fafc2994b7932d84bdffa4d5f569735a6d0",
+    "kb/sources/verified_corrections.json": "b706b2f234e7a5ead52053556bee658d10f741131ade1e7c21353b08c9123bbf",
+    "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+  },
+  "counts": {
+    "records": 22200,
+    "hosts": 16293,
+    "excluded": 2379,
+    "missing_homepage": 2354,
+    "corrections": 201,
+    "inactive": 0
+  },
+  "vm_deployment": {
+    "backup": "/tmp/cbnu-deploy-20260926T053451Z",
+    "after_sha256": {
+      "kb/site_catalog.json": "f58ac5953a17645e2cd16dab13f1303707a7b6e7d5923ce7a701b8a4c189f34e",
+      "kb/sources/coverage.json": "bcbf0acce5e7edf429773dace6e34fafc2994b7932d84bdffa4d5f569735a6d0",
+      "kb/sources/verified_corrections.json": "b706b2f234e7a5ead52053556bee658d10f741131ade1e7c21353b08c9123bbf",
+      "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+    }
+  },
+  "retained_source_pdf": "docs/evidence/sources/cbnu-2026-2027-graduate-bulletin.pdf",
+  "vm_live": {
+    "job_id": "j_4dea8a350e2f4ea18dc3f565236ce127",
+    "status": "done",
+    "elapsed_ms": 19550,
+    "timings": {
+      "parse": 125,
+      "policy_open": 8164,
+      "agent_investigate": 1695,
+      "sandbox_total": 19250,
+      "verdict": 4,
+      "explain": 2,
+      "total": 19545
+    },
+    "identity": {
+      "host": "www.chungbuk.ac.kr",
+      "site_family": "chungbuk.ac.kr",
+      "status": "verified",
+      "name": "충북대학교 법무대학원",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_9ecaea067a4ec2c9a6d5",
+          "name": "충북대학교 법무대학원",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.chungbuk.ac.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "risk_found"
+    },
+    "verdict": "caution",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)",
+    "warning_review": {
+      "type": "cross_domain_form",
+      "action_url": "https://www.cbnu.ac.kr/search/search.jsp",
+      "method": "post",
+      "observed_role": "unified_search",
+      "origin": "https://www.chungbuk.ac.kr",
+      "destination_relation_verified": false,
+      "form_submitted": false,
+      "decision": "Keep caution; official origin does not establish destination ownership or submission behavior. No hostname-specific exception added."
+    }
+  }
+}

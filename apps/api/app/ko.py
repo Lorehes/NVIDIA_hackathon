@@ -45,6 +45,7 @@ FIELD_LABELS = {
     "phone": "전화번호",
     "name": "이름",
     "address": "받을 주소",
+    "file": "첨부 파일",
     "other": "기타 정보",
 }
 
@@ -79,6 +80,8 @@ PURPOSE_EXPECTED = {
 }
 
 INCOMPLETE_REASONS = {
+    'unsupported_port': '이 주소의 포트는 현재 페이지 검사에서 지원하지 않아요',
+    'destination_unavailable': '접속할 주소의 공인 IP를 확인하지 못했어요',
     "agent_timeout": "1분 안에 답이 오지 않아 멈췄어요",
     "overloaded": "AI가 너무 바빠서 조사가 멈췄어요",
     "agent_error": "AI 조사원이 답하지 못해 멈췄어요",

@@ -1,0 +1,961 @@
+{
+  "reviewed_at": "2026-09-26T01:53:38.563372+00:00",
+  "previous_corrections_sha256": "d2c639c84b29596f97e48400b957eb30fab998cd85ac3a24ff94e03d3ba87331",
+  "previous_catalog_sha256": "6450f29fb6114108b8a126a25d51c2fa6a568650b4c78aaec3de16d057b4d3e5",
+  "raw_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "sources": [
+    {
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "status": 200,
+      "sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+      "confirmed_names": [
+        "연기면보건지소",
+        "연동면보건지소",
+        "부강면보건지소",
+        "금남면보건지소",
+        "장군면보건지소",
+        "연서면보건지소",
+        "전의면보건지소",
+        "전동면보건지소",
+        "소정면보건지소"
+      ],
+      "navigation": [
+        {
+          "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+          "href": "/health/sub01_05_02.do"
+        },
+        {
+          "label": "보건지소(9개)",
+          "href": "/health/sub01_05_02.do"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "status": 200,
+      "sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+      "confirmed_names": [
+        "응암보건진료소",
+        "와촌보건진료소",
+        "쌍류보건진료소",
+        "양곡보건진료소",
+        "황용보건진료소",
+        "송곡보건진료소",
+        "송학보건진료소"
+      ],
+      "navigation": [
+        {
+          "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+          "href": "/health/sub01_05_03.do"
+        },
+        {
+          "label": "보건진료소(7개)",
+          "href": "/health/sub01_05_03.do"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sejong.go.kr/health/sub01_05_04.do",
+      "status": 200,
+      "sha256": "ea15cd7ccbca31eb7071211acfef5969347593c50cf34b2e51c39b30f38c08f4",
+      "confirmed_names": [
+        "남부통합보건지소"
+      ],
+      "navigation": [
+        {
+          "label": "남부통합보건지소",
+          "href": "/health/sub01_05_04.do"
+        },
+        {
+          "label": "남부통합보건지소",
+          "href": "/health/sub01_05_04.do"
+        }
+      ]
+    }
+  ],
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "14b3b71587dc413473f28cd3699b483254d1c47db1f227b9db3089e80e46d980",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "연기면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "연기면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "f9a3f84bb6171db4fa143e4235e1e45157353813a2dbe94b3792316e14afbfdd",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "연동면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "연동면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "65749089406567e048a9874e48e3f02e65bf25759714f522f49b5d816cd2ce82",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "부강면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "부강면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "14fb542990b9dc60445efb43bc6602d4a06a3b96789567c3ef60ba103bf14c88",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "금남면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "금남면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2b3fde888e923628c3e45023c86f349846682f822d9ddc866df797933fa0a603",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "장군면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "장군면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "bc7816868fd815da50e7e3d80f5182c28f9cfc87f101ece5756e6356da06652f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "연서면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "연서면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "0b7f5f9fb0892c6c64c55d1f53f4bd6850459930275953bc20110f4ce594c6a5",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "전의면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "전의면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "207878ce978bb2e03be853b28c691f2eec318c08aec56dc99e601643d51e6a7d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "전동면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "전동면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "9461b718e70150cb31cfd84e5b1e4f387bb44ed95a103bf0c0c3976091a7a84c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "소정면보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건지소(9) : 연기면, 연동면, 부강면, 금남면, 장군면, 연서면, 전의면, 전동면, 소정면",
+              "href": "/health/sub01_05_02.do"
+            },
+            {
+              "label": "보건지소(9개)",
+              "href": "/health/sub01_05_02.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_02.do",
+          "http_status": 200,
+          "body_sha256": "eca5d403fe85b324e9c0bf59ea1343ed4b2aa7ddbd2c3c0669cfb74003578f66",
+          "confirmed_institution": "소정면보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "275148d9b09e9a55511e046eb4f996f7cf1a066e8ead0927ce99e0ee79ec3a6a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "응암보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "응암보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "796dd6322e4fb131cefc0da916b13d423d3b675b5c1670fe55efed3f88944346",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "와촌보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "와촌보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "dcd88d752dbab8a73a4d0431ff4e37350fe4bd48d59d827da8003b4e654dec5c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "쌍류보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "쌍류보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2e36c30641ac149b2c001e490e6bcf0afd295ad13243a9fa3e654381af25dd69",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "양곡보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "양곡보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "22f52b2526bfd45d19323454101743f2fc92970dc02130b19ec8db0950ed3350",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "황용보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "황용보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "03724253ff9dda15203bda073e2659c2d9e22e6d14b5ad5b6a0ed3c715aac31b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "송곡보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "송곡보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "55b272a56996c753c6c6fe53952debf0fcbbde3c0cee1bee5619fba3042710ae",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "송학보건진료소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "보건진료소(7) : 응암, 황용, 송학, 와촌, 쌍류, 양곡, 송곡",
+              "href": "/health/sub01_05_03.do"
+            },
+            {
+              "label": "보건진료소(7개)",
+              "href": "/health/sub01_05_03.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "http_status": 200,
+          "body_sha256": "2bf5ef92c613e9b33b300426b86c102b36a8ded64c827dc6e31e8201bc8c0ebf",
+          "confirmed_institution": "송학보건진료소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a721412b2c587183ce722e456e8d6a259386e16815303de89f6a9082aab79b61",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "남부통합보건지소",
+      "original_url": "",
+      "url": "https://www.sejong.go.kr/health/sub01_05_04.do",
+      "scope": "url",
+      "source": "https://www.sejong.go.kr/health/sub01_05_04.do",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.sejong.go.kr/health/sub01_03.do",
+          "body_sha256": "d389da209ac5e30c18e4d8cdf5a08a456a1d08428b7dc6ef5a6388536afe3f80",
+          "observed_links": [
+            {
+              "label": "남부통합보건지소",
+              "href": "/health/sub01_05_04.do"
+            },
+            {
+              "label": "남부통합보건지소",
+              "href": "/health/sub01_05_04.do"
+            }
+          ]
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.sejong.go.kr/health/sub01_05_04.do",
+          "http_status": 200,
+          "body_sha256": "ea15cd7ccbca31eb7071211acfef5969347593c50cf34b2e51c39b30f38c08f4",
+          "confirmed_institution": "남부통합보건지소",
+          "confirmed_jurisdiction": "세종특별자치시",
+          "content_scope": "공식 기관 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "name": "세종특별자치시 보건소",
+      "url": "https://www.sejong.go.kr/health/sub01_05.do",
+      "http_status": 200,
+      "title": "에러페이지",
+      "reason": "HTTP200 response is an error page; not accepted as institution-page evidence",
+      "body_sha256": "91b5e4afadb077509d40245aeac291ead1db51d6607b1431c6b1a8335a58d981"
+    }
+  ],
+  "validation": {
+    "indexed_records": 22106,
+    "indexed_hosts": 16281,
+    "excluded": 2429,
+    "excluded_reasons": {
+      "missing_homepage": 2402,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "invalid_or_ambiguous_url": 2,
+      "userinfo_or_email": 4,
+      "invalid_hostname": 2,
+      "unsupported_or_malformed_scheme": 1
+    },
+    "public_health_missing": 44,
+    "unchanged_existing_records": 22088,
+    "narrowed_existing_scope": {
+      "name": "세종특별자치시",
+      "url": "http://www.sejong.go.kr",
+      "before": "host",
+      "after": "url",
+      "reason": "existing shared-host boundary rule applied after adding distinct institutions"
+    },
+    "exact_names": 17,
+    "url_boundary_checks": 15,
+    "catalog_sha256": "be2f5ce708d6b33aff6d46d0334b7365eb65b0c98440bc27319bfac00a02bb4e",
+    "corrections_sha256": "2c0df3f27fcb385d1ddfc2a13df9d10358b689cdbfde9ad867d763c364cb3e3d",
+    "local_tests": "31 passed in 0.81s",
+    "vm_tests": "31 passed in 1.68s",
+    "inactive_corrections": 0
+  },
+  "live": {
+    "job_id": "j_8fc0308434094180a0c8fdc17b4d05b8",
+    "status": "done",
+    "elapsed_ms": 19570,
+    "error": null,
+    "verdict": "caution",
+    "identity": {
+      "host": "www.sejong.go.kr",
+      "site_family": "sejong.go.kr",
+      "status": "verified",
+      "name": "송학보건진료소",
+      "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_0b228675cc76e1f24f12",
+          "name": "송학보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_0ddfb129a420cc15937b",
+          "name": "송곡보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_22ca6e012889bf8fbf94",
+          "name": "쌍류보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_523f1a59cf9e2a1551b5",
+          "name": "와촌보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_7bbd86f90719474c39c2",
+          "name": "황용보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_a9eb3c43c39e443e9e55",
+          "name": "양곡보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_d3f301d07101f8266c31",
+          "name": "응암보건진료소",
+          "source": "https://www.sejong.go.kr/health/sub01_05_03.do",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 7,
+      "related_addresses": [
+        "www.sejong.go.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "risk_found"
+    },
+    "explanation": {
+      "headline": "페이지 주소는 공식이지만, 입력 정보의 처리 경로는 미확인이에요.",
+      "warning": null,
+      "detail": "송학보건진료소 공식 안내 주소와 일치해요. 입력 내용을 보내는 경로까지 해당 기관의 공식 주소로 확인한 것은 아니에요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 sejong.go.kr이에요.",
+        "공식 출처에서 송학보건진료소 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [
+        "입력 내용을 같은 도메인의 다른 경로로 보내지만, 해당 기관의 공식 처리 주소인지는 확인하지 못했어요."
+      ],
+      "unverified": [],
+      "recommended_action": "송학보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인한 뒤에 적으세요.",
+      "action_bullets": [
+        "이 페이지에는 아직 정보를 적지 마세요.",
+        "송학보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인하세요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.sejong.go.kr/health/sub01_05_03.do",
+        "host": "www.sejong.go.kr",
+        "registrable_domain": "sejong.go.kr",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-26T01:55:47.576+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "www.sejong.go.kr"
+          ],
+          "sha256": "8db885e39e5a9d6731a569cd49386e10b849358c6da733567a5a1e60f39de276",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "be2f5ce708d6b33aff6d46d0334b7365eb65b0c98440bc27319bfac00a02bb4e",
+    "page_summary": {
+      "unexecuted_code": true,
+      "forms": [
+        {
+          "action_host": "www.sejong.go.kr",
+          "action_registrable_domain": "sejong.go.kr",
+          "cross_domain": false,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.sejong.go.kr",
+              "registrable_domain": "sejong.go.kr",
+              "cross_domain": false
+            }
+          ],
+          "action_urls": [
+            "https://www.sejong.go.kr/health/index.do"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "search_only": false
+        }
+      ]
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    },
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "flowline": {
+    "kb_version": 34,
+    "security_version": 31
+  }
+}

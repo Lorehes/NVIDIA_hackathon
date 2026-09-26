@@ -1,0 +1,951 @@
+{
+  "publisher": "넥슨",
+  "source": "https://www.nexon.com/Home/Game",
+  "data_source": "https://oasisapi.nexon.com/game/mainlist",
+  "records": [
+    {
+      "name": "넥슨 던전앤파이터",
+      "service_name": "던전앤파이터",
+      "publisher": "넥슨",
+      "url": "http://df.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플스토리",
+      "service_name": "메이플스토리",
+      "publisher": "넥슨",
+      "url": "http://maplestory.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플스토리",
+      "service_name": "메이플스토리",
+      "publisher": "넥슨",
+      "url": "http://m.maplestory.nexon.com/MapleStory/Page/Gnx.aspx?URL=Home/Index",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 FC 온라인",
+      "service_name": "FC 온라인",
+      "publisher": "넥슨",
+      "url": "https://fconline.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 FC 온라인",
+      "service_name": "FC 온라인",
+      "publisher": "넥슨",
+      "url": "https://m.fconline.nexon.com/fcom",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플 키우기",
+      "service_name": "메이플 키우기",
+      "publisher": "넥슨",
+      "url": "https://maplestoryidle.nexon.com/ko",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플스토리 월드",
+      "service_name": "메이플스토리 월드",
+      "publisher": "넥슨",
+      "url": "https://abr.ge/0ezb4b",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 마비노기 모바일",
+      "service_name": "마비노기 모바일",
+      "publisher": "넥슨",
+      "url": "https://mabinogimobile.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플스토리M",
+      "service_name": "메이플스토리M",
+      "publisher": "넥슨",
+      "url": "http://maplestorym.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 서든어택",
+      "service_name": "서든어택",
+      "publisher": "넥슨",
+      "url": "http://sa.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 블루 아카이브",
+      "service_name": "블루 아카이브",
+      "publisher": "넥슨",
+      "url": "https://bluearchive.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 데이브 더 다이버",
+      "service_name": "데이브 더 다이버",
+      "publisher": "넥슨",
+      "url": "https://www.mintrock.et/ko/game/game.php#dave",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 퍼스트 디센던트",
+      "service_name": "퍼스트 디센던트",
+      "publisher": "넥슨",
+      "url": "https://tfd.nexon.com/ko",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 FC 모바일",
+      "service_name": "FC 모바일",
+      "publisher": "넥슨",
+      "url": "https://fcmobile.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 히트2",
+      "service_name": "히트2",
+      "publisher": "넥슨",
+      "url": "https://hit2.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 카트라이더 러쉬플러스",
+      "service_name": "카트라이더 러쉬플러스",
+      "publisher": "넥슨",
+      "url": "https://kartrush.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 마비노기",
+      "service_name": "마비노기",
+      "publisher": "넥슨",
+      "url": "http://mabinogi.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 마비노기",
+      "service_name": "마비노기",
+      "publisher": "넥슨",
+      "url": "http://m.mabinogi.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 던전앤파이터 모바일",
+      "service_name": "던전앤파이터 모바일",
+      "publisher": "넥슨",
+      "url": "https://dnfm.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 카운터-스트라이크 온라인",
+      "service_name": "카운터-스트라이크 온라인",
+      "publisher": "넥슨",
+      "url": "https://csonline.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 바람의나라",
+      "service_name": "바람의나라",
+      "publisher": "넥슨",
+      "url": "http://baram.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 바람의나라",
+      "service_name": "바람의나라",
+      "publisher": "넥슨",
+      "url": "http://m.baram.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 마비노기 영웅전",
+      "service_name": "마비노기 영웅전",
+      "publisher": "넥슨",
+      "url": "http://heroes.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 마비노기 영웅전",
+      "service_name": "마비노기 영웅전",
+      "publisher": "넥슨",
+      "url": "http://m.heroes.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 테일즈위버",
+      "service_name": "테일즈위버",
+      "publisher": "넥슨",
+      "url": "http://tales.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 프라시아 전기",
+      "service_name": "프라시아 전기",
+      "publisher": "넥슨",
+      "url": "https://wp.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 퍼스트 버서커: 카잔",
+      "service_name": "퍼스트 버서커: 카잔",
+      "publisher": "넥슨",
+      "url": "https://khazan.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 엘소드",
+      "service_name": "엘소드",
+      "publisher": "넥슨",
+      "url": "http://elsword.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 엘소드",
+      "service_name": "엘소드",
+      "publisher": "넥슨",
+      "url": "http://m.elsword.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 아스가르드",
+      "service_name": "아스가르드",
+      "publisher": "넥슨",
+      "url": "http://asgard.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 어둠의전설",
+      "service_name": "어둠의전설",
+      "publisher": "넥슨",
+      "url": "http://lod.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 V4",
+      "service_name": "V4",
+      "publisher": "넥슨",
+      "url": "https://v4.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 바람의나라: 연",
+      "service_name": "바람의나라: 연",
+      "publisher": "넥슨",
+      "url": "https://baramy.nexon.com/?nexon",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 사이퍼즈",
+      "service_name": "사이퍼즈",
+      "publisher": "넥슨",
+      "url": "https://cyphers.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 던전앤파이터 듀얼",
+      "service_name": "던전앤파이터 듀얼",
+      "publisher": "넥슨",
+      "url": "https://dd.nexon.com/ko/main",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 아크 레이더스",
+      "service_name": "아크 레이더스",
+      "publisher": "넥슨",
+      "url": "https://arcraiders.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 일랜시아",
+      "service_name": "일랜시아",
+      "publisher": "넥슨",
+      "url": "https://elancia.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 메이플 퍼즐 : 블록 매치",
+      "service_name": "메이플 퍼즐 : 블록 매치",
+      "publisher": "넥슨",
+      "url": "https://maplepuzzle.nexon.com/start",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 더 파이널스",
+      "service_name": "더 파이널스",
+      "publisher": "넥슨",
+      "url": "https://thefinals.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 아주르 프로밀리아",
+      "service_name": "아주르 프로밀리아",
+      "publisher": "넥슨",
+      "url": "https://azurpromilia.nexon.com",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 낙원: LAST PARADISE",
+      "service_name": "낙원: LAST PARADISE",
+      "publisher": "넥슨",
+      "url": "https://nakwon.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 오버워치",
+      "service_name": "오버워치",
+      "publisher": "넥슨",
+      "url": "https://overwatch.nexon.com/main",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 크레이지레이싱 카트라이더",
+      "service_name": "크레이지레이싱 카트라이더",
+      "publisher": "넥슨",
+      "url": "https://kart.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 히간: 이루실",
+      "service_name": "히간: 이루실",
+      "publisher": "넥슨",
+      "url": "https://higaneruthyll.nexon.com/brand/kr/ko-kr",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넥슨 템빨: 오버기어드",
+      "service_name": "템빨: 오버기어드",
+      "publisher": "넥슨",
+      "url": "https://temppal.nexon.com/",
+      "scope": "url",
+      "source": "https://www.nexon.com/Home/Game",
+      "data_source": "https://oasisapi.nexon.com/game/mainlist",
+      "home_fields": [
+        "extendGameInfo.gameWebUrl.pcSiteUrl",
+        "extendGameInfo.gameWebUrl.mobileSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6190d3117376256cf2a1d30a78f1f45c745a6b6588db5b4b938a34e199bf4876",
+      "publisher_page_sha256": "796fa777f886c3b6c2cdd5a5f821e20256d25b791b5163df071d540205c0af5a",
+      "checked": "2026-09-25"
+    }
+  ],
+  "source_records": 39,
+  "deduplicated_home_records": 45,
+  "http_records": 16,
+  "catalog_sha256": "2123f075ea24fb60f443aac9573c4096e7ce16c92719e8d8b5845188162da13c",
+  "preserved_previous_records": 132,
+  "preserved_previous_sha256": "10510e2e80dd70cf001103ca13e4d495377f9b94edc4c6589598d9a34e5de2fb",
+  "tests": {
+    "local": {
+      "passed": 79,
+      "seconds": 0.47
+    },
+    "vm": {
+      "passed": 79,
+      "seconds": 0.84
+    }
+  },
+  "effective_policy_residuals": 0,
+  "live": {
+    "job_id": "j_60b9130393f74ea2a2393e3b8cfae80f",
+    "status": "done",
+    "elapsed_ms": 16264,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "m.fconline.nexon.com",
+      "site_family": "nexon.com",
+      "status": "verified",
+      "name": "넥슨 FC 온라인",
+      "source": "https://www.nexon.com/Home/Game",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "publisher_service_link",
+      "matched_entities": [
+        {
+          "id": "site_9c6b1401fa12c53b3e16",
+          "name": "넥슨 FC 온라인",
+          "source": "https://www.nexon.com/Home/Game",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "arcraiders.nexon.com",
+        "asgard.nexon.com",
+        "azurpromilia.nexon.com",
+        "baram.nexon.com",
+        "baramy.nexon.com",
+        "bluearchive.nexon.com",
+        "csonline.nexon.com",
+        "cyphers.nexon.com",
+        "dd.nexon.com",
+        "df.nexon.com",
+        "dnfm.nexon.com",
+        "elancia.nexon.com",
+        "elsword.nexon.com",
+        "fcmobile.nexon.com",
+        "fconline.nexon.com",
+        "heroes.nexon.com",
+        "higaneruthyll.nexon.com",
+        "hit2.nexon.com",
+        "kart.nexon.com",
+        "kartrush.nexon.com"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "넥슨 FC 온라인 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 nexon.com이에요.",
+        "공식 출처에서 넥슨 FC 온라인 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://m.fconline.nexon.com/fcom",
+        "host": "m.fconline.nexon.com",
+        "registrable_domain": "nexon.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T17:23:33.993+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "m.fconline.nexon.com"
+          ],
+          "sha256": "6a264bdc97227d95064033d946d76cf94cb37aa4b7091679bae609c248fcc3bf",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "2123f075ea24fb60f443aac9573c4096e7ce16c92719e8d8b5845188162da13c"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  }
+}

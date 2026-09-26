@@ -1,0 +1,114 @@
+{
+  "catalog_sha256": "7d7a95d9542c3cbab9b0fdfc6e4ca71d3dc7a928d98d9d3249c4328ce50df2e9",
+  "raw_kindergartens_sha256": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5",
+  "records": 21846,
+  "hosts": 16178,
+  "source_lookup_checks": [
+    {
+      "name": "하늘빛초등학교병설유치원",
+      "url": "https://haneulbit-e.gpoe.kr",
+      "original_url": "홈페이지https://haneulbit-e.gpoe.kr",
+      "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "checked": "2026-09-25",
+      "scope": "url",
+      "normalization": "homepage_label_removed",
+      "displayed_entity": "하늘빛초등학교병설유치원",
+      "exact_identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "한정초등학교병설유치원",
+      "url": "http://hanjeong.cnees.kr/",
+      "original_url": "홈페이지http://hanjeong.cnees.kr/",
+      "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "checked": "2026-09-25",
+      "scope": "url",
+      "normalization": "homepage_label_removed",
+      "displayed_entity": "한정초등학교병설유치원",
+      "exact_identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "합천가야초등학교병설유치원",
+      "url": "http://hcgaya-p.gne.go.kr",
+      "original_url": "홈페이지http://hcgaya-p.gne.go.kr",
+      "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "checked": "2026-09-25",
+      "scope": "url",
+      "normalization": "homepage_label_removed",
+      "displayed_entity": "합천가야초등학교",
+      "exact_identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "효천초등학교병설유치원",
+      "url": "https://hyochun-e.goesw.kr",
+      "original_url": "홈페이지https://hyochun-e.goesw.kr",
+      "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "checked": "2026-09-25",
+      "scope": "url",
+      "normalization": "homepage_label_removed",
+      "displayed_entity": "효천초등학교병설유치원",
+      "exact_identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "신흥초등학교병설유치원",
+      "url": "https://sinheungcho.goegu.kr",
+      "original_url": "홈페이지https://sinheungcho.goegu.kr",
+      "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "checked": "2026-09-25",
+      "scope": "url",
+      "normalization": "homepage_label_removed",
+      "displayed_entity": "신흥초등학교",
+      "exact_identity_verified": true,
+      "unlisted_path_identity_verified": false
+    }
+  ],
+  "changed_existing_scopes": [
+    {
+      "name": "하늘빛초등학교",
+      "url": "https://haneulbit-e.gpoe.kr",
+      "before": "host",
+      "after": "url"
+    },
+    {
+      "name": "한정초등학교",
+      "url": "http://hanjeong.cnees.kr/",
+      "before": "host",
+      "after": "url"
+    },
+    {
+      "name": "합천가야초등학교",
+      "url": "http://hcgaya-p.gne.go.kr",
+      "before": "host",
+      "after": "url"
+    },
+    {
+      "name": "효천초등학교",
+      "url": "https://hyochun-e.goesw.kr",
+      "before": "host",
+      "after": "url"
+    },
+    {
+      "name": "신흥초등학교",
+      "url": "https://sinheungcho.goegu.kr/",
+      "before": "host",
+      "after": "url"
+    }
+  ],
+  "health_http_status": 200,
+  "running": false,
+  "queue_length": 0,
+  "validation_kind": "VM application KB lookup; no destination network request",
+  "tests": {
+    "local_related_passed": 36,
+    "vm_related_passed": 36,
+    "previous_full_suite_passed": 515,
+    "full_suite_rerun_this_stage": false
+  },
+  "excluded_rows": 2576,
+  "homepage_missing": 2539,
+  "other_excluded": 37,
+  "inspection_limited": 22
+}

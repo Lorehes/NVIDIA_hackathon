@@ -1,0 +1,206 @@
+{
+  "live": {
+    "job_id": "j_d4a4653570194b0695da21d9ba6a3925",
+    "status": "done",
+    "elapsed_ms": 20479,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "sena.netmarble.com",
+      "site_family": "netmarble.com",
+      "status": "verified",
+      "name": "넷마블 세븐나이츠 리버스",
+      "source": "https://company.netmarble.com/business/games",
+      "checked": "2026-09-25",
+      "canonical_from": "https://sena.netmarble.com/ko",
+      "expires_at": null,
+      "inspection_supported": null,
+      "inspection_limit_reason": null,
+      "reason": "observed_service_redirect",
+      "matched_entities": [],
+      "matched_entities_total": 0,
+      "related_addresses": [
+        "2worlds.netmarble.com",
+        "7dsi.netmarble.com",
+        "7knights4s.netmarble.com",
+        "7origin.netmarble.com",
+        "arthdal.netmarble.com",
+        "gotkingsroad.netmarble.com",
+        "kofafk.netmarble.com",
+        "magumagu.netmarble.com",
+        "mergekuyaisland.netmarble.com",
+        "netmarble.com",
+        "raven2.netmarble.com",
+        "rfonlinenext.netmarble.com",
+        "sena.netmarble.com",
+        "skidle.netmarble.com",
+        "slvariseoverdrive.netmarble.com",
+        "sol.netmarble.com",
+        "sololeveling.netmarble.com",
+        "stardive.netmarble.com",
+        "stoneage.netmarble.com",
+        "towerofgod.netmarble.com"
+      ],
+      "source_address": {
+        "name": "넷마블 세븐나이츠 리버스",
+        "source": "https://company.netmarble.com/business/games",
+        "checked": "2026-09-25",
+        "host": "sena.netmarble.com",
+        "matched_entities": [
+          {
+            "id": "site_e01632d3ce50283f1b43",
+            "name": "넷마블 세븐나이츠 리버스",
+            "source": "https://company.netmarble.com/business/games",
+            "checked": "2026-09-25"
+          }
+        ]
+      },
+      "observed_redirects": [
+        {
+          "host": "sena.netmarble.com",
+          "observed_at": 1790362276.0154078,
+          "expires_at": 1790448676.0154078,
+          "kind": "redirect_observed"
+        }
+      ],
+      "evidence_scope": "this_investigation",
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "넷마블 세븐나이츠 리버스 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 netmarble.com이에요.",
+        "공식 출처에서 넷마블 세븐나이츠 리버스 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://sena.netmarble.com/ko",
+        "host": "sena.netmarble.com",
+        "registrable_domain": "netmarble.com",
+        "status": 302,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T18:51:06.074+00:00"
+      },
+      {
+        "url": "https://sena.netmarble.com/ko/kimetsunoyaiba",
+        "host": "sena.netmarble.com",
+        "registrable_domain": "netmarble.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T18:51:06.352+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "sena.netmarble.com"
+          ],
+          "sha256": "453972838c9924456050e4b9a87d789a2a39d470d9a37043b3a51cb68aeeaa24",
+          "protocol": "TLSv1.3"
+        },
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "sena.netmarble.com"
+          ],
+          "sha256": "453972838c9924456050e4b9a87d789a2a39d470d9a37043b3a51cb68aeeaa24",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "659850c857d336dd66e8ef3b0093ed15842d9b7d2fab19b30307c584f82338aa"
+  },
+  "validation": {
+    "related_local": {
+      "passed": 185,
+      "seconds": 13.03
+    },
+    "related_vm": {
+      "passed": 185,
+      "seconds": 16.41
+    },
+    "security_local": {
+      "passed": 196,
+      "seconds": 6.44
+    },
+    "security_vm": {
+      "passed": 196,
+      "seconds": 10.98
+    }
+  },
+  "previous_job": "j_542b3977a1154ef182901d93830b31ec",
+  "catalog_unchanged": true,
+  "final_health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0,
+    "api_active": true,
+    "residual_effective_policies": 0
+  },
+  "code_sha256": {
+    "apps/api/app/service_observation.py": "3fcdc1bf18a26fda514720be94b5ed3b54d7262be3242ca1e8b0af451a5c9bbf",
+    "apps/api/app/presentation.py": "dc5242a80cfbaf26da25f35c4467a9a39ebbad3c3e14bf754e39f4f47c193cd7"
+  }
+}

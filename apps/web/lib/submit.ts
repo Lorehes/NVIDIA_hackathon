@@ -17,19 +17,10 @@ export async function loadDemoCases(): Promise<DemoCase[]> {
   return casesCache;
 }
 
-/** 조사 요청을 보낸다. 시연 모드이고 붙여 넣은 글이 데모 사례와 같으면 저장된 결과(replay)를 요청한다. */
+/** 시연 모드에서는 서버가 저장된 입력을 찾는다. 없는 입력을 실시간 조사로 전환하지 않는다. */
 export async function startInvestigation(text: string): Promise<InvestigationAccepted> {
-  let mode: "live" | "replay" = "live";
-  let case_id: string | null = null;
-  if (getDemo()) {
-    const cases = await loadDemoCases();
-    const hit = cases.find((c) => c.input.trim() === text.trim() && c.available_replay);
-    if (hit) {
-      mode = "replay";
-      case_id = hit.id;
-    }
-  }
-  const accepted = await postInvestigation({ input: text, mode, case_id });
+  const mode = getDemo() ? "replay" : "live";
+  const accepted = await postInvestigation({ input: text, mode });
   rememberInput(accepted.job_id, text);
   return accepted;
 }

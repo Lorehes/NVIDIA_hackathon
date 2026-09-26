@@ -1,0 +1,389 @@
+{
+  "added_kindergartens": 3,
+  "updated_schools": 3,
+  "corrections": [
+    {
+      "source_dataset": "kindergartens",
+      "source_id": "cd0f7e01f51e07f54b1c",
+      "name": "상산초등학교병설유치원",
+      "original_url": "ssan2092@daum.net",
+      "url": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+      "scope": "url",
+      "source": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_id": "8831053",
+          "name": "상산초등학교",
+          "url": "https://school.gyo6.net/sangsanes",
+          "region_or_education_office": "경상북도"
+        },
+        {
+          "kind": "official_site_navigation",
+          "source": "https://school.gyo6.net/sangsanes/main.do?sysId=sangsanes",
+          "label": "병설유치원 > 유치원소개",
+          "target": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+          "body_sha256": "aa5bf5b873ad94e3b557b0e47dfdc82c7e8898e736cded5b4c206cf69015a56a",
+          "verification_method": "html_anchor"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+          "http_status": 200,
+          "body_sha256": "2e9a1e046e61621603f8f03320cbdd8de147397a0d8306a468cb95f7a04c732b",
+          "confirmed_school": "상산초등학교",
+          "confirmed_region": "상주"
+        }
+      ]
+    },
+    {
+      "source_dataset": "kindergartens",
+      "source_id": "1445d0fb16038e8b68c0",
+      "name": "순천대석초등학교병설유치원",
+      "original_url": "http:// scdaeseok.es.jne.kr",
+      "url": "https://scdaeseok.jge.es.kr/scdaeseok_es/cm/cntnts/cntntsView.do?mi=132019&cntntsId=132019",
+      "scope": "url",
+      "source": "https://scdaeseok.jge.es.kr/scdaeseok_es/cm/cntnts/cntntsView.do?mi=132019&cntntsId=132019",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_id": "8522042",
+          "name": "순천대석초등학교",
+          "url": "http://scdaeseok.es.jne.kr/",
+          "region_or_education_office": "전남광주통합특별시(전남)"
+        },
+        {
+          "kind": "official_homepage_move",
+          "source": "https://scdaeseok.es.jne.kr/",
+          "observed_landing": "https://scdaeseok.jge.es.kr",
+          "literal_navigation": "/scdaeseok_es/intro.do",
+          "target": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+          "body_sha256": "bb81646efe08dcef920b0b5778db8ef0489da62856979e4f6035f9ca0c2e888a"
+        },
+        {
+          "kind": "official_site_navigation",
+          "source": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+          "label": "병설유치원 > 유치원현황",
+          "target": "https://scdaeseok.jge.es.kr/scdaeseok_es/cm/cntnts/cntntsView.do?mi=132019&cntntsId=132019",
+          "body_sha256": "a3c7641248a07851491ab633443651891cee410e96d709b20ddf86ed623b2e12",
+          "verification_method": "browser_menu_navigation"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://scdaeseok.jge.es.kr/scdaeseok_es/cm/cntnts/cntntsView.do?mi=132019&cntntsId=132019",
+          "http_status": 200,
+          "body_sha256": "657144ac5643f1fbe582b553052aac7d49b2cf4514748249e14ba6cdbd297456",
+          "confirmed_school": "순천대석초등학교",
+          "confirmed_region": "순천"
+        }
+      ]
+    },
+    {
+      "source_dataset": "kindergartens",
+      "source_id": "af9d6a6b5fcbdc9d58a0",
+      "name": "목포중앙초등학교병설유치원",
+      "original_url": "http://mokpojungang.es.jne.kr, http://mokpojungang.es.jne.kr/community/index.action?siteId=mokpojungang_es&communityId=class01",
+      "url": "https://mokpojungang.jge.es.kr/mokpojungang_es/na/ntt/selectNttList.do?mi=10213833&bbsId=10217567",
+      "scope": "url",
+      "source": "https://mokpojungang.jge.es.kr/mokpojungang_es/na/ntt/selectNttList.do?mi=10213833&bbsId=10217567",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_id": "8502025",
+          "name": "목포중앙초등학교",
+          "url": "http://mokpojungang.es.jne.kr",
+          "region_or_education_office": "전남광주통합특별시(전남)"
+        },
+        {
+          "kind": "official_homepage_move",
+          "source": "https://mokpojungang.es.jne.kr",
+          "observed_landing": "https://mokpojungang.jge.es.kr",
+          "literal_navigation": "/mokpojungang_es/intro.do",
+          "target": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+          "body_sha256": "06380c998325af2598eb271493aec4bbabb9adcf0b081a4886b13387d13a77d9"
+        },
+        {
+          "kind": "official_site_navigation",
+          "source": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+          "label": "병설유치원 > 교육안내",
+          "target": "https://mokpojungang.jge.es.kr/mokpojungang_es/na/ntt/selectNttList.do?mi=10213833&bbsId=10217567",
+          "body_sha256": "86e24ff52cd597a56e41ba9a68c8338db8950b6a591ae3a662447c18fb3ad3f1",
+          "verification_method": "browser_menu_navigation"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://mokpojungang.jge.es.kr/mokpojungang_es/na/ntt/selectNttList.do?mi=10213833&bbsId=10217567",
+          "http_status": 200,
+          "body_sha256": "23266b8f1ae7048a8f4579979e91315a79266650b9ce7aa27086241eecc9a298",
+          "confirmed_school": "목포중앙초등학교",
+          "confirmed_region": "목포"
+        }
+      ]
+    },
+    {
+      "source_dataset": "schools",
+      "source_id": "8502025",
+      "name": "목포중앙초등학교",
+      "original_url": "http://mokpojungang.es.jne.kr",
+      "url": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+      "scope": "url",
+      "source": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_homepage_move",
+          "source": "https://mokpojungang.es.jne.kr",
+          "observed_landing": "https://mokpojungang.jge.es.kr",
+          "literal_navigation": "/mokpojungang_es/intro.do",
+          "target": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+          "body_sha256": "06380c998325af2598eb271493aec4bbabb9adcf0b081a4886b13387d13a77d9"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://mokpojungang.jge.es.kr/mokpojungang_es/main.do?sysId=mokpojungang_es",
+          "http_status": 200,
+          "body_sha256": "86e24ff52cd597a56e41ba9a68c8338db8950b6a591ae3a662447c18fb3ad3f1",
+          "confirmed_school": "목포중앙초등학교",
+          "confirmed_region": "목포"
+        }
+      ]
+    },
+    {
+      "source_dataset": "schools",
+      "source_id": "8522042",
+      "name": "순천대석초등학교",
+      "original_url": "http://scdaeseok.es.jne.kr/",
+      "url": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+      "scope": "url",
+      "source": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_homepage_move",
+          "source": "https://scdaeseok.es.jne.kr/",
+          "observed_landing": "https://scdaeseok.jge.es.kr",
+          "literal_navigation": "/scdaeseok_es/intro.do",
+          "target": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+          "body_sha256": "bb81646efe08dcef920b0b5778db8ef0489da62856979e4f6035f9ca0c2e888a"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://scdaeseok.jge.es.kr/scdaeseok_es/main.do?sysId=scdaeseok_es",
+          "http_status": 200,
+          "body_sha256": "a3c7641248a07851491ab633443651891cee410e96d709b20ddf86ed623b2e12",
+          "confirmed_school": "순천대석초등학교",
+          "confirmed_region": "순천"
+        }
+      ]
+    },
+    {
+      "source_dataset": "schools",
+      "source_id": "8652023",
+      "name": "학산초등학교",
+      "original_url": "ya-haksan.es.jne.kr",
+      "url": "https://ya-haksan.jge.es.kr/ya-haksan_es/main.do?sysId=ya-haksan_es",
+      "scope": "url",
+      "source": "https://ya-haksan.jge.es.kr/ya-haksan_es/main.do?sysId=ya-haksan_es",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_homepage_move",
+          "source": "https://ya-haksan.es.jne.kr",
+          "observed_landing": "https://ya-haksan.jge.es.kr",
+          "literal_navigation": "/ya-haksan_es/intro.do",
+          "target": "https://ya-haksan.jge.es.kr/ya-haksan_es/main.do?sysId=ya-haksan_es",
+          "body_sha256": "0ab63641680e8d834d2e27491dcffd6d04011e008267658325f57e5197c92146"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://ya-haksan.jge.es.kr/ya-haksan_es/main.do?sysId=ya-haksan_es",
+          "http_status": 200,
+          "body_sha256": "e861316c09fd5ffdc38ed38129de603eba7ad2f480ed40f0ad4bbb18bda97024",
+          "confirmed_school": "학산초등학교",
+          "confirmed_region": "영암"
+        }
+      ]
+    }
+  ],
+  "catalog": {
+    "indexed_records": 21881,
+    "indexed_hosts": 16198,
+    "popular_selected": 1000,
+    "excluded_by_reason": {
+      "invalid_hostname": 2,
+      "invalid_or_ambiguous_url": 2,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "missing_homepage": 2539,
+      "unsupported_or_malformed_scheme": 1,
+      "userinfo_or_email": 4
+    }
+  },
+  "excluded_count": 2566,
+  "correction_count": 14,
+  "inactive_corrections": [],
+  "hashes": {
+    "kb/site_catalog.json": "b9fc1c50bc73639430010a7d93a32e678f6dee03427e713961a43c038017b7eb",
+    "kb/sources/schools.json": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782",
+    "kb/sources/kindergartens.json": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5"
+  },
+  "tests": {
+    "local": "46 passed in 0.64s",
+    "vm": "46 passed in 1.26s",
+    "scope": "catalog source corrections, shared identities, homepage fields, ports, identity boundaries; full 577 tests were the preceding stage, not rerun"
+  },
+  "browser_source_navigation": [
+    {
+      "school": "순천대석초등학교",
+      "menu": "병설유치원 > 유치원현황",
+      "url": "https://scdaeseok.jge.es.kr/scdaeseok_es/cm/cntnts/cntntsView.do?mi=132019&cntntsId=132019"
+    },
+    {
+      "school": "목포중앙초등학교",
+      "menu": "병설유치원 > 교육안내",
+      "url": "https://mokpojungang.jge.es.kr/mokpojungang_es/na/ntt/selectNttList.do?mi=10213833&bbsId=10217567"
+    },
+    {
+      "school": "학산초등학교(영암)",
+      "menu": "병설유치원 > 유치원 경영관 및 교육목표 > 유치원경영관",
+      "url": "https://ya-haksan.jge.es.kr/ya-haksan_es/cm/cntnts/cntntsView.do?mi=146239&cntntsId=146239",
+      "decision": "안내 본문 미확인으로 유치원 추가 보류; 학교 현재 홈페이지만 갱신"
+    }
+  ],
+  "deferred": [
+    {
+      "source_id": "9c138dcb48d5ac6a06bd",
+      "url": "https://gr-wonchon.jge.es.kr/gr-wonchon_es/na/ntt/selectNttList.do?mi=68019&bbsId=68019",
+      "http_status": 200,
+      "body_sha256": "8906e558cfd97c0b5b1b24dcdf45fb7995a6ea0445f30a851ff8ad3ae6404491",
+      "reason": "HTTP200 시스템안내/접근 권한이 없습니다. 본문 미확인.",
+      "decision": "공식 유치원 안내 주소 추가 보류; 폐원 또는 홈페이지 부재를 의미하지 않음"
+    },
+    {
+      "source_id": "dcc762912bb47e2c0507",
+      "url": "https://ya-haksan.jge.es.kr/ya-haksan_es/cm/cntnts/cntntsView.do?mi=146239&cntntsId=146239",
+      "http_status": 200,
+      "body_sha256": "8e007b0e17f9edc61846b812c20b3d0babd014664326a749125a5f0691e5ddcc",
+      "reason": "HTTP200 공식 메뉴 이동 확인; 소개 본문 확인 불충분.",
+      "decision": "공식 유치원 안내 주소 추가 보류; 폐원 또는 홈페이지 부재를 의미하지 않음"
+    },
+    {
+      "source_id": "d7fffac535c0f2cc812e",
+      "url": "https://school.gyo6.net/suryunes/sitemap.do",
+      "http_status": 200,
+      "body_sha256": "a590df534f4863f6aff9b37580c72a29eb1db4e12ed385ba5ad93db8901f1a1f",
+      "reason": "공식 홈페이지·사이트맵에서 공개 유치원 안내 연결을 찾지 못함.",
+      "decision": "공식 유치원 안내 주소 추가 보류; 폐원 또는 홈페이지 부재를 의미하지 않음"
+    },
+    {
+      "source_id": "8171103",
+      "source": "https://www.schoolinfo.go.kr/ei/ss/Pneiss_b01_s0.do?SHL_IDF_CD=312e4501-16fc-41fa-8ad5-bf01e827f74d",
+      "reason": "학교알리미 검색 색인에서도 IP 주소124.0.44.50으로 안내. 독립 도메인 확인 못함. IP에 접속하거나 허용 규칙 확대하지 않음."
+    }
+  ],
+  "live_validation": {
+    "job_id": "j_4cee84fa58924065b9ad79d8df21e70e",
+    "status": "done",
+    "elapsed_ms": 17173,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "school.gyo6.net",
+      "status": "verified",
+      "name": "상산초등학교병설유치원",
+      "source": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+      "checked": "2026-09-25",
+      "reason": "reviewed_official_source_correction",
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "상산초등학교병설유치원 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 gyo6.net이에요.",
+        "공식 출처에서 상산초등학교병설유치원 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://school.gyo6.net/sangsanes/cm/cntnts/cntntsView.do?mi=171918&cntntsId=171918",
+        "host": "school.gyo6.net",
+        "registrable_domain": "gyo6.net",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T17:01:13.661+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "school.gyo6.net"
+          ],
+          "sha256": "778b31c227b39c2a442b15aa3edabe60565e5a32d06ee93c53e437a723f02eb2",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "b9fc1c50bc73639430010a7d93a32e678f6dee03427e713961a43c038017b7eb",
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "effective_residual_policies": 0
+}

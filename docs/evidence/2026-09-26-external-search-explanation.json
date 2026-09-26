@@ -1,0 +1,125 @@
+{
+  "checked": "2026-09-26",
+  "scope": "External search form explanation only; no trust, severity or egress exemption",
+  "deployment": {
+    "backup": "/tmp/search-explanation-deploy-20260926T054802Z",
+    "files": {
+      "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": {
+        "before": "431c7f2381d18621a88f9e24dc170c7e31969911e60c3b82547e8a31c1116186",
+        "after": "434d3cd70f73ce7904b80341fb630e2d3b7faa97f2e9f3e35e10c05c9730288e"
+      },
+      "apps/api/app/verdict.py": {
+        "before": "af41d60296d7e68bdd7bbc194e7ea0a41abdf00f9e225485d9f8d6d488ead7ac",
+        "after": "e3ff983acfdd26a7a82716ef95849b15a6ec135e8afeae84f0a6be4cd6605538"
+      },
+      "apps/api/app/presentation.py": {
+        "before": "09549f5777c8e015b20cdc1064febc5c1718d1a6caa2a6f4e67bb11bfbeb8de7",
+        "after": "554342122bde01df65ae163b94dec4e953e8f41b2e535fcd346897e0e4dfc9c6"
+      },
+      "apps/api/app/trace.py": {
+        "before": "7089665379d30aaf97d42ffda9dfce859a82b9c09b1b0fc91e59d33848873baf",
+        "after": "a07876f979a84f63ea35c3dd09c297cfd8579650702cba2a121351d6704c5a45"
+      },
+      "apps/api/tests/test_external_search_explanation.py": {
+        "before": null,
+        "after": "8025bca9cd58125f18c96a635226ea74e28dd38100033561b419cca0ff20a539"
+      }
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "live": {
+    "search_warning": {
+      "type": "cross_domain_form",
+      "strength": "mid",
+      "data": {
+        "action_host": "www.cbnu.ac.kr",
+        "action_domain": "cbnu.ac.kr",
+        "search_form": true,
+        "same_origin_unverified": false
+      }
+    },
+    "headline": "페이지 주소는 공식이지만, 검색 전송 대상과의 운영 관계는 미확인이에요.",
+    "trace_sentence": "검색 입력란이 다른 주소(www.cbnu.ac.kr)로 전송되도록 표시되어 있어요. 운영 관계와 실제 전송은 확인하지 못했어요.",
+    "job_id": "j_284a6f56be35461996ed55b3a501d17a",
+    "status": "done",
+    "elapsed_ms": 13343,
+    "timings": {
+      "parse": 1,
+      "policy_open": 2186,
+      "agent_investigate": 1604,
+      "sandbox_total": 13165,
+      "verdict": 4,
+      "explain": 2,
+      "total": 13338
+    },
+    "identity": {
+      "host": "www.chungbuk.ac.kr",
+      "site_family": "chungbuk.ac.kr",
+      "status": "verified",
+      "name": "충북대학교 법무대학원",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_9ecaea067a4ec2c9a6d5",
+          "name": "충북대학교 법무대학원",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.chungbuk.ac.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "risk_found"
+    },
+    "verdict": "caution",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "local_tests": {
+    "form_suite": "83 passed in 0.34s",
+    "verdict_and_explanation": "68 passed in 0.26s"
+  },
+  "vm_tests": "151 passed in 0.73s",
+  "catalog_sha256": "f58ac5953a17645e2cd16dab13f1303707a7b6e7d5923ce7a701b8a4c189f34e",
+  "direct_get_probes": [
+    {
+      "url": "https://www.cbnu.ac.kr/search/search.jsp",
+      "status": 200,
+      "location": null,
+      "sha256": "049dcf2641fc5cf7825e6c591ccc6e722b311c052f10c7ce67bd7c8335f5c6db",
+      "title": "충북대학교 통합검색"
+    },
+    {
+      "url": "https://www.chungbuk.ac.kr/www/index.do",
+      "status": 200,
+      "location": null,
+      "sha256": "feac5b851a497fe4696eb2671e10eaf14de8179428a19c4354f9724e00039e67",
+      "title": "충북대학교"
+    },
+    {
+      "url": "https://www.cbnu.ac.kr/www/index.do",
+      "status": 200,
+      "location": null,
+      "sha256": "feac5b851a497fe4696eb2671e10eaf14de8179428a19c4354f9724e00039e67",
+      "title": "충북대학교"
+    }
+  ],
+  "limitations": [
+    "No form submission, browser script execution or original TLS verification",
+    "Matching titles/content are observations, not independent ownership proof",
+    "Cross-domain caution and identity.behavior risk_found remain; false-alarm resolution is not complete",
+    "No catalog addition, bulk refresh or changes to keys/egress policy"
+  ]
+}

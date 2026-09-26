@@ -1,0 +1,156 @@
+{
+  "checks": [
+    "concurrent API submissions serialized",
+    "private literal granted no egress",
+    "different session denied",
+    "effective policy residual zero"
+  ],
+  "jobs": [
+    {
+      "job_id": "j_cfb061350f1b45bf88d0dc311c07ae8c",
+      "url": "https://example.com/",
+      "started_at": 1790397424.9315395,
+      "finished_at": 1790397441.9259613,
+      "timings": {
+        "parse": 0,
+        "policy_open": 7185,
+        "agent_investigate": 408,
+        "sandbox_total": 16969,
+        "verdict": 3,
+        "explain": 1,
+        "total": 16990
+      },
+      "verdict": "unknown",
+      "incomplete_reason": null,
+      "events": [
+        {
+          "at": "04:37:12",
+          "kind": "open",
+          "title": "문을 열었어요",
+          "detail": "허용한 사이트 주소: example.com"
+        },
+        {
+          "at": "04:37:21",
+          "kind": "close",
+          "title": "문을 다시 닫았어요",
+          "detail": "열어 둔 시간 9초 · 남은 열린 문 없음"
+        }
+      ],
+      "remaining_open": 0,
+      "chain": [
+        {
+          "url": "https://example.com/",
+          "host": "example.com",
+          "registrable_domain": "example.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-26T04:37:12.407+00:00"
+        }
+      ],
+      "other_session_status": 404
+    },
+    {
+      "job_id": "j_01a52676c21d4d33b2493672bbf9707b",
+      "url": "http://127.0.0.1/",
+      "started_at": 1790397424.4483232,
+      "finished_at": 1790397424.9265907,
+      "timings": {
+        "parse": 0,
+        "policy_open": 59,
+        "agent_investigate": 220,
+        "sandbox_total": 451,
+        "verdict": 3,
+        "explain": 1,
+        "total": 469
+      },
+      "verdict": "caution",
+      "incomplete_reason": null,
+      "events": [],
+      "remaining_open": 0,
+      "chain": [],
+      "other_session_status": 404
+    }
+  ],
+  "snapshots": [
+    {
+      "states": [
+        [
+          "j_cfb061350f1b45bf88d0dc311c07ae8c",
+          "queued",
+          "parse"
+        ],
+        [
+          "j_01a52676c21d4d33b2493672bbf9707b",
+          "running",
+          "kb_lookup"
+        ]
+      ],
+      "policy_names": []
+    },
+    {
+      "states": [
+        [
+          "j_cfb061350f1b45bf88d0dc311c07ae8c",
+          "running",
+          "policy_open"
+        ],
+        [
+          "j_01a52676c21d4d33b2493672bbf9707b",
+          "done",
+          "done"
+        ]
+      ],
+      "policy_names": [
+        "job-j-cfb061350f1b45bf88d0dc311c07ae8c"
+      ]
+    },
+    {
+      "states": [
+        [
+          "j_cfb061350f1b45bf88d0dc311c07ae8c",
+          "running",
+          "agent_investigate"
+        ],
+        [
+          "j_01a52676c21d4d33b2493672bbf9707b",
+          "done",
+          "done"
+        ]
+      ],
+      "policy_names": [
+        "job-j-cfb061350f1b45bf88d0dc311c07ae8c"
+      ]
+    },
+    {
+      "states": [
+        [
+          "j_cfb061350f1b45bf88d0dc311c07ae8c",
+          "running",
+          "policy_close"
+        ],
+        [
+          "j_01a52676c21d4d33b2493672bbf9707b",
+          "done",
+          "done"
+        ]
+      ],
+      "policy_names": []
+    },
+    {
+      "states": [
+        [
+          "j_cfb061350f1b45bf88d0dc311c07ae8c",
+          "done",
+          "done"
+        ],
+        [
+          "j_01a52676c21d4d33b2493672bbf9707b",
+          "done",
+          "done"
+        ]
+      ],
+      "policy_names": []
+    }
+  ]
+}

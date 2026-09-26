@@ -14,13 +14,26 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from urllib.parse import urlsplit
 
 from .kb import KB, Entity
+from .urls import parse_url
 
 SIM_THRESHOLD = 0.80
 
 CREDENTIAL_TYPES = {"password", "card_number", "card_cvc", "card_expiry", "bank_account", "resident_id", "otp"}
 CARD = {"card_number", "card_cvc", "card_expiry"}
+
+
+def _http_origin(url: str | None) -> tuple | None:
+    """Compare observed form origins without treating sibling tenants as one site."""
+    try:
+        parsed = urlsplit(url or '')
+        if parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username or parsed.password:
+            return None
+        return parsed.scheme, parsed.hostname, parsed.port if parsed.port is not None else (443 if parsed.scheme == 'https' else 80)
+    except (ValueError, TypeError):
+        return None
 
 # 목적별로 "요구하면 안 되는" 민감 입력란 (상세 명세 4-2)
 PURPOSE_FORBIDDEN: dict[str, set[str]] = {
@@ -51,6 +64,8 @@ class Evidence:
     incomplete: str | None = None  # 에이전트 실패·시간 초과 등 조사 중단 이유(코드)
     internal_resolution: bool = False  # 공용 이름인데 내부망 주소로 해석됨(호스트가 확인, 접속하지 않음)
     url_trimmed: bool = False  # 문자 속 주소를 한글 앞에서 잘라 조사했다(사용자가 뜻한 주소와 다를 수 있음)
+    address_only: bool = False
+    input_url: str | None = None
 
 
 @dataclass
@@ -60,12 +75,12 @@ class Outcome:
     entity_source: str  # exact|alias|embedding|agent|address|none
     signals: list[dict]
     purpose: str | None
-    unknown_reason: str | None = None  # incomplete | no_data | fetch_failed | unverified | no_kb
+    unknown_reason: str | None = None  # incomplete | no_data | fetch_failed | unverified | destination_unverified | no_kb
     verification_gaps: list[str] = field(default_factory=list)  # 안전 판정에 모자란 증거(코드)
 
 
 _FIELD_ORDER = ["password", "card_number", "card_cvc", "card_expiry", "bank_account", "resident_id", "otp",
-                "phone", "name", "address", "other"]
+                "phone", "name", "address", "file", "other"]
 
 
 def order_fields(fields) -> list[str]:
@@ -88,6 +103,8 @@ def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
     이동 경로를 끝까지 따라갔으며 암호화 접속이었어야 한다.
     """
     gaps: list[str] = []
+    if entity and not entity.identity_verified:
+        gaps.append('identity_unverified')
     if not _ok(ev.parse):
         gaps.append("parse")
     elif ev.parse.get("ambiguous"):
@@ -120,6 +137,10 @@ def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
     if not _ok(ev.page):
         gaps.append("page")
     else:
+        if ev.page.get('unexecuted_code'):
+            gaps.append('unexecuted_code')
+        if any('file' in f.get('field_types', []) for f in ev.page.get('forms', [])):
+            gaps.append('file_submission_unverified')
         if ev.page.get("js_redirect_hint") and "client_redirect" not in gaps:
             gaps.append("client_redirect")  # 메타 새로고침·스크립트 이동을 감지했지만 도착지는 조사하지 않았다
         trusted = {(fetch.get("final_registrable_domain") or "")}
@@ -127,6 +148,14 @@ def verification_gaps(ev: Evidence, entity: Entity | None = None) -> list[str]:
             trusted |= set(entity.official_domains) | set(entity.partner_domains)
         if any(d not in trusted for d in ev.page.get("external_active_domains") or []):
             gaps.append("external_active_content")  # 실행하지 않은 다른 도메인의 코드·문서를 끌어온다
+        if entity and entity.address_scope != 'registration' and 'external_active_content' not in gaps:
+            if any(not entity.matches(h) for h in ev.page.get('external_active_hosts', [])):
+                gaps.append('external_active_content')
+        if entity and entity.identity_verified and entity.address_scope != 'registration' and any(
+                (f.get('search_only') or f.get('same_origin_search')) and not f.get('cross_domain') and any(
+                    not entity.matches(d.get('host', '')) for d in f.get('destinations', []))
+                for f in ev.page.get('forms', [])):
+            gaps.append('search_destination_unverified')
     return gaps
 
 
@@ -141,6 +170,19 @@ def resolve_entity(ev: Evidence, kb: KB) -> tuple[Entity | None, str]:
             if e.id == claim_id:
                 return e, s
         return text_hits[0]
+    address_hits = [(e, s) for e, s in ev.candidates if s == 'address']
+    if ev.address_only:
+        # The final destination may be a known institution, even when the entry link wasn't.
+        hits = kb.address_candidates((ev.fetch or {}).get('final_url') or (ev.parse or {}).get('url', ''))
+        if hits and hits[0][0].identity_verified:
+            return hits[0]
+        from .service_observation import observed_service_destination
+        observed = observed_service_destination(kb, ev.fetch, ev.input_url)
+        if observed:
+            return observed, 'address'
+        claim_id = None
+    if address_hits:
+        return address_hits[0]
     if claim_id and claim_id in kb.by_id:
         src = next((s for e, s in ev.candidates if e.id == claim_id), "agent")
         return kb.by_id[claim_id], src
@@ -168,9 +210,12 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
     registrable = parse["registrable_domain"]
     fetch = ev.fetch if _ok(ev.fetch) else None
     final = (fetch or {}).get("final_registrable_domain") or registrable
-    is_official = bool(entity and final in entity.official_domains)
-    is_partner = bool(entity and final in entity.partner_domains)
-    domain_is_known = final in known or registrable in known
+    from urllib.parse import urlsplit
+    final_url = (fetch or {}).get('final_url') or ev.input_url or parse.get('url')
+    final_host = (parse_url(final_url).get('host_ascii') if final_url else None) or parse.get('host_ascii') or final
+    is_official = bool(entity and entity.matches(final_host, final_url))
+    is_partner = bool(entity and entity.matches(final_host, final_url, partner=True))
+    domain_is_known = final in known or registrable in known or is_official or is_partner
 
     if is_official:
         signals.append(sig("official_match", "positive", domain=final, entity_id=entity.id))
@@ -199,9 +244,19 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
                            has_userinfo=bool(parse.get("has_userinfo"))))
     if ev.internal_resolution:
         signals.append(sig("internal_address", "mid"))
-    if entity and not is_official and not is_partner:
-        signals.append(sig("domain_not_official", "mid", official_domain=entity.official_domains[0],
-                           entity_id=entity.id))
+    if entity and not entity.identity_verified:
+        signals.append(sig('identity_unverified', 'info', entity_id=entity.id))
+    elif entity and not is_official and not is_partner:
+        # A bare URL is not a claim that every destination belongs to its entry
+        # institution. Keep the entry entity for behavioral boundaries, but do
+        # not turn a missing destination identity into impersonation evidence.
+        entry_url = ev.input_url or parse.get('url', '')
+        entry_host = parse_url(entry_url).get('host_ascii', '')
+        entry_only = (ev.address_only and entity.matches(entry_host, entry_url)
+                      and final_url != entry_url)
+        signals.append(sig('destination_identity_unverified' if entry_only else 'domain_not_official',
+                           'info' if entry_only else 'mid',
+                           official_domain=entity.official_domains[0], entity_id=entity.id))
 
     # ── 이동 경로 ──
     if fetch:
@@ -209,7 +264,8 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
         dests = []
         for hop in chain[1:]:
             d = hop.get("registrable_domain")
-            ok_dest = entity and (d in entity.official_domains or d in entity.partner_domains)
+            ok_dest = entity and (entity.matches(hop.get('host') or d, hop.get('url')) or
+                                  entity.matches(hop.get('host') or d, hop.get('url'), partner=True))
             if d and d != registrable and not ok_dest and d not in dests:
                 dests.append(d)
         if dests:
@@ -227,12 +283,36 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
     page = ev.page if _ok(ev.page) else None
     if page:
         forms = page.get("forms", [])
+        origin = _http_origin(final_url)
         field_types = {t for f in forms for t in f.get("field_types", [])}
         cred = order_fields(field_types & CREDENTIAL_TYPES)
         if cred:
             signals.append(sig("credential_form", "mid", fields=cred))
+        if any(f.get('insecure_submission') or any(
+                str(u).lower().startswith('http://') for u in f.get('action_urls', [])) for f in forms):
+            signals.append(sig('insecure_form_action', 'mid'))
+        form_warning = None
         for f in forms:
-            if not f.get("cross_domain"):
+            # A popularity-only record must not invent an institution boundary.
+            # Exact scopes protect independently verified schools/services.
+            scoped = entity and entity.identity_verified and entity.address_scope != 'registration'
+            scoped_bad_urls = [u for u in f.get('action_urls', []) if scoped and not
+                               (entity.matches(urlsplit(u).hostname or '', u) or
+                                entity.matches(urlsplit(u).hostname or '', u, partner=True))]
+            sibling = scoped and any(d.get('host') != final_host for d in f.get('destinations', []))
+            if not f.get("cross_domain") and not sibling and not scoped_bad_urls:
+                continue
+            from .search_relations import reviewed_search_relation
+            relation = reviewed_search_relation(kb, entity, final_url, f)
+            if relation:
+                signals.append(sig('reviewed_search_destination', 'info', action_host=f.get('action_host'),
+                                   source=relation['operator_evidence']['url'], operator=relation['operator'],
+                                   destination_url=relation['destination_url'], expires_at=relation['expires_at']))
+                continue
+            if (f.get('search_only') or f.get('same_origin_search')) and not f.get('cross_domain') and not f.get('destinations_overflow'):
+                # A typed search alone is not evidence of credential exfiltration.
+                # Keep its unverified destination as a gap; do not grant safe or official identity to it.
+                signals.append(sig('same_site_search', 'info', action_host=f.get('action_host')))
                 continue
             # 전송 대상이 여럿이면(form의 action과 버튼의 formaction) 하나하나 따져야 한다. 협력·공식 도메인 한 곳이
             # 있다고 나머지 대상까지 면제되면 안 된다. 대상 목록이 없는 옛 결과는 대표 도메인 하나로 판단한다.
@@ -240,17 +320,31 @@ def compute_signals(ev: Evidence, kb: KB, entity: Entity | None) -> list[dict]:
                                                "registrable_domain": f.get("action_registrable_domain") or ""}]
             if f.get("destinations_overflow"):  # 전송 대상이 너무 많아 다 판단하지 못했다: 면제 없이 위험으로 본다
                 bad = {"host": f.get("action_host"), "registrable_domain": f.get("action_registrable_domain") or ""}
-                signals.append(sig("cross_domain_form", "mid", action_host=bad["host"],
-                                   action_domain=bad["registrable_domain"]))
+                form_warning = sig("cross_domain_form", "mid", action_host=bad["host"],
+                                   action_domain=bad["registrable_domain"])
                 break
-            bad = next((d for d in dests if d.get("cross_domain") and not (
-                entity and (d.get("registrable_domain") in entity.partner_domains
-                            or d.get("registrable_domain") in entity.official_domains))), None)
+            bad = next((d for d in dests if (d.get('cross_domain') or (scoped and d.get('host') != final_host)) and not (
+                entity and (entity.matches(d.get('host') or d.get('registrable_domain') or '') or
+                            entity.matches(d.get('host') or d.get('registrable_domain') or '', partner=True)))), None)
+            if bad is None and scoped_bad_urls:
+                bad = {'host': urlsplit(scoped_bad_urls[0]).hostname, 'registrable_domain': ''}
             if bad is None:
                 continue
-            signals.append(sig("cross_domain_form", "mid", action_host=bad.get("host"),
-                               action_domain=bad.get("registrable_domain") or ""))
-            break
+            same_origin = bool(origin and f.get('action_urls')) and all(
+                _http_origin(u) == origin for u in f['action_urls'])
+            warning = sig("cross_domain_form", "mid", action_host=bad.get("host"),
+                          action_domain=bad.get("registrable_domain") or "",
+                          search_form=bool(f.get('search_form')),
+                          same_origin_unverified=bool(scoped_bad_urls and same_origin))
+            # Wording only: preserve caution and exact institution boundaries. Examine
+            # later forms too, so a local action cannot hide an external destination.
+            def warning_priority(item):
+                data = item['data']
+                return (not data.get('search_form'), not data.get('same_origin_unverified'))
+            if form_warning is None or warning_priority(warning) > warning_priority(form_warning):
+                form_warning = warning
+        if form_warning:
+            signals.append(form_warning)
         purpose = (ev.claim or {}).get("purpose") if _ok(ev.claim) else None
         forbidden = field_types & PURPOSE_FORBIDDEN.get(purpose or "other", set())
         policy_text = None
@@ -310,9 +404,11 @@ def decide(ev: Evidence, kb: KB) -> Outcome:
         return Outcome("suspected_impersonation", entity, source, signals, purpose)
     # 규칙 3. 확인 못 한 부분이 하나라도 있으면 안전이라고 말하지 않는다(거짓 safe 금지).
     gaps = verification_gaps(ev, entity)
+    if 'reviewed_search_destination' in types:
+        gaps.append('search_submission_unverified')
     matched = bool({"official_match", "partner_match"} & types)
     if (matched and not gaps and not strong
-            and not {"cross_domain_form", "redirect_other_domain", "fetch_failed",
+            and not {"cross_domain_form", "insecure_form_action", "redirect_other_domain", "fetch_failed",
                      "ip_or_userinfo_host", "internal_address", "purpose_mismatch"} & types):
         return Outcome("safe", entity, source, signals, purpose)
     if mid or strong:  # 규칙 4
@@ -321,4 +417,6 @@ def decide(ev: Evidence, kb: KB) -> Outcome:
         return Outcome("unknown", entity, source, signals, purpose, "fetch_failed", gaps)
     if matched:  # 규칙 5-2: 주소는 맞지만 페이지·경로·암호화 접속을 확인하지 못함
         return Outcome("unknown", entity, source, signals, purpose, "unverified", gaps)
+    if 'destination_identity_unverified' in types:
+        return Outcome('unknown', entity, source, signals, purpose, 'destination_unverified', gaps)
     return Outcome("unknown", entity, source, signals, purpose, "no_kb", gaps)  # 규칙 6

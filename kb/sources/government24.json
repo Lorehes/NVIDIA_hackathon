@@ -1,0 +1,5627 @@
+{
+  "checked": "2026-09-25",
+  "source_pages": [
+    "https://www.gov.kr/portal/orgSite?pageIndex=1",
+    "https://www.gov.kr/portal/orgSite?pageIndex=2",
+    "https://www.gov.kr/portal/orgSite?pageIndex=3",
+    "https://www.gov.kr/portal/orgSite?pageIndex=4",
+    "https://www.gov.kr/portal/orgSite?pageIndex=5",
+    "https://www.gov.kr/portal/orgSite?pageIndex=6",
+    "https://www.gov.kr/portal/orgSite?pageIndex=7",
+    "https://www.gov.kr/portal/orgSite?pageIndex=8",
+    "https://www.gov.kr/portal/orgSite?pageIndex=9",
+    "https://www.gov.kr/portal/orgSite?pageIndex=10",
+    "https://www.gov.kr/portal/orgSite?pageIndex=11",
+    "https://www.gov.kr/portal/orgSite?pageIndex=12",
+    "https://www.gov.kr/portal/orgSite?pageIndex=13",
+    "https://www.gov.kr/portal/orgSite?pageIndex=14",
+    "https://www.gov.kr/portal/orgSite?pageIndex=15",
+    "https://www.gov.kr/portal/orgSite?pageIndex=16",
+    "https://www.gov.kr/portal/orgSite?pageIndex=17",
+    "https://www.gov.kr/portal/orgSite?pageIndex=18",
+    "https://www.gov.kr/portal/orgSite?pageIndex=19",
+    "https://www.gov.kr/portal/orgSite?pageIndex=20",
+    "https://www.gov.kr/portal/orgSite?pageIndex=21",
+    "https://www.gov.kr/portal/orgSite?pageIndex=22",
+    "https://www.gov.kr/portal/orgSite?pageIndex=23",
+    "https://www.gov.kr/portal/orgSite?pageIndex=24",
+    "https://www.gov.kr/portal/orgSite?pageIndex=25",
+    "https://www.gov.kr/portal/orgSite?pageIndex=26",
+    "https://www.gov.kr/portal/orgSite?pageIndex=27",
+    "https://www.gov.kr/portal/orgSite?pageIndex=28",
+    "https://www.gov.kr/portal/orgSite?pageIndex=29",
+    "https://www.gov.kr/portal/orgSite?pageIndex=30",
+    "https://www.gov.kr/portal/orgSite?pageIndex=31",
+    "https://www.gov.kr/portal/orgSite?pageIndex=32",
+    "https://www.gov.kr/portal/orgSite?pageIndex=33",
+    "https://www.gov.kr/portal/orgSite?pageIndex=34",
+    "https://www.gov.kr/portal/orgSite?pageIndex=35",
+    "https://www.gov.kr/portal/orgSite?pageIndex=36",
+    "https://www.gov.kr/portal/orgSite?pageIndex=37",
+    "https://www.gov.kr/portal/orgSite?pageIndex=38",
+    "https://www.gov.kr/portal/orgSite?pageIndex=39",
+    "https://www.gov.kr/portal/orgSite?pageIndex=40",
+    "https://www.gov.kr/portal/orgSite?pageIndex=41",
+    "https://www.gov.kr/portal/orgSite?pageIndex=42",
+    "https://www.gov.kr/portal/orgSite?pageIndex=43",
+    "https://www.gov.kr/portal/orgSite?pageIndex=44",
+    "https://www.gov.kr/portal/orgSite?pageIndex=45",
+    "https://www.gov.kr/portal/orgSite?pageIndex=46",
+    "https://www.gov.kr/portal/orgSite?pageIndex=47",
+    "https://www.gov.kr/portal/orgSite?pageIndex=48",
+    "https://www.gov.kr/portal/orgSite?pageIndex=49",
+    "https://www.gov.kr/portal/orgSite?pageIndex=50",
+    "https://www.gov.kr/portal/orgSite?pageIndex=51",
+    "https://www.gov.kr/portal/orgSite?pageIndex=52",
+    "https://www.gov.kr/portal/orgSite?pageIndex=53",
+    "https://www.gov.kr/portal/orgSite?pageIndex=54",
+    "https://www.gov.kr/portal/orgSite?pageIndex=55",
+    "https://www.gov.kr/portal/orgSite?pageIndex=56",
+    "https://www.gov.kr/portal/orgSite?pageIndex=57",
+    "https://www.gov.kr/portal/orgSite?pageIndex=58",
+    "https://www.gov.kr/portal/orgSite?pageIndex=59",
+    "https://www.gov.kr/portal/orgSite?pageIndex=60",
+    "https://www.gov.kr/portal/orgSite?pageIndex=61",
+    "https://www.gov.kr/portal/orgSite?pageIndex=62",
+    "https://www.gov.kr/portal/orgSite?pageIndex=63",
+    "https://www.gov.kr/portal/orgSite?pageIndex=64",
+    "https://www.gov.kr/portal/orgSite?pageIndex=65",
+    "https://www.gov.kr/portal/orgSite?pageIndex=66",
+    "https://www.gov.kr/portal/orgSite?pageIndex=67",
+    "https://www.gov.kr/portal/orgSite?pageIndex=68",
+    "https://www.gov.kr/portal/orgSite?pageIndex=69",
+    "https://www.gov.kr/portal/orgSite?pageIndex=70",
+    "https://www.gov.kr/portal/orgSite?pageIndex=71",
+    "https://www.gov.kr/portal/orgSite?pageIndex=72",
+    "https://www.gov.kr/portal/orgSite?pageIndex=73",
+    "https://www.gov.kr/portal/orgSite?pageIndex=74",
+    "https://www.gov.kr/portal/orgSite?pageIndex=75",
+    "https://www.gov.kr/portal/orgSite?pageIndex=76",
+    "https://www.gov.kr/portal/orgSite?pageIndex=77",
+    "https://www.gov.kr/portal/orgSite?pageIndex=78",
+    "https://www.gov.kr/portal/orgSite?pageIndex=79",
+    "https://www.gov.kr/portal/orgSite?pageIndex=80",
+    "https://www.gov.kr/portal/orgSite?pageIndex=81",
+    "https://www.gov.kr/portal/orgSite?pageIndex=82",
+    "https://www.gov.kr/portal/orgSite?pageIndex=83",
+    "https://www.gov.kr/portal/orgSite?pageIndex=84",
+    "https://www.gov.kr/portal/orgSite?pageIndex=85",
+    "https://www.gov.kr/portal/orgSite?pageIndex=86",
+    "https://www.gov.kr/portal/orgSite?pageIndex=87",
+    "https://www.gov.kr/portal/orgSite?pageIndex=88",
+    "https://www.gov.kr/portal/orgSite?pageIndex=89",
+    "https://www.gov.kr/portal/orgSite?pageIndex=90",
+    "https://www.gov.kr/portal/orgSite?pageIndex=91",
+    "https://www.gov.kr/portal/orgSite?pageIndex=92",
+    "https://www.gov.kr/portal/orgSite?pageIndex=93"
+  ],
+  "records": [
+    {
+      "name": "감사원",
+      "url": "https://www.bai.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "개인정보보호위원회",
+      "url": "https://www.pipc.go.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대검찰청",
+      "url": "https://www.spo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경찰청 대표 누리집",
+      "url": "http://www.police.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경찰대학",
+      "url": "http://www.police.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙경찰학교",
+      "url": "http://www.cpa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경찰병원",
+      "url": "http://www.nph.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경찰수사연수원",
+      "url": "http://www.kpia.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경찰인재개발원",
+      "url": "https://www.phrdi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고용노동부",
+      "url": "https://www.moel.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=1",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙노동위원회",
+      "url": "http://www.nlrc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "최저임금위원회",
+      "url": "https://www.minimumwage.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산업재해보상보험 재심사위원회",
+      "url": "http://www.iaciac.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고용노동부고객상담센터",
+      "url": "http://1350.moel.go.kr/home/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고위공직자범죄수사처",
+      "url": "https://cio.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "공정거래위원회",
+      "url": "https://www.ftc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "과학기술정보통신부",
+      "url": "http://www.msit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "과학기술정보통신부 국립중앙과학관",
+      "url": "https://www.science.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립과천과학관",
+      "url": "https://www.sciencecenter.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립전파연구원",
+      "url": "https://www.rra.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=2",
+      "kind": "government_directory"
+    },
+    {
+      "name": "과학기술정보통신부 중앙전파관리소",
+      "url": "https://www.crms.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "우정사업본부",
+      "url": "https://www.koreapost.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "관세청",
+      "url": "https://www.customs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "관세국경인재개발원",
+      "url": "http://hrd.customs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "교육부",
+      "url": "http://www.moe.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국사편찬위원회",
+      "url": "http://www.history.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립특수교육원",
+      "url": "https://www.nise.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "교원소청심사위원회",
+      "url": "http://www.ace.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "교육부 중앙교육연수원",
+      "url": "http://www.neti.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립국제교육원",
+      "url": "https://www.niied.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=3",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가데이터처 누리집",
+      "url": "https://mods.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가보훈부",
+      "url": "https://www.mpva.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립대한민국임시정부기념관",
+      "url": "https://www.nmkpg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립대전현충원",
+      "url": "https://www.dnc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "보훈심사위원회",
+      "url": "https://simsa.mpva.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립서울현충원",
+      "url": "https://www.mpva.go.kr/snmb/www/index.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가유산청",
+      "url": "https://www.khs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립고궁박물관",
+      "url": "https://www.gogung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "현충사관리소",
+      "url": "https://hcs.khs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가유산청 칠백의총관리소",
+      "url": "https://700.khs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=4",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립무형유산원",
+      "url": "https://www.nihc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립문화유산연구원",
+      "url": "https://www.nrich.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립해양유산연구소",
+      "url": "https://www.seamuse.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "궁능유적본부",
+      "url": "https://royal.khs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가인권위원회",
+      "url": "http://www.humanrights.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가정보원",
+      "url": "https://www.nis.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국무조정실·국무총리비서실",
+      "url": "https://www.opm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국민권익위원회",
+      "url": "https://www.acrc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "정부합동민원센터",
+      "url": "http://counseling.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국민권익위원회 청렴연수원",
+      "url": "http://edu.acrc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=5",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국 국방부",
+      "url": "https://www.mnd.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국방부 국방홍보원",
+      "url": "http://www.dema.mil.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국방전산정보원",
+      "url": "http://ndisc.mnd.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국방대학교",
+      "url": "https://www.kndu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "합동군사대학교",
+      "url": "http://jfmu.mnd.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국세청",
+      "url": "https://www.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울지방국세청",
+      "url": "https://s.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중부지방국세청",
+      "url": "https://j.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전지방국세청",
+      "url": "https://d.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주지방국세청",
+      "url": "https://g.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=6",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구지방국세청",
+      "url": "https://t.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산지방국세청",
+      "url": "https://b.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국세공무원교육원",
+      "url": "https://i.nts.go.kr/taxstudy/main.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국세청주류면허지원센터",
+      "url": "https://i.nts.go.kr/llsc/main.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천지방국세청",
+      "url": "http://in.nts.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국토교통부",
+      "url": "http://www.molit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국토교통부 국토교통인재개발원",
+      "url": "http://tilit.molit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국토교통부 철도특별사법경찰대",
+      "url": "http://police.molit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "항공철도사고조사위원회",
+      "url": "http://araib.molit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙토지수용위원회",
+      "url": "http://oclt.molit.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=7",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국토교통부 국토지리정보원",
+      "url": "https://www.ngii.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대도시권광역교통위원회",
+      "url": "https://www.molit.go.kr/mtc/intro.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금융위원회",
+      "url": "https://www.fsc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금융정보분석원",
+      "url": "https://www.kofiu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기상청",
+      "url": "https://www.kma.go.kr/kma/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가기상위성센터",
+      "url": "https://nmsc.kma.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기상레이더센터",
+      "url": "https://radar.kma.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기상청 국립기상과학원",
+      "url": "http://www.nims.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기획예산처",
+      "url": "https://www.mpb.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기후에너지환경부 누리집",
+      "url": "https://www.mcee.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=8",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립환경과학원",
+      "url": "https://www.nier.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립환경인재개발원",
+      "url": "https://ehrd.mcee.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "온실가스종합정보센터",
+      "url": "http://www.gir.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가미세먼지정보센터",
+      "url": "https://air.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립야생동물질병관리원",
+      "url": "https://niwdc.mcee.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한강유역환경청",
+      "url": "https://www.mcee.go.kr/hg",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "낙동강유역환경청",
+      "url": "https://www.mcee.go.kr/ndg",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금강유역환경청",
+      "url": "https://www.mcee.go.kr/gg",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영산강유역환경청",
+      "url": "https://www.mcee.go.kr/ysg",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "원주지방환경청",
+      "url": "https://www.mcee.go.kr/wonju",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=9",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구지방환경청",
+      "url": "https://www.mcee.go.kr/daegu",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북지방환경청",
+      "url": "https://www.mcee.go.kr/smg",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수도권대기환경청",
+      "url": "https://www.mcee.go.kr/mamo",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한강홍수통제소",
+      "url": "http://www.hrfco.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "낙동강홍수통제소",
+      "url": "http://www.nakdongriver.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금강홍수통제소",
+      "url": "http://www.geumriver.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영산강홍수통제소",
+      "url": "http://www.yeongsanriver.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙환경분쟁조정피해구제위원회",
+      "url": "https://ecc.mcee.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전기위원회",
+      "url": "http://www.korec.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립생물자원관",
+      "url": "https://www.nibr.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=10",
+      "kind": "government_directory"
+    },
+    {
+      "name": "화학물질안전원",
+      "url": "https://nics.mcee.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농림축산식품부",
+      "url": "https://www.mafra.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농림축산검역본부",
+      "url": "https://www.qia.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립농산물품질관리원",
+      "url": "http://www.naqs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립종자원",
+      "url": "http://www.seed.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농식품인재개발원",
+      "url": "https://www.ahi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청",
+      "url": "https://www.rda.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청 국립농업과학원",
+      "url": "https://www.naas.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청 국립식량과학원",
+      "url": "https://www.nics.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청 국립원예특작과학원",
+      "url": "https://www.nihhs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=11",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청 국립축산과학원",
+      "url": "https://www.nias.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농촌진흥청 농촌인적자원개발센터",
+      "url": "https://hrd.rda.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대통령경호처",
+      "url": "https://www.pss.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국 대통령실",
+      "url": "https://www.president.go.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "문화체육관광부",
+      "url": "http://www.mcst.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "아시아문화중심도시 광주",
+      "url": "https://www.cct.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "예술의전당",
+      "url": "https://www.sac.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "아리랑국제방송 재단소개 누리집",
+      "url": "http://company.arirang.com",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "태권도진흥재단",
+      "url": "https://www.tpf.or.kr/tpf/main/index.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국언론진흥재단",
+      "url": "http://www.kpf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=12",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국공예디자인문화진흥원",
+      "url": "https://www.kcdf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종학당재단",
+      "url": "https://www.ksif.or.kr/index.do?lang=kor",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인스포츠윤리센터",
+      "url": "https://www.k-sec.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립아시아문화전당재단",
+      "url": "https://www.accf.or.kr/main/mainpage",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국예술원",
+      "url": "https://www.naa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립중앙박물관",
+      "url": "https://www.museum.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립국어원",
+      "url": "https://www.korean.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립중앙도서관",
+      "url": "https://www.nl.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립극장",
+      "url": "https://www.ntok.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립현대미술관",
+      "url": "https://www.mmca.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=13",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립국악원",
+      "url": "http://www.gugak.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립민속박물관",
+      "url": "http://www.nfm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "KTV국민방송",
+      "url": "https://www.ktv.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "사행산업통합감독위원회",
+      "url": "https://www.ngcc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국예술종합학교",
+      "url": "http://www.karts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국역사박물관",
+      "url": "https://www.much.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립한글박물관",
+      "url": "https://www.hangeul.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립아시아문화전당",
+      "url": "http://www.acc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립국악고등학교",
+      "url": "http://gugak.sen.hs.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립전통예술고등학교",
+      "url": "http://kugak-am.sen.hs.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=14",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립전통예술중학교",
+      "url": "http://kugak-am.sen.ms.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립장애인도서관",
+      "url": "https://nld.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가도서관위원회",
+      "url": "http://www.clip.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국문화진흥주식회사",
+      "url": "http://www.newseoulgolf.co.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영화진흥위원회",
+      "url": "https://www.kofic.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영상물등급위원회",
+      "url": "https://www.kmrb.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국영상자료원",
+      "url": "https://www.koreafilm.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국관광공사",
+      "url": "https://knto.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한체육회",
+      "url": "http://www.sports.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울올림픽기념국민체육진흥공단",
+      "url": "https://www.kspo.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=15",
+      "kind": "government_directory"
+    },
+    {
+      "name": "문화예술교육진흥원",
+      "url": "http://www.arte.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국문화예술위원회",
+      "url": "https://arko.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한장애인체육회",
+      "url": "https://www.koreanpc.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국체육산업개발주식회사",
+      "url": "https://www.ksponco.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국문학번역원",
+      "url": "https://www.ltikorea.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국저작권위원회",
+      "url": "https://www.copyright.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국콘텐츠진흥원",
+      "url": "https://www.kocca.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "그랜드코리아레저(주)",
+      "url": "https://www.grandkorea.com",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립박물관문화재단 대표 누리집",
+      "url": "https://www.nmf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "예술경영지원센터",
+      "url": "http://www.gokams.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=16",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국출판문화산업진흥원",
+      "url": "https://kpipa.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국예술인복지재단 홈페이지",
+      "url": "https://www.kawf.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "게임물관리위원회",
+      "url": "https://www.grac.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국문화정보원",
+      "url": "https://www.kcisa.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "(재)한국저작권보호원",
+      "url": "https://www.kcopa.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국도박문제예방치유원",
+      "url": "https://www.kcgp.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국악방송",
+      "url": "https://www.igbf.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "방송미디어통신위원회",
+      "url": "https://www.kmcc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "시청자미디어재단",
+      "url": "https://kcmf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "방위사업청",
+      "url": "https://www.dapa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=17",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국방신속획득기술연구원",
+      "url": "https://www.add.re.kr/dratri",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "법무부",
+      "url": "http://www.moj.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "법무연수원",
+      "url": "https://www.ioj.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "법무부 출입국‧외국인정책본부",
+      "url": "http://www.immigration.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "병무청",
+      "url": "https://www.mma.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "보건복지부",
+      "url": "http://www.mohw.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립장기조직혈액관리원",
+      "url": "https://www.konos.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립나주병원",
+      "url": "https://www.najumh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립부곡병원",
+      "url": "https://www.bgnmh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립춘천병원",
+      "url": "https://www.cnmh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=18",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립공주병원 누리집",
+      "url": "http://www.knmh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립재활원",
+      "url": "http://www.nrc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립소록도병원",
+      "url": "http://www.sorokdo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "오송생명과학단지지원센터 대표누리집",
+      "url": "http://osong.mohw.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립망향의동산 대표누리집",
+      "url": "http://www.nmhc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립정신건강센터 대표누리집",
+      "url": "http://www.ncmh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "건강보험분쟁조정위원회 대표 누리집",
+      "url": "http://hi.simpan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "첨단재생의료포털",
+      "url": "http://k-arm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산림청",
+      "url": "https://www.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립수목원",
+      "url": "https://kna.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=19",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립산림과학원",
+      "url": "https://nifos.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립자연휴양림관리소",
+      "url": "https://huyang.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "북부지방산림청",
+      "url": "https://north.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동부지방산림청",
+      "url": "https://east.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남부지방산림청",
+      "url": "https://south.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중부지방산림청",
+      "url": "https://center.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서부지방산림청",
+      "url": "https://west.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립산림품종관리센터",
+      "url": "https://nfsv.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산림항공본부",
+      "url": "https://fao.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산림교육원",
+      "url": "https://fotilms.forest.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=20",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산업통상부",
+      "url": "http://www.motir.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경제자유구역기획단",
+      "url": "http://fez.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광업등록사무소",
+      "url": "https://branch.motie.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "무역위원회",
+      "url": "http://www.ktc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가기술표준원",
+      "url": "http://www.kats.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "새만금개발청",
+      "url": "http://www.saemangeum.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성평등가족부",
+      "url": "https://www.mogef.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "소방청",
+      "url": "http://www.nfa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙소방학교",
+      "url": "https://www.nfsa.go.kr/nfsa/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙119구조본부",
+      "url": "http://www.rescue.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=21",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립소방연구원",
+      "url": "http://nfire.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "식품의약품안전처",
+      "url": "https://www.mfds.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "식품의약품안전평가원",
+      "url": "http://www.nifds.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "외교부",
+      "url": "http://www.mofa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립외교원",
+      "url": "https://www.knda.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "우주항공청",
+      "url": "https://www.kasa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "우주환경센터",
+      "url": "https://spaceweather.kasa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "원자력안전위원회",
+      "url": "https://www.nssc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인사혁신처",
+      "url": "http://www.mpm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가공무원인재개발원",
+      "url": "https://www.nhi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=22",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재외동포청",
+      "url": "http://www.oka.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재외동포365 민원포털",
+      "url": "https://www.g4k.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "스터디코리안",
+      "url": "http://study.korean.net",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한상넷",
+      "url": "http://www.hansang.net",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "코리안넷",
+      "url": "http://www.korean.net",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국 아포스티유 서비스",
+      "url": "https://www.apostille.go.kr/index.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재외동포청 워킹홀리데이 인포센터",
+      "url": "http://whic.mofa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재정경제부",
+      "url": "https://www.moef.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수출 플러스 지원단",
+      "url": "https://www.export119.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "조달청",
+      "url": "https://www.pps.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=23",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중소벤처기업부 대표 누리집",
+      "url": "http://www.mss.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "구미전자공업고등학교",
+      "url": "https://school.gyo6.net/gnet",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산기계공업고등학교",
+      "url": "https://school.busanedu.net/bmt-h",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "지식재산처",
+      "url": "http://www.moip.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "질병관리청",
+      "url": "http://www.kdca.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립마산병원",
+      "url": "http://www.mnth.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립목포병원 대표누리집",
+      "url": "http://www.tbmokpo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "통일부",
+      "url": "http://www.unikorea.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남북회담본부",
+      "url": "http://dialogue.unikorea.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립평화통일민주교육원",
+      "url": "http://www.uniedu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=24",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한반도통일미래센터",
+      "url": "http://unifuture.unikorea.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양경찰청",
+      "url": "http://www.kcg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양경찰교육원",
+      "url": "https://edu.kcga.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 대표누리집",
+      "url": "https://www.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립부산해사고등학교",
+      "url": "https://school.busanedu.net/maritime-h",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천해사고등학교",
+      "url": "http://inm.icehs.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 해양수산인재개발원",
+      "url": "https://www.ofhi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립수산물품질관리원",
+      "url": "https://www.nfqs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동해어업관리단",
+      "url": "https://eastship.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서해어업관리단",
+      "url": "https://westship.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=25",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립해양조사원",
+      "url": "https://www.khoa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙해양안전심판원",
+      "url": "https://www.kmst.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립수산과학원",
+      "url": "https://www.nifs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 부산지방해양수산청",
+      "url": "https://busan.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 인천지방해양수산청",
+      "url": "https://incheon.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 여수지방해양수산청",
+      "url": "https://yeosu.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 마산지방해양수산청",
+      "url": "https://masan.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 동해지방해양수산청",
+      "url": "https://donghae.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "군산지방해양수산청",
+      "url": "https://gunsan.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 목포지방해양수산청",
+      "url": "https://mokpo.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=26",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 포항지방해양수산청",
+      "url": "https://pohang.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 평택지방해양수산청",
+      "url": "https://pyeongtaek.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 울산지방해양수산청",
+      "url": "https://ulsan.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "해양수산부 대산지방해양수산청",
+      "url": "https://daesan.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립해양측위정보원",
+      "url": "https://www.nmpnt.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남해어업관리단",
+      "url": "https://southship.mof.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천항만공사",
+      "url": "https://www.icpa.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "행정안전부대표누리집",
+      "url": "https://www.mois.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "행정안전부 지방자치인재개발원",
+      "url": "https://www.logodi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "행정안전부 정부청사관리본부",
+      "url": "https://gbmo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=27",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가기록원",
+      "url": "http://www.archives.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "행정안전부 이북5도 위원회",
+      "url": "http://www.ibuk5do.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립과학수사연구원",
+      "url": "http://www.nfs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가정보자원관리원",
+      "url": "http://www.nirs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립재난안전연구원",
+      "url": "https://www.ndmi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "주민등록번호변경위원회 누리집",
+      "url": "http://www.rrncc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대통령기록관",
+      "url": "http://www.pa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국가재난안전교육원",
+      "url": "http://www.ndti.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "행정중심복합도시건설청",
+      "url": "https://www.naacc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시",
+      "url": "https://www.seoul.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=28",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 종로구청",
+      "url": "https://www.jongno.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 중구청",
+      "url": "https://www.junggu.seoul.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 용산구청",
+      "url": "https://www.yongsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 성동구청",
+      "url": "https://www.sd.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 광진구",
+      "url": "https://www.gwangjin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 동대문구",
+      "url": "https://www.ddm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 중랑구",
+      "url": "https://www.jungnang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 성북구청",
+      "url": "https://www.sb.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 강북구",
+      "url": "https://www.gangbuk.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 도봉구",
+      "url": "https://www.dobong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=29",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 노원구",
+      "url": "https://www.nowon.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 은평구",
+      "url": "https://www.ep.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 서대문구",
+      "url": "https://www.sdm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 마포구청",
+      "url": "https://www.mapo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 양천구",
+      "url": "https://www.yangcheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 강서구",
+      "url": "https://www.gangseo.seoul.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 구로구",
+      "url": "https://www.guro.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 금천구",
+      "url": "https://www.geumcheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 영등포구",
+      "url": "https://www.ydp.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 동작구청",
+      "url": "https://www.dongjak.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=30",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 관악구",
+      "url": "https://www.gwanak.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 서초구",
+      "url": "https://www.seocho.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 강남구",
+      "url": "https://www.gangnam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 송파구",
+      "url": "https://www.songpa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울특별시 강동구",
+      "url": "https://www.gangdong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인금천문화재단",
+      "url": "https://gcfac.or.kr/mpage",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시",
+      "url": "https://www.busan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 중구",
+      "url": "http://www.bsjunggu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 서구",
+      "url": "http://www.bsseogu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 동구",
+      "url": "http://www.bsdonggu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=31",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 영도구",
+      "url": "http://www.yeongdo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 부산진구",
+      "url": "http://www.busanjin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 동래구",
+      "url": "http://www.dongnae.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 남구",
+      "url": "http://www.bsnamgu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 북구",
+      "url": "http://www.bsbukgu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 해운대구",
+      "url": "http://www.haeundae.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 사하구",
+      "url": "http://www.saha.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 금정구",
+      "url": "http://www.geumjeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 강서구",
+      "url": "https://www.bsgangseo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 연제구",
+      "url": "http://www.yeonje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=32",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 수영구",
+      "url": "http://www.suyeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 사상구",
+      "url": "http://www.sasang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시 기장군",
+      "url": "http://www.gijang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시청",
+      "url": "https://www.incheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 중구청",
+      "url": "http://www.icjg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 제물포구청",
+      "url": "https://www.jemulpo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 미추홀구청",
+      "url": "https://www.michuhol.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 연수구청",
+      "url": "http://www.yeonsu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 남동구청",
+      "url": "https://www.namdong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 부평구청",
+      "url": "https://www.icbp.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=33",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 계양구청",
+      "url": "http://www.gyeyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 서해구청",
+      "url": "https://www.seohae.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 강화군청",
+      "url": "http://www.ganghwa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시 옹진군청",
+      "url": "http://www.ongjin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시",
+      "url": "http://www.daegu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 중구청",
+      "url": "http://www.jung.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시동구청",
+      "url": "http://www.dong.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 서구청",
+      "url": "http://www.dgs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 남구",
+      "url": "http://www.nam.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 북구",
+      "url": "http://www.buk.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=34",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 수성구",
+      "url": "http://www.suseong.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 달서구",
+      "url": "http://www.dalseo.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 달성군청",
+      "url": "http://dalseong.daegu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시 군위군청",
+      "url": "https://www.gunwi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인대구문화예술진흥원",
+      "url": "https://dgfca.or.kr/main",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인대구디지털혁신진흥원",
+      "url": "https://www.dip.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 대표 누리집",
+      "url": "https://www.daejeon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전시립청소년합창단",
+      "url": "https://www.daejeon.go.kr/fvu/FvuContentsHtmlView.do?menuSeq=721",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전시립교향악단",
+      "url": "https://www.daejeon.go.kr/fvu/FvuContentsHtmlView.do?menuSeq=718",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전시립무용단",
+      "url": "https://www.daejeon.go.kr/fvu/FvuContentsHtmlView.do?menuSeq=720",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=35",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전시립합창단",
+      "url": "https://www.daejeon.go.kr/fvu/FvuContentsHtmlView.do?menuSeq=719",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 동구",
+      "url": "https://www.donggu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 중구청",
+      "url": "https://www.djjunggu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 서구",
+      "url": "https://www.seogu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 유성구",
+      "url": "https://www.yuseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시 대덕구청",
+      "url": "https://www.daedeok.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시",
+      "url": "http://www.ulsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시 중구 대표누리집",
+      "url": "http://www.junggu.ulsan.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시 남구 대표누리집",
+      "url": "http://www.ulsannamgu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시 동구",
+      "url": "http://www.donggu.ulsan.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=36",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시 북구청",
+      "url": "http://www.bukgu.ulsan.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시 울주군 대표 누리집",
+      "url": "http://www.ulju.ulsan.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종특별자치시",
+      "url": "http://www.sejong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종특별자치시시설관리공단",
+      "url": "https://www.sjfmc.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인 세종시문화관광재단",
+      "url": "http://www.sjcf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종도시교통공사",
+      "url": "https://www.sctc.kr/index/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도청",
+      "url": "https://www.gg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 수원시청",
+      "url": "https://www.suwon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 성남시청",
+      "url": "https://www.seongnam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 의정부시청",
+      "url": "https://www.ui4u.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=37",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 안양시청",
+      "url": "https://www.anyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 부천시청",
+      "url": "https://www.bucheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 광명시청",
+      "url": "https://www.gm.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 평택시청",
+      "url": "https://www.pyeongtaek.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 동두천시청",
+      "url": "https://www.ddc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 안산시청",
+      "url": "https://www.ansan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고양특례시",
+      "url": "https://www.goyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 과천시청",
+      "url": "https://www.gccity.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 구리시청",
+      "url": "https://www.guri.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 남양주시청",
+      "url": "https://www.nyj.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 오산시청",
+      "url": "https://www.osan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 시흥시청",
+      "url": "https://www.siheung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 군포시청",
+      "url": "https://www.gunpo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 의왕시청",
+      "url": "https://www.uiwang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 하남시청",
+      "url": "https://www.hanam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "용인르네상스",
+      "url": "https://www.yongin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 파주시청",
+      "url": "https://www.paju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 이천시청",
+      "url": "https://www.icheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 안성시청",
+      "url": "https://www.anseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 김포시청",
+      "url": "https://www.gimpo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=39",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 연천군청",
+      "url": "https://www.yeoncheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 가평군청",
+      "url": "https://www.gp.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 양평군청",
+      "url": "https://www.yp21.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "화성특례시청",
+      "url": "https://www.hscity.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 광주시청",
+      "url": "https://www.gjcity.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 양주시",
+      "url": "https://www.yangju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 포천시청",
+      "url": "https://www.pocheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 여주시청",
+      "url": "https://www.yeoju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도 의회",
+      "url": "https://www.ggc.go.kr/site/main/home",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기콘텐츠진흥원",
+      "url": "https://www.gcon.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=40",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인경기도일자리재단",
+      "url": "http://gjf.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도",
+      "url": "https://state.gwd.go.kr/portal",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 춘천시",
+      "url": "https://www.chuncheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 원주시청",
+      "url": "http://www.wonju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강릉시",
+      "url": "http://www.gangneung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 동해시",
+      "url": "https://www.dh.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 태백시",
+      "url": "http://www.taebaek.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 속초시",
+      "url": "https://www.sokcho.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 삼척시",
+      "url": "https://www.samcheok.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 홍천군청",
+      "url": "https://www.hongcheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=41",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 횡성군",
+      "url": "https://www.hsg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "YoungWorld 영월",
+      "url": "https://www.yw.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "평창군",
+      "url": "http://www.pc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 정선군",
+      "url": "https://www.jeongseon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 철원군",
+      "url": "https://www.cwg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 화천군",
+      "url": "https://www.ihc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 양구군",
+      "url": "https://www.yanggu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인제군",
+      "url": "http://www.inje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원 고성군",
+      "url": "https://www.gwgs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 양양군",
+      "url": "https://www.yangyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=42",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도 의회사무처",
+      "url": "https://council.gangwon.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도",
+      "url": "https://www.chungbuk.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 충주시청",
+      "url": "https://www.chungju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 제천시청",
+      "url": "https://www.jecheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 보은군청",
+      "url": "https://www.boeun.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 옥천군청",
+      "url": "https://www.oc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 영동군청",
+      "url": "https://www.yd21.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 진천군",
+      "url": "https://www.jincheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 괴산군",
+      "url": "https://www.goesan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 음성군청",
+      "url": "https://www.eumseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=43",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 단양군",
+      "url": "https://www.danyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 증평군청",
+      "url": "https://www.jp.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 청주시청",
+      "url": "https://intro.cheongju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도",
+      "url": "http://www.chungnam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 천안시",
+      "url": "http://www.cheonan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 공주시",
+      "url": "http://www.gongju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 보령시청",
+      "url": "https://www.brcn.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 아산시청",
+      "url": "http://www.asan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 서산시청",
+      "url": "http://www.seosan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 논산시",
+      "url": "http://www.nonsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=44",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 금산군",
+      "url": "https://www.geumsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 부여군청",
+      "url": "http://www.buyeo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 서천군",
+      "url": "http://www.seocheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 청양군청",
+      "url": "http://www.cheongyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 홍성군청",
+      "url": "http://www.hongseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 예산군",
+      "url": "http://www.yesan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 태안군청",
+      "url": "http://www.taean.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 계룡시",
+      "url": "http://www.gyeryong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 당진시청",
+      "url": "http://www.dangjin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농업기술원",
+      "url": "https://cnnongup.chungnam.go.kr/main.cs",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=45",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도의회",
+      "url": "https://council.chungnam.go.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "보건환경연구원",
+      "url": "https://www.chungnam.go.kr/healthenv.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "공주소방서",
+      "url": "https://www.cn119.go.kr/gongju/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "보령소방서",
+      "url": "https://www.cn119.go.kr/boryung/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "아산소방서",
+      "url": "https://www.cn119.go.kr/asan/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서산소방서",
+      "url": "https://www.cn119.go.kr/seosan/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "논산소방서",
+      "url": "https://www.cn119.go.kr/nonsan/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "홍성소방서",
+      "url": "https://www.cn119.go.kr/hongseong/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "예산소방서",
+      "url": "https://www.cn119.go.kr/yesan/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "당진소방서",
+      "url": "https://www.cn119.go.kr/dangjin/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=46",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부여소방서",
+      "url": "https://www.cn119.go.kr/buyeo/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "축산기술연구소",
+      "url": "https://www.chungnam.go.kr/liveStock.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금산소방서",
+      "url": "https://www.cn119.go.kr/geumsan/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서천소방서",
+      "url": "https://www.cn119.go.kr/seocheon/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "천안동남소방서",
+      "url": "https://www.cn119.go.kr/dongnam/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "천안서북소방서",
+      "url": "https://www.cn119.go.kr/seobuk/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "태안소방서",
+      "url": "https://www.cn119.go.kr/taean/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동물위생시험소",
+      "url": "https://www.chungnam.go.kr/cnvri.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산림자원연구소",
+      "url": "https://keumkang.chungnam.go.kr:452/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도 건설본부",
+      "url": "https://www.chungnam.go.kr/construction.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도",
+      "url": "https://www.gb.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 포항시 대표누리집",
+      "url": "http://www.pohang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 경주시",
+      "url": "http://www.gyeongju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 김천시",
+      "url": "https://gc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 안동시청",
+      "url": "https://www.andong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 구미시청",
+      "url": "http://www.gumi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 영주시",
+      "url": "http://www.yeongju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 영천시",
+      "url": "http://www.yc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 상주시청",
+      "url": "http://www.sangju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 문경시청",
+      "url": "https://www.gbmg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=48",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 경산시",
+      "url": "http://gbgs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 의성군청",
+      "url": "http://www.usc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "청송군청",
+      "url": "http://www.cs.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 영양군",
+      "url": "http://www.yyg.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 영덕군",
+      "url": "http://www.yd.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 청도군",
+      "url": "https://www.cheongdo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 고령군",
+      "url": "http://www.goryeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 성주군",
+      "url": "http://www.sj.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 칠곡군청",
+      "url": "http://www.chilgok.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 예천군",
+      "url": "http://www.ycg.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=49",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 봉화군",
+      "url": "https://www.bonghwa.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 울진군",
+      "url": "http://www.uljin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 울릉군",
+      "url": "http://www.ulleung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "소방본부",
+      "url": "https://gb119.go.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경북소방학교",
+      "url": "https://gb119.go.kr/gfa/MainPage.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상남도 대표누리집",
+      "url": "https://www.gyeongnam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "진주시 대표 누리집",
+      "url": "http://www.jinju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "통영시 대표누리집",
+      "url": "http://www.tongyeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "사천시 대표누리집",
+      "url": "http://sacheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "김해시 대표 누리집",
+      "url": "http://www.gimhae.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=50",
+      "kind": "government_directory"
+    },
+    {
+      "name": "밀양시 대표 누리집",
+      "url": "http://miryang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "거제시 대표 누리집",
+      "url": "https://www.geoje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "양산시 대표 누리집",
+      "url": "http://www.yangsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "의령군 대표 누리집",
+      "url": "http://www.uiryeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "함안군 대표누리집",
+      "url": "http://www.haman.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "창녕군 대표누리집",
+      "url": "http://www.cng.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상남도 고성군",
+      "url": "https://www.goseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남해군 대표 누리집",
+      "url": "https://www.namhae.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "하동군 대표 누리집",
+      "url": "http://www.hadong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "산청군 대표 누리집",
+      "url": "http://www.sancheong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=51",
+      "kind": "government_directory"
+    },
+    {
+      "name": "함양군 대표누리집",
+      "url": "http://www.hygn.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "거창군청 대표 누리집",
+      "url": "https://www.geochang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "합천군 대표 누리집",
+      "url": "http://www.hc.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "창원시 대표 누리집",
+      "url": "https://www.changwon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 대표누리집",
+      "url": "https://www.jeonbuk.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 전주시",
+      "url": "https://www.jeonju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 군산시청",
+      "url": "http://www.gunsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 익산시",
+      "url": "http://www.iksan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 정읍시",
+      "url": "http://www.jeongeup.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 남원시 대표",
+      "url": "http://www.namwon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=52",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 김제시",
+      "url": "http://www.gimje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 완주군청",
+      "url": "http://www.wanju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 진안군청",
+      "url": "http://jinan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 무주군",
+      "url": "https://www.muju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 장수군",
+      "url": "http://www.jangsu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 임실군",
+      "url": "http://www.imsil.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 순창군",
+      "url": "http://www.sunchang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 고창군청",
+      "url": "http://www.gochang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도 부안군",
+      "url": "https://www.buan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도남원의료원",
+      "url": "https://www.namwonmed.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=53",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시",
+      "url": "https://www.jeonnam-gwangju.go.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 목포시청",
+      "url": "http://www.mokpo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 여수시",
+      "url": "http://www.yeosu.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 순천시",
+      "url": "https://www.suncheon.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 나주시",
+      "url": "http://www.naju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 광양시",
+      "url": "http://www.gwangyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 동구",
+      "url": "http://www.donggu.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 서구",
+      "url": "https://www.seogu.gwangju.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 남구",
+      "url": "http://www.namgu.gwangju.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 북구",
+      "url": "https://bukgu.gwangju.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=54",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 광산구",
+      "url": "http://www.gwangsan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 담양군",
+      "url": "http://www.damyang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 곡성군",
+      "url": "https://www.gokseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 구례군청",
+      "url": "https://www.gurye.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 고흥군",
+      "url": "https://www.goheung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 보성군청",
+      "url": "http://www.boseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 화순군청",
+      "url": "https://www.hwasun.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 장흥군",
+      "url": "http://www.jangheung.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 강진군청",
+      "url": "http://www.gangjin.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 해남군",
+      "url": "http://www.haenam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=55",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 영암군",
+      "url": "http://www.yeongam.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 무안군",
+      "url": "http://www.muan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 함평군",
+      "url": "http://www.hampyeong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 영광군",
+      "url": "http://www.yeonggwang.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 장성군",
+      "url": "http://www.jangseong.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 완도군청",
+      "url": "http://www.wando.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 진도군",
+      "url": "http://www.jindo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남광주통합특별시 신안군청",
+      "url": "http://www.shinan.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전라남도 순천의료원",
+      "url": "https://jsmc.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남테크노파크",
+      "url": "https://jntp.or.kr/base/main/view",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=56",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전라남도환경산업진흥원",
+      "url": "https://www.jeipi.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전라남도 강진의료원",
+      "url": "http://www.gjmed.or.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인전라남도정보문화산업진흥원",
+      "url": "https://jcia.or.kr/cf/index.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전라남도체육회",
+      "url": "https://www.jnsports.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인전남여성가족재단",
+      "url": "https://www.jwomen.or.kr/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "재단법인전라남도문화재단",
+      "url": "https://www.jncf.or.kr/jact/index.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주특별자치도청",
+      "url": "http://www.jeju.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주특별자치도 제주시",
+      "url": "http://www.jejusi.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주특별자치도 서귀포시",
+      "url": "http://www.seogwipo.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울시교육청",
+      "url": "http://www.sen.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=57",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산광역시교육청",
+      "url": "https://www.pen.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천광역시교육청",
+      "url": "https://www.ice.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구광역시교육청",
+      "url": "https://www.dge.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전광역시교육청",
+      "url": "https://www.dje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주광역시교육청",
+      "url": "http://www.gen.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산광역시교육청",
+      "url": "https://use.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종특별자치시교육청",
+      "url": "http://www.sje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기도교육청",
+      "url": "https://www.goe.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원특별자치도교육청",
+      "url": "https://www.gwe.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도교육청",
+      "url": "https://www.cbe.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=58",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청남도교육청",
+      "url": "http://www.cne.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상북도 교육청",
+      "url": "https://www.gbe.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북특별자치도교육청",
+      "url": "http://www.jbe.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전라남도교육청",
+      "url": "https://www.jne.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주특별자치도교육청",
+      "url": "https://www.jje.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국농수산대학교",
+      "url": "https://www.af.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국전통문화대학교",
+      "url": "https://www.knuh.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청북도 충북도립대학교",
+      "url": "https://www.cpu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충남도립대학교",
+      "url": "https://cnsu.ac.kr/main.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강원도립대학교",
+      "url": "https://www.gw.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=59",
+      "kind": "government_directory"
+    },
+    {
+      "name": "KNU 강원대학교",
+      "url": "https://www.kangwon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경북대학교",
+      "url": "https://www.knu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경상국립대학교",
+      "url": "https://www.gnu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립공주대학교",
+      "url": "http://www.kongju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "군산대학교",
+      "url": "http://www.kunsan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립금오공과대학교",
+      "url": "http://www.kumoh.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "목포해양대학교",
+      "url": "https://www.mmu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산대학교",
+      "url": "http://www.pusan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남대학교",
+      "url": "http://www.jnu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북대학교",
+      "url": "http://www.jbnu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주대학교",
+      "url": "http://www.jejunu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "창원대학교",
+      "url": "http://www.changwon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충북대학교",
+      "url": "https://www.cbnu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국교원대학교",
+      "url": "http://www.knue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국체육대학교",
+      "url": "http://www.knsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국해양대학교",
+      "url": "https://www.kmou.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울시립대학교",
+      "url": "https://www.uos.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "가야대학교",
+      "url": "https://www.kaya.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "가톨릭대학교",
+      "url": "https://www.catholic.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "감리교신학대학교",
+      "url": "https://www.mtu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=61",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강남대학교",
+      "url": "https://web.kangnam.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "건국대학교",
+      "url": "https://www.konkuk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "건양대학교",
+      "url": "https://www.konyang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기대학교",
+      "url": "https://www.kyonggi.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경남대학교",
+      "url": "https://www.kyungnam.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경성대학교",
+      "url": "http://ks.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경희대학교",
+      "url": "http://www.khu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "계명대학교",
+      "url": "http://www.kmu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고려대학교",
+      "url": "http://www.korea.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주가톨릭대학교",
+      "url": "https://www.gjc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=62",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국민대학교",
+      "url": "http://www.kookmin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "단국대학교",
+      "url": "https://www.dankook.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구가톨릭대학교",
+      "url": "https://www.cu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구대학교",
+      "url": "http://www.daegu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대신대학교",
+      "url": "https://www.daeshin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전대학교",
+      "url": "https://www.dju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "덕성여자대학교",
+      "url": "https://www.duksung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동덕여자대학교",
+      "url": "https://www.dongduk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동신대학교",
+      "url": "https://www.dsu.ac.kr/kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동아대학교",
+      "url": "https://www.donga.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=63",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동의대학교",
+      "url": "https://www.deu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "명지대학교",
+      "url": "https://www.mju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "목원대학교",
+      "url": "https://www.mokwon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "배재대학교",
+      "url": "http://www.pcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산외국어대학교",
+      "url": "http://www.bufs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "삼육대학교",
+      "url": "http://www.syu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "상지대학교",
+      "url": "https://www.sangji.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서강대학교",
+      "url": "http://www.sogang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서경대학교",
+      "url": "http://www.skuniv.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울신학대학교",
+      "url": "http://www.stu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=64",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울여자대학교",
+      "url": "http://www.swu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서원대학교",
+      "url": "http://www.seowon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충남선문대학교",
+      "url": "https://lily.sunmoon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성결대학교",
+      "url": "https://www.sungkyul.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성공회대학교",
+      "url": "http://www.skhu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성균관대학교",
+      "url": "http://www.skku.edu",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성신여자대학교",
+      "url": "http://www.sungshin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세명대학교",
+      "url": "http://www.semyung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종대학교",
+      "url": "http://www.sejong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수원대학교",
+      "url": "http://www.suwon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=65",
+      "kind": "government_directory"
+    },
+    {
+      "name": "숙명여자대학교",
+      "url": "http://www.sookmyung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "순천향대학교",
+      "url": "https://www.sch.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "숭실대학교",
+      "url": "https://ssu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "아주대학교",
+      "url": "http://www.ajou.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "연세대학교",
+      "url": "http://www.yonsei.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영남대학교",
+      "url": "http://www.yu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영남신학대학교",
+      "url": "http://www.ytus.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "용인대학교",
+      "url": "http://www.yongin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "우석대학교",
+      "url": "http://www.woosuk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산대학교",
+      "url": "http://www.ulsan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=66",
+      "kind": "government_directory"
+    },
+    {
+      "name": "이화여자대학교",
+      "url": "http://www.ewha.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인제대학교",
+      "url": "http://www.inje.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인하대학교",
+      "url": "http://www.inha.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "장로회신학대학교",
+      "url": "http://www.pcts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전주대학교",
+      "url": "http://www.jj.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "조선대학교",
+      "url": "http://www.chosun.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중부대학교",
+      "url": "http://www.joongbu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙대학교",
+      "url": "http://www.cau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "청주대학교",
+      "url": "http://www.chongju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "총신대학교",
+      "url": "https://www.csu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=67",
+      "kind": "government_directory"
+    },
+    {
+      "name": "침례신학대학교",
+      "url": "https://www.kbtus.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "포항공과대학교(POSTECH)",
+      "url": "http://www.postech.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국외국어대학교",
+      "url": "http://www.hufs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국항공대학교",
+      "url": "http://www.kau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한남대학교",
+      "url": "http://www.hannam.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한동대학교",
+      "url": "http://www.handong.edu",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한림대학교",
+      "url": "http://www.hallym.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한서대학교",
+      "url": "http://www.hanseo.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한성대학교",
+      "url": "http://www.hansung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한신대학교",
+      "url": "http://www.hs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=68",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한양대학교",
+      "url": "http://www.hanyang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "협성대학교",
+      "url": "http://www.uhs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "호남대학교",
+      "url": "http://www.honam.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "호남신학대학교",
+      "url": "http://www.htus.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "호서대학교",
+      "url": "http://www.hoseo.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "홍익대학교",
+      "url": "https://www.hongik.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "공주교육대학교",
+      "url": "http://www.gjue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주교육대학교",
+      "url": "https://www.gnue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구교육대학교",
+      "url": "http://www.dnue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산교육대학교",
+      "url": "http://www.bnue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=69",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울교육대학교",
+      "url": "http://www.snue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전주교육대학교",
+      "url": "http://www.jnue.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "진주교육대학교",
+      "url": "https://www.cue.ac.kr/kor/Main.do",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "청주교육대학교",
+      "url": "http://www.cje.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "춘천교육대학교",
+      "url": "https://www.cnue.ac.kr/cnue",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립한국방송통신대학교",
+      "url": "http://www.knou.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울과학기술대학교",
+      "url": "http://www.seoultech.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주대학교",
+      "url": "http://www.gwangju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부경대학교",
+      "url": "http://www.pknu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "공주대학교 공과대학",
+      "url": "http://brain.kongju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=70",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한밭대학교",
+      "url": "http://www.hanbat.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경동대학교",
+      "url": "https://kduniv.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경운대학교",
+      "url": "http://www.ikw.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경일대학교",
+      "url": "http://www.kiu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "고려대학교 보건과학대학",
+      "url": "http://chs.korea.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광신대학교",
+      "url": "http://www.kwangshin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주여자대학교",
+      "url": "http://www.kwu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국제법률경영대학원대학교(영어)",
+      "url": "http://www.tlbu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "극동대학교",
+      "url": "https://www.kdu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "나사렛대학교",
+      "url": "http://www.kornu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=71",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남부대학교",
+      "url": "http://www.nambu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "남서울대학교",
+      "url": "http://www.nsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구예술대학교",
+      "url": "http://www.dgau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한신학대학원대학교",
+      "url": "https://www.dtu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동서대학교",
+      "url": "https://www.dongseo.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동양대학교",
+      "url": "https://www.dyu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "목포가톨릭대학교",
+      "url": "https://www.mcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "베뢰아국제대학원대학교",
+      "url": "http://www.berea.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "건신대학원대학교",
+      "url": "https://www.alu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산가톨릭대학교",
+      "url": "http://www.cup.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=72",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산장신대학교",
+      "url": "http://www.bpu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "삼육보건대학교",
+      "url": "http://www.shu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울기독대학교",
+      "url": "http://www.scu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울성경신학대학원대학교",
+      "url": "http://www.sb.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울장신대학교",
+      "url": "http://www.sjs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "상명대학교",
+      "url": "http://www.smu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수원가톨릭대학교",
+      "url": "http://www.suwoncatholic.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "신성대학교",
+      "url": "http://www.shinsung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영산대학교",
+      "url": "http://www.ysu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "우송대학교",
+      "url": "http://www.wsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=73",
+      "kind": "government_directory"
+    },
+    {
+      "name": "원불교대학원대학교",
+      "url": "http://www.wonbuddhism.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "웨스트민스터신학대학원대학교",
+      "url": "http://www.wgst.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "위덕대학교",
+      "url": "http://www.uu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천가톨릭대학교",
+      "url": "http://www.iccu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙승가대학교",
+      "url": "http://www.sangha.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "온석대학원대학교",
+      "url": "https://www.osu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "청운대학교",
+      "url": "http://home.chungwoon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "초당대학교",
+      "url": "https://www.cdu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "추계예술대학교",
+      "url": "https://www.chugye.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기칼빈대학교",
+      "url": "http://www.calvin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=74",
+      "kind": "government_directory"
+    },
+    {
+      "name": "평택대학교",
+      "url": "http://www.ptu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국개발연구원국제정책대학원대학교",
+      "url": "https://www.kdischool.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국공학대학교",
+      "url": "https://www.tukorea.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국성서대학교",
+      "url": "http://www.bible.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한라대학교",
+      "url": "http://www.halla.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한세대학교",
+      "url": "http://www.hansei.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울 한영대학교",
+      "url": "https://www.shyu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한일장신대학교",
+      "url": "http://www.hanil.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "합동신학대학원대학교",
+      "url": "http://www.hapdong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "호원대학교",
+      "url": "http://www.howon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=75",
+      "kind": "government_directory"
+    },
+    {
+      "name": "횃불트리니티신학대학원대학교",
+      "url": "http://www.ttgu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울불교대학원대학교",
+      "url": "http://www.sub.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "원광디지털대학교",
+      "url": "http://www.wdu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국기술교육대학교",
+      "url": "http://www.koreatech.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국기술교육대학교 대학원",
+      "url": "https://www.koreatech.ac.kr/grd/",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "에스라성경대학원대학교",
+      "url": "https://www.ezra.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경인교육대학교",
+      "url": "http://www.ginue.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서정대학교",
+      "url": "http://www.seojeong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "금강대학교",
+      "url": "http://www.ggu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구한의대학교",
+      "url": "http://www.dhu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=76",
+      "kind": "government_directory"
+    },
+    {
+      "name": "루터대학교",
+      "url": "http://www.ltu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세종사이버대학교",
+      "url": "https://home.sjcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전가톨릭대학교",
+      "url": "https://www.dcatholic.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "사이버외국어대학교",
+      "url": "http://www.cufs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산디지털대학교",
+      "url": "http://www.bdu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "선학UP대학원대학교",
+      "url": "https://www.sunhakup.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울대학교",
+      "url": "http://www.snu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "개신대학원대학교",
+      "url": "http://www.rts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영산선학대학교",
+      "url": "http://www.youngsan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "북한대학원대학교",
+      "url": "http://www.nk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=77",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동방문화대학원대학교",
+      "url": "https://www.dongbang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "실천신학대학원대학교",
+      "url": "http://www.gspt.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "예수대학교",
+      "url": "http://www.jesus.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한림국제대학원/대학교",
+      "url": "http://www.hugs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "백석대학교",
+      "url": "http://www.bu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동명대학교",
+      "url": "https://www.tu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한반도국제대학원대학교",
+      "url": "http://www.kuis.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성산효대학원/대학교",
+      "url": "http://www.hyo.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "예원예술대학교",
+      "url": "http://www.yewon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경희사이버대학교",
+      "url": "http://www.khcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=78",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구사이버대학교",
+      "url": "http://www.dcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울사이버대학교",
+      "url": "http://www.iscu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한양사이버대학교",
+      "url": "http://www.hycu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영남사이버대학교",
+      "url": "http://www.yncu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "을지대학교",
+      "url": "http://www.eulji.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국제뇌교육종합대학원대학교",
+      "url": "https://www.ube.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "성서침례대학원대학교",
+      "url": "http://www.bbts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "열린사이버대학교",
+      "url": "http://www.ocu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립공주대학교 사범대학",
+      "url": "http://sabum.kongju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울사회복지대학원대학교",
+      "url": "http://www.ssgu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=79",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천대학교",
+      "url": "https://www.inu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "순복음대학원대학교",
+      "url": "http://www.sunbokeum.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중원대학교",
+      "url": "http://www.jwu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "디지털서울문화예술대학교",
+      "url": "https://www.scau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "차의과학대학교",
+      "url": "http://www.cha.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "화신사이버대학교",
+      "url": "http://www.hscu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전신학대학교",
+      "url": "https://www.daejeon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "글로벌사이버대학교",
+      "url": "http://www.global.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "김천대학교",
+      "url": "http://www.gimcheon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국상담대학원대학교",
+      "url": "http://www.kcgu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=80",
+      "kind": "government_directory"
+    },
+    {
+      "name": "송원대학교",
+      "url": "http://www.songwon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "꽃동네대학교",
+      "url": "https://www.kkot.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국제사이버대학교",
+      "url": "https://www.gjcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "마산대학교",
+      "url": "https://www.masan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대동대학교",
+      "url": "https://www.daedong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "광주보건대학교",
+      "url": "http://www.ghc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서영대학교",
+      "url": "http://www.seoyeong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전과학기술대학교",
+      "url": "https://www.dst.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대원대학교",
+      "url": "https://www.daewon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동서울대학교",
+      "url": "https://enter.du.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=81",
+      "kind": "government_directory"
+    },
+    {
+      "name": "포항대학교",
+      "url": "http://www.pohang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경복대학교",
+      "url": "https://www.kbu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "장안대학교",
+      "url": "http://www.jangan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주한라대학교",
+      "url": "https://www.chu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부천대학교",
+      "url": "http://www.bc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산경상대학교",
+      "url": "http://www.bsks.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전주비전대학교",
+      "url": "http://www.jvision.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동의과학대학교",
+      "url": "https://www.dit.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강동대학교",
+      "url": "https://www.gangdong.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대림대학교",
+      "url": "http://www.daelim.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=82",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인천재능대학교",
+      "url": "http://www.jeiu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구보건대학교",
+      "url": "http://www.dhc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산보건대학교",
+      "url": "https://www.bhu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대구과학대학교",
+      "url": "https://www.tsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "신안산대학교",
+      "url": "http://www.sau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동강대학교",
+      "url": "https://www.dkc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "울산과학대학교",
+      "url": "http://www.uc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한림성심대학교",
+      "url": "http://www.hsc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경북전문대학교",
+      "url": "https://www.kbc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "진주보건대학교",
+      "url": "http://www.jhc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=83",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경기과학기술대학교",
+      "url": "https://www.gtec.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "호산대학교",
+      "url": "https://www.hosan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주관광대학교",
+      "url": "http://www.ctc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산여자대학교",
+      "url": "http://www.bwc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동남보건대학교",
+      "url": "https://www.dongnam.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "목포과학대학교",
+      "url": "https://www.msu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "건양사이버대학교",
+      "url": "https://www.kycu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "원광보건대학교",
+      "url": "http://www.wu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "문경대학교",
+      "url": "http://www.mkc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "거제대학교",
+      "url": "https://www.koje.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=84",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전북과학대학교",
+      "url": "http://www.jbsc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국제대학교",
+      "url": "http://www.kookje.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국교통대학교",
+      "url": "http://www.ut.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "안산대학교",
+      "url": "http://www.ansan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "신구대학교",
+      "url": "http://www.shingu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경북과학대학교",
+      "url": "https://www.kbsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "백석문화대학교",
+      "url": "http://www.bscu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "춘해보건대학교",
+      "url": "http://www.ch.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충청대학교",
+      "url": "http://www.ok.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "송곡대학교",
+      "url": "https://www.songgok.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=85",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한양여자대학교",
+      "url": "http://www.hywoman.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동원과학기술대학교(구양산대학교)",
+      "url": "https://www.dist.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "송호대학교",
+      "url": "http://www.songho.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "가천대학교 입학처",
+      "url": "https://admission.gachon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "배화여자대학교",
+      "url": "https://www.baewha.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "농협대학교",
+      "url": "https://www.nonghyup.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "인덕대학교",
+      "url": "http://www.induk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세경대학교",
+      "url": "https://www.saekyung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "백석예술대학교",
+      "url": "http://www.bau.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "선린대학교",
+      "url": "http://www.sunlin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=86",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동아보건대학교",
+      "url": "https://www.duh.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경민대학교",
+      "url": "https://www.kyungmin.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "영남이공대학교",
+      "url": "http://www.ync.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "부산과학기술대학교",
+      "url": "http://www.bist.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "혜전대학교",
+      "url": "http://www.hj.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "구미대학교",
+      "url": "https://www.gumi.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "조선이공대학교",
+      "url": "http://www.cst.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "조선간호대학교",
+      "url": "http://www.cnc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "기독간호대학교",
+      "url": "http://www.ccn.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "제주국제대학교",
+      "url": "http://www.jeju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=87",
+      "kind": "government_directory"
+    },
+    {
+      "name": "오산대학교",
+      "url": "http://www.osan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "여주대학교",
+      "url": "http://www.yit.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수원과학대학교",
+      "url": "http://www.ssc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "백제예술대학교",
+      "url": "http://www.paekche.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "안동과학대학교",
+      "url": "http://www.asc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경인여자대학교",
+      "url": "http://www.kiwu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경남정보대학교",
+      "url": "https://www.kit.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수성대학교",
+      "url": "http://www.sc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동양미래대학교",
+      "url": "https://www.dongyang.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대전보건대학교",
+      "url": "https://www.hit.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=88",
+      "kind": "government_directory"
+    },
+    {
+      "name": "두원공과대학교",
+      "url": "https://www.doowon.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울예술대학교",
+      "url": "http://www.seoularts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "유한대학교",
+      "url": "https://www.yuhan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "연성대학교",
+      "url": "http://www.yeonsung.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "전남과학대학교",
+      "url": "http://www.cntu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "세한대학교",
+      "url": "http://www.sehan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "숭실사이버대학교",
+      "url": "http://www.kcu.ac",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울벤처대학원대학교",
+      "url": "http://www.svu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동아방송예술대학교",
+      "url": "https://www.dima.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "동원대학교",
+      "url": "https://www.tw.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=89",
+      "kind": "government_directory"
+    },
+    {
+      "name": "숭의여자대학교",
+      "url": "https://www.sewu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국관광대학교",
+      "url": "http://www.ktc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한경국립대학교",
+      "url": "https://www.hknu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대경대학교",
+      "url": "http://www.tk.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "나주대학교",
+      "url": "https://www.naju.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "충북보건과학대학교",
+      "url": "http://www.chsu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "김해대학교",
+      "url": "http://www.gimhae.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수원여자대학교",
+      "url": "https://www.swwu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울여자간호대학교",
+      "url": "http://www.snjc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "웅지세무대학교",
+      "url": "http://wat.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=90",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강릉영동대학교",
+      "url": "https://www.gyu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "한국영상대학교",
+      "url": "http://www.pro.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "계명문화대학교",
+      "url": "http://www.kmcu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대덕대학교",
+      "url": "http://www.ddc.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경북보건대학교",
+      "url": "http://www.kcs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "유원대학교",
+      "url": "https://www.u1.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "경안대학원대학교",
+      "url": "http://www.gyeongan.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "아신대학교",
+      "url": "http://www.acts.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "강서대학교",
+      "url": "https://gangseo.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "수도국제대학원대학교",
+      "url": "http://siu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=91",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국제언어대학원대학교",
+      "url": "http://www.igse.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "신경주대학교",
+      "url": "http://www.sgu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "국립경국대학교",
+      "url": "https://www.gknu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "과학기술연합대학원대학교",
+      "url": "http://www.ust.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "서울디지털대학교",
+      "url": "http://www.sdu.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "학교법인한국전력국제원자력대학원대학교",
+      "url": "https://www.kings.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "창신대학교",
+      "url": "https://www.cs.ac.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국 국회",
+      "url": "https://www.assembly.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "대한민국 법원",
+      "url": "https://www.scourt.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "헌법재판소",
+      "url": "http://www.ccourt.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=92",
+      "kind": "government_directory"
+    },
+    {
+      "name": "중앙선거관리위원회",
+      "url": "http://www.nec.go.kr",
+      "source": "https://www.gov.kr/portal/orgSite?pageIndex=93",
+      "kind": "government_directory"
+    }
+  ],
+  "errors": []
+}

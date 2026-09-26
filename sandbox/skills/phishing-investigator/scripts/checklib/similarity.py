@@ -118,6 +118,16 @@ def compare(parsed: dict, official: list[dict]) -> dict:
         dom = rec["domain"].lower()
         eid = rec["entity_id"]
         o_subs, o_label, o_suffix = split_host(dom)
+        if rec.get('scope') in ('host', 'url'):
+            # An exact directory hostname does not establish ownership of its
+            # shared parent (e.g. school-a.education.example).
+            if parsed.get('host_ascii') == dom:
+                cand = {'entity_id': eid, 'domain': dom, 'similarity': 1.0, 'edit_distance': 0, 'pattern': 'same'}
+                if best is None or cand['similarity'] > best['similarity']:
+                    best = cand
+            elif dom in sub_text:
+                contains.append({'entity_id': eid, 'domain': dom, 'match_kind': 'domain', 'label': dom})
+            continue
         full_sim = norm_similarity(actual, dom)
         label_sim = norm_similarity(a_label, o_label)
         sim = round(max(full_sim, label_sim), 4)

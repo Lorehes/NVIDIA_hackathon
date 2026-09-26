@@ -1,0 +1,239 @@
+{
+  "checked": "2026-09-25",
+  "records": [
+    {
+      "name": "네이버 증권",
+      "service_name": "증권",
+      "publisher": "네이버",
+      "url": "https://m.stock.naver.com/",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://finance.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://finance.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.stock.naver.com/",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:18.520797+00:00"
+    },
+    {
+      "name": "네이버 클로바더빙",
+      "service_name": "클로바더빙",
+      "publisher": "네이버",
+      "url": "https://m.clovadubbing.naver.com/",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://clovadubbing.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://clovadubbing.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.clovadubbing.naver.com/",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:18.998420+00:00"
+    },
+    {
+      "name": "네이버 밴드",
+      "service_name": "밴드",
+      "publisher": "네이버",
+      "url": "https://www.band.us/",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://band.us/",
+      "redirect_chain": [
+        {
+          "url": "https://band.us/",
+          "status": 301
+        },
+        {
+          "url": "https://www.band.us/",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:19.162181+00:00"
+    },
+    {
+      "name": "네이버 카페",
+      "service_name": "카페",
+      "publisher": "네이버",
+      "url": "https://m.cafe.naver.com",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://cafe.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://cafe.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.cafe.naver.com",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:19.355639+00:00"
+    },
+    {
+      "name": "네이버 지도",
+      "service_name": "지도",
+      "publisher": "네이버",
+      "url": "https://m.map.naver.com/",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://map.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://map.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.map.naver.com/",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:19.491719+00:00"
+    },
+    {
+      "name": "네이버 데이터랩",
+      "service_name": "데이터랩",
+      "publisher": "네이버",
+      "url": "https://m.datalab.naver.com/",
+      "source": "https://www.navercorp.com/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "62ec059ec061f09f01f3e56a797656f5392c4be88f55594735d22b27b6b6eddb",
+      "scope": "url",
+      "canonical_from": "https://datalab.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://datalab.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.datalab.naver.com/",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:19.786327+00:00"
+    },
+    {
+      "name": "네이버",
+      "service_name": "네이버",
+      "publisher": "네이버",
+      "url": "https://m.naver.com",
+      "source": "https://www.navercorp.com/service/portal",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "source_sha256": "8db6041e29bf7e4cae0d5127d9572991591e25100120ce8d7346ebf901f15ca0",
+      "scope": "url",
+      "canonical_from": "https://www.naver.com/",
+      "redirect_chain": [
+        {
+          "url": "https://www.naver.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.naver.com",
+          "status": 200
+        }
+      ],
+      "expires_at": "2026-09-26T14:10:19.969557+00:00"
+    },
+    {
+      "name": "카카오맵",
+      "service_name": "카카오맵",
+      "publisher": "카카오",
+      "url": "https://m.map.kakao.com/",
+      "source": "https://www.kakaocorp.com/page/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "scope": "url",
+      "source_sha256": "e3f63e6c5c33318af86ec73a4ace298447539e34a6b0ae52a9623dbe38fe023a",
+      "canonical_from": "https://map.kakao.com/",
+      "redirect_chain": [
+        {
+          "url": "https://map.kakao.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.map.kakao.com/",
+          "status": 403
+        }
+      ],
+      "page_access_confirmed": false,
+      "expires_at": "2026-09-26T14:50:52.518253+00:00"
+    },
+    {
+      "name": "카카오메일",
+      "service_name": "카카오메일",
+      "publisher": "카카오",
+      "url": "https://m.mail.kakao.com",
+      "source": "https://www.kakaocorp.com/page/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "scope": "url",
+      "source_sha256": "e3f63e6c5c33318af86ec73a4ace298447539e34a6b0ae52a9623dbe38fe023a",
+      "canonical_from": "https://mail.kakao.com/",
+      "redirect_chain": [
+        {
+          "url": "https://mail.kakao.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.mail.kakao.com",
+          "status": 200
+        }
+      ],
+      "page_access_confirmed": true,
+      "expires_at": "2026-09-26T14:50:52.732638+00:00"
+    },
+    {
+      "name": "카카오메일",
+      "service_name": "카카오메일",
+      "publisher": "카카오",
+      "url": "https://m.mail.kakao.com",
+      "source": "https://www.kakaocorp.com/page/service/all",
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_home_redirect",
+      "scope": "url",
+      "source_sha256": "e3f63e6c5c33318af86ec73a4ace298447539e34a6b0ae52a9623dbe38fe023a",
+      "canonical_from": "https://talk.mail.kakao.com/",
+      "redirect_chain": [
+        {
+          "url": "https://talk.mail.kakao.com/",
+          "status": 302
+        },
+        {
+          "url": "https://m.mail.kakao.com",
+          "status": 200
+        }
+      ],
+      "page_access_confirmed": true,
+      "expires_at": "2026-09-26T14:50:52.849544+00:00"
+    }
+  ],
+  "unconfirmed": []
+}

@@ -1,0 +1,386 @@
+{
+  "source": "live VM API; public test URLs only",
+  "before": {
+    "job_id": "j_0b5e88b4da154560832038cee0892e89",
+    "status": "done",
+    "elapsed_ms": 58093,
+    "error": null,
+    "verdict": "caution",
+    "identity": {
+      "host": "m.map.kakao.com",
+      "site_family": "kakao.com",
+      "status": "unverified",
+      "name": null,
+      "source": null,
+      "checked": null,
+      "canonical_from": null,
+      "expires_at": null,
+      "reason": "no_identity_evidence",
+      "related_addresses": [
+        "accounts.kakao.com",
+        "business.kakao.com",
+        "e.kakao.com",
+        "gift.kakao.com",
+        "mail.kakao.com",
+        "makers.kakao.com",
+        "map.kakao.com",
+        "my.kakao.com",
+        "shoppinghow.kakao.com",
+        "store.kakao.com",
+        "talk.mail.kakao.com",
+        "talkcloud.kakao.com",
+        "together.kakao.com"
+      ],
+      "observed_redirects": [],
+      "behavior": "risk_found"
+    },
+    "explanation": {
+      "headline": "카카오맵과 관련된 주소인지 확인하지 못했어요.",
+      "warning": null,
+      "detail": "이 주소는 출처로 확인된 카카오맵 주소와 일치하지 않아요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 kakao.com이에요."
+      ],
+      "suspicion_evidence": [
+        "이 주소는 카카오맵 진짜 주소 목록에 없어요."
+      ],
+      "unverified": [],
+      "recommended_action": "링크 대신, 카카오맵 앱이나 대표 전화번호로 직접 물어보세요.",
+      "action_bullets": [
+        "문자 속 전화번호로 전화하지 마세요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://map.kakao.com/",
+        "host": "map.kakao.com",
+        "registrable_domain": "kakao.com",
+        "status": 302,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T14:48:59.549+00:00"
+      },
+      {
+        "url": "https://m.map.kakao.com/",
+        "host": "m.map.kakao.com",
+        "registrable_domain": "kakao.com",
+        "status": 403,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T14:49:00.423+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "map.kakao.com"
+          ],
+          "sha256": "447bb3080efe2c99eae253ce7dd7a014775cc5bd5aca416e951a78556f56675a",
+          "protocol": "TLSv1.3"
+        },
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "m.map.kakao.com"
+          ],
+          "sha256": "8559bf29efbaccd08de2194b1de6bb0bc23d196dc457be0c4a4a283ccc1faef5",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null
+  },
+  "after": {
+    "catalog_sha256": "55e96aaa27d271a7b6fde9e292dfc8c7796093bc70213b00b9bdf87dfeb9d577",
+    "address_checks": [
+      {
+        "url": "https://map.kakao.com/",
+        "host": "map.kakao.com",
+        "site_family": "kakao.com",
+        "status": "verified",
+        "name": "카카오맵",
+        "source": "https://www.kakaocorp.com/page/service/all",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "reason": "publisher_service_link",
+        "related_addresses": [
+          "accounts.kakao.com",
+          "business.kakao.com",
+          "e.kakao.com",
+          "gift.kakao.com",
+          "m.mail.kakao.com",
+          "m.map.kakao.com",
+          "mail.kakao.com",
+          "makers.kakao.com",
+          "map.kakao.com",
+          "my.kakao.com",
+          "shoppinghow.kakao.com",
+          "store.kakao.com",
+          "talk.mail.kakao.com",
+          "talkcloud.kakao.com",
+          "together.kakao.com"
+        ]
+      },
+      {
+        "url": "https://mail.kakao.com/",
+        "host": "mail.kakao.com",
+        "site_family": "kakao.com",
+        "status": "verified",
+        "name": "카카오메일",
+        "source": "https://www.kakaocorp.com/page/service/all",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "reason": "publisher_service_link",
+        "related_addresses": [
+          "accounts.kakao.com",
+          "business.kakao.com",
+          "e.kakao.com",
+          "gift.kakao.com",
+          "m.mail.kakao.com",
+          "m.map.kakao.com",
+          "mail.kakao.com",
+          "makers.kakao.com",
+          "map.kakao.com",
+          "my.kakao.com",
+          "shoppinghow.kakao.com",
+          "store.kakao.com",
+          "talk.mail.kakao.com",
+          "talkcloud.kakao.com",
+          "together.kakao.com"
+        ]
+      },
+      {
+        "url": "https://talk.mail.kakao.com/",
+        "host": "talk.mail.kakao.com",
+        "site_family": "kakao.com",
+        "status": "verified",
+        "name": "카카오메일",
+        "source": "https://www.kakaocorp.com/page/service/all",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "reason": "publisher_service_link",
+        "related_addresses": [
+          "accounts.kakao.com",
+          "business.kakao.com",
+          "e.kakao.com",
+          "gift.kakao.com",
+          "m.mail.kakao.com",
+          "m.map.kakao.com",
+          "mail.kakao.com",
+          "makers.kakao.com",
+          "map.kakao.com",
+          "my.kakao.com",
+          "shoppinghow.kakao.com",
+          "store.kakao.com",
+          "talk.mail.kakao.com",
+          "talkcloud.kakao.com",
+          "together.kakao.com"
+        ]
+      },
+      {
+        "url": "https://brunch.co.kr/@unlisted-author/1",
+        "host": "brunch.co.kr",
+        "site_family": "brunch.co.kr",
+        "status": "unverified",
+        "name": "brunch.co.kr",
+        "source": "https://www.semrush.com/trending-websites/kr/information-technology",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "reason": "popularity_only",
+        "related_addresses": [
+          "brunch.co.kr"
+        ]
+      }
+    ],
+    "live": {
+      "job_id": "j_97afdbd3d04446f7a7fd856a66d5c792",
+      "status": "done",
+      "elapsed_ms": 54731,
+      "error": null,
+      "verdict": "unknown",
+      "identity": {
+        "host": "m.map.kakao.com",
+        "site_family": "kakao.com",
+        "status": "verified",
+        "name": "카카오맵",
+        "source": "https://www.kakaocorp.com/page/service/all",
+        "checked": "2026-09-25",
+        "canonical_from": "https://map.kakao.com/",
+        "expires_at": "2026-09-26T14:50:52.518253+00:00",
+        "reason": "publisher_home_redirect",
+        "related_addresses": [
+          "accounts.kakao.com",
+          "business.kakao.com",
+          "e.kakao.com",
+          "gift.kakao.com",
+          "m.mail.kakao.com",
+          "m.map.kakao.com",
+          "mail.kakao.com",
+          "makers.kakao.com",
+          "map.kakao.com",
+          "my.kakao.com",
+          "shoppinghow.kakao.com",
+          "store.kakao.com",
+          "talk.mail.kakao.com",
+          "talkcloud.kakao.com",
+          "together.kakao.com"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "explanation": {
+        "headline": "카카오맵 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 출처에 나온 주소와 일치해요. 접속하지 못했거나 내용을 충분히 가져오지 못한 부분이 있어요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 kakao.com이에요.",
+          "공식 출처에서 카카오맵 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지가 나중에 스스로 바뀌는 내용"
+        ],
+        "recommended_action": "1~2분 뒤에 다시 확인해 보세요.",
+        "action_bullets": [
+          "그 전까지 링크를 누르지 마세요.",
+          "급하다면 카카오맵 앱에서 직접 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://map.kakao.com/",
+          "host": "map.kakao.com",
+          "registrable_domain": "kakao.com",
+          "status": 302,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:52:50.099+00:00"
+        },
+        {
+          "url": "https://m.map.kakao.com/",
+          "host": "m.map.kakao.com",
+          "registrable_domain": "kakao.com",
+          "status": 403,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:52:50.744+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "map.kakao.com"
+            ],
+            "sha256": "447bb3080efe2c99eae253ce7dd7a014775cc5bd5aca416e951a78556f56675a",
+            "protocol": "TLSv1.3"
+          },
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "m.map.kakao.com"
+            ],
+            "sha256": "8559bf29efbaccd08de2194b1de6bb0bc23d196dc457be0c4a4a283ccc1faef5",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null
+    },
+    "api_health_http": 200
+  },
+  "targeted_tests": {
+    "local": 64,
+    "vm_before_explanation_change": 28
+  },
+  "final_validation": {
+    "vm_full_tests": 512,
+    "vm_test_seconds": 67.25,
+    "local_related_tests": 64,
+    "api_idle_before_restart": true,
+    "effective_policy_verified": true,
+    "residual_investigation_policies": [],
+    "note": "Saved live results precede final HTTP-error explanatory-text improvement; that wording is covered by final regression tests."
+  }
+}

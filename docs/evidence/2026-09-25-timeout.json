@@ -1,0 +1,10 @@
+{
+  "scenario": "real remote command deadline during investigation",
+  "incomplete": "agent_error",
+  "residual_policy": false,
+  "effective_remaining": [],
+  "remote_work_removed": true,
+  "local_work_removed": true,
+  "elapsed_s": 8.61,
+  "quarantined": false
+}

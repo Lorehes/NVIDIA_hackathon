@@ -1,0 +1,276 @@
+{
+  "checked": "2026-09-26T04:51:08.339871+00:00",
+  "implementation": "single monotonic budget: 90s total, last15s reserved for cleanup; queue wait excluded",
+  "limitations": [
+    "not hard real-time SLA; OS/process/persistence overhead remains",
+    "bounded read may finish later; late response discarded; at most4 read workers",
+    "live injection substitutes a remote sleep command, not all model/provider failure modes"
+  ],
+  "deployment": {
+    "backup": "/tmp/budget-deploy-20260926T044420Z",
+    "files": {
+      "apps/api/app/sandbox.py": {
+        "before": "4824767855aac405b087777e658332b57d7cd372fc872df3efab53f03f6ba787",
+        "after": "a804c7182ff4cf22810be5f60d0143b2a65940035dae515c62d435a5ea613adc"
+      },
+      "apps/api/app/worker.py": {
+        "before": "260b4dd2911957cc571f81698bce9adc56f55bad5a856e86426b3ee6bd265cd4",
+        "after": "cae50c22915d77c47bfe3664734f812bd3308e764b862a2e129214a3d7394992"
+      },
+      "apps/api/app/kb.py": {
+        "before": "5e73d159c21b3c471be8460d4e2d76c2a122cc4fa3d10777ed6bc2ba1f5e5335",
+        "after": "7329011f68f9774423ca80f7110c1a14856749c737b10755145825a29265e6aa"
+      },
+      "apps/api/app/config.py": {
+        "before": "332ffbb5de60531cb23d688511e9af2476ca24951bdba02546b278689b329281",
+        "after": "feace24339fdc7eeb7c9002fa210a79e575ef45f7c684070981e5193c1baef20"
+      },
+      "apps/api/app/budget.py": {
+        "before": null,
+        "after": "35639a2f3b9b9599ec5ae9f36f0ca6c882825dc9fe9c94943c04175d9d5e0bce"
+      },
+      "apps/api/tests/test_investigation_budget.py": {
+        "before": null,
+        "after": "e5e7bd3e94f9395f838d17e19d606f9f95376c850a0516979cc79145fcc021d6"
+      }
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "exit_code_refinement": {
+    "backup": "/tmp/budget-deploy-20260926T044759Z",
+    "files": {
+      "apps/api/app/sandbox.py": {
+        "before": "a804c7182ff4cf22810be5f60d0143b2a65940035dae515c62d435a5ea613adc",
+        "after": "d6188e45a772cda89762023116425df274fd4e2997e52d4de3b4637283917807"
+      },
+      "apps/api/tests/test_investigation_budget.py": {
+        "before": "e5e7bd3e94f9395f838d17e19d606f9f95376c850a0516979cc79145fcc021d6",
+        "after": "1af34362c8ab3bd9471d4f6fedd9333b510ff87746c26d09900e4623d1373882"
+      }
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "validation": {
+    "local_full": "800 passed in43.24s",
+    "vm_full": "800 passed in70.19s",
+    "after_exit_code_refinement_local": "61 passed in0.50s",
+    "after_exit_code_refinement_vm": "61 passed in0.77s"
+  },
+  "timeout_live": {
+    "job_id": "j_96d295e122054afeadf9d152017d097f",
+    "budget_s": 30,
+    "work_budget_s": 15,
+    "cleanup_reserve_s": 15,
+    "elapsed_s": 16.382,
+    "incomplete": "agent_timeout",
+    "residual_policy": false,
+    "quarantined": false,
+    "pending_purge": 0,
+    "local_work_remaining": false,
+    "calls": [
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "get"
+        ],
+        "timeout_s": 30,
+        "duration_s": 0.011,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "sandbox",
+          "exec"
+        ],
+        "timeout_s": 30,
+        "duration_s": 0.029,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "sandbox",
+          "upload"
+        ],
+        "timeout_s": 14.999373619997641,
+        "duration_s": 0.072,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "get"
+        ],
+        "timeout_s": 14.780189245997462,
+        "duration_s": 0.012,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "set"
+        ],
+        "timeout_s": 14.760322736008675,
+        "duration_s": 6.043,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "get"
+        ],
+        "timeout_s": 8.717351321000024,
+        "duration_s": 0.012,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "sandbox",
+          "exec"
+        ],
+        "timeout_s": 8.70541538100224,
+        "duration_s": 8.011,
+        "returncode": 124,
+        "injected_sleep": true
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "get"
+        ],
+        "timeout_s": 15.694720339000924,
+        "duration_s": 0.011,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "update"
+        ],
+        "timeout_s": 15.683374179003295,
+        "duration_s": 2.024,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "policy",
+          "get"
+        ],
+        "timeout_s": 13.65912539800047,
+        "duration_s": 0.011,
+        "returncode": 0,
+        "injected_sleep": false
+      },
+      {
+        "operation": [
+          "openshell",
+          "sandbox",
+          "exec"
+        ],
+        "timeout_s": 13.646358419005992,
+        "duration_s": 0.028,
+        "returncode": 0,
+        "injected_sleep": false
+      }
+    ],
+    "injected_sleep": true,
+    "effective_residual": [],
+    "restored_health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "normal_live": {
+    "job_id": "j_619b50b2407c43ef9d63a6e5af147ab7",
+    "status": "done",
+    "elapsed_ms": 16957,
+    "timings": {
+      "parse": 0,
+      "policy_open": 6220,
+      "agent_investigate": 932,
+      "sandbox_total": 16539,
+      "verdict": 3,
+      "explain": 1,
+      "total": 16952
+    },
+    "identity": {
+      "host": "papago.naver.com",
+      "site_family": "naver.com",
+      "status": "verified",
+      "name": "네이버 파파고",
+      "source": "https://www.navercorp.com/service/all",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "publisher_service_link",
+      "matched_entities": [
+        {
+          "id": "site_290e2068b24288493a63",
+          "name": "네이버 파파고",
+          "source": "https://www.navercorp.com/service/all",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "academic.naver.com",
+        "blog.naver.com",
+        "books.nid.naver.com",
+        "buyer.collection.naver.com",
+        "cafe.naver.com",
+        "calendar.naver.com",
+        "certificate.nid.naver.com",
+        "chzzk.naver.com",
+        "clovadubbing.naver.com",
+        "clovanote.naver.com",
+        "comic.naver.com",
+        "contact.naver.com",
+        "contents.premium.naver.com",
+        "datalab.naver.com",
+        "dict.naver.com",
+        "didcard.naver.com",
+        "ekyc.naver.com",
+        "finance.naver.com",
+        "fleamarket.naver.com",
+        "flight.naver.com"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "flowline": {
+    "kb_version": 44,
+    "security_version": 35
+  }
+}

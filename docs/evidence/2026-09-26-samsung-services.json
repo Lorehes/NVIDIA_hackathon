@@ -1,0 +1,425 @@
+{
+  "checked": "2026-09-26",
+  "before_sha256": {
+    "kb/sources/service_publishers.json": "7f0ed529f10043b816ac330da70172c4a8146fb29c90dfe02f76115bcca3230c",
+    "kb/sources/official_services.json": "1ad3d9c2c813c5b63f271f1a349a98ad410ab3de88e003b039756e7c89f8b76e",
+    "kb/site_catalog.json": "3cb3379444c6372d7b6345d191a6f0ff466a31827620f7fdc4a79ff853e80abb",
+    "kb/sources/coverage.json": "82bcfc5e89c21b41bf38287f8c89fe47b42933507c2683ff370d815d371a5bf7",
+    "scripts/catalog/collect_services.py": "278e7e06d0dd4e3dd99ebf2f7b18ea69a6af65430199dec1b91aeb844c702bc2",
+    "scripts/catalog/build_catalog.py": "6762fd8927db526a13b7a717e93c4a00c2c6f4937053f20cfb6e5921bf8538b3"
+  },
+  "after_sha256": {
+    "kb/sources/service_publishers.json": "4df2ef3c09883a65e23e002b770b6bcd594b62c1e192b70bb3c4c1c52233ad03",
+    "kb/sources/official_services.json": "c3f445e763ff15b8986c7c6df7ccf92b4b0f2470cf4769169eebf8ecccc85aad",
+    "kb/site_catalog.json": "d9241b551fb8ff82243a5b7d4814e134574ab0407b6cd5f64bb04c10a5f1a056",
+    "kb/sources/coverage.json": "44814c575e54c33603d32093d9da34563e168c5573047a2916539107102cc24c",
+    "scripts/catalog/collect_services.py": "278e7e06d0dd4e3dd99ebf2f7b18ea69a6af65430199dec1b91aeb844c702bc2",
+    "scripts/catalog/build_catalog.py": "6762fd8927db526a13b7a717e93c4a00c2c6f4937053f20cfb6e5921bf8538b3"
+  },
+  "added": [
+    {
+      "name": "삼성전자 Smart Switch",
+      "service_name": "Smart Switch",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/smart-switch/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Quick Share",
+      "service_name": "Quick Share",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/quick-share/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 SmartThings",
+      "service_name": "SmartThings",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/smartthings/app/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Health",
+      "service_name": "Samsung Health",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-health/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Health Monitor",
+      "service_name": "Samsung Health Monitor",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-health-monitor/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung wallet",
+      "service_name": "Samsung wallet",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-wallet/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Pass",
+      "service_name": "Samsung Pass",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-pass/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Bixby",
+      "service_name": "Bixby",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/bixby/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Find",
+      "service_name": "Samsung Find",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-find/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Galaxy Store",
+      "service_name": "Galaxy Store",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/galaxy-store/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung DeX",
+      "service_name": "Samsung DeX",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-dex/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Notes",
+      "service_name": "Samsung Notes",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-notes/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Members",
+      "service_name": "Samsung Members",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-members/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Gaming Hub",
+      "service_name": "Gaming Hub",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/gaming-hub/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 메시지",
+      "service_name": "메시지",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/messages/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung News",
+      "service_name": "Samsung News",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-news/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung TV Plus",
+      "service_name": "Samsung TV Plus",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/tvs/smart-tv/samsung-tv-plus/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Browser",
+      "service_name": "Samsung Browser",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-browser/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 삼성 클라우드",
+      "service_name": "삼성 클라우드",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-cloud/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 PENUP",
+      "service_name": "PENUP",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/pen-up/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Flow",
+      "service_name": "Samsung Flow",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-flow/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Global Goals",
+      "service_name": "Samsung Global Goals",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-global-goals/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Kids",
+      "service_name": "Samsung Kids",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-kids/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Blockchain",
+      "service_name": "Samsung Blockchain",
+      "publisher": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-blockchain/",
+      "source": "https://www.samsung.com/sec/apps/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "bd07b974eb49f88d679857665a5574e37cf23aa205353cd2197594b0ea847475",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 Samsung Find",
+      "service_name": "Samsung Find",
+      "publisher": "삼성전자",
+      "url": "https://samsungfind.samsung.com/login",
+      "source": "https://www.samsung.com/sec/apps/samsung-find/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "0072c5d0d9e5ade9adfdffe40f7f653a8bf6a0ec1760a19dca31be893653c41e",
+      "checked": "2026-09-26"
+    },
+    {
+      "name": "삼성전자 삼성 클라우드",
+      "service_name": "삼성 클라우드",
+      "publisher": "삼성전자",
+      "url": "https://www.samsungcloud.com",
+      "source": "https://www.samsung.com/sec/apps/samsung-cloud/",
+      "kind": "official_service_directory",
+      "scope": "url",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "0250997254202651de45f0d188e3f287c80251ab912b482ba65c9567ad635fd1",
+      "checked": "2026-09-26"
+    }
+  ],
+  "probes": [
+    {
+      "url": "https://samsungfind.samsung.com/login",
+      "final_url": "https://samsungfind.samsung.com/login",
+      "status": 200,
+      "redirects": [],
+      "title": "Samsung Find",
+      "body_sha256": "7dc46fa9badd9f7078c42c2ede4294d5937c93a1edbc3e974e84ecd797b91f93"
+    },
+    {
+      "url": "https://www.samsungcloud.com",
+      "final_url": "https://www.samsungcloud.com",
+      "status": 200,
+      "redirects": [],
+      "title": "Samsung Cloud",
+      "body_sha256": "1b37ebcac655764909a960a30b8d9a3102609d472a0a76cedc1a6d3d9ff32b1d"
+    }
+  ],
+  "validation": {
+    "old_records_unchanged": 22165,
+    "old_service_rows_unchanged": 230,
+    "exact_verified": 26,
+    "unverified_boundaries": [
+      "https://samsungfind.samsung.com/",
+      "https://samsungfind.samsung.com/login?unlisted=1",
+      "https://samsungfind.samsung.com/user/example",
+      "https://www.samsungcloud.com/user/example",
+      "https://unlisted.samsungcloud.com/",
+      "https://www.samsung.com/sec/apps/unlisted/",
+      "https://samsungfind.samsung.com.evil.example/login"
+    ],
+    "local_tests": "43 passed in0.48s",
+    "vm_tests": "43 passed in0.94s"
+  },
+  "catalog_records": 22191,
+  "catalog_hosts": 16292,
+  "excluded": 2388,
+  "vm_deployment": {
+    "backup": "/tmp/samsung-deploy-20260926T051502Z",
+    "after_sha256": {
+      "kb/sources/service_publishers.json": "4df2ef3c09883a65e23e002b770b6bcd594b62c1e192b70bb3c4c1c52233ad03",
+      "kb/sources/official_services.json": "c3f445e763ff15b8986c7c6df7ccf92b4b0f2470cf4769169eebf8ecccc85aad",
+      "kb/site_catalog.json": "d9241b551fb8ff82243a5b7d4814e134574ab0407b6cd5f64bb04c10a5f1a056",
+      "kb/sources/coverage.json": "44814c575e54c33603d32093d9da34563e168c5573047a2916539107102cc24c",
+      "scripts/catalog/collect_services.py": "278e7e06d0dd4e3dd99ebf2f7b18ea69a6af65430199dec1b91aeb844c702bc2",
+      "scripts/catalog/build_catalog.py": "6762fd8927db526a13b7a717e93c4a00c2c6f4937053f20cfb6e5921bf8538b3"
+    }
+  },
+  "vm_live": {
+    "job_id": "j_ff3895b9fe724657a4a10a7cb82a1858",
+    "status": "done",
+    "elapsed_ms": 13581,
+    "timings": {
+      "parse": 126,
+      "policy_open": 3156,
+      "agent_investigate": 729,
+      "sandbox_total": 13267,
+      "verdict": 3,
+      "explain": 1,
+      "total": 13577
+    },
+    "identity": {
+      "host": "samsungfind.samsung.com",
+      "site_family": "samsung.com",
+      "status": "verified",
+      "name": "삼성전자 Samsung Find",
+      "source": "https://www.samsung.com/sec/apps/samsung-find/",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "publisher_service_link",
+      "matched_entities": [
+        {
+          "id": "site_36b7e307deeff9aedbb1",
+          "name": "삼성전자 Samsung Find",
+          "source": "https://www.samsung.com/sec/apps/samsung-find/",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "samsungfind.samsung.com"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  }
+}

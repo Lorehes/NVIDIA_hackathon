@@ -1,0 +1,2232 @@
+{
+  "checked": "2026-09-25",
+  "published_count": 318,
+  "records": [
+    {
+      "name": "구리시보건소",
+      "url": "https://www.guri.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-28",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "열미리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "유정리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "선동리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상림리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산성리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "분원리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "무갑리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "만선리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "관음리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "검천리 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "태전동 보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "도척보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "퇴촌남종통합보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "광주시 보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-07-29",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "관산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "원달보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "외산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "이평보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "도암보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "외곡보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "내동보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "하천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "효곡보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "토금보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "죽마보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "계산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산동보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용방보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "광의보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "마산보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "토지보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "간전보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "문척보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "구례군보건의료원",
+      "url": "https://www.gurye.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-08-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신정보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "종산보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장금보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "반곡보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백암보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산성보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용호보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "통석보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "유정보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "매계보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고천보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "회룡보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "두전보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "창동보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상학보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "풍월보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백운보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "애당보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고화보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "천원보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장학보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "복흥보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "태곡보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "양괴보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백산보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화호보건진료소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산외보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산내보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "칠보보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "옹동보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "감곡보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "태인보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "정우보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "이평보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "덕천보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "영원보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고부보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "소성보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "입암보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "북면보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신태인보건지소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "정읍시보건소",
+      "url": "https://www.jeongeup.go.kr/buseo/index.jeongeup?menuCd=DOM_000001026000000000",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장산보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "소성보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용성보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "봉학보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "벽진면보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용흥보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금수강산면무학보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금수강산보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "남은보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "마월보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "명포보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "문방보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "도흥보건진료소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "월항면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "초전면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대가면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "가천면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "수륜면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용암면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "선남면보건지소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "성주군보건소",
+      "url": "https://www.sj.go.kr/S0006/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "순천시보건소",
+      "url": "https://www.schc.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-07-31",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "풍도보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "안산시남동보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "원곡보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대부보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "수암보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "단원보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상록수보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-16",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고봉보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "징리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대암보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "무등보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "봉촌보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "반송보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "한정보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "음리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "옥포읍보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화원읍보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "다사읍보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "논공읍보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "가창면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "구지면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "하빈면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "달성군보건소",
+      "url": "https://dalseong.daegu.kr/",
+      "kind": "public_health",
+      "source_updated": "2026-06-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "평택보건소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "파주시운정보건소",
+      "url": "http://clinic.paju.go.kr/clinic/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "파주보건소",
+      "url": "http://clinic.paju.go.kr/clinic/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "문곡보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금각보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "은산보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "동천보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고덕보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "서탄보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "진위보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "송탄보건소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "팽성원정보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "두정보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장수보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "덕목보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신영보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "포승원정보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "어연보건진료소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "현덕보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "포승보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "오성보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "청북보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "안중보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "팽성보건지소",
+      "url": "https://www.pyeongtaek.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2026-02-20",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "청기보건지소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/place_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "입암보건지소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/place_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "영양군보건소",
+      "url": "https://www.yyg.go.kr/www/health/",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "송학보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "양곡보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "쌍류보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "와촌보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "송곡보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "황용보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "응암보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장군면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "부강면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "소정면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "전동면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "전의면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금남면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "연기면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "연서면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "연동면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "남부통합보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "세종특별자치시 보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2026-01-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화악리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "운악리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "태봉리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "임초리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "율길리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "위곡리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "설곡리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상천리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "삼회리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "산유리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백둔리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "방일리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "미사리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "도대리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "개곡리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "조종면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "청평면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "설악면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "북면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "가평군보건소",
+      "url": "https://www.gp.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-24",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "수하보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화매보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "송하보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용화보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "당리보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상청보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대천보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "무창보건진료소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/clinic_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "석보보건지소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/place_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "수비보건지소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/place_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "일월보건지소",
+      "url": "https://www.yyg.go.kr/www/health/health_intro/spot_info/place_info",
+      "kind": "public_health",
+      "source_updated": "2025-12-22",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "반송보건지소",
+      "url": "https://www.haeundae.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "해운대구보건소",
+      "url": "https://www.haeundae.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-15",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "운천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "명주보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "삼포보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "파계보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "사리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "평천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "보현보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "안천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상송보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "암기보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "부산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "우천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "호남보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대창보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "북안보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "고경보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "임고보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "자양보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화남보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화북보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "화산보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신녕보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "청통보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금호보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "영천시보건소",
+      "url": "https://www.yc.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2025-11-06",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "연제구보건소",
+      "url": "https://www.yeonje.go.kr/health/main.do",
+      "kind": "public_health",
+      "source_updated": "2025-11-05",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "학선보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "평장보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "좌포보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "좌산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "월포보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "수항보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "세동보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "반송보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "무릉보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "덕천보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대불보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "능금보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "주천보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "정천보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용담보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "안천보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "성수보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상전보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "부귀보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백운보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "마령보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "동향보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "진안군보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-11-18",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "영통구보건소",
+      "url": "health.suwon.go.kr",
+      "kind": "public_health",
+      "source_updated": "2025-11-26",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "팔달구보건소",
+      "url": "health.suwon.go.kr",
+      "kind": "public_health",
+      "source_updated": "2025-11-26",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "권선구보건소",
+      "url": "health.suwon.go.kr",
+      "kind": "public_health",
+      "source_updated": "2025-11-26",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장안구보건소",
+      "url": "health.suwon.go.kr",
+      "kind": "public_health",
+      "source_updated": "2025-11-26",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "병목보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장단보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대기보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "동리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "평지보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "백산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "낙진보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "소례보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대동보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "이책보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "하남보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "와리보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "숭산보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "양지보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "장인보건진료소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "초계면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "청덕면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "적중면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "율곡면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "용주면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "쌍책면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "쌍백면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "삼가면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "북부보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "봉산면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "묘산면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "덕곡면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대양면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대병면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "가회면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "가야면보건지소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "합천군보건소",
+      "url": "",
+      "kind": "public_health",
+      "source_updated": "2025-12-01",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "우포보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "열대자보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "비안도보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신시도보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "연도보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "원나포보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "창오보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "성덕보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대광보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대차보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금암보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "상장곤보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "술산보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "신당보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "월하산보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "금성보건진료소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "선유도보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "어청도보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "개야도보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "나포보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "옥산보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "옥구보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "성산보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "옥서보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "개정보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "대야보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "서수보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "임피보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "회현보건지소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "군산시 보건소",
+      "url": "https://www.gunsan.go.kr/health",
+      "kind": "public_health",
+      "source_updated": "2025-12-03",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "하남시미사보건센터",
+      "url": "https://www.hanam.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-10",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    },
+    {
+      "name": "하남시보건소",
+      "url": "https://www.hanam.go.kr/health/index.do",
+      "kind": "public_health",
+      "source_updated": "2025-12-10",
+      "source": "https://www.data.go.kr/data/15107750/standard.do"
+    }
+  ]
+}

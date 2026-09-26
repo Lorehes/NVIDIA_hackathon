@@ -1,0 +1,835 @@
+{
+  "reviewed_at": "2026-09-26T03:28:36.962300+00:00",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "previous_corrections_sha256": "18b6dce08f3797c883120bc788dfae870de589999b1790f442767670e221e8fb",
+  "previous_catalog_sha256": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+  "raw_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "sources": [
+    {
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "status": 200,
+      "sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+      "confirmed_names": [
+        "금호보건지소",
+        "청통보건지소",
+        "신녕보건지소",
+        "화산보건지소",
+        "화북보건지소",
+        "화남보건지소",
+        "자양보건지소",
+        "임고보건지소",
+        "고경보건지소",
+        "북안보건지소",
+        "대창보건지소",
+        "호남보건진료소",
+        "우천보건진료소",
+        "부산보건진료소",
+        "암기보건진료소",
+        "상송보건진료소",
+        "안천보건진료소",
+        "보현보건진료소",
+        "평천보건진료소",
+        "사리보건진료소",
+        "파계보건진료소",
+        "삼포보건진료소",
+        "명주보건진료소",
+        "운천보건진료소"
+      ]
+    }
+  ],
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "51cf23e910ef4dbb9b5845422aedbea6e8eb1b54769d3f78a95024269a81acfd",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "금호보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "금호보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a5c3b069f9ad1142249d57589d76e592884e09bcba146c3b9c35d91db87f3638",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "청통보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "청통보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "44795018244abf6761d17d72f2004f25ab06dca1e7d1f17aa1f20a2ce6ac9285",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "신녕보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "신녕보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "90726d529a8f282af530f6e12627c62141d2b616e4bc578b26bbebbc3ad7ed3d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "화산보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "화산보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "60d2bfefd6f5fa5877b35aa0ddbf14574b8155eb0ae9829e43b70b38352d7012",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "화북보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "화북보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "afdc40b504d0c33ed84781a276df08f165ba7d415fed9eb27eab8aef4abbf5b7",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "화남보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "화남보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1ddf32f930ade8b6c2640c47c7b3cc605373bdb44483a974a481a4155f2b7ba7",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "자양보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "자양보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "3d65bfc2777b3b0fb90c6f99c3c1dde17744515ffd2ae3fa4862121584457617",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "임고보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "임고보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "6e691d1845fd588521ac698978e167f81604f669b47e3bf34822a3a21f9b21f9",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "고경보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "고경보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2ce1fa8c2bb55a5944eb037fe7e5525d8bd55507996d468651822ed6d921e52c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "북안보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "북안보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "af283b94485fbd4e7427f6ad61e53bfe8da45e29da4f7f3627af3be256111d95",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대창보건지소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "대창보건지소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1f0dccac356fc8c8168881095807a611d06f52de770d5670d4b2e43e977618b6",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "호남보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "호남보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "9590a83b9d5cfdaf8d0104f9165315c973731c5012a45b691e8647abdb16f978",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "우천보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "우천보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "b5343516173705d6618627bd0eefe38ae9814b7e4408e7a4395f0008e73eba62",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "부산보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "부산보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "0a8e21d051a7000ee5a0ad260888707f5ad1c9f3d0be1df67b462424c4be1d89",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "암기보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "암기보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "441f12784f095a64676bfbb4667a9cddfc34462438fcc319bd440ce6f7d3f1a3",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "상송보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "상송보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "9c7a3cbfbda2fd570df8c894f2be5af7ee21ab78b558a2c193ca9cb60919eeb1",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "안천보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "안천보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "0bb34c26d81da19c482665efdbd7339377c96dfe96edfb1b664c25ee70da8cee",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "보현보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "보현보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "bb79bb9d5d1e6d8c9039c7a40b48ba8b6d778ee1d3bf2a9f61d27f58271f7f31",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "평천보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "평천보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "ff05bf38db54e4521037e4dc0889519415aa125c570650c69f18c9a73107d4b5",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "사리보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "사리보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "6b90cf743478cca23c707df572186917086026b0c9a42b6f3192eb07d951aa3c",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "파계보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "파계보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "29d42e5b3298e59f84a0acfbafcce5f39d1b4cb61372204cf1e7fd4153f339dc",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "삼포보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "삼포보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "49c8521db4aaea5fcaea55b3a91e7c8e57c811e88d258bb95a8a3ef4b66f54be",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "명주보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "명주보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4863a5a0525d13efd0a7f1318be08e275a8be6982c90e04fe7a9d836bc7a1511",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "운천보건진료소",
+      "original_url": "",
+      "url": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "scope": "url",
+      "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+          "body_sha256": "5babc67c912cfa0cb473d381764d5efc632f5f535ee1570c6033bc440874943f",
+          "label": "보건지소 및 진료소 안내",
+          "target": "https://www.yc.go.kr/health/contents.do?mId=0107000000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.yc.go.kr/health/contents.do?mId=0107000000",
+          "http_status": 200,
+          "body_sha256": "d27525dcdc2e0129a904302b5293f327a824f7cd0511b8ab4baaac0c4cf94c9d",
+          "confirmed_institution": "운천보건진료소",
+          "confirmed_jurisdiction": "경상북도 영천시",
+          "content_scope": "공식 기관명과 영천시 소재지 명부; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    }
+  ],
+  "source_discrepancy": {
+    "organization_label": "지양 보건 지소",
+    "directory_name": "자양보건지소",
+    "resolution": "Use exact institution name and 영천시 자양면 location on linked official detail directory, not inferred typo correction; raw name unchanged."
+  },
+  "fetch_difference": "Web tool returned 404 for organization; direct HTTPS request returned HTTP200 with organization title/content. Recorded separately.",
+  "validation": {
+    "indexed_records": 22144,
+    "indexed_hosts": 16282,
+    "excluded": 2391,
+    "excluded_reasons": {
+      "missing_homepage": 2364,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "invalid_or_ambiguous_url": 2,
+      "userinfo_or_email": 4,
+      "invalid_hostname": 2,
+      "unsupported_or_malformed_scheme": 1
+    },
+    "public_health_missing": [
+      "반송보건진료소",
+      "세종특별자치시 보건소",
+      "북면보건지소",
+      "수항보건진료소",
+      "반송보건진료소",
+      "백산보건진료소"
+    ],
+    "unchanged_existing_records": 22120,
+    "exact_names": 24,
+    "display_limit": 20,
+    "display_total": 24,
+    "url_boundary_checks": 5,
+    "inactive_corrections": 0,
+    "catalog_sha256": "68d06463f3f3cde0bc5b608b0986c973251ed0ff65865b3f6102a7e308885f0c",
+    "corrections_sha256": "738a31884a02be9076693df8783845954b4df2436a9e47a94289f5f5d8d6e27a",
+    "local_tests": "31 passed in 1.04s"
+  },
+  "vm": {
+    "deployment": "not attempted: unchanged SSH authentication blocker",
+    "indexed_records_last_verified": 22120,
+    "indexed_hosts_last_verified": 16282,
+    "excluded_last_verified": 2415,
+    "corrections_last_verified": 165,
+    "catalog_sha256_last_verified": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+    "tests": null,
+    "live_validation": null
+  },
+  "flowline_kb_version": 37
+}

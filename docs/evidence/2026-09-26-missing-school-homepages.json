@@ -1,0 +1,259 @@
+{
+  "reviewed_records": [
+    {
+      "source_dataset": "schools",
+      "source_id": "7041274",
+      "name": "지구촌학교 중학교",
+      "original_url": "http://",
+      "url": "https://globalsarang.sen.sc.kr",
+      "scope": "url",
+      "source": "https://globalsarang.sen.sc.kr",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_ids": [
+            "7041214",
+            "7041275"
+          ],
+          "names": [
+            "지구촌학교",
+            "지구촌학교 고등학교"
+          ],
+          "url": "https://globalsarang.sen.sc.kr",
+          "region_or_education_office": "서울특별시"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://globalsarang.sen.sc.kr",
+          "http_status": 200,
+          "body_sha256": "f0c7669e5c8bb023b7a4ceeb01c2c73ea81a13fd8dd4ed1122b22a23ce54c954",
+          "confirmed_region": "서울 구로구 오리로 1189",
+          "confirmed_school": "지구촌학교"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://globalsarang.sen.sc.kr/67383/subMenu.do",
+          "http_status": 200,
+          "body_sha256": "e4b620c9717c68f89699fe6e27dbc96b86336d5f7f6e4ba37993e9c2c2255544",
+          "confirmed_fact": "2023-03-02 중·고 사립 대안학교 인가 및 2024-03-04 학급 증설 변경인가를 안내"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://globalsarang.sen.sc.kr/67382/subMenu.do",
+          "http_status": 200,
+          "body_sha256": "feaa260719d02026bcb554d40bb3d428d1213b97927db12657495d101ef0798e",
+          "confirmed_fact": "초등·중등·고등 전 교육과정을 아우르는 사립 대안학교로 안내"
+        }
+      ]
+    },
+    {
+      "source_dataset": "schools",
+      "source_id": "7011149",
+      "name": "학력인정 한림연예예술고등학교",
+      "original_url": "http://",
+      "url": "https://www.hlyes.hs.kr/html/main.html",
+      "scope": "url",
+      "source": "https://www.hlyes.hs.kr/html/main.html",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_institution_page",
+          "source": "https://school.cbe.go.kr/dsg-m/M011201/view/3974634?s_idx=99",
+          "http_status": 200,
+          "body_sha256": "a6788c83bc501e9f4148301666026ac5e2d9396a65cfec455541c47d40882807",
+          "confirmed_fact": "2020년 공문에서 학교명·송파구 충민로172·www.hlyes.hs.kr 연결 확인",
+          "limitation": "과거 모집 중단 공문이므로 현재 운영 또는 입학 상태 근거로 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.hlyes.hs.kr/html/main.html",
+          "http_status": 200,
+          "body_sha256": "25af80e67aa0c4e31fad75c1fd001e12bdc591e0e80bf78af7c8f7812e90dabb",
+          "confirmed_school": "한림연예예술고등학교",
+          "confirmed_region": "서울특별시 송파구 충민로 172",
+          "confirmed_fact": "현재 홈페이지의 학교명·주소·2026-09-16 공지와 2026년 채용·행사 안내 대조",
+          "requested_url": "https://www.hlyes.hs.kr",
+          "final_url": "https://www.hlyes.hs.kr/html/main.html"
+        }
+      ]
+    }
+  ],
+  "catalog_sha256": "72d1f71d8bfee2c7831ee240af26dc4ea2fac1d8c6db40746ce982090ab2da12",
+  "counts": {
+    "records": 21936,
+    "hosts": 16251,
+    "excluded": 2564,
+    "excluded_by_reason": {
+      "invalid_hostname": 2,
+      "invalid_or_ambiguous_url": 2,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "missing_homepage": 2537,
+      "unsupported_or_malformed_scheme": 1,
+      "userinfo_or_email": 4
+    },
+    "corrections": 16
+  },
+  "raw_source_sha256": {
+    "schools": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782",
+    "kindergartens": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5"
+  },
+  "checks": {
+    "local": {
+      "passed": 47,
+      "seconds": 0.68
+    },
+    "vm": {
+      "passed": 47,
+      "seconds": 1.35
+    }
+  },
+  "deferred": [
+    {
+      "source_id": "dcc2ade6fc90ea65b36f",
+      "name": "광주동산초등학교병설유치원",
+      "official_school_source_id": "7392119",
+      "attempt": "https://k-dongsan.gen.es.kr",
+      "failure": "ConnectTimeout",
+      "conclusion": "No new address evidence; not proof of closure"
+    },
+    {
+      "source_id": "2cf59f2e9ca2f3302e0b",
+      "name": "보영유치원",
+      "source": "https://e-childschoolinfo.moe.go.kr/presch/preschSumry.do?pPresch=P100002460",
+      "http_status": 200,
+      "body_sha256": "9617e976a8f2bb753f0faea5c085855b2654a0e706ebfc5fac2b19133fef7b5a",
+      "homepage_field": "http:// www. i5004.com",
+      "hidden_template_labels": [
+        {
+          "id": "unOperated",
+          "text": "미운영",
+          "style": "display: none;"
+        },
+        {
+          "id": "transfer",
+          "text": "이전",
+          "style": "display: none;"
+        }
+      ],
+      "conclusion": "Search-extracted hidden labels are not operational status; homepage still malformed; no guessed correction"
+    },
+    {
+      "source_id": "2afed9bf91bb99cc749f",
+      "name": "포항이동유치원",
+      "source": "https://kbkids.co.kr/72/?bmode=view&idx=4741170",
+      "conclusion": "Association result lists institution/location but no independently confirmed homepage; deferred"
+    },
+    {
+      "source_id": "307392e7cffed8350a31",
+      "name": "연세유치원",
+      "conclusion": "No independent official homepage evidence in targeted search; deferred"
+    }
+  ],
+  "limitations": [
+    "No current operational status inferred from hidden labels or old recruitment notice",
+    "Only exact reviewed URLs; no school tenant scope expansion",
+    "University/public-health source rows lack source_id; correction matching needs separate stable provenance design, not institution-name-only matching"
+  ],
+  "live": {
+    "job_id": "j_d9f3e540386d4fdca6813b5f473b6b5c",
+    "status": "done",
+    "elapsed_ms": 29496,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "www.hlyes.hs.kr",
+      "site_family": "hlyes.hs.kr",
+      "status": "verified",
+      "name": "학력인정 한림연예예술고등학교",
+      "source": "https://www.hlyes.hs.kr/html/main.html",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_88108681278434ba7a1a",
+          "name": "학력인정 한림연예예술고등학교",
+          "source": "https://www.hlyes.hs.kr/html/main.html",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.hlyes.hs.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "사이트가 열리지 않아서 확인하지 못했어요.",
+      "warning": null,
+      "detail": "페이지 안을 보지 못했어요. 안전하다는 뜻이 아니니 링크를 누르지 마세요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 hlyes.hs.kr이에요.",
+        "공식 출처에서 학력인정 한림연예예술고등학교 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "1~2분 뒤에 다시 확인해 보세요.",
+      "action_bullets": [
+        "그 전까지 링크를 누르지 마세요.",
+        "급하다면 학력인정 한림연예예술고등학교 앱에서 직접 확인하세요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.hlyes.hs.kr/html/main.html",
+        "host": "www.hlyes.hs.kr",
+        "registrable_domain": "hlyes.hs.kr",
+        "status": null,
+        "blocked": false,
+        "error": "ReadTimeout: timed out",
+        "at": "2026-09-25T17:30:44.517+00:00"
+      }
+    ],
+    "connection": {
+      "verified": null,
+      "certificates": [],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "72d1f71d8bfee2c7831ee240af26dc4ea2fac1d8c6db40746ce982090ab2da12"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "presentation_sha256": "8bdbf2a38498a7e90c76f4700bd9a84b05ca0b03e8b0799baaf23828826cf659",
+  "effective_policy_residuals": 0,
+  "explanation_fix": {
+    "description": "Use known official_app only; otherwise official homepage, no guessed institution app",
+    "vm_template_action": "급하다면 학력인정 한림연예예술고등학교 공식 홈페이지에서 직접 확인하세요.",
+    "vm_related_tests": 57,
+    "vm_test_seconds": 0.97,
+    "historical_live_result_preserved": true,
+    "api_restarted_while_idle": true,
+    "local_related_tests": 57,
+    "local_test_seconds": 0.54
+  }
+}

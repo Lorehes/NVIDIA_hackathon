@@ -1,0 +1,209 @@
+{
+  "deployment": {
+    "backup": "/tmp/workstreams-deploy-20260926T083345Z",
+    "hashes": {
+      "scripts/catalog/refresh_search_relations.py": "bb7b63e5e2441f3bd1ea697c73d50e356e6f350c9f6f432416e90694652e839f",
+      "scripts/catalog/audit_coverage.py": "11ea7ea6673487d96e4a148b0e75eb83591c7af99764967fb75696d1cba258f1",
+      "kb/sources/search_relation_publishers.json": "b55d75314e120c8612a31494a315f9c11e6aec8abccc20b6015b09251c12b5a3",
+      "kb/sources/institution_status_reviews.json": "5e88e27478ef26c14b6eb74a5be0f63e8b7822dcc766097e0121a43203d4f199",
+      "kb/sources/coverage_review_queue.json": "e6c777d1a8703256121d8a56f2762256c4183ae11e2457f39f39fff5ee95d656",
+      "kb/sources/reviewed_search_relations.json": "5295473f6501a1dc04ce23da655ed736d959825b90ba2e910d418692d6cc5ebf",
+      "apps/api/tests/test_search_relation_refresh.py": "defbf19f26fe0058bb9400a4ac29fa8b307b8e19adcd81f7911d0406c2f8e797",
+      "apps/api/tests/test_coverage_audit.py": "f90951a19e301cede317c268cba526aa8455104150e78f2f50a4aa517c5ff5c9"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "refresh": {
+    "checked_at": "2026-09-26T08:33:53.510729+00:00",
+    "publishers": [
+      {
+        "publisher": "충북대학교",
+        "status": "refreshed",
+        "confirmed": 3,
+        "failures": [],
+        "candidates": []
+      }
+    ]
+  },
+  "coverage": {
+    "excluded_count": 2379,
+    "by_status": {
+      "needs_official_evidence": 2266,
+      "needs_source_disambiguation": 110,
+      "abolished_but_retained_for_enrolled_students": 2,
+      "historical_name_reorganized": 1
+    },
+    "by_source": {
+      "schools": 175,
+      "universities": 264,
+      "public_hospitals": 14,
+      "public_health": 5,
+      "kindergartens": 1921
+    },
+    "ambiguous_names": 859,
+    "source_join_failures": 24,
+    "nonunique_source_id_rows": 104,
+    "note": "Review queue only; reviewed status is not a registered homepage or proof of current operation."
+  },
+  "local_tests": {
+    "full_api": 865,
+    "seconds": 42.58,
+    "additional_coverage_tests": 5
+  },
+  "ui_copy": {
+    "before_sha256": "f5d0c87b83dbf5096d272e6240ebeb394564c20a6b8a60d7d6aed56e4bf8893d",
+    "after_sha256": "2259efd13c63d758ad973b8fcae6005f9ac529ddfe00a5b336cc198dc8b6a5af",
+    "vm_typecheck": "passed",
+    "vm_build": "passed",
+    "browser_verified": true
+  },
+  "quality_limitations": [
+    "No controlled public HTTPS E1-E5/S1/S2 run",
+    "No labeled actual SMS corpus; public KISA guide is scenario guidance only",
+    "Catalog exclusion audit is not new homepage registration or exhaustive institution status verification"
+  ],
+  "automation_status": "PAUSED",
+  "actual_rehearsal": {
+    "jobs": [
+      {
+        "job_id": "j_bcf833d4ad444215b2b66c62fb3f8535",
+        "status": "done",
+        "verdict": "unknown",
+        "identity": {
+          "host": "www.chungbuk.ac.kr",
+          "site_family": "chungbuk.ac.kr",
+          "status": "verified",
+          "name": "충북대학교 법무대학원",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "checked": "2026-09-26",
+          "canonical_from": null,
+          "expires_at": null,
+          "inspection_supported": true,
+          "inspection_limit_reason": null,
+          "reason": "reviewed_official_source_correction",
+          "matched_entities": [
+            {
+              "id": "site_9ecaea067a4ec2c9a6d5",
+              "name": "충북대학교 법무대학원",
+              "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+              "checked": "2026-09-26"
+            }
+          ],
+          "matched_entities_total": 1,
+          "related_addresses": [
+            "www.chungbuk.ac.kr"
+          ],
+          "observed_redirects": [],
+          "behavior": "incomplete"
+        },
+        "headline": "사이트가 열리지 않아서 확인하지 못했어요.",
+        "connection": {
+          "verified": null,
+          "certificates": [],
+          "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+        },
+        "search_relation_confirmed": false,
+        "redirect_errors": [
+          "ReadTimeout: The read operation timed out"
+        ],
+        "duration_sec": 22,
+        "remaining_open": 0
+      },
+      {
+        "job_id": "j_14634bdc4d994a369a01377fc8da4026",
+        "status": "done",
+        "verdict": "unknown",
+        "identity": {
+          "host": "www.chungbuk.ac.kr",
+          "site_family": "chungbuk.ac.kr",
+          "status": "verified",
+          "name": "충북대학교 법무대학원",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "checked": "2026-09-26",
+          "canonical_from": null,
+          "expires_at": null,
+          "inspection_supported": true,
+          "inspection_limit_reason": null,
+          "reason": "reviewed_official_source_correction",
+          "matched_entities": [
+            {
+              "id": "site_9ecaea067a4ec2c9a6d5",
+              "name": "충북대학교 법무대학원",
+              "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+              "checked": "2026-09-26"
+            }
+          ],
+          "matched_entities_total": 1,
+          "related_addresses": [
+            "www.chungbuk.ac.kr"
+          ],
+          "observed_redirects": [],
+          "behavior": "incomplete"
+        },
+        "headline": "충북대학교 법무대학원 공식 주소로 확인됐어요.",
+        "connection": {
+          "verified": true,
+          "certificates": [
+            {
+              "scope": "connection_peer",
+              "origin_identity_verified": false,
+              "issuer": [
+                [
+                  [
+                    "commonName",
+                    "OpenShell Sandbox CA"
+                  ]
+                ],
+                [
+                  [
+                    "organizationName",
+                    "OpenShell"
+                  ]
+                ]
+              ],
+              "not_before": "Jan  1 00:00:00 1975 GMT",
+              "not_after": "Jan  1 00:00:00 4096 GMT",
+              "dns_names": [
+                "www.chungbuk.ac.kr"
+              ],
+              "sha256": "812bdd6c286fb9d07703ffccc075c8fde0c47a0d36c02982782e0a18acc7d3e5",
+              "protocol": "TLSv1.3"
+            }
+          ],
+          "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+        },
+        "search_relation_confirmed": true,
+        "redirect_errors": [],
+        "duration_sec": 16,
+        "remaining_open": 0
+      }
+    ],
+    "policy_check": "no residual investigation presets (effective policy verified)",
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "vm_full_tests": {
+    "passed": 870,
+    "seconds": 70.22,
+    "warnings": 1
+  },
+  "audit_final_deployment": {
+    "backup": "/tmp/coverage-audit-20260926T084018Z",
+    "hashes": {
+      "scripts/catalog/audit_coverage.py": "a0e159d8c6d7cd74bf25006c64e0b3ac2920ea6a5ef0eff34902d53d6379c886",
+      "apps/api/tests/test_coverage_audit.py": "9d35b27ff88575bbb2730573a52d14c0a422b4964a92fc136b3975d91f6ceec5",
+      "kb/sources/coverage_review_queue.json": "8a07f2f2e6d26a57028e499a37c7d2ba2665fec393a0299437c0f0767ad78541"
+    }
+  },
+  "source_id_ambiguity_by_dataset": {
+    "schools": 63,
+    "kindergartens": 41
+  }
+}

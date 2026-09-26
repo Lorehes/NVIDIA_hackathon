@@ -1,0 +1,851 @@
+{
+  "reviewed_at": "2026-09-25T18:15:35.363727+00:00",
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "83ef855d0fd5f31e49f31dd3e5a5284c1c5e0fd70e00a614cb9b4dd4bc4f1fab",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "문척보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "문척보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "문척면 수달생태로 281",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "958b081549ad4a7c2f9db776171ce95f2c8797f0824c22bfc35808d9dead4ec0",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "간전보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "간전보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "간전면 안음길 3",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "c82b5f42b8f854354cc6a7493e8d54085b5ed30606b82e72be27f3060e33eed2",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "토지보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "토지보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "토지면 섬진강대로 5033",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "d90a702912814d554f71bb05196bc15db0a372b42bc84df09fc2c66ae8ee454f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "마산보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "마산보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "마산면 화엄사로 159",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "f5ff09abd79da2a61875a199fdf53fd31ed7e6d4ddfa7dbe28fffa7c54156845",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "광의보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "광의보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "광의면 철쭉동산로 14",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "6f74a40825dcecd8f334faf9a5de21ff44fc306e27e6fe8cce2ee138ae224a41",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "용방보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "용방보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "용방면 하용길 5",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "fa101901edc4506621beab69d030377b47e314d519c1c69b7c33853027081ca9",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "산동보건지소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "산동보건지소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "산동면 원촌1길 13-5",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "c3955df1585b16b7f0fff95dc39c79356523d0f53956ce645d3f50ab54d0b07a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "계산보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "계산보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "구례읍 하유길 21-29",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "df78fd58bce5c952612de8a70069ab3ca2b64be9e6815a896585c79c7b2863ed",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "죽마보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "죽마보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "문척면 죽연길 18-17",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "edf398a557e0ac27f0c0d81fbee1a97abc4321d74bc67a61b29c44128fb4b1fb",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "토금보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "토금보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "문척면 토금길 108-1",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "27e9a85c47b922f6d378b1d77bc60f3cc2e5937d2446e2827be1aeb6e2fc2c14",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "효곡보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "효곡보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "간전면 효죽길 12",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "efb249ececfb8ab3e54f414f786ee068ec71bca0a96a4cd95c6f124461a485e4",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "외곡보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "외곡보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "토지면 피아골로 7",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "63711038ba9f95e358b0c1bd726f897362c6350b2e29698b2ee344fad741201a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "하천보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "하천보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "간전면 하천길 32",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "c9ba8a0504b0edf764bada86962e583b76e03291035687f350e74949b8c1857d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "내동보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "내동보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "토지면 피아골 665",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "131b3d8102342504e6dce5300b6c8815b92023bf19024703be1bf6fea0f0678d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "도암보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "도암보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "용방면 도암1길 28",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "e5cd56923aa03450d98b1c7415663685f9bd9913fd1050125fdd298325fa662b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "이평보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "이평보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "산동면 이촌길 4",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "c6b8a3f03bb8d124c64cc7e3ce6b0933b2caa8e33ede544171d424a287a51489",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "외산보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "외산보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "산동면 내온길 13",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "f7cf28e27af2c744994fef2c146b7c07c277ad47e38fa2a02f6f38368ff7990a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "원달보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "원달보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "산동면 단전길 14",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "95e2790810966b61059ed8f9299bc2d81ef1c5f061d81bf0638572ca51dc1724",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "관산보건진료소",
+      "original_url": "",
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "scope": "url",
+      "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_directory_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gurye.go.kr/health/main.do",
+          "label": "연혁 및 현황 > 현황",
+          "target": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000"
+        },
+        {
+          "kind": "official_institution_directory_row",
+          "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+          "http_status": 200,
+          "body_sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d",
+          "confirmed_institution": "관산보건진료소",
+          "confirmed_jurisdiction": "구례군",
+          "institution_address": "산동면 관산구산길 59-14",
+          "content_scope": "보건의료원의 여러 기관 공유 현황 페이지; 독립 홈페이지 또는 실제 진료 가능 여부 확인 아님"
+        }
+      ]
+    }
+  ],
+  "raw_public_health_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "canonical_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "source_pages": {
+    "directory": {
+      "url": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+      "status": 200,
+      "sha256": "168c375dc42d6c82d7a5bba8b280e97b70ae22d8b2070667e64b22e4666e945d"
+    },
+    "notice": {
+      "url": "https://www.gurye.go.kr/board/view.do?bbsId=BBS_0000000000000148&nttId=81650&menuNo=136001000000",
+      "status": 200,
+      "sha256": "b111f7521beff54d46c2c3f5704f6211fa004c51cfc36df84381765521004002"
+    }
+  },
+  "operational_notice": {
+    "source": "https://www.gurye.go.kr/board/view.do?bbsId=BBS_0000000000000148&nttId=81650&menuNo=136001000000",
+    "title": "보건진료소 운영 방식 변경 안내(격일 종일근무)",
+    "effective_date": "2026-08-24",
+    "meaning": "공식 공지에서 운영 방식 변경을 안내; 기관별 최신 진료 일정 검증 또는 폐지 판단 아님",
+    "attachments_downloaded": false
+  },
+  "limitations": [
+    "19 institutions share one exact official directory URL",
+    "No subdomain, query or path trust expansion",
+    "Operating hours and present medical service availability not verified"
+  ],
+  "counts": {
+    "records": 21997,
+    "hosts": 16252,
+    "excluded": 2503,
+    "missing_homepage": 2476,
+    "public_health_missing": 118,
+    "corrections": 77,
+    "inactive_corrections": 0
+  },
+  "catalog_sha256": "67abd5e75de010dbd7324bb293b6ae1ce7cf045e48065ea0d782648259f054f7",
+  "existing_records_unchanged": true,
+  "new_record_ids": [
+    "site_4e6b19143b49b7136c3b",
+    "site_80b0979d94c899c16e71",
+    "site_e046f6b5942e58b9613e",
+    "site_ae64930404568a0d2dc5",
+    "site_4a1da071fcd5b936bb67",
+    "site_c87e07827ee775e8e44b",
+    "site_aa234787b501dc1b31b3",
+    "site_4c7bc210ffa9f5ac536d",
+    "site_5e9856520392d0a08b04",
+    "site_8dc8366c7ed05bd64123",
+    "site_b08446e5ca009efe2d46",
+    "site_998bc5f0b332f09eb2b9",
+    "site_ec129f23da11df267a1d",
+    "site_30c4936e2037021431c4",
+    "site_93290fc0d078b9f14c8b",
+    "site_1998b062917baf14e2ff",
+    "site_6bad6d14d4f1344fa8d5",
+    "site_41cb300d6bdb49663c08",
+    "site_2ab53683956000134bc7"
+  ],
+  "local_checks": {
+    "passed": 59,
+    "seconds": 0.85
+  },
+  "vm_checks": {
+    "passed": 59,
+    "seconds": 1.65
+  },
+  "runtime_changes": false,
+  "bulk_source_redownloaded": false,
+  "vm_validation": {
+    "live": {
+      "job_id": "j_11a69153f34d432e963428f0b90f90eb",
+      "status": "done",
+      "elapsed_ms": 14003,
+      "error": null,
+      "verdict": "unknown",
+      "identity": {
+        "host": "www.gurye.go.kr",
+        "site_family": "gurye.go.kr",
+        "status": "verified",
+        "name": "마산보건지소",
+        "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": true,
+        "inspection_limit_reason": null,
+        "reason": "reviewed_official_source_correction",
+        "matched_entities": [
+          {
+            "id": "site_1998b062917baf14e2ff",
+            "name": "마산보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_2ab53683956000134bc7",
+            "name": "문척보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_30c4936e2037021431c4",
+            "name": "용방보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_41cb300d6bdb49663c08",
+            "name": "간전보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_4a1da071fcd5b936bb67",
+            "name": "도암보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_4c7bc210ffa9f5ac536d",
+            "name": "하천보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_4e6b19143b49b7136c3b",
+            "name": "관산보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_5e9856520392d0a08b04",
+            "name": "효곡보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_6bad6d14d4f1344fa8d5",
+            "name": "토지보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_80b0979d94c899c16e71",
+            "name": "원달보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_8dc8366c7ed05bd64123",
+            "name": "토금보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_93290fc0d078b9f14c8b",
+            "name": "광의보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_998bc5f0b332f09eb2b9",
+            "name": "계산보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_aa234787b501dc1b31b3",
+            "name": "내동보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_ae64930404568a0d2dc5",
+            "name": "이평보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_b08446e5ca009efe2d46",
+            "name": "죽마보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_c87e07827ee775e8e44b",
+            "name": "외곡보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_e046f6b5942e58b9613e",
+            "name": "외산보건진료소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          },
+          {
+            "id": "site_ec129f23da11df267a1d",
+            "name": "산동보건지소",
+            "source": "https://www.gurye.go.kr/health/subPage.do?menuNo=130002002000",
+            "checked": "2026-09-25"
+          }
+        ],
+        "matched_entities_total": 19,
+        "related_addresses": [
+          "www.gurye.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "explanation": {
+        "headline": "지금은 확인을 끝내지 못했어요.",
+        "warning": null,
+        "detail": "접속할 주소의 공인 IP를 확인하지 못했어요. 안전하다는 뜻이 아니니 아직 링크를 누르지 마세요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 gurye.go.kr이에요.",
+          "공식 출처에서 마산보건지소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지 속 내용",
+          "페이지가 나중에 스스로 바뀌는 내용"
+        ],
+        "recommended_action": "1~2분 뒤에 다시 확인해 보세요.",
+        "action_bullets": [
+          "그 전까지 링크를 누르지 마세요.",
+          "급하다면 마산보건지소 공식 홈페이지에서 직접 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [],
+      "connection": {
+        "verified": null,
+        "certificates": [],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": "접속할 주소의 공인 IP를 확인하지 못했어요",
+      "agent": {
+        "tool_calls": [],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "67abd5e75de010dbd7324bb293b6ae1ce7cf045e48065ea0d782648259f054f7"
+    },
+    "resolution_diagnostic": {
+      "status": "rejected",
+      "reason": "dns_unresolved"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "policy_cleanup": "no residual investigation presets (effective policy verified)"
+}

@@ -1,0 +1,163 @@
+{
+  "job_id": "j_838e3135b32340e983987a8bf76f914d",
+  "status": "done",
+  "elapsed_ms": 13812,
+  "error": null,
+  "verdict": "unknown",
+  "identity": {
+    "host": "papago.naver.com",
+    "site_family": "naver.com",
+    "status": "verified",
+    "name": "네이버 파파고",
+    "source": "https://www.navercorp.com/service/all",
+    "checked": "2026-09-25",
+    "canonical_from": null,
+    "expires_at": null,
+    "inspection_supported": true,
+    "inspection_limit_reason": null,
+    "reason": "publisher_service_link",
+    "matched_entities": [
+      {
+        "id": "site_290e2068b24288493a63",
+        "name": "네이버 파파고",
+        "source": "https://www.navercorp.com/service/all",
+        "checked": "2026-09-25"
+      }
+    ],
+    "matched_entities_total": 1,
+    "related_addresses": [
+      "academic.naver.com",
+      "blog.naver.com",
+      "books.nid.naver.com",
+      "buyer.collection.naver.com",
+      "cafe.naver.com",
+      "calendar.naver.com",
+      "certificate.nid.naver.com",
+      "chzzk.naver.com",
+      "clovadubbing.naver.com",
+      "clovanote.naver.com",
+      "comic.naver.com",
+      "contact.naver.com",
+      "contents.premium.naver.com",
+      "datalab.naver.com",
+      "dict.naver.com",
+      "didcard.naver.com",
+      "ekyc.naver.com",
+      "finance.naver.com",
+      "fleamarket.naver.com",
+      "flight.naver.com"
+    ],
+    "observed_redirects": [],
+    "behavior": "incomplete"
+  },
+  "explanation": {
+    "headline": "네이버 파파고 공식 주소로 확인됐어요.",
+    "warning": null,
+    "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+    "confirmed_facts": [
+      "진짜 사이트 이름은 naver.com이에요.",
+      "공식 출처에서 네이버 파파고 서비스의 주소를 확인했어요."
+    ],
+    "suspicion_evidence": [],
+    "unverified": [
+      "페이지가 나중에 스스로 바뀌는 내용"
+    ],
+    "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+    "action_bullets": [
+      "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+    ],
+    "source": "template"
+  },
+  "redirect_chain": [
+    {
+      "url": "https://papago.naver.com/",
+      "host": "papago.naver.com",
+      "registrable_domain": "naver.com",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-26T01:33:16.794+00:00"
+    }
+  ],
+  "connection": {
+    "verified": true,
+    "certificates": [
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "papago.naver.com"
+        ],
+        "sha256": "a5610002644e4b0ff866f1e07b76288dd70ad45eae402b0531fed43ad541dbd1",
+        "protocol": "TLSv1.3"
+      }
+    ],
+    "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+  },
+  "incomplete_reason": null,
+  "agent": {
+    "tool_calls": [
+      "exec"
+    ],
+    "unexpected_tools": [],
+    "duration_ms": null,
+    "model_reported": null,
+    "kind": "openshell"
+  },
+  "catalog_sha256": "36980060141a40af64380bdd06fb79455b06d65920423a5799d4dc76e777e139",
+  "page_observations": {
+    "unexecuted_code": true,
+    "js_redirect_hint": true,
+    "external_active_hosts": []
+  },
+  "files_sha256": {
+    "apps/api/app/verdict.py": "af41d60296d7e68bdd7bbc194e7ea0a41abdf00f9e225485d9f8d6d488ead7ac",
+    "apps/api/app/presentation.py": "09549f5777c8e015b20cdc1064febc5c1718d1a6caa2a6f4e67bb11bfbeb8de7",
+    "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": "3c5048f5b8d9c445d9b6d17e82f20bd0e61bd5d95e0a1737fa5b2c042408af63",
+    "apps/api/tests/test_unexecuted_code.py": "3088cfd2bfdea315449bd49c5463e63a7d06ca4d74a7780ca88292d8aa53e8f1"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "policy_check": "no residual investigation presets (effective policy verified)",
+  "validation": {
+    "local_full": {
+      "passed": 752,
+      "seconds": 42.85
+    },
+    "vm_full": {
+      "passed": 752,
+      "seconds": 68.56
+    },
+    "related_local": {
+      "passed": 243,
+      "seconds": 15.08
+    },
+    "sandbox_fixture": {
+      "same_origin_script": true,
+      "json_data_block": false,
+      "json_redirect_hint": false
+    },
+    "script_execution_performed": false,
+    "browser_ui_checked": false,
+    "api_restarted_when_idle": true
+  }
+}

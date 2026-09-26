@@ -1,0 +1,448 @@
+{
+  "registered_source_ids": [
+    "97139b6b4a1b721d18a2",
+    "32cb390f03fac7e2d64c"
+  ],
+  "registered": [
+    {
+      "source_dataset": "kindergartens",
+      "source_id": "97139b6b4a1b721d18a2",
+      "name": "인천소양초등학교병설유치원",
+      "original_url": "http://soyang.icees.kr/ (초교내 홈페이지)  http://schoolbell-e.com (가정통신란 활용, 개별 가입)",
+      "url": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+      "scope": "url",
+      "source": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_id": "7331198",
+          "name": "인천소양초등학교",
+          "url": "soyang.icees.kr/",
+          "region_or_education_office": "인천광역시"
+        },
+        {
+          "kind": "official_site_navigation",
+          "source": "https://soyang.icees.kr/main.do",
+          "label": "소양병설유치원",
+          "target": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+          "body_sha256": "0222423b1097c61c9a50ce75d215a7ee216fd7544a9afe8bbf2908053e4801dd"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+          "http_status": 200,
+          "body_sha256": "db9cbbaa578e3c86964d6ae98bb31cec01518a95281208d2004f2bd24536608d",
+          "confirmed_school": "인천소양초등학교",
+          "confirmed_region": "인천"
+        }
+      ]
+    },
+    {
+      "source_dataset": "kindergartens",
+      "source_id": "32cb390f03fac7e2d64c",
+      "name": "용암초등학교병설유치원",
+      "original_url": "ㅍhttps://school.cbe.go.kr/cjyongam-ehttps://school.cbe.go.kr/cjyongam-e",
+      "url": "https://school.cbe.go.kr/cjyongam-e/M010801/",
+      "scope": "url",
+      "source": "https://school.cbe.go.kr/cjyongam-e/M010801/",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_directory_cross_reference",
+          "source": "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1",
+          "source_id": "8011193",
+          "name": "용암초등학교",
+          "url": "http://school.cbe.go.kr/cjyongam-e",
+          "region_or_education_office": "충청북도"
+        },
+        {
+          "kind": "official_site_navigation",
+          "source": "https://school.cbe.go.kr/cjyongam-e",
+          "label": "유치원 현황",
+          "target": "https://school.cbe.go.kr/cjyongam-e/M010801/",
+          "body_sha256": "401cfa4ce1bf6f6c217930ee859a9edc345ff553f6ca47f989f6a31af472ee26"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://school.cbe.go.kr/cjyongam-e/M010801/",
+          "http_status": 200,
+          "body_sha256": "3388554cca101149ae375d4f0bfeba33ec0d711c68deafc73076d1ff778484ac",
+          "confirmed_school": "용암초등학교",
+          "confirmed_region": "청주"
+        },
+        {
+          "kind": "institution_status_notice",
+          "source": "https://school.cbe.go.kr/cjyongam-e/M010301/view/5829091",
+          "http_status": 200,
+          "body_sha256": "8098a8e37ea093f9aefe62312aa9d9ef57cd86dcb9d2b9db065809d5221dcb4c",
+          "notice_title": "행정예고(용암초등학교병설유치원 폐원 관련)",
+          "published": "2026-09-03",
+          "proposed_effective_date": "2027-03-01",
+          "status": "closure_administrative_notice",
+          "note": "미래 폐원 행정예고이며 현재 폐원 확정 또는 시행 확인이 아니다. 공식 안내 주소의 신원만 등록하고 운영 상태를 보증하지 않는다."
+        }
+      ]
+    }
+  ],
+  "catalog": {
+    "indexed_records": 21878,
+    "indexed_hosts": 16198,
+    "popular_selected": 1000,
+    "excluded_by_source": {
+      "kindergartens": 1925,
+      "public_health": 172,
+      "public_hospitals": 14,
+      "schools": 177,
+      "universities": 281
+    },
+    "excluded_by_reason": {
+      "invalid_hostname": 2,
+      "invalid_or_ambiguous_url": 2,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 19,
+      "missing_homepage": 2539,
+      "unsupported_or_malformed_scheme": 1,
+      "userinfo_or_email": 5
+    }
+  },
+  "excluded_count": 2569,
+  "correction_count": 8,
+  "inactive_corrections": [],
+  "hashes": {
+    "kb/site_catalog.json": "634246ba26bf25844bf9cf0cd4882ac82246a72fcc2d802b31667e47d00c7e18",
+    "kb/sources/schools.json": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782",
+    "kb/sources/kindergartens.json": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5"
+  },
+  "tests": {
+    "local": "45 passed in 0.56s",
+    "vm": "45 passed in 1.04s",
+    "full_local": "577 passed, 1 existing Starlette warning in 41.85s",
+    "full_vm": "577 passed, 1 existing Starlette warning in 68.05s"
+  },
+  "deferred": [
+    {
+      "source_id": "50def7906b105b66ff3c",
+      "name": "광천초등학교병설유치원",
+      "candidate_source": "NEIS school 8261092",
+      "candidate_url": "https://gwangcheon.cnees.kr/",
+      "result": "ConnectTimeout",
+      "decision": "보류: 복수 값에서 첫 주소 또는 추정 주소를 선택하지 않음"
+    }
+  ],
+  "military_hospitals_review": {
+    "records": [
+      {
+        "name": "서울지구병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000194",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군춘천병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000189",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군강릉병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000191",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군홍천병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000192",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군포천병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000187",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군양주병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000186",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군고양병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000185",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군구리병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000233",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군수도병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000181",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군대전병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000184",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군대구병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000183",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "해군포항병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000198",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "해군해양의료원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000197",
+        "reason": "missing_homepage"
+      },
+      {
+        "name": "국군함평병원",
+        "url": "",
+        "source": "https://www.ppm.or.kr/",
+        "source_dataset": "public_hospitals",
+        "source_id": "MC000193",
+        "reason": "missing_homepage"
+      }
+    ],
+    "attempted_directory": "https://www.medcmd.mil.kr/user/indexSub.action?codyMenuSeq=170226168&menuUIType=sub&siteId=medcmd",
+    "result": "web tool reports site access blocked by policy; direct fetch HTTPStatusError",
+    "decision": "검색 색인만으로 등록하지 않음. 홈페이지 부재나 폐원을 뜻하지 않음."
+  },
+  "limitations": [
+    "공식 안내 주소 등록은 운영 중 또는 독립 홈페이지의 증명이 아니다.",
+    "용암2027-03-01폐원은 행정예고이며 확정/시행 여부 미확인. 기존90일 근거 만료 적용.",
+    "TLS유효성으로 안전 판정하지 않음."
+  ],
+  "implementation": {
+    "same_origin_search": "Explicit typed search plus labelled text fallback; only general fields; uniform GET or POST; all destinations same scheme/host/port; unknown identity/dynamic behavior preserved",
+    "non_search_shared_tenant_post": "still cross_domain_form",
+    "credentials_other_hosts_ports_http_overrides": "no exception"
+  },
+  "live_validation": {
+    "before": {
+      "job_id": "j_569cad929a1647dfbcd026e7b5b4a113",
+      "status": "done",
+      "elapsed_ms": 17809,
+      "error": null,
+      "verdict": "caution",
+      "identity": {
+        "host": "soyang.icees.kr",
+        "status": "verified",
+        "name": "인천소양초등학교병설유치원",
+        "source": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+        "checked": "2026-09-25",
+        "reason": "reviewed_official_source_correction",
+        "behavior": "risk_found"
+      },
+      "explanation": {
+        "headline": "주소는 인천소양초등학교병설유치원의 진짜 주소인데, 요구하는 것이 이상해요.",
+        "warning": null,
+        "detail": "주소의 주인은 인천소양초등학교병설유치원 진짜 주소와 같지만, 열어 본 페이지가 문자 내용과 맞지 않는 것을 적으라고 해요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 icees.kr이에요.",
+          "공식 출처에서 인천소양초등학교병설유치원 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [
+          "적은 내용이 이 페이지와 다른 사이트(soyang.icees.kr)로 가요."
+        ],
+        "unverified": [],
+        "recommended_action": "인천소양초등학교병설유치원 앱이나 대표번호로 먼저 확인한 뒤에 적으세요.",
+        "action_bullets": [
+          "이 페이지에는 아직 정보를 적지 마세요.",
+          "인천소양초등학교병설유치원 앱이나 대표번호로 먼저 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+          "host": "soyang.icees.kr",
+          "registrable_domain": "icees.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T16:44:43.231+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "soyang.icees.kr"
+            ],
+            "sha256": "5ce6992da1480eb8d4cab48ac42b6dcd9a66a682061925d4ebb37d0d0432fa88",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "634246ba26bf25844bf9cf0cd4882ac82246a72fcc2d802b31667e47d00c7e18"
+    },
+    "after": {
+      "job_id": "j_4f98ce2fc80e4f25adba3a9573f7ce13",
+      "status": "done",
+      "elapsed_ms": 21471,
+      "error": null,
+      "verdict": "unknown",
+      "identity": {
+        "host": "soyang.icees.kr",
+        "status": "verified",
+        "name": "인천소양초등학교병설유치원",
+        "source": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+        "checked": "2026-09-25",
+        "reason": "reviewed_official_source_correction",
+        "behavior": "incomplete"
+      },
+      "explanation": {
+        "headline": "인천소양초등학교병설유치원 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 icees.kr이에요.",
+          "공식 출처에서 인천소양초등학교병설유치원 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지가 나중에 스스로 바뀌는 내용"
+        ],
+        "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+        "action_bullets": [
+          "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://soyang.icees.kr/boardCnts/list.do?boardID=256323&m=0701&s=isoyanges",
+          "host": "soyang.icees.kr",
+          "registrable_domain": "icees.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T16:51:22.804+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "soyang.icees.kr"
+            ],
+            "sha256": "5ce6992da1480eb8d4cab48ac42b6dcd9a66a682061925d4ebb37d0d0432fa88",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "634246ba26bf25844bf9cf0cd4882ac82246a72fcc2d802b31667e47d00c7e18"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "effective_residual_policies": 0
+}

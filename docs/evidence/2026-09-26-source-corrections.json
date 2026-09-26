@@ -1,0 +1,154 @@
+{
+  "catalog_sha256": "af7b007fcb4d684aa0dc1a576b20374e019c20f09429096fe921311284f9ee45",
+  "raw_sources_sha256": {
+    "kindergartens": "ade8ede1842e3018d9d1e216fb9ae6d059a51b1659cd8052cea425d7f837adf5",
+    "schools": "8709f916d657cc069f44e237ed3ed0afa896b1273f67fdc97a34db8bba570782"
+  },
+  "lookup_checks": [
+    {
+      "name": "맹동초등학교병설유치원",
+      "url": "https://school.cbe.go.kr/maengdong-e/M010208/",
+      "scope": "url",
+      "identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "단관초등학교병설유치원",
+      "url": "https://dan-gwan.gwe.es.kr/boardCnts/list.do?boardID=4567&m=0901&s=dan_gwan",
+      "scope": "url",
+      "identity_verified": true,
+      "unlisted_path_identity_verified": false
+    },
+    {
+      "name": "서창초등학교",
+      "url": "https://ya-seochang.jge.es.kr/ya-seochang_es/main.do?sysId=ya-seochang_es",
+      "scope": "url",
+      "identity_verified": true,
+      "unlisted_path_identity_verified": false
+    }
+  ],
+  "live_result": {
+    "job_id": "j_e8ecf63918a349829aa83b9f5f5308a1",
+    "status": "done",
+    "elapsed_ms": 17343,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "school.cbe.go.kr",
+      "site_family": "cbe.go.kr",
+      "status": "verified",
+      "name": "맹동초등학교병설유치원",
+      "source": "https://school.cbe.go.kr/maengdong-e/M010208/",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "related_addresses": [
+        "cbe.go.kr",
+        "school.cbe.go.kr",
+        "www.cbe.go.kr",
+        "www.school.cbe.go.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "맹동초등학교병설유치원 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 cbe.go.kr이에요.",
+        "공식 출처에서 맹동초등학교병설유치원 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://school.cbe.go.kr/maengdong-e/M010208/",
+        "host": "school.cbe.go.kr",
+        "registrable_domain": "cbe.go.kr",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T15:53:01.508+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "school.cbe.go.kr"
+          ],
+          "sha256": "73c940377209a77d3cb67bdf6fe0fe3bc843baacffcb86653b28c6473e310983",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "af7b007fcb4d684aa0dc1a576b20374e019c20f09429096fe921311284f9ee45"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "validation": {
+    "local_related_passed": 46,
+    "local_seconds": 0.62,
+    "vm_related_passed": 46,
+    "vm_seconds": 1.14,
+    "previous_full_suite_passed": 547,
+    "full_suite_rerun_this_stage": false,
+    "effective_policy_verified": true,
+    "residual_investigation_policies": 0,
+    "ui_browser_inspected": false
+  },
+  "catalog_counts": {
+    "records": 21873,
+    "hosts": 16199,
+    "excluded": 2573,
+    "missing_homepage": 2539,
+    "other_excluded": 34,
+    "inspection_limited": 22,
+    "corrected_source_rows": 3
+  }
+}

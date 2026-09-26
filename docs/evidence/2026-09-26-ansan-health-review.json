@@ -1,0 +1,536 @@
+{
+  "reviewed_at": "2026-09-25T18:26:12.572184+00:00",
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1d0c4d9655f3c2ac2ba15d7347f18ce2d99a360c68981a3d6c8be60cc3137be1",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "상록수보건소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/snshealth/main/main.do",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/snshealth/main/main.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "상록수보건소",
+          "target": "https://www.ansan.go.kr/snshealth/main/main.do"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/snshealth/main/main.do",
+          "http_status": 200,
+          "body_sha256": "e528649e592a79a1e2a4196f9e8789531134f08f79ac3138565af521d2776eee",
+          "confirmed_institution": "상록수보건소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "cf4e4ae03bfb8580ed3455df77595f216bf8a9df5bd3e3c3a8a9c101e00be406",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "원곡보건지소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "원곡보건지소",
+          "target": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08",
+          "http_status": 200,
+          "body_sha256": "389ff66e1e1bfd7c2cd62226aba909816e39a4cc8329d3c813a410b2c95f0f5a",
+          "confirmed_institution": "원곡보건지소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [
+            "안산시 단원구 부부로 43, 3층 (안산시외국인주민지원본부 3층)"
+          ],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1d946b7de5d77096d66d4fdbc1cff3b548a34e82aba5145e67e2189a5783098a",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대부보건지소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "대부보건지소(상동어울림센터)",
+          "target": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11",
+          "http_status": 200,
+          "body_sha256": "10e25ab5ca7a1a6ae6c1e6b63e5ef612f36bc1775978bcb7349440db47e2b294",
+          "confirmed_institution": "대부보건지소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [
+            "안산시 단원구 대부중앙로 77(대부북동 303)"
+          ],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "880dec0b4c6e6b74af2eef74b14da13a3d952af7370a58dba642113e1081fcac",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "안산시남동보건진료소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "남동보건진료소",
+          "target": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14",
+          "http_status": 200,
+          "body_sha256": "ad007bb1471028046b92f2a72ed6b1c2cadabda576f19522940509091d771129",
+          "confirmed_institution": "남동보건진료소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [
+            "안산시 단원구 비룰길 7(대부남동 1071-8)"
+          ],
+          "name_mapping_reason": "municipal_prefix_confirmed_by_location",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1586dab72f7173f72c726fe54cd6a1b8a8a0f30bc3382d563104bedec0badda4",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "풍도보건진료소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "풍도보건진료소",
+          "target": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+          "http_status": 200,
+          "body_sha256": "72496a48a969d61a4eadd7605668988af0380e3f06e0d659b87a506564d1c115",
+          "confirmed_institution": "풍도보건진료소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [
+            "안산시 단원구 풍도2길 4(풍도동 243-245번지)"
+          ],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "e2941c58d8453e8ade7999e819254a047985fab7521fcd248710d073eaa90fab",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "단원보건소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/health/main/main.do",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/health/main/main.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+          "label": "단원보건소",
+          "target": "https://www.ansan.go.kr/health/main/main.do"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/health/main/main.do",
+          "http_status": 200,
+          "body_sha256": "c67a5e529aa4170aa70833388b89f0b8f93758a5d86ff56f7bd402d144615e0a",
+          "confirmed_institution": "단원보건소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "bf63fa313eb5b9e79b509469e404cd219c7e8641f142f54485b906882ec0fe82",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "수암보건지소",
+      "original_url": "",
+      "url": "https://www.ansan.go.kr/snshealth/common/cntnts/selectContents.do?cntnts_id=C0001827",
+      "scope": "url",
+      "source": "https://www.ansan.go.kr/snshealth/common/cntnts/selectContents.do?cntnts_id=C0001827",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ansan.go.kr/snshealth/main/main.do",
+          "label": "수암보건지소",
+          "target": "https://www.ansan.go.kr/snshealth/common/cntnts/selectContents.do?cntnts_id=C0001827"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ansan.go.kr/snshealth/common/cntnts/selectContents.do?cntnts_id=C0001827",
+          "http_status": 200,
+          "body_sha256": "e5602443bba6e1b128305a8618a5d95729668776d074aa8499fb72dc9ce8726a",
+          "confirmed_institution": "수암보건지소",
+          "confirmed_jurisdiction": "안산시",
+          "institution_addresses": [
+            "안산시 상록구 원당골1길 23-3(수암동 467-3) 2~3층"
+          ],
+          "name_mapping_reason": "exact_institution_name_in_heading",
+          "content_scope": "보건소 홈페이지 또는 해당 기관 공식 안내 페이지; 진료 가능 여부 보증 아님"
+        }
+      ]
+    }
+  ],
+  "raw_public_health_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "canonical_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "source_index": {
+    "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health19",
+    "status": 200,
+    "sha256": "7d041d15f231f70df8449100c973dcef5ee1aa5d9a440c0132f725f91012b0af",
+    "links": [
+      {
+        "name": "상록수보건소",
+        "url": "https://www.ansan.go.kr/snshealth/main/main.do"
+      },
+      {
+        "name": "단원보건소",
+        "url": "https://www.ansan.go.kr/health/main/main.do"
+      },
+      {
+        "name": "보건소소개",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=C0001632"
+      },
+      {
+        "name": "단원보건소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=C0001639"
+      },
+      {
+        "name": "보건소사업안내",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=C0001643"
+      },
+      {
+        "name": "건강생활지원센터 및 보건지소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health07"
+      },
+      {
+        "name": "원곡보건지소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08"
+      },
+      {
+        "name": "대부보건지소(상동어울림센터)",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11"
+      },
+      {
+        "name": "남동보건진료소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14"
+      },
+      {
+        "name": "풍도보건진료소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17"
+      },
+      {
+        "name": "건강생활지원센터 및 보건지소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health07"
+      },
+      {
+        "name": "풍도보건진료소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17"
+      },
+      {
+        "name": "원곡보건지소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08"
+      },
+      {
+        "name": "대부보건지소(상동어울림센터)",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11"
+      },
+      {
+        "name": "남동보건진료소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14"
+      },
+      {
+        "name": "풍도보건진료소",
+        "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17"
+      }
+    ]
+  },
+  "source_pages": [
+    {
+      "name": "상록수보건소",
+      "url": "https://www.ansan.go.kr/snshealth/main/main.do",
+      "status": 200,
+      "sha256": "e528649e592a79a1e2a4196f9e8789531134f08f79ac3138565af521d2776eee"
+    },
+    {
+      "name": "원곡보건지소",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health08",
+      "status": 200,
+      "sha256": "389ff66e1e1bfd7c2cd62226aba909816e39a4cc8329d3c813a410b2c95f0f5a"
+    },
+    {
+      "name": "대부보건지소(상동어울림센터)",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health11",
+      "status": 200,
+      "sha256": "10e25ab5ca7a1a6ae6c1e6b63e5ef612f36bc1775978bcb7349440db47e2b294"
+    },
+    {
+      "name": "남동보건진료소",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health14",
+      "status": 200,
+      "sha256": "ad007bb1471028046b92f2a72ed6b1c2cadabda576f19522940509091d771129"
+    },
+    {
+      "name": "풍도보건진료소",
+      "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+      "status": 200,
+      "sha256": "72496a48a969d61a4eadd7605668988af0380e3f06e0d659b87a506564d1c115"
+    },
+    {
+      "name": "단원보건소",
+      "url": "https://www.ansan.go.kr/health/main/main.do",
+      "status": 200,
+      "sha256": "c67a5e529aa4170aa70833388b89f0b8f93758a5d86ff56f7bd402d144615e0a"
+    },
+    {
+      "name": "수암보건지소",
+      "url": "https://www.ansan.go.kr/snshealth/common/cntnts/selectContents.do?cntnts_id=C0001827",
+      "status": 200,
+      "sha256": "e5602443bba6e1b128305a8618a5d95729668776d074aa8499fb72dc9ce8726a"
+    }
+  ],
+  "limitations": [
+    "Seven exact paths on one municipal host, not seven independent domains",
+    "Original Ansan Namdong name retained; municipality confirmed by official page location",
+    "Unreviewed content IDs and sibling institutions not granted identity",
+    "Medical availability not verified"
+  ],
+  "counts": {
+    "records": 22004,
+    "hosts": 16252,
+    "excluded": 2496,
+    "missing_homepage": 2469,
+    "public_health_missing": 111,
+    "corrections": 84,
+    "inactive_corrections": 0
+  },
+  "catalog_sha256": "75fb320de81240fd550e5f6b33797ea5b3c633912156a4d1b5bf308daf3f3024",
+  "existing_record_changes": [
+    {
+      "id": "site_0b4ab98460676fad1667",
+      "before": {
+        "id": "site_0b4ab98460676fad1667",
+        "name": "경기도 안산시청",
+        "host": "www.ansan.go.kr",
+        "family": "ansan.go.kr",
+        "url": "https://www.ansan.go.kr",
+        "scope": "host",
+        "kind": "government_directory",
+        "verified": true,
+        "checked": "2026-09-25",
+        "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+        "source_updated": null
+      },
+      "after": {
+        "id": "site_0b4ab98460676fad1667",
+        "name": "경기도 안산시청",
+        "host": "www.ansan.go.kr",
+        "family": "ansan.go.kr",
+        "url": "https://www.ansan.go.kr",
+        "scope": "url",
+        "kind": "government_directory",
+        "verified": true,
+        "checked": "2026-09-25",
+        "source": "https://www.gov.kr/portal/orgSite?pageIndex=38",
+        "source_updated": null
+      }
+    }
+  ],
+  "new_record_ids": [
+    "site_e82f1bf450533db7f78e",
+    "site_6a8c70cf2584cbde1bf7",
+    "site_8a9fedaf84154cb54c1c",
+    "site_9a1439915df31749694a",
+    "site_ad0ee52e18a9210141b6",
+    "site_838eaea8493befb23fa2",
+    "site_22e219dd4c50b2e0925a"
+  ],
+  "local_checks": {
+    "passed": 60,
+    "seconds": 0.94
+  },
+  "vm_checks": {
+    "passed": 60,
+    "seconds": 1.73
+  },
+  "runtime_changes": false,
+  "bulk_source_redownloaded": false,
+  "vm_validation": {
+    "live": {
+      "job_id": "j_f9874329e40749639e149d707729cf5b",
+      "status": "done",
+      "elapsed_ms": 19321,
+      "error": null,
+      "verdict": "unknown",
+      "identity": {
+        "host": "www.ansan.go.kr",
+        "site_family": "ansan.go.kr",
+        "status": "verified",
+        "name": "풍도보건진료소",
+        "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": true,
+        "inspection_limit_reason": null,
+        "reason": "reviewed_official_source_correction",
+        "matched_entities": [
+          {
+            "id": "site_e82f1bf450533db7f78e",
+            "name": "풍도보건진료소",
+            "source": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+            "checked": "2026-09-25"
+          }
+        ],
+        "matched_entities_total": 1,
+        "related_addresses": [
+          "www.ansan.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "explanation": {
+        "headline": "풍도보건진료소 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 ansan.go.kr이에요.",
+          "공식 출처에서 풍도보건진료소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지가 나중에 스스로 바뀌는 내용"
+        ],
+        "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+        "action_bullets": [
+          "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://www.ansan.go.kr/health/common/cntnts/selectContents.do?cntnts_id=health17",
+          "host": "www.ansan.go.kr",
+          "registrable_domain": "ansan.go.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T18:27:56.106+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.ansan.go.kr"
+            ],
+            "sha256": "57e73772d44602e9029b444612a0723147bb0f6b08baaef13543d7a640fcb06f",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "75fb320de81240fd550e5f6b33797ea5b3c633912156a4d1b5bf308daf3f3024"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "policy_cleanup": "no residual investigation presets (effective policy verified)",
+  "flowline_history_archive": "docs/evidence/2026-09-26-flowline-kb-history-v24.md"
+}

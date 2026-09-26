@@ -1,0 +1,26 @@
+{
+  "source_job_id": "j_eb0ca19009c949c5856cb31ed126da84",
+  "validation": "saved actual evidence reassembly, no network investigation, no saved result mutation",
+  "url_address_said": "링크만 입력했어요",
+  "url_fields_said": "입력 목적을 제공하지 않았어요",
+  "url_purpose_label": null,
+  "url_trace_purpose_label": null,
+  "message_trace_purpose_label": "안내 문자",
+  "result_and_trace_models_validated": true,
+  "tests": {
+    "local": {
+      "passed": 98,
+      "seconds": 0.26
+    },
+    "vm": {
+      "passed": 98,
+      "seconds": 0.5
+    }
+  },
+  "files_sha256": {
+    "apps/api/app/presentation.py": "7ce5b57ec4eb8c756a4f8acf9bc409fa203ac0c08e23fac4eec2d474f9fce52f",
+    "apps/api/app/trace.py": "17003dde80b3dbddb160694a2922b077901e6f5e46f016b8b96b68e14f090350",
+    "apps/api/app/worker.py": "260b4dd2911957cc571f81698bce9adc56f55bad5a856e86426b3ee6bd265cd4"
+  },
+  "api_restarted_when_idle": true
+}

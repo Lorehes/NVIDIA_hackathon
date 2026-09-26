@@ -1,0 +1,337 @@
+{
+  "publishers": [
+    {
+      "name": "NHN PlayArt",
+      "url": "https://www.nhn-playart.com/",
+      "link_href": "/game/",
+      "service_name": "제작 게임 목록",
+      "scope": "url",
+      "minimum_records": 1
+    },
+    {
+      "name": "네이버",
+      "url": "https://www.navercorp.com/service/all",
+      "card_class": "summation-items",
+      "heading_tag": "h4",
+      "home_icon_class": "icon-btn-home",
+      "minimum_records": 50
+    },
+    {
+      "name": "네이버",
+      "url": "https://www.navercorp.com/service/portal",
+      "link_class": "section-type__btn--home",
+      "service_name": "네이버",
+      "minimum_records": 1
+    },
+    {
+      "name": "카카오",
+      "url": "https://www.kakaocorp.com/page/service/all",
+      "format": "nuxt_literal_directory",
+      "state_path": [
+        "data",
+        0,
+        "listData"
+      ],
+      "content_type": "SERVICE_ALL",
+      "web_icon_type": "ICON",
+      "scope": "url",
+      "web_link_titles": [
+        "사이트 바로가기",
+        "PC",
+        "모바일",
+        "이모티콘샵",
+        "이모티콘 플러스"
+      ],
+      "minimum_records": 15
+    },
+    {
+      "name": "NHN",
+      "url": "https://www.nhn.com/services",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko-KR",
+        "service"
+      ],
+      "groups": [
+        "game",
+        "paymentAd",
+        "commerce",
+        "technology",
+        "contents"
+      ],
+      "title_key": "title",
+      "url_key": "linkUrl",
+      "schemes": [
+        "http",
+        "https"
+      ],
+      "minimum_records": 20
+    },
+    {
+      "name": "토스",
+      "url": "https://toss.im/company",
+      "format": "named_affiliate_group",
+      "group_class": "_6ez2et1",
+      "group_heading_tag": "p",
+      "group_heading": "토스 계열사",
+      "scope": "url",
+      "minimum_records": 8,
+      "maximum_records": 12
+    },
+    {
+      "name": "넥슨",
+      "url": "https://www.nexon.com/Home/Game",
+      "format": "json_endpoint_directory",
+      "endpoint_element_id": "contents",
+      "endpoint_attribute": "data-oasisurl",
+      "endpoint_base": "https://oasisapi.nexon.com",
+      "endpoint_path": "/game/mainlist",
+      "data_url": "https://oasisapi.nexon.com/game/mainlist",
+      "success_fields": {
+        "status": 200,
+        "code": 100000
+      },
+      "records_path": [
+        "gameList"
+      ],
+      "title_path": [
+        "basicGameInfo",
+        "gameName"
+      ],
+      "home_paths": [
+        [
+          "extendGameInfo",
+          "gameWebUrl",
+          "pcSiteUrl"
+        ],
+        [
+          "extendGameInfo",
+          "gameWebUrl",
+          "mobileSiteUrl"
+        ]
+      ],
+      "schemes": [
+        "http",
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 30,
+      "maximum_records": 100,
+      "reviewed_script_url": "https://www.nexon.com/Home/js/bundles/home-pwa?v=npMN7g3PsW8f2GGZronlo1_acFZEoRdLMpbfe1KNtFk1",
+      "reviewed_script_sha256": "1c8e74fd3c69386cec7da4d0bf2dae63e6450a37e9e7868c06fb40b304dbc6f4"
+    },
+    {
+      "name": "넷마블",
+      "url": "https://company.netmarble.com/business/games",
+      "format": "paginated_json_directory",
+      "reviewed_script_sha256": [
+        "cf4d15bf44bc5d3b076659c549cf7f41c07a9a9c34feec05a83f37aa4a20a30e",
+        "f1e53a74703d70a51ec0b7042658d1c40204dc8b7c44b954560dc622fdea39d9"
+      ],
+      "endpoint_template": "/api/kogames/{category}/{page}",
+      "categories": [
+        "mobile",
+        "pc",
+        "console"
+      ],
+      "maximum_pages": 10,
+      "page_size": 12,
+      "success_fields": {},
+      "records_path": [
+        "gameList"
+      ],
+      "title_path": [
+        "gameName"
+      ],
+      "home_paths": [
+        [
+          "gameSiteUrl"
+        ]
+      ],
+      "schemes": [
+        "https",
+        "http"
+      ],
+      "scope": "url",
+      "minimum_records": 25,
+      "maximum_records": 100
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/ko",
+      "link_class": "i-go",
+      "heading_tag": "a",
+      "scope": "url",
+      "minimum_records": 13
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/service/docs",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko",
+        "service-contents",
+        "HancomDocs"
+      ],
+      "groups": [
+        "serviceTopBanner"
+      ],
+      "group_shape": "object",
+      "title_key": "text1",
+      "url_key": "link1",
+      "schemes": [
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 1,
+      "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/docs-080a10948416fdde.js",
+      "reviewed_script_sha256": "d960104f06a8ebb0c66b09333db9576e72f74afb9e5e238b9f4b8637f019effc"
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/service/taja",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko",
+        "service-contents",
+        "HancomTaja"
+      ],
+      "groups": [
+        "serviceTopBanner"
+      ],
+      "group_shape": "object",
+      "title_key": "text1",
+      "url_key": "link1",
+      "schemes": [
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 1,
+      "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/taja-539c09bd3281a8fb.js",
+      "reviewed_script_sha256": "91d5cc7099431d3bab815bf0ca241e3492fe92f3d97568200657e0fbbbc2a308"
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/service/sign",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko",
+        "service-contents",
+        "HancomSign"
+      ],
+      "groups": [
+        "serviceTopBanner"
+      ],
+      "group_shape": "object",
+      "title_key": "text1",
+      "url_key": "link1",
+      "schemes": [
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 1,
+      "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/sign-227003586865e278.js",
+      "reviewed_script_sha256": "353fa52fc6cd97ec8beeb052c530d74d0863ea9df820030bfd559d1536adc046"
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/service/hform",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko",
+        "service-contents",
+        "HancomForms"
+      ],
+      "groups": [
+        "serviceTopBanner"
+      ],
+      "group_shape": "object",
+      "title_key": "text1",
+      "url_key": "link1",
+      "schemes": [
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 1,
+      "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/hform-b772d2f92564dfec.js",
+      "reviewed_script_sha256": "b7dcf55590e93850e2ae7f1a42a83c83c5b95d5c86c449c5b6a7d33fa6442c31"
+    },
+    {
+      "name": "한글과컴퓨터",
+      "url": "https://www.hancom.com/service/developer",
+      "format": "json_directory",
+      "script_id": "__NEXT_DATA__",
+      "state_path": [
+        "props",
+        "pageProps",
+        "_nextI18Next",
+        "initialI18nStore",
+        "ko",
+        "service-contents",
+        "HancomDeveloper"
+      ],
+      "groups": [
+        "serviceTopBanner"
+      ],
+      "group_shape": "object",
+      "title_key": "text1",
+      "url_key": "link1",
+      "schemes": [
+        "https"
+      ],
+      "scope": "url",
+      "minimum_records": 1,
+      "reviewed_script_url": "https://www.hancom.com/_next/static/chunks/pages/service/developer-a0c06a1930941195.js",
+      "reviewed_script_sha256": "fd22e351bcea76ebeb8e9767f34bf300b8b557590239b0757871de887c622053"
+    },
+    {
+      "name": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/",
+      "link_class": "apps-service-link",
+      "heading_tag": "a",
+      "scope": "url",
+      "minimum_records": 24
+    },
+    {
+      "name": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-find/",
+      "link_href": "https://samsungfind.samsung.com/login",
+      "service_name": "Samsung Find",
+      "scope": "url",
+      "minimum_records": 1
+    },
+    {
+      "name": "삼성전자",
+      "url": "https://www.samsung.com/sec/apps/samsung-cloud/",
+      "link_href": "https://www.samsungcloud.com",
+      "service_name": "삼성 클라우드",
+      "scope": "url",
+      "minimum_records": 1
+    }
+  ]
+}

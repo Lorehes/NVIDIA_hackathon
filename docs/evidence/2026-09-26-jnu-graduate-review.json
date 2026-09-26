@@ -1,0 +1,320 @@
+{
+  "checked": "2026-09-26",
+  "before_sha256": {
+    "kb/site_catalog.json": "d9241b551fb8ff82243a5b7d4814e134574ab0407b6cd5f64bb04c10a5f1a056",
+    "kb/sources/coverage.json": "44814c575e54c33603d32093d9da34563e168c5573047a2916539107102cc24c",
+    "kb/sources/verified_corrections.json": "2833ef05241dc69a1d810a797f39abd3a5f6eff54c8ccece4e0ccdaef41d80b5",
+    "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+  },
+  "added": [
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "5d923749cb2dcb852b8138b832fcabd63dcdd49cd22692485f97bf4b5c9d7c91",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 대학원",
+      "original_url": "",
+      "url": "https://webgs.jnu.ac.kr/IndexMain.aspx",
+      "scope": "url",
+      "source": "https://webgs.jnu.ac.kr/IndexMain.aspx",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "대학원",
+          "target": "https://webgs.jnu.ac.kr/",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://webgs.jnu.ac.kr/IndexMain.aspx",
+          "http_status": 200,
+          "body_sha256": "89838d912c4c3440834cb0783e110730c4afebda5e20d9fc29abeadc5c34359e",
+          "title": "전남대학교 대학원 홈페이지"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "d27280513f0b2b05852d3836fb265fed809155454434e1816c0945e66440e904",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 경영전문대학원",
+      "original_url": "",
+      "url": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_Business",
+      "scope": "url",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_Business",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "경영전문대학원",
+          "target": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_Business",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_Business",
+          "http_status": 200,
+          "body_sha256": "9ab12392f48a49bc11985c3962fcc04ccfc20bc508d2cd3edd1b5160af287b2d",
+          "title": "경영전문대학원 < 전문대학원 < 대학·대학원 < 전남대학교 대표 홈페이지"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "1ec85c5cb8e8ed2ff405ac4553c902f44ff5c1e6fdfb85f6cf4ee2b8f3b7a049",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 법학전문대학원",
+      "original_url": "",
+      "url": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_law",
+      "scope": "url",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_law",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "법학전문대학원",
+          "target": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_law",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Professional/Pro_law",
+          "http_status": 200,
+          "body_sha256": "db04e16997596380b77c000d65e67a5fa4aefc58874127e5381eb1c191f616d0",
+          "title": "법학전문대학원 < 전문대학원 < 대학·대학원 < 전남대학교 대표 홈페이지"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "572f7237efd69df8f23510ccf6431fa8230960c101d04ce4a0dad45f5e20e0f5",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 산업대학원",
+      "original_url": "",
+      "url": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Industry",
+      "scope": "url",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Industry",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "산업대학원",
+          "target": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Industry",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Industry",
+          "http_status": 200,
+          "body_sha256": "0654428a2bebfb52e89c665d468995b35f270c71321bc7a5c137c6e03a221fa7",
+          "title": "산업대학원 < 특수대학원 < 대학·대학원 < 전남대학교 대표 홈페이지"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "2d35dbe6cd087c53c37b3aeffa9e04d70fc057ef7dd95afd82c7b6925e5a9070",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 산학협력대학원",
+      "original_url": "",
+      "url": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Collaboration",
+      "scope": "url",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Collaboration",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "산학협력대학원",
+          "target": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Collaboration",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Collaboration",
+          "http_status": 200,
+          "body_sha256": "a1079231164fbd2cf5bdfeeadb598aca6fae5d1216dcc3f0c26df0c5cd584adc",
+          "title": "산학협력대학원(여수) < 특수대학원 < 대학·대학원 < 전남대학교 대표 홈페이지"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "d94975aef3b902d5ab8e9a5eb5fcffec95c4baedbd9fd41276024a0c6f32d244",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "전남대학교 수산해양대학원",
+      "original_url": "",
+      "url": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+      "scope": "url",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_university_navigation",
+          "source": "https://www.jnu.ac.kr/jnumain.aspx",
+          "label": "수산해양대학원",
+          "target": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+          "body_sha256": "7bf3d1c14e3f8f30251f0a290763fce58decc337d0907427591b084bc44499db"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+          "http_status": 200,
+          "body_sha256": "67d88efce702983c94111ac4228c5e983746c7612ff51bcbb1779b3e3b0fae9a",
+          "title": "수산해양대학원(여수) < 특수대학원 < 대학·대학원 < 전남대학교 대표 홈페이지"
+        }
+      ]
+    }
+  ],
+  "historical_name_review": {
+    "original_row": {
+      "name": "전남대학교 행정대학원",
+      "url": "",
+      "kind": "university",
+      "source_updated": "2026-03-18",
+      "source": "https://www.data.go.kr/data/15107736/standard.do"
+    },
+    "source_row_sha256": "9d4bb3f9d8eb550af957593fd41d393fbc109e9c4152fb0a925d4bd1f686fd61",
+    "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+    "status": "historical_name_reorganized",
+    "reorganized_year": 2014,
+    "successor_name": "전남대학교 정책대학원",
+    "successor_already_listed": true,
+    "successor_original_url": "cnugspp.jnu.ac.kr",
+    "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Administration",
+    "source_body_sha256": "b5b2a8754da343cc7aec124f1be23658e155071f6b199532d491109b6dda1f01",
+    "evidence_summary": "공식 정책대학원 소개는 기존 행정대학원 체제를 개편해 2014년 정책교육기관으로 재출범했다고 명시한다.",
+    "action": "기존 제외행과 원자료 보존; 별도 현재기관 등록·자동 병합·폐지 판정 안함"
+  },
+  "limits": [
+    "대학원 안내페이지6개이며 독립 홈페이지6개를 등록했다는 뜻은 아님",
+    "현재 운영 상태 전수 검증 아님",
+    "대표 호스트·다른 대학원·경로·질의로 신원 확장 없음"
+  ],
+  "after_sha256": {
+    "kb/site_catalog.json": "5f44a924d5b902760d249e7ef94312f8f860565f4686d999bd80adf2ea2da093",
+    "kb/sources/coverage.json": "21c3a1f137f58044c36fbfeb3f194aade0de2d26d4419cd94640bd99df17ba41",
+    "kb/sources/verified_corrections.json": "df87d1495192e1f7102976c240482324a8b81a80c9c2649af735d3f8413aa36e",
+    "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+  },
+  "validation": {
+    "old_records_unchanged": 22190,
+    "existing_scope_narrowed": [
+      {
+        "before": {
+          "id": "site_d7027a8f42bfd21041d1",
+          "name": "전남대학교",
+          "host": "www.jnu.ac.kr",
+          "family": "jnu.ac.kr",
+          "url": "http://www.jnu.ac.kr",
+          "scope": "host",
+          "kind": "government_directory",
+          "verified": true,
+          "checked": "2026-09-25",
+          "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+          "source_updated": null
+        },
+        "after": {
+          "id": "site_d7027a8f42bfd21041d1",
+          "name": "전남대학교",
+          "host": "www.jnu.ac.kr",
+          "family": "jnu.ac.kr",
+          "url": "http://www.jnu.ac.kr",
+          "scope": "url",
+          "kind": "government_directory",
+          "verified": true,
+          "checked": "2026-09-25",
+          "source": "https://www.gov.kr/portal/orgSite?pageIndex=60",
+          "source_updated": null
+        }
+      }
+    ],
+    "new_exact_identities": 6,
+    "unverified_boundaries": [
+      "https://www.jnu.ac.kr/?other=1",
+      "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Unlisted",
+      "https://webgs.jnu.ac.kr/IndexMain.aspx?other=1",
+      "https://other.jnu.ac.kr/IndexMain.aspx"
+    ],
+    "original_university_root_still_verified": true,
+    "local_tests": "28 passed in1.00s",
+    "vm_tests": "28 passed in1.95s"
+  },
+  "counts": {
+    "records": 22197,
+    "hosts": 16293,
+    "excluded": 2382,
+    "missing_homepage": 2357,
+    "corrections": 198,
+    "inactive": 0
+  },
+  "vm_deployment": {
+    "backup": "/tmp/jnu-deploy-20260926T052445Z",
+    "after_sha256": {
+      "kb/site_catalog.json": "5f44a924d5b902760d249e7ef94312f8f860565f4686d999bd80adf2ea2da093",
+      "kb/sources/coverage.json": "21c3a1f137f58044c36fbfeb3f194aade0de2d26d4419cd94640bd99df17ba41",
+      "kb/sources/verified_corrections.json": "df87d1495192e1f7102976c240482324a8b81a80c9c2649af735d3f8413aa36e",
+      "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a"
+    }
+  },
+  "vm_live": {
+    "job_id": "j_c1c1b76380b743508e48bc3cbe48a695",
+    "status": "done",
+    "elapsed_ms": 12794,
+    "timings": {
+      "parse": 118,
+      "policy_open": 2174,
+      "agent_investigate": 1927,
+      "sandbox_total": 12480,
+      "verdict": 2,
+      "explain": 1,
+      "total": 12790
+    },
+    "identity": {
+      "host": "www.jnu.ac.kr",
+      "site_family": "jnu.ac.kr",
+      "status": "verified",
+      "name": "전남대학교 수산해양대학원",
+      "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_6f5e7c0a4a1dc058c8db",
+          "name": "전남대학교 수산해양대학원",
+          "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Sea",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.jnu.ac.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  }
+}

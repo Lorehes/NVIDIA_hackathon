@@ -12,7 +12,7 @@ export const STEP_TITLE: Record<StepKey, string> = {
 const WAITING_HINT: Record<StepKey, string> = {
   claim: "누가 보낸 척하는 문자인지 봐요",
   address: "주소를 조각내서 살펴봐요",
-  sandbox: "링크 한 곳만 안전 공간에서 열어봐요",
+  sandbox: "사이트의 허용된 주소를 안전 공간에서 열어봐요",
   page: "무엇을 적으라고 하는지 봐요",
   summary: "쉽게 설명을 써요",
 };
@@ -50,7 +50,7 @@ export function StepList({ steps }: { steps: StepState[] }) {
 export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: number }) {
   const queued = job.status === "queued";
   const sec = Math.floor(elapsedMs / 1000);
-  const pct = Math.min(96, Math.round((elapsedMs / 60000) * 100));
+  const pct = Math.min(96, Math.round((elapsedMs / 90000) * 100));
   const sandboxRunning = job.steps.find((s) => s.key === "sandbox")?.status === "running" || job.open_hosts.length > 0;
 
   return (
@@ -59,7 +59,7 @@ export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: numb
         <div className="col gap8">
           <h1>{queued ? "순서를 기다리고 있어요" : "확인하고 있어요"}</h1>
           <span className="progress-sub">
-            {queued ? "안전을 위해 한 번에 한 건씩 확인해요." : "보통 1분 안에 끝나요. 이 화면을 닫지 말고 기다려 주세요."}
+            {queued ? "안전을 위해 한 번에 한 건씩 확인해요." : "확인하는 동안 이 화면을 열어 두세요. 1분 이상 걸릴 수 있어요."}
           </span>
         </div>
         {queued && (
@@ -69,7 +69,7 @@ export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: numb
             </span>
             <div className="col" style={{ gap: 4 }}>
               <span className="t">앞 사람의 확인이 끝나면 바로 시작해요</span>
-              <span className="d">안전을 위해 한 번에 한 건씩 확인해요. 1분쯤 기다려 주세요.</span>
+              <span className="d">앞선 조사가 끝나면 시작해요. 대기 시간이 추가될 수 있어요.</span>
             </div>
           </div>
         )}
@@ -87,7 +87,7 @@ export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: numb
           <div className="bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} aria-label="진행 정도">
             <i style={{ width: `${pct}%` }} />
           </div>
-          <span className="hint">보통 40초~1분 걸려요</span>
+          <span className="hint">진행 상황에 따라 1분 이상 걸릴 수 있어요</span>
         </div>
         {sandboxRunning ? (
           <div className="vault">
@@ -96,7 +96,7 @@ export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: numb
               <span>안전 공간에서 여는 중</span>
             </div>
             <p>
-              이 링크 <b>한 곳만</b> 문을 열어 두었어요. 확인이 끝나면 문을 바로 닫아요.
+              이 사이트의 <b>허용된 주소만</b> 문을 열어 두었어요. 확인이 끝나면 문을 바로 닫아요.
             </p>
             <div className="blocked">
               <span>막은 곳</span>
@@ -105,7 +105,7 @@ export function ProgressView({ job, elapsedMs }: { job: JobView; elapsedMs: numb
           </div>
         ) : (
           <div className="note-card">
-            <p>링크는 안전 공간에서만 열고, 조사할 한 곳만 문을 열었다가 닫아요.</p>
+            <p>링크는 안전 공간에서만 열고, 조사할 사이트의 허용된 주소만 문을 열었다가 닫아요.</p>
           </div>
         )}
       </div>

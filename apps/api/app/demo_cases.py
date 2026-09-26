@@ -27,6 +27,10 @@ DEMO_CASES: list[dict] = [
 # 화면 QA·재생 전용(예시 버튼에는 나오지 않는다)
 EXTRA_CASES: list[dict] = [
     {
+        "id": "vm-example", "label": "VM 실제 조사: 공개 예시 주소", "expected_verdict": "unknown",
+        "input": "https://example.com", "live_capture_only": True,
+    },
+    {
         "id": "extra-caution", "label": "목록에 없는 회사", "expected_verdict": "caution",
         "input": "[별빛마켓] 회원 정보 확인이 필요합니다. https://member-check.test/login",
     },

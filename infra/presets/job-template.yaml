@@ -1,9 +1,9 @@
 # 조사 1건용 egress 프리셋 템플릿 (상세 명세 6-1)
 # 작업마다 <job_id>, <target_host>를 치환해 `job-<job_id>`로 적용하고, 조사가 끝나면 반드시 제거한다.
-# 대상 호스트 하나, 443/80, GET, python3 실행 파일로만 한정한다.
+# 기본 대상 호스트의 443/80, GET, python3만 허용한다. 발견한 이동 주소는 호스트 검사 후 정확한 주소·공인 IP를 추가한다.
 preset:
   name: job-<job_id>
-  description: "Investigation egress for one target host"
+  description: "Investigation egress for validated site addresses"
 network_policies:
   job-<job_id>:
     name: job-<job_id>

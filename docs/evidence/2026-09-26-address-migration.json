@@ -1,0 +1,197 @@
+{
+  "job_id": "j_0ad24aade0264dacbc7a43e76669650e",
+  "timings": {
+    "parse": 0,
+    "policy_open": 1190,
+    "agent_investigate": 1057,
+    "sandbox_total": 10622,
+    "verdict": 8,
+    "explain": 2,
+    "total": 10666
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "catalog_sha256": "601cf48c42cf0a9d8d87058a566b511a1248c0f842ca3ebfb2dce7a50e5c5ae8",
+  "verdict": "unknown",
+  "identity": {
+    "host": "www.nhn-playart.com",
+    "site_family": "nhn-playart.com",
+    "status": "verified",
+    "name": "NHN PlayArt 제작 게임 목록",
+    "source": "https://www.nhn-playart.com/",
+    "checked": "2026-09-25",
+    "canonical_from": null,
+    "expires_at": null,
+    "inspection_supported": true,
+    "inspection_limit_reason": null,
+    "reason": "publisher_service_link",
+    "matched_entities": [
+      {
+        "id": "site_4d008e9f021534744935",
+        "name": "NHN PlayArt 제작 게임 목록",
+        "source": "https://www.nhn-playart.com/",
+        "checked": "2026-09-25"
+      }
+    ],
+    "matched_entities_total": 1,
+    "related_addresses": [
+      "www.nhn-playart.com"
+    ],
+    "observed_redirects": [
+      {
+        "host": "www.nhn-playart.com",
+        "observed_at": 1790353311.9173548,
+        "expires_at": 1790439711.9173548,
+        "kind": "redirect_observed"
+      }
+    ],
+    "behavior": "incomplete"
+  },
+  "signals": [
+    {
+      "type": "official_match",
+      "strength": "positive",
+      "data": {
+        "domain": "nhn-playart.com",
+        "entity_id": "site_4d008e9f021534744935"
+      }
+    }
+  ],
+  "explanation": {
+    "headline": "NHN PlayArt 제작 게임 목록 공식 주소로 확인됐어요.",
+    "warning": null,
+    "detail": "공식 출처에 나온 주소와 일치해요. 이동 중 암호화되지 않은 HTTP 연결을 거쳤어요. 마지막 연결의 인증서 검증만으로 전체 이동이 보호됐다고 볼 수 없어요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+    "confirmed_facts": [
+      "진짜 사이트 이름은 nhn-playart.com이에요.",
+      "공식 출처에서 NHN PlayArt 제작 게임 목록 서비스의 주소를 확인했어요."
+    ],
+    "suspicion_evidence": [],
+    "unverified": [
+      "페이지가 나중에 스스로 바뀌는 내용"
+    ],
+    "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+    "action_bullets": [
+      "공식 주소의 별도 근거는 확인했지만, 이동 중 HTTP 연결은 암호화되지 않았어요."
+    ],
+    "source": "template"
+  },
+  "redirect_chain": [
+    {
+      "url": "https://www.nhn-playart.com/game.nhn",
+      "host": "www.nhn-playart.com",
+      "registrable_domain": "nhn-playart.com",
+      "status": 301,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-25T16:21:42.740+00:00"
+    },
+    {
+      "url": "http://www.nhn-playart.com/game/",
+      "host": "www.nhn-playart.com",
+      "registrable_domain": "nhn-playart.com",
+      "status": 301,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-25T16:21:43.052+00:00"
+    },
+    {
+      "url": "https://www.nhn-playart.com:443/game/",
+      "host": "www.nhn-playart.com",
+      "registrable_domain": "nhn-playart.com",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-25T16:21:43.252+00:00"
+    }
+  ],
+  "connection": {
+    "verified": true,
+    "certificates": [
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "www.nhn-playart.com"
+        ],
+        "sha256": "51a80e3b946dd2111ed517ae0eb4f74687f387785275cc780e2960f5eb6be895",
+        "protocol": "TLSv1.3"
+      },
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "www.nhn-playart.com"
+        ],
+        "sha256": "51a80e3b946dd2111ed517ae0eb4f74687f387785275cc780e2960f5eb6be895",
+        "protocol": "TLSv1.3"
+      }
+    ],
+    "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+  },
+  "tests": {
+    "local_full": {
+      "passed": 564,
+      "seconds": 41.9
+    },
+    "vm_full": {
+      "passed": 564,
+      "seconds": 67.47
+    },
+    "final_wording": {
+      "local_passed": 10,
+      "local_seconds": 0.2,
+      "vm_passed": 10,
+      "vm_seconds": 0.33
+    },
+    "web_typecheck": "passed on VM",
+    "web_build": "passed on VM"
+  },
+  "browser_verified": true,
+  "effective_policy_verified": true,
+  "residual_investigation_policies": 0,
+  "catalog": {
+    "records": 21874,
+    "hosts": 16199,
+    "official_service_links": 124,
+    "excluded": 2573,
+    "missing_homepage": 2539,
+    "other_excluded": 34,
+    "inspection_limited": 22
+  },
+  "previous_job_id": "j_7c236a9f866842adafd7033a85ffa0dd"
+}

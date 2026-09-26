@@ -1,0 +1,1636 @@
+{
+  "checked": "2026-09-25",
+  "records": [
+    {
+      "name": "국립재활원",
+      "url": "http://www.nrc.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000003"
+    },
+    {
+      "name": "한국원자력의학원 원자력병원",
+      "url": "http://www.kcch.re.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000006"
+    },
+    {
+      "name": "서울의료원",
+      "url": "http://www.seoulmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000009"
+    },
+    {
+      "name": "서울북부병원",
+      "url": "https://www.seoulnmh.net/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000012"
+    },
+    {
+      "name": "서울서북병원",
+      "url": "https://sbhosp.seoul.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000014"
+    },
+    {
+      "name": "넥슨후원 공공어린이재활병원",
+      "url": "http://www.purmehospital.org/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000245"
+    },
+    {
+      "name": "서울은평병원",
+      "url": "https://ephosp.seoul.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000018"
+    },
+    {
+      "name": "서울지구병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000194"
+    },
+    {
+      "name": "서울대학교병원",
+      "url": "http://www.snuh.org",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000004"
+    },
+    {
+      "name": "서울대학교치과병원",
+      "url": "https://www.snudh.org/portal/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000005"
+    },
+    {
+      "name": "서울동부병원",
+      "url": "http://dbhosp.go.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000011"
+    },
+    {
+      "name": "국립정신건강센터",
+      "url": "https://www.ncmh.go.kr/ncmh/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000002"
+    },
+    {
+      "name": "서울적십자병원",
+      "url": "https://rch.or.kr/web/rchseoul/main/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000023"
+    },
+    {
+      "name": "국립중앙의료원",
+      "url": "http://www.nmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000001"
+    },
+    {
+      "name": "서울장애인치과병원",
+      "url": "https://www.sdh.go.kr/home.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000017"
+    },
+    {
+      "name": "성동재활의원",
+      "url": "https://www.sd.go.kr/main/contents.do?key=5203&",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000247"
+    },
+    {
+      "name": "한국보훈복지의료공단 서울요양병원",
+      "url": "https://www.bohun.or.kr/seoulcare/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000242"
+    },
+    {
+      "name": "한국보훈복지의료공단 중앙보훈병원",
+      "url": "https://www.bohun.or.kr/seoul/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000008"
+    },
+    {
+      "name": "서울서남병원",
+      "url": "http://www.seoulsnh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000015"
+    },
+    {
+      "name": "근로복지공단 서울의원",
+      "url": "https://www.comwel.or.kr/seoulclinic/index.jsp",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000234"
+    },
+    {
+      "name": "서울보라매병원",
+      "url": "https://www.brmh.org/main/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000013"
+    },
+    {
+      "name": "경찰병원",
+      "url": "http://www.nph.go.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000007"
+    },
+    {
+      "name": "관악서울대학교 치과병원",
+      "url": "https://www.snudhgw.org/gw/main/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000246"
+    },
+    {
+      "name": "강남구립행복요양병원",
+      "url": "http://www.gangnamguhospital.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000201"
+    },
+    {
+      "name": "서울어린이병원",
+      "url": "https://childhosp.seoul.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000016"
+    },
+    {
+      "name": "강원특별자치도 속초의료원",
+      "url": "http://www.sokchomc.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000087"
+    },
+    {
+      "name": "국군춘천병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000189"
+    },
+    {
+      "name": "강원특별자치도재활병원",
+      "url": "http://www.grh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000090"
+    },
+    {
+      "name": "강원대학교병원",
+      "url": "http://www.knuh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000080"
+    },
+    {
+      "name": "춘천시립노인전문병원",
+      "url": "http://www.ccsilverh.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000091"
+    },
+    {
+      "name": "국군강릉병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000191"
+    },
+    {
+      "name": "국립춘천병원",
+      "url": "https://www.cnmh.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000079"
+    },
+    {
+      "name": "국군홍천병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000192"
+    },
+    {
+      "name": "강원특별자치도 강릉의료원",
+      "url": "http://www.gnmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000086"
+    },
+    {
+      "name": "강원특별자치도 강릉요양병원",
+      "url": "http://www.gnmch.or.kr/new/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000218"
+    },
+    {
+      "name": "강릉원주대학교 치과병원",
+      "url": "http://www.gwnudh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000081"
+    },
+    {
+      "name": "근로복지공단 동해병원",
+      "url": "https://www.comwel.or.kr/donghae/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000082"
+    },
+    {
+      "name": "강원특별자치도 원주의료원",
+      "url": "http://www.kwmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000085"
+    },
+    {
+      "name": "근로복지공단 정선병원",
+      "url": "https://www.comwel.or.kr/jeongseon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000084"
+    },
+    {
+      "name": "강원특별자치도 삼척의료원",
+      "url": "http://www.ksmc.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000088"
+    },
+    {
+      "name": "강원특별자치도 영월의료원",
+      "url": "http://www.youngwol.org",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000089"
+    },
+    {
+      "name": "정선의료재단 군립병원",
+      "url": "https://www.jeongseonmc.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000220"
+    },
+    {
+      "name": "근로복지공단 태백병원",
+      "url": "https://www.comwel.or.kr/taebaek/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000083"
+    },
+    {
+      "name": "근로복지공단 태백요양병원",
+      "url": "https://www.comwel.or.kr/taebaekyoyang/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000307"
+    },
+    {
+      "name": "국군포천병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000187"
+    },
+    {
+      "name": "국군양주병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000186"
+    },
+    {
+      "name": "경기도립노인전문동두천병원",
+      "url": "http://www.gdsilver.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000076"
+    },
+    {
+      "name": "경기도의료원 포천병원",
+      "url": "https://www.medical.or.kr/pocheon/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000069"
+    },
+    {
+      "name": "경기도의료원 파주병원",
+      "url": "https://www.medical.or.kr/paju/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000066"
+    },
+    {
+      "name": "고양정신병원",
+      "url": "http://www.kymhosp.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000019"
+    },
+    {
+      "name": "국군고양병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000185"
+    },
+    {
+      "name": "경기도의료원 의정부병원",
+      "url": "https://www.medical.or.kr/uijeongbu/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000065"
+    },
+    {
+      "name": "축령정신병원",
+      "url": "http://crmh.or.kr/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000022"
+    },
+    {
+      "name": "경기도립노인전문남양주병원",
+      "url": "http://www.gngh.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000072"
+    },
+    {
+      "name": "국립암센터",
+      "url": "http://www.ncc.re.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000059"
+    },
+    {
+      "name": "국민건강보험 일산병원",
+      "url": "http://www.nhimc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000060"
+    },
+    {
+      "name": "국군구리병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000233"
+    },
+    {
+      "name": "부천시립노인전문병원",
+      "url": "https://www.bucheonh.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000077"
+    },
+    {
+      "name": "성남시의료원",
+      "url": "https://www.scmc.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000232"
+    },
+    {
+      "name": "국립교통재활병원",
+      "url": "https://www.ntrh.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000204"
+    },
+    {
+      "name": "경기도립노인전문시흥병원",
+      "url": "http://www.gshospital.com",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000074"
+    },
+    {
+      "name": "국군수도병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000181"
+    },
+    {
+      "name": "경기도립노인전문여주병원",
+      "url": "http://www.noinhospital.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000075"
+    },
+    {
+      "name": "안산시립노인전문병원",
+      "url": "http://www.bumomam.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000078"
+    },
+    {
+      "name": "안산마음건강의원",
+      "url": "https://www.ansantrauma.net/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000311"
+    },
+    {
+      "name": "근로복지공단 안산병원",
+      "url": "https://www.comwel.or.kr/ansan/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000062"
+    },
+    {
+      "name": "경기도의료원 수원병원",
+      "url": "https://www.medical.or.kr/suwon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000064"
+    },
+    {
+      "name": "분당서울대학교병원",
+      "url": "http://www.snubh.org",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000061"
+    },
+    {
+      "name": "경기도의료원 이천병원",
+      "url": "https://www.medical.or.kr/icheon/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000067"
+    },
+    {
+      "name": "경기도립노인전문용인병원",
+      "url": "https://www.silvernet.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000071"
+    },
+    {
+      "name": "경기도립정신병원",
+      "url": "https://www.mentalhospital.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000070"
+    },
+    {
+      "name": "근로복지공단 경기요양병원",
+      "url": "https://www.comwel.or.kr/gyeonggi/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000063"
+    },
+    {
+      "name": "백암정신병원",
+      "url": "http://www.baekammh.or.kr/main.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000020"
+    },
+    {
+      "name": "경기도립 안성휴게소의원",
+      "url": "https://www.medical.or.kr/center/contentsInfo.do?menu_no=1901",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000255"
+    },
+    {
+      "name": "경기도립노인전문평택병원",
+      "url": "http://www.goodmsilver.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000073"
+    },
+    {
+      "name": "경기도의료원 안성병원",
+      "url": "https://www.medical.or.kr/ansung/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000068"
+    },
+    {
+      "name": "인천광역시의료원 백령병원",
+      "url": "http://www.wsy5234.icmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000043"
+    },
+    {
+      "name": "인천제2시립노인치매요양병원",
+      "url": "http://www.hallymsh.net/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000046"
+    },
+    {
+      "name": "인천시립치매요양병원",
+      "url": "http://www.icesh.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000045"
+    },
+    {
+      "name": "인천광역시의료원",
+      "url": "http://www.icmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000042"
+    },
+    {
+      "name": "근로복지공단 인천병원",
+      "url": "https://www.comwel.or.kr/incheon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000041"
+    },
+    {
+      "name": "한국보훈복지공단 인천보훈병원",
+      "url": "https://www.bohun.or.kr/incheon/main.do?checkRefer=Y",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000230"
+    },
+    {
+      "name": "인천적십자병원",
+      "url": "https://redcross.or.kr/incheon/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000047"
+    },
+    {
+      "name": "경인권역재활병원",
+      "url": "https://www.rch.or.kr/web/rchkyungin/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000044"
+    },
+    {
+      "name": "세종충남대학교병원",
+      "url": "https://www.cnush.co.kr/main/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000236"
+    },
+    {
+      "name": "대전보훈병원",
+      "url": "https://www.bohun.or.kr/daejeon/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000054"
+    },
+    {
+      "name": "대전광역시립제1노인전문병원",
+      "url": "https://ilovenoin.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000056"
+    },
+    {
+      "name": "국군대전병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000184"
+    },
+    {
+      "name": "근로복지공단 대전병원",
+      "url": "https://www.comwel.or.kr/daejeon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000053"
+    },
+    {
+      "name": "대전광역시온마음병원",
+      "url": "http://ssbw.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000055"
+    },
+    {
+      "name": "충남대학교병원",
+      "url": "https://www.cnuh.co.kr/home/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000052"
+    },
+    {
+      "name": "대전광역시립제2노인전문병원",
+      "url": "http://cmisilverdaejeon.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000057"
+    },
+    {
+      "name": "충청남도 서산의료원",
+      "url": "https://seosanmc.or.kr/index",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000105"
+    },
+    {
+      "name": "충청남도 천안의료원",
+      "url": "https://www.camc.or.kr/index",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000103"
+    },
+    {
+      "name": "천안시립노인전문병원",
+      "url": "http://www.cheonangh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000109"
+    },
+    {
+      "name": "충청남도 홍성의료원",
+      "url": "https://www.hsmc.or.kr/index",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000106"
+    },
+    {
+      "name": "보령시립노인전문병원",
+      "url": "http://www.brnoin.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000110"
+    },
+    {
+      "name": "충청남도 공주의료원",
+      "url": "https://www.gjmc.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000104"
+    },
+    {
+      "name": "국립공주병원",
+      "url": "http://www.knmh.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000101"
+    },
+    {
+      "name": "국립법무병원",
+      "url": "https://www.cppb.go.kr/cppb/999/subview.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000102"
+    },
+    {
+      "name": "서천군립노인요양병원",
+      "url": "http://www.scbokjitown.or.kr/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000112"
+    },
+    {
+      "name": "논산시립노인전문병원",
+      "url": "http://www.nshosp.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000111"
+    },
+    {
+      "name": "충주시노인전문병원",
+      "url": "https://cjh.radiantgrace.org/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000097"
+    },
+    {
+      "name": "청풍호노인사랑병원",
+      "url": "http://www.cplove.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000098"
+    },
+    {
+      "name": "충청북도 충주의료원",
+      "url": "http://www.cjmct.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000094"
+    },
+    {
+      "name": "단양군립노인요양병원",
+      "url": "http://dymh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000100"
+    },
+    {
+      "name": "충주위담통합병원",
+      "url": "https://www.cjweedahm.com/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000249"
+    },
+    {
+      "name": "충청북도 청주의료원",
+      "url": "http://www.cjmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000093"
+    },
+    {
+      "name": "충북대학교병원",
+      "url": "http://www.cbnuh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000092"
+    },
+    {
+      "name": "충청북도 청주의료원 부설한의원",
+      "url": "https://www.cjmc.or.kr/intro.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000250"
+    },
+    {
+      "name": "청주시립요양병원",
+      "url": "http://xn--5y2bi0dtuhi3c8qbmkq3k8rj.kr/skin_mw2/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000226"
+    },
+    {
+      "name": "충북도립노인전문병원",
+      "url": "https://www.xn--o80bo7bc7hmsbp4cb4a0z5blhb99ay26a.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000095"
+    },
+    {
+      "name": "공군항공우주의료원",
+      "url": "https://rokaf.airforce.mil.kr/airforce/485/subview.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000199"
+    },
+    {
+      "name": "영동군립노인전문병원",
+      "url": "http://www.cmisilver.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000099"
+    },
+    {
+      "name": "국립소방병원",
+      "url": "https://www.nfh.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000315"
+    },
+    {
+      "name": "울진군의료원",
+      "url": "https://www.umc.or.kr/main/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000149"
+    },
+    {
+      "name": "봉화군립노인전문요양병원",
+      "url": "http://bhhospital.co.kr/main/main.html",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000158"
+    },
+    {
+      "name": "울진군의료원 요양병원",
+      "url": "https://www.umc.or.kr/senior/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000217"
+    },
+    {
+      "name": "시립문경요양병원",
+      "url": "http://mghp.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000154"
+    },
+    {
+      "name": "영주시립노인전문요양병원",
+      "url": "http://www.yjctm.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000152"
+    },
+    {
+      "name": "영주적십자병원",
+      "url": "https://www.rch.or.kr/web/rchyoungju/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000229"
+    },
+    {
+      "name": "상주적십자병원",
+      "url": "https://www.rch.or.kr/web/rchsanju/main/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000159"
+    },
+    {
+      "name": "상주시립요양병원",
+      "url": "https://www.sjsh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000153"
+    },
+    {
+      "name": "경상북도립안동노인전문요양병원",
+      "url": "http://www.andongyuri.com/new/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000147"
+    },
+    {
+      "name": "경상북도 안동의료원",
+      "url": "https://www.amc.or.kr/front/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000144"
+    },
+    {
+      "name": "의성군공립요양병원",
+      "url": "https://uschp.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000221"
+    },
+    {
+      "name": "경상북도립김천노인전문요양병원",
+      "url": "http://silverhp.com/layout/res/home.php?go=main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000146"
+    },
+    {
+      "name": "경상북도김천의료원",
+      "url": "http://www.gcmc.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000143"
+    },
+    {
+      "name": "구미시립노인요양병원",
+      "url": "http://www.gumihosp.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000151"
+    },
+    {
+      "name": "근로복지공단 구미의원",
+      "url": "https://www.comwel.or.kr/gumiclinic/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000312"
+    },
+    {
+      "name": "칠곡군립노인요양병원",
+      "url": "https://chilgok8899.kr/new/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000157"
+    },
+    {
+      "name": "고령군립요양병원",
+      "url": "http://www.grsilver.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000156"
+    },
+    {
+      "name": "국군대구병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000183"
+    },
+    {
+      "name": "경북권역재활병원",
+      "url": "http://www.grrh.or.kr/main/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000252"
+    },
+    {
+      "name": "경상북도립경산노인전문요양병원",
+      "url": "http://www.gssilver.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000148"
+    },
+    {
+      "name": "경산동의한방촌",
+      "url": "https://www.hanbangchongbgs.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000253"
+    },
+    {
+      "name": "군립청도노인요양병원",
+      "url": "http://www.cdsilver.co.kr/html/main/main.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000155"
+    },
+    {
+      "name": "경주시립노인전문요양병원",
+      "url": "http://www.kjho.co.kr/2018/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000150"
+    },
+    {
+      "name": "경상북도포항노인전문요양병원",
+      "url": "https://www.pmc.or.kr/front/seniorsCareMain.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000145"
+    },
+    {
+      "name": "경상북도 포항의료원",
+      "url": "https://pmc.or.kr/front/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000142"
+    },
+    {
+      "name": "해군포항병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000198"
+    },
+    {
+      "name": "칠곡경북대학교병원",
+      "url": "https://www.knuch.kr:442/index.asp",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000034"
+    },
+    {
+      "name": "근로복지공단 대구병원",
+      "url": "https://www.comwel.or.kr/daegu",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000035"
+    },
+    {
+      "name": "경북대학교치과병원",
+      "url": "https://knudh.kr/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000223"
+    },
+    {
+      "name": "경북대학교병원",
+      "url": "https://www.knuh.kr/index.asp",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000033"
+    },
+    {
+      "name": "대구의료원",
+      "url": "http://www.daegumc.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000037"
+    },
+    {
+      "name": "대구광역시 서부노인전문병원",
+      "url": "https://dgsbgh.daegumc.co.kr:7443/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000039"
+    },
+    {
+      "name": "대구광역시 시지노인전문병원",
+      "url": "https://www.yes-naebumo.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000040"
+    },
+    {
+      "name": "대구정신병원",
+      "url": "http://www.daegumental.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000038"
+    },
+    {
+      "name": "한국보훈복지의료공단 대구보훈병원",
+      "url": "https://www.bohun.or.kr/daegu/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000036"
+    },
+    {
+      "name": "전북특별자치도 군산의료원",
+      "url": "https://www.kunmed.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000114"
+    },
+    {
+      "name": "전북특별자치도 마음사랑병원",
+      "url": "http://www.maeumsarang.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000116"
+    },
+    {
+      "name": "전북대학교병원",
+      "url": "https://www.jbuh.co.kr/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000113"
+    },
+    {
+      "name": "전북대학교치과병원",
+      "url": "https://www.jbuh.co.kr/dent.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000227"
+    },
+    {
+      "name": "전주시립요양병원",
+      "url": "http://www.jeonjuhos.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000119"
+    },
+    {
+      "name": "진안군의료원",
+      "url": "https://www.jgmc.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000310"
+    },
+    {
+      "name": "부안군노인요양병원",
+      "url": "http://buangh.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000122"
+    },
+    {
+      "name": "무주군립요양병원",
+      "url": "https://www.mujuh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000313"
+    },
+    {
+      "name": "정읍시립요양병원",
+      "url": "http://jcgh.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000120"
+    },
+    {
+      "name": "전북특별자치도 고창노인요양병원",
+      "url": "http://noinhospital.net/main.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000118"
+    },
+    {
+      "name": "전북특별자치도 남원노인요양병원",
+      "url": "http://www.nwhospital.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000117"
+    },
+    {
+      "name": "전북특별자치도 남원의료원",
+      "url": "https://www.namwonmed.or.kr:19005/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000115"
+    },
+    {
+      "name": "거창군립노인요양병원",
+      "url": "http://www.noin3333.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000175"
+    },
+    {
+      "name": "거창적십자병원",
+      "url": "https://www.rch.or.kr/web/rchgchang/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000177"
+    },
+    {
+      "name": "의령군립노인전문병원",
+      "url": "https://blog.naver.com/5740009",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000210"
+    },
+    {
+      "name": "국립부곡병원",
+      "url": "https://www.bgnmh.go.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000161"
+    },
+    {
+      "name": "경상남도립양산노인전문병원",
+      "url": "http://www.gygh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000171"
+    },
+    {
+      "name": "시립창원요양병원",
+      "url": "http://www.hyomind.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000172"
+    },
+    {
+      "name": "양산부산대학교병원",
+      "url": "https://www.pnuyh.or.kr/pnuyh/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000163"
+    },
+    {
+      "name": "양샨부산대학교한방병원",
+      "url": "http://pnukh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000308"
+    },
+    {
+      "name": "양산부산대학교치과병원",
+      "url": "https://www.pnudh.co.kr/pnudh/main/main.do?cmnx=1",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000025"
+    },
+    {
+      "name": "경상남도립김해노인전문병원",
+      "url": "https://www.gimhaenoin.co.kr:452/html/?pCode=42",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000170"
+    },
+    {
+      "name": "경상국립대학교병원",
+      "url": "https://www.gnuh.co.kr/gnuh/main/main.do?rbsIdx=1",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000162"
+    },
+    {
+      "name": "경상남도 마산의료원",
+      "url": "https://www.mmc.or.kr/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000165"
+    },
+    {
+      "name": "국립마산병원",
+      "url": "https://www.mnth.go.kr/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000160"
+    },
+    {
+      "name": "시립마산요양병원",
+      "url": "http://www.masanhp.co.kr/main/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000173"
+    },
+    {
+      "name": "근로복지공단 창원병원",
+      "url": "https://www.comwel.or.kr/changwon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000164"
+    },
+    {
+      "name": "창원경상국립대학교병원",
+      "url": "https://www.gnuch.co.kr/gnuh/main/main.do?rbsIdx=1",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000224"
+    },
+    {
+      "name": "해군해양의료원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000197"
+    },
+    {
+      "name": "경남도립사천노인전문병원",
+      "url": "http://www.4000silver.com/main.html",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000167"
+    },
+    {
+      "name": "경남도립정신병원",
+      "url": "http://4000maum.com/main.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000305"
+    },
+    {
+      "name": "남해군립노인전문병원",
+      "url": "http://nhsilver.com/main.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000174"
+    },
+    {
+      "name": "경상남도립통영노인전문병원",
+      "url": "http://www.gnsilver.com/main/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000168"
+    },
+    {
+      "name": "통영적십자병원",
+      "url": "https://www.rch.or.kr/web/rchtyoung/main",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000176"
+    },
+    {
+      "name": "울산광역시립노인병원",
+      "url": "http://www.ulsangh.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000058"
+    },
+    {
+      "name": "동남권 원자력의학원",
+      "url": "https://www.dirams.re.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000026"
+    },
+    {
+      "name": "부산시 노인전문제1병원",
+      "url": "http://www.busangh.co.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000030"
+    },
+    {
+      "name": "근로복지공단 부산의원",
+      "url": "https://www.comwel.or.kr/busanclinic/index.jsp",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000244"
+    },
+    {
+      "name": "부산시 노인전문 제3병원",
+      "url": "http://www.busangh.com",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000032"
+    },
+    {
+      "name": "한국보훈복지의료공단 부산요양병원",
+      "url": "https://www.bohun.or.kr/busan/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000309"
+    },
+    {
+      "name": "한국보훈복지의료공단 부산보훈병원",
+      "url": "https://www.bohun.or.kr/busan/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000027"
+    },
+    {
+      "name": "부산광역시의료원",
+      "url": "http://www.busanmc.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000028"
+    },
+    {
+      "name": "부산시 노인전문제2병원",
+      "url": "http://www.busangh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000031"
+    },
+    {
+      "name": "부산시립정신병원",
+      "url": "http://www.bmmh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000029"
+    },
+    {
+      "name": "부산시 노인전문제4병원",
+      "url": "http://xn--4-277es3w1sb5ya53lzzmkjb99a5g.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000207"
+    },
+    {
+      "name": "부산대학교병원",
+      "url": "http://www.pnuh.or.kr",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000024"
+    },
+    {
+      "name": "영광군공립요양병원",
+      "url": "https://ge.ygmc.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000139"
+    },
+    {
+      "name": "장성공립노인전문요양병원",
+      "url": "https://www.jsh.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000137"
+    },
+    {
+      "name": "곡성군립노인전문요양병원",
+      "url": "https://gshospital.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000133"
+    },
+    {
+      "name": "국군함평병원",
+      "url": "",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000193"
+    },
+    {
+      "name": "함평군공립요양병원",
+      "url": "http://hp8119.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000214"
+    },
+    {
+      "name": "공립무안군노인전문요양병원",
+      "url": "http://www.muansh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000138"
+    },
+    {
+      "name": "국립나주병원",
+      "url": "https://www.najumh.go.kr/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000125"
+    },
+    {
+      "name": "화순전남대학교병원",
+      "url": "https://www.cnuhh.com/main.cs",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000126"
+    },
+    {
+      "name": "화순군립요양병원",
+      "url": "http://www.cnuhgh.com",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000136"
+    },
+    {
+      "name": "전라남도 순천의료원",
+      "url": "https://jsmc.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000128"
+    },
+    {
+      "name": "근로복지공단 순천병원",
+      "url": "https://www.comwel.or.kr/suncheon/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000127"
+    },
+    {
+      "name": "광양시공립노인전문요양병원",
+      "url": "http://www.gyh.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000132"
+    },
+    {
+      "name": "국립목포병원",
+      "url": "https://www.tbmokpo.go.kr/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000124"
+    },
+    {
+      "name": "신안군공립요양병원",
+      "url": "http://www.xn--ob0b3ix93ac6cq6jvydyoaz0erp.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000141"
+    },
+    {
+      "name": "목포시의료원",
+      "url": "https://mokpomc.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000212"
+    },
+    {
+      "name": "보성군립노인전문요양병원",
+      "url": "https://bshospital.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000135"
+    },
+    {
+      "name": "여수시립요양병원",
+      "url": "http://www.yshospital.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000131"
+    },
+    {
+      "name": "전라남도 강진의료원",
+      "url": "https://www.gjmed.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000129"
+    },
+    {
+      "name": "장흥통합의료병원",
+      "url": "http://www.wkujim.co.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000228"
+    },
+    {
+      "name": "고흥군공립노인전문요양병원",
+      "url": "http://www.kgh.kr/skgh/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000134"
+    },
+    {
+      "name": "진도군노인전문요양병원",
+      "url": "http://xn--6e0bm0fm5be0mponnobbmh7b99a45i.kr/B/B/index.html",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000140"
+    },
+    {
+      "name": "국립소록도병원",
+      "url": "https://www.sorokdo.go.kr/sorokdo/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000123"
+    },
+    {
+      "name": "호남권역재활병원",
+      "url": "https://honamhosp.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000215"
+    },
+    {
+      "name": "광주보훈병원",
+      "url": "https://www.bohun.or.kr/gwangju/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000049"
+    },
+    {
+      "name": "광주보훈요양병원",
+      "url": "https://www.bohun.or.kr/gjcare/main.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000251"
+    },
+    {
+      "name": "광주시립정신병원",
+      "url": "http://www.gcmh.or.kr/main/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000050"
+    },
+    {
+      "name": "광주시립요양병원",
+      "url": "http://gcdh.or.kr/main/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000051"
+    },
+    {
+      "name": "근로복지공단 광주의원",
+      "url": "https://www.comwel.or.kr/gwangjuclinic/index.jsp",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000240"
+    },
+    {
+      "name": "전남대학교치과병원",
+      "url": "https://www.cnudh.co.kr/main.cs",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000211"
+    },
+    {
+      "name": "전남대학교병원",
+      "url": "https://www.cnuh.com/main.cs",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000048"
+    },
+    {
+      "name": "빛고을전남대학교병원",
+      "url": "https://www.cnubh.com/main.cs",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000209"
+    },
+    {
+      "name": "제주대학교병원",
+      "url": "https://www.jejunuh.co.kr/index.do",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000178"
+    },
+    {
+      "name": "제주특별자치도 제주의료원",
+      "url": "https://www.jejumed.com/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000179"
+    },
+    {
+      "name": "제주의료원부속요양병원",
+      "url": "https://jejumed.com/convalescent/intro",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000225"
+    },
+    {
+      "name": "서귀포의료원",
+      "url": "https://www.jjsmc.or.kr/index.php",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000180"
+    },
+    {
+      "name": "제주권역재활병원",
+      "url": "https://jrh.or.kr/",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000213"
+    },
+    {
+      "name": "서귀포공공협력의원",
+      "url": "https://www.jjsmc.or.kr/pages.php?p=7_7_1_1",
+      "source": "https://www.ppm.or.kr/",
+      "kind": "public_hospital",
+      "source_id": "MC000314"
+    }
+  ]
+}

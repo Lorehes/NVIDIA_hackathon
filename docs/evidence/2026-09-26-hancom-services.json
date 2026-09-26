@@ -1,0 +1,323 @@
+{
+  "date": "2026-09-26",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "source": "https://www.hancom.com/ko",
+  "source_http_status": 200,
+  "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2",
+  "selector": {
+    "link_class": "i-go",
+    "heading_tag": "a"
+  },
+  "before_sha256": {
+    "kb/sources/service_publishers.json": "00fd19a581461ae1642adf5f331ae7891dca06770150c89527614a031cdc2ee3",
+    "kb/sources/official_services.json": "96e6678ab9dfb18c46407bfe9007c14edfe58d49da17fb620aa07615293056b3",
+    "kb/site_catalog.json": "27530d792f2e68aadc77cb30c7d8473c62d12734a074f90b81b3cf34c2696e75",
+    "kb/sources/coverage.json": "5731793bff8c722ba18e3eb8cdb703ea57a7f4fe959252cc3020d4b4c50360d0"
+  },
+  "after_sha256": {
+    "kb/sources/service_publishers.json": "6a0a981d0243cf14f55d900db8170d5547812871f8ff9ee5ae8179bc917772d1",
+    "kb/sources/official_services.json": "d8e4773e4ff0c3d6c6953182d6e35da1683d83dc84eefca94c98b1810a6af417",
+    "kb/site_catalog.json": "f4076c0cec5b10bd770ac48e7756bedb03352b342ac74a5f1a9bf595139a6ba0",
+    "kb/sources/coverage.json": "11245f06adc9b3bc7575d052459547abe91fb28c139cab791dc62069fac3bd8c"
+  },
+  "added": [
+    {
+      "id": "site_47e9c2918a1156d73b16",
+      "name": "한글과컴퓨터 한글",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/office/forWindows/hwp",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한글",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_5d3d86563d731d744fe9",
+      "name": "한글과컴퓨터 한워드",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/office/forWindows/hanword",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한워드",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_395558b1bced50103cac",
+      "name": "한글과컴퓨터 한쇼",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/office/forWindows/hanshow",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한쇼",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_9c7241154c1b7c6a8931",
+      "name": "한글과컴퓨터 한셀",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/office/forWindows/hancell",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한셀",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_cebcf36a70ecf4a3cf6e",
+      "name": "한글과컴퓨터 한PDF",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/office/forWindows/hanpdf",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한PDF",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_dd9421e1e6d4c43cbcb8",
+      "name": "한글과컴퓨터 한컴오피스 SDK",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/sdk/officeSdk",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴오피스 SDK",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_76506af3277e1901d653",
+      "name": "한글과컴퓨터 한글 SDK",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/sdk/hwpSdk",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한글 SDK",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_d4eb30b15f087286fb6b",
+      "name": "한글과컴퓨터 한셀 SDK",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/product/sdk/hancellSdk",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한셀 SDK",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_b4b1b0f5c0557001daec",
+      "name": "한글과컴퓨터 한컴독스",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/service/docs",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴독스",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_41e19fb62f25bd8685c2",
+      "name": "한글과컴퓨터 한컴타자",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/service/taja",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴타자",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_f709ba9426baf45606e6",
+      "name": "한글과컴퓨터 한컴싸인",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/service/sign",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴싸인",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_c2d99b640f7be5adefef",
+      "name": "한글과컴퓨터 한컴폼즈",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/service/hform",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴폼즈",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    },
+    {
+      "id": "site_940720561970150b4bd7",
+      "name": "한글과컴퓨터 한컴디벨로퍼",
+      "host": "www.hancom.com",
+      "family": "hancom.com",
+      "url": "https://www.hancom.com/service/developer",
+      "scope": "url",
+      "kind": "official_service_directory",
+      "verified": true,
+      "checked": "2026-09-26",
+      "source": "https://www.hancom.com/ko",
+      "source_updated": null,
+      "publisher": "한글과컴퓨터",
+      "service_name": "한컴디벨로퍼",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "3d651ae9a6c5401ad25686a079389549a84328e5be7f423ecb51672ca0513ad2"
+    }
+  ],
+  "validation": {
+    "unchanged_existing_records": 22145,
+    "preserved_existing_service_evidence": 212,
+    "exact_identity_checks": 13,
+    "rejected_boundary_checks": 40,
+    "local_records": 22158,
+    "local_hosts": 16283,
+    "excluded": 2390,
+    "corrections": 190,
+    "inactive_corrections": 0,
+    "tests": {
+      "passed": 32,
+      "seconds": 0.33,
+      "environment": "local",
+      "scope": "test_site_identity.py,test_publisher_state.py,test_shared_identity_display.py"
+    }
+  },
+  "not_registered": [
+    {
+      "source": "https://estsoft.ai/cs",
+      "reason": "support directory includes outside institutions such as procurement portal; no blanket service grant"
+    },
+    {
+      "source": "https://www.krafton.com/games/",
+      "reason": "HTTP403 in web and direct request; no retries"
+    },
+    {
+      "source": "https://www.hancom.com/service/docs",
+      "reason": "external service home not declared as an ordinary anchor; no guessed link or executed script"
+    }
+  ],
+  "vm": {
+    "deployed": false,
+    "new_tests": false,
+    "new_live_investigation": false,
+    "last_verified_records": 22120,
+    "last_verified_hosts": 16282,
+    "pending_added_records": 38
+  },
+  "limitations": [
+    "13 product/service introduction pages on one host, not 13 distinct domains",
+    "Separate service-domain homepage links not yet established",
+    "No page behavior or original server TLS validation",
+    "No classifier code change"
+  ],
+  "reviewed_detail_pages": [
+    {
+      "url": "https://www.hancom.com/service/docs",
+      "status": 200,
+      "sha256": "44e102453053697d4e18f5076a5bdac43c6a5c68e9d26afb255fc3e0af1323ab"
+    },
+    {
+      "url": "https://www.hancom.com/service/taja",
+      "status": 200,
+      "sha256": "58a4f6ad8a808bd57d38876c8b38eb9d3b5a5326e4848d3e20c5f3362f6285f4"
+    },
+    {
+      "url": "https://www.hancom.com/service/sign",
+      "status": 200,
+      "sha256": "09d5e09538471640c5f21a74b2df49175d4bf0e84848480322d60a84dcbdea3e"
+    },
+    {
+      "url": "https://www.hancom.com/service/hform",
+      "status": 200,
+      "sha256": "655b7889f26d3552aac611d0a2a9969e44d1ede872ac7c65984872ad238e4ecc"
+    },
+    {
+      "url": "https://www.hancom.com/service/developer",
+      "status": 200,
+      "sha256": "7faff18392b0791e28ec3a860bfbf80688ae704277d578b595eda6047a13e7ea"
+    }
+  ],
+  "flowline": {
+    "task_id": "eb28f625-437a-45f6-afb4-f0f573312797",
+    "version": 40,
+    "status": "in_progress"
+  }
+}

@@ -8,6 +8,8 @@ import unicodedata
 from dataclasses import dataclass, field
 
 from .config import settings
+from .site_catalog import load_catalog, SiteCatalog, same_service_port
+from .urls import parse_url
 
 CATEGORY_DESC = {
     "delivery": "택배 배송 물류 운송장",
@@ -32,6 +34,28 @@ class Entity:
     official_app: str | None = None
     sources: list[dict] = field(default_factory=list)
     fictional: bool = False
+    identity_verified: bool = True
+    address_scope: str = 'registration'
+    source_url: str | None = None
+    observed_from: str | None = None
+
+    def matches(self, host: str, url: str | None = None, partner=False) -> bool:
+        if not self.identity_verified:
+            return False
+        domains = self.partner_domains if partner else self.official_domains
+        if self.address_scope == 'registration':
+            return (parse_url('https://' + host).get('registrable_domain') or host) in domains
+        if host not in domains:
+            return False
+        if self.source_url and url and not same_service_port(self.source_url, url):
+            return False
+        if self.address_scope == 'url':
+            from urllib.parse import urlsplit
+            if not url or not self.source_url:
+                return False
+            a, b = urlsplit(url), urlsplit(self.source_url)
+            return (a.path or '/', a.query) == (b.path or '/', b.query)
+        return True
 
     def as_candidate(self) -> dict:
         """샌드박스로 올리는 후보 레코드(input.json). 출처 등 불필요한 필드는 뺀다."""
@@ -43,10 +67,12 @@ class Entity:
 
 
 class KB:
-    def __init__(self, entities: list[Entity]):
+    def __init__(self, entities: list[Entity], catalog: SiteCatalog | None = None):
         self.entities = entities
         self.by_id = {e.id: e for e in entities}
         self._vecs: dict[str, list[float]] | None = None
+        self.catalog = catalog or SiteCatalog([])
+        self.catalog_path = None
 
     @classmethod
     def load(cls, path=None) -> "KB":
@@ -61,10 +87,69 @@ class KB:
                 official_app=r.get("official_app"), sources=r.get("sources", []),
                 fictional=bool(r.get("fictional", False)),
             ))
-        return cls(ents)
+        catalog_path = (path or settings.kb_path).with_name('site_catalog.json')
+        kb = cls(ents, load_catalog(catalog_path))
+        kb.catalog_path = catalog_path
+        return kb
 
-    def official_records(self) -> list[dict]:
-        return [{"entity_id": e.id, "domain": d} for e in self.entities for d in e.official_domains]
+    def refresh_catalog(self):
+        if self.catalog_path:
+            self.catalog = load_catalog(self.catalog_path)
+
+    def _catalog_entity(self, record):
+        e = Entity(id=record['id'], name=record['name'], aliases=[], category=record['kind'],
+                   official_domains=[record['host']], identity_verified=bool(record['verified'] and self.catalog.fresh(record)),
+                   address_scope=record['scope'], source_url=record['url'],
+                   sources=[{'url': record['source'], 'checked': record['checked']}])
+        self.by_id[e.id] = e
+        return e
+
+    def address_candidates(self, url: str) -> list[tuple[Entity, str]]:
+        """No embedding or model guess for a bare URL."""
+        self.refresh_catalog()
+        p = parse_url(url)
+        host = p.get('host_ascii', '')
+        for e in self.entities:
+            if e.matches(host, url) or e.matches(host, url, partner=True):
+                return [(e, 'address')]
+        record = self.catalog.lookup(url)
+        return [(self._catalog_entity(record), 'address')] if record else []
+
+    def official_records(self, candidates=()) -> list[dict]:
+        entities = {e.id: e for e in self.entities}
+        entities.update({e.id: e for e, _ in candidates if e.identity_verified})
+        return [{'entity_id': e.id, 'domain': d, **({'scope': e.address_scope} if e.address_scope != 'registration' else {})}
+                for e in entities.values() for d in e.official_domains]
+
+    def identity_summary(self, url, outcome, input_url=None):
+        result = self.catalog.describe(url)
+        if input_url and result['status'] != 'verified':
+            entry = self.catalog.describe(input_url)
+            if entry['status'] == 'verified':
+                result['source_address'] = {k: entry[k] for k in
+                                            ('name', 'source', 'checked', 'host', 'matched_entities')}
+        from .site_relations import RelationStore
+        try:
+            result['observed_redirects'] = RelationStore(settings.db_path.with_name('site_relations.sqlite')).related(result.get('host'))
+        except Exception:
+            result['observed_redirects'] = []
+        types = {s['type'] for s in outcome.signals}
+        if {'official_match', 'partner_match'} & types and outcome.entity:
+            entity = outcome.entity
+            reason = result['reason'] if result['status'] == 'verified' else 'sourced_address_match'
+            result.update(status='verified', name=entity.name, reason=reason)
+            if entity.sources:
+                result.update(source=entity.sources[0].get('url'), checked=entity.sources[0].get('checked'))
+            if entity.observed_from:
+                result.update(reason='observed_service_redirect', canonical_from=entity.observed_from,
+                              evidence_scope='this_investigation')
+        # Identity remains independent of detected behavior, including on official sites.
+        result['behavior'] = ('incomplete' if outcome.unknown_reason == 'incomplete' or outcome.verification_gaps else
+                              'risk_found' if any(s['strength'] in ('mid', 'strong') for s in outcome.signals) else
+                              'no_risk_observed')
+        if any(s['strength'] in ('mid', 'strong') for s in outcome.signals):
+            result['behavior'] = 'risk_found'
+        return result
 
     def all_known_domains(self) -> set[str]:
         s: set[str] = set()
@@ -76,6 +161,7 @@ class KB:
     # ── 후보 검색 ────────────────────────────────────────────────
     def candidates(self, text: str, limit: int = 3) -> list[tuple[Entity, str]]:
         """(엔티티, 출처) 목록. 정확·별칭 일치가 있으면 그것만, 없으면 임베딩 상위 limit개."""
+        self.refresh_catalog()
         norm = _norm(text)
         exact, alias = [], []
         for e in self.entities:
@@ -86,6 +172,9 @@ class KB:
         hits = exact + alias
         if hits:
             return hits[:limit]
+        catalog_hits = self.catalog.name_matches(text, limit)
+        if catalog_hits:
+            return [(self._catalog_entity(r), 'exact') for r in catalog_hits]
         return [(e, "embedding") for e in self._rank(text)[:limit]]
 
     def _rank(self, text: str) -> list[Entity]:
@@ -112,7 +201,8 @@ class KB:
         import httpx
 
         def embed(texts: list[str], kind: str) -> list[list[float]]:
-            r = httpx.post(
+            from . import budget
+            r = budget.read_only(httpx.post,
                 settings.embed_url,
                 headers={"Authorization": f"Bearer {settings.nvidia_api_key}"},
                 json={"model": settings.embed_model, "input": texts, "input_type": kind,

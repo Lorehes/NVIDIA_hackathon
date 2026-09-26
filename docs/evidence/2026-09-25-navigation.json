@@ -1,0 +1,99 @@
+[
+  {
+    "input": "naver.com",
+    "job_id": "j_f955081046904bd1875d8f4fc3a40667",
+    "status": "done",
+    "mode": "live",
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "redirect_chain": [
+      {
+        "url": "https://naver.com",
+        "host": "naver.com",
+        "registrable_domain": "naver.com",
+        "status": 301,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T07:14:43.305+00:00"
+      },
+      {
+        "url": "https://www.naver.com/",
+        "host": "www.naver.com",
+        "registrable_domain": "naver.com",
+        "status": 302,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T07:14:43.696+00:00"
+      },
+      {
+        "url": "https://m.naver.com",
+        "host": "m.naver.com",
+        "registrable_domain": "naver.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T07:14:43.985+00:00"
+      }
+    ],
+    "blocked_count": 0,
+    "remaining_open": 0,
+    "policy_events": [
+      {
+        "at": "07:14:26",
+        "kind": "open",
+        "title": "문을 열었어요",
+        "detail": "허용한 사이트 주소: naver.com, www.naver.com, m.naver.com"
+      },
+      {
+        "at": "07:14:46",
+        "kind": "close",
+        "title": "문을 다시 닫았어요",
+        "detail": "열어 둔 시간 20초 · 남은 열린 문 없음"
+      }
+    ]
+  },
+  {
+    "input": "www.naver.com",
+    "job_id": "j_fb2a4e91ba5c4fe7b9c67af6d81cad1a",
+    "status": "done",
+    "mode": "live",
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "redirect_chain": [
+      {
+        "url": "https://www.naver.com",
+        "host": "www.naver.com",
+        "registrable_domain": "naver.com",
+        "status": 302,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T07:15:44.342+00:00"
+      },
+      {
+        "url": "https://m.naver.com",
+        "host": "m.naver.com",
+        "registrable_domain": "naver.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T07:15:44.549+00:00"
+      }
+    ],
+    "blocked_count": 0,
+    "remaining_open": 0,
+    "policy_events": [
+      {
+        "at": "07:15:26",
+        "kind": "open",
+        "title": "문을 열었어요",
+        "detail": "허용한 사이트 주소: www.naver.com, naver.com, m.naver.com"
+      },
+      {
+        "at": "07:15:48",
+        "kind": "close",
+        "title": "문을 다시 닫았어요",
+        "detail": "열어 둔 시간 21초 · 남은 열린 문 없음"
+      }
+    ]
+  }
+]

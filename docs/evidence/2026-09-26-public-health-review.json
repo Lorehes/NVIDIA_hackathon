@@ -1,0 +1,839 @@
+{
+  "records": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "5f66c46d744a891ff61057c649dcb1633dff3016b34379b5fe8e4b81387a4523",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "광주시 보건소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "보건소 및 건강증진센터",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000",
+          "http_status": 200,
+          "body_sha256": "6ba0caac9f2ab8640b9f666ba309aeb0a26142cc5ca94b3bad40278bc747a4af",
+          "confirmed_institution": "광주시 보건소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 파발로 194 광주시 보건소",
+            "주소광주시 송정동 100-1번지 제이지빌딩 2층(건강증진센터)"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "fcc5f6086e52e5948fc001cb94bb219e351ae8a9b3b90d7cf680a92d774b294b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "퇴촌남종통합보건지소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030200",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030200",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "보건지소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030000",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030200"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030200",
+          "http_status": 200,
+          "body_sha256": "61cbbf64f176a62e7c61fc51b901e06a39e5a7e2b662041efd16c27ab2fda51c",
+          "confirmed_institution": "퇴촌남종통합보건지소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 퇴촌면 산수로 1347"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1f4d5c372d56fb70c0378cd99d109e193b31d7cc3a68a8dba4d1dfe666e4a72e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "태전동 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "태전동 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100",
+          "http_status": 200,
+          "body_sha256": "0933c7f0aa6df3497b74fa59c16b8237511793d9da83b83a5d4980ca56d14f51",
+          "confirmed_institution": "태전동 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 고불로 79"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "87c4ff99ed2924b30a8ac0f1c75e5e13de87ce7af75614e9d663c12e299964c8",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "검천리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "검천리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200",
+          "http_status": 200,
+          "body_sha256": "c6f91bbf6c29627680a5ea6ea5f9720c3dbe6e7ea43bd4ad82f7ddf827e38289",
+          "confirmed_institution": "검천리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 남종면 산수로 2331"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "dd681f2e5346938191dbe8956efeb0a5a7bd8e1b2a09ae08ada258ce0c58f3a4",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "관음리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "관음리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300",
+          "http_status": 200,
+          "body_sha256": "132c1ba275905cbd8fb7c4f1b09492117c9803257e733b22fff47a30509ba20f",
+          "confirmed_institution": "관음리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 퇴촌면 천진암로 653-8"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "f448f37a758921b2a36fedda12f4e780246f95e0082b99d2cc446c0d03c690ae",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "만선리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "만선리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400",
+          "http_status": 200,
+          "body_sha256": "1b95e4f3a715099af945a94373eb87d42dae8557f5a9656e01729d4672151f05",
+          "confirmed_institution": "만선리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 곤지암읍 만선리 209-2번지"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a5973b4a92dcc5d5698ea43d9006f6a31a84f672bef33bfc803f48da55b59ff6",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "무갑리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "무갑리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500",
+          "http_status": 200,
+          "body_sha256": "ce73b6c2bc2c05a6085a8e3014f9c31850e17ef02bb5a0f74f78d006f0eb67d5",
+          "confirmed_institution": "무갑리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 초월읍 무갑길 140번길 14"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "23540303483ad5632513df34c7a24213d7361106f864d777e69e335ebe7c9315",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "분원리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "분원리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600",
+          "http_status": 200,
+          "body_sha256": "14fb2edc9f5c2c1105be31d398cdfb6cdbd5aa8a31ed2e3b1dcfd938e8c625dd",
+          "confirmed_institution": "분원리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 남종면 산수로 1613-9"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "e77999eb3ef4cb7856a5c2303341adc0693bbccf3db2d7010c3121214c79b405",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "산성리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "산성리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700",
+          "http_status": 200,
+          "body_sha256": "225430d9a14b6d829a512e7bb68e5703de9fb49eab6d45257350d22644d0e705",
+          "confirmed_institution": "산성리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 남한산성면 남한산성로 732-20"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "384c19f85b533cc3d6b7ab2865bff213aa1c84abe6126b29b23eb2e2b48848f8",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "상림리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "상림리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800",
+          "http_status": 200,
+          "body_sha256": "7e280bd091292903133c904073e9788005381ee6639fdf3f865f88b2ead66e23",
+          "confirmed_institution": "상림리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 도척면 상림마을길 5"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "735da5e610446d2c4e1401c839b96c43b6e228aa64515982646b98f8f1df2e4f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "선동리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "선동리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900",
+          "http_status": 200,
+          "body_sha256": "042c7f826f34fd18f69f3f2d546db11c9cc1599f0f1d33043876c70db51622b3",
+          "confirmed_institution": "선동리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 초월읍 동막골길 7-16"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "8e9f49e60394531854582065512515794ef4fc5514a5b942e784677d46a136c0",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "유정리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "유정리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000",
+          "http_status": 200,
+          "body_sha256": "44e4a7a74dab65d922e7ece8c1484c05d9d30b72818c3eb6889cc7023886fcaf",
+          "confirmed_institution": "유정리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 도척면 도척로 773-7"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "cfbdab32f7957ec17206ea1d3cb59d403fd1f65a7a3dd2bc6925810db08bd420",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "열미리 보건진료소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "label": "열미리 보건진료소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "http_status": 200,
+          "body_sha256": "871278b918afb9a3f09414acae191bcda97a6bcf36d687a84b4ffc1e4cd2cc98",
+          "confirmed_institution": "열미리 보건진료소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소경기도 광주시 곤지암읍 광여로 214"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4efefa22dc0b6cbc7d4129b9ca25d45f421849e181b6a777c5a5c7b9ae84ec93",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "도척보건지소",
+      "original_url": "",
+      "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030300",
+      "scope": "url",
+      "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030300",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030200",
+          "label": "도척보건지소",
+          "target": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030300",
+          "observed_final_url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030300"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030300",
+          "http_status": 200,
+          "body_sha256": "dab1a300deaf4cc8538d20aa7e32350310d48c37de2ad31acb53c326fb10ec97",
+          "confirmed_institution": "도척보건지소",
+          "confirmed_jurisdiction": "경기도 광주시",
+          "institution_address_labels": [
+            "주소 경기도 광주시 도척면 노곡로 20"
+          ],
+          "content_scope": "광주시청이 제공하는 기관별 공식 안내 페이지; 독립 도메인 또는 현재 진료 가능 여부 보증 아님"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "records": 21957,
+    "hosts": 16251,
+    "excluded": 2543,
+    "missing_homepage": 2516,
+    "public_health_missing": 158,
+    "corrections": 37
+  },
+  "catalog_sha256": "a8d4e71f9a65b1d5cb53a6aab71ea60abfbec0e851b6f0143b970e240a44ff47",
+  "raw_public_health_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "canonical_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "existing_record_changes": [
+    {
+      "id": "site_1974f25f2510427b9ea3",
+      "name": "경기도 광주시청",
+      "before_scope": "host",
+      "after_scope": "url",
+      "fields": [
+        "scope"
+      ]
+    }
+  ],
+  "source_index": {
+    "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+    "status": 200,
+    "sha256": "871278b918afb9a3f09414acae191bcda97a6bcf36d687a84b4ffc1e4cd2cc98",
+    "links": [
+      {
+        "name": "보건소 및 건강증진센터",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000"
+      },
+      {
+        "name": "보건지소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030000"
+      },
+      {
+        "name": "보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040000"
+      },
+      {
+        "name": "보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040000"
+      },
+      {
+        "name": "태전동 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040100"
+      },
+      {
+        "name": "검천리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040200"
+      },
+      {
+        "name": "관음리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040300"
+      },
+      {
+        "name": "만선리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040400"
+      },
+      {
+        "name": "무갑리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040500"
+      },
+      {
+        "name": "분원리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040600"
+      },
+      {
+        "name": "산성리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040700"
+      },
+      {
+        "name": "상림리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040800"
+      },
+      {
+        "name": "선동리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040900"
+      },
+      {
+        "name": "유정리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041000"
+      },
+      {
+        "name": "열미리 보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100"
+      },
+      {
+        "name": "보건소 및 건강증진센터",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803020000"
+      },
+      {
+        "name": "보건지소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803030000"
+      },
+      {
+        "name": "보건진료소",
+        "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803040000"
+      }
+    ]
+  },
+  "limitations": [
+    "14 municipal institution introduction URLs, not 14 independent domains",
+    "Only reviewed query/path/host is granted identity; municipal root no longer grants all paths",
+    "Current service availability and medical advice not assessed",
+    "All 14 official pages fetched locally; only Yeolmiri page tested via VM investigation",
+    "Original national dataset preserved; no source IDs invented"
+  ],
+  "live_validation": {
+    "before": {
+      "job_id": "j_1fd67b873af540c9ba1c2c4bb187b762",
+      "status": "done",
+      "elapsed_ms": 13453,
+      "error": null,
+      "verdict": "caution",
+      "identity": {
+        "host": "www.gjcity.go.kr",
+        "site_family": "gjcity.go.kr",
+        "status": "verified",
+        "name": "열미리 보건진료소",
+        "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": true,
+        "inspection_limit_reason": null,
+        "reason": "reviewed_official_source_correction",
+        "matched_entities": [
+          {
+            "id": "site_bf8304700ff91da8eb0b",
+            "name": "열미리 보건진료소",
+            "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+            "checked": "2026-09-25"
+          }
+        ],
+        "matched_entities_total": 1,
+        "related_addresses": [
+          "www.gjcity.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "risk_found"
+      },
+      "explanation": {
+        "headline": "주소는 열미리 보건진료소의 진짜 주소인데, 요구하는 것이 이상해요.",
+        "warning": null,
+        "detail": "주소의 주인은 열미리 보건진료소 진짜 주소와 같지만, 열어 본 페이지가 문자 내용과 맞지 않는 것을 적으라고 해요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 gjcity.go.kr이에요.",
+          "공식 출처에서 열미리 보건진료소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [
+          "적은 내용이 이 페이지와 다른 사이트(www.gjcity.go.kr)로 가요."
+        ],
+        "unverified": [],
+        "recommended_action": "열미리 보건진료소 공식 홈페이지이나 대표번호로 먼저 확인한 뒤에 적으세요.",
+        "action_bullets": [
+          "이 페이지에는 아직 정보를 적지 마세요.",
+          "열미리 보건진료소 공식 홈페이지이나 대표번호로 먼저 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "host": "www.gjcity.go.kr",
+          "registrable_domain": "gjcity.go.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T17:49:44.595+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.gjcity.go.kr"
+            ],
+            "sha256": "06e661e7adf7054add09f60de9f91fc46d8b757afc87eaecf8d8f24109cdf884",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "a8d4e71f9a65b1d5cb53a6aab71ea60abfbec0e851b6f0143b970e240a44ff47"
+    },
+    "after": {
+      "job_id": "j_aa8191afa37a424590062a720549d5d5",
+      "status": "done",
+      "elapsed_ms": 15887,
+      "error": null,
+      "verdict": "caution",
+      "identity": {
+        "host": "www.gjcity.go.kr",
+        "site_family": "gjcity.go.kr",
+        "status": "verified",
+        "name": "열미리 보건진료소",
+        "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": true,
+        "inspection_limit_reason": null,
+        "reason": "reviewed_official_source_correction",
+        "matched_entities": [
+          {
+            "id": "site_bf8304700ff91da8eb0b",
+            "name": "열미리 보건진료소",
+            "source": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+            "checked": "2026-09-25"
+          }
+        ],
+        "matched_entities_total": 1,
+        "related_addresses": [
+          "www.gjcity.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "risk_found"
+      },
+      "explanation": {
+        "headline": "페이지 주소는 공식이지만, 입력 정보의 처리 경로는 미확인이에요.",
+        "warning": null,
+        "detail": "열미리 보건진료소 공식 안내 주소와 일치해요. 입력 내용을 보내는 경로까지 해당 기관의 공식 주소로 확인한 것은 아니에요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 gjcity.go.kr이에요.",
+          "공식 출처에서 열미리 보건진료소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [
+          "입력 내용을 같은 도메인의 다른 경로로 보내지만, 해당 기관의 공식 처리 주소인지는 확인하지 못했어요."
+        ],
+        "unverified": [],
+        "recommended_action": "열미리 보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인한 뒤에 적으세요.",
+        "action_bullets": [
+          "이 페이지에는 아직 정보를 적지 마세요.",
+          "열미리 보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인하세요."
+        ],
+        "source": "template"
+      },
+      "redirect_chain": [
+        {
+          "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0803041100",
+          "host": "www.gjcity.go.kr",
+          "registrable_domain": "gjcity.go.kr",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T17:58:34.912+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.gjcity.go.kr"
+            ],
+            "sha256": "06e661e7adf7054add09f60de9f91fc46d8b757afc87eaecf8d8f24109cdf884",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "incomplete_reason": null,
+      "agent": {
+        "tool_calls": [
+          "exec"
+        ],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "openshell"
+      },
+      "catalog_sha256": "a8d4e71f9a65b1d5cb53a6aab71ea60abfbec0e851b6f0143b970e240a44ff47"
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "code_hashes": {
+    "apps/api/app/verdict.py": "0c20b273df24e129fbdac4a2669b1557f92ec91ecd1678a36cf6ca39d99a153a",
+    "apps/api/app/presentation.py": "4f083202f09a6c3e00aed734f1aa1d4b9470dd77ac0321090df480cbf03314fe",
+    "apps/api/tests/test_form_destination_explanation.py": "0af4f8ae895079ba104edb457f9aeb4513e2f7d27b4a9705d3066fc05cde8dbc",
+    "apps/api/app/trace.py": "1ad9701d5acf7eb5cdbd7e3baa0a55b1cb7c44b581c12049d60c70585d8d5de4"
+  },
+  "policy_cleanup": "no residual investigation presets (effective policy verified)",
+  "checks_before_explanation_fix": {
+    "local": {
+      "passed": 56,
+      "seconds": 0.76
+    },
+    "vm": {
+      "passed": 56,
+      "seconds": 1.49
+    }
+  },
+  "checks": {
+    "local": {
+      "passed": 189,
+      "seconds": 13.52
+    },
+    "vm": {
+      "passed": 189,
+      "seconds": 17.47
+    },
+    "warnings": [
+      "existing StarletteDeprecationWarning"
+    ]
+  },
+  "trace_validation": "Final trace text covered by API regression tests, no additional external investigation or browser result check."
+}

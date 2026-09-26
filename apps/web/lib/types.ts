@@ -96,7 +96,7 @@ export interface AgentSummary {
   unexpected_tools: string[];
   duration_ms: number | null;
   model_reported: string | null;
-  kind: "openshell" | "local-sim" | "replay";
+  kind: "openshell" | "local-sim" | "replay" | "not_run";
 }
 
 export interface InvestigationResult {
@@ -121,6 +121,17 @@ export interface InvestigationResult {
   incomplete_reason: string | null;
   more_urls: string[];
   agent: AgentSummary;
+  identity?: {
+    host?: string; site_family?: string; status?: "verified" | "unverified";
+    name?: string | null; source?: string | null; checked?: string | null;
+    canonical_from?: string | null; expires_at?: string | null;
+    reason?: string; behavior?: "incomplete" | "risk_found" | "no_risk_observed";
+    related_addresses?: string[];
+    matched_entities?: { id: string; name: string; source: string; checked: string }[];
+    matched_entities_total?: number;
+    source_address?: { name: string; source: string; checked: string; host: string };
+  };
+  connection?: { verified?: boolean | null; certificates?: Record<string, unknown>[]; note?: string };
 }
 
 // ── 진행 상태 ──
@@ -195,7 +206,7 @@ export interface RedirectTrace {
 export interface FieldRow {
   type: string;
   label: string;
-  verdict: "needed" | "not_needed" | "ok";
+  verdict: "needed" | "not_needed" | "ok" | "unknown";
   verdict_label: string;
 }
 

@@ -1,0 +1,170 @@
+{
+  "date": "2026-09-26",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "before_sha256": {
+    "kb/sources/verified_corrections.json": "69c608dc1787ef05803c1b2d40eb3f128086f18f86cc6915126262752c5a1274",
+    "kb/site_catalog.json": "cf8f1699794d6d123aa93330650f02e740c8a1438c843386ca3d5c97c66f5cd3",
+    "kb/sources/coverage.json": "3b6d91e6814afd3f84e4373a5eace72dc1c77e05065ff2d331332efb67dfee59",
+    "apps/api/tests/test_source_fingerprints.py": "901625c620afe514e7f9d15ada01e9b11bfae1537cc531203b208454dd53fede"
+  },
+  "after_sha256": {
+    "kb/sources/verified_corrections.json": "65aa55a0d64feb91bb7a93d7683a36f814d778eb4659eb631e509855bcf04c07",
+    "kb/site_catalog.json": "fcc4fdb468a50d83b65677f6009c0ea3462a1a4426218da6b9590914e08443c9",
+    "kb/sources/coverage.json": "599ab7ee3bf43f403d6f7e871370be4b66e37d3f93e0559b87ad00c98a57e574",
+    "apps/api/tests/test_source_fingerprints.py": "6e5469a9fad58df004ad76a600afc5cb84435071d3c22f54595cc90b23c89c39"
+  },
+  "correction": {
+    "source_dataset": "universities",
+    "source_id": null,
+    "source_row_sha256": "adebb89e30bf34ffa57d046cb34105c7631ed44abf9f4e43da0adf0538d976d8",
+    "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+    "name": "수원대학교 공학대학원",
+    "original_url": "www.suwon ac.kr",
+    "url": "https://www.suwon.ac.kr/index.html?menuno=787",
+    "scope": "url",
+    "source": "https://www.suwon.ac.kr/index.html?menuno=787",
+    "checked": "2026-09-26",
+    "reason": "official_institution_page_confirmed",
+    "evidence": [
+      {
+        "kind": "official_site_navigation",
+        "source": "https://www.suwon.ac.kr/index.html?menuno=1965",
+        "label": "공학대학원",
+        "target": "https://www.suwon.ac.kr/index.html?menuno=787",
+        "body_sha256": "bf51903d7a0aac27a202e815b963880ee49241b5d9bbadff59388dbad47b70d5"
+      },
+      {
+        "kind": "official_institution_page",
+        "source": "https://www.suwon.ac.kr/index.html?menuno=787",
+        "title": "수원대학교  > 입학/교육 > 대학원 > 공학대학원",
+        "http_status": 200,
+        "body_sha256": "3a0cc53b568befa70baa4c0a3958ac34856332066a0de49aa059787365431169",
+        "content_scope": "공학대학원 제목·공지사항·자료실 확인; 홈페이지 원문의 공백을 추정 교정한 것이 아님"
+      }
+    ]
+  },
+  "reviewed_responses": [
+    {
+      "key": "suwon-engineering",
+      "requested": "https://www.suwon.ac.kr/index.html?menuno=787",
+      "url": "https://www.suwon.ac.kr/index.html?menuno=787",
+      "status": 200,
+      "history": [],
+      "sha256": "3a0cc53b568befa70baa4c0a3958ac34856332066a0de49aa059787365431169",
+      "title": [
+        "수원대학교  > 입학/교육 > 대학원 > 공학대학원"
+      ],
+      "headings": [
+        "전체메뉴",
+        "공학대학원",
+        "공지사항",
+        "자료실"
+      ],
+      "links": [
+        {
+          "text": "대학원소개",
+          "href": "/index.html?menuno=1447"
+        }
+      ]
+    },
+    {
+      "key": "suwon-indg",
+      "requested": "https://indg.suwon.ac.kr",
+      "url": "https://indg.suwon.ac.kr/?menuno=2898",
+      "status": 200,
+      "history": [
+        {
+          "url": "https://indg.suwon.ac.kr",
+          "status": 302,
+          "location": "https://indg.suwon.ac.kr/?menuno=2898"
+        }
+      ],
+      "sha256": "f4f606f5d7f511effcedf4e258f1546737867449bd3bf50db4e604f0ce6ffbfa",
+      "title": [
+        "Redirect_공학대학원"
+      ],
+      "headings": [],
+      "links": []
+    },
+    {
+      "key": "paekku-kindergarten",
+      "requested": "https://school.jbedu.kr/paekku/",
+      "url": "https://school.jbedu.kr/paekku/",
+      "status": 200,
+      "history": [],
+      "sha256": "4e00ade9ab7067aaf316196024fe32a4b0b4bf591157b0ce6c849f4d4dfffbf2",
+      "title": [
+        "백구초등학교"
+      ],
+      "headings": [
+        "",
+        "메인 컨텐츠",
+        "팝업존",
+        "공지사항",
+        "가정통신",
+        "학교소식",
+        "학사일정",
+        "오늘의 식단",
+        "학급홈페이지",
+        "교육자료통합검색",
+        "바로가기",
+        "배너 모음",
+        "배너광장",
+        "하단 컨텐츠"
+      ],
+      "links": []
+    }
+  ],
+  "validation": {
+    "unchanged_existing_records": 22163,
+    "added": 1,
+    "exact_identity_checks": 1,
+    "boundary_rejections": 5,
+    "records": 22164,
+    "hosts": 16288,
+    "excluded": 2389,
+    "excluded_by_reason": {
+      "invalid_hostname": 2,
+      "invalid_or_ambiguous_url": 2,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 16,
+      "missing_homepage": 2363,
+      "unsupported_or_malformed_scheme": 1,
+      "userinfo_or_email": 4
+    },
+    "university_remaining": 273,
+    "corrections": 191,
+    "inactive_corrections": 0,
+    "tests": {
+      "passed": 28,
+      "seconds": 0.86,
+      "environment": "local",
+      "scope": "source fingerprints, source corrections, shared identity display"
+    }
+  },
+  "vm": {
+    "last_verified_records": 22120,
+    "last_verified_hosts": 16282,
+    "pending_added_records": 44,
+    "deployed": false,
+    "new_tests": false,
+    "new_live_investigation": false
+  },
+  "deferred": [
+    {
+      "institution": "백구초등학교병설유치원",
+      "reason": "school home responds but current kindergarten-specific official evidence not established; not registered from school identity alone"
+    }
+  ],
+  "limitations": [
+    "No guessing correction to original whitespace",
+    "Exact query address only, not entire university host",
+    "Separate indg address returned redirect landing; not adopted",
+    "No original server TLS or page behavior inspection",
+    "No unchanged SSH/SSO retries"
+  ],
+  "flowline": {
+    "kb_version": 42,
+    "status": "in_progress"
+  }
+}

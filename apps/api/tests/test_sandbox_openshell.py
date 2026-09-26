@@ -54,10 +54,11 @@ class FakeRunner:
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_text(json.dumps(obj), encoding="utf-8")
             return CmdResult(0, "", "")
-        if args[2:4] == ["policy", "list"]:
+        if args[:3] == ["openshell", "policy", "get"]:
             if self.list_fail:
                 return CmdResult(1, "", "list failed")
-            return CmdResult(0, "\n".join(f"{n}  active" for n in sorted(self.active_policies)) + "\nother-preset", "")
+            return CmdResult(0, json.dumps({"status": "effective", "sandbox": "my-assistant",
+                "policy": {"network_policies": {n: {} for n in self.active_policies}}}), "")
         return CmdResult(0, "", "")
 
 
@@ -97,6 +98,24 @@ def test_happy_path_order_and_policy_removed(tmp_path):
     assert res.files["parse_url"]["ok"] is True
 
 
+def test_provider_namespaced_job_policy_is_detected_and_removed(tmp_path):
+    class NamespacedRunner(FakeRunner):
+        def __call__(self, args, timeout=None):
+            result = super().__call__(args, timeout)
+            if args[:3] == ['openshell', 'policy', 'get']:
+                data = json.loads(result.stdout)
+                data['policy']['network_policies'] = {
+                    f'nemoclaw_custom__{n}__{n}': {} for n in self.active_policies}
+                return CmdResult(0, json.dumps(data), '')
+            return result
+    runner = NamespacedRunner()
+    runner.active_policies.add('job-j-old')
+    sandbox = sb(runner, tmp_path)
+    assert sandbox._list_policies() == ['job-j-old']
+    assert sandbox._close_policy('job-j-old')
+    assert runner.active_policies == set()
+
+
 def test_agent_command_uses_session_message_json_and_timeout(tmp_path):
     r = FakeRunner()
     sb(r, tmp_path).investigate("j_1", payload(), "a.test", True)
@@ -104,6 +123,7 @@ def test_agent_command_uses_session_message_json_and_timeout(tmp_path):
     assert agent[:5] == ["openshell", "sandbox", "exec", "-n", "my-assistant"]
     assert "--json" in agent and agent[agent.index("--session-id") + 1] == "j_1-inv"
     assert agent[agent.index("--timeout") + 1] == "60"
+    assert "--timeout=65" in agent  # remote command deadline, before the local runner's 70s limit
     assert "phishing-investigator" in agent[agent.index("--message") + 1]
 
 
@@ -146,7 +166,7 @@ def test_cleanup_is_verified_by_relisting_not_by_exit_code(tmp_path):
     r.remove_lies = True  # remove가 성공이라고 답해도 목록에 남아 있으면 정리된 게 아니다
     box = sb(r, tmp_path)
     res = box.investigate("j_1", payload(), "a.test", True)
-    assert res.residual_policy is True and box.quarantined is True and "job-j_1" in r.active_policies
+    assert res.residual_policy is True and box.quarantined is True and "job-j-1" in r.active_policies
 
 
 def test_cleanup_confirmed_when_remove_times_out_but_server_removed_it(tmp_path):
@@ -195,7 +215,7 @@ def test_quarantine_lifts_after_sweep_confirms_clean(tmp_path):
     r.remove_lies = True
     box = sb(r, tmp_path)
     box.investigate("j_1", payload(), "a.test", True)
-    assert box.quarantined and "job-j_1" in r.active_policies
+    assert box.quarantined and "job-j-1" in r.active_policies
     r.remove_lies = False  # 이제 정상적으로 지워진다
     res = box.investigate("j_2", payload(), "a.test", True)
     assert box.quarantined is False and res.incomplete is None and r.active_policies == set()
@@ -216,7 +236,7 @@ def test_ip_or_private_host_opens_no_policy(tmp_path):
 
 def test_preset_is_limited_to_target_host_get_python3():
     data = yaml.safe_load(render_preset("j_abc123", "account-check.test"))
-    pol = data["network_policies"]["job-j_abc123"]
+    pol = data["network_policies"]["job-j-abc123"]
     assert {(e["host"], e["port"]) for e in pol["endpoints"]} == {("account-check.test", 443), ("account-check.test", 80)}
     assert all(rule["allow"]["method"] == "GET" for e in pol["endpoints"] for rule in e["rules"])
     assert [b["path"] for b in pol["binaries"]] == ["/usr/bin/python3", "/usr/bin/python3.13"]
@@ -278,3 +298,43 @@ def test_host_workdir_removed_even_when_upload_fails(tmp_path):
     r = FakeRunner(fail={"sandbox upload": "boom"})
     res = sb(r, tmp_path).investigate("j_1", payload(), "a.test", True)
     assert res.incomplete == "sandbox_error" and not (tmp_path / "j_1").exists()
+
+
+def test_real_job_policy_name_is_rfc1123_and_cleanup_uses_same_name(tmp_path):
+    import re
+
+    job = "j_" + "ab" * 16
+    data = yaml.safe_load(render_preset(job, "example.com"))
+    name = data["preset"]["name"]
+    assert len(name) <= 63 and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name)
+    assert name in data["network_policies"]
+    r = FakeRunner()
+    result = sb(r, tmp_path).investigate(job, {**payload(), "job_id": job}, "example.com", True)
+    assert result.policy_name == name
+    assert any(c[2:5] == ["policy", "remove", name] for c in r.calls)
+    assert not r.active_policies
+
+
+@pytest.mark.parametrize("job", ["j_1\ninvalid", "../escape", "x" * 64])
+def test_policy_rejects_invalid_job_names(job):
+    with pytest.raises(SandboxError):
+        render_preset(job, "example.com")
+
+
+@pytest.mark.parametrize('response', [
+    'Policy presets for sandbox my-assistant: no active presets',
+    '{"status":"unavailable","sandbox":"my-assistant","policy":{"network_policies":{}}}',
+    '{"status":"effective","sandbox":"other","policy":{"network_policies":{}}}',
+    '{"status":"effective","sandbox":"my-assistant"}',
+])
+def test_unavailable_policy_is_not_mistaken_for_clean_state(tmp_path, response):
+    class Runner(FakeRunner):
+        def __call__(self, args, timeout=None):
+            if args[:3] == ['openshell', 'policy', 'get']:
+                return CmdResult(0, response, '')
+            return super().__call__(args, timeout)
+
+    box = sb(Runner(), tmp_path)
+    box.prepare()
+    assert box.quarantined
+    assert box.investigate(FULL_ID, payload(), 'example.com', True).incomplete == 'sandbox_unsafe'

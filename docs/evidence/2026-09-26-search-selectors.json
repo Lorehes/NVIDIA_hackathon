@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-26T02:14:26.880100+00:00",
+  "problem": "Search text inputs with bounded native search selectors were treated as general input; same-origin unverified processing generated caution.",
+  "files": {
+    "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": {
+      "before": "3c5048f5b8d9c445d9b6d17e82f20bd0e61bd5d95e0a1737fa5b2c042408af63",
+      "after": "431c7f2381d18621a88f9e24dc170c7e31969911e60c3b82547e8a31c1116186"
+    },
+    "apps/api/tests/test_same_origin_search.py": {
+      "before": "8b186f1258ed23ff95cec669d14bd95fa958cc8270828d31bda3cf423883033c",
+      "after": "c1cee65ef4f70be54b2ea6500d9ac5fb8784247fe9280dbcea8fb63d09cfb5d2"
+    }
+  },
+  "catalog_unchanged_sha256": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+  "targeted_local_tests": "88 passed in 0.34s",
+  "new_tests": 24,
+  "cached_html": {
+    "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+    "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+    "same_origin_search": [
+      true,
+      true,
+      true
+    ],
+    "search_only": [
+      false,
+      false,
+      false
+    ],
+    "unexecuted_code": true
+  },
+  "standard": "https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element",
+  "limits": [
+    "Search is a structural/semantic hint, not proof of actual submission behavior.",
+    "No new destination identity or safe grant from the hint.",
+    "No site-name or URL-specific exceptions.",
+    "No JavaScript execution or form submission."
+  ],
+  "full_local_tests": "776 passed, 1 existing Starlette/httpx warning in 42.91s",
+  "deployment_attempts": {
+    "initial_ssh_failures": 3,
+    "instance_state": "RUNNING/COMPLETED/READY",
+    "brev_refresh": "completed; initial error persisted",
+    "first_sso_wait": "timed out during delayed browser connection",
+    "sso_reauthentication": "completed via existing Chrome NVIDIA session; no password entered",
+    "runtime_deployment": "NOT DEPLOYED: SSH publickey rejection before remote command execution",
+    "total_ssh_failures": 4,
+    "post_sso_ssh": "same publickey rejection",
+    "healthcheck": "Healthy",
+    "certificate_check": "new user certificate generated; attempted connection within validity interval; no key/certificate contents retained"
+  },
+  "vm_tests": null,
+  "live_validation": null,
+  "remaining": "Restore Brev SSH; deploy with before/after hash guards; full VM tests and sandbox upload; verify uploaded hash and actual URL. Do not repeat unchanged SSH/SSO failures.",
+  "flowline": {
+    "kb_version": 36,
+    "security_version": 33
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "dataset": "universities",
+      "source_row_sha256": "d5b937d1f937edcc98b66b36631ed5bbc4230fbc5fbd19c623ed55634152c807",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "status": "abolished_but_retained_for_enrolled_students",
+      "evidence": {
+        "file": "docs/evidence/2026-09-26-cbnu-graduate-review.json",
+        "source": "https://graduate.chungbuk.ac.kr/upload_file/bbs/00000004/2026/1777523280-1300-0.pdf",
+        "summary": "2026~2027 요람은 꺾쇠로 표시된 두 대학원을 폐지 후 재적생이 있는 동안 존속하는 대상으로 명시한다."
+      }
+    },
+    {
+      "dataset": "universities",
+      "source_row_sha256": "5c6da46f060e9d4087c41299b4265d90d4a2e6b28c9b89152454005b14566c53",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "status": "abolished_but_retained_for_enrolled_students",
+      "evidence": {
+        "file": "docs/evidence/2026-09-26-cbnu-graduate-review.json",
+        "source": "https://graduate.chungbuk.ac.kr/upload_file/bbs/00000004/2026/1777523280-1300-0.pdf",
+        "summary": "2026~2027 요람은 꺾쇠로 표시된 두 대학원을 폐지 후 재적생이 있는 동안 존속하는 대상으로 명시한다."
+      }
+    },
+    {
+      "dataset": "universities",
+      "source_row_sha256": "9d4bb3f9d8eb550af957593fd41d393fbc109e9c4152fb0a925d4bd1f686fd61",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "status": "historical_name_reorganized",
+      "evidence": {
+        "file": "docs/evidence/2026-09-26-jnu-graduate-review.json",
+        "source": "https://www.jnu.ac.kr/MainUniversity/Special/Sp_Administration",
+        "summary": "공식 정책대학원 소개는 기존 행정대학원 체제를 개편해 2014년 정책교육기관으로 재출범했다고 명시한다."
+      }
+    }
+  ]
+}

@@ -111,7 +111,7 @@ function AddressTab({ d, tone }: { d: AddressTrace | null; tone: Tone }) {
         <div className="col" style={{ gap: 6 }}>
           <h2>주소를 조각내서 봤어요</h2>
           <span className="lead">
-            인터넷 주소는 <b>오른쪽 끝에 가까운 이름</b>이 진짜 주인이에요. 앞에 붙은 글자는 누구나 마음대로 바꿀 수 있어요.
+            <b>기본 도메인과 하위 주소</b>를 나눠 봐요. 하위 주소는 서비스 구분에 쓰이기도 해요. 공식 운영 여부는 주소 구조와 출처를 함께 확인해요.
           </span>
         </div>
         <div className="anatomy" aria-label="주소를 나눈 모습">
@@ -124,16 +124,18 @@ function AddressTab({ d, tone }: { d: AddressTrace | null; tone: Tone }) {
           <span className="cap g">시작 표시</span>
           {hasPrefix ? (
             <span className="cap">
-              <b>앞에 붙인 글자</b>
+              <b>하위 주소</b>
               <br />
-              진짜처럼 보이려고 넣었어요
+              {d.tricks.some((t) => t.key === "subdomain_disguise" && t.hit)
+                ? "다른 기관의 주소를 끼워 넣은 흔적이 있어요"
+                : "이 부분만으로 사칭이라고 판단하지 않아요"}
             </span>
           ) : (
             <span />
           )}
           <span className="cap" style={{ color: tone === "bad" ? "var(--red-ink)" : undefined }}>
-            <b>진짜 사이트 이름</b>
-            <br />이 사이트의 진짜 주인
+            <b>기본 도메인</b>
+            <br />주소를 구분하는 기준
           </span>
           <span className="cap g">사이트 안의 위치</span>
         </div>
@@ -274,7 +276,7 @@ function PathTab({ d }: { d: RedirectTrace | null }) {
         </div>
         <div className="note-card">
           <h3>왜 끝까지 따라가지 않았나요?</h3>
-          <p>모르는 곳에 들어가는 건 조사하는 쪽도 위험해요. 그래서 허락한 주소 한 곳만 열고, 나머지는 막고 기록만 남겨요.</p>
+          <p>모르는 곳에 들어가는 건 조사하는 쪽도 위험해요. 대표 주소와 www·m 주소 사이의 이동은 확인하고, 허용 범위 밖의 주소는 막고 기록만 남겨요.</p>
         </div>
       </div>
       <DevBox
@@ -336,7 +338,7 @@ function PageTab({ d }: { d: PageTrace | null }) {
               d.field_rows.map((f) => (
                 <div className="frow" key={f.type}>
                   <span>{f.label}</span>
-                  <span className={f.verdict === "not_needed" ? "no" : "ok"}>{f.verdict_label}</span>
+                  <span className={f.verdict === "not_needed" ? "no" : f.verdict === "unknown" ? "muted" : "ok"}>{f.verdict_label}</span>
                 </div>
               ))
             )}
@@ -348,9 +350,9 @@ function PageTab({ d }: { d: PageTrace | null }) {
         <div className="card kv">
           <span className="k">적은 내용은 어디로 가나요?</span>
           <span className="v" style={{ fontFamily: d.sends_to ? "var(--mono)" : undefined, color: d.sends_cross_domain ? "var(--red-ink)" : undefined }}>
-            {d.sends_to ?? "보내는 곳이 없어요"}
+            {d.sends_to ?? (d.field_rows.length ? "전송 주소 미표시" : "표시된 전송 주소 없음")}
           </span>
-          <span className="s">{d.sends_sentence ?? (d.field_rows.length ? "이 페이지 안에서만 쓰여요." : "적는 칸이 없어요.")}</span>
+          <span className="s">{d.sends_sentence ?? (d.field_rows.length ? "실제 전송과 서버의 처리 과정은 검사하지 않았어요." : "적는 칸이 없어요.")}</span>
         </div>
         <div className="card kv">
           <span className="k">앱을 깔라고 하나요?</span>
@@ -508,7 +510,7 @@ function SandboxTab({ d }: { d: SandboxTrace | null }) {
       <div className="card card-pad" style={{ padding: 30, gap: 22 }}>
         <div className="col" style={{ gap: 6 }}>
           <h2>링크는 내 휴대폰이 아닌 안전 공간에서만 열었어요</h2>
-          <span className="lead">안전 공간은 바깥과 떨어진 컴퓨터예요. 평소엔 문이 모두 잠겨 있고, 조사할 때만 한 곳의 문을 잠깐 열어요.</span>
+          <span className="lead">안전 공간은 바깥과 떨어진 컴퓨터예요. 조사할 사이트의 허용된 주소에만 잠깐 접속 권한을 줘요.</span>
         </div>
         <div className="diagram">
           <div className="dnode">

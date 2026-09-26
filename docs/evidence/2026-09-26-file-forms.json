@@ -1,0 +1,234 @@
+{
+  "job_id": "j_301cae038bdc4945abe542b353812c77",
+  "status": "done",
+  "elapsed_ms": 57391,
+  "error": null,
+  "verdict": "unknown",
+  "identity": {
+    "host": "m.naver.com",
+    "site_family": "naver.com",
+    "status": "verified",
+    "name": "네이버",
+    "source": "https://www.navercorp.com/service/portal",
+    "checked": "2026-09-25",
+    "canonical_from": "https://www.naver.com/",
+    "expires_at": "2026-09-26T14:10:19.969557+00:00",
+    "inspection_supported": true,
+    "inspection_limit_reason": null,
+    "reason": "publisher_home_redirect",
+    "matched_entities": [
+      {
+        "id": "site_079296462423b295dfb5",
+        "name": "네이버",
+        "source": "https://www.navercorp.com/service/portal",
+        "checked": "2026-09-25"
+      }
+    ],
+    "matched_entities_total": 1,
+    "related_addresses": [
+      "academic.naver.com",
+      "blog.naver.com",
+      "books.nid.naver.com",
+      "buyer.collection.naver.com",
+      "cafe.naver.com",
+      "calendar.naver.com",
+      "certificate.nid.naver.com",
+      "chzzk.naver.com",
+      "clovadubbing.naver.com",
+      "clovanote.naver.com",
+      "comic.naver.com",
+      "contact.naver.com",
+      "contents.premium.naver.com",
+      "datalab.naver.com",
+      "dict.naver.com",
+      "didcard.naver.com",
+      "ekyc.naver.com",
+      "finance.naver.com",
+      "fleamarket.naver.com",
+      "flight.naver.com"
+    ],
+    "observed_redirects": [],
+    "behavior": "incomplete"
+  },
+  "explanation": {
+    "headline": "네이버 공식 주소로 확인됐어요.",
+    "warning": null,
+    "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+    "confirmed_facts": [
+      "진짜 사이트 이름은 naver.com이에요.",
+      "공식 출처에서 네이버 서비스의 주소를 확인했어요."
+    ],
+    "suspicion_evidence": [],
+    "unverified": [
+      "페이지가 나중에 스스로 바뀌는 내용"
+    ],
+    "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+    "action_bullets": [
+      "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+    ],
+    "source": "template"
+  },
+  "redirect_chain": [
+    {
+      "url": "https://www.naver.com/",
+      "host": "www.naver.com",
+      "registrable_domain": "naver.com",
+      "status": 302,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-26T01:23:57.271+00:00"
+    },
+    {
+      "url": "https://m.naver.com",
+      "host": "m.naver.com",
+      "registrable_domain": "naver.com",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-26T01:23:57.504+00:00"
+    }
+  ],
+  "connection": {
+    "verified": true,
+    "certificates": [
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "www.naver.com"
+        ],
+        "sha256": "6a129798dee3d3f2ad22c2e1744bc04a4b020e9c6e28796c03eeccffd9b52a67",
+        "protocol": "TLSv1.3"
+      },
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "m.naver.com"
+        ],
+        "sha256": "422ec66bbea1042d272a1a7adcf707c5f50b6e627900cdd4a9ea03814a0320de",
+        "protocol": "TLSv1.3"
+      }
+    ],
+    "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+  },
+  "incomplete_reason": null,
+  "agent": {
+    "tool_calls": [
+      "exec"
+    ],
+    "unexpected_tools": [],
+    "duration_ms": null,
+    "model_reported": null,
+    "kind": "openshell"
+  },
+  "catalog_sha256": "36980060141a40af64380bdd06fb79455b06d65920423a5799d4dc76e777e139",
+  "comparison": [
+    {
+      "key": "address",
+      "label": "주소",
+      "said": "링크만 입력했어요",
+      "found": "네이버 사이트가 맞아요",
+      "status": "ok",
+      "status_label": "같아요"
+    },
+    {
+      "key": "fields",
+      "label": "적는 칸",
+      "said": "입력 목적을 제공하지 않았어요",
+      "found": "기타 정보",
+      "status": "ok",
+      "status_label": "괜찮아요"
+    },
+    {
+      "key": "destination",
+      "label": "적은 내용",
+      "said": "—",
+      "found": "검색 입력란이 있어요. 검색 처리 주소의 공식 여부와 실행 후 동작은 아직 확인하지 못했어요",
+      "status": "unknown",
+      "status_label": "미확인"
+    }
+  ],
+  "field_rows": [
+    {
+      "type": "other",
+      "label": "기타 정보",
+      "verdict": "ok",
+      "verdict_label": "괜찮음"
+    }
+  ],
+  "url_trace_purpose": null,
+  "files_sha256": {
+    "apps/api/app/ko.py": "bcaf0cda1cc96ff274e2c50def028fc4f5c6b765769b282839ed8ac4cdf0491b",
+    "apps/api/app/verdict.py": "688d6adcc254bae06d447a51809bf3b565a16d6116d01cc6643dbb228878c218",
+    "apps/api/app/presentation.py": "2bb76c663d2e5c0d74be3692704bd952b14bbb26c168a3cb1d17e668cc2fd528",
+    "apps/api/app/trace.py": "7089665379d30aaf97d42ffda9dfce859a82b9c09b1b0fc91e59d33848873baf",
+    "apps/api/app/models.py": "5a7dd40bc08482ecef09a581f649d62a8c31041884f7b1fa4591d17ae2969934",
+    "apps/web/lib/types.ts": "731799d040ea0bf362dca30f108ef00f074d575003b88f3d8771ffc04d58ef83",
+    "apps/web/components/Trace.tsx": "f5d0c87b83dbf5096d272e6240ebeb394564c20a6b8a60d7d6aed56e4bf8893d",
+    "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": "ef9842648625ef6b6656d1a2c7ba2263c9e18199c8c5ddedcfdd6fd5c39a8085",
+    "apps/api/tests/test_file_forms.py": "1a4c37e2b4617a037d2d4d711a891d39631f6daecb407fdc585db1e42d2009ef"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "web_http_status": 200,
+  "policy_check": "no residual investigation presets (effective policy verified)",
+  "validation": {
+    "local_tests": {
+      "passed": 133,
+      "seconds": 13.12
+    },
+    "vm_tests": {
+      "passed": 133,
+      "seconds": 16.56
+    },
+    "local_web": "tsc not installed; not validated locally",
+    "vm_web_typecheck": "passed",
+    "vm_web_build": "passed",
+    "sandbox_fixture": {
+      "fields": [
+        "other",
+        "file"
+      ],
+      "search_only": false,
+      "same_origin_search": false
+    },
+    "actual_upload_performed": false,
+    "browser_ui_checked": false
+  }
+}

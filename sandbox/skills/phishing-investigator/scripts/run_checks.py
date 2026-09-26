@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from checklib import fetch_chain as fc  # noqa: E402
 from checklib import inspect_page as ip  # noqa: E402
 from checklib import similarity as sim  # noqa: E402
+from checklib.navigation import navigation_hosts
 from checklib.parse_url import parse_url  # noqa: E402
 from checklib.util import now_iso, read_json, work_dir, write_json  # noqa: E402
 
@@ -65,10 +66,15 @@ def main(argv: list[str] | None = None) -> int:
     else:
         def _fetch():
             nonlocal html
+            allowed = inp.get("allowed_hosts", [parsed["host_ascii"]])
+            if inp.get('navigation_mode') != 'discover':
+                allowed = [h for h in allowed if h in navigation_hosts(parsed['host_ascii'])]
             if args.fixtures:
-                fetcher = fc.FixtureFetcher(args.fixtures, parsed["host_ascii"])
+                fetcher = fc.FixtureFetcher(args.fixtures, parsed["host_ascii"], allowed_hosts=allowed)
             else:
-                fetcher = fc.HttpxFetcher()
+                # OpenShell resolves at its egress proxy; sandbox DNS is disabled.
+                # The host broker preflights every exact destination before granting it.
+                fetcher = fc.HttpxFetcher(allowed_hosts=allowed)
             try:
                 result, html = fc.fetch_chain(url, fetcher)
                 return result

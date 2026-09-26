@@ -62,7 +62,8 @@ def test_exact_and_alias_match():
 
 def test_no_text_match_falls_back_to_ranked_candidates():
     res = kb.candidates("택배가 반송되었습니다")
-    assert res and all(s == "embedding" for _, s in res) and res[0][0].id == "hanbit"
+    # 기관명이 없는 배송 문구는 특정 가상 브랜드가 아니라 배송 업종 후보를 찾는다.
+    assert res and all(s == "embedding" for _, s in res) and res[0][0].category == "delivery"
 
 
 def test_kb_official_records_and_known_domains():

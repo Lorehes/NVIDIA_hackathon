@@ -26,7 +26,7 @@
 | 설명 필드 확장 | `warning`, `detail`, `action_bullets` 추가, `unverified`는 항상 코드가 채움 | 디자인의 결과 카드 구조. 모델이 "확인 못 한 것"을 빠뜨리거나 바꿀 수 없게 |
 | `GET /investigations/{id}` | `steps[5]`(화면용 5단계), `open_hosts`, `blocked_count` 추가 | 진행 화면(3c)의 "안전 공간에서 여는 중" 박스와 5단계 표시 |
 | 오류 형식 | `{"error":{"code","message"}}` + 쉬운 말 메시지 | 화면에 그대로 표시 |
-| 시연 모드 | `mode=replay`는 `case_id` 또는 입력 문자가 데모 사례와 같을 때만. `data/replay/*.json` | 명세 9-3. 디자인에서 홈의 토글은 삭제되어 `?demo=1`로 켠다 |
+| 시연 모드 | `?demo=1`에서는 항상 `mode=replay` 요청. 서버가 저장 입력을 찾고, 없으면 오류 안내(실시간 조사로 자동 전환하지 않음). `data/replay/*.json` | 명세 9-3. 디자인에서 홈의 토글은 삭제되어 `?demo=1`로 켠다 |
 
 ## 로컬 개발용 흉내(LocalSandbox)
 
@@ -34,18 +34,19 @@
 `demo-sites/` 픽스처만 읽으며, 에이전트 역할(사칭 대상·목적 고르기)은 규칙으로 흉내 낸다. 결과의 `agent.kind`가 `local-sim`으로 표시된다.
 운영·시연은 `SANDBOX_MODE=openshell`.
 
-## 아직 사실이 아닌 것 (검증 필요)
+## VM 검증 이후 상태 (2026-09-25)
 
-- OpenShell/NemoClaw 실제 명령 형식은 스파이크 결과 보고서의 표기를 따랐고, 이 PC에는 없어 **실제 호출로는 검증하지 못했다**. 명령 순서·정책 수명주기는 가짜 실행기로 테스트했다(`tests/test_sandbox_openshell.py`).
-  `openclaw agent --json`의 `toolSummary`/`executionTrace`/모델 이름 필드 위치는 [추정]이라 `sandbox.extract_tools`/`_agent_meta`가 관대하게 읽는다. 첫 실행 뒤 실제 형식에 맞춰 조정할 것.
-- ~~임베딩 API(NeMo Retriever)는 키가 없어 검증하지 못했다~~ **[2026-09-25 검증 완료]** 실제 키로 확인해 보니 기존
-  기본값 `nvidia/llama-3.2-nv-embedqa-1b-v2`는 2026-05-18에 단종되어 410 Gone을 반환한다(`{"detail":"...has reached
-  its end of life..."}`). `https://integrate.api.nvidia.com/v1/models` 목록에서 이 계정 키로 실제 호출 가능한
-  임베딩 모델을 확인해 `nvidia/nemotron-3-embed-1b`(2048차원)로 교체했다. 한빛택배·하늘은행 KB 문장으로 배송/계좌
-  두 문맥 질의를 넣어 올바른 순위가 나오는 것까지 확인(`app/kb.py`의 `_rank_embedding`). 기본값을 코드
-  (`app/config.py`)와 `.env.example`에 반영. 키가 없거나 API가 다시 실패하면 여전히 문자 n-gram으로 자동 대체된다.
-- 실제 기관 KB는 비어 있다(가상 브랜드 2개). `kb/README.md`의 절차로 공식 사이트에서 확인한 값만 추가할 것.
-- V1(실제 모델), V2(`web_fetch` 차단), V3(동시 호출), V4(조사 1건 소요 시간)는 VM에서 확인해야 한다.
+- 실제 OpenShell 조사와 Nemotron 호출, 도구 메타데이터, 파일 회수, 정책 적용·회수를 확인했다. 작업 이름의 밑줄을 정책 이름에서 하이픈으로 바꾸고 systemd의 게이트웨이 환경 누락을 수정했다.
+- 정책 정리 확인은 프리셋 목록 대신 실제 적용 정책(`openshell policy get --full -o json`)을 검사한다. 확인할 수 없으면 정상으로 간주하지 않는다.
+- 실제 응답 모델 보고값은 `nvidia/nemotron-3-ultra-550b-a55b`; 게이트웨이 설정 표시값 `super-120b-a12b`와 구분한다. 설명 호출의 공급자 과부하는 기본 설명으로 처리했다.
+- 임베딩 기본 모델은 `nvidia/nemotron-3-embed-1b`. 이전 모델의 단종으로 교체한 기존 결정은 유지한다. 키가 없거나 API가 실패하면 로컬 n-gram 검색으로 대체된다.
+- 실제 기관·서비스 15개의 공식 도메인을 출처와 함께 추가했다. 실제 기관의 파트너·금지 입력 정책 및 실사용 문자 품질 평가는 미완료다.
+- 도메인이 없어 실제 E1–E5/S1·S2 전체 회귀와 외부 공개 HTTPS 시연은 미완료다. 1건 75.929초 측정은 모든 작업의 90초 완료 보장이 아니다. 동시 실행·내부망·리다이렉트의 실제환경 전체 검증도 남아 있다.
+- 상세 근거와 운영·리허설 절차: [VM 검증 기록](2026-09-25-vm-validation.md).
+
+## 대표·모바일 주소 이동 (2026-09-25)
+
+최초 호스트 하나만 허용하던 정책을 공개 등록 도메인의 대표/www/m 주소로 제한 확장했다. 공유 호스팅·임의 서브도메인은 자동 확장하지 않고, 추가 주소도 내부망 DNS 사전 검사를 거친다. 정상 이동 허용과 안전 판정은 별개다. [범위와 검증](2026-09-25-navigation-fix.md).
 
 ## 보안 검토 반영(2026-09-24)
 

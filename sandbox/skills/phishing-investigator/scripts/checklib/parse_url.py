@@ -27,7 +27,7 @@ def _get_extractor():
     try:
         import tldextract  # type: ignore
 
-        _extractor = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None)
+        _extractor = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, include_psl_private_domains=True)
     except Exception:  # noqa: BLE001 - 라이브러리 부재·초기화 실패 모두 대체 경로로
         _extractor_failed = True
         _extractor = None

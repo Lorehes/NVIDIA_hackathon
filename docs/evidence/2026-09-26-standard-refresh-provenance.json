@@ -1,0 +1,202 @@
+{
+  "date": "2026-09-26",
+  "deployment_status": "LOCAL_PREPARED_NOT_VM_DEPLOYED",
+  "active_data_unchanged": [
+    "kb/site_catalog.json",
+    "kb/sources/coverage.json",
+    "kb/sources/public_health.json",
+    "kb/sources/universities.json",
+    "kb/sources/verified_corrections.json"
+  ],
+  "before_sha256": {
+    "scripts/catalog/collect_education.py": "d619b5b95949033fa694f0a0d93c9d3559847011ce5ef76710e50815a6354cd2",
+    "kb/site_catalog.json": "27530d792f2e68aadc77cb30c7d8473c62d12734a074f90b81b3cf34c2696e75",
+    "kb/sources/coverage.json": "5731793bff8c722ba18e3eb8cdb703ea57a7f4fe959252cc3020d4b4c50360d0",
+    "kb/sources/public_health.json": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+    "kb/sources/universities.json": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a",
+    "kb/sources/verified_corrections.json": "69c608dc1787ef05803c1b2d40eb3f128086f18f86cc6915126262752c5a1274"
+  },
+  "after_code_sha256": {
+    "scripts/catalog/collect_education.py": "eee143dbd6f9b3da854101100076d2394c5ff1a1d2758487baf1395fff2473f5",
+    "apps/api/tests/test_standard_refresh.py": "c079feec0c3da1893bab69f122c558cbfce727596be16d2b46263a138f2a8e63"
+  },
+  "metadata_only_requests": [
+    {
+      "source": "https://www.data.go.kr/download/columList.json?pk=15107750&ext=JSON",
+      "dataset": "public_health",
+      "published_count": 318,
+      "columns": [
+        {
+          "columCode": "HT_INST_NM",
+          "columNm": "보건기관명"
+        },
+        {
+          "columCode": "CTPV_NM",
+          "columNm": "시도명"
+        },
+        {
+          "columCode": "SGG_NM",
+          "columNm": "시군구명"
+        },
+        {
+          "columCode": "HTCT_TYPE_NM",
+          "columNm": "보건기관유형명"
+        },
+        {
+          "columCode": "LCTN_ROAD_NM_ADDR",
+          "columNm": "소재지도로명주소"
+        },
+        {
+          "columCode": "LCTN_LOTNO_ADDR",
+          "columNm": "소재지지번주소"
+        },
+        {
+          "columCode": "MCARE_EXMD_CN",
+          "columNm": "진료검진내용"
+        },
+        {
+          "columCode": "HMPG_ADDR",
+          "columNm": "홈페이지주소"
+        },
+        {
+          "columCode": "TELNO",
+          "columNm": "전화번호"
+        },
+        {
+          "columCode": "CRTR_YMD",
+          "columNm": "데이터기준일자"
+        },
+        {
+          "columCode": "INSTT_CODE",
+          "columNm": "제공기관코드"
+        },
+        {
+          "columCode": "INSTT_NM",
+          "columNm": "제공기관명"
+        }
+      ]
+    },
+    {
+      "source": "https://www.data.go.kr/download/columList.json?pk=15107736&ext=JSON",
+      "dataset": "universities",
+      "published_count": 1995,
+      "columns": [
+        {
+          "columCode": "SCHL_NM",
+          "columNm": "학교명"
+        },
+        {
+          "columCode": "SCHL_ENG_NM",
+          "columNm": "학교 영문명"
+        },
+        {
+          "columCode": "MAINBRANCH_NM",
+          "columNm": "본분교구분명"
+        },
+        {
+          "columCode": "UNIV_SE_NM",
+          "columNm": "대학구분명"
+        },
+        {
+          "columCode": "SCHL_SE_NM",
+          "columNm": "학교구분명"
+        },
+        {
+          "columCode": "FNDN_FORM_SE_NM",
+          "columNm": "설립형태구분명"
+        },
+        {
+          "columCode": "CTPV_CD",
+          "columNm": "시도코드"
+        },
+        {
+          "columCode": "CTPV_NM",
+          "columNm": "시도명"
+        },
+        {
+          "columCode": "LCTN_ROAD_NM_ADDR",
+          "columNm": "소재지도로명주소"
+        },
+        {
+          "columCode": "LCTN_LOTNO_ADDR",
+          "columNm": "소재지지번주소"
+        },
+        {
+          "columCode": "STR_NM_ZIP",
+          "columNm": "도로명우편번호"
+        },
+        {
+          "columCode": "LCTN_ZIP",
+          "columNm": "소재지우편번호"
+        },
+        {
+          "columCode": "HMPG_ADDR",
+          "columNm": "홈페이지주소"
+        },
+        {
+          "columCode": "RPRS_TEL_NO",
+          "columNm": "대표전화번호"
+        },
+        {
+          "columCode": "RPRS_FXNO",
+          "columNm": "대표팩스번호"
+        },
+        {
+          "columCode": "FNDN_YMD",
+          "columNm": "설립일자"
+        },
+        {
+          "columCode": "CRTR_YR",
+          "columNm": "기준연도"
+        },
+        {
+          "columCode": "CRTR_YMD",
+          "columNm": "데이터기준일자"
+        },
+        {
+          "columCode": "INSTT_CODE",
+          "columNm": "제공기관코드"
+        },
+        {
+          "columCode": "INSTT_NM",
+          "columNm": "제공기관명"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "local_passed": 34,
+    "seconds": 1.03,
+    "new_tests": 10,
+    "test_files": [
+      "test_standard_refresh.py",
+      "test_source_fingerprints.py",
+      "test_source_corrections.py"
+    ],
+    "network": "httpx.MockTransport only in tests"
+  },
+  "limitations": [
+    "No bulk source download or real candidate generation",
+    "Remaining five public-health rows not resolved",
+    "No automatic correction migration or source promotion",
+    "No new VM connection, deployment, tests or real URL investigation",
+    "Existing runtime search classification and 25 catalog additions remain pending"
+  ],
+  "current_local": {
+    "records": 22145,
+    "hosts": 16282,
+    "excluded": 2390,
+    "corrections": 190
+  },
+  "last_verified_vm": {
+    "records": 22120,
+    "hosts": 16282,
+    "excluded": 2415,
+    "corrections": 165
+  },
+  "flowline": {
+    "task_id": "eb28f625-437a-45f6-afb4-f0f573312797",
+    "version": 39,
+    "status": "in_progress"
+  }
+}

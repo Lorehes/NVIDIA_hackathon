@@ -99,7 +99,7 @@ class AgentSummary(BaseModel):
     unexpected_tools: list[str] = []
     duration_ms: int | None = None
     model_reported: str | None = None
-    kind: Literal["openshell", "local-sim", "replay"] = "openshell"
+    kind: Literal["openshell", "local-sim", "replay", "not_run"] = "openshell"
 
 
 class InvestigationResult(BaseModel):
@@ -124,6 +124,8 @@ class InvestigationResult(BaseModel):
     incomplete_reason: str | None = None  # 조사가 멈춘 이유(쉬운 말)
     more_urls: list[str] = []
     agent: AgentSummary = AgentSummary()
+    identity: dict[str, Any] = {}
+    connection: dict[str, Any] = {}
 
 
 # ── 진행 상태 ─────────────────────────────────────────────────────
@@ -198,7 +200,7 @@ class RedirectTrace(BaseModel):
 class FieldRow(BaseModel):
     type: str  # card_number 등 (개발자용)
     label: str  # 카드 번호
-    verdict: Literal["needed", "not_needed", "ok"]  # 필요 없음 / 괜찮음 …
+    verdict: Literal["needed", "not_needed", "ok", "unknown"]  # 필요 없음 / 괜찮음 / 미검사 …
     verdict_label: str
 
 
@@ -252,7 +254,7 @@ class SandboxTrace(BaseModel):
     open_seconds: int | None = None
     remaining_open: int = 0
     allowed: list[str] = [
-        "조사할 링크 한 곳 들어가기", "페이지를 보기만 하기", "정해진 확인 도구만 쓰기",
+        "조사할 사이트의 허용된 주소 들어가기", "페이지를 보기만 하기", "정해진 확인 도구만 쓰기",
     ]
     denied: list[str] = [
         "다른 사이트 들어가기", "정보를 적어서 보내기", "프로그램·앱 설치하기", "페이지 속 프로그램 실행하기",

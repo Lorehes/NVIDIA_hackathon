@@ -1,0 +1,400 @@
+{
+  "records": [
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "8d1143d34ea77476effb3eac23e2386cf447883a76085e888fb6e9749c346216",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 일반대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/3512/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/3512/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "일반대학원",
+          "target": "https://www.ptu.ac.kr/graduate/3512/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/3512/subview.do",
+          "http_status": 200,
+          "body_sha256": "114ab71cfe86e7d559b7320ff54bedc57f4e787e49269ba17a9047165ff57c7d",
+          "confirmed_school": "평택대학교 일반대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "50c657b28dc68c597ca75f15c8ea52a83a01e2e9ace5c95c358cac60980176fe",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 피어선신학전문대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/3531/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/3531/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "피어선신학전문대학원",
+          "target": "https://www.ptu.ac.kr/graduate/3531/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/3531/subview.do",
+          "http_status": 200,
+          "body_sha256": "558d57aac3044835a0b193a4447978c0132349757574ef4c19f50dbefdd86928",
+          "confirmed_school": "평택대학교 피어선신학전문대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "9e9556b68cc45091d43608154f70a0aa353fa5fea9d1f44121fd9d311655f20c",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 사회복지대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/3535/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/3535/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "사회복지대학원",
+          "target": "https://www.ptu.ac.kr/graduate/3535/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/3535/subview.do",
+          "http_status": 200,
+          "body_sha256": "8453c73b1ba976d84c430e9c59e34f38ebca864d32f56709ce77c79f61dde18a",
+          "confirmed_school": "평택대학교 사회복지대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "6fe69b66338a4293e1b16dbaba3f12f7825e42781e01210db9136096b6589c3b",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 글로벌비즈니스대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/3547/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/3547/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "글로벌비즈니스대학원",
+          "target": "https://www.ptu.ac.kr/graduate/3547/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/3547/subview.do",
+          "http_status": 200,
+          "body_sha256": "132214bb3f92cca1d038117c29b554aa78c1e93d18a6de6e657b3514e8124be9",
+          "confirmed_school": "평택대학교 글로벌비즈니스대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "75a8da05210f89bdadd1b90840ca412c11f8743562778cf5f034cd97c2ca3a89",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 통번역대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/3556/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/3556/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "통번역대학원",
+          "target": "https://www.ptu.ac.kr/graduate/3556/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/3556/subview.do",
+          "http_status": 200,
+          "body_sha256": "e54b7c94bb24f89c8d5620a862e35ff2b5f38dbe3201613c20883b16cb69192f",
+          "confirmed_school": "평택대학교 통번역대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "02d34bc071b76dfc28e5d514bc6562c2ae9bcf8739cd18f71b9dafd086e84fc2",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 국가안보대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "국가안보대학원",
+          "target": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+          "http_status": 200,
+          "body_sha256": "b527d71004e116acb9f6036f95e3800d215b1403f605677a65bca586c7e8c655",
+          "confirmed_school": "평택대학교 국가안보대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    },
+    {
+      "source_dataset": "universities",
+      "source_id": null,
+      "source_row_sha256": "ea9d366e2549ec46b9b5509f5db25645376c4787f7cbc9fc79ee2224d2337735",
+      "source_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+      "name": "평택대학교 AI융합대학원",
+      "original_url": "",
+      "url": "https://www.ptu.ac.kr/graduate/4292/subview.do",
+      "scope": "url",
+      "source": "https://www.ptu.ac.kr/graduate/4292/subview.do",
+      "checked": "2026-09-25",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.ptu.ac.kr/graduate/index.do",
+          "http_status": 200,
+          "body_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+          "label": "AI융합대학원",
+          "target": "https://www.ptu.ac.kr/graduate/4292/subview.do",
+          "verification_note": "상단 대학원별 메뉴의 명시적 연결과 도착 본문 대조; 하단 일부 카드의 잘못된 3556 공통 연결은 사용하지 않음"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.ptu.ac.kr/graduate/4292/subview.do",
+          "http_status": 200,
+          "body_sha256": "bc0cad6c384bd018f12b297b659d3f815cfbe539b01deabead6b9b07a3fc1629",
+          "confirmed_school": "평택대학교 AI융합대학원",
+          "confirmed_region": "경기도 평택시 서동대로 3825",
+          "content_scope": "해당 대학원 전공 소개·교육과정 안내; 대학원별 독립 도메인 또는 현재 모집 상태를 보증하지 않음"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "records": 21943,
+    "hosts": 16251,
+    "excluded": 2557,
+    "missing_homepage": 2530,
+    "corrections": 23,
+    "inactive_corrections": 0
+  },
+  "catalog_sha256": "2fdd52cca20447559eb14da4c37ab392d131be9f850a2245abf7e5d6de300d70",
+  "raw_universities_file_sha256": "a1595cdc95f1d7da27ada23456982799530e12770b0215986c7849b24ee8f90a",
+  "canonical_snapshot_sha256": "cd65f80440d8b8b93c336bb1b1d59bea712d800df28b453866e3e92def570705",
+  "checks": {
+    "local": {
+      "passed": 64,
+      "seconds": 1.37
+    },
+    "vm": {
+      "passed": 64,
+      "seconds": 1.57
+    }
+  },
+  "conflicting_navigation": {
+    "source": "https://www.ptu.ac.kr/graduate/index.do",
+    "source_sha256": "30c93ea179059ad1b15f6f2be752de5a52e16a9305c39860e2dededcb3fc9257",
+    "ignored_links": [
+      {
+        "label": "국가안보대학원",
+        "url": "https://www.ptu.ac.kr/graduate/3556/subview.do"
+      },
+      {
+        "label": "AI융합대학원",
+        "url": "https://www.ptu.ac.kr/graduate/3556/subview.do"
+      }
+    ],
+    "resolution": "Top navigation links plus institution-specific content confirmed; translation page not assigned to national security or AI school"
+  },
+  "deferred": [
+    {
+      "name": "평택대학교 물류·정보·경영대학원",
+      "reason": "현재 검토한 공식 대학원 목록에서 동명 항목 없음; 글로벌비즈니스대학원으로 추정 병합하지 않음"
+    },
+    {
+      "name": "평택대학교 문화·예술융합대학원",
+      "reason": "현재 검토한 공식 대학원 목록에서 동명 항목 없음; 폐지 또는 후속 기관으로 단정하지 않음"
+    }
+  ],
+  "limitations": [
+    "Seven exact program introduction pages, not seven independently hosted websites",
+    "No institution identifiers invented; whole canonical row+snapshot fingerprints only",
+    "Any content/version change disables fingerprint corrections until reviewed",
+    "Existing identified-source corrections and raw source files preserved",
+    "Other six URLs have local source retrieval only; VM live test targets national security page"
+  ],
+  "live": {
+    "job_id": "j_5cca62149c1948a58b014d27663d1785",
+    "status": "done",
+    "elapsed_ms": 17842,
+    "error": null,
+    "verdict": "unknown",
+    "identity": {
+      "host": "www.ptu.ac.kr",
+      "site_family": "ptu.ac.kr",
+      "status": "verified",
+      "name": "평택대학교 국가안보대학원",
+      "source": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+      "checked": "2026-09-25",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_746ac7b584edf8369ced",
+          "name": "평택대학교 국가안보대학원",
+          "source": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+          "checked": "2026-09-25"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.ptu.ac.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "explanation": {
+      "headline": "평택대학교 국가안보대학원 공식 주소로 확인됐어요.",
+      "warning": null,
+      "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 ptu.ac.kr이에요.",
+        "공식 출처에서 평택대학교 국가안보대학원 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+      "action_bullets": [
+        "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.ptu.ac.kr/graduate/4289/subview.do",
+        "host": "www.ptu.ac.kr",
+        "registrable_domain": "ptu.ac.kr",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T17:40:34.094+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "www.ptu.ac.kr"
+          ],
+          "sha256": "8a3ee48f68de05e3d14e3fcd584d0978079390a4297b6f230a5dbe758c1e4353",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "2fdd52cca20447559eb14da4c37ab392d131be9f850a2245abf7e5d6de300d70"
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "effective_policy_residuals": 0,
+  "prior_catalog_preservation_sha256": "72d1f71d8bfee2c7831ee240af26dc4ea2fac1d8c6db40746ce982090ab2da12"
+}

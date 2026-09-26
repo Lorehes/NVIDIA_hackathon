@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "relations": [
+    {
+      "source_id": "site_2ab00d1c997f999bddb8",
+      "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+      "source_record_sha256": "0c1fc3cefc7a5a2a0745165248962c2e067b7598facfc5ce01e49fcd1795b23c",
+      "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+      "method": "post",
+      "operator": "충북대학교",
+      "review_kind": "publisher_search_and_operator_evidence",
+      "operator_evidence": {
+        "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+        "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+      },
+      "checked_at": "2026-09-26T08:33:46.999536+00:00",
+      "expires_at": "2026-09-27T08:33:46.999536+00:00",
+      "refresh_evidence": {
+        "source_body_sha256": "96db46846be130955b3fad887320b477c1126a599f8e5f8a07f22a408cc06744",
+        "destination_body_sha256": "049dcf2641fc5cf7825e6c591ccc6e722b311c052f10c7ce67bd7c8335f5c6db",
+        "operator_text_sha256": "987b13e08ba0a1337e3566d6aac4433db69584d7b0748fb1efacc5eca9f4d7f2"
+      }
+    },
+    {
+      "source_id": "site_250be1f70b6783dca0ee",
+      "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+      "source_record_sha256": "827eb7af3262f282da3febeaa76490eccc0a8b1ece7820199e95dab5af67aa9c",
+      "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+      "method": "post",
+      "operator": "충북대학교",
+      "review_kind": "publisher_search_and_operator_evidence",
+      "operator_evidence": {
+        "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+        "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+      },
+      "checked_at": "2026-09-26T08:33:46.999536+00:00",
+      "expires_at": "2026-09-27T08:33:46.999536+00:00",
+      "refresh_evidence": {
+        "source_body_sha256": "f39bd4637e0af4b1e215d4869659dfb123325fff77fbce48242c40f469d1f096",
+        "destination_body_sha256": "049dcf2641fc5cf7825e6c591ccc6e722b311c052f10c7ce67bd7c8335f5c6db",
+        "operator_text_sha256": "987b13e08ba0a1337e3566d6aac4433db69584d7b0748fb1efacc5eca9f4d7f2"
+      }
+    },
+    {
+      "source_id": "site_9ecaea067a4ec2c9a6d5",
+      "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "source_record_sha256": "e5a78a7c94cdcd6bccc9f3f7d9cb13aa52de535afa2639eb8e3eb930b4ec5f0e",
+      "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+      "method": "post",
+      "operator": "충북대학교",
+      "review_kind": "publisher_search_and_operator_evidence",
+      "operator_evidence": {
+        "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+        "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+      },
+      "checked_at": "2026-09-26T08:33:46.999536+00:00",
+      "expires_at": "2026-09-27T08:33:46.999536+00:00",
+      "refresh_evidence": {
+        "source_body_sha256": "243539f98be3f2e49b989ab31377633914d612f3d8a17a3dbb9069d1b65d944b",
+        "destination_body_sha256": "049dcf2641fc5cf7825e6c591ccc6e722b311c052f10c7ce67bd7c8335f5c6db",
+        "operator_text_sha256": "987b13e08ba0a1337e3566d6aac4433db69584d7b0748fb1efacc5eca9f4d7f2"
+      }
+    }
+  ]
+}

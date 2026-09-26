@@ -1,0 +1,279 @@
+{
+  "checked": "2026-09-26",
+  "sources": {
+    "owner_notice": {
+      "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+      "status": 200,
+      "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6",
+      "title": "정보화본부",
+      "selected": [
+        "교육부가 행정전자서명 SSL 인증서 발급을 중단('19.5)함에 따라, 정보화본부에서는 상용인증서를 구매하여 교내에 정보시스템(홈페이지 등)을 운영하는 필요 부서에 인증서를 발급합니다.",
+        "□ 신청대상: ○○○.chungbuk.ac.kr 또는 ○○○.cbnu.ac.kr",
+        "□ 사용기한: 2025년 3월 2일까지(1년 마다 갱신)"
+      ]
+    },
+    "source_forms": [
+      {
+        "url": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+        "status": 200,
+        "sha256": "96db46846be130955b3fad887320b477c1126a599f8e5f8a07f22a408cc06744",
+        "form": {
+          "action_host": "www.cbnu.ac.kr",
+          "action_registrable_domain": "cbnu.ac.kr",
+          "cross_domain": true,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.cbnu.ac.kr",
+              "registrable_domain": "cbnu.ac.kr",
+              "cross_domain": true
+            }
+          ],
+          "action_urls": [
+            "https://www.cbnu.ac.kr/search/search.jsp"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "submission_methods": [
+            "post"
+          ],
+          "search_form": true,
+          "search_only": false
+        }
+      },
+      {
+        "url": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+        "status": 200,
+        "sha256": "f39bd4637e0af4b1e215d4869659dfb123325fff77fbce48242c40f469d1f096",
+        "form": {
+          "action_host": "www.cbnu.ac.kr",
+          "action_registrable_domain": "cbnu.ac.kr",
+          "cross_domain": true,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.cbnu.ac.kr",
+              "registrable_domain": "cbnu.ac.kr",
+              "cross_domain": true
+            }
+          ],
+          "action_urls": [
+            "https://www.cbnu.ac.kr/search/search.jsp"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "submission_methods": [
+            "post"
+          ],
+          "search_form": true,
+          "search_only": false
+        }
+      },
+      {
+        "url": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+        "status": 200,
+        "sha256": "243539f98be3f2e49b989ab31377633914d612f3d8a17a3dbb9069d1b65d944b",
+        "form": {
+          "action_host": "www.cbnu.ac.kr",
+          "action_registrable_domain": "cbnu.ac.kr",
+          "cross_domain": true,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.cbnu.ac.kr",
+              "registrable_domain": "cbnu.ac.kr",
+              "cross_domain": true
+            }
+          ],
+          "action_urls": [
+            "https://www.cbnu.ac.kr/search/search.jsp"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "submission_methods": [
+            "post"
+          ],
+          "search_form": true,
+          "search_only": false
+        }
+      }
+    ],
+    "limitations": [
+      "Owner notice describes a certificate period ending 2025-03-02, not proof of current certificate validity",
+      "Fresh exact form targets reviewed together with the independent university IT notice; no domain wildcard",
+      "No input submission or behavior verification"
+    ]
+  },
+  "relations": {
+    "schema_version": 1,
+    "relations": [
+      {
+        "source_id": "site_2ab00d1c997f999bddb8",
+        "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=410",
+        "source_record_sha256": "0c1fc3cefc7a5a2a0745165248962c2e067b7598facfc5ce01e49fcd1795b23c",
+        "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+        "method": "post",
+        "operator": "충북대학교",
+        "review_kind": "publisher_search_and_operator_evidence",
+        "operator_evidence": {
+          "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+          "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+        },
+        "checked_at": "2026-09-26T05:55:15.599612+00:00",
+        "expires_at": "2026-09-27T05:55:15.599612+00:00"
+      },
+      {
+        "source_id": "site_250be1f70b6783dca0ee",
+        "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=412",
+        "source_record_sha256": "827eb7af3262f282da3febeaa76490eccc0a8b1ece7820199e95dab5af67aa9c",
+        "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+        "method": "post",
+        "operator": "충북대학교",
+        "review_kind": "publisher_search_and_operator_evidence",
+        "operator_evidence": {
+          "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+          "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+        },
+        "checked_at": "2026-09-26T05:55:15.599612+00:00",
+        "expires_at": "2026-09-27T05:55:15.599612+00:00"
+      },
+      {
+        "source_id": "site_9ecaea067a4ec2c9a6d5",
+        "source_url": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+        "source_record_sha256": "e5a78a7c94cdcd6bccc9f3f7d9cb13aa52de535afa2639eb8e3eb930b4ec5f0e",
+        "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+        "method": "post",
+        "operator": "충북대학교",
+        "review_kind": "publisher_search_and_operator_evidence",
+        "operator_evidence": {
+          "url": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+          "sha256": "5de194dfd8661d4122b0a42b1b87bfd93d26f75d50dab2b77bf357a9298f28e6"
+        },
+        "checked_at": "2026-09-26T05:55:15.599612+00:00",
+        "expires_at": "2026-09-27T05:55:15.599612+00:00"
+      }
+    ]
+  },
+  "deployment": {
+    "backup": "/tmp/reviewed-search-deploy-20260926T055606Z",
+    "files": {
+      "apps/api/app/verdict.py": {
+        "before": "e3ff983acfdd26a7a82716ef95849b15a6ec135e8afeae84f0a6be4cd6605538",
+        "after": "6f838a572e1e9604ca3d560f17d487511449436fa849f6775bbc95e3dc3fca6f"
+      },
+      "apps/api/app/presentation.py": {
+        "before": "554342122bde01df65ae163b94dec4e953e8f41b2e535fcd346897e0e4dfc9c6",
+        "after": "327a251a926274a8219641040c1202f0a8bb8e759bc509f4c78a73983680aaa5"
+      },
+      "apps/api/app/trace.py": {
+        "before": "a07876f979a84f63ea35c3dd09c297cfd8579650702cba2a121351d6704c5a45",
+        "after": "d08bfd6c9289e2960341bd600e9177482a88e01cabc0a26ac142bdce89f5bf71"
+      },
+      "sandbox/skills/phishing-investigator/scripts/checklib/inspect_page.py": {
+        "before": "434d3cd70f73ce7904b80341fb630e2d3b7faa97f2e9f3e35e10c05c9730288e",
+        "after": "0a359e94a4d45d1ad76a39d90901d3982faaa5f1df511e66716b476fd21febd9"
+      },
+      "apps/api/tests/test_reviewed_search_relations.py": {
+        "before": null,
+        "after": "7d740bf169a4f454e4363624a0f32cd88fc4b6866dd7e8b656c760257547a3ab"
+      },
+      "apps/api/app/search_relations.py": {
+        "before": null,
+        "after": "4f2af3e695d2b0803de97d7078372fd7033e2f349192f01635803581683011e2"
+      },
+      "kb/sources/reviewed_search_relations.json": {
+        "before": null,
+        "after": "a4c88ea8e0152ce8d697680349cd6fef98f55adaa3b89f43d4dd6526fee4abe2"
+      }
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    }
+  },
+  "live": {
+    "search_warning": {
+      "type": "reviewed_search_destination",
+      "strength": "info",
+      "data": {
+        "action_host": "www.cbnu.ac.kr",
+        "source": "https://www.chungbuk.ac.kr/icc/selectBbsNttView.do?bbsNo=76&key=44&nttNo=1700&pageIndex=1&pageUnit=10&searchCnd=all",
+        "operator": "충북대학교",
+        "destination_url": "https://www.cbnu.ac.kr/search/search.jsp",
+        "expires_at": "2026-09-27T05:55:15.599612+00:00"
+      }
+    },
+    "headline": "충북대학교 법무대학원 공식 주소로 확인됐어요.",
+    "trace_sentence": "공식 출처에서 이 검색 연결의 운영 관계를 확인했어요. 실제 전송과 서버의 처리 과정은 검사하지 않았어요.",
+    "job_id": "j_d630988edaa84dbba81c3e712a5ea3a9",
+    "status": "done",
+    "elapsed_ms": 17520,
+    "timings": {
+      "parse": 1,
+      "policy_open": 7208,
+      "agent_investigate": 1745,
+      "sandbox_total": 17337,
+      "verdict": 4,
+      "explain": 2,
+      "total": 17513
+    },
+    "identity": {
+      "host": "www.chungbuk.ac.kr",
+      "site_family": "chungbuk.ac.kr",
+      "status": "verified",
+      "name": "충북대학교 법무대학원",
+      "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_9ecaea067a4ec2c9a6d5",
+          "name": "충북대학교 법무대학원",
+          "source": "https://www.chungbuk.ac.kr/www/contents.do?key=416",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 1,
+      "related_addresses": [
+        "www.chungbuk.ac.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "incomplete"
+    },
+    "verdict": "unknown",
+    "incomplete_reason": null,
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "tests": {
+    "local": "179 passed in 0.45s",
+    "vm": "179 passed in 0.88s"
+  },
+  "catalog_sha256": "f58ac5953a17645e2cd16dab13f1303707a7b6e7d5923ce7a701b8a4c189f34e",
+  "counts": {
+    "records": 22200,
+    "hosts": 16293,
+    "excluded": 2379,
+    "missing_homepage": 2354,
+    "other_excluded": 25
+  },
+  "limitations": [
+    "Only three exact source-page search edges, not domain-wide ownership inheritance",
+    "24-hour expiry enforced, no automatic renewal implemented; changed source records require review",
+    "No POST or browser script execution, no safety grant, no original server TLS validation",
+    "Existing institutional omissions and full controlled HTTPS/SMS/rehearsal work remain"
+  ]
+}

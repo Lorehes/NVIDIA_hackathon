@@ -1,0 +1,553 @@
+{
+  "source": "live VM API; public test URLs only",
+  "results": [
+    {
+      "url": "https://naver.com/",
+      "job_id": "j_dddca55ad83b4f19bab662fed234e7c6",
+      "status": "done",
+      "verdict": "unknown",
+      "identity": {
+        "host": "m.naver.com",
+        "site_family": "naver.com",
+        "status": "verified",
+        "name": "네이버",
+        "source": "https://www.navercorp.com/service/portal",
+        "checked": "2026-09-25",
+        "canonical_from": "https://www.naver.com/",
+        "expires_at": "2026-09-26T14:10:19.969557+00:00",
+        "reason": "publisher_home_redirect",
+        "related_addresses": [
+          "academic.naver.com",
+          "blog.naver.com",
+          "books.nid.naver.com",
+          "buyer.collection.naver.com",
+          "cafe.naver.com",
+          "calendar.naver.com",
+          "certificate.nid.naver.com",
+          "chzzk.naver.com",
+          "clovadubbing.naver.com",
+          "clovanote.naver.com",
+          "comic.naver.com",
+          "contact.naver.com",
+          "contents.premium.naver.com",
+          "datalab.naver.com",
+          "dict.naver.com",
+          "didcard.naver.com",
+          "ekyc.naver.com",
+          "finance.naver.com",
+          "fleamarket.naver.com",
+          "flight.naver.com"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "headline": "네이버 공식 주소로 확인됐어요.",
+      "signals": [
+        {
+          "type": "official_match",
+          "strength": "positive",
+          "data": {
+            "domain": "naver.com",
+            "entity_id": "site_079296462423b295dfb5"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        }
+      ],
+      "chain": [
+        {
+          "url": "https://naver.com/",
+          "host": "naver.com",
+          "registrable_domain": "naver.com",
+          "status": 301,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:16:18.734+00:00"
+        },
+        {
+          "url": "https://www.naver.com/",
+          "host": "www.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 302,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:16:19.119+00:00"
+        },
+        {
+          "url": "https://m.naver.com",
+          "host": "m.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:16:19.437+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "naver.com"
+            ],
+            "sha256": "97881436fdbf8294507a15450233977e19e03dd9fcbd3bffc213791ff045b53c",
+            "protocol": "TLSv1.3"
+          },
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.naver.com"
+            ],
+            "sha256": "6a129798dee3d3f2ad22c2e1744bc04a4b020e9c6e28796c03eeccffd9b52a67",
+            "protocol": "TLSv1.3"
+          },
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "m.naver.com"
+            ],
+            "sha256": "422ec66bbea1042d272a1a7adcf707c5f50b6e627900cdd4a9ea03814a0320de",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "navigation": [
+        {
+          "url": "https://www.naver.com/",
+          "allowed": true,
+          "reason": "public_redirect_destination"
+        },
+        {
+          "url": "https://m.naver.com",
+          "allowed": true,
+          "reason": "public_redirect_destination"
+        },
+        {
+          "url": "https://www.naver.com/",
+          "allowed": true,
+          "reason": "public_dns_refresh"
+        }
+      ]
+    },
+    {
+      "url": "https://www.naver.com/",
+      "job_id": "j_8ea1b0ef3e674e32916c7f80d2b76ed2",
+      "status": "done",
+      "verdict": "unknown",
+      "identity": {
+        "host": "m.naver.com",
+        "site_family": "naver.com",
+        "status": "verified",
+        "name": "네이버",
+        "source": "https://www.navercorp.com/service/portal",
+        "checked": "2026-09-25",
+        "canonical_from": "https://www.naver.com/",
+        "expires_at": "2026-09-26T14:10:19.969557+00:00",
+        "reason": "publisher_home_redirect",
+        "related_addresses": [
+          "academic.naver.com",
+          "blog.naver.com",
+          "books.nid.naver.com",
+          "buyer.collection.naver.com",
+          "cafe.naver.com",
+          "calendar.naver.com",
+          "certificate.nid.naver.com",
+          "chzzk.naver.com",
+          "clovadubbing.naver.com",
+          "clovanote.naver.com",
+          "comic.naver.com",
+          "contact.naver.com",
+          "contents.premium.naver.com",
+          "datalab.naver.com",
+          "dict.naver.com",
+          "didcard.naver.com",
+          "ekyc.naver.com",
+          "finance.naver.com",
+          "fleamarket.naver.com",
+          "flight.naver.com"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "headline": "네이버 공식 주소로 확인됐어요.",
+      "signals": [
+        {
+          "type": "official_match",
+          "strength": "positive",
+          "data": {
+            "domain": "naver.com",
+            "entity_id": "site_079296462423b295dfb5"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        }
+      ],
+      "chain": [
+        {
+          "url": "https://www.naver.com/",
+          "host": "www.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 302,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:16:58.821+00:00"
+        },
+        {
+          "url": "https://m.naver.com",
+          "host": "m.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:16:59.038+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "www.naver.com"
+            ],
+            "sha256": "6a129798dee3d3f2ad22c2e1744bc04a4b020e9c6e28796c03eeccffd9b52a67",
+            "protocol": "TLSv1.3"
+          },
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "m.naver.com"
+            ],
+            "sha256": "422ec66bbea1042d272a1a7adcf707c5f50b6e627900cdd4a9ea03814a0320de",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "navigation": [
+        {
+          "url": "https://m.naver.com",
+          "allowed": true,
+          "reason": "public_redirect_destination"
+        }
+      ]
+    },
+    {
+      "url": "https://m.naver.com/",
+      "job_id": "j_34e140576df848809e3260512573a972",
+      "status": "done",
+      "verdict": "unknown",
+      "identity": {
+        "host": "m.naver.com",
+        "site_family": "naver.com",
+        "status": "verified",
+        "name": "네이버",
+        "source": "https://www.navercorp.com/service/portal",
+        "checked": "2026-09-25",
+        "canonical_from": "https://www.naver.com/",
+        "expires_at": "2026-09-26T14:10:19.969557+00:00",
+        "reason": "publisher_home_redirect",
+        "related_addresses": [
+          "academic.naver.com",
+          "blog.naver.com",
+          "books.nid.naver.com",
+          "buyer.collection.naver.com",
+          "cafe.naver.com",
+          "calendar.naver.com",
+          "certificate.nid.naver.com",
+          "chzzk.naver.com",
+          "clovadubbing.naver.com",
+          "clovanote.naver.com",
+          "comic.naver.com",
+          "contact.naver.com",
+          "contents.premium.naver.com",
+          "datalab.naver.com",
+          "dict.naver.com",
+          "didcard.naver.com",
+          "ekyc.naver.com",
+          "finance.naver.com",
+          "fleamarket.naver.com",
+          "flight.naver.com"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "headline": "네이버 공식 주소로 확인됐어요.",
+      "signals": [
+        {
+          "type": "official_match",
+          "strength": "positive",
+          "data": {
+            "domain": "naver.com",
+            "entity_id": "site_079296462423b295dfb5"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        },
+        {
+          "type": "same_site_search",
+          "strength": "info",
+          "data": {
+            "action_host": "m.search.naver.com"
+          }
+        }
+      ],
+      "chain": [
+        {
+          "url": "https://m.naver.com/",
+          "host": "m.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:17:18.988+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "m.naver.com"
+            ],
+            "sha256": "422ec66bbea1042d272a1a7adcf707c5f50b6e627900cdd4a9ea03814a0320de",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "navigation": []
+    },
+    {
+      "url": "https://papago.naver.com/",
+      "job_id": "j_857562567a7945c4b5fd517c8623d2d9",
+      "status": "done",
+      "verdict": "unknown",
+      "identity": {
+        "host": "papago.naver.com",
+        "site_family": "naver.com",
+        "status": "verified",
+        "name": "네이버 파파고",
+        "source": "https://www.navercorp.com/service/all",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "reason": "publisher_service_link",
+        "related_addresses": [
+          "academic.naver.com",
+          "blog.naver.com",
+          "books.nid.naver.com",
+          "buyer.collection.naver.com",
+          "cafe.naver.com",
+          "calendar.naver.com",
+          "certificate.nid.naver.com",
+          "chzzk.naver.com",
+          "clovadubbing.naver.com",
+          "clovanote.naver.com",
+          "comic.naver.com",
+          "contact.naver.com",
+          "contents.premium.naver.com",
+          "datalab.naver.com",
+          "dict.naver.com",
+          "didcard.naver.com",
+          "ekyc.naver.com",
+          "finance.naver.com",
+          "fleamarket.naver.com",
+          "flight.naver.com"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "headline": "네이버 파파고 공식 주소로 확인됐어요.",
+      "signals": [
+        {
+          "type": "official_match",
+          "strength": "positive",
+          "data": {
+            "domain": "naver.com",
+            "entity_id": "site_290e2068b24288493a63"
+          }
+        }
+      ],
+      "chain": [
+        {
+          "url": "https://papago.naver.com/",
+          "host": "papago.naver.com",
+          "registrable_domain": "naver.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T14:17:39.360+00:00"
+        }
+      ],
+      "connection": {
+        "verified": true,
+        "certificates": [
+          {
+            "scope": "connection_peer",
+            "origin_identity_verified": false,
+            "issuer": [
+              [
+                [
+                  "commonName",
+                  "OpenShell Sandbox CA"
+                ]
+              ],
+              [
+                [
+                  "organizationName",
+                  "OpenShell"
+                ]
+              ]
+            ],
+            "not_before": "Jan  1 00:00:00 1975 GMT",
+            "not_after": "Jan  1 00:00:00 4096 GMT",
+            "dns_names": [
+              "papago.naver.com"
+            ],
+            "sha256": "a5610002644e4b0ff866f1e07b76288dd70ad45eae402b0531fed43ad541dbd1",
+            "protocol": "TLSv1.3"
+          }
+        ],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "navigation": []
+    }
+  ],
+  "policy_status": "effective",
+  "residual_investigation_policies": []
+}

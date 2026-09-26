@@ -18,14 +18,18 @@ from . import presentation as pres
 from . import trace as trace_mod
 from .db import DB
 from .kb import KB
+from .site_relations import RelationStore
+from .config import settings
 from .models import InvestigationResult, Trace
 from .sandbox import RunResult
 from .urls import input_kind, is_private_or_ip_host, parse_url, trimmed_urls
 from .verdict import Evidence, decide
 
+from checklib.navigation import navigation_hosts
 from checklib import similarity as sim_lib  # noqa: E402
 from checklib.parse_url import normalize_url  # noqa: E402  (urls.py가 sys.path를 등록한다)
 from . import ko
+from . import budget
 
 log = logging.getLogger("worker")
 
@@ -71,71 +75,88 @@ class Investigator:
         job = self.db.get(job_id)
         if not job:
             return
-        t_all = time.time()
+        t_all = time.monotonic()
         timings: dict[str, int] = {}
         self._set(job_id, "parse", status="running", started_at=time.time(),
                   steps=make_steps(claim=("running", None)))
         try:
-            self._run(job, timings)
+            with budget.investigation(settings.investigation_timeout_s, settings.cleanup_reserve_s):
+                self._run(job, timings)
+        except budget.BudgetExpired:
+            self._set(job_id, status="failed", stage="done", finished_at=time.time(),
+                      error="조사 시간 제한에 도달했어요. 확인을 마치지 못했으므로 안전하다고 판단할 수 없어요.",
+                      timings={**timings, "total": int((time.monotonic() - t_all) * 1000)})
         except Exception as e:  # noqa: BLE001 - 어떤 실패도 거짓 safe 없이 failed로 끝낸다
             log.error("job %s crashed: %s\n%s", job_id, e, traceback.format_exc())
             self._set(job_id, status="failed", stage="done", finished_at=time.time(),
                       error="조사 중에 문제가 생겼어요. 잠시 뒤에 다시 확인해 주세요.",
-                      timings={**timings, "total": int((time.time() - t_all) * 1000)})
+                      timings={**timings, "total": int((time.monotonic() - t_all) * 1000)})
 
     # ── 본체 ─────────────────────────────────────────────────────
     def _run(self, job: dict, timings: dict[str, int]) -> None:
         job_id, url, text = job["job_id"], job["url"], job["input"]
-        t0 = time.time()
+        t0 = time.monotonic()
         parse_host = parse_url(url)  # 호스트 측: 문자열 파싱만(네트워크 없음)
         message_given = input_kind(text, [url]) == "message"
 
         # 1~2. 파싱과 KB 후보
-        cands = self.kb.candidates(text if message_given else url)
-        timings["parse"] = int((time.time() - t0) * 1000)
-        claim_detail = (f"{ko.subj(cands[0][0].name)} 보낸 척하는 문자예요" if cands and cands[0][1] != "embedding"
+        cands = self.kb.candidates(text) if message_given else self.kb.address_candidates(url)
+        budget.timeout()
+        timings["parse"] = int((time.monotonic() - t0) * 1000)
+        claim_detail = (f"{ko.subj(cands[0][0].name)} 보낸 척하는 문자예요" if message_given and cands and cands[0][1] != "embedding"
                         else "링크만 있어서 주소로 확인해요" if not message_given else "어느 회사인지 특정하지 못했어요")
         addr_detail = (f"진짜 사이트 이름은 {parse_host['registrable_domain']}예요" if parse_host.get("ok") else None)
         self._set(job_id, "kb_lookup", steps=make_steps(claim=("done", claim_detail), address=("done", addr_detail)))
 
         fetch_allowed = bool(parse_host.get("ok")) and not is_private_or_ip_host(parse_host["host_ascii"])
+        unsupported_port = bool(parse_host.get('ok')) and parse_host.get('port') not in (None, 80, 443)
+        if unsupported_port:
+            fetch_allowed = False
         internal = False
         if fetch_allowed and self.resolver:  # 정책을 열기 전에 DNS 결과가 내부망인지 확인
-            internal = self.resolver(parse_host["host_ascii"])
+            internal = budget.read_only(self.resolver, parse_host["host_ascii"])
             fetch_allowed = not internal
+        allowed_hosts = [parse_host['host_ascii']] if fetch_allowed else []
         payload = {
             "job_id": job_id, "url": url, "message_text": text if message_given else None,
             "kb_candidates": [e.as_candidate() for e, _ in cands],
-            "kb_official_domains": self.kb.official_records(),
-            "fetch_allowed": fetch_allowed,
+            "kb_official_domains": self.kb.official_records(cands),
+            "fetch_allowed": fetch_allowed, "allowed_hosts": allowed_hosts, 'navigation_mode': 'discover',
         }
 
         # 3~7. 샌드박스 조사
         def on_stage(stage: str) -> None:
             steps = make_steps(claim=("done", claim_detail), address=("done", addr_detail),
-                               sandbox=("running", "안전 공간의 문을 열고 있어요" if stage == "policy_open" else "링크 한 곳만 열어 보는 중"))
-            hosts = [parse_host["host_ascii"]] if fetch_allowed and stage != "policy_close" and parse_host.get("ok") else []
+                               sandbox=("running", "안전 공간의 문을 열고 있어요" if stage == "policy_open" else "사이트의 허용된 주소를 열어 보는 중"))
+            hosts = allowed_hosts if stage != "policy_close" else []
             self._set(job_id, stage, steps=steps, open_hosts=hosts)
 
-        t1 = time.time()
-        run: RunResult = self.sandbox.investigate(job_id, payload, parse_host.get("host_ascii", ""), fetch_allowed,
-                                                  on_stage)
+        t1 = time.monotonic()
+        if unsupported_port:
+            # Keep source identity without opening a network grant or pretending
+            # the unsupported service was inspected in the sandbox.
+            run = RunResult(incomplete='unsupported_port', agent={'execution_mode': 'address_checks',
+                                                                 'kind': 'not_run'})
+        else:
+            budget.timeout()
+            run = self.sandbox.investigate(job_id, payload, parse_host.get("host_ascii", ""), fetch_allowed,
+                                          on_stage)
         timings.update(run.timings_ms)
-        timings["sandbox_total"] = int((time.time() - t1) * 1000)
+        timings["sandbox_total"] = int((time.monotonic() - t1) * 1000)
         files = run.files
         blocked_count = (files.get("fetch_chain") or {}).get("blocked_count", 0)
         self._set(job_id, "verdict", open_hosts=[], blocked_count=blocked_count,
                   steps=make_steps(claim=("done", claim_detail), address=("done", addr_detail),
                                    sandbox=("stopped" if run.incomplete else "done",
                                             pres_incomplete(run.incomplete) if run.incomplete else
-                                            ("다른 사이트로 넘어가려고 해서 막았어요" if blocked_count else "링크 한 곳을 열어봤어요")),
+                                            ("접속 제한으로 일부 페이지를 확인하지 못했어요" if blocked_count else "링크 한 곳을 열어봤어요")),
                                    page=("waiting", None)))
 
         # 8. 판정. 주소 분석은 호스트가 다시 계산하고, 샌드박스 파일은 요청과 맞는지 대조한 뒤에만 쓴다(검토 2.3).
-        t2 = time.time()
+        t2 = time.monotonic()
         host_sim = None
         if parse_host.get("ok"):
-            host_sim = {**sim_lib.compare(parse_host, self.kb.official_records())}
+            host_sim = {**sim_lib.compare(parse_host, self.kb.official_records(cands))}
         if not run.incomplete:
             mismatch = files_mismatch(files, parse_host, url)
             if mismatch:
@@ -144,14 +165,21 @@ class Investigator:
         ev = Evidence(parse=parse_host if parse_host.get("ok") else files.get("parse_url"),
                       similarity=host_sim or files.get("similarity"),
                       fetch=files.get("fetch_chain"), page=files.get("page"), claim=files.get("claim"),
-                      candidates=cands, incomplete=run.incomplete, internal_resolution=internal,
-                      url_trimmed=url in trimmed_urls(text))
+                      candidates=cands, incomplete=run.incomplete, internal_resolution=internal, address_only=not message_given,
+                      url_trimmed=url in trimmed_urls(text), input_url=url)
         if run.incomplete:  # 멈춘 경우에도 발견한 것을 보여 주려고 호스트 측 문자열 분석을 쓴다(판정은 unknown)
             ev.parse, ev.similarity = parse_host, host_sim
             if run.incomplete == "result_mismatch":  # 대조에 실패한 파일의 내용은 화면에도 쓰지 않는다
                 ev.fetch = ev.page = None
+        if not message_given:
+            ev.claim = {'ok': True, 'entity_id': cands[0][0].id if cands else None, 'purpose': 'other'}
+        if not run.incomplete:
+            try:
+                RelationStore(settings.db_path.with_name('site_relations.sqlite')).observe((ev.fetch or {}).get('chain', []))
+            except Exception:
+                log.warning('address observation cache unavailable; investigation continues without it')
         outcome = decide(ev, self.kb)
-        timings["verdict"] = int((time.time() - t2) * 1000)
+        timings["verdict"] = int((time.monotonic() - t2) * 1000)
 
         # 9~10. 설명 (모델 → 검증 → 실패하면 템플릿)
         self._set(job_id, "explain", steps=make_steps(
@@ -159,20 +187,21 @@ class Investigator:
             sandbox=("stopped" if run.incomplete else "done", None),
             page=("stopped" if run.incomplete else "done", "못 함" if run.incomplete else _page_detail(files.get("page"))),
             summary=("running", "쉽게 설명을 써요")))
-        t3 = time.time()
+        t3 = time.monotonic()
         result, trace, meta = build_outputs(job, outcome, ev, run, parse_host, host_sim, self.kb, self.sandbox,
                                             message_given, timings, run.incomplete)
-        timings["explain"] = int((time.time() - t3) * 1000)
-        timings["total"] = int((time.time() - t0) * 1000)
+        timings["explain"] = int((time.monotonic() - t3) * 1000)
+        timings["total"] = int((time.monotonic() - t0) * 1000)
 
         # 유효성 검증(스키마) 후 저장
         result_m = InvestigationResult.model_validate(result)
         trace_m = Trace.model_validate(trace)
+        budget.timeout(finishing=True)
         final_steps = make_steps(
             claim=("done", claim_detail), address=("done", addr_detail),
             sandbox=("stopped" if run.incomplete else "done",
                      pres_incomplete(run.incomplete) if run.incomplete else
-                     ("다른 사이트로 넘어가려고 해서 막았어요" if blocked_count else "링크 한 곳을 열어봤어요")),
+                     ("접속 제한으로 일부 페이지를 확인하지 못했어요" if blocked_count else "링크 한 곳을 열어봤어요")),
             page=("stopped" if run.incomplete else "done", "못 함" if run.incomplete else _page_detail(files.get("page"))),
             summary=("stopped" if run.incomplete else "done", None))
         self._set(job_id, "done", status="done", finished_at=time.time(), steps=final_steps,
@@ -251,9 +280,10 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
 
     # 설명
     incomplete_text = pres_incomplete(incomplete) if incomplete else None
-    template = pres.build_explanation(outcome, page, actual, claim_name, message_given, incomplete_text)
+    template = pres.build_explanation(outcome, page, actual, claim_name, message_given, incomplete_text,
+                                     incomplete_code=incomplete)
     explanation, explain_check = template, "skipped"
-    if not incomplete and not run.residual_policy:  # 정책이 남았을 수 있으면 그 샌드박스에서 에이전트를 더 돌리지 않는다
+    if not incomplete and not run.residual_policy and run.agent.get('execution_mode') != 'address_checks':
         payload = explain_mod.build_payload(outcome, actual, name, entity.official_domains[0] if entity else None,
                                             template["unverified"], explain_mod.vetted_sentences(template))
         try:
@@ -272,7 +302,8 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
             s_["data"]["name"] = name
     risks, risks_note = pres.build_risks(outcome, page)
     comparison = pres.build_comparison(outcome, page, fetch, parse, claim_name, message_given) if parse else []
-    parts = pres.url_parts(parse, url, entity, (fetch or {}).get("final_registrable_domain")) if parse else None
+    parts = pres.url_parts(parse, url, entity, (fetch or {}).get("final_registrable_domain"),
+                           (fetch or {}).get('final_url')) if parse else None
     partial = pres.partial_findings(outcome, name, actual, host_sim) if incomplete else []
     chain = (fetch or {}).get("chain", [])
 
@@ -286,7 +317,7 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
         "claimed_entity": ({"id": entity.id, "name": entity.name, "source": outcome.entity_source}
                            if entity else None),
         "stated_purpose": outcome.purpose,
-        "stated_purpose_label": ko.PURPOSE_LABELS.get(outcome.purpose) if outcome.purpose else None,
+        "stated_purpose_label": ko.PURPOSE_LABELS.get(outcome.purpose) if message_given and outcome.purpose else None,
         "url": url,
         "actual_registrable_domain": actual,
         "url_parts": parts,
@@ -305,6 +336,10 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
             "duration_ms": agent.get("duration_ms"), "model_reported": agent.get("model_reported"),
             "kind": agent.get("kind", "openshell"),
         },
+        'identity': kb.identity_summary((fetch or {}).get('final_url') or url, outcome, input_url=url),
+        'connection': {'verified': (fetch or {}).get('tls', {}).get('verified'),
+                       'certificates': [h['certificate'] for h in chain if h.get('certificate')],
+                       'note': '암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요.'},
     }
 
     trace = {
@@ -312,7 +347,7 @@ def build_outputs(job: dict, outcome, ev: Evidence, run: RunResult, parse_host: 
         "address": trace_mod.address_trace(parse, ev.similarity if ev.similarity and ev.similarity.get("ok") else host_sim,
                                            outcome, kb, url) if parse else None,
         "redirects": trace_mod.redirect_trace(fetch),
-        "page": trace_mod.page_trace(ev.page, outcome, entity, actual) if not incomplete else
+        "page": trace_mod.page_trace(ev.page, outcome, entity, actual, message_given) if not incomplete else
         {"available": False, "dev": {}},
         "agent": trace_mod.agent_trace({"agent": agent, "files": run.files}, claim, entity, explain_check,
                                        timings.get("sandbox_total") and (timings.get("sandbox_total", 0)

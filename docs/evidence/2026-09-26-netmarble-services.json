@@ -1,0 +1,760 @@
+{
+  "source": "https://company.netmarble.com/business/games",
+  "observed_source_http_status": 200,
+  "source_pages": [
+    {
+      "url": "https://company.netmarble.com/api/kogames/mobile/1",
+      "status": 200,
+      "count": 12,
+      "sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "paging": {
+        "currentPage": 1,
+        "startBlockNo": 1,
+        "endBlockNo": 3,
+        "theEndBlockNo": 3,
+        "currentBlock": 1,
+        "prevBlock": 1,
+        "nextBlock": 3
+      }
+    },
+    {
+      "url": "https://company.netmarble.com/api/kogames/mobile/2",
+      "status": 200,
+      "count": 12,
+      "sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "paging": {
+        "currentPage": 2,
+        "startBlockNo": 1,
+        "endBlockNo": 3,
+        "theEndBlockNo": 3,
+        "currentBlock": 1,
+        "prevBlock": 1,
+        "nextBlock": 3
+      }
+    },
+    {
+      "url": "https://company.netmarble.com/api/kogames/mobile/3",
+      "status": 200,
+      "count": 1,
+      "sha256": "fc0b3f90da25557b6d8bf5f0b2d6205f80b7c3dc8cf828a92f43714f56db5c00",
+      "paging": {
+        "currentPage": 3,
+        "startBlockNo": 1,
+        "endBlockNo": 3,
+        "theEndBlockNo": 3,
+        "currentBlock": 1,
+        "prevBlock": 1,
+        "nextBlock": 3
+      }
+    },
+    {
+      "url": "https://company.netmarble.com/api/kogames/pc/1",
+      "status": 200,
+      "count": 9,
+      "sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "paging": {
+        "currentPage": 1,
+        "startBlockNo": 1,
+        "endBlockNo": 1,
+        "theEndBlockNo": 1,
+        "currentBlock": 1,
+        "prevBlock": 1,
+        "nextBlock": 1
+      }
+    },
+    {
+      "url": "https://company.netmarble.com/api/kogames/console/1",
+      "status": 200,
+      "count": 1,
+      "sha256": "deb082ecfe1cc01f0f6e328f158c479a6265285f61a791477ac34b3be02d50ce",
+      "paging": {
+        "currentPage": 1,
+        "startBlockNo": 1,
+        "endBlockNo": 1,
+        "theEndBlockNo": 1,
+        "currentBlock": 1,
+        "prevBlock": 1,
+        "nextBlock": 1
+      }
+    }
+  ],
+  "records": [
+    {
+      "name": "넷마블 SOL: enchant",
+      "service_name": "SOL: enchant",
+      "publisher": "넷마블",
+      "url": "https://sol.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 왕좌의 게임: 킹스로드",
+      "service_name": "왕좌의 게임: 킹스로드",
+      "publisher": "넷마블",
+      "url": "https://gotkingsroad.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 스톤에이지 키우기",
+      "service_name": "스톤에이지 키우기",
+      "publisher": "넷마블",
+      "url": "https://stoneage.netmarble.com",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 일곱 개의 대죄: Origin",
+      "service_name": "일곱 개의 대죄: Origin",
+      "publisher": "넷마블",
+      "url": "https://7origin.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 몬길: STAR DIVE",
+      "service_name": "몬길: STAR DIVE",
+      "publisher": "넷마블",
+      "url": "https://stardive.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 세븐나이츠 리버스",
+      "service_name": "세븐나이츠 리버스",
+      "publisher": "넷마블",
+      "url": "https://sena.netmarble.com/ko",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 뱀피르",
+      "service_name": "뱀피르",
+      "publisher": "넷마블",
+      "url": "https://vampir.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 킹 오브 파이터 AFK",
+      "service_name": "킹 오브 파이터 AFK",
+      "publisher": "넷마블",
+      "url": "https://kofafk.netmarble.com",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 RF 온라인 넥스트",
+      "service_name": "RF 온라인 넥스트",
+      "publisher": "넷마블",
+      "url": "https://rfonlinenext.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 레이븐2",
+      "service_name": "레이븐2",
+      "publisher": "넷마블",
+      "url": "https://raven2.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 일곱 개의 대죄 키우기",
+      "service_name": "일곱 개의 대죄 키우기",
+      "publisher": "넷마블",
+      "url": "https://7dsi.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 아스달 연대기: 세 개의 세력",
+      "service_name": "아스달 연대기: 세 개의 세력",
+      "publisher": "넷마블",
+      "url": "https://arthdal.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "39c279812629d34258e11786f112d3d5c7909acd5335060b003b30f569fd0968",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 나 혼자만 레벨업:어라이즈",
+      "service_name": "나 혼자만 레벨업:어라이즈",
+      "publisher": "넷마블",
+      "url": "https://sololeveling.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 세븐나이츠 키우기",
+      "service_name": "세븐나이츠 키우기",
+      "publisher": "넷마블",
+      "url": "https://skidle.netmarble.com",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 신의 탑: 새로운 세계",
+      "service_name": "신의 탑: 새로운 세계",
+      "publisher": "넷마블",
+      "url": "https://towerofgod.netmarble.com",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 제2의 나라: Cross Worlds",
+      "service_name": "제2의 나라: Cross Worlds",
+      "publisher": "넷마블",
+      "url": "https://2worlds.netmarble.com/ko/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 일곱 개의 대죄: 그랜드 크로스",
+      "service_name": "일곱 개의 대죄: 그랜드 크로스",
+      "publisher": "넷마블",
+      "url": "https://www.netmarble.net/mobile/nanakr?tab=popular&page=1",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 페이트/그랜드 오더",
+      "service_name": "페이트/그랜드 오더",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/fgok",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 블레이드&소울 레볼루션",
+      "service_name": "블레이드&소울 레볼루션",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/bnsmkr?tab=popular&page=1",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 리니지2:레볼루션",
+      "service_name": "리니지2:레볼루션",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/lineageII?tab=popular&page=1",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 마블 퓨처 파이트",
+      "service_name": "마블 퓨처 파이트",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/mherosgb?tab=popular&page=1",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 마구마구 2026",
+      "service_name": "마구마구 2026",
+      "publisher": "넷마블",
+      "url": "https://magumagu.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 넷마블바둑",
+      "service_name": "넷마블바둑",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/n2baduk?tab=popular&page=2",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 머지 쿵야 아일랜드",
+      "service_name": "머지 쿵야 아일랜드",
+      "publisher": "넷마블",
+      "url": "https://mergekuyaisland.netmarble.com/ko",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/2",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "86f221ff9910538129d177ed7dd54200db73bf95b411f9f9269af728e5d9274d",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 모두의마블",
+      "service_name": "모두의마블",
+      "publisher": "넷마블",
+      "url": "http://www.netmarble.net/mobile/momak?tab=popular&page=1",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/mobile/3",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "fc0b3f90da25557b6d8bf5f0b2d6205f80b7c3dc8cf828a92f43714f56db5c00",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "mobile",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 나 혼자만 레벨업:어라이즈 오버드라이브",
+      "service_name": "나 혼자만 레벨업:어라이즈 오버드라이브",
+      "publisher": "넷마블",
+      "url": "https://slvariseoverdrive.netmarble.com/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 마구마구",
+      "service_name": "마구마구",
+      "publisher": "넷마블",
+      "url": "http://ma9.netmarble.net/main.asp",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 넷마블바둑",
+      "service_name": "넷마블바둑",
+      "publisher": "넷마블",
+      "url": "http://baduk.netmarble.net/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 뉴포커",
+      "service_name": "뉴포커",
+      "publisher": "넷마블",
+      "url": "https://poker.winjoygame.com/poker?gameEname=newpoker",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 대박맞고",
+      "service_name": "대박맞고",
+      "publisher": "넷마블",
+      "url": "https://gostop.winjoygame.com/gostop?gameEname=dbmatgo",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 대항해시대",
+      "service_name": "대항해시대",
+      "publisher": "넷마블",
+      "url": "http://dho.netmarble.net/main.asp",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 모두의마블",
+      "service_name": "모두의마블",
+      "publisher": "넷마블",
+      "url": "http://modoo.netmarble.net/",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 캐릭챗",
+      "service_name": "캐릭챗",
+      "publisher": "넷마블",
+      "url": "http://chat.netmarble.net/FamChat/index.asp",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 캐치마인드",
+      "service_name": "캐치마인드",
+      "publisher": "넷마블",
+      "url": "http://cmind.netmarble.net/main.asp",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/pc/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "6caa6138caad0af50a152c4bad39c9e65295923bdde1af9429a075d4e3daf7a1",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "pc",
+      "checked": "2026-09-25"
+    },
+    {
+      "name": "넷마블 세븐나이츠 - Time Wanderer -",
+      "service_name": "세븐나이츠 - Time Wanderer -",
+      "publisher": "넷마블",
+      "url": "https://7knights4s.netmarble.com",
+      "scope": "url",
+      "source": "https://company.netmarble.com/business/games",
+      "data_source": "https://company.netmarble.com/api/kogames/console/1",
+      "home_fields": [
+        "gameSiteUrl"
+      ],
+      "kind": "official_service_directory",
+      "evidence_type": "publisher_service_link",
+      "source_sha256": "deb082ecfe1cc01f0f6e328f158c479a6265285f61a791477ac34b3be02d50ce",
+      "publisher_page_sha256": "a40b7ec1d7487e608e0fc3a183bce2fa63490e08b9c7ddfe9c52e787c65ed471",
+      "directory_category": "console",
+      "checked": "2026-09-25"
+    }
+  ],
+  "previous_connections_preserved": 177,
+  "previous_catalog_records_unchanged": 22004,
+  "catalog_records": 22039,
+  "catalog_hosts": 16281,
+  "excluded": 2496,
+  "missing_homepage": 2469,
+  "other_excluded": 27,
+  "corrections": 84,
+  "official_connections": 212,
+  "services": 204,
+  "affiliates": 8,
+  "catalog_sha256": "659850c857d336dd66e8ef3b0093ed15842d9b7d2fab19b30307c584f82338aa",
+  "validation": {
+    "local_related_tests": 92,
+    "local_seconds": 0.51,
+    "vm_related_tests": 92,
+    "vm_seconds": 0.94,
+    "health_running": false,
+    "health_queue_length": 0,
+    "residual_effective_policies": 0
+  },
+  "limitations": [
+    "Publisher directory links do not prove direct operator ownership, release status, current operation, or page safety.",
+    "Two winjoygame.com home links remain exact URLs only; no destination-wide identity.",
+    "HTTP original URLs are retained; HTTPS destinations are not guessed.",
+    "No browser result inspection."
+  ],
+  "live": {
+    "job_id": "j_542b3977a1154ef182901d93830b31ec",
+    "elapsed_ms": 18756,
+    "input": "https://sena.netmarble.com/ko",
+    "destination": "https://sena.netmarble.com/ko/kimetsunoyaiba",
+    "http_statuses": [
+      302,
+      200
+    ],
+    "source_identity": "verified",
+    "source_name": "넷마블 세븐나이츠 리버스",
+    "destination_identity": "unverified",
+    "verdict": "caution",
+    "behavior": "risk_found",
+    "suspicion": "입력 내용을 같은 도메인의 다른 경로로 보내지만, 해당 기관의 공식 처리 주소인지는 확인하지 못했어요.",
+    "tls_issuer": "OpenShell Sandbox CA",
+    "origin_identity_verified": false,
+    "limitation": "Current root-to-root alias proof does not cover this path-to-event redirect; exact destination requires independently bounded evidence.",
+    "explanation_gap": "URL-only input still receives a generic SMS phone-number action bullet."
+  }
+}

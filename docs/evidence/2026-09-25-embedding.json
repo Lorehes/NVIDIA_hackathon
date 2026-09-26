@@ -1,0 +1,38 @@
+{
+  "key_configured": true,
+  "sandbox_mode": "openshell",
+  "model": "nvidia/nemotron-3-embed-1b",
+  "dimensions": 2048,
+  "checks": [
+    {
+      "query": "배송 물류 운송장 조회",
+      "ok": true,
+      "top3": [
+        "한진택배",
+        "CJ대한통운",
+        "로젠택배"
+      ],
+      "categories": [
+        "delivery",
+        "delivery",
+        "delivery"
+      ],
+      "elapsed_s": 1.58
+    },
+    {
+      "query": "은행 계좌 이체 대출",
+      "ok": true,
+      "top3": [
+        "하나은행",
+        "우리은행",
+        "KB국민은행"
+      ],
+      "categories": [
+        "bank",
+        "bank",
+        "bank"
+      ],
+      "elapsed_s": 0.48
+    }
+  ]
+}

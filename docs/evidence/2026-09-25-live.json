@@ -1,0 +1,27 @@
+{
+  "job_id": "j_2ce8e7d3a5ce41b6b0f69fabf6a77668",
+  "url": "https://example.com",
+  "status": "done",
+  "timings": {
+    "parse": 0,
+    "policy_open": 10607,
+    "agent_investigate": 21278,
+    "sandbox_total": 41900,
+    "verdict": 0,
+    "explain": 34010,
+    "total": 75929
+  },
+  "verdict": "unknown",
+  "incomplete_reason": null,
+  "agent": {
+    "tool_calls": [
+      "read",
+      "exec"
+    ],
+    "unexpected_tools": [],
+    "duration_ms": 17106,
+    "model_reported": "nvidia/nemotron-3-ultra-550b-a55b",
+    "kind": "openshell"
+  },
+  "explanation_source": "template"
+}

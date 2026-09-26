@@ -1,0 +1,441 @@
+{
+  "case_id": "vm-example",
+  "result": {
+    "job_id": "j_2ce8e7d3a5ce41b6b0f69fabf6a77668",
+    "mode": "live",
+    "input_kind": "url",
+    "verdict": "unknown",
+    "verdict_label": "알 수 없어요",
+    "claimed_entity": null,
+    "stated_purpose": "other",
+    "stated_purpose_label": "안내 문자",
+    "url": "https://example.com",
+    "actual_registrable_domain": "example.com",
+    "url_parts": {
+      "url": "https://example.com",
+      "scheme": "https",
+      "subdomain_part": "",
+      "registrable_domain": "example.com",
+      "path": "/",
+      "official_domain": null,
+      "matches_official": null,
+      "matches_partner": false,
+      "partner_domain": null
+    },
+    "signals": [
+      {
+        "type": "entity_not_in_kb",
+        "strength": "info",
+        "data": {}
+      }
+    ],
+    "explanation": {
+      "headline": "공식 여부를 확인할 자료가 없어요.",
+      "warning": null,
+      "detail": "비교할 진짜 주소가 없고, 눈에 띄는 위험한 점도 찾지 못했어요. 안전하다는 뜻은 아니에요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 example.com이에요."
+      ],
+      "suspicion_evidence": [],
+      "unverified": [
+        "페이지가 나중에 스스로 바뀌는 내용"
+      ],
+      "recommended_action": "회사 앱이나 대표 전화번호로 직접 확인해 보세요.",
+      "action_bullets": [
+        "그 전까지 링크를 누르지 마세요.",
+        "급하다면 회사 대표번호로 직접 확인하세요."
+      ],
+      "source": "template"
+    },
+    "comparison": [
+      {
+        "key": "address",
+        "label": "주소",
+        "said": "문자에 나온 회사 사이트예요",
+        "found": "진짜 주소를 몰라 비교 못 함",
+        "status": "unknown",
+        "status_label": "모름"
+      },
+      {
+        "key": "fields",
+        "label": "적는 칸",
+        "said": "안내 문자",
+        "found": "적는 칸 없음 (조회만)",
+        "status": "ok",
+        "status_label": "맞아요"
+      },
+      {
+        "key": "redirect",
+        "label": "넘어간 곳",
+        "said": "—",
+        "found": "다른 곳으로 넘어가지 않았어요",
+        "status": "ok",
+        "status_label": "괜찮아요"
+      }
+    ],
+    "risks": [
+      {
+        "label": "목록에 없는 회사",
+        "level": "info",
+        "level_label": "참고"
+      }
+    ],
+    "risks_note": null,
+    "redirect_chain": [
+      {
+        "url": "https://example.com",
+        "host": "example.com",
+        "registrable_domain": "example.com",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-25T06:22:22.913+00:00"
+      }
+    ],
+    "partial_findings": [],
+    "incomplete_reason": null,
+    "more_urls": [],
+    "agent": {
+      "tool_calls": [
+        "read",
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": 17106,
+      "model_reported": "nvidia/nemotron-3-ultra-550b-a55b",
+      "kind": "openshell"
+    }
+  },
+  "trace": {
+    "job_id": "j_2ce8e7d3a5ce41b6b0f69fabf6a77668",
+    "verdict": "unknown",
+    "verdict_label": "알 수 없어요",
+    "address": {
+      "url": "https://example.com",
+      "scheme": "https",
+      "host_unicode": "example.com",
+      "host_ascii": "example.com",
+      "subdomain_part": "",
+      "registrable_domain": "example.com",
+      "path": "/",
+      "tricks": [
+        {
+          "key": "subdomain_disguise",
+          "question": "진짜 주소를 앞에 끼워 넣었나요?",
+          "hint": "예: 진짜 주소를 앞부분에 붙임",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "lookalike",
+          "question": "진짜 주소와 한두 글자만 다른가요?",
+          "hint": "예: hanbit → hanblt",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "confusable",
+          "question": "헷갈리는 글자를 섞었나요?",
+          "hint": "예: 영어 o 대신 숫자 0, 모양이 같은 외국 글자",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "ip_host",
+          "question": "이름 없이 숫자로만 된 주소인가요?",
+          "hint": "예: 123.45.67.89",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        },
+        {
+          "key": "userinfo",
+          "question": "주소 중간에 @ 표시가 있나요?",
+          "hint": "@ 앞의 글자는 무시되고 뒤쪽으로 가요",
+          "hit": false,
+          "answer": "아니오",
+          "detail": null
+        }
+      ],
+      "similarity": [
+        {
+          "entity_id": "hanbit",
+          "name": "한빛택배",
+          "domain": "hanbit.example",
+          "similarity": 0.21,
+          "label": "거의 안 닮음",
+          "note": null
+        },
+        {
+          "entity_id": "haneul",
+          "name": "하늘은행",
+          "domain": "haneul.example",
+          "similarity": 0.21,
+          "label": "거의 안 닮음",
+          "note": null
+        }
+      ],
+      "summary_sentence": "주소에서 눈에 띄는 속임수는 찾지 못했어요.",
+      "kb_note": "각 회사 공식 홈페이지에서 직접 확인한 주소만 모아 두었어요. 목록에 없는 회사는 \"알 수 없어요\"로 알려드려요.",
+      "dev": {
+        "parse_url.json": {
+          "ok": true,
+          "scheme": "https",
+          "host_unicode": "example.com",
+          "host_ascii": "example.com",
+          "registrable_domain": "example.com",
+          "registrable_domain_unicode": "example.com",
+          "domain_label": "example",
+          "domain_label_unicode": "example",
+          "suffix": "com",
+          "subdomain_labels": [],
+          "path": "/",
+          "query_keys": [],
+          "is_ip_host": false,
+          "has_userinfo": false,
+          "userinfo": "",
+          "port": null,
+          "ambiguous": false
+        },
+        "similarity.json": {
+          "ok": true,
+          "closest_official": {
+            "entity_id": "hanbit",
+            "domain": "hanbit.example",
+            "similarity": 0.2143,
+            "edit_distance": 11,
+            "pattern": "none"
+          },
+          "subdomain_contains_official": [],
+          "brand_in_domain": [],
+          "mixed_script": false,
+          "confusable_chars": [],
+          "typosquat_pattern": "none"
+        },
+        "public_suffix": "com"
+      }
+    },
+    "redirects": {
+      "chain": [
+        {
+          "url": "https://example.com",
+          "host": "example.com",
+          "registrable_domain": "example.com",
+          "status": 200,
+          "blocked": false,
+          "error": null,
+          "at": "2026-09-25T06:22:22.913+00:00"
+        }
+      ],
+      "redirect_count": 0,
+      "blocked_count": 0,
+      "last_seen_domain": "example.com",
+      "blocked_hosts": [],
+      "dev": {
+        "fetch_chain.json": {
+          "ok": true,
+          "final_url": "https://example.com",
+          "final_registrable_domain": "example.com",
+          "redirect_count": 0,
+          "blocked_count": 0,
+          "tls": {
+            "https": true,
+            "verified": true
+          },
+          "html_saved": true,
+          "html_from_redirect": false,
+          "final_content_type": "text/html",
+          "final_content_type_full": "text/html",
+          "body_truncated": false,
+          "first_error": null,
+          "elapsed_ms": 430
+        },
+        "statuses": [
+          200
+        ]
+      }
+    },
+    "page": {
+      "available": true,
+      "title": "Example Domain",
+      "brand_candidates": [
+        "Example Domain"
+      ],
+      "brand_sentence": null,
+      "stated_purpose_label": "안내 문자",
+      "expected_fields_label": null,
+      "field_rows": [],
+      "sends_to": null,
+      "sends_cross_domain": false,
+      "sends_sentence": null,
+      "apk_links": [],
+      "js_redirect_hint": false,
+      "trust_claims": [],
+      "dev": {
+        "page.json": {
+          "ok": true,
+          "title": "Example Domain",
+          "brand_candidates": [
+            "Example Domain"
+          ],
+          "forms": [],
+          "apk_links": [],
+          "trust_claims": [],
+          "js_redirect_hint": false,
+          "external_active_domains": [],
+          "elapsed_ms": 21
+        },
+        "field_types": []
+      }
+    },
+    "agent": {
+      "steps": [
+        {
+          "t_sec": 0,
+          "title": "문자를 읽었어요",
+          "detail": "붙여 넣은 문자와, 비교할 회사 후보 목록을 받았어요.",
+          "lines": []
+        },
+        {
+          "t_sec": 15,
+          "title": "누가 보낸 척하는지 골랐어요",
+          "detail": "회사: 알 수 없음 · 목적: 안내 문자\n이유: 메시지 내용이 없습니다",
+          "lines": []
+        },
+        {
+          "t_sec": 17,
+          "title": "정해진 확인 도구를 차례로 돌렸어요",
+          "detail": null,
+          "lines": [
+            "✓ 주소 조각내기",
+            "✓ 진짜 주소와 닮았는지 비교",
+            "✓ 안전 공간에서 열어보기",
+            "✓ 페이지 속 적는 칸 살펴보기"
+          ]
+        }
+      ],
+      "unexpected_count": 0,
+      "unexpected_tools": [],
+      "duration_ms": 17106,
+      "duration_sec": 42,
+      "model_reported": "nvidia/nemotron-3-ultra-550b-a55b",
+      "explain_check": "skipped",
+      "dev_log": [
+        "00:01  read",
+        "00:02  exec"
+      ],
+      "dev": {
+        "tool_calls": [
+          "read",
+          "exec"
+        ],
+        "raw_meta": {
+          "durationMs": 17106,
+          "toolSummary": {
+            "calls": 4,
+            "tools": [
+              "read",
+              "exec"
+            ],
+            "failures": 0
+          },
+          "executionTrace": {
+            "winnerProvider": "inference",
+            "winnerModel": "nvidia/nemotron-3-ultra-550b-a55b",
+            "attempts": [
+              {
+                "provider": "inference",
+                "model": "nvidia/nemotron-3-ultra-550b-a55b",
+                "result": "success",
+                "stage": "assistant"
+              }
+            ],
+            "fallbackUsed": false,
+            "runner": "embedded"
+          }
+        },
+        "kind": "openshell"
+      }
+    },
+    "sandbox": {
+      "opened_host": "example.com",
+      "blocked_hosts": [],
+      "events": [
+        {
+          "at": "06:22:05",
+          "kind": "open",
+          "title": "문을 열었어요",
+          "detail": "조사할 링크 한 곳만"
+        },
+        {
+          "at": "06:22:36",
+          "kind": "close",
+          "title": "문을 다시 닫았어요",
+          "detail": "열어 둔 시간 31초 · 남은 열린 문 없음"
+        }
+      ],
+      "open_seconds": 31,
+      "remaining_open": 0,
+      "allowed": [
+        "조사할 링크 한 곳 들어가기",
+        "페이지를 보기만 하기",
+        "정해진 확인 도구만 쓰기"
+      ],
+      "denied": [
+        "다른 사이트 들어가기",
+        "정보를 적어서 보내기",
+        "프로그램·앱 설치하기",
+        "페이지 속 프로그램 실행하기"
+      ],
+      "dev": {
+        "policy": "job-j-2ce8e7d3a5ce41b6b0f69fabf6a77668",
+        "methods": [
+          "GET"
+        ],
+        "ports": [
+          443,
+          80
+        ],
+        "binaries": [
+          "/usr/bin/python3",
+          "/usr/bin/python3.13"
+        ]
+      }
+    }
+  },
+  "steps": [
+    {
+      "key": "claim",
+      "title": "누가 보낸 척하는지",
+      "status": "done",
+      "detail": "링크만 있어서 주소로 확인해요"
+    },
+    {
+      "key": "address",
+      "title": "주소 살펴보기",
+      "status": "done",
+      "detail": "진짜 사이트 이름은 example.com예요"
+    },
+    {
+      "key": "sandbox",
+      "title": "안전 공간에서 열어보기",
+      "status": "done",
+      "detail": "링크 한 곳을 열어봤어요"
+    },
+    {
+      "key": "page",
+      "title": "페이지 속 내용",
+      "status": "done",
+      "detail": "적는 칸이 없어요"
+    },
+    {
+      "key": "summary",
+      "title": "결과 정리",
+      "status": "done",
+      "detail": null
+    }
+  ]
+}

@@ -92,6 +92,47 @@ export function ResultView({ job, result }: { job: JobView; result: Investigatio
 
       <div className="result-grid">
         <div className="col gap22">
+          {result.identity?.status && (
+            <section className="info-card" aria-label="주소와 페이지 확인">
+              <h3>주소와 페이지를 따로 확인했어요</h3>
+              <p>주소 관계: <b>{result.identity.site_family}</b>에 속한 <b>{result.identity.host}</b></p>
+              <p>공식 여부: <b>{result.identity.status === "verified" ? `${result.identity.name ?? "서비스"} 공식 주소 확인` : "아직 확인되지 않음"}</b></p>
+              {result.identity.status !== "verified" && result.identity.source_address && (
+                <p>처음 입력한 주소는 {result.identity.source_address.name} 공식 출처와 일치해요.
+                  이동한 주소의 공식 여부까지 확인됐다는 뜻은 아니에요.
+                  {/^https?:\/\//.test(result.identity.source_address.source) && (
+                    <> <a href={result.identity.source_address.source} target="_blank" rel="noopener noreferrer">처음 주소의 공식 출처</a></>
+                  )}
+                </p>
+              )}
+              {result.identity.status === "verified" && (result.identity.matched_entities_total ?? 0) > 1 && (
+                <div>
+                  <p>같은 주소로 확인된 기관·서비스</p>
+                  <ul>
+                    {result.identity.matched_entities?.map((entity) => (
+                      <li key={entity.id}>
+                        {/^https?:\/\//.test(entity.source)
+                          ? <a href={entity.source} target="_blank" rel="noopener noreferrer">{entity.name}</a>
+                          : entity.name}
+                      </li>
+                    ))}
+                  </ul>
+                  {(result.identity.matched_entities_total ?? 0) > (result.identity.matched_entities?.length ?? 0) && (
+                    <p>외 {(result.identity.matched_entities_total ?? 0) - (result.identity.matched_entities?.length ?? 0)}개 항목이 더 있어요.</p>
+                  )}
+                  <p>각 이름을 누르면 해당 주소를 확인한 공식 출처를 볼 수 있어요.</p>
+                </div>
+              )}
+              {result.identity.status === "verified" && result.identity.canonical_from && <p>공식 출처에 실린 {shortUrl(result.identity.canonical_from)}에서 이 주소로 이동하는 것을 확인했어요.</p>}
+              <p>페이지 검사: {result.identity.behavior === "risk_found" ? "주의할 행동을 발견했어요" : result.identity.behavior === "incomplete" ? "확인하지 못한 부분이 있어요" : "검사한 범위에서 위험 신호를 찾지 못했어요"}</p>
+              <p>암호화 연결: {result.connection?.verified === true ? "연결 검증 통과" : result.connection?.verified === false ? "인증서 검증 실패" : "확인하지 못함"}. 이것만으로 안전한 사이트라는 뜻은 아니에요.</p>
+              {result.identity.source && /^https?:\/\//.test(result.identity.source) && (
+                <p><a href={result.identity.source} target="_blank" rel="noopener noreferrer">주소 정보의 출처</a> · 확인일 {result.identity.checked}
+                  {result.identity.reason === "popularity_only" && " · 이용량 자료이며 공식 기관 확인 자료는 아니에요"}
+                  {result.identity.reason === "source_expired" && " · 오래된 자료라 다시 확인해야 해요"}</p>
+              )}
+            </section>
+          )}
           {more.length > 0 && (
             <div className="card more-urls">
               <b>문자에 링크가 {more.length + 1}개 있었어요. 첫 번째 링크만 확인했어요.</b>
@@ -180,7 +221,7 @@ function OwnerCard({ result, tone }: { result: InvestigationResult; tone: Tone }
             <span className="cap">
               앞에 붙인 글자
               <br />
-              누구나 아무렇게나 붙일 수 있어요
+              이 도메인의 관리자가 정해요
             </span>
           </div>
         )}
@@ -302,11 +343,13 @@ function SideColumn({ result, tone }: { result: InvestigationResult; tone: Tone 
 
       {unknown ? (
         <div className="card risk-card">
-          <h3>&quot;알 수 없어요&quot;가 나오는 경우</h3>
+          <h3>{result.identity?.status === "verified" ? "공식 주소 확인과 페이지 검사는 달라요" : '"알 수 없어요"가 나오는 경우'}</h3>
           <div className="col gap8" style={{ fontSize: 16, lineHeight: 1.55, color: "var(--ink2)" }}>
+            {result.identity?.status === "verified" ? <span>공식 출처에서 서비스 주소를 확인했어요. 페이지의 모든 화면과 실행 후 동작까지 검사했다는 뜻은 아니에요.</span> : <>
             <span>· 조사가 중간에 멈췄을 때</span>
             <span>· 사이트가 열리지 않을 때</span>
             <span>· 비교할 진짜 주소가 없고, 위험한 점도 없을 때</span>
+            </>}
           </div>
         </div>
       ) : (
@@ -328,19 +371,19 @@ function SideColumn({ result, tone }: { result: InvestigationResult; tone: Tone 
           {partner ? (
             <span className="foot-note">
               <b>알아두세요</b> 회사들은 결제나 본인 확인을 다른 전문 회사에 맡기기도 해요. 저희는 회사가 직접 밝힌 협력 회사
-              목록과 비교해요. 진짜·가짜 결정은 정해진 규칙으로 하고, 설명 글만 AI가 썼어요.
+              목록과 비교해요. 진짜·가짜는 정해진 규칙으로 판단해요. {ex.source === "agent" ? "AI가 쓴 설명을 검증해 보여드려요." : "확인된 근거로 만든 기본 설명을 보여드려요."}
             </span>
           ) : (
-            <span className="foot-note">진짜·가짜 결정은 정해진 규칙으로 하고, 설명 글만 AI가 썼어요.</span>
+            <span className="foot-note">진짜·가짜는 정해진 규칙으로 판단해요. {ex.source === "agent" ? "AI가 쓴 설명을 검증해 보여드려요." : "확인된 근거로 만든 기본 설명을 보여드려요."}</span>
           )}
         </div>
       )}
 
       <Link
         className="card link-card"
-        href={unknown ? `/check/${encodeURIComponent(result.job_id)}/trace?tab=address` : `/check/${encodeURIComponent(result.job_id)}/trace`}
+        href={`/check/${encodeURIComponent(result.job_id)}/trace`}
       >
-        <span>{unknown ? "주소 살펴보기 결과만 보기" : "어떻게 조사했는지 보기"}</span>
+        <span>어떻게 조사했는지 보기</span>
         <span aria-hidden>→</span>
       </Link>
     </div>
@@ -360,7 +403,7 @@ function diffMarks(official: string, actual: string): React.ReactNode {
 function UnknownBody({ job, result }: { job: JobView; result: InvestigationResult }) {
   const p = result.url_parts;
   const steps = job.steps.filter((s) => s.key !== "summary");
-  const showVs = !!(p?.official_domain && p.registrable_domain && p.official_domain !== p.registrable_domain);
+  const showVs = !!(p?.official_domain && p.registrable_domain && p.matches_official === false && !p.matches_partner);
   return (
     <>
       <div className="card card-pad" style={{ gap: 6 }}>

@@ -1,0 +1,255 @@
+{
+  "catalog_sha256": "9391c76eec2a14ac78c57515e25df891a879772c7c25a8fa74bb2e1ddda36995",
+  "results": [
+    {
+      "submitted_url": "https://keumkang.chungnam.go.kr:452/",
+      "job_id": "j_033a3e8a83464cc98fc40dbd4618a651",
+      "status": "done",
+      "elapsed_ms": 26,
+      "identity": {
+        "host": "keumkang.chungnam.go.kr",
+        "site_family": "chungnam.go.kr",
+        "status": "verified",
+        "name": "산림자원연구소",
+        "source": "https://www.gov.kr/portal/orgSite?pageIndex=47",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": false,
+        "inspection_limit_reason": "unsupported_port",
+        "reason": "official_directory",
+        "related_addresses": [
+          "cnnongup.chungnam.go.kr",
+          "council.chungnam.go.kr",
+          "keumkang.chungnam.go.kr",
+          "www.chungnam.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "verdict": "unknown",
+      "explanation": {
+        "headline": "산림자원연구소 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 명부에 나온 주소와 일치해요. 현재 지원하지 않는 포트여서 사이트에 접속하지 않았어요. 페이지 내용과 안전성은 확인하지 못했어요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 chungnam.go.kr이에요.",
+          "공식 출처에서 산림자원연구소 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지 내용과 동작",
+          "암호화 연결"
+        ],
+        "recommended_action": "아래 공식 출처에서 기관의 홈페이지 연결을 확인할 수 있어요.",
+        "action_bullets": [
+          "주소가 틀렸다는 판정이 아니라 페이지 검사 기능의 제한이에요."
+        ],
+        "source": "template"
+      },
+      "agent": {
+        "tool_calls": [],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "not_run"
+      },
+      "connection": {
+        "verified": null,
+        "certificates": [],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "redirect_chain": [],
+      "sandbox_events": []
+    },
+    {
+      "submitted_url": "https://dgsbgh.daegumc.co.kr:7443/",
+      "job_id": "j_ce8fbd7ebb1149dc9f8eff041aca02cf",
+      "status": "done",
+      "elapsed_ms": 24,
+      "identity": {
+        "host": "dgsbgh.daegumc.co.kr",
+        "site_family": "daegumc.co.kr",
+        "status": "verified",
+        "name": "대구광역시 서부노인전문병원",
+        "source": "https://www.ppm.or.kr/",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": false,
+        "inspection_limit_reason": "unsupported_port",
+        "reason": "official_directory",
+        "related_addresses": [
+          "dgsbgh.daegumc.co.kr",
+          "www.daegumc.co.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "verdict": "unknown",
+      "explanation": {
+        "headline": "대구광역시 서부노인전문병원 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 명부에 나온 주소와 일치해요. 현재 지원하지 않는 포트여서 사이트에 접속하지 않았어요. 페이지 내용과 안전성은 확인하지 못했어요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 daegumc.co.kr이에요.",
+          "공식 출처에서 대구광역시 서부노인전문병원 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지 내용과 동작",
+          "암호화 연결"
+        ],
+        "recommended_action": "아래 공식 출처에서 기관의 홈페이지 연결을 확인할 수 있어요.",
+        "action_bullets": [
+          "주소가 틀렸다는 판정이 아니라 페이지 검사 기능의 제한이에요."
+        ],
+        "source": "template"
+      },
+      "agent": {
+        "tool_calls": [],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "not_run"
+      },
+      "connection": {
+        "verified": null,
+        "certificates": [],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "redirect_chain": [],
+      "sandbox_events": []
+    },
+    {
+      "submitted_url": "https://www.한사랑유치원.kr:475/home/",
+      "job_id": "j_793636b1c9474fbfa11f3d56e151343c",
+      "status": "done",
+      "elapsed_ms": 43,
+      "identity": {
+        "host": "www.xn--9i2br6o14eej412a1rk.kr",
+        "site_family": "xn--9i2br6o14eej412a1rk.kr",
+        "status": "verified",
+        "name": "한사랑유치원",
+        "source": "https://e-childschoolinfo.moe.go.kr/openData.do",
+        "checked": "2026-09-25",
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": false,
+        "inspection_limit_reason": "unsupported_port",
+        "reason": "official_directory",
+        "related_addresses": [
+          "www.xn--9i2br6o14eej412a1rk.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "verdict": "unknown",
+      "explanation": {
+        "headline": "한사랑유치원 공식 주소로 확인됐어요.",
+        "warning": null,
+        "detail": "공식 명부에 나온 주소와 일치해요. 현재 지원하지 않는 포트여서 사이트에 접속하지 않았어요. 페이지 내용과 안전성은 확인하지 못했어요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 xn--9i2br6o14eej412a1rk.kr이에요.",
+          "공식 출처에서 한사랑유치원 서비스의 주소를 확인했어요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지 내용과 동작",
+          "암호화 연결"
+        ],
+        "recommended_action": "아래 공식 출처에서 기관의 홈페이지 연결을 확인할 수 있어요.",
+        "action_bullets": [
+          "주소가 틀렸다는 판정이 아니라 페이지 검사 기능의 제한이에요."
+        ],
+        "source": "template"
+      },
+      "agent": {
+        "tool_calls": [],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "not_run"
+      },
+      "connection": {
+        "verified": null,
+        "certificates": [],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "redirect_chain": [],
+      "sandbox_events": []
+    },
+    {
+      "submitted_url": "https://keumkang.chungnam.go.kr:65000/",
+      "job_id": "j_e4c95418368240a9a1a30aa7508e5b39",
+      "status": "done",
+      "elapsed_ms": 22,
+      "identity": {
+        "host": "keumkang.chungnam.go.kr",
+        "site_family": "chungnam.go.kr",
+        "status": "unverified",
+        "name": null,
+        "source": null,
+        "checked": null,
+        "canonical_from": null,
+        "expires_at": null,
+        "inspection_supported": null,
+        "inspection_limit_reason": null,
+        "reason": "no_identity_evidence",
+        "related_addresses": [
+          "cnnongup.chungnam.go.kr",
+          "council.chungnam.go.kr",
+          "keumkang.chungnam.go.kr",
+          "www.chungnam.go.kr"
+        ],
+        "observed_redirects": [],
+        "behavior": "incomplete"
+      },
+      "verdict": "unknown",
+      "explanation": {
+        "headline": "이 주소의 페이지 검사를 지원하지 않아요.",
+        "warning": null,
+        "detail": "현재 지원하지 않는 포트여서 사이트에 접속하지 않았어요. 페이지 내용과 안전성은 확인하지 못했어요.",
+        "confirmed_facts": [
+          "진짜 사이트 이름은 chungnam.go.kr이에요."
+        ],
+        "suspicion_evidence": [],
+        "unverified": [
+          "페이지 내용과 동작",
+          "암호화 연결"
+        ],
+        "recommended_action": "기관의 공식 안내에서 주소를 확인해 보세요.",
+        "action_bullets": [
+          "주소가 틀렸다는 판정이 아니라 페이지 검사 기능의 제한이에요."
+        ],
+        "source": "template"
+      },
+      "agent": {
+        "tool_calls": [],
+        "unexpected_tools": [],
+        "duration_ms": null,
+        "model_reported": null,
+        "kind": "not_run"
+      },
+      "connection": {
+        "verified": null,
+        "certificates": [],
+        "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+      },
+      "redirect_chain": [],
+      "sandbox_events": []
+    }
+  ],
+  "api_health_http": 200,
+  "validation": {
+    "local_tests": 515,
+    "vm_tests": 515,
+    "local_seconds": 66.15,
+    "vm_seconds": 66.91,
+    "web_typecheck": "passed",
+    "web_build": "passed",
+    "policy_status": "effective",
+    "residual_investigation_policies": [],
+    "note": "VM API pipeline checks; unsupported-port destination sites and TLS were not contacted."
+  }
+}

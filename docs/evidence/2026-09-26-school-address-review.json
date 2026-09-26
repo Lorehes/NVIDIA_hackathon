@@ -1,0 +1,162 @@
+{
+  "job_id": "j_3226b3252fad499ea003d6a7eb97570e",
+  "status": "done",
+  "elapsed_ms": 19066,
+  "error": null,
+  "verdict": "unknown",
+  "identity": {
+    "host": "jb-e.goept.kr",
+    "site_family": "goept.kr",
+    "status": "verified",
+    "name": "죽백초등학교병설유치원",
+    "source": "https://jb-e.goept.kr/jb-e/na/ntt/selectNttList.do?mi=4431&bbsId=2349",
+    "checked": "2026-09-25",
+    "canonical_from": null,
+    "expires_at": null,
+    "inspection_supported": true,
+    "inspection_limit_reason": null,
+    "reason": "reviewed_official_source_correction",
+    "matched_entities": [
+      {
+        "id": "site_4c30d7ef7cb55591ab2b",
+        "name": "죽백초등학교병설유치원",
+        "source": "https://jb-e.goept.kr/jb-e/na/ntt/selectNttList.do?mi=4431&bbsId=2349",
+        "checked": "2026-09-25"
+      }
+    ],
+    "matched_entities_total": 1,
+    "related_addresses": [
+      "anil-m.goept.kr",
+      "anjoong-e.goept.kr",
+      "anjung-h.goept.kr",
+      "anjung-m.goept.kr",
+      "baedari-e.goept.kr",
+      "baedari-m.goept.kr",
+      "banji-e.goept.kr",
+      "bijeon-h.goept.kr",
+      "buyong-e.goept.kr",
+      "cb-k.goept.kr",
+      "changsin-e.goept.kr",
+      "cheong-ok-e.goept.kr",
+      "cheong-ok-m.goept.kr",
+      "cheongbuk-e.goept.kr",
+      "cheongbuk-h.goept.kr",
+      "cheongbuk-m.goept.kr",
+      "cheongdam-h.goept.kr",
+      "cheongdam-m.goept.kr",
+      "daedong-k.goept.kr",
+      "deokdong-e.goept.kr"
+    ],
+    "observed_redirects": [],
+    "behavior": "incomplete"
+  },
+  "explanation": {
+    "headline": "죽백초등학교병설유치원 공식 주소로 확인됐어요.",
+    "warning": null,
+    "detail": "공식 출처에 나온 주소와 일치해요. 페이지를 열어 확인했지만, 스크립트 실행 후의 화면과 동작까지 검사한 것은 아니에요. 주소 확인과 페이지 안전성은 별도로 판단해요.",
+    "confirmed_facts": [
+      "진짜 사이트 이름은 goept.kr이에요.",
+      "공식 출처에서 죽백초등학교병설유치원 서비스의 주소를 확인했어요."
+    ],
+    "suspicion_evidence": [],
+    "unverified": [
+      "페이지가 나중에 스스로 바뀌는 내용"
+    ],
+    "recommended_action": "아래 공식 출처에서 서비스 연결을 확인할 수 있어요.",
+    "action_bullets": [
+      "공식 주소는 확인됐고, 페이지의 실행 후 동작은 검사 범위 밖이에요."
+    ],
+    "source": "template"
+  },
+  "redirect_chain": [
+    {
+      "url": "https://jb-e.goept.kr/jb-e/na/ntt/selectNttList.do?mi=4431&bbsId=2349",
+      "host": "jb-e.goept.kr",
+      "registrable_domain": "goept.kr",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "at": "2026-09-25T16:30:42.334+00:00"
+    }
+  ],
+  "connection": {
+    "verified": true,
+    "certificates": [
+      {
+        "scope": "connection_peer",
+        "origin_identity_verified": false,
+        "issuer": [
+          [
+            [
+              "commonName",
+              "OpenShell Sandbox CA"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "OpenShell"
+            ]
+          ]
+        ],
+        "not_before": "Jan  1 00:00:00 1975 GMT",
+        "not_after": "Jan  1 00:00:00 4096 GMT",
+        "dns_names": [
+          "jb-e.goept.kr"
+        ],
+        "sha256": "00057d4ad3699100d49ce5f3b81993187087e1587b2bd2a7ee858d2441a3fc60",
+        "protocol": "TLSv1.3"
+      }
+    ],
+    "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+  },
+  "incomplete_reason": null,
+  "agent": {
+    "tool_calls": [
+      "exec"
+    ],
+    "unexpected_tools": [],
+    "duration_ms": null,
+    "model_reported": null,
+    "kind": "openshell"
+  },
+  "catalog_sha256": "66ae2a44f972b2ed7fa2017175df3e855fff4deb0c8bf34c0d2f177b73421458",
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "tests": {
+    "local_related": {
+      "passed": 54,
+      "seconds": 0.51
+    },
+    "vm_related": {
+      "passed": 54,
+      "seconds": 1.04
+    },
+    "full_suite": "Not rerun for this data-only update; previous full 564 and wording-specific 10 remain historical"
+  },
+  "catalog": {
+    "records": 21876,
+    "hosts": 16198,
+    "excluded": 2571,
+    "missing_homepage": 2539,
+    "other_excluded": 32,
+    "inspection_limited": 22,
+    "corrected_source_rows": 6
+  },
+  "effective_policy_verified": true,
+  "residual_investigation_policies": 0,
+  "browser_reverified": false,
+  "reviewed_source_ids": [
+    "a1080b4366c7a35b6b79",
+    "8011152",
+    "8382063"
+  ],
+  "deferred": {
+    "source_id": "645ee1250e6a8d918049",
+    "name": "백구초등학교병설유치원",
+    "reason": "Current school homepage verified; separate current kindergarten navigation URL not established. Older search-index notice not used alone."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-09-25T16:10:53Z",
+  "tests": {
+    "local": {
+      "passed": 554,
+      "seconds": 42.03
+    },
+    "vm": {
+      "passed": 554,
+      "seconds": 67.72
+    },
+    "warning": "existing Starlette TestClient httpx deprecation",
+    "web_typecheck": "passed on VM",
+    "web_build": "passed on VM"
+  },
+  "catalog": {
+    "records": 21873,
+    "hosts": 16199,
+    "excluded": 2573,
+    "missing_homepage": 2539,
+    "other_excluded": 34,
+    "inspection_limited": 22,
+    "sha256": "af7b007fcb4d684aa0dc1a576b20374e019c20f09429096fe921311284f9ee45",
+    "changed": false
+  },
+  "browser_validation": {
+    "job_id": "j_8978a3a704904a278446aa2e539a88c8",
+    "input": "https://haneulbit-e.gpoe.kr/",
+    "status": 200,
+    "elapsed_ms": 11621,
+    "identity": "verified",
+    "verdict": "unknown",
+    "behavior": "incomplete",
+    "displayed_names": [
+      "하늘빛초등학교병설유치원",
+      "하늘빛초등학교"
+    ],
+    "displayed_sources": [
+      "https://e-childschoolinfo.moe.go.kr/openData.do",
+      "https://open.neis.go.kr/portal/data/service/selectServicePage.do?infId=OPEN17020190531110010104913&infSeq=1"
+    ],
+    "visual_checked": true,
+    "certificate_scope": "connection_peer",
+    "issuer": "OpenShell Sandbox CA",
+    "origin_identity_verified": false
+  },
+  "new_unresolved_finding": {
+    "job_id": "j_7c236a9f866842adafd7033a85ffa0dd",
+    "elapsed_ms": 12676,
+    "chain": [
+      {
+        "url": "https://www.nhn-playart.com/game.nhn",
+        "status": 301
+      },
+      {
+        "url": "http://www.nhn-playart.com/game/",
+        "status": 301
+      },
+      {
+        "url": "https://www.nhn-playart.com:443/game/",
+        "status": 200
+      }
+    ],
+    "identity": "unverified",
+    "verdict": "caution",
+    "signal": "domain_not_official",
+    "reason": "Sourced original URL moves to a new path through HTTP. Existing HTTPS-root-only observed identity rule correctly does not promote it; presentation/absence-of-evidence warning and independent new-path proof need follow-up.",
+    "fixed": false
+  },
+  "health": {
+    "ok": true,
+    "running": false,
+    "queue_length": 0
+  },
+  "residual_policies": 0,
+  "effective_policy_verified": true
+}

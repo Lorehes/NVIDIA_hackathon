@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import json
+import ipaddress
 import logging
 import os
 import re
@@ -21,7 +22,10 @@ from pathlib import Path
 from typing import Callable
 
 from .config import settings
+from . import budget
 from .urls import safe_host_for_policy
+from checklib.navigation import navigation_hosts, public_destination, resolve_public_destination
+from checklib.parse_url import normalize_url, parse_url
 
 log = logging.getLogger("sandbox")
 _JOB_ID_RE = re.compile(r"j_[0-9a-f]{32}")
@@ -115,11 +119,44 @@ def extract_tools(meta: dict) -> list[str]:
     return names
 
 
-def render_preset(job_id: str, host: str) -> str:
+def policy_name(job_id: str) -> str:
+    """NemoClaw preset names must be RFC 1123 labels; application IDs contain `_`."""
+    name = "job-" + job_id.replace("_", "-")
+    if len(name) > 63 or not re.fullmatch(r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", name):
+        raise SandboxError("unsafe job ID for policy")
+    return name
+
+
+def investigation_policy_name(name: str) -> str | None:
+    """Provider composition namespaces NemoClaw rules; still count them as live grants."""
+    if re.fullmatch(r'(?:job|spike)-[A-Za-z0-9_-]+', name):
+        return name
+    match = re.fullmatch(r'nemoclaw_custom__((?:job|spike)-[A-Za-z0-9_-]+?)__((?:job|spike)-[A-Za-z0-9_-]+)', name)
+    return match.group(1) if match else None
+
+
+def render_preset(job_id: str, host: str, allowed_hosts: list[str] | None = None,
+                  discovered: bool = False, address_pins: dict | None = None) -> str:
     if not safe_host_for_policy(host):
         raise SandboxError("unsafe host for policy")
     text = settings.preset_template.read_text(encoding="utf-8")
-    return text.replace("<job_id>", job_id).replace("<target_host>", host)
+    import copy
+    import yaml
+    hosts = allowed_hosts if allowed_hosts is not None else [host]
+    if len(hosts) > 6 or host not in hosts or any(not safe_host_for_policy(h) or
+            (not discovered and h not in navigation_hosts(host)) for h in hosts):
+        raise SandboxError("unsafe navigation hosts")
+    data = yaml.safe_load(text.replace("job-<job_id>", policy_name(job_id)).replace("<target_host>", host))
+    policy = data["network_policies"][policy_name(job_id)]
+    endpoints = policy["endpoints"]
+    policy["endpoints"] = [{**copy.deepcopy(e), "host": h} for h in dict.fromkeys(hosts) for e in endpoints]
+    if address_pins is not None:
+        for endpoint in policy['endpoints']:
+            pins = address_pins.get(endpoint['host'], [])
+            if not pins or any(not ipaddress.ip_address(ip).is_global or ipaddress.ip_address(ip).is_multicast for ip in pins):
+                raise SandboxError('non-public or missing destination pins')
+            endpoint['allowed_ips'] = pins
+    return yaml.safe_dump(data, sort_keys=False)
 
 
 # ══ 호스트 작업 폴더 ═══════════════════════════════════════════════════
@@ -187,7 +224,7 @@ class OpenShellSandbox(_LocalDirs):
     kind = "openshell"
 
     def __init__(self, runner: Runner = default_runner, name: str | None = None, workdir: Path | None = None):
-        self.run = runner
+        self._runner = runner
         self.name = name or settings.sandbox_name
         self.workdir = Path(workdir or settings.work_dir)
         # 정책이 남았는지 확인하지 못하면 True. 정리를 확인하기 전까지 새 조사를 받지 않는다(검토 2.5).
@@ -198,17 +235,59 @@ class OpenShellSandbox(_LocalDirs):
         self._pending_purge: set[str] = self._load_pending()
         # 시작할 때 샌드박스 안의 작업 폴더 목록을 확인했는가. 확인하지 못하면 남은 자료가 있는지 모르므로 재사용하지 않는다(R3-14).
         self._remote_reconciled = False
+        self._direct_policies: set[str] = set()
         self._init_local()
+
+    def run(self, args, timeout=None):
+        args, timeout = budget.command(args, timeout)
+        return self._runner(args, timeout)
 
     def _list_policies(self) -> list[str] | None:
         """현재 적용된 조사용 정책 이름. 조회하지 못하면 None(상태를 모른다는 뜻)."""
         try:
-            r = self.run(["nemoclaw", self.name, "policy", "list"], 30)
+            # `nemoclaw policy list` can exit 0 with an unavailable live state,
+            # showing only its preset catalog. Query the enforced policy itself.
+            r = self.run(["openshell", "policy", "get", self.name, "--full", "-o", "json"], 30)
         except Exception:  # noqa: BLE001
             return None
         if r.returncode != 0:
             return None
-        return sorted(set(re.findall(r"\b((?:job|spike)-[A-Za-z0-9_-]+)\b", r.stdout)))
+        data = first_json(r.stdout)
+        if not data or data.get("status") != "effective" or data.get("sandbox") != self.name:
+            return None
+        policies = (data.get("policy") or {}).get("network_policies")
+        if not isinstance(policies, dict):
+            return None
+        self._direct_policies.update(n for n, policy in policies.items() if n.startswith('job-') and
+                                     any(e.get('allowed_ips') for e in policy.get('endpoints', [])))
+        return sorted({logical for n in policies if (logical := investigation_policy_name(n))})
+
+    def _add_policy(self, preset: Path, name: str, pinned: bool) -> CmdResult:
+        if not pinned:
+            return self.run(['nemoclaw', self.name, 'policy', 'add', '--from-file', str(preset), '--yes'], 60)
+        # NemoClaw's user-preset format rejects allowed_ips. OpenShell's supported
+        # policy API can preserve the current policy and narrow new grants to
+        # validated public IPs. Never drop pins as a compatibility fallback.
+        import yaml
+        current = self.run(['openshell', 'policy', 'get', self.name, '--base', '-o', 'json'], 20)
+        data = first_json(current.stdout)
+        if current.returncode or not data or data.get('status') != 'effective' or data.get('sandbox') != self.name:
+            raise SandboxError('cannot read effective policy')
+        policy = data['policy']
+        addition = yaml.safe_load(preset.read_text())['network_policies'][name]
+        policy['network_policies'][name] = addition
+        merged = preset.with_name('effective-policy.yaml')
+        merged.write_text(yaml.safe_dump(policy, sort_keys=False), encoding='utf-8')
+        self._direct_policies.add(name)  # even a timed-out apply can have taken effect
+        r = self.run(['openshell', 'policy', 'set', self.name, '--policy', str(merged), '--wait', '--timeout', '30'], 35)
+        if r.returncode:
+            return r
+        verified = self.run(['openshell', 'policy', 'get', self.name, '--full', '-o', 'json'], 20)
+        effective = first_json(verified.stdout) or {}
+        actual = (effective.get('policy') or {}).get('network_policies', {}).get(name)
+        if verified.returncode or effective.get('status') != 'effective' or actual != addition:
+            raise SandboxError('effective policy differs from exact pinned grant')
+        return r
 
     def _close_policy(self, name: str) -> bool:
         """정책을 지우고 다시 조회해 정말 없어졌는지 확인한다. 확인되어야만 True."""
@@ -219,7 +298,10 @@ class OpenShellSandbox(_LocalDirs):
             if attempt == 2:
                 break
             try:
-                self.run(["nemoclaw", self.name, "policy", "remove", name, "--yes"], 60)
+                if name in self._direct_policies:
+                    self.run(['openshell', 'policy', 'update', self.name, '--remove-rule', name, '--wait', '--timeout', '30'], 35)
+                else:
+                    self.run(["nemoclaw", self.name, "policy", "remove", name, "--yes"], 60)
             except Exception:  # noqa: BLE001 - 시간 초과여도 서버에서는 지워졌을 수 있으니 재조회로 판단한다
                 pass
         return False
@@ -270,11 +352,12 @@ class OpenShellSandbox(_LocalDirs):
         finally:  # 어떤 경로로 끝나도 호스트와 샌드박스의 작업 폴더(문자 원문 포함)를 남기지 않는다
             self._end_local(job_id)  # 못 지운 폴더는 남아 있으므로 다음 정리(reconcile_local)가 다시 지운다
             if touched:
-                self._purge_remote(job_id)
+                with budget.cleanup():
+                    self._purge_remote(job_id)
 
     def _investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
                      on_stage: Callable[[str], None], touched: list[bool]) -> RunResult:
-        res = RunResult(policy_name=f"job-{job_id}")
+        res = RunResult(policy_name=policy_name(job_id))
         self.retry_pending()
         if self._pending_purge or not self._remote_reconciled:
             # 이전 조사 자료(문자 원문)가 샌드박스에 남아 있거나 남았는지 확인하지 못했다: 확인하기 전에는 재사용하지 않는다
@@ -294,9 +377,15 @@ class OpenShellSandbox(_LocalDirs):
         up_dir.mkdir(parents=True)
         down_dir.mkdir(parents=True)
         (up_dir / "input.json").write_text(json.dumps(input_payload, ensure_ascii=False), encoding="utf-8")
+        address_only = input_payload.get('navigation_mode') == 'discover' and not input_payload.get('message_text')
+        if address_only:
+            (up_dir / 'claim.json').write_text(json.dumps({'ok': True, 'entity_id': None, 'purpose': 'other',
+                                                          'reason': '주소만 입력되어 기관·목적을 추측하지 않음',
+                                                          'at': _iso(_now())}), encoding='utf-8')
 
         opened = False
         add_attempted = False  # 추가 요청이 시간 초과·오류여도 서버에는 반영됐을 수 있다
+        address_pins = {} if input_payload.get('navigation_mode') == 'discover' else None
         t_start = time.time()
         try:
             # 3. 입력 업로드 ("상위 폴더"를 대상으로 지정하면 <대상>/<원본폴더이름>이 만들어진다)
@@ -308,16 +397,23 @@ class OpenShellSandbox(_LocalDirs):
 
             # 4. 조사용 정책 열기 (IP·사설 호스트는 열지 않고 주소 분석만 한다)
             if fetch_allowed:
+                if input_payload.get('navigation_mode') == 'discover':
+                    try:
+                        checked_host, addresses = budget.read_only(resolve_public_destination, input_payload['url'])
+                        address_pins[checked_host] = addresses
+                    except ValueError:
+                        res.incomplete = 'destination_unavailable'
+                        return res
                 on_stage("policy_open")
-                preset = job_local / f"job-{job_id}.yaml"
-                preset.write_text(render_preset(job_id, target_host), encoding="utf-8")
+                preset = job_local / f"{res.policy_name}.yaml"
+                preset.write_text(render_preset(job_id, target_host, input_payload.get("allowed_hosts"), address_pins=address_pins), encoding="utf-8")
                 add_attempted = True
-                r = self.run(["nemoclaw", self.name, "policy", "add", "--from-file", str(preset), "--yes"], 60)
+                r = self._add_policy(preset, res.policy_name, address_pins is not None)
                 if r.returncode != 0:
                     res.incomplete = "policy_error"
                     return res
                 opened = True
-                res.events.append({"at": _iso(_now()), "kind": "open", "host": target_host})
+                res.events.append({"at": _iso(_now()), "kind": "open", "host": target_host, "hosts": input_payload.get("allowed_hosts", [target_host])})
             res.timings_ms["policy_open"] = int((time.time() - t_start) * 1000)
 
             # 5. 에이전트 실행
@@ -326,12 +422,21 @@ class OpenShellSandbox(_LocalDirs):
             agent_started = _now()
             msg = f"Use the phishing-investigator skill for job {job_id}."
             try:
-                r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "openclaw", "agent",
+                if address_only:
+                    r = self.run(['openshell', 'sandbox', 'exec', '-n', self.name, '--timeout=35', '--',
+                                  'python3', '/sandbox/.openclaw/workspace/skills/phishing-investigator/scripts/run_checks.py',
+                                  '--job', job_id], 40)
+                    agent_json = {'status': 'ok', 'result': {'meta': {'toolSummary': {'tools': ['exec']}}}} if r.returncode == 0 else None
+                else:
+                    r = self.run(["openshell", "sandbox", "exec", "-n", self.name,
+                              f"--timeout={settings.agent_timeout_s + 5}", "--", "openclaw", "agent",
                               "--session-id", f"{job_id}-inv", "--message", msg, "--json",
                               "--timeout", str(settings.agent_timeout_s)], settings.agent_timeout_s + 10)
-                agent_json = first_json(r.stdout)
+                    agent_json = first_json(r.stdout)
                 blob = (r.stdout + r.stderr).lower()
-                if r.returncode != 0 or agent_json is None:
+                if r.returncode == 124:  # OpenShell's remote deadline, before the local process limit
+                    res.incomplete = 'agent_timeout'
+                elif r.returncode != 0 or agent_json is None:
                     res.incomplete = "overloaded" if ("429" in blob or "overload" in blob) else "agent_error"
                 elif str(agent_json.get("status", "")).lower() not in ("ok", "done", "success", "completed", ""):
                     res.incomplete = "overloaded" if "overload" in blob or "429" in blob else "agent_error"
@@ -339,6 +444,9 @@ class OpenShellSandbox(_LocalDirs):
                 agent_json, res.incomplete = None, "agent_timeout"
             res.timings_ms["agent_investigate"] = int((time.time() - t_agent) * 1000)
             res.agent = _agent_meta(agent_json, agent_started, kind="openshell")
+            res.agent['execution_mode'] = 'address_checks' if address_only else 'message_agent'
+            if not res.incomplete and opened and input_payload.get('navigation_mode') == 'discover':
+                self._follow_navigation(job_id, input_payload, target_host, up_dir, down_dir, preset, res, on_stage, address_pins)
         except TimeoutError:
             res.incomplete = res.incomplete or ("policy_error" if add_attempted and not opened else "agent_timeout")
         except SandboxError:
@@ -353,21 +461,120 @@ class OpenShellSandbox(_LocalDirs):
                         on_stage("policy_close")
                     except Exception:  # noqa: BLE001 - 진행 표시가 실패해도 정책 제거는 반드시 한다
                         log.exception("on_stage failed during policy_close")
-                ok = self._close_policy(f"job-{job_id}")
+                with budget.cleanup():
+                    ok = self._close_policy(res.policy_name)
                 res.residual_policy = not ok
                 self.quarantined = not ok
+                if not ok:
+                    res.incomplete = res.incomplete or 'policy_error'
                 if opened:
                     res.events.append({"at": _iso(_now()), "kind": "close", "host": target_host})
 
         # 7. 결과 파일 회수 (모델이 전달한 요약은 쓰지 않고 스크립트 원본 출력만 쓴다)
         try:
             self.run(self._sandbox_cmd("download", self.name, f"/sandbox/work/{job_id}", str(down_dir)), 60)
+        except budget.BudgetExpired:
+            res.incomplete = res.incomplete or 'agent_timeout'
         except Exception:  # noqa: BLE001
             pass
         res.files = _read_files(down_dir)
         _add_blocked_events(res)
         _finish_agent_marks(res)
         return res
+
+    def _follow_navigation(self, job_id, payload, target_host, up_dir, down_dir, preset, res, on_stage, address_pins):
+        """A host-controlled broker extends exact GET destinations, never wildcard trust.
+
+        The model cannot change egress policy. Each observed redirect is checked
+        on the host, then deterministic checks are rerun inside the sandbox.
+        Previously visited hosts remain only until this job's finally cleanup.
+        """
+        deadline = time.monotonic() + 90
+        decisions = res.agent.setdefault('navigation', [])
+        refreshed = set()
+        for _ in range(5):
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                break
+            shutil.rmtree(down_dir, ignore_errors=True)
+            down_dir.mkdir(parents=True)
+            r = self.run(self._sandbox_cmd('download', self.name, f'/sandbox/work/{job_id}', str(down_dir)), min(30, remaining))
+            if r.returncode:
+                res.incomplete = 'sandbox_error'
+                return
+            files = _read_files(down_dir)
+            chain = (files.get('fetch_chain') or {}).get('chain') or []
+            if not chain or len(chain) > 6 or not chain[-1].get('blocked'):
+                return
+            last = chain[-1]
+            refresh = last.get('host') in payload['allowed_hosts']
+            if refresh:
+                # CDNs can rotate public DNS answers between preflight and proxy resolution.
+                # Refresh once per host, using independently resolved addresses, never the denial text.
+                if last.get('host') in refreshed or last.get('block_reason') != '403 Forbidden':
+                    return
+                next_url = last.get('url', '')
+            else:
+                if len(chain) < 2 or last.get('block_reason') != 'navigation outside allowed site addresses':
+                    return
+                next_url = chain[-2].get('redirect_url', '')
+            try:
+                if not next_url or len(next_url) > 2000:
+                    raise ValueError('invalid_redirect_edge')
+                if not refresh and chain[-2].get('status') not in range(300, 400):
+                    raise ValueError('invalid_redirect_edge')
+                if normalize_url(next_url)[0][:500] != last.get('url'):
+                    raise ValueError('invalid_redirect_edge')
+                first_url = normalize_url(payload['url'])[0]
+                if chain[0].get('url') != first_url[:500]:
+                    raise ValueError('invalid_redirect_start')
+                host, addresses = budget.read_only(resolve_public_destination, next_url)
+                if refresh:
+                    if host != last.get('host'):
+                        raise ValueError('invalid_refresh_host')
+                    addresses = sorted(set(addresses) | set(address_pins.get(host, [])))
+                    if addresses == sorted(address_pins.get(host, [])):
+                        decisions.append({'url': next_url[:500], 'allowed': False, 'reason': 'dns_answers_unchanged'})
+                        return
+                    if len(addresses) > 32:
+                        raise ValueError('dns_address_limit')
+                    refreshed.add(host)
+                elif host in payload['allowed_hosts'] or len(payload['allowed_hosts']) >= 6:
+                    raise ValueError('navigation_limit')
+            except (ValueError, TypeError) as exc:
+                decisions.append({'url': next_url[:500], 'allowed': False, 'reason': str(exc)})
+                return
+            if time.monotonic() >= deadline:
+                return
+            # remove is verified before replacement; finally removes any attempted replacement too.
+            if not self._close_policy(res.policy_name):
+                res.incomplete = 'policy_error'
+                return
+            if not refresh:
+                payload['allowed_hosts'].append(host)
+            address_pins[host] = addresses
+            preset.write_text(render_preset(job_id, target_host, payload['allowed_hosts'], discovered=True,
+                                            address_pins=address_pins), encoding='utf-8')
+            r = self._add_policy(preset, res.policy_name, pinned=True)
+            if r.returncode:
+                res.incomplete = 'policy_error'
+                return
+            decisions.append({'url': next_url[:500], 'allowed': True,
+                              'reason': 'public_dns_refresh' if refresh else 'public_redirect_destination'})
+            res.events.append({'at': _iso(_now()), 'kind': 'open', 'host': host, 'hosts': list(payload['allowed_hosts'])})
+            on_stage('agent_investigate')
+            (up_dir / 'input.json').write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+            r = self.run(self._sandbox_cmd('upload', self.name, str(up_dir), '/sandbox/work'), 30)
+            if r.returncode:
+                res.incomplete = 'sandbox_error'
+                return
+            remaining = max(1, min(30, int(deadline - time.monotonic())))
+            r = self.run(['openshell', 'sandbox', 'exec', '-n', self.name, f'--timeout={remaining}', '--',
+                          'python3', '/sandbox/.openclaw/workspace/skills/phishing-investigator/scripts/run_checks.py',
+                          '--job', job_id], remaining + 5)
+            if r.returncode:
+                res.incomplete = 'agent_timeout' if r.returncode == 124 else 'sandbox_error'
+                return
 
     # ── 샌드박스 안 작업 폴더 삭제 ───────────────────────────────────────
     def _load_pending(self) -> set[str]:
@@ -435,7 +642,8 @@ class OpenShellSandbox(_LocalDirs):
             return None
         msg = "Use the verdict-explainer skill. INPUT: " + json.dumps(payload, ensure_ascii=False)
         try:
-            r = self.run(["openshell", "sandbox", "exec", "-n", self.name, "--", "openclaw", "agent",
+            r = self.run(["openshell", "sandbox", "exec", "-n", self.name,
+                          f"--timeout={settings.explain_timeout_s + 5}", "--", "openclaw", "agent",
                           "--session-id", f"{job_id}-exp", "--message", msg, "--json",
                           "--timeout", str(settings.explain_timeout_s)], settings.explain_timeout_s + 10)
         except Exception:  # noqa: BLE001
@@ -568,7 +776,7 @@ class LocalSandbox(_LocalDirs):
 
     def _investigate(self, job_id: str, input_payload: dict, target_host: str, fetch_allowed: bool,
                      on_stage: Callable[[str], None]) -> RunResult:
-        res = RunResult(policy_name=f"job-{job_id}")
+        res = RunResult(policy_name=policy_name(job_id))
         root = self.workdir
         jd = root / job_id
         shutil.rmtree(jd, ignore_errors=True)
@@ -578,7 +786,7 @@ class LocalSandbox(_LocalDirs):
         on_stage("policy_open")
         started = _now()
         if fetch_allowed:
-            res.events.append({"at": _iso(started), "kind": "open", "host": target_host})
+            res.events.append({"at": _iso(started), "kind": "open", "host": target_host, "hosts": input_payload.get("allowed_hosts", [target_host])})
         forced = self.force.get(target_host.lower())
 
         on_stage("agent_investigate")

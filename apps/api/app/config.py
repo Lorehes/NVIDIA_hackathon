@@ -41,7 +41,10 @@ class Settings:
     replay_dir: Path = Path(os.environ.get("REPLAY_DIR", API_ROOT / "data" / "replay"))
     work_dir: Path = Path(os.environ.get("LOCAL_WORK_DIR", API_ROOT / "data" / "work"))
 
-    # 타임아웃(초): 조사 60 + 설명 30 = PRD 90초 예산
+    # 작업 시작부터 공통 90초. 마지막 15초는 권한·자료 정리에 예약한다(큐 대기 제외).
+    investigation_timeout_s: float = 90.0
+    cleanup_reserve_s: float = 15.0
+    # 단계별 상한도 남은 공통 예산을 넘지 못한다.
     agent_timeout_s: int = int(os.environ.get("AGENT_TIMEOUT_S", "60"))
     explain_timeout_s: int = int(os.environ.get("EXPLAIN_TIMEOUT_S", "30"))
     queue_max: int = int(os.environ.get("QUEUE_MAX", "5"))

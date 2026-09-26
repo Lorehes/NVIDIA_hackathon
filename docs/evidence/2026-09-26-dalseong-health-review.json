@@ -1,0 +1,826 @@
+{
+  "reviewed_at": "2026-09-26T02:02:03.610606+00:00",
+  "previous_corrections_sha256": "2c0df3f27fcb385d1ddfc2a13df9d10358b689cdbfde9ad867d763c364cb3e3d",
+  "previous_catalog_sha256": "be2f5ce708d6b33aff6d46d0334b7365eb65b0c98440bc27319bfac00a02bb4e",
+  "raw_file_sha256": "1090f556d8a54479b55cf09f915f1245f26e1e5f2ae7e2ae59da9d2cabf7d09c",
+  "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+  "sources": [
+    {
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "status": 200,
+      "sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+      "confirmed_names": [
+        "옥포읍보건지소",
+        "화원읍보건지소",
+        "다사읍보건지소",
+        "논공읍보건지소",
+        "가창면보건지소",
+        "구지면보건지소",
+        "하빈면보건지소",
+        "고봉보건진료소",
+        "징리보건진료소",
+        "대암보건진료소",
+        "무등보건진료소",
+        "봉촌보건진료소",
+        "한정보건진료소",
+        "음리보건진료소"
+      ],
+      "organization_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암"
+    }
+  ],
+  "added": [
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "0de6625f60fba143b60493243a5aaaf5f717d8fa75c125fec1eecdfd39695d9b",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "옥포읍보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "옥포읍보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "옥포",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "cfb52d98de940af15a1eb94eb240c5fd819f29f72252be5c054b69898880f09d",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "화원읍보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "화원읍보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "화원",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "dcc5d7bbb80eb9558604cf5d3e436350da4c1cdbe4c959e7b4f54f1bd5cdc2ae",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "다사읍보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "다사읍보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "다사",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "1b1cc077e4fc12070c65f5f199b1728707a35b03e46f8971fc7cd74fced0c274",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "논공읍보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "논공읍보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "논공",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "fe04daec6747fcafc9ce9aa1f13544f5940d1a6124a2a9cd7d4ca3ef3100d09e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "가창면보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "가창면보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "가창",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "4941119383144a722d7e4649db79ce45c05780dcc4e8e8793db2c81f2c092caf",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "구지면보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "구지면보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "구지",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "ba3e052f48fdff31f850a682af9832b93fffcbdd00442f485b82213b4c0986c8",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "하빈면보건지소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "하빈면보건지소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "하빈",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "03b00855c033a6ecee7b6e6dc5d66a3c58d621db44002ac77f754c2f2183de97",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "고봉보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "고봉보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "고봉",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "2cf2b01aeb5b38410f4a531b8cdb16735eab2b5c7b3715a63b661dbdf9efc7d1",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "징리보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "징리보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "징리",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "709c3160271e9dfde804a720c1875ebba628ec21ae69e4cc1eac0bf58bf4526e",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "대암보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "대암보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "대암",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "09f6c64013a93e29cf2f91eec2cfe095383390eb17807694b8946495d5dfbdcc",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "무등보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "무등보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "무등",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "ee280107525d81bb4e00e21878c7b2ca8bf97de3fdbab0ace760b54aa8cc02ed",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "봉촌보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "봉촌보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "봉촌",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "a4e6cc2118142a671b102d5a2f123d1ea0d622ba2ae51a4ada8b9d06b2280aae",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "한정보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "한정보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "한정",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    },
+    {
+      "source_dataset": "public_health",
+      "source_id": null,
+      "source_row_sha256": "b1e79e998a8ab189ff23785c149c550dd3283f5987f2a0705441c6f5f84f304f",
+      "source_snapshot_sha256": "074962f11249f2f72fc4dcd20d0d6ad8b8e29fe73feba77c40e3f146a0b58adf",
+      "name": "음리보건진료소",
+      "original_url": "",
+      "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "scope": "url",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "reason": "official_institution_page_confirmed",
+      "evidence": [
+        {
+          "kind": "official_site_navigation",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do",
+          "body_sha256": "7720ffafbc28e34b82eccc723834fc3ff59d2dc724b1c8d1d1cd03b66d0569ae",
+          "label": "조직도",
+          "target": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077"
+        },
+        {
+          "kind": "official_institution_page",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "http_status": 200,
+          "body_sha256": "341367461d407b8c18eae540d4a23e0caa41c3e77c4b763e0025e3a31bb7c1a6",
+          "confirmed_institution": "음리보건진료소",
+          "confirmed_jurisdiction": "대구광역시 달성군",
+          "source_label": "음리",
+          "source_context": "보건지소(7개) 화원, 논공, 다사, 옥포, 가창, 하빈, 구지 보건진료소(8개) 무등, 봉촌, 반송, 음리, 한정, 고봉, 징리, 대암",
+          "name_mapping_reason": "달성군 보건소 조직도의 보건지소/보건진료소 묶음 안에 표시된 지역명과 원자료의 고유 기관명 대조. 원자료 이름과 읍/면 표기는 보존하고 명부의 약칭을 검토하여 연결.",
+          "content_scope": "공식 조직 명부 안내; 현재 진료 여부/시간 보증 아님"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "name": "반송보건진료소",
+      "reason": "two source rows have the same name and no jurisdiction identifier; source date/order is not identity evidence",
+      "source_rows": [
+        {
+          "name": "반송보건진료소",
+          "url": "",
+          "kind": "public_health",
+          "source_updated": "2026-06-24",
+          "source": "https://www.data.go.kr/data/15107750/standard.do"
+        },
+        {
+          "name": "반송보건진료소",
+          "url": "",
+          "kind": "public_health",
+          "source_updated": "2025-11-18",
+          "source": "https://www.data.go.kr/data/15107750/standard.do"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "indexed_records": 22120,
+    "indexed_hosts": 16282,
+    "excluded": 2415,
+    "excluded_reasons": {
+      "missing_homepage": 2388,
+      "ip_literal_not_supported": 1,
+      "malformed_or_multiple_values": 17,
+      "invalid_or_ambiguous_url": 2,
+      "userinfo_or_email": 4,
+      "invalid_hostname": 2,
+      "unsupported_or_malformed_scheme": 1
+    },
+    "public_health_missing": 30,
+    "unchanged_existing_records": 22106,
+    "exact_names": 14,
+    "url_boundary_checks": 5,
+    "inactive_corrections": 0,
+    "catalog_sha256": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+    "corrections_sha256": "18b6dce08f3797c883120bc788dfae870de589999b1790f442767670e221e8fb",
+    "vm_tests": "31 passed in 1.69s",
+    "local_tests": "31 passed in 0.85s"
+  },
+  "live": {
+    "job_id": "j_a3312e8500594ba5a3daa7d2bfa891de",
+    "status": "done",
+    "elapsed_ms": 16430,
+    "error": null,
+    "verdict": "caution",
+    "identity": {
+      "host": "www.dalseong.daegu.kr",
+      "site_family": "dalseong.daegu.kr",
+      "status": "verified",
+      "name": "고봉보건진료소",
+      "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+      "checked": "2026-09-26",
+      "canonical_from": null,
+      "expires_at": null,
+      "inspection_supported": true,
+      "inspection_limit_reason": null,
+      "reason": "reviewed_official_source_correction",
+      "matched_entities": [
+        {
+          "id": "site_16a407d352aa61a3f266",
+          "name": "고봉보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_3a69a9f11fbd4993741b",
+          "name": "봉촌보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_5af34eff7dc02fda8a50",
+          "name": "대암보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_641e5eabdf42c7f3b97b",
+          "name": "화원읍보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_64beed651d2279f53cb8",
+          "name": "다사읍보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_82ab1f9df3ac87e1b17b",
+          "name": "논공읍보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_86073c1ca759dc3f4b17",
+          "name": "구지면보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_98eb6b7cce43579bea6b",
+          "name": "징리보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_afbeea9d43b81c56716b",
+          "name": "옥포읍보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_c3c883cf4cec41a4c4ef",
+          "name": "하빈면보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_d274b6c2d78a32283f27",
+          "name": "무등보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_d6a1a118f87e8657f312",
+          "name": "가창면보건지소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_de59976235389722e51d",
+          "name": "한정보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        },
+        {
+          "id": "site_fa79c875b1a7bc27c569",
+          "name": "음리보건진료소",
+          "source": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+          "checked": "2026-09-26"
+        }
+      ],
+      "matched_entities_total": 14,
+      "related_addresses": [
+        "dalseong.daegu.kr",
+        "www.dalseong.daegu.kr"
+      ],
+      "observed_redirects": [],
+      "behavior": "risk_found"
+    },
+    "explanation": {
+      "headline": "페이지 주소는 공식이지만, 입력 정보의 처리 경로는 미확인이에요.",
+      "warning": null,
+      "detail": "고봉보건진료소 공식 안내 주소와 일치해요. 입력 내용을 보내는 경로까지 해당 기관의 공식 주소로 확인한 것은 아니에요.",
+      "confirmed_facts": [
+        "진짜 사이트 이름은 dalseong.daegu.kr이에요.",
+        "공식 출처에서 고봉보건진료소 서비스의 주소를 확인했어요."
+      ],
+      "suspicion_evidence": [
+        "입력 내용을 같은 도메인의 다른 경로로 보내지만, 해당 기관의 공식 처리 주소인지는 확인하지 못했어요."
+      ],
+      "unverified": [],
+      "recommended_action": "고봉보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인한 뒤에 적으세요.",
+      "action_bullets": [
+        "이 페이지에는 아직 정보를 적지 마세요.",
+        "고봉보건진료소 공식 홈페이지 또는 대표번호로 먼저 확인하세요."
+      ],
+      "source": "template"
+    },
+    "redirect_chain": [
+      {
+        "url": "https://www.dalseong.daegu.kr/healthcenter/index.do?menu_id=00001077",
+        "host": "www.dalseong.daegu.kr",
+        "registrable_domain": "dalseong.daegu.kr",
+        "status": 200,
+        "blocked": false,
+        "error": null,
+        "at": "2026-09-26T02:03:58.073+00:00"
+      }
+    ],
+    "connection": {
+      "verified": true,
+      "certificates": [
+        {
+          "scope": "connection_peer",
+          "origin_identity_verified": false,
+          "issuer": [
+            [
+              [
+                "commonName",
+                "OpenShell Sandbox CA"
+              ]
+            ],
+            [
+              [
+                "organizationName",
+                "OpenShell"
+              ]
+            ]
+          ],
+          "not_before": "Jan  1 00:00:00 1975 GMT",
+          "not_after": "Jan  1 00:00:00 4096 GMT",
+          "dns_names": [
+            "www.dalseong.daegu.kr"
+          ],
+          "sha256": "7fcebdc1d57c1a4187ef24ad27bf80db00b3c20592ac4566e2ba227d06008502",
+          "protocol": "TLSv1.3"
+        }
+      ],
+      "note": "암호화 연결 검사이며 사이트의 공식 여부나 안전성을 보증하지 않아요."
+    },
+    "incomplete_reason": null,
+    "agent": {
+      "tool_calls": [
+        "exec"
+      ],
+      "unexpected_tools": [],
+      "duration_ms": null,
+      "model_reported": null,
+      "kind": "openshell"
+    },
+    "catalog_sha256": "cb232557a99a6be4c6224b7292146f22175d78a73c86d9fc7c6ed4eaee659a38",
+    "page_summary": {
+      "unexecuted_code": true,
+      "forms": [
+        {
+          "action_host": "www.dalseong.daegu.kr",
+          "action_registrable_domain": "dalseong.daegu.kr",
+          "cross_domain": false,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.dalseong.daegu.kr",
+              "registrable_domain": "dalseong.daegu.kr",
+              "cross_domain": false
+            }
+          ],
+          "action_urls": [
+            "https://www.dalseong.daegu.kr/search_page/search_page.jsp"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "search_only": false
+        },
+        {
+          "action_host": "www.dalseong.daegu.kr",
+          "action_registrable_domain": "dalseong.daegu.kr",
+          "cross_domain": false,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.dalseong.daegu.kr",
+              "registrable_domain": "dalseong.daegu.kr",
+              "cross_domain": false
+            }
+          ],
+          "action_urls": [
+            "https://www.dalseong.daegu.kr/search_page/search_page.jsp"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "search_only": false
+        },
+        {
+          "action_host": "www.dalseong.daegu.kr",
+          "action_registrable_domain": "dalseong.daegu.kr",
+          "cross_domain": false,
+          "destinations_overflow": false,
+          "destinations": [
+            {
+              "host": "www.dalseong.daegu.kr",
+              "registrable_domain": "dalseong.daegu.kr",
+              "cross_domain": false
+            }
+          ],
+          "action_urls": [
+            "https://www.dalseong.daegu.kr/index.do"
+          ],
+          "insecure_submission": false,
+          "field_types": [
+            "other"
+          ],
+          "same_origin_search": false,
+          "search_only": false
+        }
+      ]
+    },
+    "health": {
+      "ok": true,
+      "running": false,
+      "queue_length": 0
+    },
+    "policy_check": "no residual investigation presets (effective policy verified)"
+  },
+  "follow_up": {
+    "search_form_case": "Three same-origin forms combine text search with a select; parsed as other/search_only=false. No actual submission or malicious exfiltration observed.",
+    "next_official_source_candidate": "https://www.yc.go.kr/health/contents.do?mId=0103000000",
+    "candidate_not_registered": true,
+    "candidate_caveat": "official organization lists 지양 while raw institution is 자양; do not guess a correction"
+  },
+  "flowline": {
+    "kb_version": 35,
+    "security_version": 32
+  }
+}

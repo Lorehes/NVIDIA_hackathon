@@ -1,0 +1,30 @@
+{
+  "policy_add_ok": true,
+  "checks": [
+    {
+      "method": "GET",
+      "url": "https://example.com",
+      "status": 200,
+      "blocked": false,
+      "body_prefix": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><link rel=\"icon\" href=\"data:,\"><me"
+    },
+    {
+      "method": "POST",
+      "url": "https://example.com",
+      "status": 403,
+      "blocked": true,
+      "body_prefix": "{\"binary\":\"/usr/bin/python3.13\",\"detail\":\"POST / not permitted by policy\",\"error\":\"policy_denied\",\"h"
+    },
+    {
+      "method": "GET",
+      "url": "https://example.org",
+      "error": "ProxyError"
+    },
+    {
+      "method": "GET",
+      "url": "https://pypi.org",
+      "error": "ProxyError"
+    }
+  ],
+  "policy_removed": true
+}

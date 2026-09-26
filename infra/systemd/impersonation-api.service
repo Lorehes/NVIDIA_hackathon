@@ -5,6 +5,7 @@ After=network.target
 [Service]
 WorkingDirectory=%h/hackathon/apps/api
 EnvironmentFile=%h/hackathon/apps/api/.env
+EnvironmentFile=-%h/hackathon/infra/runtime/openshell.env
 ExecStart=%h/hackathon/apps/api/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
 Restart=on-failure
 

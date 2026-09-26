@@ -20,7 +20,7 @@ from .parse_url import registrable_of, resolve_reference, to_ascii_host
 
 FIELD_TYPES = [
     "password", "card_number", "card_cvc", "card_expiry", "bank_account", "resident_id",
-    "otp", "phone", "name", "address", "other",
+    "otp", "phone", "name", "address", "file", "other",
 ]
 
 _KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
@@ -57,7 +57,7 @@ _JS_REDIRECT_RE = re.compile(
     r"|\.\s*(?:action|formAction)\s*=(?!=)"
     r"|[\"'`]\s*\+\s*[\"'`]|\.\s*concat\s*\(\s*[\"'`]|\.\s*join\s*\(\s*[\"'`]{2}\s*\)|\$\{\s*[\"'`]"
     r"|" + _ASCII_ESC + r"|\\u\{)", re.I)
-_SKIP_INPUT_TYPES = {"hidden", "submit", "button", "image", "reset", "checkbox", "radio", "file"}
+_SKIP_INPUT_TYPES = {"hidden", "submit", "button", "image", "reset", "checkbox", "radio"}
 _MAX_DOCS = 8  # iframe srcdoc를 따라 들어갈 문서 수 상한
 _MAX_DEPTH = 3
 _MAX_DESTINATIONS = 20  # 폼 하나에서 따로 판단할 등록 도메인 수 상한(넘으면 overflow로 표시해 안전 판정에서 뺀다)
@@ -69,10 +69,32 @@ _MAX_ACTIONS = 5000  # 폼 하나에서 훑는 전송 대상(action·formaction)
 _MAX_LABEL = 200  # 라벨·속성 문구를 분류할 때 보는 길이 상한
 _ACTIVE_ATTRS = ("src", "data", "href", "xlink:href", "codebase")  # 요소에 따라 실제로 쓰이는 속성이 다르므로 모두 본다
 
+# WHATWG HTML script preparation + MIME Sniffing JavaScript essence matches.
+# Presence is an inspection gap, not proof that CSP/browser settings allowed execution.
+_JS_MIME_TYPES = {
+    'application/ecmascript', 'application/javascript', 'application/x-ecmascript',
+    'application/x-javascript', 'text/ecmascript', 'text/javascript', 'text/jscript',
+    'text/livescript', 'text/x-ecmascript', 'text/x-javascript',
+    *(f'text/javascript1.{i}' for i in range(6)),
+}
+
+
+def _active_script(attrs: dict) -> bool:
+    typ = attrs.get('type')
+    if typ == '' or (typ is None and not attrs.get('language')):
+        typ = 'text/javascript'
+    elif typ is not None:
+        typ = typ.strip(' \t\n\r\f')
+    else:
+        typ = 'text/' + attrs['language']
+    return typ.lower() in _JS_MIME_TYPES | {'module', 'importmap', 'speculationrules'}
+
 
 def classify_field(attrs: dict, label_text: str = "") -> str:
     typ = (attrs.get("type") or "text").lower()
     ac = (attrs.get("autocomplete") or "").lower()
+    if typ == "file":
+        return "file"
     if typ == "password":
         return "password"
     if "cc-number" in ac:
@@ -144,6 +166,7 @@ class _Doc:
         self.controls: list[dict] = []  # 입력란·버튼(폼 밖에 있어도 `form` 속성으로 폼에 속할 수 있다)
         self.label_for: dict[str, str] = {}
         self.script_text: list[str] = []
+        self.unexecuted_code = False
         self.text_nodes: list[str] = []
         self.base_href: str | None = None  # 문서 트리 순서의 첫 <base href>(template 안은 제외)
         self.active_srcs: list[str] = []  # 다른 곳의 코드를 끌어오는 script·iframe·frame·embed·object 주소
@@ -200,6 +223,8 @@ class _Doc:
             for k, v in el.attrib.items():
                 a.setdefault(_local(k), v or "")
             for k, v in a.items():
+                if k.startswith('on') and v:
+                    self.unexecuted_code = True
                 if k.startswith("on") and v and len(self.handler_text) < _MAX_ITEMS:
                     self.handler_text.append(v)
             if a.get("srcdoc") and len(self.srcdocs) < _MAX_ITEMS:
@@ -211,7 +236,8 @@ class _Doc:
             elif name == "base":
                 if self.base_href is None and a.get("href") and template_depth == 0:
                     self.base_href = a["href"]
-            elif name in ("script", "iframe", "frame", "embed", "object"):
+            elif name in ("script", "iframe", "frame", "embed", "object") and (
+                    name != 'script' or _active_script(a) or el.tag.startswith('{http://www.w3.org/2000/svg}')):
                 # 어느 속성이 실제로 쓰이는지는 요소·네임스페이스(SVG script의 href 등)에 달렸으므로, 있는 것을 모두 본다.
                 # 한 속성에 무해한 값을 넣어 다른 속성의 외부 주소를 가리지 못하게 한다.
                 for attr in _ACTIVE_ATTRS:
@@ -219,8 +245,12 @@ class _Doc:
                         self.active_srcs.append(a[attr])
             if name == "script":
                 skip_text += 1
-                if len(self.script_text) < _MAX_ITEMS:
-                    self.script_text.append("".join(el.itertext()))
+                if _active_script(a) or el.tag.startswith('{http://www.w3.org/2000/svg}'):
+                    source_text = "".join(el.itertext())
+                    if source_text.strip() or any(a.get(k) for k in _ACTIVE_ATTRS):
+                        self.unexecuted_code = True
+                    if len(self.script_text) < _MAX_ITEMS:
+                        self.script_text.append(source_text)
             elif name == "style":
                 skip_text += 1
             elif name == "title" and not got_title and el.tag == "title":
@@ -234,7 +264,7 @@ class _Doc:
                 self.links.append(a["href"])
             elif name == "form":
                 self.forms.append({"id": a.get("id", ""), "action": a.get("action", ""),
-                                   "method": (a.get("method") or "get").lower()})
+                                   "method": (a.get("method") or "get").lower(), 'role': a.get('role', '').lower()})
                 forms.append(len(self.forms) - 1)
             elif name == "label" and label is None:
                 label = {"el": el, "for": a.get("for") or None, "buf": [], "inputs": []}
@@ -243,12 +273,22 @@ class _Doc:
                 if name in ("input", "textarea", "select") and not (
                         name == "input" and (a.get("type") or "text").lower() in _SKIP_INPUT_TYPES):
                     item = {**a, "_tag": name}
+                    if name == 'select':
+                        # Keep only a bounded structural fact, never option values.
+                        count = 0
+                        for option in el.iter():
+                            if isinstance(option.tag, str) and _local(option.tag) == 'option':
+                                count += 1
+                                if count > 50:
+                                    break
+                        item['_bounded_choices'] = 0 < count <= 50 and 'multiple' not in a
                     if label is not None:
                         label["inputs"].append(item)
                 if len(self.controls) < _MAX_ITEMS:
                     self.controls.append({"parent": forms[-1] if forms else None,
                                           "form": a.get("form") if "form" in a else None,
                                           "formaction": a.get("formaction") if "formaction" in a else None,
+                                          'formmethod': a.get('formmethod'),
                                           "item": item})
             # 자식들을 문서 순서대로 처리하도록 거꾸로 넣는다(글자→자식→꼬리 글자 순)
             todo.append(("exit", el))
@@ -258,7 +298,7 @@ class _Doc:
             if name not in ("script", "style", "title"):  # 그 글자는 위에서 따로 다뤘다
                 todo.append(("text", el.text))
 
-    def form_groups(self) -> list[tuple[list[str], list[dict]]]:
+    def form_groups(self) -> list[tuple[list[str], list[dict], dict]]:
         """(전송 대상 후보들, 입력란들). 컨트롤은 `form` 속성이 있으면 그 id의 폼에, 없으면 감싼 폼에 속한다.
 
         `form` 속성이 없는 id를 가리키는 컨트롤은 어느 폼에도 속하지 않는다(브라우저와 같다)."""
@@ -267,6 +307,7 @@ class _Doc:
             if f["id"] and f["id"] not in by_id:
                 by_id[f["id"]] = i
         actions = [[f["action"]] for f in self.forms]
+        methods = [{f['method']} for f in self.forms]
         inputs: list[list[dict]] = [[] for _ in self.forms]
         loose: list[dict] = []
         for c in self.controls:
@@ -277,11 +318,14 @@ class _Doc:
                 continue
             if c["formaction"] is not None:
                 actions[idx].append(c["formaction"])
+            if c.get('formmethod') is not None:
+                methods[idx].add(c['formmethod'].lower())
             if c["item"] is not None:
                 inputs[idx].append(c["item"])
-        groups = list(zip(actions, inputs))
+        groups = [(a, i, {'methods': sorted(m), 'role': f['role']})
+                  for a, i, m, f in zip(actions, inputs, methods, self.forms)]
         if loose:
-            groups.append(([""], loose))
+            groups.append(([""], loose, {'methods': [], 'role': ''}))
         return groups
 
 
@@ -688,12 +732,14 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
     # 폼: 입력란이 없어도(hidden만 있거나 버튼뿐이어도) 전송 대상은 모두 본다
     forms_out: list[dict] = []
     for doc, doc_base in docs:
-        for actions, inputs in doc.form_groups():
+        for actions, inputs, metadata in doc.form_groups():
             by_domain: dict[tuple[str, bool], tuple[str, str, bool]] = {}
             overflow_dest = len(actions) > _MAX_ACTIONS
+            action_urls = list(dict.fromkeys(target for action in actions[:_MAX_ACTIONS]
+                                             for target in ([_resolve(doc_base, action)] if action else [page_url, doc_base])))
             for action in actions[:_MAX_ACTIONS]:
                 for d in _destination(doc_base, action, page_url, page_host, page_reg):
-                    key = (d[1], d[2])
+                    key = (d[0], d[2])  # preserve sibling hosts, even when they share a registration
                     if key in by_domain:
                         continue
                     if len(by_domain) >= _MAX_DESTINATIONS:
@@ -701,7 +747,8 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                     else:
                         by_domain[key] = d
             dests = list(by_domain.values())
-            if not inputs and not any(d[2] for d in dests) and not overflow_dest:
+            insecure_submission = any(u.partition(':')[0].lower() == 'http' for u in action_urls)
+            if not inputs and not any(d[2] for d in dests) and not overflow_dest and not insecure_submission:
                 continue  # 입력란도 없고 다른 곳으로 보내지도 않는 폼은 알릴 것이 없다
             first = next((d for d in dests if d[2]), dests[0])
             ftypes: list[str] = []
@@ -710,6 +757,50 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                 t = classify_field(it, label)
                 if t not in ftypes:
                     ftypes.append(t)
+            # A search hint requires a query control, no sensitive/free-form
+            # extras, and one origin for every submission target. Text queries
+            # need both a search label and a query identifier; native selectors
+            # need search context and bounded choices. Never a safety grant.
+            def search_label(it):
+                label = ' '.join(str(it.get(k, '')) for k in ('title', 'placeholder', 'aria-label', '_label'))
+                return label + ' ' + doc.label_for.get(it.get('id', ''), '')
+            def query_identifier(it):
+                return any(re.search(r'search|(?:^|[_-])(?:q|query|keyword)(?:$|[_-])',
+                                     str(it.get(k, ''))[:_MAX_LABEL], re.I) for k in ('name', 'id'))
+            def search_control(it):
+                label = search_label(it)
+                if classify_field(it, label) != 'other':
+                    return False
+                labelled = bool(re.search(r'검색|\bsearch\b', label, re.I))
+                if it.get('_tag') == 'select':
+                    identified = any('search' in str(it.get(k, '')).lower()[:_MAX_LABEL]
+                                     for k in ('name', 'id'))
+                    return bool(it.get('_bounded_choices') and (labelled or identified))
+                if it.get('_tag') != 'input':
+                    return False
+                kind = it.get('type', 'text').lower()
+                return kind == 'search' or (kind == 'text' and labelled)
+            typed_query = any(it.get('_tag') == 'input' and it.get('type', '').lower() == 'search'
+                              for it in inputs)
+            text_queries = [it for it in inputs if it.get('_tag') == 'input']
+            identified_query = bool(len(text_queries) == 1 and query_identifier(text_queries[0])
+                                    and search_control(text_queries[0]))
+            def origin(url):
+                try:
+                    p = urlsplit(url)
+                    if p.scheme not in ('http', 'https') or not p.hostname or p.username or p.password:
+                        return None
+                    return p.scheme, p.hostname, p.port if p.port is not None else (443 if p.scheme == 'https' else 80)
+                except ValueError:
+                    return None
+            search_controls = bool(
+                metadata['methods'] in (['get'], ['post']) and ftypes == ['other']
+                and (typed_query or identified_query)
+                and all(search_control(it) for it in inputs)
+                and action_urls and not overflow_dest)
+            same_origin_search = bool(
+                search_controls and origin(page_url) is not None
+                and all(origin(u) == origin(page_url) for u in action_urls))
             forms_out.append({
                 "action_host": first[0],
                 "action_registrable_domain": first[1],
@@ -717,7 +808,21 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                 "destinations_overflow": overflow_dest,  # 다 판단하지 못했다: 안전 판정에서 뺀다
                 # 전송 대상 전체. 한 곳이 믿을 수 있는 협력 도메인이어도 나머지 대상까지 따로 판단해야 한다.
                 "destinations": [{"host": h, "registrable_domain": r, "cross_domain": x} for h, r, x in dests],
+                'action_urls': action_urls[:_MAX_DESTINATIONS],
+                # Evaluate all observed actions before the display list is capped.
+                'insecure_submission': insecure_submission,
                 "field_types": ftypes,
+                'same_origin_search': same_origin_search,
+                'submission_methods': metadata['methods'],
+                # Description only: never exempts another origin from a warning.
+                # Multiple submission targets and nonstandard transport stay generic.
+                'search_form': bool(search_controls and len(set(action_urls)) == 1
+                                    and origin(action_urls[0]) is not None
+                                    and origin(action_urls[0])[0] == 'https'
+                                    and origin(action_urls[0])[2] == 443),
+                'search_only': bool(metadata['methods'] == ['get'] and metadata['role'] == 'search'
+                                    and inputs and ftypes == ['other'] and all(
+                                        it.get('_tag') == 'input' and it.get('type', '').lower() == 'search' for it in inputs)),
             })
 
     apk_links: list[str] = []
@@ -738,6 +843,7 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
     ext: list[str] = []
     ext_seen: set[str] = set()
     ext_overflow = False
+    active_hosts = set()
     for doc, doc_base in docs:
         for src in doc.active_srcs:
             try:
@@ -751,6 +857,11 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
                 dom = "(script)"
             else:
                 dom = registrable_of(to_ascii_host(host)) if host else ""
+            if host and to_ascii_host(host) != page_host:
+                if len(active_hosts) < 10:
+                    active_hosts.add(to_ascii_host(host))
+                else:
+                    ext_overflow = True
             if dom and dom != page_reg and dom not in ext_seen:
                 ext_seen.add(dom)
                 if len(ext) < 10:
@@ -780,5 +891,7 @@ def inspect_page(html_bytes: bytes, page_url: str, content_type: str = "") -> di
         "apk_links": apk_links,
         "trust_claims": claims,
         "js_redirect_hint": bool(js_hint),
+        'unexecuted_code': any(d.unexecuted_code for d, _ in docs),
         "external_active_domains": ext[:11],
+        'external_active_hosts': sorted(active_hosts),
     }

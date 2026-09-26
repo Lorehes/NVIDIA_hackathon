@@ -4,40 +4,423 @@
     {
       "id": "hanbit",
       "name": "한빛택배",
-      "aliases": ["한빛", "HANBIT", "hanbit", "한빛 택배", "한빛택배"],
+      "aliases": [
+        "한빛",
+        "HANBIT",
+        "hanbit",
+        "한빛 택배",
+        "한빛택배"
+      ],
       "category": "delivery",
-      "official_domains": ["hanbit.example"],
-      "partner_domains": ["pay-partner.example"],
-      "policies": ["문자로 카드번호를 요구하지 않음"],
+      "official_domains": [
+        "hanbit.example"
+      ],
+      "partner_domains": [
+        "pay-partner.example"
+      ],
+      "policies": [
+        "문자로 카드번호를 요구하지 않음"
+      ],
       "policy_rules": [
         {
           "id": "no_card_by_sms",
           "text": "한빛택배는 문자로 카드 번호를 묻지 않아요",
-          "forbids": ["card_number", "card_cvc", "card_expiry"]
+          "forbids": [
+            "card_number",
+            "card_cvc",
+            "card_expiry"
+          ]
         }
       ],
       "official_app": "한빛택배 앱",
-      "sources": [{"url": "https://hanbit.example/notice/payment", "checked": "2026-09-24"}],
+      "sources": [
+        {
+          "url": "https://hanbit.example/notice/payment",
+          "checked": "2026-09-24"
+        }
+      ],
       "fictional": true
     },
     {
       "id": "haneul",
       "name": "하늘은행",
-      "aliases": ["하늘", "HANEUL", "haneul", "하늘 은행"],
+      "aliases": [
+        "하늘",
+        "HANEUL",
+        "haneul",
+        "하늘 은행"
+      ],
       "category": "bank",
-      "official_domains": ["haneul.example"],
+      "official_domains": [
+        "haneul.example"
+      ],
       "partner_domains": [],
-      "policies": ["문자로 계좌 비밀번호와 인증번호를 요구하지 않음"],
+      "policies": [
+        "문자로 계좌 비밀번호와 인증번호를 요구하지 않음"
+      ],
       "policy_rules": [
         {
           "id": "no_secret_by_sms",
           "text": "하늘은행은 문자로 비밀번호와 인증번호를 묻지 않아요",
-          "forbids": ["password", "otp", "bank_account", "resident_id"]
+          "forbids": [
+            "password",
+            "otp",
+            "bank_account",
+            "resident_id"
+          ]
         }
       ],
       "official_app": "하늘은행 앱",
-      "sources": [{"url": "https://haneul.example/security", "checked": "2026-09-24"}],
+      "sources": [
+        {
+          "url": "https://haneul.example/security",
+          "checked": "2026-09-24"
+        }
+      ],
       "fictional": true
+    },
+    {
+      "id": "epost",
+      "name": "우체국",
+      "aliases": [
+        "인터넷우체국",
+        "우체국택배",
+        "우체국 택배"
+      ],
+      "category": "delivery",
+      "official_domains": [
+        "epost.go.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.epost.go.kr/main.retrieveMainPage.comm",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "cjlogistics",
+      "name": "CJ대한통운",
+      "aliases": [
+        "대한통운",
+        "CJ 대한통운",
+        "CJ택배"
+      ],
+      "category": "delivery",
+      "official_domains": [
+        "cjlogistics.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.cjlogistics.com/ko/main",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "hanjin",
+      "name": "한진택배",
+      "aliases": [
+        "한진",
+        "한진 택배"
+      ],
+      "category": "delivery",
+      "official_domains": [
+        "hanjin.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.hanjin.com/kor/Main.do",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "lotte",
+      "name": "롯데택배",
+      "aliases": [
+        "롯데글로벌로지스",
+        "롯데 택배"
+      ],
+      "category": "delivery",
+      "official_domains": [
+        "lotteglogis.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.lotteglogis.com/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "logen",
+      "name": "로젠택배",
+      "aliases": [
+        "로젠",
+        "로젠 택배"
+      ],
+      "category": "delivery",
+      "official_domains": [
+        "ilogen.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.ilogen.com/web/enterprise",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "kbstar",
+      "name": "KB국민은행",
+      "aliases": [
+        "국민은행",
+        "KB 국민은행"
+      ],
+      "category": "bank",
+      "official_domains": [
+        "kbstar.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.kbstar.com/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "woori",
+      "name": "우리은행",
+      "aliases": [
+        "우리 은행"
+      ],
+      "category": "bank",
+      "official_domains": [
+        "wooribank.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.wooribank.com/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "hana",
+      "name": "하나은행",
+      "aliases": [
+        "하나 은행"
+      ],
+      "category": "bank",
+      "official_domains": [
+        "kebhana.com"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.kebhana.com/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "ibk",
+      "name": "IBK기업은행",
+      "aliases": [
+        "기업은행",
+        "IBK 기업은행"
+      ],
+      "category": "bank",
+      "official_domains": [
+        "ibk.co.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.ibk.co.kr/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "nts",
+      "name": "국세청",
+      "aliases": [
+        "홈택스",
+        "손택스"
+      ],
+      "category": "government",
+      "official_domains": [
+        "nts.go.kr",
+        "hometax.go.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.nts.go.kr/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "nhis",
+      "name": "국민건강보험공단",
+      "aliases": [
+        "국민건강보험",
+        "건강보험공단"
+      ],
+      "category": "government",
+      "official_domains": [
+        "nhis.or.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.nhis.or.kr/nhis/index.do",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "gov24",
+      "name": "정부24",
+      "aliases": [
+        "정부 24",
+        "정부이십사"
+      ],
+      "category": "government",
+      "official_domains": [
+        "gov.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://plus.gov.kr/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "customs",
+      "name": "관세청",
+      "aliases": [
+        "한국관세청"
+      ],
+      "category": "government",
+      "official_domains": [
+        "customs.go.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.customs.go.kr/kcs/main.do",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "fsc",
+      "name": "금융위원회",
+      "aliases": [
+        "금융위"
+      ],
+      "category": "government",
+      "official_domains": [
+        "fsc.go.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.fsc.go.kr/index",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
+    },
+    {
+      "id": "korea",
+      "name": "대한민국 정책브리핑",
+      "aliases": [
+        "정책브리핑"
+      ],
+      "category": "government",
+      "official_domains": [
+        "korea.kr"
+      ],
+      "partner_domains": [],
+      "policies": [],
+      "policy_rules": [],
+      "sources": [
+        {
+          "url": "https://www.korea.kr/",
+          "checked": "2026-09-25",
+          "scope": "공식 홈페이지와 등록 도메인 확인. 기관별 금지 입력 정책 및 외부 파트너는 미확인."
+        }
+      ],
+      "fictional": false
     }
   ]
 }
